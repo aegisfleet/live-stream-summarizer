@@ -49,7 +49,7 @@ class ArchiveManager {
         this.streamers.forEach(streamer => {
             const button = document.createElement('button');
             button.textContent = streamer;
-            button.addEventListener('click', () => this.toggleStreamer(streamer, button));
+            button.addEventListener('click', () => this.filterByStreamer(streamer));
             filterContainer.appendChild(button);
         });
         
@@ -60,15 +60,27 @@ class ArchiveManager {
         this.selectAllStreamers();
     }
     
-    toggleStreamer(streamer, button) {
-        if (this.selectedStreamers.has(streamer)) {
-            this.selectedStreamers.delete(streamer);
-            button.classList.remove('active');
-        } else {
-            this.selectedStreamers.add(streamer);
-            button.classList.add('active');
+    filterByStreamer(clickedStreamer) {
+        // 既にそのストリーマーのみが選択されている場合は、不要な再描画を防ぐ
+        if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
+            return;
         }
-        
+
+        // 選択されているストリーマーをクリアし、クリックされたストリーマーのみを選択状態にする
+        this.selectedStreamers.clear();
+        this.selectedStreamers.add(clickedStreamer);
+
+        // 上部のストリーマーフィルターボタンのUIを更新する
+        const buttons = document.querySelectorAll('#filter-buttons button');
+        buttons.forEach(button => {
+            if (button.textContent === clickedStreamer) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        // アーカイブを再フィルタリングする
         this.filterArchives();
     }
     

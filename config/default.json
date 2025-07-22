@@ -1,6 +1,9 @@
 {
   "schedule": {
-    "url": "https://schedule.hololive.tv/simple/hololive",
+    "urls": [
+      "https://schedule.hololive.tv/simple/hololive",
+      "https://schedule.hololive.tv/simple/dev_is"
+    ],
     "updateInterval": "1h"
   },
   "youtube": {

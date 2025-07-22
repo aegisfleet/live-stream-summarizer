@@ -18,6 +18,12 @@ body {
     background-color: var(--background-color);
 }
 
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 header {
     background-color: var(--card-background);
     padding: 1rem;

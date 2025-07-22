@@ -243,6 +243,7 @@ class ArchiveManager {
         highlightsTitle.textContent = '見どころ：';
         
         const highlightsList = document.createElement('ul');
+        highlightsList.className = 'highlights-list';
         archive.highlights.forEach(highlight => {
             const li = document.createElement('li');
             li.classList.add('clickable-highlight');

@@ -177,22 +177,6 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-    #archive-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    #filter-buttons,
-    #tag-filter-buttons {
-        flex-direction: column;
-    }
-    
-    #filter-buttons button,
-    #tag-filter-buttons button {
-        width: auto;
-    }
-}
-
 /* クリック可能な要素のカーソルをポインターに変更し、変化を滑らかにする */
 .clickable-thumbnail,
 .clickable-title,

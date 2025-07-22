@@ -103,12 +103,20 @@ class ArchiveManager {
     createArchiveCard(archive) {
         const card = document.createElement('div');
         card.className = 'archive-card';
-        card.addEventListener('click', () => window.open(archive.videoUrl, '_blank'));
+        // カード全体のクリックイベントを削除し、クリック可能な要素を明確にします。
+        // これにより、ユーザーがどこをクリックすればよいか分かりやすくなります。
+        const openVideo = (startTime = 0) => {
+            const url = `https://www.youtube.com/watch?v=${archive.videoId}` + (startTime > 0 ? `&t=${startTime}s` : '');
+            window.open(url, '_blank');
+        };
         
         // サムネイル画像の作成
         const img = document.createElement('img');
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
+        img.classList.add('clickable-thumbnail');
+        img.title = 'クリックして動画を再生';
+        img.addEventListener('click', () => openVideo());
         
         // カードコンテンツの作成
         const content = document.createElement('div');
@@ -117,21 +125,29 @@ class ArchiveManager {
         // タイトル
         const title = document.createElement('h2');
         title.textContent = archive.title;
+        title.classList.add('clickable-title');
+        title.title = 'クリックして動画を再生';
+        title.addEventListener('click', () => openVideo());
         
-        // ストリーマー名
-        const streamer = document.createElement('div');
-        streamer.className = 'streamer';
-        streamer.textContent = archive.streamer;
+        // 概要セクション
+        const overview = document.createElement('div');
+        overview.className = 'overview';
         
-        // 日付
-        const date = document.createElement('div');
-        date.className = 'date';
-        date.textContent = new Date(archive.date).toLocaleString('ja-JP');
+        const overviewSummary = document.createElement('p');
+        overviewSummary.className = 'overview-summary';
+        overviewSummary.textContent = archive.overview.summary;
         
-        // サマリー
-        const summary = document.createElement('div');
-        summary.className = 'summary';
-        summary.textContent = archive.summary;
+        const overviewMood = document.createElement('p');
+        overviewMood.className = 'overview-mood';
+        overviewMood.textContent = `配信の雰囲気：${archive.overview.mood}`;
+        
+        const duration = document.createElement('p');
+        duration.className = 'duration';
+        duration.textContent = `配信時間：${archive.overview.duration}`;
+        
+        overview.appendChild(overviewSummary);
+        overview.appendChild(overviewMood);
+        overview.appendChild(duration);
         
         // 見どころセクション
         const highlights = document.createElement('div');
@@ -141,26 +157,74 @@ class ArchiveManager {
         highlightsTitle.textContent = '見どころ：';
         
         const highlightsList = document.createElement('ul');
-        archive.highlights.forEach(point => {
+        archive.highlights.forEach(highlight => {
             const li = document.createElement('li');
-            li.textContent = point;
+            li.classList.add('clickable-highlight');
+            li.title = `クリックして ${highlight.timestamp} から再生`;
+            li.addEventListener('click', (e) => {
+                const seconds = this.timestampToSeconds(highlight.timestamp);
+                openVideo(seconds);
+            });
+
+            const title = document.createElement('h3');
+            title.textContent = highlight.title;
+            
+            const timestamp = document.createElement('span');
+            timestamp.className = 'timestamp';
+            timestamp.textContent = highlight.timestamp;
+            
+            const type = document.createElement('span');
+            type.className = `highlight-type ${highlight.type}`;
+            type.textContent = highlight.type;
+            
+            const description = document.createElement('p');
+            description.textContent = highlight.description;
+            
+            li.appendChild(title);
+            li.appendChild(timestamp);
+            li.appendChild(type);
+            li.appendChild(description);
             highlightsList.appendChild(li);
         });
+        
+        // タグセクション
+        const tags = document.createElement('div');
+        tags.className = 'tags';
+        archive.tags.forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.className = 'tag';
+            tagSpan.textContent = `#${tag}`;
+            tags.appendChild(tagSpan);
+        });
+        
+        // 最終更新日
+        const lastUpdated = document.createElement('div');
+        lastUpdated.className = 'last-updated';
+        lastUpdated.textContent = `最終更新：${new Date(archive.lastUpdated).toLocaleString('ja-JP')}`;
         
         // 要素の組み立て
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
         
         content.appendChild(title);
-        content.appendChild(streamer);
-        content.appendChild(date);
-        content.appendChild(summary);
+        content.appendChild(overview);
         content.appendChild(highlights);
+        content.appendChild(tags);
+        content.appendChild(lastUpdated);
         
         card.appendChild(img);
         card.appendChild(content);
         
         return card;
+    }
+
+    timestampToSeconds(timestamp) {
+        // H:M:S or M:S形式のタイムスタンプを秒に変換する
+        const parts = timestamp.split(':').map(Number).reverse();
+        const seconds = parts.reduce((total, part, index) => {
+            return total + part * Math.pow(60, index);
+        }, 0);
+        return seconds;
     }
 }
 

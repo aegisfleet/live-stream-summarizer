@@ -116,7 +116,7 @@ async function generateSummaries() {
 
         // すでに要約済みのデータを読み込み
         let existingSummaries = [];
-        const summaryPath = path.join(__dirname, '../src/data/summaries.json');
+        const summaryPath = path.join(__dirname, '../../src/data/summaries.json');
         try {
             existingSummaries = JSON.parse(await fs.readFile(summaryPath, 'utf8'));
         } catch (e) {

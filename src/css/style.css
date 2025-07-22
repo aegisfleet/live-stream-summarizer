@@ -87,10 +87,6 @@ main {
     cursor: pointer;
 }
 
-.archive-card:hover {
-    transform: translateY(-4px);
-}
-
 .archive-card img {
     width: 100%;
     height: auto;
@@ -144,4 +140,28 @@ footer {
     button {
         width: 100%;
     }
+}
+
+/* クリック可能な要素のカーソルをポインターに変更し、変化を滑らかにする */
+.clickable-thumbnail,
+.clickable-title,
+.clickable-highlight {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* サムネイルのホバー効果 */
+.clickable-thumbnail:hover {
+    opacity: 0.85;
+}
+
+/* タイトルのホバー効果 */
+.clickable-title:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* 見どころリスト項目のホバー効果 */
+.clickable-highlight:hover {
+    background-color: #f8f9fa; /* より自然な背景色に変更 */
 }

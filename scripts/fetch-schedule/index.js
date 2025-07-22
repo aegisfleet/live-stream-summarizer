@@ -27,7 +27,16 @@ async function fetchSchedule() {
             $row.find('a').each((_, link) => {
                 const $link = $(link);
                 const videoUrl = $link.attr('href');
-                if (!videoUrl || !videoUrl.includes('youtube.com')) return;
+                if (!videoUrl) return;
+                let videoHost;
+                try {
+                    videoHost = new URL(videoUrl).host;
+                } catch (error) {
+                    console.warn(`不正なURL形式をスキップします: ${videoUrl}`, error.message);
+                    return;
+                }
+                const allowedHosts = ['youtube.com', 'www.youtube.com'];
+                if (!allowedHosts.includes(videoHost)) return;
 
                 let videoId;
                 try {

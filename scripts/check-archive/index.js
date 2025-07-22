@@ -10,22 +10,15 @@ const youtube = google.youtube({
     auth: process.env.YOUTUBE_API_KEY
 });
 
-/**
- * ISO 8601 形式の期間文字列を秒に変換します。
- * @param {string} durationString - ISO 8601 形式の期間 (例: "PT1H2M3S").
- * @returns {number} - 合計秒数.
- */
-function parseISO8601Duration(durationString) {
-    const regex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
-    const parts = durationString.match(regex);
+function parseISO8601Duration(isoDuration) {
+  const regex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
+  const matches = isoDuration.match(regex);
 
-    if (!parts) return 0;
+  const hours = matches[1] ? parseInt(matches[1], 10) : 0;
+  const minutes = matches[2] ? parseInt(matches[2], 10) : 0;
+  const seconds = matches[3] ? parseInt(matches[3], 10) : 0;
 
-    const hours = parseInt(parts[1] || '0', 10);
-    const minutes = parseInt(parts[2] || '0', 10);
-    const seconds = parseInt(parts[3] || '0', 10);
-
-    return (hours * 3600) + (minutes * 60) + seconds;
+  return hours * 3600 + minutes * 60 + seconds;
 }
 
 async function checkArchives() {
@@ -46,18 +39,6 @@ async function checkArchives() {
                 const videoInfo = videoResponse.data.items[0];
                 if (!videoInfo) continue;
 
-                // 配信時間をチェック (50分を超えるものは除外)
-                if (!videoInfo.contentDetails || !videoInfo.contentDetails.duration) {
-                    console.log(`動画の期間情報がないためスキップ: ${stream.videoId}`);
-                    continue;
-                }
-                const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
-                const maxDurationInSeconds = 50 * 60;
-                if (durationInSeconds > maxDurationInSeconds) {
-                    console.log(`配信時間が50分を超えているためスキップ: ${stream.videoId} (${videoInfo.contentDetails.duration})`);
-                    continue;
-                }
-
                 // ライブ配信が終了しているか確認
                 const liveDetails = videoInfo.liveStreamingDetails;
                 if (!liveDetails || !liveDetails.actualEndTime) continue;
@@ -73,11 +54,13 @@ async function checkArchives() {
                 }
 
                 if (hasTranscript) {
+                    const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
                     archives.push({
                         ...stream,
                         title: videoInfo.snippet.title,
                         thumbnailUrl: videoInfo.snippet.thumbnails.medium.url,
-                        endTime: liveDetails.actualEndTime
+                        endTime: liveDetails.actualEndTime,
+                        duration: durationInSeconds
                     });
                 }
             } catch (error) {

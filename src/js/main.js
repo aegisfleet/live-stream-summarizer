@@ -229,7 +229,7 @@ class ArchiveManager {
         
         const duration = document.createElement('p');
         duration.className = 'duration';
-        duration.textContent = `配信時間：${archive.overview.duration}`;
+        duration.textContent = `配信時間：${this.formatDuration(archive.duration)}`;
         
         overview.appendChild(overviewSummary);
         overview.appendChild(overviewMood);
@@ -317,6 +317,24 @@ class ArchiveManager {
             return total + part * Math.pow(60, index);
         }, 0);
         return seconds;
+    }
+
+    formatDuration(totalSeconds) {
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        let durationStr = "";
+        if (hours > 0) {
+            durationStr += `${hours}時間`;
+        }
+        if (minutes > 0) {
+            durationStr += `${minutes}分`;
+        }
+        if (seconds > 0 || durationStr === "") { // Include seconds if no hours/minutes, or if it's 0 seconds
+            durationStr += `${seconds}秒`;
+        }
+        return durationStr.trim();
     }
 }
 

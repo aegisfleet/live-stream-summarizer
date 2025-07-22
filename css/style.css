@@ -49,7 +49,7 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     /* レスポンシブなフォントサイズ */
-    font-size: clamp(1.5rem, 5vw, 3rem); /* 最小1.5rem, 最大3rem, 5vwで可変 */
+    font-size: clamp(1.4rem, 4vw, 2.8rem);
     /* テキストの折り返し */
     word-break: keep-all; /* 日本語の単語の途中で改行しない */
     overflow-wrap: break-word; /* 長い単語でも強制的に改行 */

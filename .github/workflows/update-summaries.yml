@@ -1,0 +1,58 @@
+name: Update Stream Summaries
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 1時間ごとに実行
+  workflow_dispatch:      # 手動実行も可能
+
+jobs:
+  update-summaries:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write  # GitHub Scriptでissueを作成するために必要
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Fetch schedule
+        run: npm run fetch-schedule
+          
+      - name: Check archives
+        run: npm run check-archive
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          
+      - name: Generate summaries
+        run: npm run summarize
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          
+      - name: Build site
+        run: npm run build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src
+          
+      - name: Check for failures
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Workflow Failure: Update Stream Summaries',
+              body: `Workflow failed at ${new Date().toISOString()}\nSee: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            })

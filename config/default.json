@@ -1,0 +1,18 @@
+{
+  "schedule": {
+    "url": "https://schedule.hololive.tv/simple/hololive",
+    "updateInterval": "1h"
+  },
+  "youtube": {
+    "apiEndpoint": "https://www.googleapis.com/youtube/v3"
+  },
+  "data": {
+    "archivePath": "./data/archives.json",
+    "summaryPath": "./data/summaries.json"
+  },
+  "site": {
+    "title": "ホロライブ配信アーカイブサマリー",
+    "description": "ホロライブの配信アーカイブを要約して閲覧できるサイトです",
+    "itemsPerPage": 20
+  }
+}

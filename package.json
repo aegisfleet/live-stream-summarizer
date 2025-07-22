@@ -6,7 +6,6 @@
     "fetch-schedule": "node scripts/fetch-schedule",
     "check-archive": "node scripts/check-archive",
     "summarize": "node scripts/summarize",
-    "build": "node scripts/build.js",
     "start": "npx serve src"
   },
   "dependencies": {

@@ -59,9 +59,6 @@
     # 要約の生成
     npm run summarize
 
-    # サイトのビルド
-    npm run build
-
     # 開発サーバーの起動
     npm start
     ```

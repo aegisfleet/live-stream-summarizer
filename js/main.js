@@ -19,7 +19,7 @@ class ArchiveManager {
     
     async loadData() {
         try {
-            const response = await fetch('/data/summaries.json');
+            const response = await fetch('../data/summaries.json');
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
             

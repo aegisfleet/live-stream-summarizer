@@ -202,10 +202,10 @@ footer {
 }
 
 .clickable-tag:hover {
-    background-color: #e0e0e0; /* もしくは、サイトのデザインに合った色 */
+    background-color: #e6f9ff; /* もしくは、サイトのデザインに合った色 */
 }
 
 /* 見どころリスト項目のホバー効果 */
 .clickable-highlight:hover {
-    background-color: #f8f9fa; /* より自然な背景色に変更 */
+    background-color: #e6f9ff; /* より自然な背景色に変更 */
 }

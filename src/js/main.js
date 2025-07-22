@@ -269,6 +269,7 @@ class ArchiveManager {
             
             li.appendChild(title);
             li.appendChild(timestamp);
+            li.appendChild(document.createTextNode(' / '));
             li.appendChild(type);
             li.appendChild(description);
             highlightsList.appendChild(li);

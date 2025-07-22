@@ -45,9 +45,9 @@ h1 {
     margin-bottom: 1rem;
 }
 
-#filter-container {
+.filter-group {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     padding: 1rem;
 }
 

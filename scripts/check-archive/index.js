@@ -47,6 +47,10 @@ async function checkArchives() {
                 if (!videoInfo) continue;
 
                 // 配信時間をチェック (50分を超えるものは除外)
+                if (!videoInfo.contentDetails || !videoInfo.contentDetails.duration) {
+                    console.log(`動画の期間情報がないためスキップ: ${stream.videoId}`);
+                    continue;
+                }
                 const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
                 const maxDurationInSeconds = 50 * 60;
                 if (durationInSeconds > maxDurationInSeconds) {

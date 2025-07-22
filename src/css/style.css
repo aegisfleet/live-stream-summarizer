@@ -137,6 +137,27 @@ main {
     font-size: 0.9rem;
 }
 
+.overview-mood,
+.duration {
+    margin-top: 0.75rem;
+}
+
+.tags,
+.last-updated {
+    margin-top: var(--spacing-medium);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.tag {
+    padding: 0.1rem 0.2rem;
+    border-radius: 1px;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -184,7 +205,6 @@ footer {
 
 .clickable-tag:hover {
     background-color: #e0e0e0; /* もしくは、サイトのデザインに合った色 */
-    border-radius: 4px;
 }
 
 /* 見どころリスト項目のホバー効果 */

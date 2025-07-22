@@ -157,7 +157,7 @@ async function generateSummaries() {
                 console.log(`要約を生成しました: ${archive.videoId}`);
                 
                 // APIレート制限を考慮して少し待機
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 60000));
                 
             } catch (error) {
                 if (error.message && (error.message.includes('No transcripts are available for this video') || error.message.includes('Could not find transcript for'))) {

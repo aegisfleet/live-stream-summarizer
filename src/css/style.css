@@ -51,7 +51,8 @@ h1 {
     padding: 1rem;
 }
 
-#filter-buttons {
+#filter-buttons,
+#tag-filter-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -80,6 +81,18 @@ button:focus {
 
 button.active {
     background-color: #2a2a2a;
+}
+
+#filter-buttons button,
+#tag-filter-buttons button {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+#filter-buttons button.active,
+#tag-filter-buttons button.active {
+    background-color: #007bff;
+    color: #fff;
 }
 
 main {
@@ -169,12 +182,14 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    #filter-buttons {
+    #filter-buttons,
+    #tag-filter-buttons {
         flex-direction: column;
     }
     
-    button {
-        width: 100%;
+    #filter-buttons button,
+    #tag-filter-buttons button {
+        width: auto;
     }
 }
 

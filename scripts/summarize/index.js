@@ -138,8 +138,8 @@ async function generateSummaries() {
                 summaries.push({
                     videoId: archive.videoId,
                     title: archive.title,
-                    channelName: archive.channelName,
-                    streamDate: archive.streamDate,
+                    streamer: archive.streamer,
+                    date: archive.date,
                     thumbnailUrl: archive.thumbnailUrl,
                     overview: {
                         summary: summary.overview.summary,

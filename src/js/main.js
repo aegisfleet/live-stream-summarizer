@@ -4,13 +4,16 @@ class ArchiveManager {
         this.filteredData = [];
         this.streamers = new Set();
         this.selectedStreamers = new Set();
+        this.tags = new Set();
+        this.selectedTags = new Set();
         
         this.init();
     }
     
     async init() {
         await this.loadData();
-        this.setupFilterButtons();
+        this.setupStreamerFilter();
+        this.setupTagFilter();
         this.renderArchives();
     }
     
@@ -20,16 +23,17 @@ class ArchiveManager {
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
             
-            // ストリーマー一覧の取得
+            // ストリーマーとタグ一覧の取得
             this.archiveData.forEach(archive => {
                 this.streamers.add(archive.streamer);
+                archive.tags.forEach(tag => this.tags.add(tag));
             });
         } catch (error) {
             console.error('データの読み込みに失敗しました:', error);
         }
     }
     
-    setupFilterButtons() {
+    setupStreamerFilter() {
         const filterContainer = document.getElementById('filter-buttons');
         const selectAllButton = document.getElementById('select-all');
         
@@ -50,10 +54,10 @@ class ArchiveManager {
         });
         
         // すべて表示ボタンの設定
-        selectAllButton.addEventListener('click', () => this.selectAll());
+        selectAllButton.addEventListener('click', () => this.selectAllStreamers());
         
         // 初期状態ですべて選択
-        this.selectAll();
+        this.selectAllStreamers();
     }
     
     toggleStreamer(streamer, button) {
@@ -68,17 +72,82 @@ class ArchiveManager {
         this.filterArchives();
     }
     
-    selectAll() {
+    selectAllStreamers() {
         const buttons = document.querySelectorAll('#filter-buttons button');
         this.selectedStreamers = new Set(this.streamers);
         buttons.forEach(button => button.classList.add('active'));
         this.filterArchives();
     }
     
+    setupTagFilter() {
+        const filterContainer = document.getElementById('tag-filter-buttons');
+        const selectAllButton = document.getElementById('select-all-tags');
+
+        if (!filterContainer || !selectAllButton) {
+            console.error('タグフィルターに必要なDOM要素が見つかりません:', {
+                filterContainer: !!filterContainer,
+                selectAllButton: !!selectAllButton
+            });
+            return;
+        }
+
+        // タグごとのフィルターボタンを作成
+        Array.from(this.tags).sort().forEach(tag => {
+            const button = document.createElement('button');
+            button.textContent = tag;
+            // クリックすると、そのタグのみでフィルタリングする
+            button.addEventListener('click', () => this.filterByTag(tag));
+            filterContainer.appendChild(button);
+        });
+
+        // すべて選択ボタンの設定
+        selectAllButton.addEventListener('click', () => this.selectAllTags());
+
+        // 初期状態ですべて選択
+        this.selectAllTags();
+    }
+
+    selectAllTags() {
+        const buttons = document.querySelectorAll('#tag-filter-buttons button');
+        this.selectedTags = new Set(this.tags);
+        buttons.forEach(button => button.classList.add('active'));
+        this.filterArchives();
+    }
+
+    filterByTag(clickedTag) {
+        // 既にそのタグのみが選択されている場合は、不要な再描画を防ぐ
+        if (this.selectedTags.has(clickedTag) && this.selectedTags.size === 1) {
+            return;
+        }
+
+        // 選択されているタグをクリアし、クリックされたタグのみを選択状態にする
+        this.selectedTags.clear();
+        this.selectedTags.add(clickedTag);
+
+        // 上部のタグフィルターボタンのUIを更新する
+        const buttons = document.querySelectorAll('#tag-filter-buttons button');
+        buttons.forEach(button => {
+            if (button.textContent === clickedTag) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        // アーカイブを再フィルタリングする
+        this.filterArchives();
+    }
+
     filterArchives() {
-        this.filteredData = this.archiveData.filter(archive =>
-            this.selectedStreamers.has(archive.streamer)
-        );
+        this.filteredData = this.archiveData.filter(archive => {
+            const streamerMatch = this.selectedStreamers.has(archive.streamer);
+            
+            // タグフィルターの条件：選択されたタグがなければtrue、あればいずれかのタグにマッチするか (OR条件)
+            const tagMatch = this.selectedTags.size === 0 || 
+                             archive.tags.some(tag => this.selectedTags.has(tag));
+
+            return streamerMatch && tagMatch;
+        });
         this.renderArchives();
     }
     
@@ -129,6 +198,11 @@ class ArchiveManager {
         title.title = 'クリックして動画を再生';
         title.addEventListener('click', () => openVideo());
         
+        // 配信者名
+        const streamer = document.createElement('p');
+        streamer.className = 'streamer-name';
+        streamer.textContent = `配信者: ${archive.streamer}`;
+
         // 概要セクション
         const overview = document.createElement('div');
         overview.className = 'overview';
@@ -192,8 +266,11 @@ class ArchiveManager {
         tags.className = 'tags';
         archive.tags.forEach(tag => {
             const tagSpan = document.createElement('span');
-            tagSpan.className = 'tag';
+            // クリック可能であることを示すクラスとイベントリスナーを追加
+            tagSpan.className = 'tag clickable-tag';
             tagSpan.textContent = `#${tag}`;
+            tagSpan.title = `タグ「${tag}」で絞り込む`;
+            tagSpan.addEventListener('click', () => this.filterByTag(tag));
             tags.appendChild(tagSpan);
         });
         
@@ -207,6 +284,7 @@ class ArchiveManager {
         highlights.appendChild(highlightsList);
         
         content.appendChild(title);
+        content.appendChild(streamer);
         content.appendChild(overview);
         content.appendChild(highlights);
         content.appendChild(tags);

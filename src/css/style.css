@@ -161,6 +161,16 @@ footer {
     color: #0056b3;
 }
 
+.clickable-tag {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clickable-tag:hover {
+    background-color: #e0e0e0; /* もしくは、サイトのデザインに合った色 */
+    border-radius: 4px;
+}
+
 /* 見どころリスト項目のホバー効果 */
 .clickable-highlight:hover {
     background-color: #f8f9fa; /* より自然な背景色に変更 */

@@ -47,8 +47,8 @@ h1 {
 
 .filter-group {
     max-width: 1200px;
-    margin: 0 auto 1rem auto;
-    padding: 1rem;
+    margin: 0 auto 0.5rem auto;
+    padding: 0.1rem;
 }
 
 #filter-buttons,

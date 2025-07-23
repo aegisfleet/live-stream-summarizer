@@ -311,6 +311,9 @@ async function generateSummaries() {
             } catch (error) {
                 if (error.message && (error.message.includes('No transcripts are available for this video') || error.message.includes('Could not find transcript for'))) {
                     console.log(`要約可能な字幕が見つかりません: ${archive.videoId}`);
+                } else if (error.message && error.message.includes('[403 Forbidden] The caller does not have permission')) {
+                    console.error(`要約生成中に権限エラーが発生しました。次の動画にスキップします: ${archive.videoId}`, error.message || error);
+                    continue; // Skip to the next video
                 } else {
                     console.error(`要約生成中にエラー: ${archive.videoId}`, error.message || error);
                 }

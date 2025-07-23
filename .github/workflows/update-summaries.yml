@@ -50,6 +50,7 @@ jobs:
           file_pattern: src/**/* data/**/*
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          disable_globbing: true
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

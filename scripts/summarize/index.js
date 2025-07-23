@@ -164,6 +164,8 @@ ${JSON.stringify(formatExample, null, 2)}
                 // Adjust timestamp to be relative to the start of the video, not the chunk
                 timestamp: h.timestamp ? formatTimestamp(parseTimestampToSeconds(h.timestamp)) : 'タイムスタンプなし'
             })));
+            // Deduplicate highlights based on title and timestamp
+            currentSummary.highlights = Array.from(new Map(currentSummary.highlights.map(item => [`${item.title}-${item.timestamp}`, item])).values());
             chunkSummary.tags.forEach(tag => {
                 if (!currentSummary.tags.includes(tag)) {
                     currentSummary.tags.push(tag);
@@ -191,8 +193,7 @@ ${JSON.stringify(formatExample, null, 2)}
                 throw error; // Re-throw if no transcript
             } else {
                 console.error(`Error processing chunk for ${videoId} at offset ${currentOffsetSeconds}s:`, error.message || error);
-                // Decide whether to break or continue on other errors. For now, break.
-                break;
+                throw error; // Re-throw to allow the retry mechanism to handle it
             }
         }
     }

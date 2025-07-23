@@ -14,7 +14,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
         try {
             return await fn();
         } catch (error) {
-            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('レスポンスが有効なJSON形式ではありません') || error.message.includes('概要情報が不足しています'))) && i < retries - 1) {
+            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('500 Internal Server Error') || error.message.includes('レスポンスが有効なJSON形式ではありません') || error.message.includes('概要情報が不足しています'))) && i < retries - 1) {
                 console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 delay *= 2; // Exponential backoff

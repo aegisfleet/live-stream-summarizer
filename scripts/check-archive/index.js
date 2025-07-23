@@ -50,6 +50,7 @@ async function checkArchives() {
                     hasTranscript = true;
                 } catch (e) {
                     console.log(`字幕なし: ${stream.videoId}`);
+                    console.error(`YoutubeTranscript.fetchTranscript error for ${stream.videoId}:`, e);
                     continue;
                 }
 

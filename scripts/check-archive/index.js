@@ -32,45 +32,38 @@ async function checkArchives() {
             try {
                 // 動画情報を取得
                 const videoResponse = await youtube.videos.list({
-                    part: ['snippet', 'liveStreamingDetails', 'contentDetails'],
+                    part: ['snippet', 'liveStreamingDetails', 'contentDetails', 'status'],
                     id: [stream.videoId]
                 });
 
                 const videoInfo = videoResponse.data.items[0];
                 if (!videoInfo) continue;
 
+                // メンバー限定動画（非公開または限定公開）を除外
+                if (videoInfo.status.privacyStatus !== 'public') {
+                    console.log(`メンバー限定動画のため除外: ${stream.videoId} (Privacy Status: ${videoInfo.status.privacyStatus})`);
+                    continue;
+                }
+
                 // ライブ配信が終了しているか確認
                 const liveDetails = videoInfo.liveStreamingDetails;
                 if (!liveDetails || !liveDetails.actualEndTime) continue;
 
-                // 字幕が利用可能か確認
-                let hasTranscript = false;
-                try {
-                    await YoutubeTranscript.fetchTranscript(stream.videoId);
-                    hasTranscript = true;
-                } catch (e) {
-                    console.log(`字幕なし: ${stream.videoId}`);
-                    console.error(`YoutubeTranscript.fetchTranscript error for ${stream.videoId}:`, e);
+                const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
+
+                // 再生時間が3時間を超えるものは除外
+                if (durationInSeconds > 3 * 60 * 60) {
+                    console.log(`3時間を超えるため除外: ${stream.videoId}`);
                     continue;
                 }
 
-                if (hasTranscript) {
-                    const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
-
-                    // 再生時間が3時間を超えるものは除外
-                    if (durationInSeconds > 3 * 60 * 60) {
-                        console.log(`3時間を超えるため除外: ${stream.videoId}`);
-                        continue;
-                    }
-
-                    archives.push({
-                        ...stream,
-                        title: videoInfo.snippet.title,
-                        thumbnailUrl: videoInfo.snippet.thumbnails.medium.url,
-                        endTime: liveDetails.actualEndTime,
-                        duration: durationInSeconds
-                    });
-                }
+                archives.push({
+                    ...stream,
+                    title: videoInfo.snippet.title,
+                    thumbnailUrl: videoInfo.snippet.thumbnails.medium.url,
+                    endTime: liveDetails.actualEndTime,
+                    duration: durationInSeconds
+                });
             } catch (error) {
                 console.error(`動画の確認中にエラー: ${stream.videoId}`, error);
             }

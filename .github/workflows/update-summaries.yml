@@ -57,7 +57,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src
-          force: true
           
       - name: Check for failures
         if: failure()

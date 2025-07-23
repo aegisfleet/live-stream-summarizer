@@ -272,9 +272,15 @@ async function generateSummaries() {
         // 要約済みの動画IDを取得
         const summarizedIds = new Set(existingSummaries.map(s => s.videoId));
         const summaries = [...existingSummaries];
+        const MAX_VIDEOS_TO_PROCESS = 5;
+        let processedCount = 0;
 
         for (const archive of archives) {
             if (summarizedIds.has(archive.videoId)) continue;
+            if (processedCount >= MAX_VIDEOS_TO_PROCESS) {
+                console.log(`Processed ${MAX_VIDEOS_TO_PROCESS} videos. Stopping further summarization.`);
+                break;
+            }
 
             try {
                 // Gemini APIを使用して動画を直接要約
@@ -301,6 +307,7 @@ async function generateSummaries() {
                 await fs.writeFile(summaryPath, JSON.stringify(summaries, null, 2));
                 
                 console.log(`要約を生成しました: ${archive.videoId}`);
+                processedCount++;
             } catch (error) {
                 if (error.message && (error.message.includes('No transcripts are available for this video') || error.message.includes('Could not find transcript for'))) {
                     console.log(`要約可能な字幕が見つかりません: ${archive.videoId}`);

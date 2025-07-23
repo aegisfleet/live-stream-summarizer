@@ -237,13 +237,14 @@ class ArchiveManager {
         
         // 見どころセクション
         const highlights = document.createElement('div');
-        highlights.className = 'highlights';
+        highlights.className = 'highlights collapsible';
         
         const highlightsTitle = document.createElement('strong');
         highlightsTitle.textContent = '見どころ：';
+        highlightsTitle.className = 'collapsible-trigger';
         
         const highlightsList = document.createElement('ul');
-        highlightsList.className = 'highlights-list';
+        highlightsList.className = 'highlights-list collapsible-content';
         archive.highlights.forEach(highlight => {
             const li = document.createElement('li');
             li.classList.add('clickable-highlight');
@@ -274,6 +275,25 @@ class ArchiveManager {
             li.appendChild(description);
             highlightsList.appendChild(li);
         });
+
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'toggle-highlights';
+        toggleButton.textContent = 'もっと見る';
+
+        const toggleHighlights = () => {
+            const isOpen = highlights.classList.toggle('open');
+            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+
+            const content = highlights.querySelector('.collapsible-content');
+            if (isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+            }
+        };
+
+        highlightsTitle.addEventListener('click', toggleHighlights);
+        toggleButton.addEventListener('click', toggleHighlights);
         
         // タグセクション
         const tags = document.createElement('div');
@@ -296,6 +316,7 @@ class ArchiveManager {
         // 要素の組み立て
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
+        highlights.appendChild(toggleButton);
         
         content.appendChild(title);
         content.appendChild(streamer);

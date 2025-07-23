@@ -14,8 +14,8 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
         try {
             return await fn();
         } catch (error) {
-            if (error.message && error.message.includes('429 Too Many Requests') && i < retries - 1) {
-                console.warn(`Rate limit hit. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
+            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('レスポンスが有効なJSON形式ではありません'))) && i < retries - 1) {
+                console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 delay *= 2; // Exponential backoff
             } else {
@@ -35,8 +35,8 @@ async function generateSummary(videoId, videoDurationSeconds) {
             {
                 "title": "見どころのタイトル",
                 "description": "その内容の詳細説明",
-                "timestamp": "発生時間（このチャンクの開始からの経過時間、フォーマットは0:00:00）",
-                "type": "トピックの種類（announcement/talk/gaming/singing/reaction等）"
+                "timestamp": "発生時間（このチャンクの開始からの経過時間、フォーマットはMM:SS）",
+                "type": "トピックの種類（お知らせ/トーク/ゲーム/歌/リアクション等）"
             }
         ],
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
@@ -50,7 +50,7 @@ ${JSON.stringify(formatExample, null, 2)}
 注意事項:
 1. 概要は200字程度で、配信の全体像が分かるように要約してください
 2. 見どころは3-5個抽出してください
-3. タイムスタンプは可能な限り正確に記載してください
+3. タイムスタンプは、分、秒をコロンで区切った形式（例: 23:45 や 45:32）で正確に記載してください。秒が不確かな場合は00とせず、最も近い秒に丸めてください。
 4. 配信の種類や内容に応じて適切なタグを付与してください
 5. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください
 6. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください

@@ -14,7 +14,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
         try {
             return await fn();
         } catch (error) {
-            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('レスポンスが有効なJSON形式ではありません'))) && i < retries - 1) {
+            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('レスポンスが有効なJSON形式ではありません') || error.message.includes('概要情報が不足しています'))) && i < retries - 1) {
                 console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 delay *= 2; // Exponential backoff
@@ -35,38 +35,23 @@ async function generateSummary(videoId, videoDurationSeconds) {
             {
                 "title": "見どころのタイトル",
                 "description": "その内容の詳細説明",
-                "timestamp": "発生時間（このチャンクの開始からの経過時間、フォーマットはHH:MM:SS）",
+                "timestamp": "発生時間（動画の開始からの経過時間、フォーマットはHH:MM:SS）",
                 "type": "トピックの種類（お知らせ/トーク/ゲーム/歌/リアクション等）"
             }
         ],
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
     };
 
-    const promptTemplate = `以下のホロライブ所属タレントのYouTubeライブ配信を要約し、JSONオブジェクトとして出力してください。
+    const promptTemplate = (clipStart, clipEnd, formatExample, existingSummary = null) => {
+        let prompt = `以下のホロライブ所属タレントのYouTubeライブ配信の、${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
 
-出力形式は以下の構造に厳密に従ってください:
-${JSON.stringify(formatExample, null, 2)}
+        if (existingSummary) {
+            prompt += `\n\nこれまでの要約データ:\n${JSON.stringify(existingSummary, null, 2)}\n\nこの要約データを更新・追記する形で、新しい期間の情報を追加してください。特に、ハイライトとタグは既存のものに追記し、概要は全体を考慮して更新してください。`;
+        }
 
-注意事項:
-1. 概要は200字程度で、配信の全体像が分かるように要約してください
-2. 見どころは3-5個抽出してください
-3. タイムスタンプは、時間、分、秒をコロンで区切った形式（例: 1:23:45 や 0:45:32）で正確に記載してください。秒が不確かな場合は00とせず、最も近い秒に丸めてください。
-4. 配信の種類や内容に応じて適切なタグを付与してください
-5. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください
-6. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください
-
-以下は許可されない出力形式の例です:
-❌ \`\`\`json
-{...}
-\`\`\`
-
-正しい出力形式:
-✅ {
-  "overview": {...},
-  "highlights": [...],
-  "tags": [...]
-}
-`;
+        prompt += `\n\n出力形式は以下の構造に厳密に従ってください:\n${JSON.stringify(formatExample, null, 2)}\n\n注意事項:\n1. 概要は200字程度で、配信の全体像が分かるように要約してください\n2. 見どころは3-5個抽出してください\n3. タイムスタンプは、動画の開始を00:00:00として、そこからの経過時間（例: 00:00:00, 00:05:30, 00:15:00）を時間、分、秒をコロンで区切った形式で正確に記載してください。秒が不確かな場合は00とせず、最も近い秒に丸めてください。\n4. 配信の種類や内容に応じて適切なタグを付与してください\n5. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください\n6. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください\n\n以下は許可されない出力形式の例です:\n❌ \`\`\`json\n{...}\`\`\`\n\n正しい出力形式:\n✅ {\n  "overview": {...},\n  "highlights": [...],\n  "tags": [...]}\n`;
+        return prompt;
+    };
 
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const chunkSizeSeconds = 1800; // 30 minutes per chunk
@@ -74,10 +59,15 @@ ${JSON.stringify(formatExample, null, 2)}
     let currentOffsetSeconds = 0;
     let chunkCount = 0;
 
-    const allHighlights = [];
-    const allOverviewSummaries = [];
-    const allTags = new Set();
-    let overallMood = "不明"; // Default mood
+    // Initial empty summary structure for the first chunk
+    let currentSummary = {
+        "overview": {
+            "summary": "",
+            "mood": "不明"
+        },
+        "highlights": [],
+        "tags": []
+    };
 
     while (true) {
         if (chunkCount >= maxChunks) {
@@ -96,7 +86,7 @@ ${JSON.stringify(formatExample, null, 2)}
         try {
             const result = await retry(async () => {
                 return await model.generateContent([
-                    promptTemplate,
+                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, currentSummary),
                     {
                         fileData: {
                             fileUri: videoUrl,
@@ -134,17 +124,22 @@ ${JSON.stringify(formatExample, null, 2)}
                 chunkSummary.tags = [];
             }
 
-            allOverviewSummaries.push(chunkSummary.overview.summary);
-            allHighlights.push(...chunkSummary.highlights.map(h => ({
+            currentSummary.overview.summary = chunkSummary.overview.summary;
+            currentSummary.overview.mood = chunkSummary.overview.mood;
+            currentSummary.highlights.push(...chunkSummary.highlights.map(h => ({
                 ...h,
                 // Adjust timestamp to be relative to the start of the video, not the chunk
-                timestamp: h.timestamp ? formatTimestamp(parseTimestampToSeconds(h.timestamp) + clipStartSeconds) : 'タイムスタンプなし'
+                timestamp: h.timestamp ? formatTimestamp(parseTimestampToSeconds(h.timestamp)) : 'タイムスタンプなし'
             })));
-            chunkSummary.tags.forEach(tag => allTags.add(tag));
+            chunkSummary.tags.forEach(tag => {
+                if (!currentSummary.tags.includes(tag)) {
+                    currentSummary.tags.push(tag);
+                }
+            });
 
             // Update overall mood from the first successful chunk
-            if (overallMood === "不明" && chunkSummary.overview.mood) {
-                overallMood = chunkSummary.overview.mood;
+            if (currentSummary.overview.mood === "不明" && chunkSummary.overview.mood) {
+                currentSummary.overview.mood = chunkSummary.overview.mood;
             }
 
             currentOffsetSeconds += chunkSizeSeconds;
@@ -169,30 +164,7 @@ ${JSON.stringify(formatExample, null, 2)}
         }
     }
 
-    // Combine all overview summaries into a single one
-    let finalOverviewSummary = allOverviewSummaries.join('\n');
-    if (allOverviewSummaries.length > 1) {
-        console.log(`Summarizing combined overviews for ${videoId}...`);
-        try {
-            const combinedOverviewPrompt = `以下の複数の要約を統合し、一つの簡潔な概要（200字程度）にまとめてください。マークダウンやコードブロックは使用せず、純粋なテキストのみを出力してください.\n\n${finalOverviewSummary}`;
-            const overviewResult = await retry(async () => {
-                return await model.generateContent([combinedOverviewPrompt]);
-            });
-            finalOverviewSummary = overviewResult.response.text().trim();
-        } catch (error) {
-            console.error(`Error combining overviews for ${videoId}:`, error.message || error);
-            // Fallback to concatenated summaries if combining fails
-        }
-    }
-
-    return {
-        overview: {
-            summary: finalOverviewSummary,
-            mood: overallMood
-        },
-        highlights: allHighlights,
-        tags: Array.from(allTags)
-    };
+    return currentSummary;
 }
 
 // Helper function to parse timestamp string (e.g., "0:30", "1:05:10") to seconds

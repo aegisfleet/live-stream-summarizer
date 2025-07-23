@@ -289,6 +289,8 @@ class ArchiveManager {
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
                 content.style.maxHeight = null;
+                // 「閉じる」が押された際に、カードの先頭にスクロール
+                card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         };
 

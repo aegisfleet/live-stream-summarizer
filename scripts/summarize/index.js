@@ -272,7 +272,7 @@ async function generateSummaries() {
         // 要約済みの動画IDを取得
         const summarizedIds = new Set(existingSummaries.map(s => s.videoId));
         const summaries = [...existingSummaries];
-        const MAX_VIDEOS_TO_PROCESS = 1;
+        const MAX_VIDEOS_TO_PROCESS = 10;
         let processedCount = 0;
 
         for (const archive of archives) {

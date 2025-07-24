@@ -20,12 +20,13 @@
             <div id="filter-buttons"></div>
             <button id="select-all">すべて表示</button>
         </div>
-        <div class="filter-group">
-        <h3>タグで絞り込み</h3>
-        <div id="tag-filter-buttons" class="filter-buttons-container">
+        <div class="filter-group collapsible">
+        <h3 class="collapsible-trigger">タグで絞り込み</h3>
+        <div id="tag-filter-buttons" class="filter-buttons-container collapsible-content">
             <!-- タグボタンはJavaScriptによってここに動的に生成されます -->
         </div>
         <button id="select-all-tags">すべてのタグを選択</button>
+        <button class="toggle-tags">もっと見る</button>
         </div>
     </header>
 

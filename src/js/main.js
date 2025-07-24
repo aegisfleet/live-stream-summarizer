@@ -80,15 +80,17 @@ class ArchiveManager {
             }
         });
 
-        // アーカイブを再フィルタリングする
-        this.filterArchives();
+        // タグフィルターを更新し、アーカイブを再フィルタリングする
+        this.updateTagFilter();
     }
     
     selectAllStreamers() {
         const buttons = document.querySelectorAll('#filter-buttons button');
         this.selectedStreamers = new Set(this.streamers);
         buttons.forEach(button => button.classList.add('active'));
-        this.filterArchives();
+        
+        // タグフィルターを更新し、アーカイブを再フィルタリングする
+        this.updateTagFilter();
     }
     
     setupTagFilter() {
@@ -107,16 +109,7 @@ class ArchiveManager {
             return;
         }
 
-        // タグごとのフィルターボタンを作成
-        Array.from(this.tags).sort().forEach(tag => {
-            const button = document.createElement('button');
-            button.textContent = tag;
-            // クリックすると、そのタグのみでフィルタリングする
-            button.addEventListener('click', () => this.filterByTag(tag));
-            filterContainer.appendChild(button);
-        });
-
-        // すべて選択ボタンの設定
+        // 「すべて選択」ボタンは、現在表示されているタグをすべて選択するように変更
         selectAllButton.addEventListener('click', () => this.selectAllTags());
 
         const toggleTags = () => {
@@ -136,12 +129,40 @@ class ArchiveManager {
         toggleButton.addEventListener('click', toggleTags);
         collapsibleContainer.querySelector('.collapsible-trigger').addEventListener('click', toggleTags);
 
-        // 初期状態ですべて選択
+        // 初期タグ表示
+        this.updateTagFilter();
+    }
+
+    updateTagFilter() {
+        const filterContainer = document.getElementById('tag-filter-buttons');
+        filterContainer.innerHTML = ''; // 既存のタグボタンをクリア
+
+        // 選択中の配信者に関連するタグのみを抽出
+        const relevantArchives = this.archiveData.filter(archive => this.selectedStreamers.has(archive.streamer));
+        const visibleTags = new Set();
+        relevantArchives.forEach(archive => {
+            archive.tags.forEach(tag => visibleTags.add(tag));
+        });
+
+        // this.tags を更新して、現在表示されているタグのセットを保持
+        this.tags = visibleTags;
+
+        // タグごとのフィルターボタンを作成
+        Array.from(this.tags).sort().forEach(tag => {
+            const button = document.createElement('button');
+            button.textContent = tag;
+            // クリックすると、そのタグのみでフィルタリングする
+            button.addEventListener('click', () => this.filterByTag(tag));
+            filterContainer.appendChild(button);
+        });
+
+        // 表示されているタグをすべて選択状態にして、アーカイブをフィルタリング
         this.selectAllTags();
     }
 
     selectAllTags() {
         const buttons = document.querySelectorAll('#tag-filter-buttons button');
+        // this.tags は updateTagFilter で更新された、現在表示されているタグのセットを指す
         this.selectedTags = new Set(this.tags);
         buttons.forEach(button => button.classList.add('active'));
         this.filterArchives();

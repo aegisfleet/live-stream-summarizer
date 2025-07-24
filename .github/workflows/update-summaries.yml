@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write # リポジトリへのコミット・プッシュに必要
       issues: write  # GitHub Scriptでissueを作成するために必要
-    
+
     steps:
       - uses: actions/checkout@v4
       
@@ -52,13 +52,7 @@ jobs:
             git commit -m "chore: Update stream summaries"
             git push
           fi
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src
-          
+
       - name: Check for failures
         if: failure()
         uses: actions/github-script@v6

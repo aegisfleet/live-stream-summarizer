@@ -106,9 +106,8 @@ button:hover {
 }
 
 button:focus {
-    outline: 3px solid #007FFF;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px #FFFFFF;
+    outline: none;
+    box-shadow: none;
 }
 
 button.active {

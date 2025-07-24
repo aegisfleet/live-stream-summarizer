@@ -35,7 +35,7 @@ async function generateSummary(videoId, videoDurationSeconds) {
             {
                 "title": "見どころのタイトル",
                 "description": "その内容の詳細説明",
-                "timestamp": "見どころの開始ポイント、動画の経過時間",
+                "timestamp": "見どころの開始ポイント、動画の経過時間（形式は\"MM:SS\"）",
                 "type": "トピックの種類（お知らせ/トーク/ゲーム/歌/リアクション等）"
             }
         ],

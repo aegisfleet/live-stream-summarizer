@@ -35,7 +35,7 @@ async function generateSummary(videoId, videoDurationSeconds) {
             {
                 "title": "見どころのタイトル",
                 "description": "その内容の詳細説明",
-                "timestamp": "発生時間（動画の開始からの経過時間、フォーマットはHH:MM:SS）",
+                "timestamp": "HH:MM:SS（見どころの開始ポイント、動画の経過時間）",
                 "type": "トピックの種類（お知らせ/トーク/ゲーム/歌/リアクション等）"
             }
         ],
@@ -43,28 +43,33 @@ async function generateSummary(videoId, videoDurationSeconds) {
     };
 
     const promptTemplate = (clipStart, clipEnd, formatExample, existingSummary = null) => {
-        let prompt = `以下のホロライブ所属タレントのYouTubeライブ配信の、${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
+        let prompt = `ホロライブ所属タレントのYouTubeライブ配信において、${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
 
         if (existingSummary) {
             prompt += `\n\n
 これまでの要約データ:
+\`\`\`
 ${JSON.stringify(existingSummary, null, 2)}
+\`\`\`
 
 この要約データを更新・追記する形で、新しい期間の情報を追加してください。
-特に、ハイライトとタグは既存のものに追記し、概要は全体を考慮して更新してください。`;
+特に、highlightsとtagsは既存のものに追記し、概要は全体を考慮して更新してください。`;
         }
 
         prompt += `\n\n
 出力形式は以下の構造に厳密に従ってください:
+\`\`\`
 ${JSON.stringify(formatExample, null, 2)}
+\`\`\`
 
 注意事項:
-1. 概要は200字程度で、配信の全体像が分かるように要約してください。
-2. 見どころは3-5個抽出してください。
-3. タイムスタンプは、動画の開始を00:00:00として、そこからの経過時間を時間、分、秒をコロンで区切った形式で正確に記載してください。
-- **最重要**: タイムスタンプは必ずHH:MM:SS形式（例: 00:05:30, 01:23:45）で出力してください。
- - **絶対に避けてください**: MM:SS:00のような形式（例: 05:30:00）は誤りです。必ず時間（HH）を含めてください。
- - 秒が不確かな場合でも、最も近い秒に丸めてHH:MM:SS形式を維持してください。
+1. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約してください。
+2. 見どころは各チャンクごとに最低3以上個抽出してください。
+3. タイムスタンプは、動画の開始を00:00:00として、そこからの経過時間を[時間:分:秒]でコロン区切りの形式で正確に記載してください。
+- 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}の長さです。
+- **最重要**: タイムスタンプは必ずHH:MM:SS形式で出力してください。
+- **絶対に避けてください**: MM:SS:00のような形式は誤りです。
+- 秒が不確かな場合でも、最も近い秒に丸めてHH:MM:SS形式を維持してください。
 4. 配信の種類や内容に応じて適切なタグを付与してください。
 5. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください。
 6. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください。
@@ -87,7 +92,7 @@ ${JSON.stringify(formatExample, null, 2)}
     };
 
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-    const chunkSizeSeconds = 1800; // 30 minutes per chunk
+    const chunkSizeSeconds = 2400; // 40 minutes per chunk
     const maxChunks = Math.ceil(videoDurationSeconds / chunkSizeSeconds); // Calculate max chunks based on duration
     let currentOffsetSeconds = 0;
     let chunkCount = 0;

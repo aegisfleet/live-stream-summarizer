@@ -94,11 +94,15 @@ class ArchiveManager {
     setupTagFilter() {
         const filterContainer = document.getElementById('tag-filter-buttons');
         const selectAllButton = document.getElementById('select-all-tags');
+        const toggleButton = document.querySelector('.toggle-tags');
+        const collapsibleContainer = document.querySelector('.filter-group.collapsible');
 
-        if (!filterContainer || !selectAllButton) {
+        if (!filterContainer || !selectAllButton || !toggleButton || !collapsibleContainer) {
             console.error('タグフィルターに必要なDOM要素が見つかりません:', {
                 filterContainer: !!filterContainer,
-                selectAllButton: !!selectAllButton
+                selectAllButton: !!selectAllButton,
+                toggleButton: !!toggleButton,
+                collapsibleContainer: !!collapsibleContainer
             });
             return;
         }
@@ -114,6 +118,23 @@ class ArchiveManager {
 
         // すべて選択ボタンの設定
         selectAllButton.addEventListener('click', () => this.selectAllTags());
+
+        const toggleTags = () => {
+            const isOpen = collapsibleContainer.classList.toggle('open');
+            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+
+            const content = collapsibleContainer.querySelector('.collapsible-content');
+            if (isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+                // 「閉じる」が押された際に、「タグで絞り込み」セクションにスクロール
+                collapsibleContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        toggleButton.addEventListener('click', toggleTags);
+        collapsibleContainer.querySelector('.collapsible-trigger').addEventListener('click', toggleTags);
 
         // 初期状態ですべて選択
         this.selectAllTags();
@@ -298,6 +319,16 @@ class ArchiveManager {
         toggleButton.addEventListener('click', toggleHighlights);
         
         // タグセクション
+        const tagsContainer = document.createElement('div');
+        tagsContainer.className = 'tags-container collapsible';
+
+        const tagsTitle = document.createElement('strong');
+        tagsTitle.textContent = 'タグ：';
+        tagsTitle.className = 'collapsible-trigger';
+
+        const tagsList = document.createElement('div');
+        tagsList.className = 'tags-list collapsible-content';
+        
         const tags = document.createElement('div');
         tags.className = 'tags';
         archive.tags.forEach(tag => {
@@ -309,6 +340,30 @@ class ArchiveManager {
             tagSpan.addEventListener('click', () => this.filterByTag(tag));
             tags.appendChild(tagSpan);
         });
+        tagsList.appendChild(tags);
+
+        const toggleTagsButton = document.createElement('button');
+        toggleTagsButton.className = 'toggle-tags';
+        toggleTagsButton.textContent = 'もっと見る';
+
+        const toggleTags = () => {
+            const isOpen = tagsContainer.classList.toggle('open');
+            toggleTagsButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+
+            const content = tagsContainer.querySelector('.collapsible-content');
+            if (isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+            }
+        };
+
+        tagsTitle.addEventListener('click', toggleTags);
+        toggleTagsButton.addEventListener('click', toggleTags);
+
+        tagsContainer.appendChild(tagsTitle);
+        tagsContainer.appendChild(tagsList);
+        tagsContainer.appendChild(toggleTagsButton);
         
         // 最終更新日
         const lastUpdated = document.createElement('div');

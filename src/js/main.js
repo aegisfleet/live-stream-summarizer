@@ -14,6 +14,7 @@ class ArchiveManager {
         await this.loadData();
         this.setupStreamerFilter();
         this.setupTagFilter();
+        this.setupSiteDescriptionToggle();
         this.renderArchives();
     }
     
@@ -158,6 +159,37 @@ class ArchiveManager {
 
         // 表示されているタグをすべて選択状態にして、アーカイブをフィルタリング
         this.selectAllTags();
+    }
+
+    setupSiteDescriptionToggle() {
+        const siteDescription = document.getElementById('site-description');
+        const toggleButton = siteDescription.querySelector('.toggle-site-description');
+        const collapsibleContent = siteDescription.querySelector('.collapsible-content');
+        const collapsibleTrigger = siteDescription.querySelector('.collapsible-trigger');
+
+        if (!siteDescription || !toggleButton || !collapsibleContent || !collapsibleTrigger) {
+            console.error('サイト説明のDOM要素が見つかりません:', {
+                siteDescription: !!siteDescription,
+                toggleButton: !!toggleButton,
+                collapsibleContent: !!collapsibleContent,
+                collapsibleTrigger: !!collapsibleTrigger
+            });
+            return;
+        }
+
+        const toggleDescription = () => {
+            const isOpen = siteDescription.classList.toggle('open');
+            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+
+            if (isOpen) {
+                collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+            } else {
+                collapsibleContent.style.maxHeight = null;
+            }
+        };
+
+        toggleButton.addEventListener('click', toggleDescription);
+        collapsibleTrigger.addEventListener('click', toggleDescription);
     }
 
     selectAllTags() {

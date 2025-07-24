@@ -43,7 +43,7 @@ async function generateSummary(videoId, videoDurationSeconds) {
     };
 
     const promptTemplate = (clipStart, clipEnd, formatExample, existingSummary = null) => {
-        let prompt = `ホロライブ所属タレントのYouTubeライブ配信において、${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
+        let prompt = `動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
 
         if (existingSummary) {
             prompt += `\n\n
@@ -65,10 +65,11 @@ ${JSON.stringify(formatExample, null, 2)}
 注意事項:
 1. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください。
 2. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください。
-3. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約してください。
-4. 見どころは各チャンクごとに最低3以上、できるだけ多く抽出してください。
-5. 配信の種類や内容に応じて適切なタグを付与してください。
-6. タイムスタンプは、動画の開始を00:00として、そこからの経過時間を[時間:分:秒]でコロン区切りの形式で正確に記載してください。
+3. 出演者の名前が分からない場合は「配信者」と記載してください。
+4. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約してください。
+5. 見どころは各チャンクごとに最低3以上、できるだけ多く抽出してください。
+6. 配信の種類や内容に応じて適切なタグを付与してください。
+7. タイムスタンプは、動画の開始を00:00として、そこからの経過時間を[時間:分:秒]でコロン区切りの形式で正確に記載してください。
 - 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}の長さです。
 - 秒が不確かな場合でも、最も近い秒に丸めてMM:SS形式を維持してください。
 

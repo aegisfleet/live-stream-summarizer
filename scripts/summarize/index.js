@@ -25,7 +25,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
     }
 }
 
-async function generateSummary(videoId, videoDurationSeconds) {
+async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
     const formatExample = {
         "overview": {
             "summary": "配信の全体的な内容を200字程度で説明",
@@ -42,8 +42,8 @@ async function generateSummary(videoId, videoDurationSeconds) {
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
     };
 
-    const promptTemplate = (clipStart, clipEnd, formatExample, existingSummary = null) => {
-        let prompt = `動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
+    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, existingSummary = null) => {
+        let prompt = `「${videoTitle}」というタイトルの動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
 
         if (existingSummary) {
             prompt += `\n\n
@@ -132,7 +132,7 @@ JSONの出力形式:
         try {
             const result = await retry(async () => {
                 return await model.generateContent([
-                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, currentSummary),
+                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, currentSummary),
                     {
                         fileData: {
                             fileUri: videoUrl,
@@ -297,7 +297,7 @@ async function generateSummaries() {
 
             try {
                 // Gemini APIを使用して動画を直接要約
-                const summary = await generateSummary(archive.videoId, archive.duration);
+                const summary = await generateSummary(archive.videoId, archive.duration, archive.title);
                 
                 // 要約データを配列に追加
                 summaries.push({

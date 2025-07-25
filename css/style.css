@@ -175,7 +175,8 @@ main {
 .archive-card .date {
     color: #666;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    line-height: 1;
 }
 
 .archive-card .summary {
@@ -186,8 +187,12 @@ main {
     font-size: 0.9rem;
 }
 
-.overview-mood,
 .duration {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.overview-mood {
     margin-top: 0.75rem;
 }
 

@@ -43,7 +43,8 @@ header {
 #site-description {
     background-color: #e0f7fa; /* Light blue background */
     padding: 1rem;
-    margin-bottom: 0.5rem;
+    margin: 0 auto 0.5rem auto;
+    max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;

@@ -292,7 +292,9 @@ footer {
 }
 
 /* コンテンツがオーバーフローしている場合のみオーバーレイを表示 */
-.collapsible .collapsible-content.has-overflow::after {
+.collapsible .collapsible-content.has-overflow::after,
+#site-description .collapsible-content::after,
+.highlights.collapsible .collapsible-content::after {
     display: block;
 }
 

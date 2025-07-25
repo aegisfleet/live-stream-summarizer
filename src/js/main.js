@@ -309,6 +309,16 @@ class ArchiveManager {
         title.title = 'クリックして動画を再生';
         title.addEventListener('click', () => openVideo());
         
+        // 配信日時
+        const dateElement = document.createElement('p');
+        dateElement.className = 'archive-date';
+        dateElement.textContent = `配信日時: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
+
+        // 配信時間
+        const duration = document.createElement('p');
+        duration.className = 'duration';
+        duration.textContent = `配信時間：${this.formatDuration(archive.duration)}`;
+
         // 配信者名
         const streamer = document.createElement('p');
         streamer.className = 'streamer-name';
@@ -325,14 +335,6 @@ class ArchiveManager {
         const overviewMood = document.createElement('p');
         overviewMood.className = 'overview-mood';
         overviewMood.textContent = `配信の雰囲気：${archive.overview.mood}`;
-        
-        const duration = document.createElement('p');
-        duration.className = 'duration';
-        duration.textContent = `配信時間：${this.formatDuration(archive.duration)}`;
-        
-        overview.appendChild(overviewSummary);
-        overview.appendChild(overviewMood);
-        overview.appendChild(duration);
         
         // 見どころセクション
         const highlights = document.createElement('div');
@@ -443,22 +445,21 @@ class ArchiveManager {
         tagsContainer.appendChild(tagsList);
         tagsContainer.appendChild(toggleTagsButton);
         
-        // 最終更新日
-        const lastUpdated = document.createElement('div');
-        lastUpdated.className = 'last-updated';
-        lastUpdated.textContent = `最終更新：${new Date(archive.lastUpdated).toLocaleString('ja-JP')}`;
-        
         // 要素の組み立て
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
         highlights.appendChild(toggleButton);
+
+        overview.appendChild(dateElement);
+        overview.appendChild(duration);
+        overview.appendChild(overviewSummary);
+        overview.appendChild(overviewMood);
         
         content.appendChild(title);
         content.appendChild(streamer);
         content.appendChild(overview);
         content.appendChild(highlights);
         content.appendChild(tags);
-        content.appendChild(lastUpdated);
         
         card.appendChild(img);
         card.appendChild(content);

@@ -278,7 +278,7 @@ footer {
     max-height: 60px; /* サイト説明の初期表示高さ */
 }
 
-/* グラデーションオーバーレイ - サイト説明と見どころはデフォルトで表示、タグはオーバーフロー時のみ */
+/* グラデーションオーバーレイは、実際にコンテンツがオーバーフローしている場合のみ表示 */
 .collapsible .collapsible-content::after {
     content: '';
     position: absolute;
@@ -287,16 +287,14 @@ footer {
     right: 0;
     height: 30px;
     background: linear-gradient(to top, var(--card-background), transparent);
-    /* サイト説明と見どころはデフォルトで表示 */
-    display: block;
-}
-
-/* タグのグラデーションオーバーレイは、実際にコンテンツがオーバーフローしている場合のみ表示 */
-.tags-container .collapsible .collapsible-content::after {
+    /* デフォルトでは非表示 */
     display: none;
 }
 
-.tags-container .collapsible .collapsible-content.has-overflow::after {
+/* コンテンツがオーバーフローしている場合のみオーバーレイを表示 */
+.collapsible .collapsible-content.has-overflow::after,
+#site-description .collapsible-content::after,
+.highlights.collapsible .collapsible-content::after {
     display: block;
 }
 

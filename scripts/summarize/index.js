@@ -130,8 +130,8 @@ JSONの出力形式:
         console.log(`Processing chunk: ${videoId} from ${clipStartSeconds}s to ${clipEndSeconds}s`);
 
         try {
-            const result = await retry(async () => {
-                return await model.generateContent([
+            const chunkSummary = await retry(async () => {
+                const result = await model.generateContent([
                     promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, currentSummary),
                     {
                         fileData: {
@@ -147,22 +147,23 @@ JSONの出力形式:
                         mediaResolution: 'LOW',
                     },
                 });
+
+                const response = await result.response;
+                let text = response.text();
+                console.log(`${videoId}: ${text}`);
+
+                // マークダウンのコードブロックを除去
+                text = text.replace(/```json|```/g, '').trim();
+                if (!text.startsWith('{') || !text.endsWith('}')) {
+                    throw new Error('レスポンスが有効なJSON形式ではありません');
+                }
+                const parsedSummary = JSON.parse(text);
+
+                if (!parsedSummary.overview || !parsedSummary.overview.summary) {
+                    throw new Error('概要情報が不足しています');
+                }
+                return parsedSummary;
             });
-
-            const response = await result.response;
-            let text = response.text();
-            console.log(`${videoId}: ${text}`);
-
-            // マークダウンのコードブロックを除去
-            text = text.replace(/```json|```/g, '').trim();
-            if (!text.startsWith('{') || !text.endsWith('}')) {
-                throw new Error('レスポンスが有効なJSON形式ではありません');
-            }
-            const chunkSummary = JSON.parse(text);
-
-            if (!chunkSummary.overview || !chunkSummary.overview.summary) {
-                throw new Error('概要情報が不足しています');
-            }
             if (!Array.isArray(chunkSummary.highlights)) { // Highlights can be empty
                 chunkSummary.highlights = [];
             }

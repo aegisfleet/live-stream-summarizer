@@ -47,7 +47,7 @@ header {
     max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
 }
 
 #site-description h2 {
@@ -56,10 +56,14 @@ header {
     font-size: 1.1rem; /* 追加 */
 }
 
-#site-description p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #333;
+#site-description ul {
+    list-style: disc; /* 箇条書きのスタイルをディスクに設定 */
+    margin-left: 1.5rem; /* 左側にインデントを追加 */
+    padding-left: 0;
+}
+
+#site-description li {
+    margin-bottom: 0.5rem; /* 各リストアイテムの下に余白を追加 */
 }
 
 h1 {

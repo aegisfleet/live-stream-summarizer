@@ -157,6 +157,9 @@ class ArchiveManager {
             filterContainer.appendChild(button);
         });
 
+        // オーバーフロー状態をチェックして適切なクラスを適用
+        this.checkTagOverflow();
+
         // 表示されているタグをすべて選択状態にして、アーカイブをフィルタリング
         this.selectAllTags();
     }
@@ -198,6 +201,27 @@ class ArchiveManager {
         this.selectedTags = new Set(this.tags);
         buttons.forEach(button => button.classList.add('active'));
         this.filterArchives();
+    }
+
+    checkTagOverflow() {
+        // タグフィルターのコンテンツがオーバーフローしているかチェック
+        const content = document.querySelector('.filter-group.collapsible .collapsible-content');
+        if (!content) return;
+
+        // 一時的にmax-heightを解除してスクロール高さを測定
+        const originalMaxHeight = content.style.maxHeight;
+        content.style.maxHeight = 'none';
+        const scrollHeight = content.scrollHeight;
+        content.style.maxHeight = originalMaxHeight;
+
+        // 現在のmax-heightと比較してオーバーフローを判定
+        const currentMaxHeight = parseInt(window.getComputedStyle(content).maxHeight);
+        
+        if (scrollHeight > currentMaxHeight) {
+            content.classList.add('has-overflow');
+        } else {
+            content.classList.remove('has-overflow');
+        }
     }
 
     filterByTag(clickedTag) {

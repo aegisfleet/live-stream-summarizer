@@ -310,6 +310,10 @@ footer {
     display: none;
 }
 
+#site-description.open .collapsible-content::after {
+    display: none;
+}
+
 .collapsible-trigger {
     cursor: pointer;
     display: flex;

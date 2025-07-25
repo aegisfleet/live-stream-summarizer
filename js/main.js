@@ -186,6 +186,7 @@ class ArchiveManager {
 
             if (isOpen) {
                 collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+                collapsibleContent.classList.remove('has-overflow');
             } else {
                 collapsibleContent.style.maxHeight = null;
             }

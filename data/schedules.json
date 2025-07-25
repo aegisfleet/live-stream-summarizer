@@ -258,15 +258,15 @@
     "date": "2025-07-26T18:00:00.000Z"
   },
   {
-    "videoId": "msHGxsreyKg",
-    "videoUrl": "https://www.youtube.com/watch?v=msHGxsreyKg",
-    "streamer": "風真いろは",
-    "date": "2025-07-26T19:50:00.000Z"
-  },
-  {
     "videoId": "iTa5IyUgD9A",
     "videoUrl": "https://www.youtube.com/watch?v=iTa5IyUgD9A",
     "streamer": "白銀ノエル ⚔",
+    "date": "2025-07-26T19:50:00.000Z"
+  },
+  {
+    "videoId": "msHGxsreyKg",
+    "videoUrl": "https://www.youtube.com/watch?v=msHGxsreyKg",
+    "streamer": "風真いろは",
     "date": "2025-07-26T19:50:00.000Z"
   },
   {
@@ -276,15 +276,21 @@
     "date": "2025-07-26T19:50:00.000Z"
   },
   {
+    "videoId": "i3Nd5uDRxsY",
+    "videoUrl": "https://www.youtube.com/watch?v=i3Nd5uDRxsY",
+    "streamer": "ホロライブ",
+    "date": "2025-07-26T20:00:00.000Z"
+  },
+  {
     "videoId": "lldVPLGxe9U",
     "videoUrl": "https://www.youtube.com/watch?v=lldVPLGxe9U",
     "streamer": "大神ミオ 🌲",
     "date": "2025-07-26T20:00:00.000Z"
   },
   {
-    "videoId": "i3Nd5uDRxsY",
-    "videoUrl": "https://www.youtube.com/watch?v=i3Nd5uDRxsY",
-    "streamer": "ホロライブ",
+    "videoId": "dSAlW1t6QlA",
+    "videoUrl": "https://www.youtube.com/watch?v=dSAlW1t6QlA",
+    "streamer": "アキロゼ 🍎",
     "date": "2025-07-26T20:00:00.000Z"
   },
   {

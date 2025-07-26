@@ -42,7 +42,7 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
             {
                 "title": "見どころのタイトル",
                 "description": "その内容の詳細説明",
-                "timestamp": "見どころの開始ポイント、動画の経過時間（形式は\"MM:SS\"）",
+                "timestamp": "見どころの開始ポイント（動画の経過時間、形式は\"MM:SS\"）",
                 "type": "トピックの種類（お知らせ/トーク/ゲーム/歌/リアクション等）"
             }
         ],
@@ -63,9 +63,9 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
 ${JSON.stringify(formatExample, null, 2)}
 \`\`\`
 
-### 注意事項:
+### ⚠️注意事項:
 1. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力する。
-2. 全てのフィールドは必須である。不明な場合は適切なデフォルト値を設定する。
+2. 全てのフィールドは必須である。
 3. 出演者の名前が分からない場合は「配信者」と記載する。
 4. "00:00"付近は配信開始時の待ち時間になるケースが多いため、配信者がしゃべりだしてから要約を開始する。
 5. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約する。
@@ -75,7 +75,7 @@ ${JSON.stringify(formatExample, null, 2)}
 8. 見どころのタイムスタンプ(timestamp)は動画の開始からの経過時間を正確に記載する。
 - 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載する。
 
-### 許可されない出力形式:
+### ❌許可されない出力形式:
 #### 再生時間:
 "timestamp": "MM:SS:00"  // 秒が真ん中に来ている
 "timestamp": "HH:MM"  // 秒の情報がない
@@ -85,7 +85,7 @@ ${JSON.stringify(formatExample, null, 2)}
 {...}
 \`\`\`
 
-### 正しい出力形式:
+### ✅正しい出力形式:
 #### 再生時間:
 "timestamp": "MM:SS"  // 時間が0の場合
 "timestamp": "HH:MM:SS"  // 時間が1時間以上の場合

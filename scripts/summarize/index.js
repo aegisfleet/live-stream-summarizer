@@ -51,22 +51,9 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
 
     const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, existingSummary = null) => {
         let prompt = `# 指示内容
-「${videoTitle}」というタイトルの動画を要約し、JSONオブジェクトとして出力する。`;
+「${videoTitle}」というタイトルの動画を要約し、JSONオブジェクトとして出力する。
 
-        if (existingSummary) {
-            prompt += `\n\n
-## これまでの要約データ:
-\`\`\`
-${JSON.stringify(existingSummary, null, 2)}
-\`\`\`
-
-この要約データを更新・追記する形で、新しい期間の情報を追加する。
-- overviewは全体を考慮して更新する。
-- highlightsとtagsは既存の内容をそのまま残して、新しい情報を追加する。`;
-        }
-
-        prompt += `\n\n
-## 現在の範囲:
+## 現在の動画の範囲:
 - 開始時間: ${formatTimestamp(clipStart)}
 - 終了時間: ${formatTimestamp(clipEnd)}
 - 動画の長さ: 約${formatDuration(videoDurationSeconds)}分間
@@ -87,7 +74,6 @@ ${JSON.stringify(formatExample, null, 2)}
 - データの順番は動画の内容に沿って時系列で並べる。
 8. 見どころのタイムスタンプ(timestamp)は動画の開始からの経過時間を正確に記載する。
 - 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載する。
-- JSONファイルを出力した際にtimestampが指定の範囲を超えていないか確認する。
 
 ### 許可されない出力形式:
 #### 再生時間:
@@ -113,6 +99,21 @@ ${JSON.stringify(formatExample, null, 2)}
   "highlights": [...],
   "tags": [...]
 }`;
+
+        if (existingSummary) {
+            prompt += `\n\n
+## 既存の要約データ:
+この要約データを更新・追記する形で、新しい期間の情報を追加する。
+- overviewは全体を考慮して更新する。
+- highlightsとtagsは既存の内容をそのまま残して、新しい情報を追加する。
+
+### これまでの要約データ:
+\`\`\`
+${JSON.stringify(existingSummary, null, 2)}
+\`\`\`
+`;
+        }
+
         return prompt;
     };
 

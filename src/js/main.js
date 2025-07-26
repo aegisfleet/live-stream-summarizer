@@ -47,7 +47,7 @@ class ArchiveManager {
         }
         
         // ストリーマーごとのフィルターボタンを作成
-        this.streamers.forEach(streamer => {
+        Array.from(this.streamers).sort().forEach(streamer => {
             const button = document.createElement('button');
             button.textContent = streamer;
             button.addEventListener('click', () => this.filterByStreamer(streamer));

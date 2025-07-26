@@ -14,7 +14,13 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
         try {
             return await fn();
         } catch (error) {
-            if ((error.message && (error.message.includes('429 Too Many Requests') || error.message.includes('500 Internal Server Error') || error.message.includes('レスポンスが有効なJSON形式ではありません') || error.message.includes('概要情報が不足しています'))) && i < retries - 1) {
+            if ((error.message && (
+                error.message.includes('429 Too Many Requests') ||
+                error.message.includes('500 Internal Server Error') ||
+                error.message.includes('レスポンスが有効なJSON形式ではありません') ||
+                error.message.includes('概要情報が不足しています') ||
+                error.message.includes('タイムスタンプが2時間を超えるものが含まれています')
+            )) && i < retries - 1) {
                 console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 delay *= 2; // Exponential backoff
@@ -165,6 +171,11 @@ JSONの出力形式:
 
                 if (!parsedSummary.overview || !parsedSummary.overview.summary) {
                     throw new Error('概要情報が不足しています');
+                }
+
+                // タイムスタンプが2時間を超えるものが含まれている場合は再実行
+                if (parsedSummary.overview.topics && parsedSummary.overview.topics.some(topic => topic.timestamp > 7200)) {
+                    throw new Error('タイムスタンプが2時間を超えるものが含まれています');
                 }
                 return parsedSummary;
             });

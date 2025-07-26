@@ -14,6 +14,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
         try {
             return await fn();
         } catch (error) {
+            console.error(`Error occurred: ${error.message || error}`);
             if ((error.message && (
                 error.message.includes('429 Too Many Requests') ||
                 error.message.includes('500 Internal Server Error') ||
@@ -159,11 +160,7 @@ ${JSON.stringify(formatExample, null, 2)}
                             endOffset: { seconds: clipEndSeconds }
                         },
                     },
-                ], {
-                    generationConfig: {
-                        mediaResolution: 'LOW',
-                    },
-                });
+                ]);
 
                 const response = await result.response;
                 let text = response.text();

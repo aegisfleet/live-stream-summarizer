@@ -50,7 +50,7 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
 
     const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, existingSummary = null) => {
         let prompt = `# 指示内容
-「${videoTitle}」というタイトルの動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力する。`;
+「${videoTitle}」というタイトルの動画を要約し、JSONオブジェクトとして出力する。`;
 
         if (existingSummary) {
             prompt += `\n\n
@@ -65,6 +65,11 @@ ${JSON.stringify(existingSummary, null, 2)}
         }
 
         prompt += `\n\n
+## 現在の範囲:
+- 開始時間: ${formatTimestamp(clipStart)}
+- 終了時間: ${formatTimestamp(clipEnd)}
+- 動画の長さ: 約${formatDuration(videoDurationSeconds)}分間
+
 ## 出力形式は以下の構造に厳密に従う:
 \`\`\`
 ${JSON.stringify(formatExample, null, 2)}
@@ -77,11 +82,9 @@ ${JSON.stringify(formatExample, null, 2)}
 4. "00:00"付近は配信開始時の待ち時間になるケースが多いため、配信者がしゃべりだしてから要約を開始する。
 5. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約する。
 6. 配信の種類や内容に応じて適切なタグを付与する。
-7. 見どころ(highlights)は各範囲ごとに最低3以上、できるだけ多く抽出する。
+7. 見どころ(highlights)は各範囲ごとに最低3以上、目安としては5分間隔で出来るだけ多く抽出する。
 - データの順番は動画の内容に沿って時系列で並べる。
-- 範囲内の最初から最後まで内容をカバーするようにする。
 8. 見どころのタイムスタンプ(timestamp)は動画の開始からの経過時間を正確に記載する。
-- 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}分間である。
 - 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載する。
 - JSONファイルを出力した際にtimestampが指定の範囲を超えていないか確認する。
 

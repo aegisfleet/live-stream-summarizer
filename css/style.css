@@ -214,9 +214,9 @@ main {
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--card-background);
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /* クリック可能な要素のカーソルをポインターに変更し、変化を滑らかにする */

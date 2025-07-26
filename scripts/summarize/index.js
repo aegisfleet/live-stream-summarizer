@@ -174,7 +174,11 @@ JSONの出力形式:
                 }
 
                 // タイムスタンプが2時間を超えるものが含まれている場合は再実行
-                if (parsedSummary.overview.topics && parsedSummary.overview.topics.some(topic => topic.timestamp > 7200)) {
+                if (parsedSummary.overview.topics && parsedSummary.overview.topics.some(topic => {
+                    const [hours, minutes, seconds] = topic.timestamp.split(':').map(Number);
+                    const totalSeconds = hours * 3600 + minutes * 60 + seconds;
+                    return totalSeconds > 7200;
+                })) {
                     throw new Error('タイムスタンプが2時間を超えるものが含まれています');
                 }
                 return parsedSummary;

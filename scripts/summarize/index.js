@@ -91,7 +91,10 @@ JSONの出力形式:
 
 JSONの出力形式:
 {
-  "overview": {...},
+  "overview": {
+      "summary": "...",
+      "mood": "..."
+  },
   "highlights": [...],
   "tags": [...]
 }

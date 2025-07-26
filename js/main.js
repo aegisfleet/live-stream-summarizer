@@ -286,7 +286,7 @@ class ArchiveManager {
         // カード全体のクリックイベントを削除し、クリック可能な要素を明確にします。
         // これにより、ユーザーがどこをクリックすればよいか分かりやすくなります。
         const openVideo = (startTime = 0) => {
-            const url = `https://www.youtube.com/watch?v=${archive.videoId}` + (startTime > 0 ? `&t=${startTime}s` : '');
+            const url = `https://www.youtube.com/watch?v=${archive.videoId}&t=${startTime}s`;
             window.open(url, '_blank');
         };
         

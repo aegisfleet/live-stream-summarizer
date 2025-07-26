@@ -213,13 +213,13 @@
     "videoId": "81KjnEhRD60",
     "videoUrl": "https://www.youtube.com/watch?v=81KjnEhRD60",
     "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-07-26T12:00:00.000Z"
+    "date": "2025-07-26T11:59:00.000Z"
   },
   {
     "videoId": "rqJnVZzqgbQ",
     "videoUrl": "https://www.youtube.com/watch?v=rqJnVZzqgbQ",
     "streamer": "鷹嶺ルイ",
-    "date": "2025-07-26T12:00:00.000Z"
+    "date": "2025-07-26T11:59:00.000Z"
   },
   {
     "videoId": "aS-b7fBZSJg",
@@ -288,15 +288,15 @@
     "date": "2025-07-26T19:50:00.000Z"
   },
   {
-    "videoId": "lldVPLGxe9U",
-    "videoUrl": "https://www.youtube.com/watch?v=lldVPLGxe9U",
-    "streamer": "大神ミオ 🌲",
-    "date": "2025-07-26T20:00:00.000Z"
-  },
-  {
     "videoId": "i3Nd5uDRxsY",
     "videoUrl": "https://www.youtube.com/watch?v=i3Nd5uDRxsY",
     "streamer": "ホロライブ",
+    "date": "2025-07-26T20:00:00.000Z"
+  },
+  {
+    "videoId": "lldVPLGxe9U",
+    "videoUrl": "https://www.youtube.com/watch?v=lldVPLGxe9U",
+    "streamer": "大神ミオ 🌲",
     "date": "2025-07-26T20:00:00.000Z"
   },
   {
@@ -438,21 +438,15 @@
     "date": "2025-07-26T16:20:00.000Z"
   },
   {
-    "videoId": "ejHFi7M8oFY",
-    "videoUrl": "https://www.youtube.com/watch?v=ejHFi7M8oFY",
-    "streamer": "響咲リオナ",
-    "date": "2025-07-26T19:50:00.000Z"
-  },
-  {
-    "videoId": "9lOMXQ8EhkY",
-    "videoUrl": "https://www.youtube.com/watch?v=9lOMXQ8EhkY",
-    "streamer": "音乃瀬奏",
-    "date": "2025-07-26T19:50:00.000Z"
-  },
-  {
     "videoId": "bdu1Z4ybAJE",
     "videoUrl": "https://www.youtube.com/watch?v=bdu1Z4ybAJE",
     "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-07-26T19:50:00.000Z"
+  },
+  {
+    "videoId": "ejHFi7M8oFY",
+    "videoUrl": "https://www.youtube.com/watch?v=ejHFi7M8oFY",
+    "streamer": "響咲リオナ",
     "date": "2025-07-26T19:50:00.000Z"
   },
   {
@@ -465,6 +459,12 @@
     "videoId": "D0D0y7nLRC0",
     "videoUrl": "https://www.youtube.com/watch?v=D0D0y7nLRC0",
     "streamer": "輪堂千速",
+    "date": "2025-07-26T19:50:00.000Z"
+  },
+  {
+    "videoId": "9lOMXQ8EhkY",
+    "videoUrl": "https://www.youtube.com/watch?v=9lOMXQ8EhkY",
+    "streamer": "音乃瀬奏",
     "date": "2025-07-26T19:50:00.000Z"
   },
   {

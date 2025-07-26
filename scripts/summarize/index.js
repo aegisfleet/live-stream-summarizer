@@ -78,11 +78,13 @@ ${JSON.stringify(formatExample, null, 2)}
 7. 配信の種類や内容に応じて適切なタグを付与してください。
 8. タイムスタンプは動画の開始からの経過時間を正確に記載してください。
 - 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}分間です。
+- 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載してください。
 
 以下は許可されない出力形式の例です:
 ❌
 再生時間:
-"timestamp": "MM:SS:00"  // 誤り（秒が真ん中に来ている）
+"timestamp": "MM:SS:00"  // 秒が真ん中に来ている
+"timestamp": "HH:MM"  // 秒の情報がない
 
 JSONの出力形式:
 \`\`\`json

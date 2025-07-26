@@ -6,6 +6,8 @@ class ArchiveManager {
         this.selectedStreamers = new Set();
         this.tags = new Set();
         this.selectedTags = new Set();
+        this.currentPage = 1;
+        this.itemsPerPage = 15;
         
         this.init();
     }
@@ -16,7 +18,20 @@ class ArchiveManager {
         this.setupTagFilter();
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
+        this.setupLoadMoreButton();
         this.renderArchives();
+    }
+
+    setupLoadMoreButton() {
+        const loadMoreButton = document.getElementById('load-more');
+        if (loadMoreButton) {
+            loadMoreButton.addEventListener('click', () => this.loadMoreArchives());
+        }
+    }
+
+    loadMoreArchives() {
+        this.currentPage++;
+        this.renderArchives(false);
     }
 
     setupBackToTopButton() {
@@ -275,6 +290,7 @@ class ArchiveManager {
     }
 
     filterArchives() {
+        this.currentPage = 1;
         this.filteredData = this.archiveData.filter(archive => {
             const streamerMatch = this.selectedStreamers.has(archive.streamer);
             
@@ -284,25 +300,41 @@ class ArchiveManager {
 
             return streamerMatch && tagMatch;
         });
-        this.renderArchives();
+        this.renderArchives(true);
     }
     
-    renderArchives() {
+    renderArchives(clearGrid = true) {
         const grid = document.getElementById('archive-grid');
+        const loadMoreButton = document.getElementById('load-more');
+
         if (!grid) {
             console.error('アーカイブグリッド要素が見つかりません。要素ID: archive-grid');
             return;
         }
         
-        grid.innerHTML = '';
+        if (clearGrid) {
+            grid.innerHTML = '';
+        }
         
-        // 日付降順でソート
-        this.filteredData
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .forEach(archive => {
-                const card = this.createArchiveCard(archive);
-                grid.appendChild(card);
-            });
+        const sortedData = this.filteredData.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        const archivesToRender = sortedData.slice(startIndex, endIndex);
+
+        archivesToRender.forEach(archive => {
+            const card = this.createArchiveCard(archive);
+            grid.appendChild(card);
+        });
+
+        // Show or hide the "load more" button
+        if (loadMoreButton) {
+            if (endIndex < this.filteredData.length) {
+                loadMoreButton.style.display = 'block';
+            } else {
+                loadMoreButton.style.display = 'none';
+            }
+        }
     }
     
     createArchiveCard(archive) {

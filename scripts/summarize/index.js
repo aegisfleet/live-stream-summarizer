@@ -101,7 +101,8 @@ JSONの出力形式:
 
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const chunkSizeSeconds = 2400; // 40 minutes per chunk
-    const maxChunks = Math.ceil(videoDurationSeconds / chunkSizeSeconds); // Calculate max chunks based on duration
+    const adjustedVideoDurationSeconds = Math.max(0, videoDurationSeconds - 10); // Reduce duration by 10 seconds
+    const maxChunks = Math.ceil(adjustedVideoDurationSeconds / chunkSizeSeconds); // Calculate max chunks based on adjusted duration
     let currentOffsetSeconds = 0;
     let chunkCount = 0;
 
@@ -123,8 +124,8 @@ JSONの出力形式:
 
         const clipStartSeconds = currentOffsetSeconds;
         let clipEndSeconds = currentOffsetSeconds + chunkSizeSeconds;
-        if (clipEndSeconds > videoDurationSeconds) {
-            clipEndSeconds = videoDurationSeconds;
+        if (clipEndSeconds > adjustedVideoDurationSeconds) {
+            clipEndSeconds = adjustedVideoDurationSeconds;
         }
 
         console.log(`Processing chunk: ${videoId} from ${clipStartSeconds}s to ${clipEndSeconds}s`);

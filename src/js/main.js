@@ -38,6 +38,7 @@ class ArchiveManager {
 
         // When the user clicks on the button, scroll to the top of the document
         backToTopButton.addEventListener('click', () => {
+            backToTopButton.classList.remove('show'); // Immediately hide the button
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }

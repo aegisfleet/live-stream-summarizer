@@ -49,57 +49,57 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
     };
 
     const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, existingSummary = null) => {
-        let prompt = `「${videoTitle}」というタイトルの動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力してください。`;
+        let prompt = `# 指示内容
+「${videoTitle}」というタイトルの動画の${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの範囲を要約し、JSONオブジェクトとして出力する。`;
 
         if (existingSummary) {
             prompt += `\n\n
-これまでの要約データ:
+## これまでの要約データ:
 \`\`\`
 ${JSON.stringify(existingSummary, null, 2)}
 \`\`\`
 
-この要約データを更新・追記する形で、新しい期間の情報を追加してください。
-特に、highlightsとtagsは既存のものに追記し、概要は全体を考慮して更新してください。`;
+この要約データを更新・追記する形で、新しい期間の情報を追加する。
+- overviewは全体を考慮して更新する。
+- highlightsとtagsは既存の内容をそのまま残して、新しい情報を追加する。`;
         }
 
         prompt += `\n\n
-出力形式は以下の構造に厳密に従ってください:
+## 出力形式は以下の構造に厳密に従う:
 \`\`\`
 ${JSON.stringify(formatExample, null, 2)}
 \`\`\`
 
-注意事項:
-1. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力してください。
-2. 全てのフィールドは必須です。不明な場合は適切なデフォルト値を設定してください。
-3. 出演者の名前が分からない場合は「配信者」と記載してください。
-4. "00:00"付近は配信開始時の待ち時間になるケースが多いため、配信者がしゃべりだしてから要約を開始してください。
-5. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約してください。
-6. 配信の種類や内容に応じて適切なタグを付与してください。
-7. 見どころは各チャンクごとに最低3以上、できるだけ多く抽出してください。
-- データの順番は動画の内容に沿って時系列で並べてください。
-- 範囲内の最初から最後まで内容をカバーするようにしてください。
-8. 見どころのタイムスタンプは動画の開始からの経過時間を正確に記載してください。
-- 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}分間です。
-- 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載してください。
+### 注意事項:
+1. マークダウンやコードブロックは使用せず、純粋なJSONオブジェクトのみを出力する。
+2. 全てのフィールドは必須である。不明な場合は適切なデフォルト値を設定する。
+3. 出演者の名前が分からない場合は「配信者」と記載する。
+4. "00:00"付近は配信開始時の待ち時間になるケースが多いため、配信者がしゃべりだしてから要約を開始する。
+5. 概要(overviewのsummary)は200字程度で、配信の全体像が分かるように要約する。
+6. 配信の種類や内容に応じて適切なタグを付与する。
+7. 見どころは各チャンクごとに最低3以上、できるだけ多く抽出する。
+- データの順番は動画の内容に沿って時系列で並べる。
+- 範囲内の最初から最後まで内容をカバーするようにする。
+8. 見どころのタイムスタンプは動画の開始からの経過時間を正確に記載する。
+- 現在の範囲は${formatTimestamp(clipStart)}から${formatTimestamp(clipEnd)}までの約${formatDuration(videoDurationSeconds)}分間である。
+- 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載する。
 
-以下は許可されない出力形式の例です:
-❌
-再生時間:
+### 許可されない出力形式:
+#### 再生時間:
 "timestamp": "MM:SS:00"  // 秒が真ん中に来ている
 "timestamp": "HH:MM"  // 秒の情報がない
 
-JSONの出力形式:
+#### JSONの出力形式:
 \`\`\`json
 {...}
 \`\`\`
 
-正しい出力形式:
-✅
-再生時間:
+### 正しい出力形式:
+#### 再生時間:
 "timestamp": "MM:SS"  // 時間が0の場合
 "timestamp": "HH:MM:SS"  // 時間が1時間以上の場合
 
-JSONの出力形式:
+#### JSONの出力形式:
 {
   "overview": {
       "summary": "...",
@@ -107,8 +107,7 @@ JSONの出力形式:
   },
   "highlights": [...],
   "tags": [...]
-}
-`;
+}`;
         return prompt;
     };
 

@@ -20,7 +20,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
                 error.message.includes('500 Internal Server Error') ||
                 error.message.includes('レスポンスが有効なJSON形式ではありません') ||
                 error.message.includes('概要情報が不足しています') ||
-                error.message.includes('タイムスタンプが2時間を超えるものが含まれています')
+                error.message.includes('タイムスタンプが2時間30分を超えるものが含まれています')
             )) && i < retries - 1) {
                 console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
@@ -178,13 +178,13 @@ ${JSON.stringify(existingSummary, null, 2)}
                     throw new Error('概要情報が不足しています');
                 }
 
-                // タイムスタンプが2時間を超えるものが含まれている場合は再実行
+                // タイムスタンプが2時間30分を超えるものが含まれている場合は再実行
                 if (parsedSummary.highlights && parsedSummary.highlights.some(highlight => {
                     const [hours, minutes, seconds] = highlight.timestamp.split(':').map(Number);
                     const totalSeconds = hours * 3600 + minutes * 60 + seconds;
-                    return totalSeconds > 7200;
+                    return totalSeconds > 9000; // 2.5 hours in seconds
                 })) {
-                    throw new Error('タイムスタンプが2時間を超えるものが含まれています');
+                    throw new Error('タイムスタンプが2時間30分を超えるものが含まれています');
                 }
                 return parsedSummary;
             });

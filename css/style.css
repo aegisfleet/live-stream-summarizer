@@ -233,6 +233,16 @@ footer {
     color: #0056b3;
 }
 
+.clickable-streamer {
+    cursor: pointer;
+    color: #007bff; /* リンクのような色に設定 */
+    transition: color 0.2s ease-in-out; /* ホバー時の変化を滑らかに */
+}
+
+.clickable-streamer:hover {
+    color: #0056b3; /* ホバー時の色 */
+}
+
 .clickable-tag {
     cursor: pointer;
     transition: background-color 0.2s;

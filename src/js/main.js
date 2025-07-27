@@ -378,8 +378,10 @@ class ArchiveManager {
 
         // 配信者名
         const streamer = document.createElement('p');
-        streamer.className = 'streamer-name';
+        streamer.className = 'streamer-name clickable-streamer'; // clickable-streamer クラスを追加
         streamer.textContent = `配信者: ${archive.streamer}`;
+        streamer.title = `配信者「${archive.streamer}」で絞り込む`; // ツールチップを追加
+        streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer)); // クリックイベントを追加
 
         // 概要セクション
         const overview = document.createElement('div');

@@ -301,6 +301,10 @@ class ArchiveManager {
             return streamerMatch && tagMatch;
         });
         this.renderArchives(true);
+        const archiveGrid = document.getElementById('archive-grid');
+        if (archiveGrid) {
+            archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
     
     renderArchives(clearGrid = true) {

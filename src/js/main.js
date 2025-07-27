@@ -102,32 +102,33 @@ class ArchiveManager {
     }
     
     filterByStreamer(clickedStreamer) {
-        // 既にそのストリーマーのみが選択されている場合は、不要な再描画を防ぐ
+        // If the clicked streamer is already the only selected streamer,
+        // then clear the selection (effectively "select all").
         if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
-            return;
-        }
+            this.selectAllStreamers(); // Call existing selectAllStreamers to reset
+        } else {
+            // Otherwise, select only the clicked streamer.
+            this.selectedStreamers.clear();
+            this.selectedStreamers.add(clickedStreamer);
 
-        // 選択されているストリーマーをクリアし、クリックされたストリーマーのみを選択状態にする
-        this.selectedStreamers.clear();
-        this.selectedStreamers.add(clickedStreamer);
+            // Update UI for streamer filter buttons
+            const buttons = document.querySelectorAll('#filter-buttons button');
+            buttons.forEach(button => {
+                if (button.textContent === clickedStreamer) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
 
-        // 上部のストリーマーフィルターボタンのUIを更新する
-        const buttons = document.querySelectorAll('#filter-buttons button');
-        buttons.forEach(button => {
-            if (button.textContent === clickedStreamer) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
+            // Update tag filter and re-filter archives
+            this.updateTagFilter();
+
+            // Scroll to archive grid only when filtering by a specific streamer
+            const archiveGrid = document.getElementById('archive-grid');
+            if (archiveGrid) {
+                archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        });
-
-        // タグフィルターを更新し、アーカイブを再フィルタリングする
-        this.updateTagFilter();
-
-        // 配信者でフィルタリングした時のみスクロール
-        const archiveGrid = document.getElementById('archive-grid');
-        if (archiveGrid) {
-            archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
     

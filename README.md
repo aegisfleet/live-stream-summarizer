@@ -30,7 +30,6 @@
 - データソース:
   - 配信スケジュール: schedule.hololive.tv
   - 動画情報: YouTube Data API v3
-  - 文字起こし: YouTube Transcript API
 
 ## セットアップ
 

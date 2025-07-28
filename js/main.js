@@ -124,6 +124,15 @@ class ArchiveManager {
     }
     
     filterByStreamer(clickedStreamer) {
+        // videoIdパラメータ付きのURLから配信者フィルタをクリックした場合の対応
+        if (new URLSearchParams(window.location.search).has('videoId')) {
+            history.pushState(null, '', window.location.pathname);
+            document.getElementById('filter-container').style.display = 'block';
+            document.querySelector('.filter-group.collapsible').style.display = 'block';
+            this.setupStreamerFilter(); // フィルターボタンを再セットアップ
+            this.setupTagFilter();
+        }
+
         // If the clicked streamer is already the only selected streamer,
         // then clear the selection (effectively "select all").
         if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {

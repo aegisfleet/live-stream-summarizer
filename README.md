@@ -64,7 +64,45 @@ graph TD
   - **GitHub Copilot (Agentモード)**: コーディング支援
   - **Gemini Code Assist (Agentモード)**: コーディング支援
 
------
+## ディレクトリ構成
+
+```text
+.
+├── .env.example          # 環境変数のサンプルファイル。`YOUTUBE_API_KEY`と`GEMINI_API_KEY`を設定します。
+├── .gitignore            # Gitでバージョン管理しないファイルやディレクトリを指定します。
+├── LICENSE               # プロジェクトのライセンス情報です。
+├── README.md             # このファイルです。プロジェクトの概要や使い方を説明します。
+├── package-lock.json     # 依存パッケージのバージョンをロックするファイルです。
+├── package.json          # プロジェクトの情報や依存パッケージを管理するファイルです。
+├── server.js             # 開発用のローカルサーバーです。
+├── .github/
+│   └── workflows/
+│       ├── deploy-pages.yml  # GitHub Actionsのワークフローファイル。GitHub Pagesへのデプロイを自動化します。
+│       └── update-summaries.yml # GitHub Actionsのワークフローファイル。定期的にサマリーを更新します。
+├── config/
+│   └── default.json      # アプリケーションの設定ファイルです。
+├── data/
+│   ├── archives.json     # アーカイブされた配信の情報を保存するJSONファイルです。
+│   └── schedules.json    # 配信スケジュールを保存するJSONファイルです。
+├── docs/
+│   ├── CODING_GUIDELINES.md # コーディング規約を記述するファイルです。
+│   └── REQUIREMENTS.md      # プロジェクトの要件を記述するファイルです。
+├── scripts/
+│   ├── check-archive/
+│   │   └── index.js      # アーカイブを確認するスクリプトです。
+│   ├── fetch-schedule/
+│   │   └── index.js      # 配信スケジュールを取得するスクリプトです。
+│   └── summarize/
+│       └── index.js      # 配信内容を要約するスクリプトです。
+└── src/
+    ├── index.html        # WebページのメインHTMLファイルです。
+    ├── css/
+    │   └── style.css     # スタイルを定義するCSSファイルです。
+    ├── data/
+    │   └── summaries.json    # 生成されたサマリーを保存するJSONファイルです。
+    └── js/
+        └── main.js       # Webページの動作を制御するJavaScriptファイルです。
+```
 
 ## セットアップ
 

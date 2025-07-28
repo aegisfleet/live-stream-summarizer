@@ -14,12 +14,27 @@ class ArchiveManager {
     
     async init() {
         await this.loadData();
-        this.setupStreamerFilter();
-        this.setupTagFilter();
+        if (!this.filterByUrlParams()) {
+            this.setupStreamerFilter();
+            this.setupTagFilter();
+        }
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
         this.setupLoadMoreButton();
         this.renderArchives();
+    }
+
+    filterByUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get('videoId');
+        if (videoId) {
+            this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
+            // フィルターボタンを非表示にするか、選択状態を解除するなどUI調整
+            document.getElementById('filter-container').style.display = 'none';
+            document.querySelector('.filter-group.collapsible').style.display = 'none';
+            return true; // パラメータによるフィルタリングが行われたことを示す
+        }
+        return false;
     }
 
     setupLoadMoreButton() {
@@ -60,7 +75,7 @@ class ArchiveManager {
     
     async loadData() {
         try {
-                        const response = await fetch('data/summaries.json');
+            const response = await fetch('data/summaries.json');
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
             
@@ -95,7 +110,14 @@ class ArchiveManager {
         });
         
         // すべて表示ボタンの設定
-        selectAllButton.addEventListener('click', () => this.selectAllStreamers());
+        selectAllButton.addEventListener('click', () => {
+            // URLパラメータがある状態で「すべて表示」が押された場合、ページをリロードして全件表示に戻す
+            if (new URLSearchParams(window.location.search).has('videoId')) {
+                window.location.href = window.location.pathname;
+            } else {
+                this.selectAllStreamers();
+            }
+        });
         
         // 初期状態ですべて選択
         this.selectAllStreamers();
@@ -336,7 +358,7 @@ class ArchiveManager {
 
         // Show or hide the "load more" button
         if (loadMoreButton) {
-            if (endIndex < this.filteredData.length) {
+            if (endIndex < this.filteredData.length && !new URLSearchParams(window.location.search).has('videoId')) {
                 loadMoreButton.style.display = 'block';
             } else {
                 loadMoreButton.style.display = 'none';
@@ -347,8 +369,7 @@ class ArchiveManager {
     createArchiveCard(archive) {
         const card = document.createElement('div');
         card.className = 'archive-card';
-        // カード全体のクリックイベントを削除し、クリック可能な要素を明確にします。
-        // これにより、ユーザーがどこをクリックすればよいか分かりやすくなります。
+        
         const openVideo = (startTime = 0) => {
             const url = `https://www.youtube.com/watch?v=${archive.videoId}&t=${startTime}s`;
             window.open(url, '_blank');
@@ -511,6 +532,48 @@ class ArchiveManager {
         tagsContainer.appendChild(tagsList);
         tagsContainer.appendChild(toggleTagsButton);
         
+        // シェアボタンのフッター
+        const footer = document.createElement('div');
+        footer.className = 'card-footer';
+
+        const copyButton = document.createElement('button');
+        copyButton.textContent = 'コピー';
+        copyButton.className = 'copy-button';
+        copyButton.title = 'タイトルとURLをコピー';
+        copyButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
+            const copyText = `${archive.title}\n${shareUrl}`;
+            navigator.clipboard.writeText(copyText).then(() => {
+                copyButton.textContent = 'コピー完了！';
+                setTimeout(() => {
+                    copyButton.textContent = 'コピー';
+                }, 2000);
+            }).catch(err => {
+                console.error('クリップボードへのコピーに失敗しました:', err);
+                copyButton.textContent = '失敗';
+                 setTimeout(() => {
+                    copyButton.textContent = 'コピー';
+                }, 2000);
+            });
+        });
+
+        const shareButton = document.createElement('button');
+        shareButton.textContent = '𝕏で共有';
+        shareButton.className = 'share-button';
+        shareButton.title = 'この配信を𝕏で共有する';
+        shareButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
+            // \n を %0A にエンコードして改行を表現
+            const shareText = `${archive.title}\n`;
+            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+            window.open(twitterIntentUrl, '_blank');
+        });
+
+        footer.appendChild(copyButton);
+        footer.appendChild(shareButton);
+
         // 要素の組み立て
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
@@ -529,6 +592,7 @@ class ArchiveManager {
         
         card.appendChild(img);
         card.appendChild(content);
+        card.appendChild(footer);
         
         return card;
     }

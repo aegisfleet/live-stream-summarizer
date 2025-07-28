@@ -222,16 +222,16 @@ main {
 
 .copy-button,
 .share-button {
-    background-color: #6c757d;
+    background-color: #007bff;
     color: white;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     white-space: nowrap;
 }
 
 .copy-button:hover,
 .share-button:hover {
-    background-color: #5a6268;
+    background-color: #0056b3;
     opacity: 1;
 }
 

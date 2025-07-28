@@ -304,6 +304,15 @@ class ArchiveManager {
     }
 
     filterByTag(clickedTag) {
+        // videoIdパラメータ付きのURLからタグフィルタをクリックした場合の対応
+        if (new URLSearchParams(window.location.search).has('videoId')) {
+            history.pushState(null, '', window.location.pathname);
+            document.getElementById('filter-container').style.display = 'block';
+            document.querySelector('.filter-group.collapsible').style.display = 'block';
+            this.setupStreamerFilter(); // フィルターボタンを再セットアップ
+            this.setupTagFilter();
+        }
+        
         // 既にそのタグのみが選択されている場合は、不要な再描画を防ぐ
         if (this.selectedTags.has(clickedTag) && this.selectedTags.size === 1) {
             return;

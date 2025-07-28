@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '0 2,5,8,13,16,19 * * *' # JST 11:00, 14:00, 17:00, 22:00, 1:00, 4:00
   workflow_dispatch:
+    inputs:
+      skip_fetch_schedule:
+        description: 'Skip Fetch schedule'
+        type: boolean
+        required: false
+        default: false
+      skip_check_archives:
+        description: 'Skip Check archives'
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: update-summaries
@@ -28,9 +39,11 @@ jobs:
         run: npm ci
         
       - name: Fetch schedule
+        if: ${{ github.event.inputs.skip_fetch_schedule != 'true' }}
         run: npm run fetch-schedule
           
       - name: Check archives
+        if: ${{ github.event.inputs.skip_check_archives != 'true' }}
         run: npm run check-archive
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

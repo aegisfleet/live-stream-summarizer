@@ -459,11 +459,17 @@ footer {
 #back-to-top.show {
     opacity: 1;
     visibility: visible;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 #back-to-home.show {
     opacity: 1;
     visibility: visible;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 #back-to-top:hover {

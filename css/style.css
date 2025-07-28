@@ -216,12 +216,19 @@ main {
     margin-top: auto;
     padding: 0 1rem 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; /* Changed to space-between */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-footer-right-buttons {
+    display: flex;
     gap: 0.5rem;
 }
 
 .copy-button,
-.share-button {
+.share-button,
+.regenerate-button {
     background-color: #007bff;
     color: white;
     padding: 0.5rem 1rem;
@@ -230,7 +237,8 @@ main {
 }
 
 .copy-button:hover,
-.share-button:hover {
+.share-button:hover,
+.regenerate-button:hover {
     background-color: #0056b3;
     opacity: 1;
 }

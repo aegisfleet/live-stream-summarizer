@@ -610,8 +610,28 @@ class ArchiveManager {
             window.open(twitterIntentUrl, '_blank');
         });
 
-        footer.appendChild(copyButton);
-        footer.appendChild(shareButton);
+        const regenerateButton = document.createElement('button');
+        regenerateButton.textContent = '修正依頼';
+        regenerateButton.className = 'regenerate-button';
+        regenerateButton.title = 'この配信の修正を依頼する';
+        regenerateButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
+            const tweetText = `@aegisfleet
+内容が間違っているので再生成お願いします！
+
+動画のタイトル: ${archive.title}
+URL: ${shareUrl}`;
+            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+            window.open(twitterIntentUrl, '_blank');
+        });
+        footer.appendChild(regenerateButton);
+
+        const rightButtons = document.createElement('div');
+        rightButtons.className = 'card-footer-right-buttons';
+        rightButtons.appendChild(copyButton);
+        rightButtons.appendChild(shareButton);
+        footer.appendChild(rightButtons);
 
         // 要素の組み立て
         highlights.appendChild(highlightsTitle);

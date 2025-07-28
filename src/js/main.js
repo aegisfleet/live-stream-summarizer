@@ -619,9 +619,12 @@ class ArchiveManager {
             const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
             const tweetText = `@aegisfleet
 内容が間違っているので再生成お願いします！
+間違っている箇所: 
 
-動画のタイトル: ${archive.title}
-URL: ${shareUrl}`;
+URL: ${shareUrl}
+
+【同意事項】
+再生成しても正確な内容が保証されないことに同意します。`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
             window.open(twitterIntentUrl, '_blank');
         });

@@ -1,6 +1,10 @@
 # ホロライブ配信アーカイブサマリー
 
-ホロライブプロダクションのYouTubeライブ配信アーカイブを自動で要約し、一覧で閲覧できるWebサイトです。
+![OGP画像](src/images/ogp.png)
+
+ホロライブプロダクションのYouTubeライブ配信アーカイブをAIによって自動で要約し、一覧で閲覧できるWebサイトです。
+
+**Webサイトはこちら 👉 [https://aegisfleet.github.io/live-stream-summarizer/](https://aegisfleet.github.io/live-stream-summarizer/)**
 
 ## 概要
 
@@ -8,32 +12,63 @@
 
 ### 主な機能
 
-- 配信アーカイブの要約閲覧
+- **配信アーカイブの要約閲覧**
   - 配信の概要（200字程度）
-  - 主要なトピックや見どころ（3〜5点）
-- 配信者名によるフィルタリング
-- レスポンシブデザイン対応
-
-### 対象範囲
-
-- ✅ ホロライブプロダクション所属タレントのYouTubeライブ配信アーカイブ
-- ❌ メンバーシップ限定配信
-- ❌ YouTube以外のプラットフォームでの配信
-- ❌ プレミア公開された動画
+  - 配信の雰囲気
+  - 主要なトピックや見どころ（タイムスタンプ付き）
+  - 内容を表すタグ
+- **配信者名によるフィルタリング**
+- **タグによるフィルタリング**
+- **レスポンシブデザイン対応**
 
 ## システム構成
 
-- フロントエンド: HTML, CSS, JavaScript
-- ホスティング: GitHub Pages
-- CI/CD・自動化: GitHub Actions
-- コンテンツ生成: Gemini API
-- データソース:
-  - 配信スケジュール: schedule.hololive.tv
-  - 動画情報: YouTube Data API v3
+本システムは、**完全に無料のサービスのみ**で構築・運用されているのが最大の特徴です。GitHub Actionsを中核としてデータ収集・加工・コンテンツ生成を自動化し、GitHub Pagesで静的サイトとして公開する構成を取っています。
+
+```mermaid
+graph TD
+    subgraph "GitHub"
+        A["GitHub Actions<br>(定時実行)"] --> B{"Node.js スクリプト"};
+        B -- "git push" --> C["要約データ<br>summaries.json"];
+        C -- "自動デプロイ" --> D[GitHub Pages];
+    end
+
+    subgraph "外部サービス"
+        E["Hololive Schedule"]
+        F["YouTube API"]
+        G["Gemini API"]
+    end
+
+    subgraph "ユーザー"
+        H["ブラウザ"]
+    end
+
+    E -- "配信情報取得" --> B;
+    B <-- "動画情報取得" --> F;
+    B <-- "要約生成" --> G;
+    D -- "Webサイト閲覧" --> H;
+```
+
+### 利用技術スタック
+
+- **ホスティング**: **GitHub Pages**
+  - > GitHubが提供する、静的なWebサイトを公開するためのホスティングサービスです。公開リポジトリであれば無料で利用できます。
+- **CI/CD・自動化**: **GitHub Actions**
+  - > GitHubに組み込まれている、様々な処理を自動化するための仕組みです。公開リポジトリなら無料枠の範囲で自由に利用できます。
+- **コンテンツ生成**: **Gemini API (model: gemini-2.5-flash)**
+  - > Googleが開発した高性能な生成AIです。動画を直接理解して処理する能力（マルチモーダル）を持っています。一定の利用量までは無料で使えます。
+- **データソース**:
+  - `schedule.hololive.tv`: 配信スケジュールの取得
+  - `YouTube Data API v3`: 動画情報の取得
+- **開発支援AI**:
+  - **GitHub Copilot (Agentモード)**: コーディング支援
+  - **Gemini Code Assist (Agentモード)**: コーディング支援
+
+-----
 
 ## セットアップ
 
-1. 必要な環境変数を設定
+1. 必要な環境変数を`.env`ファイルに設定します。
 
     ```bash
     YOUTUBE_API_KEY=your_youtube_api_key
@@ -61,12 +96,6 @@
     # 開発サーバーの起動
     npm start
     ```
-
-## 自動更新
-
-- GitHub Actionsにより1時間ごとに自動で更新
-- 新規アーカイブの検出と要約の生成
-- GitHub Pagesへの自動デプロイ
 
 ## イメージキャラクター
 

@@ -565,9 +565,8 @@ class ArchiveManager {
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
             const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
-            // \n を %0A にエンコードして改行を表現
-            const shareText = `${archive.title}\n`;
-            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+            const shareText = `${archive.title}\n${shareUrl}`;
+            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
         });
 

@@ -326,7 +326,7 @@ footer {
 }
 
 #site-description .collapsible-content {
-    max-height: 60px; /* サイト説明の初期表示高さ */
+    max-height: 75px; /* サイト説明の初期表示高さ */
 }
 
 /* グラデーションオーバーレイは、実際にコンテンツがオーバーフローしている場合のみ表示 */

@@ -252,16 +252,22 @@
     "date": "2025-07-28T07:30:00.000Z"
   },
   {
-    "videoId": "2YChZvEyw2U",
-    "videoUrl": "https://www.youtube.com/watch?v=2YChZvEyw2U",
+    "videoId": "lXiNzA-d5TI",
+    "videoUrl": "https://www.youtube.com/watch?v=lXiNzA-d5TI",
     "streamer": "夏色まつり 🏮",
-    "date": "2025-07-28T18:00:00.000Z"
+    "date": "2025-07-28T13:26:00.000Z"
   },
   {
     "videoId": "cesJkLRLsBY",
     "videoUrl": "https://www.youtube.com/watch?v=cesJkLRLsBY",
     "streamer": "アキロゼ 🍎",
     "date": "2025-07-28T18:50:00.000Z"
+  },
+  {
+    "videoId": "4wujSXY_wRM",
+    "videoUrl": "https://www.youtube.com/watch?v=4wujSXY_wRM",
+    "streamer": "博衣こより",
+    "date": "2025-07-28T19:00:00.000Z"
   },
   {
     "videoId": "Mq8KMRXQ-R4",
@@ -304,6 +310,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=8E17k6kpFGQ",
     "streamer": "アキロゼ 🍎",
     "date": "2025-07-28T23:00:00.000Z"
+  },
+  {
+    "videoId": "b7BwVwpRE2s",
+    "videoUrl": "https://www.youtube.com/watch?v=b7BwVwpRE2s",
+    "streamer": "博衣こより",
+    "date": "2025-07-29T07:00:00.000Z"
   },
   {
     "videoId": "AkWYON7aSCg",
@@ -408,15 +420,15 @@
     "date": "2025-07-28T18:00:00.000Z"
   },
   {
-    "videoId": "PSom-TIuP4I",
-    "videoUrl": "https://www.youtube.com/watch?v=PSom-TIuP4I",
-    "streamer": "一条莉々華",
-    "date": "2025-07-28T19:00:00.000Z"
-  },
-  {
     "videoId": "B3-3agJD9d8",
     "videoUrl": "https://www.youtube.com/watch?v=B3-3agJD9d8",
     "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-07-28T19:00:00.000Z"
+  },
+  {
+    "videoId": "PSom-TIuP4I",
+    "videoUrl": "https://www.youtube.com/watch?v=PSom-TIuP4I",
+    "streamer": "一条莉々華",
     "date": "2025-07-28T19:00:00.000Z"
   },
   {

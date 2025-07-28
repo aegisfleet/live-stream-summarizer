@@ -420,6 +420,25 @@ footer {
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
+#back-to-home {
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the left */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #007bff; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 #load-more {
     display: block;
     margin: 2rem auto 0;
@@ -442,7 +461,17 @@ footer {
     visibility: visible;
 }
 
+#back-to-home.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 #back-to-top:hover {
+    background-color: #0056b3; /* Add a darker background on hover */
+    opacity: 0.9;
+}
+
+#back-to-home:hover {
     background-color: #0056b3; /* Add a darker background on hover */
     opacity: 0.9;
 }

@@ -20,6 +20,7 @@ class ArchiveManager {
         }
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
+        this.setupBackToHomeButton();
         this.setupLoadMoreButton();
         this.renderArchives();
     }
@@ -70,6 +71,27 @@ class ArchiveManager {
         backToTopButton.addEventListener('click', () => {
             backToTopButton.classList.remove('show'); // Immediately hide the button
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    setupBackToHomeButton() {
+        const backToHomeButton = document.getElementById('back-to-home');
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get('videoId');
+
+        if (!backToHomeButton) {
+            console.error('Back to home button not found.');
+            return;
+        }
+
+        if (videoId) {
+            backToHomeButton.classList.add('show');
+        } else {
+            backToHomeButton.classList.remove('show');
+        }
+
+        backToHomeButton.addEventListener('click', () => {
+            window.location.href = window.location.pathname;
         });
     }
     

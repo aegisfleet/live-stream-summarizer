@@ -227,8 +227,7 @@ main {
 }
 
 .copy-button,
-.share-button,
-.regenerate-button {
+.share-button {
     background-color: #007bff;
     color: white;
     padding: 0.5rem 1rem;
@@ -236,10 +235,22 @@ main {
     white-space: nowrap;
 }
 
+.regenerate-button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 .copy-button:hover,
-.share-button:hover,
-.regenerate-button:hover {
+.share-button:hover {
     background-color: #0056b3;
+    opacity: 1;
+}
+
+.regenerate-button:hover {
+    background-color: #555;
     opacity: 1;
 }
 

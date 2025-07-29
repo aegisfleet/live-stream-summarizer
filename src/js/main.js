@@ -8,6 +8,7 @@ class ArchiveManager {
         this.selectedTags = new Set();
         this.currentPage = 1;
         this.itemsPerPage = 15;
+        this.originalTitle = document.title;
         
         this.init();
     }
@@ -23,6 +24,24 @@ class ArchiveManager {
         this.setupBackToHomeButton();
         this.setupLoadMoreButton();
         this.renderArchives();
+        this.updateTitle();
+    }
+
+    updateTitle() {
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get('videoId');
+        const streamerName = params.get('streamer');
+
+        if (videoId) {
+            const archive = this.archiveData.find(a => a.videoId === videoId);
+            if (archive) {
+                document.title = `${archive.title} - ${this.originalTitle}`;
+            }
+        } else if (streamerName) {
+            document.title = `${streamerName}の配信一覧 - ${this.originalTitle}`;
+        } else {
+            document.title = this.originalTitle;
+        }
     }
 
     filterByUrlParams() {
@@ -30,10 +49,9 @@ class ArchiveManager {
         const videoId = params.get('videoId');
         if (videoId) {
             this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
-            // フィルターボタンを非表示にする
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
-            return true; // videoIdでのフィルタリングが実行されたことを示す
+            return true;
         }
 
         const streamerName = params.get('streamer');
@@ -41,7 +59,7 @@ class ArchiveManager {
             this.selectedStreamers.clear();
             this.selectedStreamers.add(streamerName);
         }
-        return false; // 通常のフィルター設定を続行
+        return false;
     }
 
     setupLoadMoreButton() {
@@ -151,12 +169,11 @@ class ArchiveManager {
                 }
             });
         } else {
-            this.selectAllStreamers(false); //履歴を更新しない
+            this.selectAllStreamers(false);
         }
     }
     
     filterByStreamer(clickedStreamer) {
-        // フィルターUIが表示されていない場合は表示する
         document.getElementById('filter-container').style.display = 'block';
         document.querySelector('.filter-group.collapsible').style.display = 'block';
 
@@ -184,6 +201,7 @@ class ArchiveManager {
                 archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+        this.updateTitle();
     }
     
     selectAllStreamers(updateHistory = true) {
@@ -199,6 +217,7 @@ class ArchiveManager {
         }
         
         this.updateTagFilter();
+        this.updateTitle();
     }
     
     setupTagFilter() {

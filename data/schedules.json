@@ -234,22 +234,34 @@
     "date": "2025-07-30T07:00:00.000Z"
   },
   {
-    "videoId": "0krAbEQGZOQ",
-    "videoUrl": "https://www.youtube.com/watch?v=0krAbEQGZOQ",
-    "streamer": "風真いろは",
-    "date": "2025-07-30T18:00:00.000Z"
-  },
-  {
     "videoId": "AVAOoP2g2BQ",
     "videoUrl": "https://www.youtube.com/watch?v=AVAOoP2g2BQ",
     "streamer": "天音かなた 💫",
     "date": "2025-07-30T18:00:00.000Z"
   },
   {
+    "videoId": "0krAbEQGZOQ",
+    "videoUrl": "https://www.youtube.com/watch?v=0krAbEQGZOQ",
+    "streamer": "風真いろは",
+    "date": "2025-07-30T18:00:00.000Z"
+  },
+  {
+    "videoId": "K-DSk2B6jLY",
+    "videoUrl": "https://www.youtube.com/watch?v=K-DSk2B6jLY",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-07-30T19:00:00.000Z"
+  },
+  {
     "videoId": "1WbyakjUmsI",
     "videoUrl": "https://www.youtube.com/watch?v=1WbyakjUmsI",
     "streamer": "宝鐘マリン 🏴☠",
     "date": "2025-07-30T20:00:00.000Z"
+  },
+  {
+    "videoId": "DmNjBHUk0ao",
+    "videoUrl": "https://www.youtube.com/watch?v=DmNjBHUk0ao",
+    "streamer": "博衣こより",
+    "date": "2025-07-30T21:00:00.000Z"
   },
   {
     "videoId": "aI769CgHfLc",
@@ -262,6 +274,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=2JUgZjf_Y50",
     "streamer": "宝鐘マリン 🏴☠",
     "date": "2025-07-30T21:30:00.000Z"
+  },
+  {
+    "videoId": "tMPdR2-nhnw",
+    "videoUrl": "https://www.youtube.com/watch?v=tMPdR2-nhnw",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-07-30T22:00:00.000Z"
+  },
+  {
+    "videoId": "hXmlBIBA46Y",
+    "videoUrl": "https://www.youtube.com/watch?v=hXmlBIBA46Y",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-07-30T22:00:00.000Z"
+  },
+  {
+    "videoId": "HpAG41rM-SU",
+    "videoUrl": "https://www.youtube.com/watch?v=HpAG41rM-SU",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-07-30T22:00:00.000Z"
   },
   {
     "videoId": "_LGiYcH4roI",
@@ -340,6 +370,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=QDS7PCXxDOY",
     "streamer": "響咲リオナ",
     "date": "2025-07-29T23:10:00.000Z"
+  },
+  {
+    "videoId": "dOc-dN5nTpE",
+    "videoUrl": "https://www.youtube.com/watch?v=dOc-dN5nTpE",
+    "streamer": "響咲リオナ",
+    "date": "2025-07-30T03:30:00.000Z"
   },
   {
     "videoId": "aBsik-TytLs",

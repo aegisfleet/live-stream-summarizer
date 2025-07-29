@@ -8,6 +8,7 @@ class ArchiveManager {
         this.selectedTags = new Set();
         this.currentPage = 1;
         this.itemsPerPage = 15;
+        this.originalTitle = document.title;
         
         this.init();
     }
@@ -23,6 +24,24 @@ class ArchiveManager {
         this.setupBackToHomeButton();
         this.setupLoadMoreButton();
         this.renderArchives();
+        this.updateTitle();
+    }
+
+    updateTitle() {
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get('videoId');
+        const streamerName = params.get('streamer');
+
+        if (videoId) {
+            const archive = this.archiveData.find(a => a.videoId === videoId);
+            if (archive) {
+                document.title = `${archive.title} - ${this.originalTitle}`;
+            }
+        } else if (streamerName) {
+            document.title = `${streamerName}の配信一覧 - ${this.originalTitle}`;
+        } else {
+            document.title = this.originalTitle;
+        }
     }
 
     filterByUrlParams() {
@@ -30,10 +49,15 @@ class ArchiveManager {
         const videoId = params.get('videoId');
         if (videoId) {
             this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
-            // フィルターボタンを非表示にするか、選択状態を解除するなどUI調整
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
-            return true; // パラメータによるフィルタリングが行われたことを示す
+            return true;
+        }
+
+        const streamerName = params.get('streamer');
+        if (streamerName && this.streamers.has(streamerName)) {
+            this.selectedStreamers.clear();
+            this.selectedStreamers.add(streamerName);
         }
         return false;
     }
@@ -58,7 +82,6 @@ class ArchiveManager {
             return;
         }
 
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 backToTopButton.classList.add('show');
@@ -67,9 +90,8 @@ class ArchiveManager {
             }
         };
 
-        // When the user clicks on the button, scroll to the top of the document
         backToTopButton.addEventListener('click', () => {
-            backToTopButton.classList.remove('show'); // Immediately hide the button
+            backToTopButton.classList.remove('show');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
@@ -101,7 +123,6 @@ class ArchiveManager {
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
             
-            // ストリーマーとタグ一覧の取得
             this.archiveData.forEach(archive => {
                 this.streamers.add(archive.streamer);
                 archive.tags.forEach(tag => this.tags.add(tag));
@@ -123,7 +144,6 @@ class ArchiveManager {
             return;
         }
         
-        // ストリーマーごとのフィルターボタンを作成
         Array.from(this.streamers).sort().forEach(streamer => {
             const button = document.createElement('button');
             button.textContent = streamer;
@@ -131,9 +151,7 @@ class ArchiveManager {
             filterContainer.appendChild(button);
         });
         
-        // すべて表示ボタンの設定
         selectAllButton.addEventListener('click', () => {
-            // URLパラメータがある状態で「すべて表示」が押された場合、ページをリロードして全件表示に戻す
             if (new URLSearchParams(window.location.search).has('videoId')) {
                 window.location.href = window.location.pathname;
             } else {
@@ -141,57 +159,65 @@ class ArchiveManager {
             }
         });
         
-        // 初期状態ですべて選択
-        this.selectAllStreamers();
-    }
-    
-    filterByStreamer(clickedStreamer) {
-        // videoIdパラメータ付きのURLから配信者フィルタをクリックした場合の対応
-        if (new URLSearchParams(window.location.search).has('videoId')) {
-            history.pushState(null, '', window.location.pathname);
-            document.getElementById('filter-container').style.display = 'block';
-            document.querySelector('.filter-group.collapsible').style.display = 'block';
-            this.setupStreamerFilter(); // フィルターボタンを再セットアップ
-            this.setupTagFilter();
-        }
-
-        // If the clicked streamer is already the only selected streamer,
-        // then clear the selection (effectively "select all").
-        if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
-            this.selectAllStreamers(); // Call existing selectAllStreamers to reset
-        } else {
-            // Otherwise, select only the clicked streamer.
-            this.selectedStreamers.clear();
-            this.selectedStreamers.add(clickedStreamer);
-
-            // Update UI for streamer filter buttons
+        if (this.selectedStreamers.size > 0) {
             const buttons = document.querySelectorAll('#filter-buttons button');
             buttons.forEach(button => {
-                if (button.textContent === clickedStreamer) {
+                if (this.selectedStreamers.has(button.textContent)) {
                     button.classList.add('active');
                 } else {
                     button.classList.remove('active');
                 }
             });
+        } else {
+            this.selectAllStreamers(false);
+        }
+    }
+    
+    filterByStreamer(clickedStreamer) {
+        document.getElementById('filter-container').style.display = 'block';
+        document.querySelector('.filter-group.collapsible').style.display = 'block';
 
-            // Update tag filter and re-filter archives
+        const params = new URLSearchParams(window.location.search);
+        params.delete('videoId');
+
+        if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
+            this.selectAllStreamers();
+        } else {
+            this.selectedStreamers.clear();
+            this.selectedStreamers.add(clickedStreamer);
+            params.set('streamer', clickedStreamer);
+            const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+            history.pushState(null, '', newUrl);
+
+            const buttons = document.querySelectorAll('#filter-buttons button');
+            buttons.forEach(button => {
+                button.classList.toggle('active', button.textContent === clickedStreamer);
+            });
+
             this.updateTagFilter();
 
-            // Scroll to archive grid only when filtering by a specific streamer
             const archiveGrid = document.getElementById('archive-grid');
             if (archiveGrid) {
                 archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+        this.updateTitle();
     }
     
-    selectAllStreamers() {
+    selectAllStreamers(updateHistory = true) {
         const buttons = document.querySelectorAll('#filter-buttons button');
         this.selectedStreamers = new Set(this.streamers);
         buttons.forEach(button => button.classList.add('active'));
         
-        // タグフィルターを更新し、アーカイブを再フィルタリングする
+        if (updateHistory) {
+            const params = new URLSearchParams(window.location.search);
+            params.delete('streamer');
+            const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+            history.pushState(null, '', newUrl);
+        }
+        
         this.updateTagFilter();
+        this.updateTitle();
     }
     
     setupTagFilter() {
@@ -210,7 +236,6 @@ class ArchiveManager {
             return;
         }
 
-        // 「すべて選択」ボタンは、現在表示されているタグをすべて選択するように変更
         selectAllButton.addEventListener('click', () => this.selectAllTags());
 
         const toggleTags = () => {
@@ -222,7 +247,6 @@ class ArchiveManager {
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
                 content.style.maxHeight = null;
-                // 「閉じる」が押された際に、「タグで絞り込み」セクションにスクロール
                 collapsibleContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         };
@@ -230,37 +254,29 @@ class ArchiveManager {
         toggleButton.addEventListener('click', toggleTags);
         collapsibleContainer.querySelector('.collapsible-trigger').addEventListener('click', toggleTags);
 
-        // 初期タグ表示
         this.updateTagFilter();
     }
 
     updateTagFilter() {
         const filterContainer = document.getElementById('tag-filter-buttons');
-        filterContainer.innerHTML = ''; // 既存のタグボタンをクリア
+        filterContainer.innerHTML = '';
 
-        // 選択中の配信者に関連するタグのみを抽出
         const relevantArchives = this.archiveData.filter(archive => this.selectedStreamers.has(archive.streamer));
         const visibleTags = new Set();
         relevantArchives.forEach(archive => {
             archive.tags.forEach(tag => visibleTags.add(tag));
         });
 
-        // this.tags を更新して、現在表示されているタグのセットを保持
         this.tags = visibleTags;
 
-        // タグごとのフィルターボタンを作成
         Array.from(this.tags).sort().forEach(tag => {
             const button = document.createElement('button');
             button.textContent = tag;
-            // クリックすると、そのタグのみでフィルタリングする
             button.addEventListener('click', () => this.filterByTag(tag));
             filterContainer.appendChild(button);
         });
 
-        // オーバーフロー状態をチェックして適切なクラスを適用
         this.checkTagOverflow();
-
-        // 表示されているタグをすべて選択状態にして、アーカイブをフィルタリング
         this.selectAllTags();
     }
 
@@ -271,12 +287,6 @@ class ArchiveManager {
         const collapsibleTrigger = siteDescription.querySelector('.collapsible-trigger');
 
         if (!siteDescription || !toggleButton || !collapsibleContent || !collapsibleTrigger) {
-            console.error('サイト説明のDOM要素が見つかりません:', {
-                siteDescription: !!siteDescription,
-                toggleButton: !!toggleButton,
-                collapsibleContent: !!collapsibleContent,
-                collapsibleTrigger: !!collapsibleTrigger
-            });
             return;
         }
 
@@ -298,24 +308,20 @@ class ArchiveManager {
 
     selectAllTags() {
         const buttons = document.querySelectorAll('#tag-filter-buttons button');
-        // this.tags は updateTagFilter で更新された、現在表示されているタグのセットを指す
         this.selectedTags = new Set(this.tags);
         buttons.forEach(button => button.classList.add('active'));
         this.filterArchives();
     }
 
     checkTagOverflow() {
-        // タグフィルターのコンテンツがオーバーフローしているかチェック
         const content = document.querySelector('.filter-group.collapsible .collapsible-content');
         if (!content) return;
 
-        // 一時的にmax-heightを解除してスクロール高さを測定
         const originalMaxHeight = content.style.maxHeight;
         content.style.maxHeight = 'none';
         const scrollHeight = content.scrollHeight;
         content.style.maxHeight = originalMaxHeight;
 
-        // 現在のmax-heightと比較してオーバーフローを判定
         const currentMaxHeight = parseInt(window.getComputedStyle(content).maxHeight);
         
         if (scrollHeight > currentMaxHeight) {
@@ -326,35 +332,26 @@ class ArchiveManager {
     }
 
     filterByTag(clickedTag) {
-        // videoIdパラメータ付きのURLからタグフィルタをクリックした場合の対応
         if (new URLSearchParams(window.location.search).has('videoId')) {
             history.pushState(null, '', window.location.pathname);
             document.getElementById('filter-container').style.display = 'block';
             document.querySelector('.filter-group.collapsible').style.display = 'block';
-            this.setupStreamerFilter(); // フィルターボタンを再セットアップ
+            this.setupStreamerFilter();
             this.setupTagFilter();
         }
         
-        // 既にそのタグのみが選択されている場合は、不要な再描画を防ぐ
         if (this.selectedTags.has(clickedTag) && this.selectedTags.size === 1) {
             return;
         }
 
-        // 選択されているタグをクリアし、クリックされたタグのみを選択状態にする
         this.selectedTags.clear();
         this.selectedTags.add(clickedTag);
 
-        // 上部のタグフィルターボタンのUIを更新する
         const buttons = document.querySelectorAll('#tag-filter-buttons button');
         buttons.forEach(button => {
-            if (button.textContent === clickedTag) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
+            button.classList.toggle('active', button.textContent === clickedTag);
         });
 
-        // アーカイブを再フィルタリングする
         this.filterArchives();
     }
 
@@ -362,11 +359,8 @@ class ArchiveManager {
         this.currentPage = 1;
         this.filteredData = this.archiveData.filter(archive => {
             const streamerMatch = this.selectedStreamers.has(archive.streamer);
-            
-            // タグフィルターの条件：選択されたタグがなければtrue、あればいずれかのタグにマッチするか (OR条件)
             const tagMatch = this.selectedTags.size === 0 || 
                              archive.tags.some(tag => this.selectedTags.has(tag));
-
             return streamerMatch && tagMatch;
         });
         this.renderArchives(true);
@@ -396,7 +390,6 @@ class ArchiveManager {
             grid.appendChild(card);
         });
 
-        // Show or hide the "load more" button
         if (loadMoreButton) {
             if (endIndex < this.filteredData.length && !new URLSearchParams(window.location.search).has('videoId')) {
                 loadMoreButton.style.display = 'block';
@@ -415,7 +408,6 @@ class ArchiveManager {
             window.open(url, '_blank');
         };
         
-        // サムネイル画像の作成
         const img = document.createElement('img');
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
@@ -423,35 +415,29 @@ class ArchiveManager {
         img.title = 'クリックして動画を再生';
         img.addEventListener('click', () => openVideo());
         
-        // カードコンテンツの作成
         const content = document.createElement('div');
         content.className = 'archive-card-content';
         
-        // タイトル
         const title = document.createElement('h2');
         title.textContent = archive.title;
         title.classList.add('clickable-title');
         title.title = 'クリックして動画を再生';
         title.addEventListener('click', () => openVideo());
         
-        // 配信日時
         const dateElement = document.createElement('p');
         dateElement.className = 'archive-date';
         dateElement.textContent = `配信日時: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
 
-        // 配信時間
         const duration = document.createElement('p');
         duration.className = 'duration';
         duration.textContent = `配信時間：${this.formatDuration(archive.duration)}`;
 
-        // 配信者名
         const streamer = document.createElement('p');
-        streamer.className = 'streamer-name clickable-streamer'; // clickable-streamer クラスを追加
+        streamer.className = 'streamer-name clickable-streamer';
         streamer.textContent = `配信者: ${archive.streamer}`;
-        streamer.title = `配信者「${archive.streamer}」で絞り込む`; // ツールチップを追加
-        streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer)); // クリックイベントを追加
+        streamer.title = `配信者「${archive.streamer}」で絞り込む`;
+        streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer));
 
-        // 概要セクション
         const overview = document.createElement('div');
         overview.className = 'overview';
         
@@ -463,7 +449,6 @@ class ArchiveManager {
         overviewMood.className = 'overview-mood';
         overviewMood.textContent = `配信の雰囲気：${archive.overview.mood}`;
         
-        // 見どころセクション
         const highlights = document.createElement('div');
         highlights.className = 'highlights collapsible';
         
@@ -482,8 +467,8 @@ class ArchiveManager {
                 openVideo(seconds);
             });
 
-            const title = document.createElement('h3');
-            title.textContent = highlight.title;
+            const h3 = document.createElement('h3');
+            h3.textContent = highlight.title;
             
             const timestamp = document.createElement('span');
             timestamp.className = 'timestamp';
@@ -496,7 +481,7 @@ class ArchiveManager {
             const description = document.createElement('p');
             description.textContent = highlight.description;
             
-            li.appendChild(title);
+            li.appendChild(h3);
             li.appendChild(timestamp);
             li.appendChild(document.createTextNode(' / '));
             li.appendChild(type);
@@ -517,7 +502,6 @@ class ArchiveManager {
                 content.style.maxHeight = content.scrollHeight + 'px';
             } else {
                 content.style.maxHeight = null;
-                // 「閉じる」が押された際に、カードの先頭にスクロール
                 card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         };
@@ -525,7 +509,6 @@ class ArchiveManager {
         highlightsTitle.addEventListener('click', toggleHighlights);
         toggleButton.addEventListener('click', toggleHighlights);
         
-        // タグセクション
         const tagsContainer = document.createElement('div');
         tagsContainer.className = 'tags-container collapsible';
 
@@ -540,7 +523,6 @@ class ArchiveManager {
         tags.className = 'tags';
         archive.tags.forEach(tag => {
             const tagSpan = document.createElement('span');
-            // クリック可能であることを示すクラスとイベントリスナーを追加
             tagSpan.className = 'tag clickable-tag';
             tagSpan.textContent = `#${tag}`;
             tagSpan.title = `タグ「${tag}」で絞り込む`;
@@ -572,7 +554,6 @@ class ArchiveManager {
         tagsContainer.appendChild(tagsList);
         tagsContainer.appendChild(toggleTagsButton);
         
-        // シェアボタンのフッター
         const footer = document.createElement('div');
         footer.className = 'card-footer';
 
@@ -617,14 +598,7 @@ class ArchiveManager {
         regenerateButton.addEventListener('click', (e) => {
             e.stopPropagation();
             const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
-            const tweetText = `@aegisfleet
-内容が間違っているので再生成お願いします！
-間違っている箇所: 
-
-URL: ${shareUrl}
-
-【同意事項】
-再生成しても正確な内容が保証されないことに同意します。`;
+            const tweetText = `@aegisfleet\n内容が間違っているので再生成お願いします！\n間違っている箇所: \n\nURL: ${shareUrl}\n\n【同意事項】\n再生成しても正確な内容が保証されないことに同意します。`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
             window.open(twitterIntentUrl, '_blank');
         });
@@ -636,7 +610,6 @@ URL: ${shareUrl}
         rightButtons.appendChild(shareButton);
         footer.appendChild(rightButtons);
 
-        // 要素の組み立て
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
         highlights.appendChild(toggleButton);
@@ -660,12 +633,8 @@ URL: ${shareUrl}
     }
 
     timestampToSeconds(timestamp) {
-        // H:M:S or M:S形式のタイムスタンプを秒に変換する
         const parts = timestamp.split(':').map(Number).reverse();
-        const seconds = parts.reduce((total, part, index) => {
-            return total + part * Math.pow(60, index);
-        }, 0);
-        return seconds;
+        return parts.reduce((total, part, index) => total + part * Math.pow(60, index), 0);
     }
 
     formatDuration(totalSeconds) {
@@ -680,14 +649,13 @@ URL: ${shareUrl}
         if (minutes > 0) {
             durationStr += `${minutes}分`;
         }
-        if (seconds > 0 || durationStr === "") { // Include seconds if no hours/minutes, or if it's 0 seconds
+        if (seconds > 0 || durationStr === "") {
             durationStr += `${seconds}秒`;
         }
         return durationStr.trim();
     }
 }
 
-// アプリケーションの初期化
 document.addEventListener('DOMContentLoaded', () => {
     new ArchiveManager();
 });

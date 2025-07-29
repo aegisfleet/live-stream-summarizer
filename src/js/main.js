@@ -311,6 +311,7 @@ class ArchiveManager {
                 collapsibleContent.classList.remove('has-overflow');
             } else {
                 collapsibleContent.style.maxHeight = null;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         };
 

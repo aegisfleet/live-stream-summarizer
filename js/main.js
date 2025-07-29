@@ -14,10 +14,9 @@ class ArchiveManager {
     
     async init() {
         await this.loadData();
-        if (!this.filterByUrlParams()) {
-            this.setupStreamerFilter();
-            this.setupTagFilter();
-        }
+        this.filterByUrlParams();
+        this.setupStreamerFilter();
+        this.setupTagFilter();
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
         this.setupBackToHomeButton();
@@ -28,14 +27,19 @@ class ArchiveManager {
     filterByUrlParams() {
         const params = new URLSearchParams(window.location.search);
         const videoId = params.get('videoId');
+        const streamerName = params.get('streamer');
+
         if (videoId) {
             this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
-            // フィルターボタンを非表示にするか、選択状態を解除するなどUI調整
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
-            return true; // パラメータによるフィルタリングが行われたことを示す
+            return;
         }
-        return false;
+
+        if (streamerName && this.streamers.has(streamerName)) {
+            this.selectedStreamers.clear();
+            this.selectedStreamers.add(streamerName);
+        }
     }
 
     setupLoadMoreButton() {
@@ -141,8 +145,22 @@ class ArchiveManager {
             }
         });
         
-        // 初期状態ですべて選択
-        this.selectAllStreamers();
+        // URLにstreamerパラメータがない場合のみ、すべて選択
+        if (!new URLSearchParams(window.location.search).has('streamer')) {
+            this.selectAllStreamers();
+        } else {
+            this.updateTagFilter(); // URLパラメータで配信者が指定されている場合、タグフィルターを更新
+        }
+
+        // フィルターボタンのUIを更新
+        const buttons = document.querySelectorAll('#filter-buttons button');
+        buttons.forEach(button => {
+            if (this.selectedStreamers.has(button.textContent)) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
     }
     
     filterByStreamer(clickedStreamer) {
@@ -155,14 +173,17 @@ class ArchiveManager {
             this.setupTagFilter();
         }
 
+        const params = new URLSearchParams(window.location.search);
         // If the clicked streamer is already the only selected streamer,
         // then clear the selection (effectively "select all").
         if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
             this.selectAllStreamers(); // Call existing selectAllStreamers to reset
+            params.delete('streamer');
         } else {
             // Otherwise, select only the clicked streamer.
             this.selectedStreamers.clear();
             this.selectedStreamers.add(clickedStreamer);
+            params.set('streamer', clickedStreamer);
 
             // Update UI for streamer filter buttons
             const buttons = document.querySelectorAll('#filter-buttons button');
@@ -183,6 +204,8 @@ class ArchiveManager {
                 archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        history.pushState(null, '', newUrl);
     }
     
     selectAllStreamers() {
@@ -190,6 +213,12 @@ class ArchiveManager {
         this.selectedStreamers = new Set(this.streamers);
         buttons.forEach(button => button.classList.add('active'));
         
+        // URLからstreamerパラメータを削除
+        const params = new URLSearchParams(window.location.search);
+        params.delete('streamer');
+        const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+        history.pushState(null, '', newUrl);
+
         // タグフィルターを更新し、アーカイブを再フィルタリングする
         this.updateTagFilter();
     }

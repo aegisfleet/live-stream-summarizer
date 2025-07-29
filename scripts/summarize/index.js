@@ -32,7 +32,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
     }
 }
 
-async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
+async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer) {
     const formatExample = {
         "overview": {
             "summary": "配信の全体的な内容を200字程度で説明",
@@ -49,14 +49,15 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle) {
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
     };
 
-    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, existingSummary = null) => {
+    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, existingSummary = null) => {
         let prompt = `# 指示内容
 「${videoTitle}」というタイトルの動画を要約し、JSONオブジェクトとして出力する。
 
-## 現在の動画の範囲:
+## 現在の解析対象:
+- 配信者: ${streamer}
 - 開始時間: ${formatTimestamp(clipStart)}
 - 終了時間: ${formatTimestamp(clipEnd)}
-- 動画の長さ: 約${formatDuration(videoDurationSeconds)}分間
+- 動画の全体の長さ: 約${formatDuration(videoDurationSeconds)}秒
 
 ## 出力形式は以下の構造に厳密に従う:
 \`\`\`
@@ -152,7 +153,7 @@ ${JSON.stringify(existingSummary, null, 2)}
         try {
             const chunkSummary = await retry(async () => {
                 const result = await model.generateContent([
-                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, currentSummary),
+                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, currentSummary),
                     {
                         fileData: {
                             fileUri: videoUrl,
@@ -323,7 +324,7 @@ async function generateSummaries() {
 
             try {
                 // Gemini APIを使用して動画を直接要約
-                const summary = await generateSummary(archive.videoId, archive.duration, archive.title);
+                const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer);
                 
                 // 要約データを配列に追加
                 summaries.push({

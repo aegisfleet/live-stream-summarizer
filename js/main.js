@@ -174,13 +174,22 @@ class ArchiveManager {
     }
     
     filterByStreamer(clickedStreamer) {
+        const params = new URLSearchParams(window.location.search);
+        const videoIdPresent = params.has('videoId');
+
         document.getElementById('filter-container').style.display = 'block';
         document.querySelector('.filter-group.collapsible').style.display = 'block';
 
-        const params = new URLSearchParams(window.location.search);
-        params.delete('videoId');
-
-        if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
+        if (videoIdPresent) {
+            params.delete('videoId');
+            this.selectedStreamers.clear();
+            this.selectedStreamers.add(clickedStreamer);
+            params.set('streamer', clickedStreamer);
+            const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+            history.pushState(null, '', newUrl);
+            this.setupStreamerFilter();
+            this.setupTagFilter();
+        } else if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
             this.selectAllStreamers();
         } else {
             this.selectedStreamers.clear();
@@ -188,20 +197,23 @@ class ArchiveManager {
             params.set('streamer', clickedStreamer);
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
             history.pushState(null, '', newUrl);
-
-            const buttons = document.querySelectorAll('#filter-buttons button');
-            buttons.forEach(button => {
-                button.classList.toggle('active', button.textContent === clickedStreamer);
-            });
-
-            this.updateTagFilter();
-
-            const archiveGrid = document.getElementById('archive-grid');
-            if (archiveGrid) {
-                archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
         }
+
+        const buttons = document.querySelectorAll('#filter-buttons button');
+        buttons.forEach(button => {
+            button.classList.toggle('active', this.selectedStreamers.has(button.textContent));
+        });
+
+        this.updateTagFilter();
+        this.filterArchives();
+
+        const archiveGrid = document.getElementById('archive-grid');
+        if (archiveGrid) {
+            archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
         this.updateTitle();
+        this.setupBackToHomeButton();
     }
     
     selectAllStreamers(updateHistory = true) {
@@ -338,6 +350,7 @@ class ArchiveManager {
             document.querySelector('.filter-group.collapsible').style.display = 'block';
             this.setupStreamerFilter();
             this.setupTagFilter();
+            this.setupBackToHomeButton();
         }
         
         if (this.selectedTags.has(clickedTag) && this.selectedTags.size === 1) {

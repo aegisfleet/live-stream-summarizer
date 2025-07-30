@@ -3,6 +3,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const config = require('../../config/default.json');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const axios = require('axios');
 
 // Gemini APIの初期化
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -32,7 +33,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
     }
 }
 
-async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer) {
+async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer, thumbnailUrl) {
     const formatExample = {
         "overview": {
             "summary": "配信の全体的な内容を200字程度で説明",
@@ -51,13 +52,16 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
 
     const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, existingSummary = null) => {
         let prompt = `# 指示内容
-「${videoTitle}」というタイトルの動画を要約し、JSONオブジェクトとして出力する。
+「${videoTitle}」というタイトルの動画と、添付されたサムネイル画像を参考にして、動画の内容を要約し、JSONオブジェクトとして出力してください。
 
 ## 現在の解析対象:
 - 配信者: ${streamer}
 - 開始時間: ${formatTimestamp(clipStart)}
 - 終了時間: ${formatTimestamp(clipEnd)}
 - 動画の全体の長さ: 約${formatDuration(videoDurationSeconds)}秒
+
+## 参考情報:
+- 添付されている動画のサムネイル画像も参考にして、出演者や配信の雰囲気を把握してください。
 
 ## 出力形式は以下の構造に厳密に従う:
 \`\`\`
@@ -101,10 +105,11 @@ ${JSON.stringify(formatExample, null, 2)}
   },
   "highlights": [...],
   "tags": [...]
-}`;
+}
+`;
 
         if (existingSummary) {
-            prompt += `\n\n
+            prompt += `
 ## 既存の要約データ:
 この要約データを更新・追記する形で、新しい期間の情報を追加する。
 - overviewは全体を考慮して更新する。
@@ -153,8 +158,17 @@ ${JSON.stringify(existingSummary, null, 2)}
 
         try {
             const chunkSummary = await retry(async () => {
+                const imageResponse = await axios.get(thumbnailUrl, { responseType: 'arraybuffer' });
+                const imageBase64 = Buffer.from(imageResponse.data).toString('base64');
+
                 const result = await model.generateContent([
                     promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, currentSummary),
+                    {
+                        inlineData: {
+                            data: imageBase664,
+                            mimeType: 'image/jpeg',
+                        },
+                    },
                     {
                         fileData: {
                             fileUri: videoUrl,
@@ -325,7 +339,7 @@ async function generateSummaries() {
 
             try {
                 // Gemini APIを使用して動画を直接要約
-                const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer);
+                const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer, archive.thumbnailUrl);
                 
                 // 要約データを配列に追加
                 summaries.push({

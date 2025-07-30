@@ -165,7 +165,7 @@ ${JSON.stringify(existingSummary, null, 2)}
                     promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, currentSummary),
                     {
                         inlineData: {
-                            data: imageBase664,
+                            data: imageBase64,
                             mimeType: 'image/jpeg',
                         },
                     },

@@ -381,4 +381,89 @@ async function generateSummaries() {
     }
 }
 
-generateSummaries();
+async function updateSummary(videoId) {
+    try {
+        // 既存の要約とアーカイブ情報を読み込む
+        const summaryPath = path.join(__dirname, '../../src/data/summaries.json');
+        const archivePath = path.join(__dirname, '../../data/archives.json');
+
+        let summaries = [];
+        try {
+            summaries = JSON.parse(await fs.readFile(summaryPath, 'utf8'));
+        } catch (e) {
+            console.error('要約ファイル(summaries.json)が見つからないか、読み込めません。');
+            process.exit(1);
+        }
+
+        const archives = JSON.parse(await fs.readFile(archivePath, 'utf8'));
+
+        const summaryIndex = summaries.findIndex(s => s.videoId === videoId);
+        if (summaryIndex === -1) {
+            console.error(`指定されたvideoId (${videoId}) の要約が summaries.json に見つかりません。`);
+            return;
+        }
+
+        let archiveInfo = archives.find(a => a.videoId === videoId);
+        if (!archiveInfo) {
+            console.warn(`指定されたvideoId (${videoId}) の情報が archives.json に見つかりません。summaries.json の情報を使用します。`);
+            archiveInfo = summaries[summaryIndex];
+            if (!archiveInfo.duration || !archiveInfo.title || !archiveInfo.streamer || !archiveInfo.thumbnailUrl || !archiveInfo.date) {
+                console.error(`summaries.json の情報が不足しているため、処理を続行できません。`);
+                return;
+            }
+        }
+
+        console.log(`要約を更新します: ${videoId} - ${archiveInfo.title}`);
+
+        // generateSummary を呼び出して新しい要約を生成
+        const newSummaryData = await generateSummary(
+            archiveInfo.videoId,
+            archiveInfo.duration,
+            archiveInfo.title,
+            archiveInfo.streamer,
+            archiveInfo.thumbnailUrl
+        );
+
+        // 新しい要約データで更新
+        const updatedSummary = {
+            videoId: archiveInfo.videoId,
+            title: archiveInfo.title,
+            streamer: archiveInfo.streamer,
+            date: archiveInfo.date,
+            thumbnailUrl: archiveInfo.thumbnailUrl,
+            overview: {
+                summary: newSummaryData.overview.summary,
+                mood: newSummaryData.overview.mood
+            },
+            duration: archiveInfo.duration,
+            highlights: newSummaryData.highlights,
+            tags: newSummaryData.tags,
+            lastUpdated: new Date().toISOString()
+        };
+
+        // summaries 配列内のデータを更新
+        summaries[summaryIndex] = updatedSummary;
+
+        // 更新した内容をファイルに書き込む
+        await fs.writeFile(summaryPath, JSON.stringify(summaries, null, 2));
+        console.log(`要約を更新しました: ${videoId}`);
+
+    } catch (error) {
+        console.error(`要約の更新中にエラーが発生しました: ${videoId}`, error.message || error);
+        process.exit(1);
+    }
+}
+
+// メイン処理
+async function main() {
+    const videoIdArg = process.argv.find(arg => arg.startsWith('--videoId='));
+
+    if (videoIdArg) {
+        const videoId = videoIdArg.split('=')[1];
+        await updateSummary(videoId);
+    } else {
+        await generateSummaries();
+    }
+}
+
+main();

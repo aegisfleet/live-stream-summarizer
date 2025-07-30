@@ -128,8 +128,11 @@ graph TD
     # アーカイブの確認
     npm run check-archive
 
-    # 要約の生成
+    # 新規動画の要約を生成（最大10件）
     npm run summarize
+
+    # 特定の動画の要約を更新
+    npm run summarize -- --videoId=xxxxxxxxxxx
 
     # 開発サーバーの起動
     npm start

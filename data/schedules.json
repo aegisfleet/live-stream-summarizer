@@ -246,16 +246,22 @@
     "date": "2025-07-30T11:02:00.000Z"
   },
   {
+    "videoId": "0krAbEQGZOQ",
+    "videoUrl": "https://www.youtube.com/watch?v=0krAbEQGZOQ",
+    "streamer": "風真いろは",
+    "date": "2025-07-30T18:00:00.000Z"
+  },
+  {
     "videoId": "AVAOoP2g2BQ",
     "videoUrl": "https://www.youtube.com/watch?v=AVAOoP2g2BQ",
     "streamer": "天音かなた 💫",
     "date": "2025-07-30T18:00:00.000Z"
   },
   {
-    "videoId": "0krAbEQGZOQ",
-    "videoUrl": "https://www.youtube.com/watch?v=0krAbEQGZOQ",
-    "streamer": "風真いろは",
-    "date": "2025-07-30T18:00:00.000Z"
+    "videoId": "-DEtock3KTo",
+    "videoUrl": "https://www.youtube.com/watch?v=-DEtock3KTo",
+    "streamer": "博衣こより",
+    "date": "2025-07-30T19:00:00.000Z"
   },
   {
     "videoId": "K-DSk2B6jLY",
@@ -396,15 +402,15 @@
     "date": "2025-07-30T03:30:00.000Z"
   },
   {
-    "videoId": "aBsik-TytLs",
-    "videoUrl": "https://www.youtube.com/watch?v=aBsik-TytLs",
-    "streamer": "轟はじめ",
-    "date": "2025-07-30T19:00:00.000Z"
-  },
-  {
     "videoId": "pfgyOvyp600",
     "videoUrl": "https://www.youtube.com/watch?v=pfgyOvyp600",
     "streamer": "音乃瀬奏",
+    "date": "2025-07-30T19:00:00.000Z"
+  },
+  {
+    "videoId": "aBsik-TytLs",
+    "videoUrl": "https://www.youtube.com/watch?v=aBsik-TytLs",
+    "streamer": "轟はじめ",
     "date": "2025-07-30T19:00:00.000Z"
   },
   {

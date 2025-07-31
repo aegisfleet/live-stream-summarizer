@@ -55,7 +55,10 @@
             <button class="toggle-site-description">もっと見る</button>
         </section>
         <div id="filter-container" class="filter-group">
-            <h3>配信者で絞り込み</h3>
+            <div class="filter-header">
+                <h3>配信者で絞り込み</h3>
+                <span id="streamer-filter-hint" class="hint-icon" title="ヒント">?</span>
+            </div>
             <div id="filter-buttons"></div>
             <button id="select-all">すべて表示</button>
         </div>
@@ -79,6 +82,13 @@
         <p>Developed by <a href="https://x.com/aegisfleet" target="_blank" rel="noopener noreferrer">ポち</a></p>
     </footer>
 
+    <div id="hint-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>配信者フィルターのヒント</h3>
+            <p>配信者で絞り込んだ状態でこのページをブックマークしたり、URLを共有したりすると、その配信者の配信のみが表示された状態でページを開くことができます。</p>
+            <button id="close-dialog">閉じる</button>
+        </div>
+    </div>
     <button id="back-to-home" title="ホームに戻る">🏠</button>
     <button id="back-to-top" title="トップに戻る">⬆️</button>
     <script src="js/main.js" type="module"></script>

@@ -23,6 +23,7 @@ class ArchiveManager {
         this.setupBackToTopButton();
         this.setupBackToHomeButton();
         this.setupLoadMoreButton();
+        this.setupHintDialog();
         this.renderArchives();
         this.updateTitle();
     }
@@ -667,6 +668,28 @@ class ArchiveManager {
             durationStr += `${seconds}秒`;
         }
         return durationStr.trim();
+    }
+
+    setupHintDialog() {
+        const hintIcon = document.getElementById('streamer-filter-hint');
+        const dialog = document.getElementById('hint-dialog');
+        const closeButton = document.getElementById('close-dialog');
+
+        if (hintIcon && dialog && closeButton) {
+            hintIcon.addEventListener('click', () => {
+                dialog.style.display = 'flex';
+            });
+
+            closeButton.addEventListener('click', () => {
+                dialog.style.display = 'none';
+            });
+
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    dialog.style.display = 'none';
+                }
+            });
+        }
     }
 }
 

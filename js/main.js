@@ -25,7 +25,6 @@ class ArchiveManager {
         this.setupLoadMoreButton();
         this.renderArchives();
         this.updateTitle();
-        this.updateOgpImages();
     }
 
     updateTitle() {
@@ -43,22 +42,6 @@ class ArchiveManager {
         } else {
             document.title = this.originalTitle;
         }
-    }
-
-    updateOgpImages() {
-        const params = new URLSearchParams(window.location.search);
-        const videoId = params.get('videoId');
-        let imageUrl = 'https://aegisfleet.github.io/live-stream-summarizer/images/ogp.png';
-
-        if (videoId) {
-            const archive = this.archiveData.find(a => a.videoId === videoId);
-            if (archive) {
-                imageUrl = archive.thumbnailUrl;
-            }
-        }
-
-        document.querySelector('meta[property="og:image"]').setAttribute('content', imageUrl);
-        document.querySelector('meta[name="twitter:image"]').setAttribute('content', imageUrl);
     }
 
     filterByUrlParams() {

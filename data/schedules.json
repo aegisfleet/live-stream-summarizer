@@ -180,15 +180,15 @@
     "date": "2025-07-31T22:01:00.000Z"
   },
   {
-    "videoId": "ZiIT1_81v7k",
-    "videoUrl": "https://www.youtube.com/watch?v=ZiIT1_81v7k",
-    "streamer": "尾丸ポルカ",
-    "date": "2025-07-31T22:01:00.000Z"
-  },
-  {
     "videoId": "diGZ0qS3EV4",
     "videoUrl": "https://www.youtube.com/watch?v=diGZ0qS3EV4",
     "streamer": "鷹嶺ルイ",
+    "date": "2025-07-31T22:01:00.000Z"
+  },
+  {
+    "videoId": "ZiIT1_81v7k",
+    "videoUrl": "https://www.youtube.com/watch?v=ZiIT1_81v7k",
+    "streamer": "尾丸ポルカ",
     "date": "2025-07-31T22:01:00.000Z"
   },
   {
@@ -288,12 +288,6 @@
     "date": "2025-08-01T16:00:00.000Z"
   },
   {
-    "videoId": "TLCuNwIApHE",
-    "videoUrl": "https://www.youtube.com/watch?v=TLCuNwIApHE",
-    "streamer": "アキロゼ 🍎",
-    "date": "2025-08-01T18:00:00.000Z"
-  },
-  {
     "videoId": "j5IcFinBuZs",
     "videoUrl": "https://www.youtube.com/watch?v=j5IcFinBuZs",
     "streamer": "尾丸ポルカ",
@@ -303,6 +297,18 @@
     "videoId": "r5YXhrkXn9k",
     "videoUrl": "https://www.youtube.com/watch?v=r5YXhrkXn9k",
     "streamer": "戌神ころね 🥐",
+    "date": "2025-08-01T18:00:00.000Z"
+  },
+  {
+    "videoId": "TLCuNwIApHE",
+    "videoUrl": "https://www.youtube.com/watch?v=TLCuNwIApHE",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-08-01T18:00:00.000Z"
+  },
+  {
+    "videoId": "q3BSHiqxzww",
+    "videoUrl": "https://www.youtube.com/watch?v=q3BSHiqxzww",
+    "streamer": "桃鈴ねね",
     "date": "2025-08-01T18:00:00.000Z"
   },
   {

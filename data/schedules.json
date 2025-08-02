@@ -78,15 +78,15 @@
     "date": "2025-08-02T16:21:00.000Z"
   },
   {
-    "videoId": "QNTgtCXRaJU",
-    "videoUrl": "https://www.youtube.com/watch?v=QNTgtCXRaJU",
-    "streamer": "大神ミオ 🌲",
-    "date": "2025-08-02T17:00:00.000Z"
-  },
-  {
     "videoId": "Nr0PqkhX6go",
     "videoUrl": "https://www.youtube.com/watch?v=Nr0PqkhX6go",
     "streamer": "博衣こより",
+    "date": "2025-08-02T17:00:00.000Z"
+  },
+  {
+    "videoId": "QNTgtCXRaJU",
+    "videoUrl": "https://www.youtube.com/watch?v=QNTgtCXRaJU",
+    "streamer": "大神ミオ 🌲",
     "date": "2025-08-02T17:00:00.000Z"
   },
   {
@@ -228,9 +228,21 @@
     "date": "2025-08-03T18:00:00.000Z"
   },
   {
+    "videoId": "wbVpiu_GzcY",
+    "videoUrl": "https://www.youtube.com/watch?v=wbVpiu_GzcY",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-03T19:00:00.000Z"
+  },
+  {
     "videoId": "TdxlpDvjyQA",
     "videoUrl": "https://www.youtube.com/watch?v=TdxlpDvjyQA",
     "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-03T19:00:00.000Z"
+  },
+  {
+    "videoId": "lvgC3pW-LVA",
+    "videoUrl": "https://www.youtube.com/watch?v=lvgC3pW-LVA",
+    "streamer": "博衣こより",
     "date": "2025-08-03T19:00:00.000Z"
   },
   {
@@ -240,10 +252,10 @@
     "date": "2025-08-03T19:00:00.000Z"
   },
   {
-    "videoId": "lvgC3pW-LVA",
-    "videoUrl": "https://www.youtube.com/watch?v=lvgC3pW-LVA",
+    "videoId": "Mz2csaOL8Ho",
+    "videoUrl": "https://www.youtube.com/watch?v=Mz2csaOL8Ho",
     "streamer": "博衣こより",
-    "date": "2025-08-03T19:00:00.000Z"
+    "date": "2025-08-03T19:55:00.000Z"
   },
   {
     "videoId": "_1ffz3ADSNI",

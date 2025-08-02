@@ -9,19 +9,38 @@ class ArchiveManager {
         this.currentPage = 1;
         this.itemsPerPage = 15;
         this.originalTitle = document.title;
+        this.watchLaterList = new Set();
+        this.isWatchLaterMode = false;
         
         this.init();
     }
     
     async init() {
         await this.loadData();
-        if (!this.filterByUrlParams()) {
+        this.loadWatchLaterList();
+        const hasUrlParams = this.filterByUrlParams();
+        
+        // watchLaterパラメータがある場合でも、フィルターのセットアップは行う
+        if (!hasUrlParams || new URLSearchParams(window.location.search).get('watchLater') === 'true') {
             this.setupStreamerFilter();
             this.setupTagFilter();
         }
+        
+        // watchLaterパラメータがある場合は、フィルタリングを再適用
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('watchLater') === 'true' && this.watchLaterList.size > 0) {
+            this.isWatchLaterMode = true;
+            this.filteredData = this.archiveData.filter(archive => 
+                this.watchLaterList.has(archive.videoId)
+            );
+            document.getElementById('filter-container').style.display = 'none';
+            document.querySelector('.filter-group.collapsible').style.display = 'none';
+        }
+        
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
         this.setupBackToHomeButton();
+        this.setupWatchLaterButton();
         this.setupLoadMoreButton();
         this.setupHintDialog();
         this.renderArchives();
@@ -52,7 +71,25 @@ class ArchiveManager {
             this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
+            // videoIdがある場合は「あとで見る」ボタンを非表示にする
+            const watchLaterButton = document.getElementById('watch-later');
+            if (watchLaterButton) {
+                watchLaterButton.classList.remove('show');
+            }
             return true;
+        }
+
+        // watchLaterパラメータがある場合は「あとで見る」モードを有効にする
+        const watchLater = params.get('watchLater');
+        if (watchLater === 'true' && this.watchLaterList.size > 0) {
+            this.isWatchLaterMode = true;
+            this.filteredData = this.archiveData.filter(archive => 
+                this.watchLaterList.has(archive.videoId)
+            );
+            document.getElementById('filter-container').style.display = 'none';
+            document.querySelector('.filter-group.collapsible').style.display = 'none';
+            // watchLaterパラメータの場合は、フィルターのセットアップは後で行うため、falseを返す
+            return false;
         }
 
         const streamerName = params.get('streamer');
@@ -117,6 +154,28 @@ class ArchiveManager {
             window.location.href = window.location.pathname;
         });
     }
+
+    setupWatchLaterButton() {
+        const watchLaterButton = document.getElementById('watch-later');
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get('videoId');
+
+        if (!watchLaterButton) {
+            console.error('Watch later button not found.');
+            return;
+        }
+
+        // videoIdがある場合は「あとで見る」ボタンを非表示にする
+        if (videoId) {
+            watchLaterButton.classList.remove('show');
+        } else {
+            watchLaterButton.classList.add('show');
+        }
+
+        watchLaterButton.addEventListener('click', () => {
+            this.toggleWatchLaterMode();
+        });
+    }
     
     async loadData() {
         try {
@@ -130,6 +189,119 @@ class ArchiveManager {
             });
         } catch (error) {
             console.error('データの読み込みに失敗しました:', error);
+        }
+    }
+
+    loadWatchLaterList() {
+        try {
+            const savedList = localStorage.getItem('watchLaterList');
+            if (savedList) {
+                this.watchLaterList = new Set(JSON.parse(savedList));
+            }
+        } catch (error) {
+            console.error('あとで見るリストの読み込みに失敗しました:', error);
+        }
+    }
+
+    saveWatchLaterList() {
+        try {
+            localStorage.setItem('watchLaterList', JSON.stringify([...this.watchLaterList]));
+        } catch (error) {
+            console.error('あとで見るリストの保存に失敗しました:', error);
+        }
+    }
+
+    toggleWatchLaterMode() {
+        // あとで見るリストが空の場合はダイアログを表示
+        if (this.watchLaterList.size === 0) {
+            this.showWatchLaterDialog();
+            return;
+        }
+        
+        this.isWatchLaterMode = !this.isWatchLaterMode;
+        
+        if (this.isWatchLaterMode) {
+            // あとで見るモードに切り替え
+            this.filteredData = this.archiveData.filter(archive => 
+                this.watchLaterList.has(archive.videoId)
+            );
+            // フィルターコンテナを非表示にする
+            document.getElementById('filter-container').style.display = 'none';
+            document.querySelector('.filter-group.collapsible').style.display = 'none';
+            
+            // URLにwatchLaterパラメータを追加
+            const params = new URLSearchParams(window.location.search);
+            params.set('watchLater', 'true');
+            const newUrl = `${window.location.pathname}?${params.toString()}`;
+            history.pushState(null, '', newUrl);
+        } else {
+            // 通常モードに戻る
+            this.filteredData = [...this.archiveData];
+            // フィルターコンテナを表示する
+            document.getElementById('filter-container').style.display = 'block';
+            document.querySelector('.filter-group.collapsible').style.display = 'block';
+            
+            // URLからwatchLaterパラメータを削除
+            const params = new URLSearchParams(window.location.search);
+            params.delete('watchLater');
+            const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+            history.pushState(null, '', newUrl);
+        }
+        
+        this.currentPage = 1;
+        this.renderArchives(true);
+        
+        // カードの先頭位置にスクロール
+        const archiveGrid = document.getElementById('archive-grid');
+        if (archiveGrid) {
+            archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    showWatchLaterDialog() {
+        const dialog = document.getElementById('watch-later-dialog');
+        if (dialog) {
+            dialog.style.display = 'flex';
+        }
+    }
+
+    toggleWatchLater(videoId, bookmarkIcon) {
+        if (this.watchLaterList.has(videoId)) {
+            // リストから削除
+            this.watchLaterList.delete(videoId);
+            bookmarkIcon.classList.remove('active');
+            bookmarkIcon.title = 'あとで見るに追加';
+        } else {
+            // リストに追加
+            this.watchLaterList.add(videoId);
+            bookmarkIcon.classList.add('active');
+            bookmarkIcon.title = 'あとで見るから削除';
+        }
+        
+        this.saveWatchLaterList();
+        
+        // あとで見るモードの場合は、リストを更新
+        if (this.isWatchLaterMode) {
+            // リストが空になった場合は、フィルタを解除してすべての動画を表示
+            if (this.watchLaterList.size === 0) {
+                this.isWatchLaterMode = false;
+                this.filteredData = [...this.archiveData];
+                // フィルターコンテナを表示する
+                document.getElementById('filter-container').style.display = 'block';
+                document.querySelector('.filter-group.collapsible').style.display = 'block';
+                
+                // URLからwatchLaterパラメータを削除
+                const params = new URLSearchParams(window.location.search);
+                params.delete('watchLater');
+                const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+                history.pushState(null, '', newUrl);
+            } else {
+                this.filteredData = this.archiveData.filter(archive => 
+                    this.watchLaterList.has(archive.videoId)
+                );
+            }
+            this.currentPage = 1;
+            this.renderArchives(true);
         }
     }
     
@@ -429,6 +601,25 @@ class ArchiveManager {
         img.classList.add('clickable-thumbnail');
         img.title = 'クリックして動画を再生';
         img.addEventListener('click', () => openVideo());
+
+        // ブックマークアイコンを追加
+        const bookmarkIcon = document.createElement('button');
+        bookmarkIcon.className = 'bookmark-icon';
+        bookmarkIcon.innerHTML = '🔖';
+        bookmarkIcon.title = 'あとで見るに追加';
+        
+        // 既に追加されている場合はアクティブ状態にする
+        if (this.watchLaterList.has(archive.videoId)) {
+            bookmarkIcon.classList.add('active');
+            bookmarkIcon.title = 'あとで見るから削除';
+        }
+        
+        bookmarkIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleWatchLater(archive.videoId, bookmarkIcon);
+        });
+        
+        card.appendChild(bookmarkIcon);
         
         const content = document.createElement('div');
         content.className = 'archive-card-content';
@@ -687,6 +878,22 @@ class ArchiveManager {
             dialog.addEventListener('click', (e) => {
                 if (e.target === dialog) {
                     dialog.style.display = 'none';
+                }
+            });
+        }
+
+        // あとで見るダイアログの設定
+        const watchLaterDialog = document.getElementById('watch-later-dialog');
+        const closeWatchLaterButton = document.getElementById('close-watch-later-dialog');
+
+        if (watchLaterDialog && closeWatchLaterButton) {
+            closeWatchLaterButton.addEventListener('click', () => {
+                watchLaterDialog.style.display = 'none';
+            });
+
+            watchLaterDialog.addEventListener('click', (e) => {
+                if (e.target === watchLaterDialog) {
+                    watchLaterDialog.style.display = 'none';
                 }
             });
         }

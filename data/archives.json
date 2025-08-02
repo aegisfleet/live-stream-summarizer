@@ -185,7 +185,7 @@
     "streamer": "赤井はあと ❤",
     "date": "2025-08-02T12:03:00.000Z",
     "title": "【 料理 】ナポリタンたんったたたーーーんっ♪🍝❕❕❕🍝喫茶ちゃま☕【ホロライブ/赤井はあと】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/m1v1dr_fDig/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/m1v1dr_fDig/mqdefault.jpg",
     "endTime": "2025-08-02T05:19:00Z",
     "duration": 8092
   },
@@ -238,5 +238,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/t_188m7Z9UI/mqdefault.jpg",
     "endTime": "2025-08-01T15:23:32Z",
     "duration": 8479
+  },
+  {
+    "videoId": "wuXbubFMGVU",
+    "videoUrl": "https://www.youtube.com/watch?v=wuXbubFMGVU",
+    "streamer": "ReGLOSS",
+    "date": "2025-08-02T15:00:00.000Z",
+    "title": "ReGLOSS '落噺 (儒烏風亭らでん SOLO)' CONCEPT MOVIE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wuXbubFMGVU/mqdefault.jpg",
+    "endTime": "2025-08-02T06:02:57Z",
+    "duration": 97
   }
 ]

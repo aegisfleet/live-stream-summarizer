@@ -246,6 +246,18 @@ class ArchiveManager {
             params.delete('watchLater');
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
             history.pushState(null, '', newUrl);
+            
+            // フィルタを完全にリセット
+            this.selectedStreamers = new Set(this.streamers);
+            this.selectedTags = new Set(this.tags);
+            
+            // 配信者フィルタのボタンをすべてアクティブにする
+            const streamerButtons = document.querySelectorAll('#filter-buttons button');
+            streamerButtons.forEach(button => button.classList.add('active'));
+            
+            // タグフィルタのボタンをすべてアクティブにする
+            const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
+            tagButtons.forEach(button => button.classList.add('active'));
         }
         
         this.currentPage = 1;
@@ -295,6 +307,18 @@ class ArchiveManager {
                 params.delete('watchLater');
                 const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
                 history.pushState(null, '', newUrl);
+                
+                // フィルタを完全にリセット
+                this.selectedStreamers = new Set(this.streamers);
+                this.selectedTags = new Set(this.tags);
+                
+                // 配信者フィルタのボタンをすべてアクティブにする
+                const streamerButtons = document.querySelectorAll('#filter-buttons button');
+                streamerButtons.forEach(button => button.classList.add('active'));
+                
+                // タグフィルタのボタンをすべてアクティブにする
+                const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
+                tagButtons.forEach(button => button.classList.add('active'));
             } else {
                 this.filteredData = this.archiveData.filter(archive => 
                     this.watchLaterList.has(archive.videoId)

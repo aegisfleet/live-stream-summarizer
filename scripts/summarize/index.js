@@ -58,12 +58,14 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
 - 見どころの時間は最も重要な要素であり、正確な時間を記載する必要がある。
 - 見どころの範囲に偏りが無いよう、動画の最初から最後までを時系列通りに要約する。
 
-## 現在の解析対象:
+## 動画の情報:
 - 動画タイトル: ${videoTitle}
 - 配信者: ${streamer}
-- 開始時間: ${formatTimestamp(clipStart)}
-- 終了時間: ${formatTimestamp(clipEnd)}
-- 動画の全体の長さ: 約${formatDuration(videoDurationSeconds)}秒
+
+### 現在の解析範囲:
+- 現在の開始時間: ${formatDuration(clipStart)}
+- 現在の終了時間: ${formatDuration(clipEnd)}
+- 動画の全体の長さ: ${formatDuration(videoDurationSeconds)}
 
 ## 出力形式は以下の構造に厳密に従う:
 \`\`\`
@@ -80,6 +82,7 @@ ${JSON.stringify(formatExample, null, 2)}
 7. 見どころ(highlights)は視聴者が動画を見返す際のタイムラインとして機能するように、以下のルールに従って抽出する。
 - 目安としては最長でも5分間隔で出来るだけ細かく抽出する。
 - データの順番は動画の内容に沿って時系列で並べる。
+- 動画は分割して解析しており、続きの動画があることを考慮する。
 8. 見どころのタイムスタンプ(timestamp)は、その話題が最初に言及された瞬間の時間を動画の開始時点からの経過時間で正確に記載する。
 - 秒数があいまいな場合も秒の情報を省略せず、必ず"MM:SS"または"HH:MM:SS"形式で記載する。
 

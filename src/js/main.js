@@ -18,6 +18,8 @@ class ArchiveManager {
     async init() {
         await this.loadData();
         this.loadWatchLaterList();
+        // あとで見るリストのクリーンアップ（loadDataの後に実行）
+        this.cleanupWatchLaterList();
         const hasUrlParams = this.filterByUrlParams();
         
         // watchLaterパラメータがある場合でも、フィルターのセットアップは行う
@@ -200,6 +202,33 @@ class ArchiveManager {
             }
         } catch (error) {
             console.error('あとで見るリストの読み込みに失敗しました:', error);
+        }
+    }
+
+    cleanupWatchLaterList() {
+        // 現在のJSONデータに存在するvideoIdのセットを作成
+        const existingVideoIds = new Set(this.archiveData.map(archive => archive.videoId));
+        
+        console.log('クリーンアップ前のあとで見るリスト:', [...this.watchLaterList]);
+        console.log('現在のJSONデータのvideoId:', [...existingVideoIds]);
+        
+        // あとで見るリストから存在しないvideoIdを削除
+        const originalSize = this.watchLaterList.size;
+        const removedItems = [];
+        for (const videoId of this.watchLaterList) {
+            if (!existingVideoIds.has(videoId)) {
+                this.watchLaterList.delete(videoId);
+                removedItems.push(videoId);
+            }
+        }
+        
+        // 削除された項目がある場合は、更新されたリストを保存
+        if (this.watchLaterList.size !== originalSize) {
+            this.saveWatchLaterList();
+            console.log(`あとで見るリストから ${originalSize - this.watchLaterList.size} 個の存在しない項目を削除しました:`, removedItems);
+            console.log('クリーンアップ後のあとで見るリスト:', [...this.watchLaterList]);
+        } else {
+            console.log('削除される項目はありませんでした。');
         }
     }
 

@@ -354,33 +354,9 @@
     "date": "2025-08-03T20:02:00.000Z"
   },
   {
-    "videoId": "jwOIiFMLkXE",
-    "videoUrl": "https://www.youtube.com/watch?v=jwOIiFMLkXE",
-    "streamer": "常闇トワ 👾",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
-    "videoId": "Ru0TWbyW0vA",
-    "videoUrl": "https://www.youtube.com/watch?v=Ru0TWbyW0vA",
-    "streamer": "戌神ころね 🥐",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
     "videoId": "sY3v_poaWmM",
     "videoUrl": "https://www.youtube.com/watch?v=sY3v_poaWmM",
     "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
-    "videoId": "dKdg971CMVc",
-    "videoUrl": "https://www.youtube.com/watch?v=dKdg971CMVc",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
-    "videoId": "CfD6gamSgRs",
-    "videoUrl": "https://www.youtube.com/watch?v=CfD6gamSgRs",
-    "streamer": "星街すいせい ☄",
     "date": "2025-08-03T21:00:00.000Z"
   },
   {
@@ -390,15 +366,39 @@
     "date": "2025-08-03T21:00:00.000Z"
   },
   {
-    "videoId": "C7NVXsQ3zZ8",
-    "videoUrl": "https://www.youtube.com/watch?v=C7NVXsQ3zZ8",
-    "streamer": "大空スバル 🚑",
-    "date": "2025-08-03T22:00:00.000Z"
+    "videoId": "CfD6gamSgRs",
+    "videoUrl": "https://www.youtube.com/watch?v=CfD6gamSgRs",
+    "streamer": "星街すいせい ☄",
+    "date": "2025-08-03T21:00:00.000Z"
+  },
+  {
+    "videoId": "Ru0TWbyW0vA",
+    "videoUrl": "https://www.youtube.com/watch?v=Ru0TWbyW0vA",
+    "streamer": "戌神ころね 🥐",
+    "date": "2025-08-03T21:00:00.000Z"
+  },
+  {
+    "videoId": "dKdg971CMVc",
+    "videoUrl": "https://www.youtube.com/watch?v=dKdg971CMVc",
+    "streamer": "さくらみこ 🌸",
+    "date": "2025-08-03T21:00:00.000Z"
+  },
+  {
+    "videoId": "jwOIiFMLkXE",
+    "videoUrl": "https://www.youtube.com/watch?v=jwOIiFMLkXE",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-08-03T21:00:00.000Z"
   },
   {
     "videoId": "Dyu1qGyjuhA",
     "videoUrl": "https://www.youtube.com/watch?v=Dyu1qGyjuhA",
     "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-03T22:00:00.000Z"
+  },
+  {
+    "videoId": "C7NVXsQ3zZ8",
+    "videoUrl": "https://www.youtube.com/watch?v=C7NVXsQ3zZ8",
+    "streamer": "大空スバル 🚑",
     "date": "2025-08-03T22:00:00.000Z"
   },
   {
@@ -567,6 +567,12 @@
     "videoId": "UYmk8E7EFQQ",
     "videoUrl": "https://www.youtube.com/watch?v=UYmk8E7EFQQ",
     "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-03T22:00:00.000Z"
+  },
+  {
+    "videoId": "2pC1VsK8AMk",
+    "videoUrl": "https://www.youtube.com/watch?v=2pC1VsK8AMk",
+    "streamer": "儒烏風亭らでん",
     "date": "2025-08-03T22:00:00.000Z"
   }
 ]

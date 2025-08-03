@@ -78,15 +78,15 @@
     "date": "2025-08-02T16:21:00.000Z"
   },
   {
-    "videoId": "Nr0PqkhX6go",
-    "videoUrl": "https://www.youtube.com/watch?v=Nr0PqkhX6go",
-    "streamer": "博衣こより",
-    "date": "2025-08-02T17:00:00.000Z"
-  },
-  {
     "videoId": "QNTgtCXRaJU",
     "videoUrl": "https://www.youtube.com/watch?v=QNTgtCXRaJU",
     "streamer": "大神ミオ 🌲",
+    "date": "2025-08-02T17:00:00.000Z"
+  },
+  {
+    "videoId": "Nr0PqkhX6go",
+    "videoUrl": "https://www.youtube.com/watch?v=Nr0PqkhX6go",
+    "streamer": "博衣こより",
     "date": "2025-08-02T17:00:00.000Z"
   },
   {
@@ -354,33 +354,21 @@
     "date": "2025-08-03T20:02:00.000Z"
   },
   {
-    "videoId": "sY3v_poaWmM",
-    "videoUrl": "https://www.youtube.com/watch?v=sY3v_poaWmM",
-    "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
     "videoId": "2IkhW6Cb7Fc",
     "videoUrl": "https://www.youtube.com/watch?v=2IkhW6Cb7Fc",
     "streamer": "白上フブキ 🌽",
-    "date": "2025-08-03T21:00:00.000Z"
+    "date": "2025-08-03T20:59:00.000Z"
   },
   {
-    "videoId": "CfD6gamSgRs",
-    "videoUrl": "https://www.youtube.com/watch?v=CfD6gamSgRs",
-    "streamer": "星街すいせい ☄",
-    "date": "2025-08-03T21:00:00.000Z"
+    "videoId": "sY3v_poaWmM",
+    "videoUrl": "https://www.youtube.com/watch?v=sY3v_poaWmM",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-08-03T20:59:00.000Z"
   },
   {
     "videoId": "Ru0TWbyW0vA",
     "videoUrl": "https://www.youtube.com/watch?v=Ru0TWbyW0vA",
     "streamer": "戌神ころね 🥐",
-    "date": "2025-08-03T21:00:00.000Z"
-  },
-  {
-    "videoId": "dKdg971CMVc",
-    "videoUrl": "https://www.youtube.com/watch?v=dKdg971CMVc",
-    "streamer": "さくらみこ 🌸",
     "date": "2025-08-03T21:00:00.000Z"
   },
   {
@@ -390,16 +378,46 @@
     "date": "2025-08-03T21:00:00.000Z"
   },
   {
+    "videoId": "CfD6gamSgRs",
+    "videoUrl": "https://www.youtube.com/watch?v=CfD6gamSgRs",
+    "streamer": "星街すいせい ☄",
+    "date": "2025-08-03T21:01:00.000Z"
+  },
+  {
+    "videoId": "dKdg971CMVc",
+    "videoUrl": "https://www.youtube.com/watch?v=dKdg971CMVc",
+    "streamer": "さくらみこ 🌸",
+    "date": "2025-08-03T21:03:00.000Z"
+  },
+  {
     "videoId": "Dyu1qGyjuhA",
     "videoUrl": "https://www.youtube.com/watch?v=Dyu1qGyjuhA",
     "streamer": "猫又おかゆ 🍙",
     "date": "2025-08-03T22:00:00.000Z"
   },
   {
+    "videoId": "E6fz4TplZVc",
+    "videoUrl": "https://www.youtube.com/watch?v=E6fz4TplZVc",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-08-03T22:01:00.000Z"
+  },
+  {
+    "videoId": "RgWS1af3zg8",
+    "videoUrl": "https://www.youtube.com/watch?v=RgWS1af3zg8",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-08-03T22:02:00.000Z"
+  },
+  {
     "videoId": "C7NVXsQ3zZ8",
     "videoUrl": "https://www.youtube.com/watch?v=C7NVXsQ3zZ8",
     "streamer": "大空スバル 🚑",
-    "date": "2025-08-03T22:00:00.000Z"
+    "date": "2025-08-03T22:03:00.000Z"
+  },
+  {
+    "videoId": "97ltmCmx7h8",
+    "videoUrl": "https://www.youtube.com/watch?v=97ltmCmx7h8",
+    "streamer": "ときのそら 🐻",
+    "date": "2025-08-03T22:05:00.000Z"
   },
   {
     "videoId": "S_i--Sta9_Y",

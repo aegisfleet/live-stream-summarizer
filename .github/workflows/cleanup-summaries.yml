@@ -1,0 +1,28 @@
+name: Cleanup old summaries
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # 毎日日本時間0時（UTC 15時）に実行
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run cleanup script
+        run: node scripts/cleanup-summaries/index.js
+
+      - name: Commit and push changes
+        run: |
+          bash ./scripts/commit-changes.sh "chore: cleanup old summaries (automated)" "src/data/summaries.json"

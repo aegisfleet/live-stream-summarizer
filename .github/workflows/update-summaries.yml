@@ -32,26 +32,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Fetch schedule
         if: ${{ github.event.inputs.skip_fetch_schedule != 'true' }}
         run: npm run fetch-schedule
-          
+
       - name: Check archives
         if: ${{ github.event.inputs.skip_check_archives != 'true' }}
         run: npm run check-archive
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          
+
       - name: Generate summaries
         run: |
           if [ -n "${{ github.event.inputs.videoId }}" ]; then
@@ -64,34 +64,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          # 現在の変更を一時保存
-          git stash push -m "Temporary stash before pull"
-          
-          # リモートの最新情報を取得
-          git fetch origin
-          
-          # 現在のブランチ名を取得
-          CURRENT_BRANCH=$(git branch --show-current)
-          
-          # リモートブランチとの差分を確認
-          if git rev-list HEAD...origin/$CURRENT_BRANCH --count | grep -q "^[1-9]"; then
-            echo "Remote has new commits, resetting to match remote"
-            git reset --hard origin/$CURRENT_BRANCH
-          fi
-          
-          # 一時保存した変更を復元
-          git stash pop || echo "No stashed changes to restore"
-          
-          git add --all
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: Update stream summaries"
-            git push
-          fi
+          bash ./scripts/commit-changes.sh "chore: Update stream summaries"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

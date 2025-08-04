@@ -165,6 +165,9 @@ graph TD
     # 特定の動画の要約を更新
     npm run summarize -- --videoId=xxxxxxxxxxx
 
+    # 古いサマリーデータの削除（14日より前のデータ）
+    npm run cleanup-summaries
+
     # 開発サーバーの起動
     npm start
     ```

@@ -6,6 +6,7 @@
     "fetch-schedule": "node scripts/fetch-schedule",
     "check-archive": "node scripts/check-archive",
     "summarize": "node scripts/summarize",
+    "cleanup-summaries": "node scripts/cleanup-summaries",
     "start": "node server.js"
   },
   "dependencies": {

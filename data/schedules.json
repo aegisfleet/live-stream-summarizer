@@ -222,15 +222,15 @@
     "date": "2025-08-05T19:00:00.000Z"
   },
   {
-    "videoId": "jE38bTJnmVE",
-    "videoUrl": "https://www.youtube.com/watch?v=jE38bTJnmVE",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-08-05T20:00:00.000Z"
-  },
-  {
     "videoId": "8avBH7Mn3Co",
     "videoUrl": "https://www.youtube.com/watch?v=8avBH7Mn3Co",
     "streamer": "戌神ころね 🥐",
+    "date": "2025-08-05T20:00:00.000Z"
+  },
+  {
+    "videoId": "jE38bTJnmVE",
+    "videoUrl": "https://www.youtube.com/watch?v=jE38bTJnmVE",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-08-05T20:00:00.000Z"
   },
   {
@@ -238,6 +238,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=PNTbHoaIyYU",
     "streamer": "白上フブキ 🌽",
     "date": "2025-08-05T21:00:00.000Z"
+  },
+  {
+    "videoId": "632TnPS2ZlY",
+    "videoUrl": "https://www.youtube.com/watch?v=632TnPS2ZlY",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-05T22:00:00.000Z"
   },
   {
     "videoId": "L8C9UzFJoK8",
@@ -363,6 +369,12 @@
     "videoId": "qylyrA4k3fs",
     "videoUrl": "https://www.youtube.com/watch?v=qylyrA4k3fs",
     "streamer": "輪堂千速",
+    "date": "2025-08-05T22:00:00.000Z"
+  },
+  {
+    "videoId": "0HYUaq_bCW0",
+    "videoUrl": "https://www.youtube.com/watch?v=0HYUaq_bCW0",
+    "streamer": "水宮枢",
     "date": "2025-08-05T22:00:00.000Z"
   }
 ]

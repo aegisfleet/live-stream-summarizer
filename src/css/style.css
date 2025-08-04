@@ -42,28 +42,48 @@ header {
 
 #site-description {
     background-color: #e0f7fa; /* Light blue background */
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 0 auto 0.5rem auto;
     max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
+    line-height: 1.4;
 }
 
 #site-description h2 {
     color: #007bff;
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem; /* 追加 */
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#site-description p {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+#site-description p:last-child {
+    margin-bottom: 0;
 }
 
 #site-description ul {
-    list-style: disc; /* 箇条書きのスタイルをディスクに設定 */
-    margin-left: 1.5rem; /* 左側にインデントを追加 */
+    list-style: disc;
+    margin: 0.75rem 0 0.75rem 1.5rem;
     padding-left: 0;
 }
 
 #site-description li {
-    margin-bottom: 0.5rem; /* 各リストアイテムの下に余白を追加 */
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#site-description li:last-child {
+    margin-bottom: 0;
+}
+
+#site-description br {
+    margin-bottom: 0.25rem;
 }
 
 .ogp-image-container {

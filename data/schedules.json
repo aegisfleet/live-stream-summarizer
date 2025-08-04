@@ -198,16 +198,28 @@
     "date": "2025-08-04T23:15:00.000Z"
   },
   {
+    "videoId": "h7wfZ2GWdUc",
+    "videoUrl": "https://www.youtube.com/watch?v=h7wfZ2GWdUc",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-05T06:00:00.000Z"
+  },
+  {
+    "videoId": "GSgfaaog8q8",
+    "videoUrl": "https://www.youtube.com/watch?v=GSgfaaog8q8",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-05T06:16:00.000Z"
+  },
+  {
     "videoId": "J3JqDlMgjZ8",
     "videoUrl": "https://www.youtube.com/watch?v=J3JqDlMgjZ8",
     "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-08-05T07:00:00.000Z"
+    "date": "2025-08-05T07:03:00.000Z"
   },
   {
     "videoId": "FBcWYj2L-Es",
     "videoUrl": "https://www.youtube.com/watch?v=FBcWYj2L-Es",
     "streamer": "博衣こより",
-    "date": "2025-08-05T07:25:00.000Z"
+    "date": "2025-08-05T07:19:00.000Z"
   },
   {
     "videoId": "T9J8t13tSJY",
@@ -258,10 +270,10 @@
     "date": "2025-08-05T22:00:00.000Z"
   },
   {
-    "videoId": "GSgfaaog8q8",
-    "videoUrl": "https://www.youtube.com/watch?v=GSgfaaog8q8",
+    "videoId": "sAvjOCTjbts",
+    "videoUrl": "https://www.youtube.com/watch?v=sAvjOCTjbts",
     "streamer": "赤井はあと ❤",
-    "date": "2025-08-06T06:15:00.000Z"
+    "date": "2025-08-06T07:15:00.000Z"
   },
   {
     "videoId": "AprC4Q_LNyk",
@@ -348,6 +360,12 @@
     "date": "2025-08-04T23:00:00.000Z"
   },
   {
+    "videoId": "6TQEyFUOX1Y",
+    "videoUrl": "https://www.youtube.com/watch?v=6TQEyFUOX1Y",
+    "streamer": "音乃瀬奏",
+    "date": "2025-08-05T08:00:00.000Z"
+  },
+  {
     "videoId": "jKP5Vk3jrIg",
     "videoUrl": "https://www.youtube.com/watch?v=jKP5Vk3jrIg",
     "streamer": "儒烏風亭らでん",
@@ -366,15 +384,15 @@
     "date": "2025-08-05T21:00:00.000Z"
   },
   {
-    "videoId": "qylyrA4k3fs",
-    "videoUrl": "https://www.youtube.com/watch?v=qylyrA4k3fs",
-    "streamer": "輪堂千速",
-    "date": "2025-08-05T22:00:00.000Z"
-  },
-  {
     "videoId": "0HYUaq_bCW0",
     "videoUrl": "https://www.youtube.com/watch?v=0HYUaq_bCW0",
     "streamer": "水宮枢",
+    "date": "2025-08-05T22:00:00.000Z"
+  },
+  {
+    "videoId": "qylyrA4k3fs",
+    "videoUrl": "https://www.youtube.com/watch?v=qylyrA4k3fs",
+    "streamer": "輪堂千速",
     "date": "2025-08-05T22:00:00.000Z"
   }
 ]

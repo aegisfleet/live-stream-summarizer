@@ -210,6 +210,26 @@
     "duration": 1001
   },
   {
+    "videoId": "6cmWOOnnXSo",
+    "videoUrl": "https://www.youtube.com/watch?v=6cmWOOnnXSo",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-08-04T07:30:00.000Z",
+    "title": "【 #朝ミオ 】もう８月か！おはみぉーん！！！",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6cmWOOnnXSo/mqdefault.jpg",
+    "endTime": "2025-08-03T23:35:40Z",
+    "duration": 3879
+  },
+  {
+    "videoId": "_uPITcy8ElM",
+    "videoUrl": "https://www.youtube.com/watch?v=_uPITcy8ElM",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-04T07:32:00.000Z",
+    "title": "【🎤】唸るぜ…幻の朝カラオケ ※アーカイブはメン限【ホロライブ/ロボ子さん】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_uPITcy8ElM/mqdefault.jpg",
+    "endTime": "2025-08-03T23:44:37Z",
+    "duration": 4274
+  },
+  {
     "videoId": "V23UkbNgQWg",
     "videoUrl": "https://www.youtube.com/watch?v=V23UkbNgQWg",
     "streamer": "輪堂千速",
@@ -258,5 +278,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/2pC1VsK8AMk/mqdefault.jpg",
     "endTime": "2025-08-03T14:07:07Z",
     "duration": 3986
+  },
+  {
+    "videoId": "i0XuQ1Yb1AE",
+    "videoUrl": "https://www.youtube.com/watch?v=i0XuQ1Yb1AE",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-04T10:00:00.000Z",
+    "title": "【らでん自習室】8月4日10:00~11:30 【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/i0XuQ1Yb1AE/mqdefault.jpg",
+    "endTime": "2025-08-04T02:41:21Z",
+    "duration": 5998
   }
 ]

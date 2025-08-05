@@ -140,6 +140,16 @@
     "duration": 886
   },
   {
+    "videoId": "FBcWYj2L-Es",
+    "videoUrl": "https://www.youtube.com/watch?v=FBcWYj2L-Es",
+    "streamer": "博衣こより",
+    "date": "2025-08-05T07:19:00.000Z",
+    "title": "【 #朝こよ 】8月最初の火曜日の朝も！朝こよ～～～！☀ #244 【博衣こより/hololive】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/FBcWYj2L-Es/mqdefault.jpg",
+    "endTime": "2025-08-04T23:20:20Z",
+    "duration": 3663
+  },
+  {
     "videoId": "i0XuQ1Yb1AE",
     "videoUrl": "https://www.youtube.com/watch?v=i0XuQ1Yb1AE",
     "streamer": "儒烏風亭らでん",
@@ -178,5 +188,25 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/VU-xzkLSvmI/mqdefault.jpg",
     "endTime": "2025-08-04T14:11:22Z",
     "duration": 4224
+  },
+  {
+    "videoId": "6TQEyFUOX1Y",
+    "videoUrl": "https://www.youtube.com/watch?v=6TQEyFUOX1Y",
+    "streamer": "音乃瀬奏",
+    "date": "2025-08-05T08:00:00.000Z",
+    "title": "【 縦型歌枠 】ゲリラをやりたがっている【音乃瀬奏】#hololiveDEV_IS #ReGLOSS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6TQEyFUOX1Y/mqdefault.jpg",
+    "endTime": "2025-08-05T00:08:12Z",
+    "duration": 4085
+  },
+  {
+    "videoId": "jKP5Vk3jrIg",
+    "videoUrl": "https://www.youtube.com/watch?v=jKP5Vk3jrIg",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-05T10:00:00.000Z",
+    "title": "【らでん自習室】8月5日10:00~11:30 【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/jKP5Vk3jrIg/mqdefault.jpg",
+    "endTime": "2025-08-05T02:43:55Z",
+    "duration": 6179
   }
 ]

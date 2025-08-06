@@ -258,16 +258,16 @@
     "date": "2025-08-06T12:01:00.000Z"
   },
   {
+    "videoId": "JC2d3h6wPHE",
+    "videoUrl": "https://www.youtube.com/watch?v=JC2d3h6wPHE",
+    "streamer": "風真いろは",
+    "date": "2025-08-06T13:01:00.000Z"
+  },
+  {
     "videoId": "e7GUQn0XhPY",
     "videoUrl": "https://www.youtube.com/watch?v=e7GUQn0XhPY",
     "streamer": "ホロライブ",
     "date": "2025-08-06T18:00:00.000Z"
-  },
-  {
-    "videoId": "PUaPSb3awvI",
-    "videoUrl": "https://www.youtube.com/watch?v=PUaPSb3awvI",
-    "streamer": "風真いろは",
-    "date": "2025-08-06T19:00:00.000Z"
   },
   {
     "videoId": "AprC4Q_LNyk",
@@ -304,6 +304,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=ym0FabHu9bs",
     "streamer": "赤井はあと ❤",
     "date": "2025-08-06T23:00:00.000Z"
+  },
+  {
+    "videoId": "JktIKeTlr_g",
+    "videoUrl": "https://www.youtube.com/watch?v=JktIKeTlr_g",
+    "streamer": "博衣こより",
+    "date": "2025-08-07T19:00:00.000Z"
   },
   {
     "videoId": "6TQEyFUOX1Y",

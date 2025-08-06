@@ -264,6 +264,12 @@
     "date": "2025-08-06T13:01:00.000Z"
   },
   {
+    "videoId": "lAMDgQFBL1w",
+    "videoUrl": "https://www.youtube.com/watch?v=lAMDgQFBL1w",
+    "streamer": "風真いろは",
+    "date": "2025-08-06T17:01:00.000Z"
+  },
+  {
     "videoId": "e7GUQn0XhPY",
     "videoUrl": "https://www.youtube.com/watch?v=e7GUQn0XhPY",
     "streamer": "ホロライブ",
@@ -282,9 +288,9 @@
     "date": "2025-08-06T20:00:00.000Z"
   },
   {
-    "videoId": "1H5NrejJuPQ",
-    "videoUrl": "https://www.youtube.com/watch?v=1H5NrejJuPQ",
-    "streamer": "猫又おかゆ 🍙",
+    "videoId": "tW92KO2jdFU",
+    "videoUrl": "https://www.youtube.com/watch?v=tW92KO2jdFU",
+    "streamer": "大空スバル 🚑",
     "date": "2025-08-06T22:00:00.000Z"
   },
   {
@@ -294,9 +300,21 @@
     "date": "2025-08-06T22:00:00.000Z"
   },
   {
-    "videoId": "tW92KO2jdFU",
-    "videoUrl": "https://www.youtube.com/watch?v=tW92KO2jdFU",
-    "streamer": "大空スバル 🚑",
+    "videoId": "CpczRlG3tcY",
+    "videoUrl": "https://www.youtube.com/watch?v=CpczRlG3tcY",
+    "streamer": "ときのそら 🐻",
+    "date": "2025-08-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "ClT2WHd_VpY",
+    "videoUrl": "https://www.youtube.com/watch?v=ClT2WHd_VpY",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-08-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "1H5NrejJuPQ",
+    "videoUrl": "https://www.youtube.com/watch?v=1H5NrejJuPQ",
+    "streamer": "猫又おかゆ 🍙",
     "date": "2025-08-06T22:00:00.000Z"
   },
   {
@@ -304,6 +322,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=ym0FabHu9bs",
     "streamer": "赤井はあと ❤",
     "date": "2025-08-06T23:00:00.000Z"
+  },
+  {
+    "videoId": "DS0guZrrjzA",
+    "videoUrl": "https://www.youtube.com/watch?v=DS0guZrrjzA",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-07T06:15:00.000Z"
   },
   {
     "videoId": "JktIKeTlr_g",
@@ -412,6 +436,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=--6Gh3XBoIA",
     "streamer": "水宮枢",
     "date": "2025-08-06T10:59:00.000Z"
+  },
+  {
+    "videoId": "_qWDP9GXKMg",
+    "videoUrl": "https://www.youtube.com/watch?v=_qWDP9GXKMg",
+    "streamer": "轟はじめ",
+    "date": "2025-08-06T17:00:00.000Z"
   },
   {
     "videoId": "VnkJUIgOyL4",

@@ -240,12 +240,6 @@
     "date": "2025-08-06T07:00:00.000Z"
   },
   {
-    "videoId": "sAvjOCTjbts",
-    "videoUrl": "https://www.youtube.com/watch?v=sAvjOCTjbts",
-    "streamer": "赤井はあと ❤",
-    "date": "2025-08-06T07:16:00.000Z"
-  },
-  {
     "videoId": "zMt-bYSNkw8",
     "videoUrl": "https://www.youtube.com/watch?v=zMt-bYSNkw8",
     "streamer": "赤井はあと ❤",
@@ -261,18 +255,24 @@
     "videoId": "_a749A2MAVs",
     "videoUrl": "https://www.youtube.com/watch?v=_a749A2MAVs",
     "streamer": "博衣こより",
-    "date": "2025-08-06T12:00:00.000Z"
+    "date": "2025-08-06T12:01:00.000Z"
   },
   {
-    "videoId": "AprC4Q_LNyk",
-    "videoUrl": "https://www.youtube.com/watch?v=AprC4Q_LNyk",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-08-06T19:00:00.000Z"
+    "videoId": "e7GUQn0XhPY",
+    "videoUrl": "https://www.youtube.com/watch?v=e7GUQn0XhPY",
+    "streamer": "ホロライブ",
+    "date": "2025-08-06T18:00:00.000Z"
   },
   {
     "videoId": "PUaPSb3awvI",
     "videoUrl": "https://www.youtube.com/watch?v=PUaPSb3awvI",
     "streamer": "風真いろは",
+    "date": "2025-08-06T19:00:00.000Z"
+  },
+  {
+    "videoId": "AprC4Q_LNyk",
+    "videoUrl": "https://www.youtube.com/watch?v=AprC4Q_LNyk",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-08-06T19:00:00.000Z"
   },
   {
@@ -298,6 +298,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=tW92KO2jdFU",
     "streamer": "大空スバル 🚑",
     "date": "2025-08-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "ym0FabHu9bs",
+    "videoUrl": "https://www.youtube.com/watch?v=ym0FabHu9bs",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-06T23:00:00.000Z"
   },
   {
     "videoId": "6TQEyFUOX1Y",
@@ -393,6 +399,18 @@
     "videoId": "zc9M5326qRk",
     "videoUrl": "https://www.youtube.com/watch?v=zc9M5326qRk",
     "streamer": "儒烏風亭らでん",
-    "date": "2025-08-06T10:00:00.000Z"
+    "date": "2025-08-06T10:01:00.000Z"
+  },
+  {
+    "videoId": "--6Gh3XBoIA",
+    "videoUrl": "https://www.youtube.com/watch?v=--6Gh3XBoIA",
+    "streamer": "水宮枢",
+    "date": "2025-08-06T10:59:00.000Z"
+  },
+  {
+    "videoId": "VnkJUIgOyL4",
+    "videoUrl": "https://www.youtube.com/watch?v=VnkJUIgOyL4",
+    "streamer": "轟はじめ",
+    "date": "2025-08-06T22:00:00.000Z"
   }
 ]

@@ -300,6 +300,12 @@
     "date": "2025-08-08T21:00:00.000Z"
   },
   {
+    "videoId": "M3pO5zR1kws",
+    "videoUrl": "https://www.youtube.com/watch?v=M3pO5zR1kws",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-08T22:00:00.000Z"
+  },
+  {
     "videoId": "qsd68Vk4FUA",
     "videoUrl": "https://www.youtube.com/watch?v=qsd68Vk4FUA",
     "streamer": "猫又おかゆ 🍙",
@@ -402,6 +408,12 @@
     "date": "2025-08-08T10:00:00.000Z"
   },
   {
+    "videoId": "EZIVdplaV98",
+    "videoUrl": "https://www.youtube.com/watch?v=EZIVdplaV98",
+    "streamer": "水宮枢",
+    "date": "2025-08-08T12:00:00.000Z"
+  },
+  {
     "videoId": "iOVk_XuiK_g",
     "videoUrl": "https://www.youtube.com/watch?v=iOVk_XuiK_g",
     "streamer": "FLOW GLOW",
@@ -414,15 +426,15 @@
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "QiipCDMT8M8",
-    "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
-    "streamer": "一条莉々華",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "TlHyhYhZSS8",
     "videoUrl": "https://www.youtube.com/watch?v=TlHyhYhZSS8",
     "streamer": "虎金妃笑虎",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "QiipCDMT8M8",
+    "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
+    "streamer": "一条莉々華",
     "date": "2025-08-08T19:00:00.000Z"
   }
 ]

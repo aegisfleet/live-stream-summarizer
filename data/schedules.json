@@ -186,6 +186,12 @@
     "date": "2025-08-07T07:00:00.000Z"
   },
   {
+    "videoId": "aDL44MJrTm4",
+    "videoUrl": "https://www.youtube.com/watch?v=aDL44MJrTm4",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-08-07T12:00:00.000Z"
+  },
+  {
     "videoId": "3SRNeHe4F5M",
     "videoUrl": "https://www.youtube.com/watch?v=3SRNeHe4F5M",
     "streamer": "博衣こより",
@@ -240,15 +246,15 @@
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "Fjpvv-AZptA",
-    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
-    "streamer": "雪花ラミィ",
-    "date": "2025-08-07T22:00:00.000Z"
-  },
-  {
     "videoId": "dlgD7JG8EUE",
     "videoUrl": "https://www.youtube.com/watch?v=dlgD7JG8EUE",
     "streamer": "獅白ぼたん",
+    "date": "2025-08-07T22:00:00.000Z"
+  },
+  {
+    "videoId": "Fjpvv-AZptA",
+    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
+    "streamer": "雪花ラミィ",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
@@ -352,6 +358,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=3Dx5KV_pLcU",
     "streamer": "儒烏風亭らでん",
     "date": "2025-08-06T23:00:00.000Z"
+  },
+  {
+    "videoId": "97hLiThzkuM",
+    "videoUrl": "https://www.youtube.com/watch?v=97hLiThzkuM",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-07T10:01:00.000Z"
   },
   {
     "videoId": "Kf_1ULSdf7w",

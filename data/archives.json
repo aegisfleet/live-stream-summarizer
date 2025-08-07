@@ -160,14 +160,84 @@
     "duration": 767
   },
   {
+    "videoId": "HRAYhXrzXL8",
+    "videoUrl": "https://www.youtube.com/watch?v=HRAYhXrzXL8",
+    "streamer": "AZKi ⚒",
+    "date": "2025-08-07T19:01:00.000Z",
+    "title": "【#AZKi降臨祭】#ホロアース のセカイにAZKiがやってきた！【ホロライブ / AZKi】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/HRAYhXrzXL8/mqdefault.jpg",
+    "endTime": "2025-08-07T11:56:14Z",
+    "duration": 6889
+  },
+  {
     "videoId": "JktIKeTlr_g",
     "videoUrl": "https://www.youtube.com/watch?v=JktIKeTlr_g",
     "streamer": "博衣こより",
     "date": "2025-08-07T19:06:00.000Z",
     "title": "【対談コラボ】#ディスコードショッキング ～今月のゲスト：石神のぞみ様～【博衣こより/ホロライブ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/JktIKeTlr_g/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JktIKeTlr_g/mqdefault.jpg",
     "endTime": "2025-08-07T11:08:54Z",
-    "duration": 3753
+    "duration": 3749
+  },
+  {
+    "videoId": "BNDEHLRNTKY",
+    "videoUrl": "https://www.youtube.com/watch?v=BNDEHLRNTKY",
+    "streamer": "ホロライブ",
+    "date": "2025-08-07T19:59:00.000Z",
+    "title": "【#ホロカ新情報】新スターターデッキ＆新ブースターパック、8月イベントの最新情報をお届けします✨️【春先のどか/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/BNDEHLRNTKY/mqdefault.jpg",
+    "endTime": "2025-08-07T11:57:41Z",
+    "duration": 3475
+  },
+  {
+    "videoId": "5rN_ewW0asQ",
+    "videoUrl": "https://www.youtube.com/watch?v=5rN_ewW0asQ",
+    "streamer": "大空スバル 🚑",
+    "date": "2025-08-07T20:01:00.000Z",
+    "title": "【#スバころ】スーパードンキー１時間大並走やるしゅばあああああああああああああ！【ホロライブ/大空スバル】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5rN_ewW0asQ/mqdefault.jpg",
+    "endTime": "2025-08-07T12:20:44Z",
+    "duration": 4769
+  },
+  {
+    "videoId": "L-fPTXaxcjU",
+    "videoUrl": "https://www.youtube.com/watch?v=L-fPTXaxcjU",
+    "streamer": "戌神ころね 🥐",
+    "date": "2025-08-07T20:01:00.000Z",
+    "title": "【ころね支店】#スバころ 「ドンキーコング」１時間並走バトル！！【戌神ころね/大空スバル】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/L-fPTXaxcjU/mqdefault.jpg",
+    "endTime": "2025-08-07T12:35:49Z",
+    "duration": 5648
+  },
+  {
+    "videoId": "gLkYjFHbx1M",
+    "videoUrl": "https://www.youtube.com/watch?v=gLkYjFHbx1M",
+    "streamer": "不知火フレア 🔥",
+    "date": "2025-08-07T21:01:00.000Z",
+    "title": "【#不知火フレア6周年】年に一度の凸待ち！重大告知もあるYO！【不知火フレア/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gLkYjFHbx1M/mqdefault.jpg",
+    "endTime": "2025-08-07T13:00:53Z",
+    "duration": 3562
+  },
+  {
+    "videoId": "gsaRChBYmuQ",
+    "videoUrl": "https://www.youtube.com/watch?v=gsaRChBYmuQ",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-07T21:50:00.000Z",
+    "title": "【同時視聴】Nintendo Indie World 2025.8.7を一緒に見よう！ぺこ！【ホロライブ/兎田ぺこら】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gsaRChBYmuQ/mqdefault.jpg",
+    "endTime": "2025-08-07T13:26:56Z",
+    "duration": 2186
+  },
+  {
+    "videoId": "1DBMg1dqfhM",
+    "videoUrl": "https://www.youtube.com/watch?v=1DBMg1dqfhM",
+    "streamer": "不知火フレア 🔥",
+    "date": "2025-08-07T22:00:00.000Z",
+    "title": "架空と本当/不知火フレア(official)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/1DBMg1dqfhM/mqdefault.jpg",
+    "endTime": "2025-08-07T13:06:07Z",
+    "duration": 154
   },
   {
     "videoId": "zc9M5326qRk",
@@ -215,7 +285,7 @@
     "streamer": "水宮枢",
     "date": "2025-08-07T18:00:00.000Z",
     "title": "【エスカレーター】異変をみつけるぞ！怖いの苦手！【水宮枢／ホロライブDEV_IS】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Kf_1ULSdf7w/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Kf_1ULSdf7w/mqdefault.jpg",
     "endTime": "2025-08-07T10:54:47Z",
     "duration": 6879
   }

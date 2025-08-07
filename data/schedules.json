@@ -282,12 +282,6 @@
     "date": "2025-08-07T19:59:00.000Z"
   },
   {
-    "videoId": "X9wv51SDq3c",
-    "videoUrl": "https://www.youtube.com/watch?v=X9wv51SDq3c",
-    "streamer": "博衣こより",
-    "date": "2025-08-07T20:00:00.000Z"
-  },
-  {
     "videoId": "5rN_ewW0asQ",
     "videoUrl": "https://www.youtube.com/watch?v=5rN_ewW0asQ",
     "streamer": "大空スバル 🚑",
@@ -306,27 +300,39 @@
     "date": "2025-08-07T20:04:00.000Z"
   },
   {
+    "videoId": "X9wv51SDq3c",
+    "videoUrl": "https://www.youtube.com/watch?v=X9wv51SDq3c",
+    "streamer": "博衣こより",
+    "date": "2025-08-07T20:12:00.000Z"
+  },
+  {
     "videoId": "gLkYjFHbx1M",
     "videoUrl": "https://www.youtube.com/watch?v=gLkYjFHbx1M",
     "streamer": "不知火フレア 🔥",
-    "date": "2025-08-07T21:00:00.000Z"
+    "date": "2025-08-07T21:01:00.000Z"
   },
   {
     "videoId": "yRlTBAwMras",
     "videoUrl": "https://www.youtube.com/watch?v=yRlTBAwMras",
     "streamer": "さくらみこ 🌸",
-    "date": "2025-08-07T21:00:00.000Z"
-  },
-  {
-    "videoId": "dlgD7JG8EUE",
-    "videoUrl": "https://www.youtube.com/watch?v=dlgD7JG8EUE",
-    "streamer": "獅白ぼたん",
-    "date": "2025-08-07T22:00:00.000Z"
+    "date": "2025-08-07T21:04:00.000Z"
   },
   {
     "videoId": "gsaRChBYmuQ",
     "videoUrl": "https://www.youtube.com/watch?v=gsaRChBYmuQ",
     "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-07T21:50:00.000Z"
+  },
+  {
+    "videoId": "e4hu2oRJSbk",
+    "videoUrl": "https://www.youtube.com/watch?v=e4hu2oRJSbk",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-08-07T21:59:00.000Z"
+  },
+  {
+    "videoId": "1DBMg1dqfhM",
+    "videoUrl": "https://www.youtube.com/watch?v=1DBMg1dqfhM",
+    "streamer": "不知火フレア 🔥",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
@@ -336,21 +342,27 @@
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "e4hu2oRJSbk",
-    "videoUrl": "https://www.youtube.com/watch?v=e4hu2oRJSbk",
-    "streamer": "白上フブキ 🌽",
+    "videoId": "nUtXazWx9I8",
+    "videoUrl": "https://www.youtube.com/watch?v=nUtXazWx9I8",
+    "streamer": "尾丸ポルカ",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "_w-bSetGrRQ",
-    "videoUrl": "https://www.youtube.com/watch?v=_w-bSetGrRQ",
-    "streamer": "ロボ子さん 🤖",
+    "videoId": "fppdtcui5OU",
+    "videoUrl": "https://www.youtube.com/watch?v=fppdtcui5OU",
+    "streamer": "大神ミオ 🌲",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "Fjpvv-AZptA",
-    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
-    "streamer": "雪花ラミィ",
+    "videoId": "1Z_ww2wYw9o",
+    "videoUrl": "https://www.youtube.com/watch?v=1Z_ww2wYw9o",
+    "streamer": "鷹嶺ルイ",
+    "date": "2025-08-07T22:00:00.000Z"
+  },
+  {
+    "videoId": "dlgD7JG8EUE",
+    "videoUrl": "https://www.youtube.com/watch?v=dlgD7JG8EUE",
+    "streamer": "獅白ぼたん",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
@@ -360,28 +372,52 @@
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
+    "videoId": "RV-uj9vrMMM",
+    "videoUrl": "https://www.youtube.com/watch?v=RV-uj9vrMMM",
+    "streamer": "風真いろは",
+    "date": "2025-08-07T22:01:00.000Z"
+  },
+  {
+    "videoId": "Fjpvv-AZptA",
+    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
+    "streamer": "雪花ラミィ",
+    "date": "2025-08-07T22:01:00.000Z"
+  },
+  {
     "videoId": "6j9GRI5liDo",
     "videoUrl": "https://www.youtube.com/watch?v=6j9GRI5liDo",
     "streamer": "大空スバル 🚑",
-    "date": "2025-08-07T22:00:00.000Z"
+    "date": "2025-08-07T22:05:00.000Z"
   },
   {
-    "videoId": "1DBMg1dqfhM",
-    "videoUrl": "https://www.youtube.com/watch?v=1DBMg1dqfhM",
-    "streamer": "不知火フレア 🔥",
-    "date": "2025-08-07T22:00:00.000Z"
+    "videoId": "_w-bSetGrRQ",
+    "videoUrl": "https://www.youtube.com/watch?v=_w-bSetGrRQ",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-07T22:11:00.000Z"
+  },
+  {
+    "videoId": "Nqv_UlmAojM",
+    "videoUrl": "https://www.youtube.com/watch?v=Nqv_UlmAojM",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-07T22:30:00.000Z"
   },
   {
     "videoId": "eNq_toN8n-c",
     "videoUrl": "https://www.youtube.com/watch?v=eNq_toN8n-c",
     "streamer": "癒月ちょこ 💋",
-    "date": "2025-08-07T23:00:00.000Z"
+    "date": "2025-08-07T23:06:00.000Z"
   },
   {
     "videoId": "sDuSWYecrp0",
     "videoUrl": "https://www.youtube.com/watch?v=sDuSWYecrp0",
     "streamer": "白銀ノエル ⚔",
     "date": "2025-08-07T23:30:00.000Z"
+  },
+  {
+    "videoId": "ULlpTbME8cA",
+    "videoUrl": "https://www.youtube.com/watch?v=ULlpTbME8cA",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-08-08T00:00:00.000Z"
   },
   {
     "videoId": "DS0guZrrjzA",
@@ -534,21 +570,51 @@
     "date": "2025-08-07T19:28:00.000Z"
   },
   {
-    "videoId": "lWodjN0ytJc",
-    "videoUrl": "https://www.youtube.com/watch?v=lWodjN0ytJc",
-    "streamer": "水宮枢",
-    "date": "2025-08-07T22:00:00.000Z"
+    "videoId": "i7XychFl2gI",
+    "videoUrl": "https://www.youtube.com/watch?v=i7XychFl2gI",
+    "streamer": "轟はじめ",
+    "date": "2025-08-07T20:15:00.000Z"
   },
   {
     "videoId": "ZR-S_5vWMuk",
     "videoUrl": "https://www.youtube.com/watch?v=ZR-S_5vWMuk",
     "streamer": "輪堂千速",
-    "date": "2025-08-07T22:00:00.000Z"
+    "date": "2025-08-07T22:01:00.000Z"
+  },
+  {
+    "videoId": "lWodjN0ytJc",
+    "videoUrl": "https://www.youtube.com/watch?v=lWodjN0ytJc",
+    "streamer": "水宮枢",
+    "date": "2025-08-07T22:01:00.000Z"
+  },
+  {
+    "videoId": "iJJT9WDy6uo",
+    "videoUrl": "https://www.youtube.com/watch?v=iJJT9WDy6uo",
+    "streamer": "虎金妃笑虎",
+    "date": "2025-08-07T22:34:00.000Z"
+  },
+  {
+    "videoId": "SvY4_MMfBdw",
+    "videoUrl": "https://www.youtube.com/watch?v=SvY4_MMfBdw",
+    "streamer": "響咲リオナ",
+    "date": "2025-08-07T22:58:00.000Z"
+  },
+  {
+    "videoId": "gKiQOGFtk1s",
+    "videoUrl": "https://www.youtube.com/watch?v=gKiQOGFtk1s",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-08T10:00:00.000Z"
   },
   {
     "videoId": "iOVk_XuiK_g",
     "videoUrl": "https://www.youtube.com/watch?v=iOVk_XuiK_g",
     "streamer": "FLOW GLOW",
     "date": "2025-08-08T17:00:00.000Z"
+  },
+  {
+    "videoId": "QiipCDMT8M8",
+    "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
+    "streamer": "一条莉々華",
+    "date": "2025-08-08T19:00:00.000Z"
   }
 ]

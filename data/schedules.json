@@ -201,12 +201,24 @@
     "videoId": "08gE-g_MZ78",
     "videoUrl": "https://www.youtube.com/watch?v=08gE-g_MZ78",
     "streamer": "ロボ子さん 🤖",
-    "date": "2025-08-07T16:00:00.000Z"
+    "date": "2025-08-07T16:04:00.000Z"
+  },
+  {
+    "videoId": "LKBpxQQakgU",
+    "videoUrl": "https://www.youtube.com/watch?v=LKBpxQQakgU",
+    "streamer": "ラプラス",
+    "date": "2025-08-07T17:00:00.000Z"
   },
   {
     "videoId": "HRAYhXrzXL8",
     "videoUrl": "https://www.youtube.com/watch?v=HRAYhXrzXL8",
     "streamer": "AZKi ⚒",
+    "date": "2025-08-07T19:00:00.000Z"
+  },
+  {
+    "videoId": "atYIiRQesCE",
+    "videoUrl": "https://www.youtube.com/watch?v=atYIiRQesCE",
+    "streamer": "尾丸ポルカ",
     "date": "2025-08-07T19:00:00.000Z"
   },
   {
@@ -234,6 +246,12 @@
     "date": "2025-08-07T20:00:00.000Z"
   },
   {
+    "videoId": "X9wv51SDq3c",
+    "videoUrl": "https://www.youtube.com/watch?v=X9wv51SDq3c",
+    "streamer": "博衣こより",
+    "date": "2025-08-07T20:00:00.000Z"
+  },
+  {
     "videoId": "gLkYjFHbx1M",
     "videoUrl": "https://www.youtube.com/watch?v=gLkYjFHbx1M",
     "streamer": "不知火フレア 🔥",
@@ -252,21 +270,27 @@
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
+    "videoId": "ASYas4SSCHM",
+    "videoUrl": "https://www.youtube.com/watch?v=ASYas4SSCHM",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-07T22:00:00.000Z"
+  },
+  {
     "videoId": "dlgD7JG8EUE",
     "videoUrl": "https://www.youtube.com/watch?v=dlgD7JG8EUE",
     "streamer": "獅白ぼたん",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "Fjpvv-AZptA",
-    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
-    "streamer": "雪花ラミィ",
+    "videoId": "_w-bSetGrRQ",
+    "videoUrl": "https://www.youtube.com/watch?v=_w-bSetGrRQ",
+    "streamer": "ロボ子さん 🤖",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
-    "videoId": "ASYas4SSCHM",
-    "videoUrl": "https://www.youtube.com/watch?v=ASYas4SSCHM",
-    "streamer": "角巻わため 🐏",
+    "videoId": "Fjpvv-AZptA",
+    "videoUrl": "https://www.youtube.com/watch?v=Fjpvv-AZptA",
+    "streamer": "雪花ラミィ",
     "date": "2025-08-07T22:00:00.000Z"
   },
   {
@@ -288,9 +312,21 @@
     "date": "2025-08-08T06:15:00.000Z"
   },
   {
+    "videoId": "rczX2ylCFNo",
+    "videoUrl": "https://www.youtube.com/watch?v=rczX2ylCFNo",
+    "streamer": "博衣こより",
+    "date": "2025-08-08T12:00:00.000Z"
+  },
+  {
     "videoId": "iMT9XEoaG-4",
     "videoUrl": "https://www.youtube.com/watch?v=iMT9XEoaG-4",
     "streamer": "博衣こより",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "yIIhGCPeTlU",
+    "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-08-08T19:00:00.000Z"
   },
   {
@@ -372,6 +408,12 @@
     "date": "2025-08-07T10:01:00.000Z"
   },
   {
+    "videoId": "Sz2CuGMWtoU",
+    "videoUrl": "https://www.youtube.com/watch?v=Sz2CuGMWtoU",
+    "streamer": "轟はじめ",
+    "date": "2025-08-07T17:00:00.000Z"
+  },
+  {
     "videoId": "Kf_1ULSdf7w",
     "videoUrl": "https://www.youtube.com/watch?v=Kf_1ULSdf7w",
     "streamer": "水宮枢",
@@ -388,5 +430,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=lWodjN0ytJc",
     "streamer": "水宮枢",
     "date": "2025-08-07T22:00:00.000Z"
+  },
+  {
+    "videoId": "iOVk_XuiK_g",
+    "videoUrl": "https://www.youtube.com/watch?v=iOVk_XuiK_g",
+    "streamer": "FLOW GLOW",
+    "date": "2025-08-08T17:00:00.000Z"
   }
 ]

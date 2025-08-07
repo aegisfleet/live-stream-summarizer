@@ -246,6 +246,18 @@
     "date": "2025-08-08T00:04:00.000Z"
   },
   {
+    "videoId": "IZWkRzfVmAY",
+    "videoUrl": "https://www.youtube.com/watch?v=IZWkRzfVmAY",
+    "streamer": "雪花ラミィ",
+    "date": "2025-08-08T06:00:00.000Z"
+  },
+  {
+    "videoId": "m-HJ0CU2XxM",
+    "videoUrl": "https://www.youtube.com/watch?v=m-HJ0CU2XxM",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-08T06:01:00.000Z"
+  },
+  {
     "videoId": "DS0guZrrjzA",
     "videoUrl": "https://www.youtube.com/watch?v=DS0guZrrjzA",
     "streamer": "赤井はあと ❤",
@@ -255,7 +267,19 @@
     "videoId": "KAadiaTBJaA",
     "videoUrl": "https://www.youtube.com/watch?v=KAadiaTBJaA",
     "streamer": "兎田ぺこら 👯",
-    "date": "2025-08-08T07:00:00.000Z"
+    "date": "2025-08-08T07:01:00.000Z"
+  },
+  {
+    "videoId": "oMfW-zaxdYI",
+    "videoUrl": "https://www.youtube.com/watch?v=oMfW-zaxdYI",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-08T07:19:00.000Z"
+  },
+  {
+    "videoId": "bVJelT43VVE",
+    "videoUrl": "https://www.youtube.com/watch?v=bVJelT43VVE",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-08-08T07:54:00.000Z"
   },
   {
     "videoId": "rczX2ylCFNo",
@@ -270,15 +294,15 @@
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "yIIhGCPeTlU",
-    "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "iMT9XEoaG-4",
     "videoUrl": "https://www.youtube.com/watch?v=iMT9XEoaG-4",
     "streamer": "博衣こより",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "yIIhGCPeTlU",
+    "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-08-08T19:00:00.000Z"
   },
   {
@@ -426,15 +450,15 @@
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "TlHyhYhZSS8",
-    "videoUrl": "https://www.youtube.com/watch?v=TlHyhYhZSS8",
-    "streamer": "虎金妃笑虎",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "QiipCDMT8M8",
     "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
     "streamer": "一条莉々華",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "TlHyhYhZSS8",
+    "videoUrl": "https://www.youtube.com/watch?v=TlHyhYhZSS8",
+    "streamer": "虎金妃笑虎",
     "date": "2025-08-08T19:00:00.000Z"
   }
 ]

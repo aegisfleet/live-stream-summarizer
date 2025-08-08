@@ -270,16 +270,16 @@
     "date": "2025-08-08T07:01:00.000Z"
   },
   {
-    "videoId": "oMfW-zaxdYI",
-    "videoUrl": "https://www.youtube.com/watch?v=oMfW-zaxdYI",
-    "streamer": "赤井はあと ❤",
-    "date": "2025-08-08T07:19:00.000Z"
-  },
-  {
     "videoId": "bVJelT43VVE",
     "videoUrl": "https://www.youtube.com/watch?v=bVJelT43VVE",
     "streamer": "アキロゼ 🍎",
     "date": "2025-08-08T07:54:00.000Z"
+  },
+  {
+    "videoId": "H865XlidT-c",
+    "videoUrl": "https://www.youtube.com/watch?v=H865XlidT-c",
+    "streamer": "風真いろは",
+    "date": "2025-08-08T12:00:00.000Z"
   },
   {
     "videoId": "rczX2ylCFNo",
@@ -294,15 +294,15 @@
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "iMT9XEoaG-4",
-    "videoUrl": "https://www.youtube.com/watch?v=iMT9XEoaG-4",
-    "streamer": "博衣こより",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "yIIhGCPeTlU",
     "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
     "streamer": "さくらみこ 🌸",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "iMT9XEoaG-4",
+    "videoUrl": "https://www.youtube.com/watch?v=iMT9XEoaG-4",
+    "streamer": "博衣こより",
     "date": "2025-08-08T19:00:00.000Z"
   },
   {
@@ -310,6 +310,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=I4FbpwMb78U",
     "streamer": "常闇トワ 👾",
     "date": "2025-08-08T20:00:00.000Z"
+  },
+  {
+    "videoId": "xIA3L36uiJ8",
+    "videoUrl": "https://www.youtube.com/watch?v=xIA3L36uiJ8",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-08-08T20:30:00.000Z"
   },
   {
     "videoId": "7DV6xLfTehY",
@@ -429,13 +435,13 @@
     "videoId": "gKiQOGFtk1s",
     "videoUrl": "https://www.youtube.com/watch?v=gKiQOGFtk1s",
     "streamer": "儒烏風亭らでん",
-    "date": "2025-08-08T10:00:00.000Z"
+    "date": "2025-08-08T09:59:00.000Z"
   },
   {
     "videoId": "EZIVdplaV98",
     "videoUrl": "https://www.youtube.com/watch?v=EZIVdplaV98",
     "streamer": "水宮枢",
-    "date": "2025-08-08T12:00:00.000Z"
+    "date": "2025-08-08T12:04:00.000Z"
   },
   {
     "videoId": "iOVk_XuiK_g",
@@ -450,15 +456,15 @@
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "QiipCDMT8M8",
-    "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
-    "streamer": "一条莉々華",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "TlHyhYhZSS8",
     "videoUrl": "https://www.youtube.com/watch?v=TlHyhYhZSS8",
     "streamer": "虎金妃笑虎",
+    "date": "2025-08-08T18:00:00.000Z"
+  },
+  {
+    "videoId": "QiipCDMT8M8",
+    "videoUrl": "https://www.youtube.com/watch?v=QiipCDMT8M8",
+    "streamer": "一条莉々華",
     "date": "2025-08-08T19:00:00.000Z"
   }
 ]

@@ -288,21 +288,27 @@
     "date": "2025-08-08T12:00:00.000Z"
   },
   {
+    "videoId": "gRzFgJLZ6Rc",
+    "videoUrl": "https://www.youtube.com/watch?v=gRzFgJLZ6Rc",
+    "streamer": "夏色まつり 🏮",
+    "date": "2025-08-08T15:00:00.000Z"
+  },
+  {
     "videoId": "b0jS0Ey-dok",
     "videoUrl": "https://www.youtube.com/watch?v=b0jS0Ey-dok",
     "streamer": "姫森ルーナ 🍬",
     "date": "2025-08-08T18:00:00.000Z"
   },
   {
-    "videoId": "yIIhGCPeTlU",
-    "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-08-08T19:00:00.000Z"
-  },
-  {
     "videoId": "iMT9XEoaG-4",
     "videoUrl": "https://www.youtube.com/watch?v=iMT9XEoaG-4",
     "streamer": "博衣こより",
+    "date": "2025-08-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "yIIhGCPeTlU",
+    "videoUrl": "https://www.youtube.com/watch?v=yIIhGCPeTlU",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-08-08T19:00:00.000Z"
   },
   {
@@ -330,15 +336,21 @@
     "date": "2025-08-08T21:00:00.000Z"
   },
   {
-    "videoId": "M3pO5zR1kws",
-    "videoUrl": "https://www.youtube.com/watch?v=M3pO5zR1kws",
-    "streamer": "角巻わため 🐏",
-    "date": "2025-08-08T22:00:00.000Z"
-  },
-  {
     "videoId": "qsd68Vk4FUA",
     "videoUrl": "https://www.youtube.com/watch?v=qsd68Vk4FUA",
     "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-08T22:00:00.000Z"
+  },
+  {
+    "videoId": "aazpLv6x8VA",
+    "videoUrl": "https://www.youtube.com/watch?v=aazpLv6x8VA",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-08T22:00:00.000Z"
+  },
+  {
+    "videoId": "M3pO5zR1kws",
+    "videoUrl": "https://www.youtube.com/watch?v=M3pO5zR1kws",
+    "streamer": "角巻わため 🐏",
     "date": "2025-08-08T22:00:00.000Z"
   },
   {
@@ -346,6 +358,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=uIpu4B0-U-4",
     "streamer": "博衣こより",
     "date": "2025-08-09T11:00:00.000Z"
+  },
+  {
+    "videoId": "Lhf90VtrTO4",
+    "videoUrl": "https://www.youtube.com/watch?v=Lhf90VtrTO4",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-09T22:00:00.000Z"
   },
   {
     "videoId": "TLw3Taw5jxI",
@@ -450,15 +468,15 @@
     "date": "2025-08-08T17:00:00.000Z"
   },
   {
-    "videoId": "FwMZPxzt4NA",
-    "videoUrl": "https://www.youtube.com/watch?v=FwMZPxzt4NA",
-    "streamer": "綺々羅々ヴィヴィ",
-    "date": "2025-08-08T18:00:00.000Z"
-  },
-  {
     "videoId": "TlHyhYhZSS8",
     "videoUrl": "https://www.youtube.com/watch?v=TlHyhYhZSS8",
     "streamer": "虎金妃笑虎",
+    "date": "2025-08-08T18:00:00.000Z"
+  },
+  {
+    "videoId": "FwMZPxzt4NA",
+    "videoUrl": "https://www.youtube.com/watch?v=FwMZPxzt4NA",
+    "streamer": "綺々羅々ヴィヴィ",
     "date": "2025-08-08T18:00:00.000Z"
   },
   {

@@ -252,21 +252,27 @@
     "date": "2025-08-10T07:00:00.000Z"
   },
   {
+    "videoId": "bc0eK4ItFeM",
+    "videoUrl": "https://www.youtube.com/watch?v=bc0eK4ItFeM",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-08-10T10:00:00.000Z"
+  },
+  {
     "videoId": "IVhVFAsuBRI",
     "videoUrl": "https://www.youtube.com/watch?v=IVhVFAsuBRI",
     "streamer": "博衣こより",
     "date": "2025-08-10T11:00:00.000Z"
   },
   {
-    "videoId": "9USAQUn0YyQ",
-    "videoUrl": "https://www.youtube.com/watch?v=9USAQUn0YyQ",
-    "streamer": "戌神ころね 🥐",
-    "date": "2025-08-10T13:00:00.000Z"
-  },
-  {
     "videoId": "bxujZqlHx_4",
     "videoUrl": "https://www.youtube.com/watch?v=bxujZqlHx_4",
     "streamer": "大空スバル 🚑",
+    "date": "2025-08-10T13:00:00.000Z"
+  },
+  {
+    "videoId": "9USAQUn0YyQ",
+    "videoUrl": "https://www.youtube.com/watch?v=9USAQUn0YyQ",
+    "streamer": "戌神ころね 🥐",
     "date": "2025-08-10T13:00:00.000Z"
   },
   {
@@ -286,6 +292,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=5ZZziwlJfXM",
     "streamer": "鷹嶺ルイ",
     "date": "2025-08-10T16:00:00.000Z"
+  },
+  {
+    "videoId": "2cgodMGQbFo",
+    "videoUrl": "https://www.youtube.com/watch?v=2cgodMGQbFo",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-10T18:00:00.000Z"
+  },
+  {
+    "videoId": "v2rkdKftBBk",
+    "videoUrl": "https://www.youtube.com/watch?v=v2rkdKftBBk",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-10T19:00:00.000Z"
   },
   {
     "videoId": "vTsOdumJEOY",
@@ -312,6 +330,12 @@
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
+    "videoId": "Vr--yU2IxLk",
+    "videoUrl": "https://www.youtube.com/watch?v=Vr--yU2IxLk",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-10T22:00:00.000Z"
+  },
+  {
     "videoId": "sPVnvaBjQI0",
     "videoUrl": "https://www.youtube.com/watch?v=sPVnvaBjQI0",
     "streamer": "赤井はあと ❤",
@@ -322,6 +346,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=zSyGu0kC4dc",
     "streamer": "ラプラス",
     "date": "2025-08-10T22:00:00.000Z"
+  },
+  {
+    "videoId": "Hlge-CX3vvo",
+    "videoUrl": "https://www.youtube.com/watch?v=Hlge-CX3vvo",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-10T23:00:00.000Z"
   },
   {
     "videoId": "dsmQOyOhy1w",
@@ -432,15 +462,15 @@
     "date": "2025-08-10T10:00:00.000Z"
   },
   {
-    "videoId": "UXS1oaP-e28",
-    "videoUrl": "https://www.youtube.com/watch?v=UXS1oaP-e28",
-    "streamer": "輪堂千速",
-    "date": "2025-08-10T13:00:00.000Z"
-  },
-  {
     "videoId": "xOVcvIYdxaM",
     "videoUrl": "https://www.youtube.com/watch?v=xOVcvIYdxaM",
     "streamer": "一条莉々華",
+    "date": "2025-08-10T13:00:00.000Z"
+  },
+  {
+    "videoId": "UXS1oaP-e28",
+    "videoUrl": "https://www.youtube.com/watch?v=UXS1oaP-e28",
+    "streamer": "輪堂千速",
     "date": "2025-08-10T13:00:00.000Z"
   },
   {

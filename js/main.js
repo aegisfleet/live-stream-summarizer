@@ -1,3 +1,11 @@
+function getBasePath() {
+    const repoName = 'live-stream-summarizer';
+    if (location.hostname.includes('github.io')) {
+        return `/${repoName}`;
+    }
+    return '';
+}
+
 class ArchiveManager {
     constructor() {
         this.archiveData = [];
@@ -652,8 +660,10 @@ class ArchiveManager {
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
         img.classList.add('clickable-thumbnail');
-        img.title = 'クリックして動画を再生';
-        img.addEventListener('click', () => openVideo());
+        img.title = '詳細ページへ';
+        img.addEventListener('click', () => {
+            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+        });
 
         // ブックマークアイコンを追加
         const bookmarkIcon = document.createElement('button');
@@ -680,8 +690,10 @@ class ArchiveManager {
         const title = document.createElement('h2');
         title.textContent = archive.title;
         title.classList.add('clickable-title');
-        title.title = 'クリックして動画を再生';
-        title.addEventListener('click', () => openVideo());
+        title.title = '詳細ページへ';
+        title.addEventListener('click', () => {
+            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+        });
         
         const dateElement = document.createElement('p');
         dateElement.className = 'archive-date';
@@ -856,7 +868,7 @@ class ArchiveManager {
         detailButton.title = '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
         });
         footer.appendChild(detailButton);
 

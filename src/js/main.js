@@ -822,7 +822,7 @@ class ArchiveManager {
         copyButton.title = 'タイトルとURLをコピー';
         copyButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `${window.location.origin}/pages/${archive.videoId}.html`;
+            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
             const copyText = `${archive.title}\n${shareUrl}`;
             navigator.clipboard.writeText(copyText).then(() => {
                 copyButton.textContent = 'コピー完了！';
@@ -844,7 +844,7 @@ class ArchiveManager {
         shareButton.title = 'この配信を𝕏で共有する';
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `${window.location.origin}/pages/${archive.videoId}.html`;
+            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
             const shareText = `${archive.title}\n${shareUrl}`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
@@ -856,7 +856,7 @@ class ArchiveManager {
         detailButton.title = '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `/pages/${archive.videoId}.html`;
+            window.location.href = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
         });
         footer.appendChild(detailButton);
 

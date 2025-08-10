@@ -88,9 +88,16 @@ class DetailPageManager {
     }
 
     createPlayer() {
+        const playerElement = document.getElementById('youtube-player');
+        if (!playerElement) return;
+
+        // 親要素の幅に基づいて、アスペクト比16:9でプレーヤーの高さを動的に計算します。
+        const playerWidth = playerElement.parentElement.clientWidth || 1000;
+        const playerHeight = playerWidth * (9 / 16);
+
         this.player = new YT.Player('youtube-player', {
-            height: '600',
-            width: '1000',
+            height: String(playerHeight),
+            width: '100%',
             videoId: this.archiveData.videoId,
             playerVars: {
                 'playsinline': 1,

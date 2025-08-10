@@ -680,20 +680,28 @@ footer {
 }
 
 .detail-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    align-items: start;
 }
 
-.detail-thumbnail {
+.detail-video {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-.detail-thumbnail img {
-    max-width: 100%;
-    height: auto;
+.youtube-embed {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.youtube-embed iframe {
+    width: 100%;
+    height: 600px;
     border-radius: 8px;
+    border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -815,7 +823,6 @@ footer {
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .detail-content {
-        grid-template-columns: 1fr;
         gap: 1rem;
     }
     
@@ -836,5 +843,13 @@ footer {
     
     .share-buttons {
         justify-content: center;
+    }
+    
+    .youtube-embed iframe {
+        height: 250px;
+    }
+    
+    .detail-video {
+        margin-bottom: 2rem;
     }
 }

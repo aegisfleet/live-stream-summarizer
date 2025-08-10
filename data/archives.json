@@ -160,6 +160,26 @@
     "duration": 5521
   },
   {
+    "videoId": "Z1LLhFaEwSo",
+    "videoUrl": "https://www.youtube.com/watch?v=Z1LLhFaEwSo",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-10T16:00:00.000Z",
+    "title": "【歌枠 】夏の歌枠リベンジTIME✨ 【ホロライブ/ ロボ子さん】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Z1LLhFaEwSo/mqdefault.jpg",
+    "endTime": "2025-08-10T08:51:48Z",
+    "duration": 6686
+  },
+  {
+    "videoId": "ItC1JHDeJlA",
+    "videoUrl": "https://www.youtube.com/watch?v=ItC1JHDeJlA",
+    "streamer": "夏色まつり 🏮",
+    "date": "2025-08-10T17:59:00.000Z",
+    "title": "【 シャドバWB/Shadowverse 】ランクCになるまで終わらない！！【ホロライブ/夏色まつり】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ItC1JHDeJlA/mqdefault_live.jpg",
+    "endTime": "2025-08-10T11:04:23Z",
+    "duration": 7501
+  },
+  {
     "videoId": "dsmQOyOhy1w",
     "videoUrl": "https://www.youtube.com/watch?v=dsmQOyOhy1w",
     "streamer": "儒烏風亭らでん",
@@ -258,5 +278,35 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/H0xSUeyCFNM/mqdefault.jpg",
     "endTime": "2025-08-10T02:47:08Z",
     "duration": 6408
+  },
+  {
+    "videoId": "GROO1u6YzwU",
+    "videoUrl": "https://www.youtube.com/watch?v=GROO1u6YzwU",
+    "streamer": "虎金妃笑虎",
+    "date": "2025-08-10T17:30:00.000Z",
+    "title": "【歌枠】セクシー曲縛りでリスナーを魅了！【虎金妃笑虎】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GROO1u6YzwU/mqdefault.jpg",
+    "endTime": "2025-08-10T09:32:39Z",
+    "duration": 3750
+  },
+  {
+    "videoId": "aRtdg6N_AEw",
+    "videoUrl": "https://www.youtube.com/watch?v=aRtdg6N_AEw",
+    "streamer": "音乃瀬奏",
+    "date": "2025-08-10T18:00:00.000Z",
+    "title": "【 マシュマロ100本ノック】どんなクソマロが来ているかたのしみですな！【音乃瀬奏】#hololiveDEV_IS #ReGLOSS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aRtdg6N_AEw/mqdefault_live.jpg",
+    "endTime": "2025-08-10T10:41:34Z",
+    "duration": 6051
+  },
+  {
+    "videoId": "iwHt08qv_Tw",
+    "videoUrl": "https://www.youtube.com/watch?v=iwHt08qv_Tw",
+    "streamer": "ReGLOSS",
+    "date": "2025-08-10T19:00:00.000Z",
+    "title": "ReGLOSSに歩数計を付けたらカオスすぎた件【#歩数計チャレンジバトル】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/iwHt08qv_Tw/mqdefault.jpg",
+    "endTime": "2025-08-10T10:32:43Z",
+    "duration": 1829
   }
 ]

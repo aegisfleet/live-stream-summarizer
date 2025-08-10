@@ -2,6 +2,7 @@ class DetailPageManager {
     constructor() {
         this.archiveData = pageData; // テンプレートから渡されるデータ
         this.player = null;
+        this.resizeTimer = null; // リサイズイベントのdebounce用タイマー
         this.init();
     }
 
@@ -88,9 +89,16 @@ class DetailPageManager {
     }
 
     createPlayer() {
+        const playerElement = document.getElementById('youtube-player');
+        if (!playerElement) return;
+
+        // 親要素の幅に基づいて、アスペクト比16:9でプレーヤーの高さを動的に計算します。
+        const playerWidth = playerElement.parentElement.clientWidth || 1000;
+        const playerHeight = playerWidth * (9 / 16);
+
         this.player = new YT.Player('youtube-player', {
-            height: '600',
-            width: '1000',
+            height: String(playerHeight),
+            width: '100%',
             videoId: this.archiveData.videoId,
             playerVars: {
                 'playsinline': 1,
@@ -99,13 +107,39 @@ class DetailPageManager {
             },
             events: {
                 'onReady': (event) => {
-                    console.log('YouTube player ready');
+                    // プレーヤーの準備ができたら、リサイズイベントリスナーを設定
+                    this.setupResizeListener();
                 },
                 'onStateChange': (event) => {
                     // プレーヤーの状態変更を監視
                 }
             }
         });
+    }
+
+    setupResizeListener() {
+        // debounce関数でリサイズイベントの発火を制御し、過剰な再計算を防ぎます。
+        const debounce = (func, delay) => {
+            return (...args) => {
+                clearTimeout(this.resizeTimer);
+                this.resizeTimer = setTimeout(() => {
+                    func.apply(this, args);
+                }, delay);
+            };
+        };
+
+        window.addEventListener('resize', debounce(this.resizePlayer.bind(this), 250));
+    }
+
+    resizePlayer() {
+        if (!this.player || typeof this.player.setSize !== 'function') return;
+
+        const playerElement = document.getElementById('youtube-player');
+        if (!playerElement || !playerElement.parentElement) return;
+
+        const newWidth = playerElement.parentElement.clientWidth;
+        const newHeight = newWidth * (9 / 16);
+        this.player.setSize(newWidth, newHeight);
     }
 
     setupEventListeners() {

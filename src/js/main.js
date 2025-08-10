@@ -1,6 +1,6 @@
 function getBasePath() {
     const repoName = 'live-stream-summarizer';
-    if (location.hostname.includes('github.io')) {
+    if (location.hostname === 'github.io' || location.hostname.endsWith('.github.io')) {
         return `/${repoName}`;
     }
     return '';

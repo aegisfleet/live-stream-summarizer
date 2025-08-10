@@ -171,8 +171,7 @@ class DetailPageManager {
             };
 
             backToTopButton.addEventListener('click', () => {
-                backToTopButton.classList.remove('show');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                this.scrollToPlayer();
             });
         }
 

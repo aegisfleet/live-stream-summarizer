@@ -682,12 +682,11 @@ footer {
 .detail-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .detail-video {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .youtube-embed {
@@ -708,7 +707,7 @@ footer {
 .detail-overview,
 .detail-highlights,
 .detail-tags {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .detail-overview h2,
@@ -795,7 +794,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid #e0e0e0;
 }

@@ -76,11 +76,29 @@ class DetailPageManager {
     }
 
     setupEventListeners() {
-        // トップページに戻るボタン
-        const backButton = document.getElementById('back-to-home');
-        if (backButton) {
-            backButton.addEventListener('click', () => {
+        // ホームに戻るボタン（詳細ページでは常に表示）
+        const backToHomeButton = document.getElementById('back-to-home');
+        if (backToHomeButton) {
+            backToHomeButton.classList.add('show');
+            backToHomeButton.addEventListener('click', () => {
                 window.location.href = '../';
+            });
+        }
+
+        // トップに戻るボタン
+        const backToTopButton = document.getElementById('back-to-top');
+        if (backToTopButton) {
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            };
+
+            backToTopButton.addEventListener('click', () => {
+                backToTopButton.classList.remove('show');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
 

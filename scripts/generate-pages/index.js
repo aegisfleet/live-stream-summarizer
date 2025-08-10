@@ -13,10 +13,11 @@ class PageGenerator {
         try {
             const data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8'));
             
-            // 出力ディレクトリの作成
-            if (!fs.existsSync(this.outputDir)) {
-                fs.mkdirSync(this.outputDir, { recursive: true });
+            // 出力ディレクトリをクリーンアップ
+            if (fs.existsSync(this.outputDir)) {
+                fs.rmSync(this.outputDir, { recursive: true, force: true });
             }
+            fs.mkdirSync(this.outputDir, { recursive: true });
             
             console.log(`Starting to generate ${data.length} individual pages...`);
             

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - ホロライブ配信アーカイブサマリー</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="keywords" content="{{TAGS}}">
+    <meta property="og:site_name" content="ホロライブ配信アーカイブサマリー">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aegisfleet.github.io/live-stream-summarizer/pages/{{VIDEO_ID}}.html">
+    <meta property="og:image" content="{{THUMBNAIL_URL}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{THUMBNAIL_URL}}">
+    <link rel="canonical" href="https://aegisfleet.github.io/live-stream-summarizer/pages/{{VIDEO_ID}}.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R51TKLHQR5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R51TKLHQR5');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3122674942116250" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="ogp-image-container">
+            <a href="../"><img src="../images/ogp.png" alt="ホロライブ配信アーカイブサマリー"></a>
+        </div>
+    </header>
+
+    <main>
+        <div id="detail-container">
+            <div class="detail-header">
+                <h1 id="detail-title">{{TITLE}}</h1>
+                <div class="detail-meta">
+                    <p class="detail-streamer">配信者: {{STREAMER}}</p>
+                    <p class="detail-date">配信日時: {{DATE}}</p>
+                    <p class="detail-duration">配信時間: {{DURATION}}</p>
+                </div>
+            </div>
+
+            <div class="detail-content">
+                <div class="detail-thumbnail">
+                    <img src="{{THUMBNAIL_URL}}" alt="{{TITLE}}" class="clickable-thumbnail" title="クリックして動画を再生">
+                </div>
+
+                <div class="detail-overview">
+                    <h2>配信概要</h2>
+                    <p class="overview-summary">{{OVERVIEW_SUMMARY}}</p>
+                    <p class="overview-mood">配信の雰囲気: {{OVERVIEW_MOOD}}</p>
+                </div>
+
+                <div class="detail-highlights">
+                    <h2>見どころ</h2>
+                    <ul id="highlights-list">
+                        <!-- JavaScriptで動的に生成 -->
+                    </ul>
+                </div>
+
+                <div class="detail-tags">
+                    <h2>タグ</h2>
+                    <div id="tags-container">
+                        <!-- JavaScriptで動的に生成 -->
+                    </div>
+                </div>
+
+                <div class="detail-actions">
+                    <div class="share-buttons">
+                        <button id="copy-button" class="copy-button">コピー</button>
+                        <button id="share-button" class="share-button">𝕏で共有</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ホロライブ配信アーカイブサマリー</p>
+        <p>Developed by <a href="https://x.com/aegisfleet" target="_blank" rel="noopener noreferrer">ポち</a></p>
+    </footer>
+
+    <button id="back-to-home" title="ホームに戻る">🏠</button>
+    <button id="back-to-top" title="トップに戻る">⬆️</button>
+
+    <script>
+        // ページデータ
+        const pageData = {
+            videoId: '{{VIDEO_ID}}',
+            title: '{{TITLE}}',
+            streamer: '{{STREAMER}}',
+            date: '{{DATE}}',
+            duration: '{{DURATION}}',
+            thumbnailUrl: '{{THUMBNAIL_URL}}',
+            overview: {
+                summary: '{{OVERVIEW_SUMMARY}}',
+                mood: '{{OVERVIEW_MOOD}}'
+            },
+            highlights: {{HIGHLIGHTS_JSON}},
+            tags: {{TAGS_JSON}}
+        };
+    </script>
+    <script src="../js/detail-page.js"></script>
+</body>
+</html>

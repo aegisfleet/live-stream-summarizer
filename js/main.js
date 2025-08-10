@@ -735,7 +735,7 @@ class ArchiveManager {
             li.title = `クリックして ${highlight.timestamp} から再生`;
             li.addEventListener('click', (e) => {
                 const seconds = this.timestampToSeconds(highlight.timestamp);
-                openVideo(seconds);
+                window.location.href = `${getBasePath()}/pages/${archive.videoId}.html?t=${seconds}`;
             });
 
             const h3 = document.createElement('h3');

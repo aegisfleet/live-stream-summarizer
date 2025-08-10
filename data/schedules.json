@@ -267,13 +267,13 @@
     "videoId": "bc0eK4ItFeM",
     "videoUrl": "https://www.youtube.com/watch?v=bc0eK4ItFeM",
     "streamer": "白銀ノエル ⚔",
-    "date": "2025-08-10T10:00:00.000Z"
+    "date": "2025-08-10T10:13:00.000Z"
   },
   {
     "videoId": "IVhVFAsuBRI",
     "videoUrl": "https://www.youtube.com/watch?v=IVhVFAsuBRI",
     "streamer": "博衣こより",
-    "date": "2025-08-10T11:00:00.000Z"
+    "date": "2025-08-10T11:01:00.000Z"
   },
   {
     "videoId": "9USAQUn0YyQ",
@@ -324,27 +324,15 @@
     "date": "2025-08-10T21:00:00.000Z"
   },
   {
-    "videoId": "DTRYpCDJKag",
-    "videoUrl": "https://www.youtube.com/watch?v=DTRYpCDJKag",
-    "streamer": "AZKi ⚒",
-    "date": "2025-08-10T22:00:00.000Z"
-  },
-  {
-    "videoId": "QAem1fxefoA",
-    "videoUrl": "https://www.youtube.com/watch?v=QAem1fxefoA",
-    "streamer": "姫森ルーナ 🍬",
-    "date": "2025-08-10T22:00:00.000Z"
-  },
-  {
     "videoId": "R226v7dT0aM",
     "videoUrl": "https://www.youtube.com/watch?v=R226v7dT0aM",
     "streamer": "博衣こより",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
-    "videoId": "Vr--yU2IxLk",
-    "videoUrl": "https://www.youtube.com/watch?v=Vr--yU2IxLk",
-    "streamer": "猫又おかゆ 🍙",
+    "videoId": "zSyGu0kC4dc",
+    "videoUrl": "https://www.youtube.com/watch?v=zSyGu0kC4dc",
+    "streamer": "ラプラス",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
@@ -354,9 +342,21 @@
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
-    "videoId": "zSyGu0kC4dc",
-    "videoUrl": "https://www.youtube.com/watch?v=zSyGu0kC4dc",
-    "streamer": "ラプラス",
+    "videoId": "QAem1fxefoA",
+    "videoUrl": "https://www.youtube.com/watch?v=QAem1fxefoA",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-10T22:00:00.000Z"
+  },
+  {
+    "videoId": "Vr--yU2IxLk",
+    "videoUrl": "https://www.youtube.com/watch?v=Vr--yU2IxLk",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-10T22:00:00.000Z"
+  },
+  {
+    "videoId": "DTRYpCDJKag",
+    "videoUrl": "https://www.youtube.com/watch?v=DTRYpCDJKag",
+    "streamer": "AZKi ⚒",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
@@ -480,6 +480,12 @@
     "date": "2025-08-10T10:00:00.000Z"
   },
   {
+    "videoId": "GgWwut_K7nY",
+    "videoUrl": "https://www.youtube.com/watch?v=GgWwut_K7nY",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-10T11:57:00.000Z"
+  },
+  {
     "videoId": "UXS1oaP-e28",
     "videoUrl": "https://www.youtube.com/watch?v=UXS1oaP-e28",
     "streamer": "輪堂千速",
@@ -496,6 +502,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=JHAFjra6BJw",
     "streamer": "水宮枢",
     "date": "2025-08-10T14:00:00.000Z"
+  },
+  {
+    "videoId": "aRtdg6N_AEw",
+    "videoUrl": "https://www.youtube.com/watch?v=aRtdg6N_AEw",
+    "streamer": "音乃瀬奏",
+    "date": "2025-08-10T18:00:00.000Z"
   },
   {
     "videoId": "iwHt08qv_Tw",

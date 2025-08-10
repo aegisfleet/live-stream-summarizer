@@ -1,6 +1,7 @@
 class DetailPageManager {
     constructor() {
         this.archiveData = pageData; // テンプレートから渡されるデータ
+        this.player = null;
         this.init();
     }
 
@@ -8,12 +9,12 @@ class DetailPageManager {
         this.renderDetailPage();
         this.setupEventListeners();
         this.addStructuredData();
+        this.initYouTubePlayer();
     }
 
     renderDetailPage() {
         this.renderHighlights();
         this.renderTags();
-        this.setupThumbnailClick();
     }
 
     renderHighlights() {
@@ -45,10 +46,10 @@ class DetailPageManager {
             li.appendChild(type);
             li.appendChild(description);
             
-            // クリックでYouTubeの該当時間にジャンプ
+            // クリックで埋め込みプレーヤーの該当時間にジャンプ
             li.addEventListener('click', () => {
                 const seconds = this.timestampToSeconds(highlight.timestamp);
-                this.openVideo(seconds);
+                this.seekToTime(seconds);
             });
             
             highlightsList.appendChild(li);
@@ -68,11 +69,43 @@ class DetailPageManager {
         });
     }
 
-    setupThumbnailClick() {
-        const thumbnail = document.querySelector('.clickable-thumbnail');
-        if (thumbnail) {
-            thumbnail.addEventListener('click', () => this.openVideo());
+    initYouTubePlayer() {
+        // YouTube IFrame APIが読み込まれているかチェック
+        if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+            // YouTube IFrame APIを動的に読み込み
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            
+            // API読み込み完了後にプレーヤーを初期化
+            window.onYouTubeIframeAPIReady = () => {
+                this.createPlayer();
+            };
+        } else {
+            this.createPlayer();
         }
+    }
+
+    createPlayer() {
+        this.player = new YT.Player('youtube-player', {
+            height: '600',
+            width: '1000',
+            videoId: this.archiveData.videoId,
+            playerVars: {
+                'playsinline': 1,
+                'rel': 0,
+                'modestbranding': 1
+            },
+            events: {
+                'onReady': (event) => {
+                    console.log('YouTube player ready');
+                },
+                'onStateChange': (event) => {
+                    // プレーヤーの状態変更を監視
+                }
+            }
+        });
     }
 
     setupEventListeners() {
@@ -133,9 +166,11 @@ class DetailPageManager {
         }
     }
 
-    openVideo(startTime = 0) {
-        const url = `https://www.youtube.com/watch?v=${this.archiveData.videoId}&t=${startTime}s`;
-        window.open(url, '_blank');
+    seekToTime(seconds) {
+        if (this.player && this.player.seekTo) {
+            this.player.seekTo(seconds, true);
+            this.player.playVideo();
+        }
     }
 
     timestampToSeconds(timestamp) {

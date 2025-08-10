@@ -285,7 +285,7 @@
     "videoId": "bxujZqlHx_4",
     "videoUrl": "https://www.youtube.com/watch?v=bxujZqlHx_4",
     "streamer": "大空スバル 🚑",
-    "date": "2025-08-10T13:00:00.000Z"
+    "date": "2025-08-10T13:02:00.000Z"
   },
   {
     "videoId": "BGYREaxUtwk",
@@ -324,15 +324,9 @@
     "date": "2025-08-10T21:00:00.000Z"
   },
   {
-    "videoId": "R226v7dT0aM",
-    "videoUrl": "https://www.youtube.com/watch?v=R226v7dT0aM",
-    "streamer": "博衣こより",
-    "date": "2025-08-10T22:00:00.000Z"
-  },
-  {
-    "videoId": "zSyGu0kC4dc",
-    "videoUrl": "https://www.youtube.com/watch?v=zSyGu0kC4dc",
-    "streamer": "ラプラス",
+    "videoId": "QAem1fxefoA",
+    "videoUrl": "https://www.youtube.com/watch?v=QAem1fxefoA",
+    "streamer": "姫森ルーナ 🍬",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
@@ -342,9 +336,15 @@
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
-    "videoId": "QAem1fxefoA",
-    "videoUrl": "https://www.youtube.com/watch?v=QAem1fxefoA",
-    "streamer": "姫森ルーナ 🍬",
+    "videoId": "zSyGu0kC4dc",
+    "videoUrl": "https://www.youtube.com/watch?v=zSyGu0kC4dc",
+    "streamer": "ラプラス",
+    "date": "2025-08-10T22:00:00.000Z"
+  },
+  {
+    "videoId": "DTRYpCDJKag",
+    "videoUrl": "https://www.youtube.com/watch?v=DTRYpCDJKag",
+    "streamer": "AZKi ⚒",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
@@ -354,9 +354,9 @@
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
-    "videoId": "DTRYpCDJKag",
-    "videoUrl": "https://www.youtube.com/watch?v=DTRYpCDJKag",
-    "streamer": "AZKi ⚒",
+    "videoId": "R226v7dT0aM",
+    "videoUrl": "https://www.youtube.com/watch?v=R226v7dT0aM",
+    "streamer": "博衣こより",
     "date": "2025-08-10T22:00:00.000Z"
   },
   {
@@ -486,16 +486,16 @@
     "date": "2025-08-10T11:57:00.000Z"
   },
   {
-    "videoId": "UXS1oaP-e28",
-    "videoUrl": "https://www.youtube.com/watch?v=UXS1oaP-e28",
-    "streamer": "輪堂千速",
-    "date": "2025-08-10T13:00:00.000Z"
-  },
-  {
     "videoId": "xOVcvIYdxaM",
     "videoUrl": "https://www.youtube.com/watch?v=xOVcvIYdxaM",
     "streamer": "一条莉々華",
     "date": "2025-08-10T13:00:00.000Z"
+  },
+  {
+    "videoId": "UXS1oaP-e28",
+    "videoUrl": "https://www.youtube.com/watch?v=UXS1oaP-e28",
+    "streamer": "輪堂千速",
+    "date": "2025-08-10T13:01:00.000Z"
   },
   {
     "videoId": "JHAFjra6BJw",

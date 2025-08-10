@@ -121,6 +121,8 @@ graph TD
 ├── scripts/
 │   ├── check-archive/
 │   │   └── index.js      # アーカイブを確認するスクリプトです。
+│   ├── generate-pages/
+│   │   └── index.js      # 各配信の個別ページを生成するスクリプトです。
 │   ├── fetch-schedule/
 │   │   └── index.js      # 配信スケジュールを取得するスクリプトです。
 │   └── summarize/
@@ -164,6 +166,9 @@ graph TD
 
     # 特定の動画の要約を更新
     npm run summarize -- --videoId=xxxxxxxxxxx
+
+    # 各配信の個別ページを生成
+    npm run generate-pages
 
     # 古いサマリーデータの削除（14日より前のデータ）
     npm run cleanup-summaries

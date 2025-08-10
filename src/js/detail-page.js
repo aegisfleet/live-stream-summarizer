@@ -109,6 +109,13 @@ class DetailPageManager {
                 'onReady': (event) => {
                     // プレーヤーの準備ができたら、リサイズイベントリスナーを設定
                     this.setupResizeListener();
+
+                    // URLから再生時間を取得してシーク
+                    const params = new URLSearchParams(window.location.search);
+                    const time = params.get('t');
+                    if (time) {
+                        this.seekToTime(Number(time), true);
+                    }
                 },
                 'onStateChange': (event) => {
                     // プレーヤーの状態変更を監視

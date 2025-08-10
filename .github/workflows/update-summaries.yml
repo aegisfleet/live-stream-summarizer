@@ -62,9 +62,12 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Generate individual pages
+        run: npm run generate-pages
+
       - name: Commit and push changes
         run: |
-          bash ./scripts/commit-changes.sh "chore: Update stream summaries"
+          bash ./scripts/commit-changes.sh "chore: Update stream summaries and generate pages"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -822,7 +822,7 @@ class ArchiveManager {
         copyButton.title = 'タイトルとURLをコピー';
         copyButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
+            const shareUrl = `${window.location.origin}/pages/${archive.videoId}.html`;
             const copyText = `${archive.title}\n${shareUrl}`;
             navigator.clipboard.writeText(copyText).then(() => {
                 copyButton.textContent = 'コピー完了！';
@@ -844,24 +844,21 @@ class ArchiveManager {
         shareButton.title = 'この配信を𝕏で共有する';
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
+            const shareUrl = `${window.location.origin}/pages/${archive.videoId}.html`;
             const shareText = `${archive.title}\n${shareUrl}`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
         });
 
-        const regenerateButton = document.createElement('button');
-        regenerateButton.textContent = '修正依頼';
-        regenerateButton.className = 'regenerate-button';
-        regenerateButton.title = 'この配信の修正を依頼する';
-        regenerateButton.addEventListener('click', (e) => {
+        const detailButton = document.createElement('button');
+        detailButton.textContent = '詳細';
+        detailButton.className = 'detail-button';
+        detailButton.title = '詳細ページを表示';
+        detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `${window.location.origin}${window.location.pathname}?videoId=${archive.videoId}`;
-            const tweetText = `@aegisfleet\n内容が間違っているので再生成お願いします！\n間違っている箇所: \n\nURL: ${shareUrl}\n\n【同意事項】\n再生成しても正確な内容が保証されないことに同意します。`;
-            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
-            window.open(twitterIntentUrl, '_blank');
+            window.location.href = `/pages/${archive.videoId}.html`;
         });
-        footer.appendChild(regenerateButton);
+        footer.appendChild(detailButton);
 
         const rightButtons = document.createElement('div');
         rightButtons.className = 'card-footer-right-buttons';

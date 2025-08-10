@@ -7,6 +7,7 @@
     "check-archive": "node scripts/check-archive",
     "summarize": "node scripts/summarize",
     "cleanup-summaries": "node scripts/cleanup-summaries",
+    "generate-pages": "node scripts/generate-pages",
     "start": "node server.js"
   },
   "dependencies": {

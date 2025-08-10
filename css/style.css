@@ -44,7 +44,7 @@ header {
     background-color: #e0f7fa; /* Light blue background */
     padding: 1.5rem;
     margin: 0 auto 0.5rem auto;
-    max-width: 1200px;
+    max-width: 1800px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -99,7 +99,7 @@ header {
 }
 
 .filter-group {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto 0.5rem auto;
     padding: 0.1rem;
 }
@@ -148,7 +148,6 @@ button.active {
 }
 
 main {
-    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -646,7 +645,7 @@ footer {
 
 /* 個別ページ用スタイル */
 #detail-container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 2rem;
     background-color: var(--card-background);
@@ -687,6 +686,11 @@ footer {
 .detail-video {
     text-align: center;
     margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--background-color);
+    padding: 1rem 0;
 }
 
 .youtube-embed {
@@ -821,6 +825,16 @@ footer {
 }
 
 /* レスポンシブデザイン */
+.detail-video.sticky-active {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: padding 0.3s ease-in-out;
+}
+
+.detail-video.sticky-active .youtube-embed {
+    transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 768px) {
     #detail-container {
         padding: 1rem;
@@ -833,5 +847,24 @@ footer {
     .detail-meta {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+/* 2カラムレイアウト用のスタイル */
+@media (min-width: 769px) {
+    .detail-main-content {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+    }
+
+    .detail-video {
+        flex: 2;
+    }
+
+    .detail-highlights {
+        flex: 1;
+        max-height: 600px; /* youtube-embed iframe の高さに合わせる */
+        overflow-y: auto; /* コンテンツが多ければスクロール */
     }
 }

@@ -50,7 +50,8 @@ class DetailPageManager {
             // クリックで埋め込みプレーヤーの該当時間にジャンプ
             li.addEventListener('click', () => {
                 const seconds = this.timestampToSeconds(highlight.timestamp);
-                this.seekToTime(seconds, true);
+                const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+                this.seekToTime(seconds, isDesktop);
             });
             
             highlightsList.appendChild(li);
@@ -171,7 +172,7 @@ class DetailPageManager {
             };
 
             backToTopButton.addEventListener('click', () => {
-                this.scrollToPlayer();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
 

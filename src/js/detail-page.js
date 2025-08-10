@@ -49,7 +49,7 @@ class DetailPageManager {
             // クリックで埋め込みプレーヤーの該当時間にジャンプ
             li.addEventListener('click', () => {
                 const seconds = this.timestampToSeconds(highlight.timestamp);
-                this.seekToTime(seconds);
+                this.seekToTime(seconds, true);
             });
             
             highlightsList.appendChild(li);
@@ -166,10 +166,20 @@ class DetailPageManager {
         }
     }
 
-    seekToTime(seconds) {
+    seekToTime(seconds, scroll = false) {
         if (this.player && this.player.seekTo) {
             this.player.seekTo(seconds, true);
             this.player.playVideo();
+            if (scroll) {
+                this.scrollToPlayer();
+            }
+        }
+    }
+
+    scrollToPlayer() {
+        const playerElement = document.getElementById('youtube-player');
+        if (playerElement) {
+            playerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
 

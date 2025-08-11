@@ -108,8 +108,9 @@ class DetailPageManager {
             },
             events: {
                 'onReady': (event) => {
-                    // プレーヤーの準備ができたら、リサイズイベントリスナーを設定
+                    // プレーヤーの準備ができたら、各種設定を実行
                     this.setupResizeListener();
+                    this.adjustHighlightsHeight(); // 初回読み込み時に高さを調整
 
                     // URLから再生時間を取得してシーク
                     const params = new URLSearchParams(window.location.search);
@@ -148,6 +149,25 @@ class DetailPageManager {
         const newWidth = playerElement.parentElement.clientWidth;
         const newHeight = newWidth * (9 / 16);
         this.player.setSize(newWidth, newHeight);
+
+        // プレーヤーのリサイズに合わせて、見どころ欄の高さも調整
+        this.adjustHighlightsHeight();
+    }
+
+    adjustHighlightsHeight() {
+        const highlights = document.querySelector('.detail-highlights');
+        const playerIframe = document.getElementById('youtube-player'); // YT.Playerのiframe
+
+        if (!highlights || !playerIframe) return;
+
+        // PC/タブレット表示の場合のみ高さを調整
+        if (window.matchMedia('(min-width: 769px)').matches) {
+            const playerHeight = playerIframe.offsetHeight;
+            highlights.style.height = `${playerHeight}px`;
+        } else {
+            // スマホ表示では、インラインスタイルをリセットしてCSSの制御に戻す
+            highlights.style.height = 'auto';
+        }
     }
 
     setupEventListeners() {

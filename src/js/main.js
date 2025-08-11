@@ -29,6 +29,13 @@ class ArchiveManager {
         await this.loadData();
         this.loadWatchLaterList();
         this.cleanupWatchLaterList();
+        this._setupInitialFilters();
+        this._setupEventListeners();
+        this.renderArchives();
+        this.updateTitle();
+    }
+
+    _setupInitialFilters() {
         const hasUrlParams = this.filterByUrlParams();
         
         if (!hasUrlParams || new URLSearchParams(window.location.search).get('watchLater') === 'true') {
@@ -45,15 +52,15 @@ class ArchiveManager {
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
         }
-        
+    }
+
+    _setupEventListeners() {
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
         this.setupBackToHomeButton();
         this.setupWatchLaterButton();
         this.setupLoadMoreButton();
         this.setupHintDialog();
-        this.renderArchives();
-        this.updateTitle();
     }
 
     updateTitle() {
@@ -251,23 +258,7 @@ class ArchiveManager {
             const newUrl = `${window.location.pathname}?${params.toString()}`;
             history.pushState(null, '', newUrl);
         } else {
-            this.filteredData = [...this.archiveData];
-            document.getElementById('filter-container').style.display = 'block';
-            document.querySelector('.filter-group.collapsible').style.display = 'block';
-            
-            const params = new URLSearchParams(window.location.search);
-            params.delete('watchLater');
-            const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-            history.pushState(null, '', newUrl);
-            
-            this.selectedStreamers = new Set(this.streamers);
-            this.selectedTags = new Set(this.tags);
-            
-            const streamerButtons = document.querySelectorAll('#filter-buttons button');
-            streamerButtons.forEach(button => button.classList.add('active'));
-            
-            const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
-            tagButtons.forEach(button => button.classList.add('active'));
+            this._resetToDefaultView();
         }
         
         this.currentPage = 1;
@@ -769,7 +760,7 @@ class ArchiveManager {
         overview.appendChild(duration);
         overview.appendChild(overviewSummary);
         overview.appendChild(overviewMood);
-        
+
         content.appendChild(title);
         content.appendChild(streamer);
         content.appendChild(overview);
@@ -786,7 +777,7 @@ class ArchiveManager {
     _createCardContent(archive) {
         const content = document.createElement('div');
         content.className = 'archive-card-content';
-        
+
         const title = document.createElement('h2');
         title.textContent = archive.title;
         title.classList.add('clickable-title');
@@ -794,7 +785,7 @@ class ArchiveManager {
         title.addEventListener('click', () => {
             window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
         });
-        
+
         const dateElement = document.createElement('p');
         dateElement.className = 'archive-date';
         dateElement.textContent = `配信日時: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;

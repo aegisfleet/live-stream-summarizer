@@ -104,20 +104,25 @@ class DetailPageManager {
                 'modestbranding': 1
             },
             events: {
-                'onReady': (event) => {
-                    this.setupResizeListener();
-                    this.adjustHighlightsHeight();
-
-                    const params = new URLSearchParams(window.location.search);
-                    const time = params.get('t');
-                    if (time) {
-                        this.seekToTime(Number(time), true);
-                    }
-                },
-                'onStateChange': (event) => {
-                }
+                'onReady': this._onPlayerReady.bind(this),
+                'onStateChange': this._onPlayerStateChange.bind(this)
             }
         });
+    }
+
+    _onPlayerReady(event) {
+        this.setupResizeListener();
+        this.adjustHighlightsHeight();
+
+        const params = new URLSearchParams(window.location.search);
+        const time = params.get('t');
+        if (time) {
+            this.seekToTime(Number(time), true);
+        }
+    }
+
+    _onPlayerStateChange(event) {
+        // This can be used to handle state changes in the future
     }
 
     setupResizeListener() {

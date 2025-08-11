@@ -1,8 +1,8 @@
 class DetailPageManager {
     constructor() {
-        this.archiveData = pageData; // テンプレートから渡されるデータ
+        this.archiveData = pageData;
         this.player = null;
-        this.resizeTimer = null; // リサイズイベントのdebounce用タイマー
+        this.resizeTimer = null;
         this.init();
     }
 
@@ -47,7 +47,6 @@ class DetailPageManager {
             li.appendChild(type);
             li.appendChild(description);
             
-            // クリックで埋め込みプレーヤーの該当時間にジャンプ
             li.addEventListener('click', () => {
                 const seconds = this.timestampToSeconds(highlight.timestamp);
                 const isDesktop = window.matchMedia('(min-width: 769px)').matches;
@@ -72,15 +71,12 @@ class DetailPageManager {
     }
 
     initYouTubePlayer() {
-        // YouTube IFrame APIが読み込まれているかチェック
         if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
-            // YouTube IFrame APIを動的に読み込み
             const tag = document.createElement('script');
             tag.src = 'https://www.youtube.com/iframe_api';
             const firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             
-            // API読み込み完了後にプレーヤーを初期化
             window.onYouTubeIframeAPIReady = () => {
                 this.createPlayer();
             };
@@ -93,7 +89,6 @@ class DetailPageManager {
         const playerElement = document.getElementById('youtube-player');
         if (!playerElement) return;
 
-        // 親要素の幅に基づいて、アスペクト比16:9でプレーヤーの高さを動的に計算します。
         const playerWidth = playerElement.parentElement.clientWidth || 1000;
         const playerHeight = playerWidth * (9 / 16);
 
@@ -108,10 +103,9 @@ class DetailPageManager {
             },
             events: {
                 'onReady': (event) => {
-                    // プレーヤーの準備ができたら、リサイズイベントリスナーを設定
                     this.setupResizeListener();
+                    this.resizePlayer();
 
-                    // URLから再生時間を取得してシーク
                     const params = new URLSearchParams(window.location.search);
                     const time = params.get('t');
                     if (time) {
@@ -119,14 +113,12 @@ class DetailPageManager {
                     }
                 },
                 'onStateChange': (event) => {
-                    // プレーヤーの状態変更を監視
                 }
             }
         });
     }
 
     setupResizeListener() {
-        // debounce関数でリサイズイベントの発火を制御し、過剰な再計算を防ぎます。
         const debounce = (func, delay) => {
             return (...args) => {
                 clearTimeout(this.resizeTimer);
@@ -149,16 +141,14 @@ class DetailPageManager {
         const newHeight = newWidth * (9 / 16);
         this.player.setSize(newWidth, newHeight);
 
-        // ハイライトリストの高さを動画の高さに合わせる
         const highlightsList = document.getElementById('highlights-list');
         if (highlightsList) {
             highlightsList.style.maxHeight = `${newHeight}px`;
-            highlightsList.style.overflowY = 'auto'; // スクロール可能にする
+            highlightsList.style.overflowY = 'auto';
         }
     }
 
     setupEventListeners() {
-        // ホームに戻るボタン（詳細ページでは常に表示）
         const backToHomeButton = document.getElementById('back-to-home');
         if (backToHomeButton) {
             backToHomeButton.classList.add('show');
@@ -167,7 +157,6 @@ class DetailPageManager {
             });
         }
 
-        // トップに戻るボタン
         const backToTopButton = document.getElementById('back-to-top');
         if (backToTopButton) {
             window.onscroll = function() {
@@ -183,7 +172,6 @@ class DetailPageManager {
             });
         }
 
-        // コピーボタン
         const copyButton = document.getElementById('copy-button');
         if (copyButton) {
             copyButton.addEventListener('click', () => {
@@ -203,7 +191,6 @@ class DetailPageManager {
             });
         }
 
-        // 共有ボタン
         const shareButton = document.getElementById('share-button');
         if (shareButton) {
             shareButton.addEventListener('click', () => {
@@ -258,7 +245,6 @@ class DetailPageManager {
     }
 }
 
-// ページ読み込み完了時に初期化
 document.addEventListener('DOMContentLoaded', () => {
     new DetailPageManager();
 });

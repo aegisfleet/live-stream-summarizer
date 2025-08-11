@@ -4,6 +4,7 @@ const path = require('path');
 const config = require('../../config/default.json');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const axios = require('axios');
+const { fetchChatReplay } = require('./fetch-chat');
 
 // Gemini APIの初期化
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -34,6 +35,8 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
 }
 
 async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer, thumbnailUrl) {
+    const allChatMessages = await fetchChatReplay(videoId);
+
     const formatExample = {
         "overview": {
             "summary": "配信の全体的な内容を200字程度で説明",
@@ -50,9 +53,9 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
     };
 
-    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, existingSummary = null) => {
+    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, chatLog, existingSummary = null) => {
         let prompt = `# 指示内容
-サムネイル画像から出演者やゲストなど動画の内容を把握し、動画の内容を要約してJSONオブジェクトを出力してください。
+サムネイル画像や以下の文字起こし、視聴者のコメントを基に、動画の内容を要約してJSONオブジェクトを出力してください。
 
 ## 最重要事項
 - 見どころの時間は最も重要な要素であり、正確な時間を記載する必要がある。
@@ -61,6 +64,7 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
 ## 動画の情報:
 - 動画タイトル: ${videoTitle}
 - 配信者: ${streamer}
+${chatLog ? `\n## この動画パートの視聴者のコメント:\n${chatLog}` : ''}
 
 ### 現在の解析範囲:
 - 現在の開始時間: ${formatDuration(clipStart)}
@@ -156,12 +160,21 @@ ${JSON.stringify(existingSummary, null, 2)}
         console.log(`Processing chunk: ${videoId} from ${clipStartSeconds}s to ${clipEndSeconds}s`);
 
         try {
+            const currentChatMessages = allChatMessages
+                .filter(chat => chat.timestamp >= clipStartSeconds && chat.timestamp < clipEndSeconds);
+
+            const chatLog = currentChatMessages
+                .map(chat => chat.message)
+                .join('\n');
+
+            console.log(`Including ${currentChatMessages.length} chat messages for this chunk.`);
+
             const chunkSummary = await retry(async () => {
                 const imageResponse = await axios.get(thumbnailUrl, { responseType: 'arraybuffer' });
                 const imageBase64 = Buffer.from(imageResponse.data).toString('base64');
 
                 const result = await model.generateContent([
-                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, currentSummary),
+                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, chatLog, currentSummary),
                     {
                         inlineData: {
                             data: imageBase64,

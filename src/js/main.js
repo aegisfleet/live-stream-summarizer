@@ -76,9 +76,11 @@ class ArchiveManager {
             button.addEventListener('click', () => {
                 const sortKey = button.dataset.sortKey;
                 if (this.currentSortKey === sortKey) {
-                    this.sortOrders[sortKey] = this.sortOrders[sortKey] === 'asc' ? 'desc' : 'asc';
+                    this.sortOrders[sortKey] = this.sortOrders[sortKey] === 'desc' ? 'asc' : 'desc';
                 } else {
                     this.currentSortKey = sortKey;
+                    // 他のキーから切り替えた場合は常に降順から開始
+                    this.sortOrders[sortKey] = 'desc';
                 }
 
                 sortButtons.forEach(btn => btn.classList.remove('active'));
@@ -612,12 +614,27 @@ class ArchiveManager {
             grid.innerHTML = '';
         }
 
-        const sortedData = this.filteredData.sort((a, b) => {
+        const sortedData = [...this.filteredData].sort((a, b) => {
             const order = this.sortOrders[this.currentSortKey] === 'asc' ? 1 : -1;
-            if (this.currentSortKey === 'date') {
-                return (new Date(a.date) - new Date(b.date)) * order;
+            const key = this.currentSortKey;
+
+            let valA, valB;
+
+            if (key === 'date') {
+                valA = new Date(a[key]).getTime();
+                valB = new Date(b[key]).getTime();
+            } else {
+                valA = a[key];
+                valB = b[key];
             }
-            return (b[this.currentSortKey] - a[this.currentSortKey]) * order;
+
+            if (valA < valB) {
+                return -1 * order;
+            }
+            if (valA > valB) {
+                return 1 * order;
+            }
+            return 0;
         });
         
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;

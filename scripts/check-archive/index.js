@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { google } = require('googleapis');
-const { YoutubeTranscript } = require('youtube-transcript');
+
 const fs = require('fs').promises;
 const path = require('path');
 const config = require('../../config/default.json');

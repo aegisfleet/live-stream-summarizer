@@ -1,3 +1,5 @@
+import { timestampToSeconds, formatDuration } from './utils.js';
+
 function getBasePath() {
     const repoName = 'live-stream-summarizer';
     if (location.hostname === 'github.io' || location.hostname.endsWith('.github.io')) {
@@ -26,17 +28,14 @@ class ArchiveManager {
     async init() {
         await this.loadData();
         this.loadWatchLaterList();
-        // あとで見るリストのクリーンアップ（loadDataの後に実行）
         this.cleanupWatchLaterList();
         const hasUrlParams = this.filterByUrlParams();
         
-        // watchLaterパラメータがある場合でも、フィルターのセットアップは行う
         if (!hasUrlParams || new URLSearchParams(window.location.search).get('watchLater') === 'true') {
             this.setupStreamerFilter();
             this.setupTagFilter();
         }
         
-        // watchLaterパラメータがある場合は、フィルタリングを再適用
         const params = new URLSearchParams(window.location.search);
         if (params.get('watchLater') === 'true' && this.watchLaterList.size > 0) {
             this.isWatchLaterMode = true;
@@ -81,7 +80,6 @@ class ArchiveManager {
             this.filteredData = this.archiveData.filter(archive => archive.videoId === videoId);
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
-            // videoIdがある場合は「あとで見る」ボタンを非表示にする
             const watchLaterButton = document.getElementById('watch-later');
             if (watchLaterButton) {
                 watchLaterButton.classList.remove('show');
@@ -89,7 +87,6 @@ class ArchiveManager {
             return true;
         }
 
-        // watchLaterパラメータがある場合は「あとで見る」モードを有効にする
         const watchLater = params.get('watchLater');
         if (watchLater === 'true' && this.watchLaterList.size > 0) {
             this.isWatchLaterMode = true;
@@ -98,7 +95,6 @@ class ArchiveManager {
             );
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
-            // watchLaterパラメータの場合は、フィルターのセットアップは後で行うため、falseを返す
             return false;
         }
 
@@ -175,7 +171,6 @@ class ArchiveManager {
             return;
         }
 
-        // videoIdがある場合は「あとで見る」ボタンを非表示にする
         if (videoId) {
             watchLaterButton.classList.remove('show');
         } else {
@@ -214,29 +209,17 @@ class ArchiveManager {
     }
 
     cleanupWatchLaterList() {
-        // 現在のJSONデータに存在するvideoIdのセットを作成
         const existingVideoIds = new Set(this.archiveData.map(archive => archive.videoId));
-        
-        console.log('クリーンアップ前のあとで見るリスト:', [...this.watchLaterList]);
-        console.log('現在のJSONデータのvideoId:', [...existingVideoIds]);
-        
-        // あとで見るリストから存在しないvideoIdを削除
         const originalSize = this.watchLaterList.size;
-        const removedItems = [];
+
         for (const videoId of this.watchLaterList) {
             if (!existingVideoIds.has(videoId)) {
                 this.watchLaterList.delete(videoId);
-                removedItems.push(videoId);
             }
         }
         
-        // 削除された項目がある場合は、更新されたリストを保存
         if (this.watchLaterList.size !== originalSize) {
             this.saveWatchLaterList();
-            console.log(`あとで見るリストから ${originalSize - this.watchLaterList.size} 個の存在しない項目を削除しました:`, removedItems);
-            console.log('クリーンアップ後のあとで見るリスト:', [...this.watchLaterList]);
-        } else {
-            console.log('削除される項目はありませんでした。');
         }
     }
 
@@ -249,7 +232,6 @@ class ArchiveManager {
     }
 
     toggleWatchLaterMode() {
-        // あとで見るリストが空の場合はダイアログを表示
         if (this.watchLaterList.size === 0) {
             this.showWatchLaterDialog();
             return;
@@ -258,41 +240,32 @@ class ArchiveManager {
         this.isWatchLaterMode = !this.isWatchLaterMode;
         
         if (this.isWatchLaterMode) {
-            // あとで見るモードに切り替え
             this.filteredData = this.archiveData.filter(archive => 
                 this.watchLaterList.has(archive.videoId)
             );
-            // フィルターコンテナを非表示にする
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
             
-            // URLにwatchLaterパラメータを追加
             const params = new URLSearchParams(window.location.search);
             params.set('watchLater', 'true');
             const newUrl = `${window.location.pathname}?${params.toString()}`;
             history.pushState(null, '', newUrl);
         } else {
-            // 通常モードに戻る
             this.filteredData = [...this.archiveData];
-            // フィルターコンテナを表示する
             document.getElementById('filter-container').style.display = 'block';
             document.querySelector('.filter-group.collapsible').style.display = 'block';
             
-            // URLからwatchLaterパラメータを削除
             const params = new URLSearchParams(window.location.search);
             params.delete('watchLater');
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
             history.pushState(null, '', newUrl);
             
-            // フィルタを完全にリセット
             this.selectedStreamers = new Set(this.streamers);
             this.selectedTags = new Set(this.tags);
             
-            // 配信者フィルタのボタンをすべてアクティブにする
             const streamerButtons = document.querySelectorAll('#filter-buttons button');
             streamerButtons.forEach(button => button.classList.add('active'));
             
-            // タグフィルタのボタンをすべてアクティブにする
             const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
             tagButtons.forEach(button => button.classList.add('active'));
         }
@@ -300,7 +273,6 @@ class ArchiveManager {
         this.currentPage = 1;
         this.renderArchives(true);
         
-        // カードの先頭位置にスクロール
         const archiveGrid = document.getElementById('archive-grid');
         if (archiveGrid) {
             archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -316,12 +288,10 @@ class ArchiveManager {
 
     toggleWatchLater(videoId, bookmarkIcon) {
         if (this.watchLaterList.has(videoId)) {
-            // リストから削除
             this.watchLaterList.delete(videoId);
             bookmarkIcon.classList.remove('active');
             bookmarkIcon.title = 'あとで見るに追加';
         } else {
-            // リストに追加
             this.watchLaterList.add(videoId);
             bookmarkIcon.classList.add('active');
             bookmarkIcon.title = 'あとで見るから削除';
@@ -329,33 +299,9 @@ class ArchiveManager {
         
         this.saveWatchLaterList();
         
-        // あとで見るモードの場合は、リストを更新
         if (this.isWatchLaterMode) {
-            // リストが空になった場合は、フィルタを解除してすべての動画を表示
             if (this.watchLaterList.size === 0) {
-                this.isWatchLaterMode = false;
-                this.filteredData = [...this.archiveData];
-                // フィルターコンテナを表示する
-                document.getElementById('filter-container').style.display = 'block';
-                document.querySelector('.filter-group.collapsible').style.display = 'block';
-                
-                // URLからwatchLaterパラメータを削除
-                const params = new URLSearchParams(window.location.search);
-                params.delete('watchLater');
-                const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-                history.pushState(null, '', newUrl);
-                
-                // フィルタを完全にリセット
-                this.selectedStreamers = new Set(this.streamers);
-                this.selectedTags = new Set(this.tags);
-                
-                // 配信者フィルタのボタンをすべてアクティブにする
-                const streamerButtons = document.querySelectorAll('#filter-buttons button');
-                streamerButtons.forEach(button => button.classList.add('active'));
-                
-                // タグフィルタのボタンをすべてアクティブにする
-                const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
-                tagButtons.forEach(button => button.classList.add('active'));
+                this._resetToDefaultView();
             } else {
                 this.filteredData = this.archiveData.filter(archive => 
                     this.watchLaterList.has(archive.videoId)
@@ -364,6 +310,27 @@ class ArchiveManager {
             this.currentPage = 1;
             this.renderArchives(true);
         }
+    }
+
+    _resetToDefaultView() {
+        this.isWatchLaterMode = false;
+        this.filteredData = [...this.archiveData];
+        document.getElementById('filter-container').style.display = 'block';
+        document.querySelector('.filter-group.collapsible').style.display = 'block';
+
+        const params = new URLSearchParams(window.location.search);
+        params.delete('watchLater');
+        const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
+        history.pushState(null, '', newUrl);
+
+        this.selectedStreamers = new Set(this.streamers);
+        this.selectedTags = new Set(this.tags);
+
+        const streamerButtons = document.querySelectorAll('#filter-buttons button');
+        streamerButtons.forEach(button => button.classList.add('active'));
+
+        const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
+        tagButtons.forEach(button => button.classList.add('active'));
     }
     
     setupStreamerFilter() {
@@ -651,11 +618,6 @@ class ArchiveManager {
         const card = document.createElement('div');
         card.className = 'archive-card';
         
-        const openVideo = (startTime = 0) => {
-            const url = `https://www.youtube.com/watch?v=${archive.videoId}&t=${startTime}s`;
-            window.open(url, '_blank');
-        };
-        
         const img = document.createElement('img');
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
@@ -665,13 +627,11 @@ class ArchiveManager {
             window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
         });
 
-        // ブックマークアイコンを追加
         const bookmarkIcon = document.createElement('button');
         bookmarkIcon.className = 'bookmark-icon';
         bookmarkIcon.innerHTML = '🔖';
         bookmarkIcon.title = 'あとで見るに追加';
         
-        // 既に追加されている場合はアクティブ状態にする
         if (this.watchLaterList.has(archive.videoId)) {
             bookmarkIcon.classList.add('active');
             bookmarkIcon.title = 'あとで見るから削除';
@@ -682,8 +642,148 @@ class ArchiveManager {
             this.toggleWatchLater(archive.videoId, bookmarkIcon);
         });
         
+        const content = this._createCardContent(archive);
+        const footer = this._createCardFooter(archive);
+
         card.appendChild(bookmarkIcon);
+        card.appendChild(img);
+        card.appendChild(content);
+        card.appendChild(footer);
+
+        return card;
+    }
+
+    _createCardContent(archive) {
+        const content = document.createElement('div');
+        content.className = 'archive-card-content';
+
+        const title = document.createElement('h2');
+        title.textContent = archive.title;
+        title.classList.add('clickable-title');
+        title.title = '詳細ページへ';
+        title.addEventListener('click', () => {
+            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+        });
+
+        const dateElement = document.createElement('p');
+        dateElement.className = 'archive-date';
+        dateElement.textContent = `配信日時: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
+
+        const duration = document.createElement('p');
+        duration.className = 'duration';
+        duration.textContent = `配信時間：${formatDuration(archive.duration)}`;
+
+        const streamer = document.createElement('p');
+        streamer.className = 'streamer-name clickable-streamer';
+        streamer.textContent = `配信者: ${archive.streamer}`;
+        streamer.title = `配信者「${archive.streamer}」で絞り込む`;
+        streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer));
+
+        const overview = document.createElement('div');
+        overview.className = 'overview';
+
+        const overviewSummary = document.createElement('p');
+        overviewSummary.className = 'overview-summary';
+        overviewSummary.textContent = archive.overview.summary;
+
+        const overviewMood = document.createElement('p');
+        overviewMood.className = 'overview-mood';
+        overviewMood.textContent = `配信の雰囲気：${archive.overview.mood}`;
+
+        overview.appendChild(dateElement);
+        overview.appendChild(duration);
+        overview.appendChild(overviewSummary);
+        overview.appendChild(overviewMood);
+
+        const highlightsSection = this._createCollapsibleSection(archive, 'highlights');
+        const tagsSection = this._createCollapsibleSection(archive, 'tags');
+
+        content.appendChild(title);
+        content.appendChild(streamer);
+        content.appendChild(overview);
+        content.appendChild(highlightsSection);
+        content.appendChild(tagsSection);
+
+        return content;
+    }
+
+    _createCardFooter(archive) {
+        const footer = document.createElement('div');
+        footer.className = 'card-footer';
+
+        const copyButton = document.createElement('button');
+        copyButton.textContent = 'コピー';
+        copyButton.className = 'copy-button';
+        copyButton.title = 'タイトルとURLをコピー';
+        copyButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
+            const copyText = `${archive.title}\n${shareUrl}`;
+            navigator.clipboard.writeText(copyText).then(() => {
+                copyButton.textContent = 'コピー完了！';
+                setTimeout(() => {
+                    copyButton.textContent = 'コピー';
+                }, 2000);
+            }).catch(err => {
+                console.error('クリップボードへのコピーに失敗しました:', err);
+                copyButton.textContent = '失敗';
+                 setTimeout(() => {
+                    copyButton.textContent = 'コピー';
+                }, 2000);
+            });
+        });
+
+        const shareButton = document.createElement('button');
+        shareButton.textContent = '𝕏で共有';
+        shareButton.className = 'share-button';
+        shareButton.title = 'この配信を𝕏で共有する';
+        shareButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
+            const shareText = `${archive.title}\n${shareUrl}`;
+            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+            window.open(twitterIntentUrl, '_blank');
+        });
+
+        const detailButton = document.createElement('button');
+        detailButton.textContent = '詳細';
+        detailButton.className = 'detail-button';
+        detailButton.title = '詳細ページを表示';
+        detailButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+        });
+        footer.appendChild(detailButton);
+
+        const rightButtons = document.createElement('div');
+        rightButtons.className = 'card-footer-right-buttons';
+        rightButtons.appendChild(copyButton);
+        rightButtons.appendChild(shareButton);
+        footer.appendChild(rightButtons);
+
+        highlights.appendChild(highlightsTitle);
+        highlights.appendChild(highlightsList);
+        highlights.appendChild(toggleButton);
+
+        overview.appendChild(dateElement);
+        overview.appendChild(duration);
+        overview.appendChild(overviewSummary);
+        overview.appendChild(overviewMood);
         
+        content.appendChild(title);
+        content.appendChild(streamer);
+        content.appendChild(overview);
+        content.appendChild(highlights);
+        content.appendChild(tags);
+
+        card.appendChild(img);
+        card.appendChild(content);
+        card.appendChild(footer);
+
+        return card;
+    }
+
+    _createCardContent(archive) {
         const content = document.createElement('div');
         content.className = 'archive-card-content';
         
@@ -701,7 +801,7 @@ class ArchiveManager {
 
         const duration = document.createElement('p');
         duration.className = 'duration';
-        duration.textContent = `配信時間：${this.formatDuration(archive.duration)}`;
+        duration.textContent = `配信時間：${formatDuration(archive.duration)}`;
 
         const streamer = document.createElement('p');
         streamer.className = 'streamer-name clickable-streamer';
@@ -734,7 +834,7 @@ class ArchiveManager {
             li.classList.add('clickable-highlight');
             li.title = `クリックして ${highlight.timestamp} から再生`;
             li.addEventListener('click', (e) => {
-                const seconds = this.timestampToSeconds(highlight.timestamp);
+                const seconds = timestampToSeconds(highlight.timestamp);
                 window.location.href = `${getBasePath()}/pages/${archive.videoId}.html?t=${seconds}`;
             });
 
@@ -825,59 +925,6 @@ class ArchiveManager {
         tagsContainer.appendChild(tagsList);
         tagsContainer.appendChild(toggleTagsButton);
         
-        const footer = document.createElement('div');
-        footer.className = 'card-footer';
-
-        const copyButton = document.createElement('button');
-        copyButton.textContent = 'コピー';
-        copyButton.className = 'copy-button';
-        copyButton.title = 'タイトルとURLをコピー';
-        copyButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
-            const copyText = `${archive.title}\n${shareUrl}`;
-            navigator.clipboard.writeText(copyText).then(() => {
-                copyButton.textContent = 'コピー完了！';
-                setTimeout(() => {
-                    copyButton.textContent = 'コピー';
-                }, 2000);
-            }).catch(err => {
-                console.error('クリップボードへのコピーに失敗しました:', err);
-                copyButton.textContent = '失敗';
-                 setTimeout(() => {
-                    copyButton.textContent = 'コピー';
-                }, 2000);
-            });
-        });
-
-        const shareButton = document.createElement('button');
-        shareButton.textContent = '𝕏で共有';
-        shareButton.className = 'share-button';
-        shareButton.title = 'この配信を𝕏で共有する';
-        shareButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
-            const shareText = `${archive.title}\n${shareUrl}`;
-            const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
-            window.open(twitterIntentUrl, '_blank');
-        });
-
-        const detailButton = document.createElement('button');
-        detailButton.textContent = '詳細';
-        detailButton.className = 'detail-button';
-        detailButton.title = '詳細ページを表示';
-        detailButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
-        });
-        footer.appendChild(detailButton);
-
-        const rightButtons = document.createElement('div');
-        rightButtons.className = 'card-footer-right-buttons';
-        rightButtons.appendChild(copyButton);
-        rightButtons.appendChild(shareButton);
-        footer.appendChild(rightButtons);
-
         highlights.appendChild(highlightsTitle);
         highlights.appendChild(highlightsList);
         highlights.appendChild(toggleButton);
@@ -887,40 +934,100 @@ class ArchiveManager {
         overview.appendChild(overviewSummary);
         overview.appendChild(overviewMood);
         
+        const highlightsSection = this._createCollapsibleSection(archive, 'highlights');
+        const tagsSection = this._createCollapsibleSection(archive, 'tags');
+
         content.appendChild(title);
         content.appendChild(streamer);
         content.appendChild(overview);
-        content.appendChild(highlights);
-        content.appendChild(tags);
-        
-        card.appendChild(img);
-        card.appendChild(content);
-        card.appendChild(footer);
-        
-        return card;
+        content.appendChild(highlightsSection);
+        content.appendChild(tagsSection);
+
+        return content;
     }
 
-    timestampToSeconds(timestamp) {
-        const parts = timestamp.split(':').map(Number).reverse();
-        return parts.reduce((total, part, index) => total + part * Math.pow(60, index), 0);
-    }
+    _createCollapsibleSection(archive, type) {
+        const container = document.createElement('div');
+        container.className = `${type}-container collapsible`;
 
-    formatDuration(totalSeconds) {
-        const hours = Math.floor(totalSeconds / 3600);
-        const minutes = Math.floor((totalSeconds % 3600) / 60);
-        const seconds = totalSeconds % 60;
+        const title = document.createElement('strong');
+        title.textContent = type === 'highlights' ? '見どころ：' : 'タグ：';
+        title.className = 'collapsible-trigger';
 
-        let durationStr = "";
-        if (hours > 0) {
-            durationStr += `${hours}時間`;
+        const listContainer = document.createElement('div');
+        listContainer.className = `${type}-list collapsible-content`;
+
+        if (type === 'highlights') {
+            archive.highlights.forEach(highlight => {
+                const li = document.createElement('li');
+                li.classList.add('clickable-highlight');
+                li.title = `クリックして ${highlight.timestamp} から再生`;
+                li.addEventListener('click', (e) => {
+                    const seconds = timestampToSeconds(highlight.timestamp);
+                    window.location.href = `${getBasePath()}/pages/${archive.videoId}.html?t=${seconds}`;
+                });
+
+                const h3 = document.createElement('h3');
+                h3.textContent = highlight.title;
+
+                const timestamp = document.createElement('span');
+                timestamp.className = 'timestamp';
+                timestamp.textContent = highlight.timestamp;
+
+                const highlightType = document.createElement('span');
+                highlightType.className = `highlight-type ${highlight.type}`;
+                highlightType.textContent = highlight.type;
+
+                const description = document.createElement('p');
+                description.textContent = highlight.description;
+
+                li.appendChild(h3);
+                li.appendChild(timestamp);
+                li.appendChild(document.createTextNode(' / '));
+                li.appendChild(highlightType);
+                li.appendChild(description);
+                listContainer.appendChild(li);
+            });
+        } else { // tags
+            const tags = document.createElement('div');
+            tags.className = 'tags';
+            archive.tags.forEach(tag => {
+                const tagSpan = document.createElement('span');
+                tagSpan.className = 'tag clickable-tag';
+                tagSpan.textContent = `#${tag}`;
+                tagSpan.title = `タグ「${tag}」で絞り込む`;
+                tagSpan.addEventListener('click', () => this.filterByTag(tag));
+                tags.appendChild(tagSpan);
+            });
+            listContainer.appendChild(tags);
         }
-        if (minutes > 0) {
-            durationStr += `${minutes}分`;
-        }
-        if (seconds > 0 || durationStr === "") {
-            durationStr += `${seconds}秒`;
-        }
-        return durationStr.trim();
+
+        const toggleButton = document.createElement('button');
+        toggleButton.className = `toggle-${type}`;
+        toggleButton.textContent = 'もっと見る';
+
+        const toggleSection = () => {
+            const isOpen = container.classList.toggle('open');
+            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+
+            if (isOpen) {
+                listContainer.style.maxHeight = listContainer.scrollHeight + 'px';
+            } else {
+                listContainer.style.maxHeight = null;
+                if (type === 'highlights') {
+                    container.closest('.archive-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        };
+
+        title.addEventListener('click', toggleSection);
+        toggleButton.addEventListener('click', toggleSection);
+
+        container.appendChild(title);
+        container.appendChild(listContainer);
+        container.appendChild(toggleButton);
+
+        return container;
     }
 
     setupHintDialog() {
@@ -944,7 +1051,6 @@ class ArchiveManager {
             });
         }
 
-        // あとで見るダイアログの設定
         const watchLaterDialog = document.getElementById('watch-later-dialog');
         const closeWatchLaterButton = document.getElementById('close-watch-later-dialog');
 

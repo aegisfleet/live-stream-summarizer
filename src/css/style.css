@@ -41,7 +41,7 @@ header {
 }
 
 #site-description {
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa;
     padding: 1.5rem;
     margin: 0 auto 0.5rem auto;
     max-width: 1800px;
@@ -269,7 +269,7 @@ main {
     margin-top: auto;
     padding: 0 1rem 1rem;
     display: flex;
-    justify-content: space-between; /* Changed to space-between */
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
 }
@@ -315,7 +315,6 @@ footer {
     margin-top: 1rem;
 }
 
-/* クリック可能な要素のカーソルをポインターに変更し、変化を滑らかにする */
 .clickable-thumbnail,
 .clickable-title,
 .clickable-highlight {
@@ -323,12 +322,10 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
-/* サムネイルのホバー効果 */
 .clickable-thumbnail:hover {
     opacity: 0.85;
 }
 
-/* タイトルのホバー効果 */
 .clickable-title:hover {
     text-decoration: underline;
     color: #0056b3;
@@ -336,12 +333,12 @@ footer {
 
 .clickable-streamer {
     cursor: pointer;
-    color: #007bff; /* リンクのような色に設定 */
-    transition: color 0.2s ease-in-out; /* ホバー時の変化を滑らかに */
+    color: #007bff;
+    transition: color 0.2s ease-in-out;
 }
 
 .clickable-streamer:hover {
-    color: #0056b3; /* ホバー時の色 */
+    color: #0056b3;
 }
 
 .clickable-tag {
@@ -350,12 +347,11 @@ footer {
 }
 
 .clickable-tag:hover {
-    background-color: #e6f9ff; /* もしくは、サイトのデザインに合った色 */
+    background-color: #e6f9ff;
 }
 
-/* 見どころリスト項目のホバー効果 */
 .clickable-highlight:hover {
-    background-color: #e6f9ff; /* より自然な背景色に変更 */
+    background-color: #e6f9ff;
 }
 
 .tags-container {
@@ -390,10 +386,9 @@ footer {
 }
 
 #site-description .collapsible-content {
-    max-height: 75px; /* サイト説明の初期表示高さ */
+    max-height: 75px;
 }
 
-/* グラデーションオーバーレイは、実際にコンテンツがオーバーフローしている場合のみ表示 */
 .collapsible .collapsible-content::after {
     content: '';
     position: absolute;
@@ -402,11 +397,9 @@ footer {
     right: 0;
     height: 30px;
     background: linear-gradient(to top, var(--card-background), transparent);
-    /* デフォルトでは非表示 */
     display: none;
 }
 
-/* コンテンツがオーバーフローしている場合のみオーバーレイを表示 */
 .collapsible .collapsible-content.has-overflow::after,
 #site-description .collapsible-content::after,
 .highlights.collapsible .collapsible-content::after {
@@ -414,11 +407,11 @@ footer {
 }
 
 #site-description .collapsible-content::after {
-    background: linear-gradient(to top, #e0f7fa, transparent); /* サイト説明の背景色に合わせる */
+    background: linear-gradient(to top, #e0f7fa, transparent);
 }
 
 .collapsible.open .collapsible-content {
-    max-height: none; /* JSで高さを制御するため */
+    max-height: none;
 }
 
 .collapsible.open .collapsible-content::after {
@@ -474,58 +467,58 @@ footer {
 }
 
 #back-to-top {
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #007bff; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 #back-to-home {
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    left: 30px; /* Place the button 70px from the left */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #007bff; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 #watch-later {
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    left: 30px; /* Place the button 10px from the left */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #007bff; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
@@ -563,17 +556,17 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #0056b3; /* Add a darker background on hover */
+    background-color: #0056b3;
     opacity: 0.9;
 }
 
 #back-to-home:hover {
-    background-color: #0056b3; /* Add a darker background on hover */
+    background-color: #0056b3;
     opacity: 0.9;
 }
 
 #watch-later:hover {
-    background-color: #0056b3; /* Add a darker background on hover */
+    background-color: #0056b3;
     opacity: 0.9;
 }
 
@@ -584,8 +577,8 @@ footer {
 #watch-later:active,
 #watch-later:focus {
     opacity: 1;
-    background-color: #007bff; /* Ensure it's the default color */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Maintain shadow */
+    background-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .filter-header {
@@ -645,7 +638,6 @@ footer {
     cursor: pointer;
 }
 
-/* 個別ページ用スタイル */
 #detail-container {
     max-width: 1800px;
     margin: 0 auto;
@@ -704,7 +696,6 @@ footer {
 
 .youtube-embed iframe {
     width: 100%;
-    /* height: 600px; JSで動的に設定するため削除 */
     border-radius: 8px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -799,7 +790,7 @@ footer {
 
 .detail-actions {
     display: flex;
-    justify-content: center; /* Changed to center */
+    justify-content: center;
     align-items: center;
     padding-top: 1rem;
     border-top: 1px solid #e0e0e0;
@@ -814,7 +805,7 @@ footer {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.2s ease;
-    margin-right: auto; /* Added to push button to the left */
+    margin-right: auto;
 }
 
 .back-button:hover {
@@ -827,7 +818,6 @@ footer {
     justify-content: center;
 }
 
-/* レスポンシブデザイン */
 .detail-video.sticky-active {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -858,7 +848,6 @@ footer {
     }
 }
 
-/* 2カラムレイアウト用のスタイル */
 @media (min-width: 769px) {
     .detail-main-content {
         display: flex;
@@ -872,7 +861,6 @@ footer {
 
     .detail-highlights {
         flex: 1;
-        /* max-height: 600px; JSで動的に設定するため削除 */
-        overflow-y: auto; /* コンテンツが多ければスクロール */
+        overflow-y: auto;
     }
 }

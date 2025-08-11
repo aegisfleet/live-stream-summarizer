@@ -59,16 +59,6 @@ class DetailPageManager {
                 const url = new URL(window.location);
                 url.searchParams.set('t', seconds);
                 history.pushState({ t: seconds }, '', url);
-
-                const copyButton = document.getElementById('copy-button');
-                if (copyButton) {
-                    copyButton.title = 'タイトルと現在の再生位置のURLをコピー';
-                }
-
-                const shareButton = document.getElementById('share-button');
-                if (shareButton) {
-                    shareButton.title = '現在の再生位置で𝕏で共有';
-                }
             });
             
             highlightsList.appendChild(li);
@@ -232,6 +222,15 @@ class DetailPageManager {
                 const shareText = `${this.archiveData.title}\n${window.location.href}`;
                 const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
                 window.open(twitterIntentUrl, '_blank');
+            });
+        }
+
+        const shareHelpButton = document.getElementById('share-help-button');
+        const shareHelpText = document.getElementById('share-help-text');
+
+        if (shareHelpButton && shareHelpText) {
+            shareHelpButton.addEventListener('click', () => {
+                shareHelpText.classList.toggle('show');
             });
         }
     }

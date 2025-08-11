@@ -1,8 +1,10 @@
+import { timestampToSeconds } from './utils.js';
+
 class DetailPageManager {
     constructor() {
-        this.archiveData = pageData; // テンプレートから渡されるデータ
+        this.archiveData = pageData;
         this.player = null;
-        this.resizeTimer = null; // リサイズイベントのdebounce用タイマー
+        this.resizeTimer = null;
         this.init();
     }
 
@@ -47,9 +49,8 @@ class DetailPageManager {
             li.appendChild(type);
             li.appendChild(description);
             
-            // クリックで埋め込みプレーヤーの該当時間にジャンプ
             li.addEventListener('click', () => {
-                const seconds = this.timestampToSeconds(highlight.timestamp);
+                const seconds = timestampToSeconds(highlight.timestamp);
                 const isDesktop = window.matchMedia('(min-width: 769px)').matches;
                 this.seekToTime(seconds, isDesktop);
             });
@@ -72,15 +73,12 @@ class DetailPageManager {
     }
 
     initYouTubePlayer() {
-        // YouTube IFrame APIが読み込まれているかチェック
         if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
-            // YouTube IFrame APIを動的に読み込み
             const tag = document.createElement('script');
             tag.src = 'https://www.youtube.com/iframe_api';
             const firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             
-            // API読み込み完了後にプレーヤーを初期化
             window.onYouTubeIframeAPIReady = () => {
                 this.createPlayer();
             };
@@ -93,7 +91,6 @@ class DetailPageManager {
         const playerElement = document.getElementById('youtube-player');
         if (!playerElement) return;
 
-        // 親要素の幅に基づいて、アスペクト比16:9でプレーヤーの高さを動的に計算します。
         const playerWidth = playerElement.parentElement.clientWidth || 1000;
         const playerHeight = playerWidth * (9 / 16);
 
@@ -107,27 +104,28 @@ class DetailPageManager {
                 'modestbranding': 1
             },
             events: {
-                'onReady': (event) => {
-                    // プレーヤーの準備ができたら、各種設定を実行
-                    this.setupResizeListener();
-                    this.adjustHighlightsHeight(); // 初回読み込み時に高さを調整
-
-                    // URLから再生時間を取得してシーク
-                    const params = new URLSearchParams(window.location.search);
-                    const time = params.get('t');
-                    if (time) {
-                        this.seekToTime(Number(time), true);
-                    }
-                },
-                'onStateChange': (event) => {
-                    // プレーヤーの状態変更を監視
-                }
+                'onReady': this._onPlayerReady.bind(this),
+                'onStateChange': this._onPlayerStateChange.bind(this)
             }
         });
     }
 
+    _onPlayerReady(event) {
+        this.setupResizeListener();
+        this.adjustHighlightsHeight();
+
+        const params = new URLSearchParams(window.location.search);
+        const time = params.get('t');
+        if (time) {
+            this.seekToTime(Number(time), true);
+        }
+    }
+
+    _onPlayerStateChange(event) {
+        // This can be used to handle state changes in the future
+    }
+
     setupResizeListener() {
-        // debounce関数でリサイズイベントの発火を制御し、過剰な再計算を防ぎます。
         const debounce = (func, delay) => {
             return (...args) => {
                 clearTimeout(this.resizeTimer);
@@ -150,28 +148,24 @@ class DetailPageManager {
         const newHeight = newWidth * (9 / 16);
         this.player.setSize(newWidth, newHeight);
 
-        // プレーヤーのリサイズに合わせて、見どころ欄の高さも調整
         this.adjustHighlightsHeight();
     }
 
     adjustHighlightsHeight() {
         const highlights = document.querySelector('.detail-highlights');
-        const playerIframe = document.getElementById('youtube-player'); // YT.Playerのiframe
+        const playerIframe = document.getElementById('youtube-player');
 
         if (!highlights || !playerIframe) return;
 
-        // PC/タブレット表示の場合のみ高さを調整
         if (window.matchMedia('(min-width: 769px)').matches) {
             const playerHeight = playerIframe.offsetHeight;
             highlights.style.height = `${playerHeight}px`;
         } else {
-            // スマホ表示では、インラインスタイルをリセットしてCSSの制御に戻す
             highlights.style.height = 'auto';
         }
     }
 
     setupEventListeners() {
-        // ホームに戻るボタン（詳細ページでは常に表示）
         const backToHomeButton = document.getElementById('back-to-home');
         if (backToHomeButton) {
             backToHomeButton.classList.add('show');
@@ -180,7 +174,6 @@ class DetailPageManager {
             });
         }
 
-        // トップに戻るボタン
         const backToTopButton = document.getElementById('back-to-top');
         if (backToTopButton) {
             window.onscroll = function() {
@@ -196,7 +189,6 @@ class DetailPageManager {
             });
         }
 
-        // コピーボタン
         const copyButton = document.getElementById('copy-button');
         if (copyButton) {
             copyButton.addEventListener('click', () => {
@@ -216,7 +208,6 @@ class DetailPageManager {
             });
         }
 
-        // 共有ボタン
         const shareButton = document.getElementById('share-button');
         if (shareButton) {
             shareButton.addEventListener('click', () => {
@@ -244,11 +235,6 @@ class DetailPageManager {
         }
     }
 
-    timestampToSeconds(timestamp) {
-        const parts = timestamp.split(':').map(Number).reverse();
-        return parts.reduce((total, part, index) => total + part * Math.pow(60, index), 0);
-    }
-
     addStructuredData() {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
@@ -271,7 +257,6 @@ class DetailPageManager {
     }
 }
 
-// ページ読み込み完了時に初期化
 document.addEventListener('DOMContentLoaded', () => {
     new DetailPageManager();
 });

@@ -55,6 +55,10 @@ class DetailPageManager {
                 const seconds = timestampToSeconds(highlight.timestamp);
                 this.seekToTime(seconds);
                 this.scrollToHighlight(seconds);
+
+                const url = new URL(window.location);
+                url.searchParams.set('t', seconds);
+                history.pushState({ t: seconds }, '', url);
             });
             
             highlightsList.appendChild(li);

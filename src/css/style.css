@@ -412,6 +412,10 @@ footer {
     max-height: 75px;
 }
 
+.highlights-list.collapsible-content {
+    max-height: 300px;
+}
+
 .collapsible .collapsible-content::after {
     content: '';
     position: absolute;
@@ -423,9 +427,7 @@ footer {
     display: none;
 }
 
-.collapsible .collapsible-content.has-overflow::after,
-#site-description .collapsible-content::after,
-.highlights.collapsible .collapsible-content::after {
+.collapsible .collapsible-content.has-overflow::after {
     display: block;
 }
 

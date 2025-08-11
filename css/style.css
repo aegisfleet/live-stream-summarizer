@@ -373,10 +373,6 @@ footer {
     background-color: #e6f9ff;
 }
 
-.clickable-highlight:hover {
-    background-color: #e6f9ff;
-}
-
 .tags-container {
     margin-top: var(--spacing-medium);
 }
@@ -762,7 +758,7 @@ footer {
 }
 
 .highlight-item:hover {
-    background-color: #e9ecef;
+    background-color: #e6f9ff;
 }
 
 .highlight-item h3 {

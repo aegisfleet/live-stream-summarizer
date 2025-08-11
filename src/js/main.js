@@ -828,7 +828,7 @@ class ArchiveManager {
         if (type === 'highlights') {
             archive.highlights.forEach(highlight => {
                 const li = document.createElement('li');
-                li.classList.add('clickable-highlight');
+                li.classList.add('clickable-highlight', 'highlight-item');
                 li.title = `クリックして ${highlight.timestamp} から再生`;
                 li.addEventListener('click', (e) => {
                     const seconds = timestampToSeconds(highlight.timestamp);

@@ -198,15 +198,15 @@
     "date": "2025-08-10T22:02:00.000Z"
   },
   {
-    "videoId": "OWf9gqmjiZU",
-    "videoUrl": "https://www.youtube.com/watch?v=OWf9gqmjiZU",
-    "streamer": "ときのそら 🐻",
-    "date": "2025-08-10T22:03:00.000Z"
-  },
-  {
     "videoId": "QAem1fxefoA",
     "videoUrl": "https://www.youtube.com/watch?v=QAem1fxefoA",
     "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-10T22:03:00.000Z"
+  },
+  {
+    "videoId": "OWf9gqmjiZU",
+    "videoUrl": "https://www.youtube.com/watch?v=OWf9gqmjiZU",
+    "streamer": "ときのそら 🐻",
     "date": "2025-08-10T22:03:00.000Z"
   },
   {
@@ -276,10 +276,22 @@
     "date": "2025-08-11T13:02:00.000Z"
   },
   {
+    "videoId": "350CHsyLoiA",
+    "videoUrl": "https://www.youtube.com/watch?v=350CHsyLoiA",
+    "streamer": "ときのそら 🐻",
+    "date": "2025-08-11T15:01:00.000Z"
+  },
+  {
+    "videoId": "b9YKCwZQkWY",
+    "videoUrl": "https://www.youtube.com/watch?v=b9YKCwZQkWY",
+    "streamer": "博衣こより",
+    "date": "2025-08-11T17:00:00.000Z"
+  },
+  {
     "videoId": "l0zSCuMAklo",
     "videoUrl": "https://www.youtube.com/watch?v=l0zSCuMAklo",
     "streamer": "ロボ子さん 🤖",
-    "date": "2025-08-11T17:00:00.000Z"
+    "date": "2025-08-11T17:02:00.000Z"
   },
   {
     "videoId": "QpC6dgVP9RU",
@@ -288,10 +300,10 @@
     "date": "2025-08-11T18:00:00.000Z"
   },
   {
-    "videoId": "VSQM3udw-QU",
-    "videoUrl": "https://www.youtube.com/watch?v=VSQM3udw-QU",
-    "streamer": "角巻わため 🐏",
-    "date": "2025-08-11T19:00:00.000Z"
+    "videoId": "Toi07r9oQXM",
+    "videoUrl": "https://www.youtube.com/watch?v=Toi07r9oQXM",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-08-11T18:00:00.000Z"
   },
   {
     "videoId": "_KS4ywbrJkc",
@@ -306,10 +318,22 @@
     "date": "2025-08-11T19:00:00.000Z"
   },
   {
+    "videoId": "VSQM3udw-QU",
+    "videoUrl": "https://www.youtube.com/watch?v=VSQM3udw-QU",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-11T19:00:00.000Z"
+  },
+  {
     "videoId": "DW-kTCNnfH8",
     "videoUrl": "https://www.youtube.com/watch?v=DW-kTCNnfH8",
     "streamer": "宝鐘マリン 🏴☠",
     "date": "2025-08-11T20:00:00.000Z"
+  },
+  {
+    "videoId": "Ai4EdiOeZac",
+    "videoUrl": "https://www.youtube.com/watch?v=Ai4EdiOeZac",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-11T21:00:00.000Z"
   },
   {
     "videoId": "Q8_AAgliafs",
@@ -334,6 +358,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=zwWf5WFqKlM",
     "streamer": "雪花ラミィ",
     "date": "2025-08-11T23:30:00.000Z"
+  },
+  {
+    "videoId": "OYErjwfEzIU",
+    "videoUrl": "https://www.youtube.com/watch?v=OYErjwfEzIU",
+    "streamer": "博衣こより",
+    "date": "2025-08-12T07:00:00.000Z"
   },
   {
     "videoId": "sa8S6bQzOEQ",

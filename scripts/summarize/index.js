@@ -114,10 +114,11 @@ async function getLiveChatMessages(videoId) {
             id: videoId,
         });
 
-        const liveChatId = videoResponse.data.items[0]?.liveStreamingDetails?.activeLiveChatId;
+        const liveStreamingDetails = videoResponse.data.items[0]?.liveStreamingDetails;
+        const liveChatId = liveStreamingDetails?.activeLiveChatId || liveStreamingDetails?.liveChatId;
 
         if (!liveChatId) {
-            console.log(`No active live chat found for video: ${videoId}`);
+            console.log(`No live chat found for video: ${videoId}`);
             return [];
         }
 

@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
+const { google } = require('googleapis');
 
 class PageGenerator {
     constructor() {
@@ -7,12 +9,57 @@ class PageGenerator {
         this.outputDir = path.join(__dirname, '../../src/pages');
         this.dataPath = path.join(__dirname, '../../src/data/summaries.json');
         this.sitemapPath = path.join(__dirname, '../../src/sitemap.xml');
+        this.youtube = google.youtube({
+            version: 'v3',
+            auth: process.env.YOUTUBE_API_KEY,
+        });
+    }
+
+    async fetchVideoStatistics(videoIds) {
+        try {
+            console.log(`Fetching statistics for ${videoIds.length} videos...`);
+            const response = await this.youtube.videos.list({
+                part: 'statistics',
+                id: videoIds.join(','),
+                maxResults: 50,
+            });
+
+            const statistics = {};
+            if (response.data.items) {
+                for (const item of response.data.items) {
+                    statistics[item.id] = {
+                        viewCount: item.statistics.viewCount ? parseInt(item.statistics.viewCount, 10) : 0,
+                        likeCount: item.statistics.likeCount ? parseInt(item.statistics.likeCount, 10) : 0,
+                    };
+                }
+            }
+            console.log(`Successfully fetched statistics for ${Object.keys(statistics).length} videos.`);
+            return statistics;
+        } catch (error) {
+            console.error('Error fetching video statistics:', error.message);
+            return {};
+        }
     }
 
     async generatePages() {
         try {
-            const data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8'));
+            let data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8'));
             
+            const videoIds = data.map(archive => archive.videoId);
+            if (videoIds.length > 0) {
+                const videoStats = await this.fetchVideoStatistics(videoIds);
+                data = data.map(archive => {
+                    const stats = videoStats[archive.videoId];
+                    return {
+                        ...archive,
+                        viewCount: stats ? stats.viewCount : 0,
+                        likeCount: stats ? stats.likeCount : 0,
+                    };
+                });
+                fs.writeFileSync(this.dataPath, JSON.stringify(data, null, 2), 'utf8');
+                console.log('Successfully updated summaries.json with video statistics.');
+            }
+
             // 出力ディレクトリをクリーンアップ
             if (fs.existsSync(this.outputDir)) {
                 fs.rmSync(this.outputDir, { recursive: true, force: true });

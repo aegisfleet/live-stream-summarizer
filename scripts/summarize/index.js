@@ -470,13 +470,21 @@ async function updateSummary(videoId) {
 
 // メイン処理
 async function main() {
-    const videoIdArg = process.argv.find(arg => arg.startsWith('--videoId='));
+    // A simple command-line argument parser
+    // The first argument after the script name is treated as the videoId
+    const videoId = process.argv[2];
 
-    if (videoIdArg) {
-        const videoId = videoIdArg.split('=')[1];
+    if (videoId && !videoId.startsWith('--')) {
         await updateSummary(videoId);
     } else {
-        await generateSummaries();
+        // Handle the case where the argument might still be passed with a flag
+        const videoIdArg = process.argv.find(arg => arg.startsWith('--videoId='));
+        if (videoIdArg) {
+            const videoIdFromFlag = videoIdArg.split('=')[1];
+            await updateSummary(videoIdFromFlag);
+        } else {
+            await generateSummaries();
+        }
     }
 }
 

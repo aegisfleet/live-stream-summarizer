@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "ホロライブ配信アーカイブ要約サイト",
   "scripts": {
-    "fetch-schedule": "node scripts/fetch-schedule",
-    "check-archive": "node scripts/check-archive",
-    "summarize": "node scripts/summarize",
-    "cleanup-summaries": "node scripts/cleanup-summaries",
-    "generate-pages": "node scripts/generate-pages",
+    "fetch-schedule": "node scripts/fetch-schedule/index.js",
+    "check-archive": "node scripts/check-archive/index.js",
+    "summarize": "node scripts/summarize/index.js",
+    "cleanup-summaries": "node scripts/cleanup-summaries/index.js",
+    "generate-pages": "node scripts/generate-pages/index.js",
     "start": "node server.js"
   },
   "dependencies": {

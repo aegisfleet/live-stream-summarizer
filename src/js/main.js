@@ -1,4 +1,4 @@
-import { timestampToSeconds, formatDuration } from './utils.js';
+import { timestampToSeconds, formatDuration, formatNumber } from './utils.js';
 
 function getBasePath() {
     const repoName = 'live-stream-summarizer';
@@ -664,6 +664,14 @@ class ArchiveManager {
         duration.className = 'duration';
         duration.textContent = `配信時間：${formatDuration(archive.duration)}`;
 
+        const viewCount = document.createElement('p');
+        viewCount.className = 'view-count';
+        viewCount.textContent = `再生数: ${formatNumber(archive.viewCount)}`;
+
+        const likeCount = document.createElement('p');
+        likeCount.className = 'like-count';
+        likeCount.textContent = `高評価数: ${formatNumber(archive.likeCount)}`;
+
         const streamer = document.createElement('p');
         streamer.className = 'streamer-name clickable-streamer';
         streamer.textContent = `配信者: ${archive.streamer}`;
@@ -683,6 +691,8 @@ class ArchiveManager {
 
         overview.appendChild(dateElement);
         overview.appendChild(duration);
+        overview.appendChild(viewCount);
+        overview.appendChild(likeCount);
         overview.appendChild(overviewSummary);
         overview.appendChild(overviewMood);
 

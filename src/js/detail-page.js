@@ -26,8 +26,10 @@ class DetailPageManager {
 
         highlightsList.innerHTML = '';
         this.archiveData.highlights.forEach(highlight => {
+            const seconds = timestampToSeconds(highlight.timestamp);
             const li = document.createElement('li');
             li.classList.add('highlight-item');
+            li.id = `highlight-${seconds}`;
             
             const title = document.createElement('h3');
             title.textContent = highlight.title;
@@ -117,7 +119,9 @@ class DetailPageManager {
         const params = new URLSearchParams(window.location.search);
         const time = params.get('t');
         if (time) {
-            this.seekToTime(Number(time), true);
+            const seconds = Number(time);
+            this.seekToTime(seconds);
+            this.scrollToHighlight(seconds);
         }
     }
 
@@ -218,20 +222,21 @@ class DetailPageManager {
         }
     }
 
-    seekToTime(seconds, scroll = false) {
+    seekToTime(seconds) {
         if (this.player && this.player.seekTo) {
             this.player.seekTo(seconds, true);
             this.player.playVideo();
-            if (scroll) {
-                this.scrollToPlayer();
-            }
         }
     }
 
-    scrollToPlayer() {
-        const playerElement = document.getElementById('youtube-player');
-        if (playerElement) {
-            playerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    scrollToHighlight(seconds) {
+        const highlightElement = document.getElementById(`highlight-${seconds}`);
+        if (highlightElement) {
+            highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            highlightElement.classList.add('flash');
+            setTimeout(() => {
+                highlightElement.classList.remove('flash');
+            }, 1000);
         }
     }
 

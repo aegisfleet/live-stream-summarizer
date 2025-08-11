@@ -509,7 +509,7 @@ class ArchiveManager {
             filterContainer.appendChild(button);
         });
 
-        this.checkTagOverflow();
+        this.checkContentOverflow(filterContainer);
         this.selectAllTags();
     }
 
@@ -523,6 +523,8 @@ class ArchiveManager {
             return;
         }
 
+        this.checkContentOverflow(collapsibleContent);
+
         const toggleDescription = () => {
             const isOpen = siteDescription.classList.toggle('open');
             toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
@@ -532,6 +534,7 @@ class ArchiveManager {
                 collapsibleContent.classList.remove('has-overflow');
             } else {
                 collapsibleContent.style.maxHeight = null;
+                this.checkContentOverflow(collapsibleContent);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         };
@@ -547,22 +550,18 @@ class ArchiveManager {
         this.filterArchives();
     }
 
-    checkTagOverflow() {
-        const content = document.querySelector('.filter-group.collapsible .collapsible-content');
+    checkContentOverflow(content) {
         if (!content) return;
 
-        const originalMaxHeight = content.style.maxHeight;
-        content.style.maxHeight = 'none';
-        const scrollHeight = content.scrollHeight;
-        content.style.maxHeight = originalMaxHeight;
-
-        const currentMaxHeight = parseInt(window.getComputedStyle(content).maxHeight);
-        
-        if (scrollHeight > currentMaxHeight) {
-            content.classList.add('has-overflow');
-        } else {
-            content.classList.remove('has-overflow');
-        }
+        const check = () => {
+            const isOverflowing = content.scrollHeight > content.clientHeight;
+            if (isOverflowing) {
+                content.classList.add('has-overflow');
+            } else {
+                content.classList.remove('has-overflow');
+            }
+        };
+        setTimeout(check, 50);
     }
 
     filterByTag(clickedTag) {
@@ -881,8 +880,10 @@ class ArchiveManager {
 
             if (isOpen) {
                 listContainer.style.maxHeight = listContainer.scrollHeight + 'px';
+                listContainer.classList.remove('has-overflow');
             } else {
                 listContainer.style.maxHeight = null;
+                this.checkContentOverflow(listContainer);
                 if (type === 'highlights') {
                     container.closest('.archive-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
@@ -895,6 +896,8 @@ class ArchiveManager {
         container.appendChild(title);
         container.appendChild(listContainer);
         container.appendChild(toggleButton);
+
+        this.checkContentOverflow(listContainer);
 
         return container;
     }

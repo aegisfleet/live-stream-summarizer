@@ -423,9 +423,7 @@ footer {
     display: none;
 }
 
-.collapsible .collapsible-content.has-overflow::after,
-#site-description .collapsible-content::after,
-.highlights.collapsible .collapsible-content::after {
+.collapsible .collapsible-content.has-overflow::after {
     display: block;
 }
 

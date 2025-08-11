@@ -242,13 +242,6 @@ main {
     font-weight: bold;
 }
 
-.archive-card .date {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0;
-    line-height: 1;
-}
-
 .archive-card .summary {
     margin-bottom: 1rem;
 }
@@ -257,6 +250,7 @@ main {
     font-size: 0.9rem;
 }
 
+.archive-date,
 .duration,
 .view-count,
 .like-count {

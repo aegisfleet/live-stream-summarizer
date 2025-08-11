@@ -53,8 +53,8 @@ class DetailPageManager {
             
             li.addEventListener('click', () => {
                 const seconds = timestampToSeconds(highlight.timestamp);
-                const isDesktop = window.matchMedia('(min-width: 769px)').matches;
-                this.seekToTime(seconds, isDesktop);
+                this.seekToTime(seconds);
+                this.scrollToHighlight(seconds);
             });
             
             highlightsList.appendChild(li);
@@ -232,7 +232,26 @@ class DetailPageManager {
     scrollToHighlight(seconds) {
         const highlightElement = document.getElementById(`highlight-${seconds}`);
         if (highlightElement) {
-            highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+            if (isDesktop) {
+                const videoPlayer = document.getElementById('youtube-player');
+                if (videoPlayer) {
+                    videoPlayer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                const scrollContainer = document.querySelector('.detail-highlights');
+                if (scrollContainer) {
+                    const containerRect = scrollContainer.getBoundingClientRect();
+                    const elementRect = highlightElement.getBoundingClientRect();
+                    const scrollOffset = (elementRect.top + scrollContainer.scrollTop) - containerRect.top - (containerRect.height / 2) + (elementRect.height / 2);
+                    scrollContainer.scrollTo({
+                        top: scrollOffset,
+                        behavior: 'smooth'
+                    });
+                }
+            } else {
+                highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
             highlightElement.classList.add('flash');
             setTimeout(() => {
                 highlightElement.classList.remove('flash');

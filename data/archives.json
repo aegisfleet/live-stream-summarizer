@@ -160,6 +160,16 @@
     "duration": 1156
   },
   {
+    "videoId": "Bkb9v0dgApI",
+    "videoUrl": "https://www.youtube.com/watch?v=Bkb9v0dgApI",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-08-11T07:30:00.000Z",
+    "title": "【 #朝ミオ 】真夏だよ～月曜日の朝だよ！おはみぉーん！",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Bkb9v0dgApI/mqdefault.jpg",
+    "endTime": "2025-08-10T23:44:59Z",
+    "duration": 4465
+  },
+  {
     "videoId": "H0xSUeyCFNM",
     "videoUrl": "https://www.youtube.com/watch?v=H0xSUeyCFNM",
     "streamer": "儒烏風亭らでん",
@@ -208,5 +218,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/HL15lT35MpE/mqdefault.jpg",
     "endTime": "2025-08-10T15:24:52Z",
     "duration": 5053
+  },
+  {
+    "videoId": "jToZE1Ip7n8",
+    "videoUrl": "https://www.youtube.com/watch?v=jToZE1Ip7n8",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-11T10:00:00.000Z",
+    "title": "【らでん自習室】8月11日10:00~11:30 【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/jToZE1Ip7n8/mqdefault.jpg",
+    "endTime": "2025-08-11T02:42:38Z",
+    "duration": 6143
   }
 ]

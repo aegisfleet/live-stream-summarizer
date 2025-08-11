@@ -148,6 +148,13 @@ class DetailPageManager {
         const newWidth = playerElement.parentElement.clientWidth;
         const newHeight = newWidth * (9 / 16);
         this.player.setSize(newWidth, newHeight);
+
+        // ハイライトリストの高さを動画の高さに合わせる
+        const highlightsList = document.getElementById('highlights-list');
+        if (highlightsList) {
+            highlightsList.style.maxHeight = `${newHeight}px`;
+            highlightsList.style.overflowY = 'auto'; // スクロール可能にする
+        }
     }
 
     setupEventListeners() {

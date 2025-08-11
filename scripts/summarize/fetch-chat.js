@@ -69,7 +69,11 @@ async function fetchChatReplay(videoId) {
         // Start fetching chat
         await liveChat.start();
 
-        console.log(`Successfully fetched ${chatMessages.length} chat messages for videoId: ${videoId}`);
+        if (chatMessages.length === 0) {
+            console.warn(`[WARNING] Fetched 0 chat messages for videoId: ${videoId}. This might be because the video has no chat replay (e.g., it was edited) or the chat is disabled.`);
+        } else {
+            console.log(`Successfully fetched ${chatMessages.length} chat messages for videoId: ${videoId}`);
+        }
 
         // The 'start' method resolves when the replay is fully fetched,
         // so we can stop it immediately.

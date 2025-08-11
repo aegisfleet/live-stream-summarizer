@@ -370,6 +370,11 @@ footer {
     transition: background-color 0.2s;
 }
 
+.highlight-item.flash {
+    background-color: #555;
+    transition: background-color 0.1s ease-in-out;
+}
+
 .clickable-tag:hover {
     background-color: #e6f9ff;
 }

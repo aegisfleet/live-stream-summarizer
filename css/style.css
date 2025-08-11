@@ -704,7 +704,7 @@ footer {
 
 .youtube-embed iframe {
     width: 100%;
-    height: 600px;
+    /* height: 600px; JSで動的に設定するため削除 */
     border-radius: 8px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -851,6 +851,11 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
     }
+
+    .detail-highlights {
+        max-height: none;
+        overflow-y: visible;
+    }
 }
 
 /* 2カラムレイアウト用のスタイル */
@@ -867,7 +872,7 @@ footer {
 
     .detail-highlights {
         flex: 1;
-        max-height: 600px; /* youtube-embed iframe の高さに合わせる */
+        /* max-height: 600px; JSで動的に設定するため削除 */
         overflow-y: auto; /* コンテンツが多ければスクロール */
     }
 }

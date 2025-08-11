@@ -20,3 +20,8 @@ export function formatDuration(totalSeconds) {
     }
     return durationStr.trim();
 }
+
+export function formatNumber(num) {
+    if (num === undefined || num === null) return '0';
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+}

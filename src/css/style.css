@@ -240,9 +240,16 @@ main {
     font-size: 0.9rem;
 }
 
-.duration {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+.duration,
+.view-count,
+.like-count {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.like-count {
+    margin-bottom: 1rem;
 }
 
 .overview-mood {

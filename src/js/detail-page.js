@@ -240,8 +240,13 @@ class DetailPageManager {
                 }
                 const scrollContainer = document.querySelector('.detail-highlights');
                 if (scrollContainer) {
-                    const targetScrollTop = highlightElement.offsetTop - (scrollContainer.offsetHeight / 2) + (highlightElement.offsetHeight / 2);
-                    scrollContainer.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+                    const containerRect = scrollContainer.getBoundingClientRect();
+                    const elementRect = highlightElement.getBoundingClientRect();
+                    const scrollOffset = (elementRect.top + scrollContainer.scrollTop) - containerRect.top - (containerRect.height / 2) + (elementRect.height / 2);
+                    scrollContainer.scrollTo({
+                        top: scrollOffset,
+                        behavior: 'smooth'
+                    });
                 }
             } else {
                 highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });

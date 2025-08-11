@@ -19,6 +19,11 @@ on:
         type: boolean
         required: false
         default: false
+      skip_generate_summaries:
+        description: 'Skip Generate summaries'
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: update-summaries
@@ -53,6 +58,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Generate summaries
+        if: ${{ github.event.inputs.skip_generate_summaries != 'true' }}
         run: |
           if [ -n "${{ github.event.inputs.videoId }}" ]; then
             npm run summarize -- --videoId=${{ github.event.inputs.videoId }}
@@ -64,6 +70,8 @@ jobs:
 
       - name: Generate individual pages
         run: npm run generate-pages
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Commit and push changes
         run: |

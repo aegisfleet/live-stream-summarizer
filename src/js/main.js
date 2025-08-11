@@ -1,4 +1,4 @@
-import { timestampToSeconds, formatDuration, formatNumber } from './utils.js';
+import { formatDuration, formatNumber, timestampToSeconds } from './utils.js';
 
 function getBasePath() {
     const repoName = 'live-stream-summarizer';
@@ -662,7 +662,7 @@ class ArchiveManager {
 
         const duration = document.createElement('p');
         duration.className = 'duration';
-        duration.textContent = `配信時間：${formatDuration(archive.duration)}`;
+        duration.textContent = `配信時間: ${formatDuration(archive.duration)}`;
 
         const viewCount = document.createElement('p');
         viewCount.className = 'view-count';

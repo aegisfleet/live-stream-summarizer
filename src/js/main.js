@@ -21,6 +21,12 @@ class ArchiveManager {
         this.originalTitle = document.title;
         this.watchLaterList = new Set();
         this.isWatchLaterMode = false;
+        this.currentSortKey = 'date';
+        this.sortOrders = {
+            date: 'desc',
+            viewCount: 'desc',
+            likeCount: 'desc'
+        };
         
         this.init();
     }
@@ -60,7 +66,28 @@ class ArchiveManager {
         this.setupBackToHomeButton();
         this.setupWatchLaterButton();
         this.setupLoadMoreButton();
+        this.setupSortControls();
         this.setupHintDialog();
+    }
+
+    setupSortControls() {
+        const sortButtons = document.querySelectorAll('#sort-buttons button');
+        sortButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sortKey = button.dataset.sortKey;
+                if (this.currentSortKey === sortKey) {
+                    this.sortOrders[sortKey] = this.sortOrders[sortKey] === 'asc' ? 'desc' : 'asc';
+                } else {
+                    this.currentSortKey = sortKey;
+                }
+
+                sortButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                this.currentPage = 1;
+                this.renderArchives(true);
+            });
+        });
     }
 
     updateTitle() {
@@ -584,8 +611,14 @@ class ArchiveManager {
         if (clearGrid) {
             grid.innerHTML = '';
         }
-        
-        const sortedData = this.filteredData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const sortedData = this.filteredData.sort((a, b) => {
+            const order = this.sortOrders[this.currentSortKey] === 'asc' ? 1 : -1;
+            if (this.currentSortKey === 'date') {
+                return (new Date(a.date) - new Date(b.date)) * order;
+            }
+            return (b[this.currentSortKey] - a[this.currentSortKey]) * order;
+        });
         
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;
         const endIndex = startIndex + this.itemsPerPage;

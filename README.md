@@ -165,7 +165,7 @@ graph TD
     npm run summarize
 
     # 特定の動画の要約を更新
-    npm run summarize -- --videoId=xxxxxxxxxxx
+    npm run summarize -- xxxxxxxxxxx
 
     # 各配信の個別ページを生成
     npm run generate-pages

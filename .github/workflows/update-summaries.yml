@@ -61,7 +61,7 @@ jobs:
         if: ${{ github.event.inputs.skip_generate_summaries != 'true' }}
         run: |
           if [ -n "${{ github.event.inputs.videoId }}" ]; then
-            npm run summarize -- --videoId=${{ github.event.inputs.videoId }}
+            npm run summarize -- ${{ github.event.inputs.videoId }}
           else
             npm run summarize
           fi

@@ -457,10 +457,11 @@ async function updateSummary(videoId) {
 
 // メイン処理
 async function main() {
-    const videoIdArg = process.argv.find(arg => arg.startsWith('--videoId='));
+    // process.argv[0] is 'node', process.argv[1] is the script path.
+    // The actual arguments start from index 2.
+    const videoId = process.argv[2];
 
-    if (videoIdArg) {
-        const videoId = videoIdArg.split('=')[1];
+    if (videoId) {
         await updateSummary(videoId);
     } else {
         await generateSummaries();

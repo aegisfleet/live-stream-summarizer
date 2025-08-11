@@ -238,6 +238,11 @@ class DetailPageManager {
                 if (videoPlayer) {
                     videoPlayer.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+                const scrollContainer = document.querySelector('.detail-highlights');
+                if (scrollContainer) {
+                    const targetScrollTop = highlightElement.offsetTop - (scrollContainer.offsetHeight / 2) + (highlightElement.offsetHeight / 2);
+                    scrollContainer.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+                }
             } else {
                 highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }

@@ -21,6 +21,12 @@ class ArchiveManager {
         this.originalTitle = document.title;
         this.watchLaterList = new Set();
         this.isWatchLaterMode = false;
+        this.currentSortKey = 'date';
+        this.sortOrders = {
+            date: 'desc',
+            viewCount: 'desc',
+            likeCount: 'desc'
+        };
         
         this.init();
     }
@@ -60,7 +66,30 @@ class ArchiveManager {
         this.setupBackToHomeButton();
         this.setupWatchLaterButton();
         this.setupLoadMoreButton();
+        this.setupSortControls();
         this.setupHintDialog();
+    }
+
+    setupSortControls() {
+        const sortButtons = document.querySelectorAll('#sort-buttons button');
+        sortButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sortKey = button.dataset.sortKey;
+                if (this.currentSortKey === sortKey) {
+                    this.sortOrders[sortKey] = this.sortOrders[sortKey] === 'desc' ? 'asc' : 'desc';
+                } else {
+                    this.currentSortKey = sortKey;
+                    // 他のキーから切り替えた場合は常に降順から開始
+                    this.sortOrders[sortKey] = 'desc';
+                }
+
+                sortButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                this.currentPage = 1;
+                this.renderArchives(true);
+            });
+        });
     }
 
     updateTitle() {
@@ -584,8 +613,29 @@ class ArchiveManager {
         if (clearGrid) {
             grid.innerHTML = '';
         }
-        
-        const sortedData = this.filteredData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const sortedData = [...this.filteredData].sort((a, b) => {
+            const order = this.sortOrders[this.currentSortKey] === 'asc' ? 1 : -1;
+            const key = this.currentSortKey;
+
+            let valA, valB;
+
+            if (key === 'date') {
+                valA = new Date(a[key]).getTime();
+                valB = new Date(b[key]).getTime();
+            } else {
+                valA = a[key];
+                valB = b[key];
+            }
+
+            if (valA < valB) {
+                return -1 * order;
+            }
+            if (valA > valB) {
+                return 1 * order;
+            }
+            return 0;
+        });
         
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;
         const endIndex = startIndex + this.itemsPerPage;

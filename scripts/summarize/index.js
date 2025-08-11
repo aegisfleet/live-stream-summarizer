@@ -3,7 +3,14 @@ const fs = require('fs').promises;
 const path = require('path');
 const config = require('../../config/default.json');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { google } = require('googleapis');
 const axios = require('axios');
+
+// YouTube APIの初期化
+const youtube = google.youtube({
+    version: 'v3',
+    auth: process.env.YOUTUBE_API_KEY,
+});
 
 // Gemini APIの初期化
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -33,7 +40,128 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
     }
 }
 
-async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer, thumbnailUrl) {
+// Helper function to parse timestamp string (e.g., "0:30", "1:05:10") to seconds
+function parseTimestampToSeconds(timestampStr) {
+    if (typeof timestampStr !== 'string') {
+        console.warn(`parseTimestampToSeconds received non-string input: ${timestampStr}. Returning 0.`);
+        return 0;
+    }
+    const parts = timestampStr.split(':').map(Number);
+
+    // Check if any part is NaN after conversion
+    if (parts.some(isNaN)) {
+        console.warn(`parseTimestampToSeconds received invalid number parts for: "${timestampStr}". Returning 0.`);
+        return 0;
+    }
+
+    if (parts.length === 3) {
+        return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    } else if (parts.length === 2) {
+        return parts[0] * 60 + parts[1];
+    }
+    console.warn(`parseTimestampToSeconds received unexpected timestamp format: "${timestampStr}". Returning 0.`);
+    return 0; // Default to 0 if format is unexpected
+}
+
+// Helper function to format seconds back to "HH:MM:SS" or "MM:SS"
+function formatTimestamp(totalSeconds) {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    const pad = (num) => num.toString().padStart(2, '0');
+
+    if (hours > 0) {
+        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+    return `${pad(minutes)}:${pad(seconds)}`;
+}
+
+function formatChatTimestamp(totalSeconds) {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+
+    const pad = (num) => num.toString().padStart(2, '0');
+
+    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+}
+
+// Helper function to format total seconds into a human-readable duration string
+function formatDuration(totalSeconds) {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    let durationStr = "";
+    if (hours > 0) {
+        durationStr += `${hours}時間`;
+    }
+    if (minutes > 0) {
+        durationStr += `${minutes}分`;
+    }
+    if (seconds > 0 || durationStr === "") { // Include seconds if no hours/minutes, or if it's 0 seconds
+        durationStr += `${seconds}秒`;
+    }
+    return durationStr.trim();
+}
+
+async function getLiveChatMessages(videoId) {
+    try {
+        console.log(`Fetching live chat ID for video: ${videoId}`);
+        const videoResponse = await youtube.videos.list({
+            part: 'liveStreamingDetails',
+            id: videoId,
+        });
+
+        const liveChatId = videoResponse.data.items[0]?.liveStreamingDetails?.activeLiveChatId;
+
+        if (!liveChatId) {
+            console.log(`No active live chat found for video: ${videoId}`);
+            return [];
+        }
+
+        console.log(`Found live chat ID: ${liveChatId}. Fetching messages...`);
+        let allMessages = [];
+        let nextPageToken;
+        const pollingIntervalMillis = 6000; // 6秒ごとにポーリング
+
+        do {
+            const chatResponse = await youtube.liveChatMessages.list({
+                liveChatId: liveChatId,
+                part: 'snippet,authorDetails',
+                pageToken: nextPageToken,
+                maxResults: 2000, // 最大値
+            });
+
+            const { items, nextPageToken: newNextPageToken, pollingIntervalMillis: newPollingInterval } = chatResponse.data;
+            if (items && items.length > 0) {
+                allMessages.push(...items);
+                console.log(`Fetched ${items.length} messages. Total: ${allMessages.length}`);
+            }
+
+            nextPageToken = newNextPageToken;
+
+            if (nextPageToken) {
+                // Use the polling interval suggested by the API, or our default
+                const waitTime = newPollingInterval || pollingIntervalMillis;
+                console.log(`Next page token found. Waiting for ${waitTime}ms before next fetch.`);
+                await new Promise(resolve => setTimeout(resolve, waitTime));
+            }
+
+        } while (nextPageToken);
+
+        console.log(`Finished fetching all chat messages for ${videoId}. Total: ${allMessages.length}`);
+        return allMessages;
+
+    } catch (error) {
+        console.error(`Error fetching live chat messages for ${videoId}:`, error.message);
+        // Do not re-throw, as summarization can continue without chat
+        return [];
+    }
+}
+
+async function generateSummary(videoId, videoDurationSeconds, videoTitle, streamer, thumbnailUrl, videoPublishedAt) {
     const formatExample = {
         "overview": {
             "summary": "配信の全体的な内容を200字程度で説明",
@@ -50,9 +178,9 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
         "tags": ["配信内容に関連するタグ（例：雑談、ゲーム実況、歌枠等）"]
     };
 
-    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, existingSummary = null) => {
+    const promptTemplate = (clipStart, clipEnd, formatExample, videoTitle, streamer, chatSegment, existingSummary = null) => {
         let prompt = `# 指示内容
-サムネイル画像から出演者やゲストなど動画の内容を把握し、動画の内容を要約してJSONオブジェクトを出力してください。
+サムネイル画像、動画の文字起こし、そして以下の視聴者のコメントを基に、この動画のパートを要約してJSONオブジェクトを出力してください。
 
 ## 最重要事項
 - 見どころの時間は最も重要な要素であり、正確な時間を記載する必要がある。
@@ -66,7 +194,15 @@ async function generateSummary(videoId, videoDurationSeconds, videoTitle, stream
 - 現在の開始時間: ${formatDuration(clipStart)}
 - 現在の終了時間: ${formatDuration(clipEnd)}
 - 動画の全体の長さ: ${formatDuration(videoDurationSeconds)}
+`
+        if (chatSegment && chatSegment.length > 0) {
+            prompt += `
+## 視聴者のコメント:
+${chatSegment}
+`
+        }
 
+        prompt += `
 ## 出力形式は以下の構造に厳密に従う:
 \`\`\`
 ${JSON.stringify(formatExample, null, 2)}
@@ -125,6 +261,12 @@ ${JSON.stringify(existingSummary, null, 2)}
     };
 
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+    // Get all live chat messages for the video once.
+    console.log(`Fetching chat messages for video ${videoId}...`);
+    const allChatMessages = await getLiveChatMessages(videoId);
+    const videoPublishedAtDate = new Date(videoPublishedAt);
+
     const chunkSizeSeconds = 2400; // 40 minutes per chunk
     const adjustedVideoDurationSeconds = Math.max(0, videoDurationSeconds - 10); // Reduce duration by 10 seconds
     const maxChunks = Math.ceil(adjustedVideoDurationSeconds / chunkSizeSeconds); // Calculate max chunks based on adjusted duration
@@ -155,13 +297,32 @@ ${JSON.stringify(existingSummary, null, 2)}
 
         console.log(`Processing chunk: ${videoId} from ${clipStartSeconds}s to ${clipEndSeconds}s`);
 
+        // Filter and format chat messages for the current chunk
+        const chatSegment = allChatMessages
+            .map(msg => {
+                const messageTime = new Date(msg.snippet.publishedAt);
+                // Calculate seconds from the start of the video
+                const videoTimestampSeconds = Math.round((messageTime - videoPublishedAtDate) / 1000);
+                return { ...msg, videoTimestampSeconds };
+            })
+            .filter(msg => msg.videoTimestampSeconds >= clipStartSeconds && msg.videoTimestampSeconds < clipEndSeconds)
+            .map(msg => {
+                const timestamp = formatChatTimestamp(msg.videoTimestampSeconds);
+                const author = msg.authorDetails.displayName;
+                const message = msg.snippet.displayMessage;
+                return `[${timestamp}] ${author}: ${message}`;
+            })
+            .join('\n');
+
+        console.log(`Formatted chat segment for ${clipStartSeconds}s-${clipEndSeconds}s has ${chatSegment.length} characters.`);
+
         try {
             const chunkSummary = await retry(async () => {
                 const imageResponse = await axios.get(thumbnailUrl, { responseType: 'arraybuffer' });
                 const imageBase64 = Buffer.from(imageResponse.data).toString('base64');
 
                 const result = await model.generateContent([
-                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, currentSummary),
+                    promptTemplate(clipStartSeconds, clipEndSeconds, formatExample, videoTitle, streamer, chatSegment, currentSummary),
                     {
                         inlineData: {
                             data: imageBase64,
@@ -255,59 +416,6 @@ ${JSON.stringify(existingSummary, null, 2)}
     return currentSummary;
 }
 
-// Helper function to parse timestamp string (e.g., "0:30", "1:05:10") to seconds
-function parseTimestampToSeconds(timestampStr) {
-    if (typeof timestampStr !== 'string') {
-        console.warn(`parseTimestampToSeconds received non-string input: ${timestampStr}. Returning 0.`);
-        return 0;
-    }
-    const parts = timestampStr.split(':').map(Number);
-    
-    // Check if any part is NaN after conversion
-    if (parts.some(isNaN)) {
-        console.warn(`parseTimestampToSeconds received invalid number parts for: "${timestampStr}". Returning 0.`);
-        return 0;
-    }
-
-    if (parts.length === 3) {
-        return parts[0] * 3600 + parts[1] * 60 + parts[2];
-    } else if (parts.length === 2) {
-        return parts[0] * 60 + parts[1];
-    }
-    console.warn(`parseTimestampToSeconds received unexpected timestamp format: "${timestampStr}". Returning 0.`);
-    return 0; // Default to 0 if format is unexpected
-}
-
-// Helper function to format seconds back to "HH:MM:SS" or "MM:SS"
-function formatTimestamp(totalSeconds) {
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    const pad = (num) => num.toString().padStart(2, '0');
-
-    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-}
-
-// Helper function to format total seconds into a human-readable duration string
-function formatDuration(totalSeconds) {
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    let durationStr = "";
-    if (hours > 0) {
-        durationStr += `${hours}時間`;
-    }
-    if (minutes > 0) {
-        durationStr += `${minutes}分`;
-    }
-    if (seconds > 0 || durationStr === "") { // Include seconds if no hours/minutes, or if it's 0 seconds
-        durationStr += `${seconds}秒`;
-    }
-    return durationStr.trim();
-}
-
 async function generateSummaries() {
     try {
         // アーカイブ情報を読み込み
@@ -338,7 +446,7 @@ async function generateSummaries() {
 
             try {
                 // Gemini APIを使用して動画を直接要約
-                const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer, archive.thumbnailUrl);
+                const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer, archive.thumbnailUrl, archive.date);
                 
                 // 要約データを配列に追加
                 summaries.push({
@@ -422,7 +530,8 @@ async function updateSummary(videoId) {
             archiveInfo.duration,
             archiveInfo.title,
             archiveInfo.streamer,
-            archiveInfo.thumbnailUrl
+            archiveInfo.thumbnailUrl,
+            archiveInfo.date
         );
 
         // 新しい要約データで更新

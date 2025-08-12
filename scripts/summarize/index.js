@@ -1,7 +1,6 @@
 require('dotenv').config();
 const fs = require('fs').promises;
 const path = require('path');
-const config = require('../../config/default.json');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const axios = require('axios');
 

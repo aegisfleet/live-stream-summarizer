@@ -119,8 +119,6 @@ graph TD
 │       ├── cleanup-summaries.yml # GitHub Actionsのワークフローファイル。定期的に古いサマリーデータを削除します。
 │       ├── deploy-pages.yml  # GitHub Actionsのワークフローファイル。GitHub Pagesへのデプロイを自動化します。
 │       └── update-summaries.yml # GitHub Actionsのワークフローファイル。定期的にサマリーを更新します。
-├── config/
-│   └── default.json      # アプリケーションの設定ファイルです。
 ├── data/
 │   ├── archives.json     # アーカイブされた配信の情報を保存するJSONファイルです。
 │   └── schedules.json    # 配信スケジュールを保存するJSONファイルです。

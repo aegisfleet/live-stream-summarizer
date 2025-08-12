@@ -35,6 +35,10 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    const homeUrl = getBasePath();
-    window.location.replace(homeUrl);
+    if (history.length > 1) {
+        history.back();
+    } else {
+        const homeUrl = getBasePath();
+        window.location.href = homeUrl;
+    }
 }

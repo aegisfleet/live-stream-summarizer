@@ -204,16 +204,16 @@
     "date": "2025-08-12T07:00:00.000Z"
   },
   {
-    "videoId": "Kz_8bs6Ay_o",
-    "videoUrl": "https://www.youtube.com/watch?v=Kz_8bs6Ay_o",
-    "streamer": "博衣こより",
-    "date": "2025-08-12T12:00:00.000Z"
-  },
-  {
     "videoId": "4zL_LSOXN68",
     "videoUrl": "https://www.youtube.com/watch?v=4zL_LSOXN68",
     "streamer": "白銀ノエル ⚔",
-    "date": "2025-08-12T12:00:00.000Z"
+    "date": "2025-08-12T12:01:00.000Z"
+  },
+  {
+    "videoId": "Kz_8bs6Ay_o",
+    "videoUrl": "https://www.youtube.com/watch?v=Kz_8bs6Ay_o",
+    "streamer": "博衣こより",
+    "date": "2025-08-12T12:05:00.000Z"
   },
   {
     "videoId": "sa8S6bQzOEQ",
@@ -238,6 +238,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=KPZL5xI8krM",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-08-12T20:00:00.000Z"
+  },
+  {
+    "videoId": "xN8Zl0obfuo",
+    "videoUrl": "https://www.youtube.com/watch?v=xN8Zl0obfuo",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-08-12T20:00:00.000Z"
+  },
+  {
+    "videoId": "4Or0Kxfsu10",
+    "videoUrl": "https://www.youtube.com/watch?v=4Or0Kxfsu10",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-12T21:00:00.000Z"
   },
   {
     "videoId": "amBKfML2HNM",
@@ -300,12 +312,6 @@
     "date": "2025-08-11T10:58:00.000Z"
   },
   {
-    "videoId": "m6cMXkC_6xI",
-    "videoUrl": "https://www.youtube.com/watch?v=m6cMXkC_6xI",
-    "streamer": "輪堂千速",
-    "date": "2025-08-11T12:00:00.000Z"
-  },
-  {
     "videoId": "v6JuF7h2cuU",
     "videoUrl": "https://www.youtube.com/watch?v=v6JuF7h2cuU",
     "streamer": "綺々羅々ヴィヴィ",
@@ -364,6 +370,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=MYjN72B_AjA",
     "streamer": "儒烏風亭らでん",
     "date": "2025-08-12T10:00:00.000Z"
+  },
+  {
+    "videoId": "X3AZsg3RbLU",
+    "videoUrl": "https://www.youtube.com/watch?v=X3AZsg3RbLU",
+    "streamer": "水宮枢",
+    "date": "2025-08-12T12:02:00.000Z"
   },
   {
     "videoId": "ZvI703AcMAI",

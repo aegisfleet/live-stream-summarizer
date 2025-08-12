@@ -100,6 +100,16 @@
     "duration": 1193
   },
   {
+    "videoId": "OYErjwfEzIU",
+    "videoUrl": "https://www.youtube.com/watch?v=OYErjwfEzIU",
+    "streamer": "博衣こより",
+    "date": "2025-08-12T07:00:00.000Z",
+    "title": "【 #朝こよ 】お盆休みしてる～？火曜日の朝は朝こよ～～～！☀ #245 【博衣こより/hololive】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/OYErjwfEzIU/mqdefault.jpg",
+    "endTime": "2025-08-11T23:08:47Z",
+    "duration": 4089
+  },
+  {
     "videoId": "jToZE1Ip7n8",
     "videoUrl": "https://www.youtube.com/watch?v=jToZE1Ip7n8",
     "streamer": "儒烏風亭らでん",
@@ -128,5 +138,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/zSQAUrxkTVg/mqdefault.jpg",
     "endTime": "2025-08-11T11:06:07Z",
     "duration": 7240
+  },
+  {
+    "videoId": "MYjN72B_AjA",
+    "videoUrl": "https://www.youtube.com/watch?v=MYjN72B_AjA",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-12T10:00:00.000Z",
+    "title": "【らでん自習室】8月12日10:00~11:30 【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/MYjN72B_AjA/mqdefault.jpg",
+    "endTime": "2025-08-12T02:45:28Z",
+    "duration": 6291
   }
 ]

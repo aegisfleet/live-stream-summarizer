@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Hololive Stream Summaries - Holo-Summaries</title>
+    <meta name="description" content="This service helps you quickly grasp the overview and highlights of the numerous Hololive stream archives, making it easier to find streams that interest you.">
+    <meta property="og:site_name" content="Holo-Summaries">
+    <meta property="og:title" content="AI-Powered Hololive Stream Summaries - Holo-Summaries">
+    <meta property="og:description" content="This service helps you quickly grasp the overview and highlights of the numerous Hololive stream archives, making it easier to find streams that interest you.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aegisfleet.github.io/live-stream-summarizer/en/">
+    <meta property="og:image" content="https://aegisfleet.github.io/live-stream-summarizer/images/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aegisfleet.github.io/live-stream-summarizer/images/ogp.png">
+    <link rel="canonical" href="https://aegisfleet.github.io/live-stream-summarizer/en/" />
+    <link rel="alternate" hreflang="ja" href="https://aegisfleet.github.io/live-stream-summarizer/" />
+    <link rel="alternate" hreflang="en" href="https://aegisfleet.github.io/live-stream-summarizer/en/" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="apple-touch-icon" href="../images/character.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R51TKLHQR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R51TKLHQR5');
+</script>
+<!--
+  Note for developers:
+  The following script is for Google AdSense. If you are using an ad blocker,
+  you will see a 'net::ERR_BLOCKED_BY_CLIENT' error in the console.
+  This is expected behavior and does not indicate a bug in the application.
+-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3122674942116250"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="ogp-image-container">
+            <a href="#" id="top-logo-link"><img src="../images/ogp.png" alt="Holo-Summaries"></a>
+        </div>
+        <section id="site-description" class="collapsible">
+            <h2 class="collapsible-trigger">Site Description</h2>
+            <div class="collapsible-content">
+                <p><b>[Important] This service is an experimental initiative using generative AI. The video summaries are created by AI and may contain inaccuracies. Please be aware of this.</b></p>
+                <p>By using this service, you are deemed to have agreed that the generative AI does not always output accurate information.</p>
+                <br>
+                <p>This service aims to help you quickly grasp the overview and highlights of the numerous Hololive stream archives, making it easier to find streams that interest you.</p>
+                <p>The technical mechanism is as follows:</p>
+                <ul>
+                    <li>Live stream schedule information is automatically fetched periodically from the <a href="https://schedule.hololive.tv/" target="_blank" rel="noopener noreferrer">Hololive Schedule</a>.</li>
+                    <li>Based on the fetched schedule, information such as video titles and URLs is collected from YouTube. *Since the generative AI is not limitless, only videos within 2 hours and 30 minutes are targeted.*</li>
+                    <li>The content (audio/video) of the target video is sent directly to Google's Gemini API for analysis.</li>
+                    <li>The Gemini API analyzes the video content and generates a summary text.</li>
+                    <li>The generated summary is saved to the service and displayed for everyone to view.</li>
+                </ul>
+                <p>This entire process is automated, aiming to make video content more accessible through the latest AI technology.</p>
+                <p>For more details, please see <a href="https://note.com/aegisfleet/n/ndbf2acba0a93" target="_blank">this article</a> (Japanese).</p>
+                <p>If you find any errors in the content, please contact us via the "Correction Request" button.</p>
+                <p><b>Data Retention Period:</b> Summarized data is automatically deleted after two weeks.</p>
+                <br>
+                <p><b>Disclaimer:</b> The site author is not responsible for any errors in the information provided by the generative AI. Users should be aware that the information provided may be inaccurate and use this service at their own judgment and risk.</p>
+                <br>
+                <p><b>Common Summary Mistakes:</b></p>
+                <ul>
+                    <li>Misidentifying performers (e.g., listing someone who did not actually appear).</li>
+                    <li>Inaccurate highlight times (timestamps may differ from the actual time).</li>
+                    <li>Inaccurate stream content details (game progress or conversation content may differ from reality).</li>
+                </ul>
+            </div>
+            <button class="toggle-site-description">Read More</button>
+        </section>
+        <div id="filter-container" class="filter-group">
+            <div class="filter-header">
+                <h3>Filter by Streamer</h3>
+                <span id="streamer-filter-hint" class="hint-icon" title="Hint">?</span>
+            </div>
+            <div id="filter-buttons"></div>
+            <button id="select-all">Show All</button>
+        </div>
+        <div class="filter-group collapsible">
+        <h3 class="collapsible-trigger">Filter by Tag</h3>
+        <div id="tag-filter-buttons" class="filter-buttons-container collapsible-content">
+            <!-- Tag buttons are dynamically generated here by JavaScript -->
+        </div>
+        <button id="select-all-tags">Select All Tags</button>
+        <button class="toggle-tags">Show More</button>
+        </div>
+        <div id="sort-container" class="filter-group">
+            <h3>Sort by</h3>
+            <div id="sort-buttons">
+                <button id="sort-by-date" class="active" data-sort-key="date">Date</button>
+                <button id="sort-by-viewCount" data-sort-key="viewCount">Views</button>
+                <button id="sort-by-likeCount" data-sort-key="likeCount">Likes</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="archive-grid"></div>
+        <button id="load-more">Load More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Holo-Summaries</p>
+        <p>Developed by <a href="https://x.com/aegisfleet" target="_blank" rel="noopener noreferrer">Pochi</a></p>
+        <div class="language-switcher">
+            <a href="../">日本語</a> | <a href="./" class="active">English</a>
+        </div>
+    </footer>
+
+    <div id="hint-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>Streamer Filter Hint</h3>
+            <p>If you bookmark or share the URL while a streamer filter is active, the page will open with only that streamer's videos displayed.</p>
+            <button id="close-dialog">Close</button>
+        </div>
+    </div>
+    <div id="watch-later-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>About the "Watch Later" Feature</h3>
+            <p>To use the "Watch Later" feature, first click the 🔖 icon in the top right of a video's thumbnail to add it to your "Watch Later" list.</p>
+            <p>You can then view the videos you've added to the list by clicking this button.</p>
+            <button id="close-watch-later-dialog">Close</button>
+        </div>
+    </div>
+    <button id="back-to-home" title="Back to Home">🏠</button>
+    <button id="watch-later" title="Watch Later">🔖</button>
+    <button id="back-to-top" title="Back to Top">⬆️</button>
+
+    <div id="update-snackbar" class="snackbar">
+      <p class="snackbar-text">A new version is available.</p>
+      <button id="update-button" class="snackbar-button">Update</button>
+    </div>
+
+    <script src="../js/main.en.js" type="module"></script>
+</body>
+</html>

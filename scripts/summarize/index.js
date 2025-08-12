@@ -254,6 +254,47 @@ ${JSON.stringify(existingSummary, null, 2)}
     return currentSummary;
 }
 
+async function translateSummary(summaryJp) {
+    const translationPrompt = `
+# Instruction
+Translate the following Japanese JSON data into English.
+- Keep the JSON structure exactly the same.
+- Do not translate the "timestamp" and "type" fields within the "highlights" array.
+- Translate the "summary" and "mood" in "overview".
+- Translate "title" and "description" in each element of the "highlights" array.
+- Translate each string in the "tags" array.
+
+# Japanese JSON Data
+\`\`\`json
+${JSON.stringify(summaryJp, null, 2)}
+\`\`\`
+
+# Output Format
+Provide only the translated JSON object, without any markdown or code blocks.
+`;
+
+    try {
+        const result = await retry(async () => {
+            const generationResult = await model.generateContent(translationPrompt);
+            const response = await generationResult.response;
+            let text = response.text();
+
+            // Clean up the response
+            text = text.replace(/```json|```/g, '').trim();
+            if (!text.startsWith('{') || !text.endsWith('}')) {
+                throw new Error('Translated response is not a valid JSON format.');
+            }
+            const translatedSummary = JSON.parse(text);
+            return translatedSummary;
+        });
+        return result;
+
+    } catch (error) {
+        console.error('Error during translation:', error);
+        throw new Error('Failed to translate summary.');
+    }
+}
+
 // Helper function to parse timestamp string (e.g., "0:30", "1:05:10") to seconds
 function parseTimestampToSeconds(timestampStr) {
     if (typeof timestampStr !== 'string') {
@@ -339,6 +380,11 @@ async function generateSummaries() {
                 // Gemini APIを使用して動画を直接要約
                 const summary = await generateSummary(archive.videoId, archive.duration, archive.title, archive.streamer, archive.thumbnailUrl);
                 
+                // 英語に翻訳
+                console.log(`Translating summary for ${archive.videoId}...`);
+                const summary_en = await translateSummary(summary);
+                console.log(`Successfully translated summary for ${archive.videoId}.`);
+
                 // 要約データを配列に追加
                 summaries.push({
                     videoId: archive.videoId,
@@ -346,13 +392,13 @@ async function generateSummaries() {
                     streamer: archive.streamer,
                     date: archive.date,
                     thumbnailUrl: archive.thumbnailUrl,
-                    overview: {
-                        summary: summary.overview.summary,
-                        mood: summary.overview.mood
-                    },
                     duration: archive.duration,
+                    overview: summary.overview,
                     highlights: summary.highlights,
                     tags: summary.tags,
+                    overview_en: summary_en.overview,
+                    highlights_en: summary_en.highlights,
+                    tags_en: summary_en.tags,
                     lastUpdated: new Date().toISOString()
                 });
 
@@ -424,6 +470,11 @@ async function updateSummary(videoId) {
             archiveInfo.thumbnailUrl
         );
 
+        // 英語に翻訳
+        console.log(`Translating updated summary for ${archiveInfo.videoId}...`);
+        const newSummaryData_en = await translateSummary(newSummaryData);
+        console.log(`Successfully translated updated summary for ${archiveInfo.videoId}.`);
+
         // 新しい要約データで更新
         const updatedSummary = {
             videoId: archiveInfo.videoId,
@@ -431,13 +482,13 @@ async function updateSummary(videoId) {
             streamer: archiveInfo.streamer,
             date: archiveInfo.date,
             thumbnailUrl: archiveInfo.thumbnailUrl,
-            overview: {
-                summary: newSummaryData.overview.summary,
-                mood: newSummaryData.overview.mood
-            },
             duration: archiveInfo.duration,
+            overview: newSummaryData.overview,
             highlights: newSummaryData.highlights,
             tags: newSummaryData.tags,
+            overview_en: newSummaryData_en.overview,
+            highlights_en: newSummaryData_en.highlights,
+            tags_en: newSummaryData_en.tags,
             lastUpdated: new Date().toISOString()
         };
 

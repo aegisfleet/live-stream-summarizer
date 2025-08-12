@@ -35,33 +35,26 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    const entryHistoryLengthStr = sessionStorage.getItem('entryHistoryLength');
+    const homeUrl = getBasePath();
 
-    // Ensure the session storage is cleaned up regardless of the navigation path.
-    sessionStorage.removeItem('entryHistoryLength');
+    // If we are on a detail page, try to go back in history smartly.
+    if (window.location.pathname.includes('/pages/')) {
+        const entryHistoryLengthStr = sessionStorage.getItem('entryHistoryLength');
+        sessionStorage.removeItem('entryHistoryLength');
 
-    if (entryHistoryLengthStr) {
-        const entryHistoryLength = parseInt(entryHistoryLengthStr, 10);
-        // Calculate how many pages have been pushed since entering the detail page.
-        const delta = history.length - entryHistoryLength;
-        // The number of steps to go back is the delta plus one more to leave the detail page.
-        const backSteps = -(delta + 1);
+        if (entryHistoryLengthStr) {
+            const entryHistoryLength = parseInt(entryHistoryLengthStr, 10);
+            const delta = history.length - entryHistoryLength;
+            const backSteps = -(delta + 1);
 
-        // As a safeguard, check if we can actually go back that many steps.
-        if (history.length > Math.abs(backSteps)) {
-             history.go(backSteps);
-        } else {
-            // If not, fall back to the homepage.
-            const homeUrl = getBasePath();
-            window.location.href = homeUrl;
-        }
-    } else {
-        // Fallback to original behavior if session storage is not set for some reason.
-        if (history.length > 1) {
-            history.back();
-        } else {
-            const homeUrl = getBasePath();
-            window.location.href = homeUrl;
+            if (history.length > Math.abs(backSteps)) {
+                 history.go(backSteps);
+                 return; // Important to exit here
+            }
         }
     }
+
+    // For the main page, or as a fallback for detail pages, just navigate to the home URL.
+    // This will effectively reload the page if already there.
+    window.location.href = homeUrl;
 }

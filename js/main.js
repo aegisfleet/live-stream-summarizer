@@ -945,7 +945,8 @@ class ArchiveManager {
 
     setupServiceWorker() {
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/live-stream-summarizer/service-worker.js', { scope: '/live-stream-summarizer/' })
+            const basePath = getBasePath();
+            navigator.serviceWorker.register(`${basePath}service-worker.js`, { scope: basePath })
                 .then(registration => {
                     registration.onupdatefound = () => {
                         const installingWorker = registration.installing;

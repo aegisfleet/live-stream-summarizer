@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 常闇トワ 👾</p>
                     <p class="detail-date">配信日時: 2025-08-08 20:50:00</p>
                     <p class="detail-duration">配信時間: 3分22秒</p>
-                    <p class="detail-view-count">再生数: 266,076</p>
-                    <p class="detail-like-count">高評価数: 32,148</p>
+                    <p class="detail-view-count">再生数: 266,678</p>
+                    <p class="detail-like-count">高評価数: 32,187</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '常闇トワ 👾',
             date: '2025-08-08 20:50:00',
             duration: '3分22秒',
-            viewCount: '266,076',
-            likeCount: '32,148',
+            viewCount: '266,678',
+            likeCount: '32,187',
             thumbnailUrl: 'https://i.ytimg.com/vi/din8MpMohyg/mqdefault.jpg',
             overview: {
                 summary: '常闇トワのオリジナル楽曲「ChewyChewy」のミュージックビデオです。サイバーパンクやストリートアートの要素が融合したクールでスタイリッシュな世界観で、様々な衣装の常闇トワが歌い踊ります。日常の風景や内面の葛藤を表すような演出も織り交ぜながら、自己表現や未来への前向きなメッセージが込められた楽曲の世界を映像で表現しています。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

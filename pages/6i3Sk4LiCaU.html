@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 大神ミオ 🌲</p>
                     <p class="detail-date">配信日時: 2025-08-05 18:06:00</p>
                     <p class="detail-duration">配信時間: 1時間31分51秒</p>
-                    <p class="detail-view-count">再生数: 90,806</p>
-                    <p class="detail-like-count">高評価数: 6,769</p>
+                    <p class="detail-view-count">再生数: 90,830</p>
+                    <p class="detail-like-count">高評価数: 6,771</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '大神ミオ 🌲',
             date: '2025-08-05 18:06:00',
             duration: '1時間31分51秒',
-            viewCount: '90,806',
-            likeCount: '6,769',
+            viewCount: '90,830',
+            likeCount: '6,771',
             thumbnailUrl: 'https://i.ytimg.com/vi/6i3Sk4LiCaU/mqdefault.jpg',
             overview: {
                 summary: 'ホラー協力プレイゲーム『R.E.P.O』を大神ミオ視点でプレイする配信。白上フブキ、戌神ころね、星街すいせいの4人で協力し、久しぶりのプレイながらも次々と現れるモンスターやギミックに翻弄されながらも奮闘する。終盤では各々が単独でミッションをこなす場面や、アイテム運搬で大金を集める姿が見られる。最終的にゲームはクリアとなり、プレイヤーたちはお互いの活躍を称え合い、和やかな雰囲気で振り返りトークを繰り広げる。惜しくも最終ステージの「KING OF THE LOSERS」ではフブキが敗者となったものの、全体を通して笑いと興奮、そして達成感に満ちた楽しい配信となった。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

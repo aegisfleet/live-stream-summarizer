@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 宝鐘マリン 🏴☠</p>
                     <p class="detail-date">配信日時: 2025-07-30 21:00:00</p>
                     <p class="detail-duration">配信時間: 4分35秒</p>
-                    <p class="detail-view-count">再生数: 3,726,904</p>
-                    <p class="detail-like-count">高評価数: 216,052</p>
+                    <p class="detail-view-count">再生数: 3,729,969</p>
+                    <p class="detail-like-count">高評価数: 216,118</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '宝鐘マリン 🏴☠',
             date: '2025-07-30 21:00:00',
             duration: '4分35秒',
-            viewCount: '3,726,904',
-            likeCount: '216,052',
+            viewCount: '3,729,969',
+            likeCount: '216,118',
             thumbnailUrl: 'https://i.ytimg.com/vi/aI769CgHfLc/mqdefault.jpg',
             overview: {
                 summary: '宝鐘マリンのオリジナルアニメーションMV。楽曲「スキスキDieスキ超Ayeシテル」に合わせて、海賊衣装の「セクシーマリン」と学生服の「清楚マリン」が、ゾンビダンサーたちと共に、墓地やディスコ、草原、船上など様々な舞台でパフォーマンスを繰り広げる。ダークでコミカルな世界観から始まり、自身の多面性や成長を表現しつつ、最終的には希望に満ちたカーニバルのような光景で締めくくられる、魅力的で中毒性のある作品。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

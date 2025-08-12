@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 一条莉々華</p>
                     <p class="detail-date">配信日時: 2025-08-05 21:00:00</p>
                     <p class="detail-duration">配信時間: 1時間6分25秒</p>
-                    <p class="detail-view-count">再生数: 30,992</p>
-                    <p class="detail-like-count">高評価数: 3,693</p>
+                    <p class="detail-view-count">再生数: 30,996</p>
+                    <p class="detail-like-count">高評価数: 3,697</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '一条莉々華',
             date: '2025-08-05 21:00:00',
             duration: '1時間6分25秒',
-            viewCount: '30,992',
-            likeCount: '3,693',
+            viewCount: '30,996',
+            likeCount: '3,697',
             thumbnailUrl: 'https://i.ytimg.com/vi/Qtp-RdBHBqc/mqdefault.jpg',
             overview: {
                 summary: '一条莉々華がIssin株式会社提供のスマートバスマットとスマートリカバリーリングを紹介する配信の続きです。自身の体組成データを公開し、4ヶ月前のデータと比較しながら体重、体脂肪率、筋肉量などの変化を詳細に分析。スマートバスマットを使い始めてから体重が減少したことに驚きつつ、体内年齢が変化しないことに落胆し、今後の筋力アップへの意欲を示します。視聴者からの健康の悩みや工夫についても Issin からのアドバイスを交えながら紹介。最後には、Issin製品の割引キャンペーン情報も共有し、自身の体験を交えながら製品の魅力を伝えます。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

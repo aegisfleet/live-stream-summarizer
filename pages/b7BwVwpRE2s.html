@@ -42,7 +42,7 @@
                     <p class="detail-date">配信日時: 2025-07-29 06:59:00</p>
                     <p class="detail-duration">配信時間: 1時間9分1秒</p>
                     <p class="detail-view-count">再生数: 107,442</p>
-                    <p class="detail-like-count">高評価数: 7,705</p>
+                    <p class="detail-like-count">高評価数: 7,706</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -100,7 +101,7 @@
             date: '2025-07-29 06:59:00',
             duration: '1時間9分1秒',
             viewCount: '107,442',
-            likeCount: '7,705',
+            likeCount: '7,706',
             thumbnailUrl: 'https://i.ytimg.com/vi/b7BwVwpRE2s/mqdefault.jpg',
             overview: {
                 summary: '博衣こよりが毎週火曜朝7時からホロライブの最新情報や自身の日常を伝える「朝こよ」を配信。7月最後の配信では、ホロライブ公式グッズやホロアースのアップデート、各種コラボ情報など多数のニュースを紹介。さらに、歌枠リレーでのラプラス・ダークネスとアキ・ローゼンタールの「最低な間違い」事件、白上フブキと夏色まつりの「寝坊三連星」といったメンバー間の面白い出来事を深掘りした。また、「こより占い」で今週の運勢とラッキーアイテム「そうめん」を発表。寝坊に関するリスナーアンケートでは驚きの結果が。夏配信企画の告知や、そうめんを食べる自身の水着壁紙配布など、情報盛りだくさんの明るく賑やかな配信となった。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 輪堂千速</p>
                     <p class="detail-date">配信日時: 2025-08-02 17:34:00</p>
                     <p class="detail-duration">配信時間: 1時間42分39秒</p>
-                    <p class="detail-view-count">再生数: 62,575</p>
-                    <p class="detail-like-count">高評価数: 5,080</p>
+                    <p class="detail-view-count">再生数: 62,591</p>
+                    <p class="detail-like-count">高評価数: 5,081</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '輪堂千速',
             date: '2025-08-02 17:34:00',
             duration: '1時間42分39秒',
-            viewCount: '62,575',
-            likeCount: '5,080',
+            viewCount: '62,591',
+            likeCount: '5,081',
             thumbnailUrl: 'https://i.ytimg.com/vi/0iIj_QaCKMM/mqdefault.jpg',
             overview: {
                 summary: '輪堂千速とゲストのベリーキュートなとめによるオフコラボ配信。自家製バターとユニークな具材（ポテトチップス、チーズ、バジルなど）を使ったバター餃子作りに挑戦しました。ブンブンチョッパーでのバター作り成功を経て、完成した餃子の見た目が「ハンバーグ」のようであることに盛り上がり、チーズが伸びる様子に感動。様々な具材の味のハーモニーを堪能し、「バジル餃子」「コンソメポテト餃子」など新たな呼び名が誕生しました。また、ウィンナーをライスペーパーで包んだ「新幹線餃子」の話題も登場し、二人はその意外な美味しさに驚きを隠せませんでした。終始和やかな雰囲気で笑いが絶えない、料理の楽しさと共に予期せぬ発見が満載の配信となりました。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

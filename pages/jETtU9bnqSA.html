@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 獅白ぼたん</p>
                     <p class="detail-date">配信日時: 2025-08-11 22:01:00</p>
                     <p class="detail-duration">配信時間: 1時間34秒</p>
-                    <p class="detail-view-count">再生数: 142,021</p>
-                    <p class="detail-like-count">高評価数: 11,400</p>
+                    <p class="detail-view-count">再生数: 143,615</p>
+                    <p class="detail-like-count">高評価数: 11,517</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '獅白ぼたん',
             date: '2025-08-11 22:01:00',
             duration: '1時間34秒',
-            viewCount: '142,021',
-            likeCount: '11,400',
+            viewCount: '143,615',
+            likeCount: '11,517',
             thumbnailUrl: 'https://i.ytimg.com/vi/jETtU9bnqSA/mqdefault.jpg',
             overview: {
                 summary: 'ホロライブ5期生「ねぽらぼ」の5周年記念配信。メンバー全員（桃鈴ねね、尾丸ポルカ、雪花ラミィ、獅白ぼたん）が集合し、各メンバーが作成したプロフィール帳を公開しながら、お互いの個性や活動の裏側を深く掘り下げていく。今回の解析範囲では獅白ぼたんのプロフィール帳が公開され、その意外な趣味や特技、食の好みが明らかになった。配信終盤では、8月17日開催の5周年記念ライブ「ねぽらぼ学園〜輝く学寮祭〜」が告知され、期待感を高めた。終始和やかな雰囲気で、メンバー同士の仲の良さが感じられる。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

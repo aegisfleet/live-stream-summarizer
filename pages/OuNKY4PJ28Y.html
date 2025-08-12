@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 兎田ぺこら 👯</p>
                     <p class="detail-date">配信日時: 2025-08-04 07:02:00</p>
                     <p class="detail-duration">配信時間: 16分41秒</p>
-                    <p class="detail-view-count">再生数: 280,443</p>
-                    <p class="detail-like-count">高評価数: 16,598</p>
+                    <p class="detail-view-count">再生数: 280,456</p>
+                    <p class="detail-like-count">高評価数: 16,600</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '兎田ぺこら 👯',
             date: '2025-08-04 07:02:00',
             duration: '16分41秒',
-            viewCount: '280,443',
-            likeCount: '16,598',
+            viewCount: '280,456',
+            likeCount: '16,600',
             thumbnailUrl: 'https://i.ytimg.com/vi/OuNKY4PJ28Y/mqdefault.jpg',
             overview: {
                 summary: 'ホロライブの兎田ぺこらと宝鐘マリンによる「ぺこマリ体操」の3日目配信。今回は事前に小さくなって隠れていた癒月ちょこ、アキ・ローゼンタール、大神ミオを迎え、一緒に体操を行う。ゲストたちが小さくなった姿で登場し、体操を始めると、その可愛らしさにぺこらとマリンはメロメロ。体操後にはゲストたちの睡眠時間を心配し、さらにスタンプを押すと体が元の大きさに戻るサプライズ演出も。最後は全員で記念撮影を行い、笑顔で配信を締めくくった。終始、賑やかで楽しい雰囲気の配信。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

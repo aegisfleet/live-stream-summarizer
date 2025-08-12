@@ -119,19 +119,12 @@
     <button id="back-to-home" title="ホームに戻る">🏠</button>
     <button id="watch-later" title="あとで見る">🔖</button>
     <button id="back-to-top" title="トップに戻る">⬆️</button>
+
+    <div id="update-snackbar" class="snackbar">
+      <p class="snackbar-text">新しいバージョンが利用可能です。</p>
+      <button id="update-button" class="snackbar-button">更新</button>
+    </div>
+
     <script src="js/main.js" type="module"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/live-stream-summarizer/service-worker.js', { scope: '/live-stream-summarizer/' })
-            .then(registration => {
-              console.log('Service Worker registered: ', registration);
-            })
-            .catch(registrationError => {
-              console.log('Service Worker registration failed: ', registrationError);
-            });
-        });
-      }
-    </script>
 </body>
 </html>

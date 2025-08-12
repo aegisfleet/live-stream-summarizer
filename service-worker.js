@@ -23,6 +23,12 @@ self.addEventListener('install', event => {
   );
 });
 
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 // activate イベント: 古いキャッシュを削除する
 self.addEventListener('activate', event => {
   event.waitUntil(
@@ -35,6 +41,9 @@ self.addEventListener('activate', event => {
           }
         })
       );
+    }).then(() => {
+        console.log('Service Worker: Claiming clients');
+        return self.clients.claim();
     })
   );
 });

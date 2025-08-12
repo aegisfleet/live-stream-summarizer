@@ -55,6 +55,10 @@ class DetailPageManager {
                 const seconds = timestampToSeconds(highlight.timestamp);
                 this.seekToTime(seconds);
                 this.scrollToHighlight(seconds);
+
+                const url = new URL(window.location);
+                url.searchParams.set('t', seconds);
+                history.pushState({ t: seconds }, '', url);
             });
             
             highlightsList.appendChild(li);
@@ -218,6 +222,26 @@ class DetailPageManager {
                 const shareText = `${this.archiveData.title}\n${window.location.href}`;
                 const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
                 window.open(twitterIntentUrl, '_blank');
+            });
+        }
+
+        const shareHelpButton = document.getElementById('share-help-button');
+        const shareHelpDialog = document.getElementById('share-help-dialog');
+        const closeShareDialogButton = document.getElementById('close-share-dialog');
+
+        if (shareHelpButton && shareHelpDialog && closeShareDialogButton) {
+            shareHelpButton.addEventListener('click', () => {
+                shareHelpDialog.style.display = 'flex';
+            });
+
+            closeShareDialogButton.addEventListener('click', () => {
+                shareHelpDialog.style.display = 'none';
+            });
+
+            shareHelpDialog.addEventListener('click', (e) => {
+                if (e.target === shareHelpDialog) {
+                    shareHelpDialog.style.display = 'none';
+                }
             });
         }
     }

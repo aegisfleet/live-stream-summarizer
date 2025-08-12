@@ -32,6 +32,9 @@ class ArchiveManager {
     }
     
     async init() {
+        // メインページ読み込み時に履歴を上書きし、ブラウザバックでアプリが終了するようにする
+        history.replaceState(null, '', getBasePath() + '/');
+
         await this.loadData();
         this.loadWatchLaterList();
         this.cleanupWatchLaterList();

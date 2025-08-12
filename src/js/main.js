@@ -667,7 +667,7 @@ class ArchiveManager {
         img.classList.add('clickable-thumbnail');
         img.title = '詳細ページへ';
         img.addEventListener('click', () => {
-            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
         });
 
         const bookmarkIcon = document.createElement('button');
@@ -705,7 +705,7 @@ class ArchiveManager {
         title.classList.add('clickable-title');
         title.title = '詳細ページへ';
         title.addEventListener('click', () => {
-            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
         });
 
         const dateElement = document.createElement('p');
@@ -804,7 +804,7 @@ class ArchiveManager {
         detailButton.title = '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `${getBasePath()}/pages/${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
         });
         footer.appendChild(detailButton);
 
@@ -835,7 +835,7 @@ class ArchiveManager {
                 li.title = `クリックして ${highlight.timestamp} から再生`;
                 li.addEventListener('click', (e) => {
                     const seconds = timestampToSeconds(highlight.timestamp);
-                    window.location.href = `${getBasePath()}/pages/${archive.videoId}.html?t=${seconds}`;
+                    window.location.href = `${getBasePath()}pages/${archive.videoId}.html?t=${seconds}`;
                 });
 
                 const h3 = document.createElement('h3');

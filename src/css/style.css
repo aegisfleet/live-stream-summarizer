@@ -887,3 +887,52 @@ footer {
         overflow-y: auto;
     }
 }
+
+/* Update Snackbar */
+.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px; /* Start off-screen */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: bottom 0.5s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.snackbar.show {
+  visibility: visible;
+  bottom: 30px;
+}
+
+.snackbar-text {
+  margin: 0;
+  padding-right: 16px;
+}
+
+.snackbar-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.snackbar-button:hover {
+  background-color: #45a049;
+}

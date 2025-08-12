@@ -61,6 +61,7 @@ class ArchiveManager {
         this.setupLoadMoreButton();
         this.setupSortControls();
         this.setupHintDialog();
+        this.setupServiceWorker();
     }
 
     setupSortControls() {
@@ -938,6 +939,45 @@ class ArchiveManager {
                 if (e.target === watchLaterDialog) {
                     watchLaterDialog.style.display = 'none';
                 }
+            });
+        }
+    }
+}
+
+    setupServiceWorker() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/live-stream-summarizer/service-worker.js', { scope: '/live-stream-summarizer/' })
+                .then(registration => {
+                    registration.onupdatefound = () => {
+                        const installingWorker = registration.installing;
+                        if (installingWorker) {
+                            installingWorker.onstatechange = () => {
+                                if (installingWorker.state === 'installed') {
+                                    if (navigator.serviceWorker.controller) {
+                                        // New content is available, show the snackbar
+                                        const snackbar = document.getElementById('update-snackbar');
+                                        const updateButton = document.getElementById('update-button');
+                                        if (snackbar && updateButton) {
+                                            snackbar.classList.add('show');
+                                            updateButton.onclick = () => {
+                                                installingWorker.postMessage({ type: 'SKIP_WAITING' });
+                                            };
+                                        }
+                                    }
+                                }
+                            };
+                        }
+                    };
+                })
+                .catch(error => {
+                    console.error('Error during service worker registration:', error);
+                });
+
+            let refreshing;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                window.location.reload();
+                refreshing = true;
             });
         }
     }

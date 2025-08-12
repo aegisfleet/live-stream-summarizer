@@ -24,6 +24,9 @@
 - **シェア機能**
   - 各配信のタイトルとURLをコピーしたり、𝕏 (旧Twitter) で共有したりできます。
 - **レスポンシブデザイン対応**
+- **PWA (Progressive Web Apps) 対応**
+  - オフライン環境でも閲覧可能です（一度読み込んだデータに限る）。
+  - スマートフォンやPCのホーム画面にインストールして、アプリのように利用できます。
 
 ## システム構成
 
@@ -43,14 +46,17 @@ graph TD
         G["Gemini API"]
     end
 
-    subgraph "ユーザー"
-        H["ブラウザ"]
+    subgraph "ユーザー (ブラウザ内)"
+        H["表示"]
+        SW["Service Worker<br>(キャッシュ)"]
+        H <--> SW
     end
 
     E -- "配信情報取得" --> B;
     B <-- "動画情報取得" --> F;
     B <-- "要約生成" --> G;
-    D -- "Webサイト閲覧" --> H;
+    D -- "初回アクセス /<br>データ更新" --> SW;
+    SW -- "コンテンツ配信" --> H
 ```
 
 ### 利用技術スタック
@@ -59,6 +65,8 @@ graph TD
   - > GitHubが提供する、静的なWebサイトを公開するためのホスティングサービスです。公開リポジトリであれば無料で利用できます。
 - **CI/CD・自動化**: **GitHub Actions**
   - > GitHubに組み込まれている、様々な処理を自動化するための仕組みです。公開リポジトリなら無料枠の範囲で自由に利用できます。
+- **PWA (Progressive Web Apps)**
+  - > Webサイトをネイティブアプリのように利用可能にする技術です。Service Workerによるオフライン対応や、Web App Manifestによるホーム画面へのインストール機能などを提供します。
 - **コンテンツ生成**: **Gemini API (model: gemini-2.5-flash)**
   - > Googleが開発した高性能な生成AIです。動画を直接理解して処理する能力（マルチモーダル）を持っています。一定の利用量までは無料で使えます。
 - **データソース**:
@@ -121,20 +129,26 @@ graph TD
 ├── scripts/
 │   ├── check-archive/
 │   │   └── index.js      # アーカイブを確認するスクリプトです。
-│   ├── generate-pages/
-│   │   └── index.js      # 各配信の個別ページを生成するスクリプトです。
 │   ├── fetch-schedule/
 │   │   └── index.js      # 配信スケジュールを取得するスクリプトです。
+│   ├── generate-pages/
+│   │   └── index.js      # 各配信の個別ページを生成するスクリプトです。
 │   └── summarize/
 │       └── index.js      # 配信内容を要約するスクリプトです。
 └── src/
     ├── index.html        # WebページのメインHTMLファイルです。
+    ├── manifest.json     # PWAのための設定ファイルです。
+    ├── service-worker.js # オフライン対応を実現するService Workerのスクリプトです。
     ├── css/
     │   └── style.css     # スタイルを定義するCSSファイルです。
     ├── data/
     │   └── summaries.json    # 生成されたサマリーを保存するJSONファイルです。
-    └── js/
-        └── main.js       # Webページの動作を制御するJavaScriptファイルです。
+    ├── js/
+    │   └── main.js       # Webページの動作を制御するJavaScriptファイルです。
+    └── images/
+        ├── character.png # イメージキャラクターの画像ファイルです。
+        ├── favicon.png   # ファビコンの画像ファイルです。
+        └── ogp.png       # OGP画像のファイルです。
 ```
 
 ## セットアップ

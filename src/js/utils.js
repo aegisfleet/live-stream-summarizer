@@ -35,10 +35,33 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    if (history.length > 1) {
-        history.back();
+    const entryHistoryLengthStr = sessionStorage.getItem('entryHistoryLength');
+
+    // Ensure the session storage is cleaned up regardless of the navigation path.
+    sessionStorage.removeItem('entryHistoryLength');
+
+    if (entryHistoryLengthStr) {
+        const entryHistoryLength = parseInt(entryHistoryLengthStr, 10);
+        // Calculate how many pages have been pushed since entering the detail page.
+        const delta = history.length - entryHistoryLength;
+        // The number of steps to go back is the delta plus one more to leave the detail page.
+        const backSteps = -(delta + 1);
+
+        // As a safeguard, check if we can actually go back that many steps.
+        if (history.length > Math.abs(backSteps)) {
+             history.go(backSteps);
+        } else {
+            // If not, fall back to the homepage.
+            const homeUrl = getBasePath();
+            window.location.href = homeUrl;
+        }
     } else {
-        const homeUrl = getBasePath();
-        window.location.href = homeUrl;
+        // Fallback to original behavior if session storage is not set for some reason.
+        if (history.length > 1) {
+            history.back();
+        } else {
+            const homeUrl = getBasePath();
+            window.location.href = homeUrl;
+        }
     }
 }

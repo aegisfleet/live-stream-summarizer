@@ -77,10 +77,7 @@
                     <div class="share-buttons">
                         <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
                         <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
-                        <button id="share-help-button" class="help-button" aria-label="共有ボタンのヘルプ">？</button>
-                    </div>
-                    <div id="share-help-text" class="help-text-container">
-                        <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -115,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

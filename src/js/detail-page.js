@@ -226,11 +226,22 @@ class DetailPageManager {
         }
 
         const shareHelpButton = document.getElementById('share-help-button');
-        const shareHelpText = document.getElementById('share-help-text');
+        const shareHelpDialog = document.getElementById('share-help-dialog');
+        const closeShareDialogButton = document.getElementById('close-share-dialog');
 
-        if (shareHelpButton && shareHelpText) {
+        if (shareHelpButton && shareHelpDialog && closeShareDialogButton) {
             shareHelpButton.addEventListener('click', () => {
-                shareHelpText.classList.toggle('show');
+                shareHelpDialog.style.display = 'flex';
+            });
+
+            closeShareDialogButton.addEventListener('click', () => {
+                shareHelpDialog.style.display = 'none';
+            });
+
+            shareHelpDialog.addEventListener('click', (e) => {
+                if (e.target === shareHelpDialog) {
+                    shareHelpDialog.style.display = 'none';
+                }
             });
         }
     }

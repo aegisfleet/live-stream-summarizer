@@ -885,39 +885,3 @@ footer {
         overflow-y: auto;
     }
 }
-
-/* Help Button Styles */
-.help-button {
-    background-color: #6c757d; /* A neutral, secondary color */
-    color: white;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 24px;
-    padding: 0;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-}
-
-.help-button:hover {
-    background-color: #5a6268;
-}
-
-.help-text-container {
-    display: none; /* Hidden by default */
-    margin-top: 0.5rem;
-    padding: 0.75rem;
-    background-color: #f8f9fa; /* Light grey, similar to highlight-item */
-    border: 1px solid #e9ecef;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    text-align: center;
-    color: #333;
-}
-
-.help-text-container.show {
-    display: block; /* Class to show the text */
-}

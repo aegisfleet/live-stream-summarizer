@@ -120,6 +120,26 @@
     "duration": 4089
   },
   {
+    "videoId": "c6oMoTweMKM",
+    "videoUrl": "https://www.youtube.com/watch?v=c6oMoTweMKM",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-08-12T18:00:00.000Z",
+    "title": "【 ごろごろマウンテン 】ホロメンをごろごろ転がすゲーム？！【 ホロライブ / 大神ミオ 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/c6oMoTweMKM/mqdefault_live.jpg",
+    "endTime": "2025-08-12T11:05:37Z",
+    "duration": 7502
+  },
+  {
+    "videoId": "TBu1JUErkMY",
+    "videoUrl": "https://www.youtube.com/watch?v=TBu1JUErkMY",
+    "streamer": "さくらみこ 🌸",
+    "date": "2025-08-12T19:01:00.000Z",
+    "title": "【 グルーヴコースター 】みこが声優⁉新作の フューチャーパフォーマーズで遊ぶにぇぇぇぇ‼🎵【ホロライブ/さくらみこ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/TBu1JUErkMY/mqdefault.jpg",
+    "endTime": "2025-08-12T10:59:14Z",
+    "duration": 3449
+  },
+  {
     "videoId": "jToZE1Ip7n8",
     "videoUrl": "https://www.youtube.com/watch?v=jToZE1Ip7n8",
     "streamer": "儒烏風亭らでん",
@@ -168,5 +188,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/X3AZsg3RbLU/mqdefault.jpg",
     "endTime": "2025-08-12T05:28:42Z",
     "duration": 8813
+  },
+  {
+    "videoId": "ZvI703AcMAI",
+    "videoUrl": "https://www.youtube.com/watch?v=ZvI703AcMAI",
+    "streamer": "一条莉々華",
+    "date": "2025-08-12T19:00:00.000Z",
+    "title": "【りりらでん大阪旅行記】自作のたこ焼き祭りだああああ！！！！【一条莉々華/hololive DEV_IS　ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ZvI703AcMAI/mqdefault.jpg",
+    "endTime": "2025-08-12T10:29:32Z",
+    "duration": 1631
   }
 ]

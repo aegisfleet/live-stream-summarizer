@@ -5,6 +5,7 @@ class DetailPageManager {
         this.archiveData = pageData;
         this.player = null;
         this.resizeTimer = null;
+        this.lang = document.documentElement.lang || 'ja';
         this.init();
     }
 
@@ -218,15 +219,16 @@ class DetailPageManager {
             copyButton.addEventListener('click', () => {
                 const copyText = `${this.archiveData.title}\n${window.location.href}`;
                 navigator.clipboard.writeText(copyText).then(() => {
-                    copyButton.textContent = 'コピー完了！';
+                    copyButton.textContent = this.lang === 'en' ? 'Copied!' : 'コピー完了！';
                     setTimeout(() => {
-                        copyButton.textContent = 'コピー';
+                        copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
                     }, 2000);
                 }).catch(err => {
-                    console.error('クリップボードへのコピーに失敗しました:', err);
-                    copyButton.textContent = '失敗';
+                    const errorMsg = this.lang === 'en' ? 'Failed to copy to clipboard:' : 'クリップボードへのコピーに失敗しました:';
+                    console.error(errorMsg, err);
+                    copyButton.textContent = this.lang === 'en' ? 'Failed' : '失敗';
                     setTimeout(() => {
-                        copyButton.textContent = 'コピー';
+                        copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
                     }, 2000);
                 });
             });

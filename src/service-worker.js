@@ -1,15 +1,15 @@
 const CACHE_NAME = 'hololive-summary-cache-v1-1754992969630';
 const ASSETS_TO_CACHE = [
-  '/live-stream-summarizer/',
-  '/live-stream-summarizer/index.html',
-  '/live-stream-summarizer/css/style.css',
-  '/live-stream-summarizer/js/main.js',
-  '/live-stream-summarizer/js/utils.js',
-  '/live-stream-summarizer/data/summaries.json',
-  '/live-stream-summarizer/images/character.png',
-  '/live-stream-summarizer/images/ogp.png',
-  '/live-stream-summarizer/images/favicon.png',
-  '/live-stream-summarizer/manifest.json'
+  './',
+  'index.html',
+  'css/style.css',
+  'js/main.js',
+  'js/utils.js',
+  'data/summaries.json',
+  'images/character.png',
+  'images/ogp.png',
+  'images/favicon.png',
+  'manifest.json'
 ];
 
 // install イベント: アセットをキャッシュに保存する

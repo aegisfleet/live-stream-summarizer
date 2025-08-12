@@ -50,33 +50,41 @@ self.addEventListener('activate', event => {
 
 // fetch イベント: ネットワークリクエストを横取りし、キャッシュまたはネットワークから応答する
 self.addEventListener('fetch', event => {
+  // GETリクエスト以外、また同一オリジンでないリクエストは無視する
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  // キャッシュ優先戦略
   event.respondWith(
     caches.match(event.request)
-      .then(response => {
-        // キャッシュにヒットした場合、キャッシュから返す
-        if (response) {
-          return response;
+      .then(cachedResponse => {
+        // キャッシュがあればそれを返す
+        if (cachedResponse) {
+          return cachedResponse;
         }
 
-        // キャッシュにない場合、ネットワークからフェッチする
+        // キャッシュになければネットワークにリクエストし、レスポンスをキャッシュに保存する
         return fetch(event.request).then(
-          response => {
+          networkResponse => {
             // レスポンスが有効かチェック
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
+            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+              return networkResponse;
             }
 
-            // レスポンスをクローンして、片方をキャッシュに保存、もう片方をブラウザに返す
-            const responseToCache = response.clone();
-
+            // レスポンスをクローンしてキャッシュに保存
+            const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME)
               .then(cache => {
                 cache.put(event.request, responseToCache);
               });
 
-            return response;
+            return networkResponse;
           }
-        );
+        ).catch(error => {
+          console.error('Service Worker: Fetch failed:', error);
+          throw error;
+        });
       })
   );
 });

@@ -25,3 +25,16 @@ export function formatNumber(num) {
     if (num === undefined || num === null) return '0';
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
+
+export function getBasePath() {
+    const repoName = 'live-stream-summarizer';
+    if (location.hostname === 'github.io' || location.hostname.endsWith('.github.io')) {
+        return `/${repoName}/`;
+    }
+    return '/';
+}
+
+export function goToHomeAndResetHistory() {
+    const homeUrl = getBasePath();
+    window.location.replace(homeUrl);
+}

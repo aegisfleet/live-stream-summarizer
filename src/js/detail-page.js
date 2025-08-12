@@ -9,10 +9,18 @@ class DetailPageManager {
     }
 
     init() {
+        this.trackHistoryOnLoad();
         this.renderDetailPage();
         this.setupEventListeners();
         this.addStructuredData();
         this.initYouTubePlayer();
+    }
+
+    trackHistoryOnLoad() {
+        const entryHistoryLength = sessionStorage.getItem('entryHistoryLength');
+        if (entryHistoryLength === null) {
+            sessionStorage.setItem('entryHistoryLength', history.length);
+        }
     }
 
     renderDetailPage() {

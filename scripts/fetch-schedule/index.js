@@ -7,8 +7,8 @@ const path = require('path');
 const SCHEDULE_URLS = [
   "https://schedule.hololive.tv/simple/hololive",
   "https://schedule.hololive.tv/simple/dev_is",
-  "https://schedule.hololive.tv/simple/indonesia",
-  "https://schedule.hololive.tv/simple/english"
+  "https://schedule.hololive.tv/simple/english",
+  "https://schedule.hololive.tv/simple/indonesia"
 ];
 
 async function fetchSchedule() {

@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: FLOW GLOW</p>
                     <p class="detail-date">配信日時: 2025-08-09 19:58:00</p>
                     <p class="detail-duration">配信時間: 1時間29秒</p>
-                    <p class="detail-view-count">再生数: 100,544</p>
-                    <p class="detail-like-count">高評価数: 7,865</p>
+                    <p class="detail-view-count">再生数: 100,750</p>
+                    <p class="detail-like-count">高評価数: 7,869</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: 'FLOW GLOW',
             date: '2025-08-09 19:58:00',
             duration: '1時間29秒',
-            viewCount: '100,544',
-            likeCount: '7,865',
+            viewCount: '100,750',
+            likeCount: '7,869',
             thumbnailUrl: 'https://i.ytimg.com/vi/xThDC1ixysc/mqdefault.jpg',
             overview: {
                 summary: 'VTuberグループFLOW GLOWによる初のオフコラボカラオケ配信。メンバー5人（Riona, Kiriya, Su, Nika, Bibi）が熱気あふれる歌唱を披露し、特に後半では息の合ったパフォーマンスで会場を盛り上げました。歌唱の合間にはメンバー間の和やかなトークが繰り広げられ、後半には今後の活動に関する重要なお知らせも多数発表され、終始楽しい雰囲気で盛り上がりを見せました。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

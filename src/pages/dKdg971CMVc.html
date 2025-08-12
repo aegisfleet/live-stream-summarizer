@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: さくらみこ 🌸</p>
                     <p class="detail-date">配信日時: 2025-08-03 21:03:00</p>
                     <p class="detail-duration">配信時間: 1時間13分41秒</p>
-                    <p class="detail-view-count">再生数: 475,118</p>
-                    <p class="detail-like-count">高評価数: 21,999</p>
+                    <p class="detail-view-count">再生数: 475,193</p>
+                    <p class="detail-like-count">高評価数: 22,002</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: 'さくらみこ 🌸',
             date: '2025-08-03 21:03:00',
             duration: '1時間13分41秒',
-            viewCount: '475,118',
-            likeCount: '21,999',
+            viewCount: '475,193',
+            likeCount: '22,002',
             thumbnailUrl: 'https://i.ytimg.com/vi/dKdg971CMVc/mqdefault.jpg',
             overview: {
                 summary: 'さくらみこさんの7周年記念企画として、ホロライブメンバーが選んだプレゼントが誰からのものかを予想する企画の後半です。ゲストの大神ミオさんと共に、残りのプレゼントの送り主を推理し、正解発表が行われました。みこちの鋭い推理と、ホロメンからの個性豊かなプレゼント、そして意外な送り主の登場により、終始和やかながらも驚きと笑いに満ちた展開となりました。最終的に10問中6問を正解し、4つのプレゼントを自腹で購入することになりました。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

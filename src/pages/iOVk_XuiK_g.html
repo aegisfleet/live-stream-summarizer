@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: FLOW GLOW</p>
                     <p class="detail-date">配信日時: 2025-08-08 17:00:00</p>
                     <p class="detail-duration">配信時間: 18分47秒</p>
-                    <p class="detail-view-count">再生数: 93,636</p>
-                    <p class="detail-like-count">高評価数: 4,902</p>
+                    <p class="detail-view-count">再生数: 93,683</p>
+                    <p class="detail-like-count">高評価数: 4,908</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: 'FLOW GLOW',
             date: '2025-08-08 17:00:00',
             duration: '18分47秒',
-            viewCount: '93,636',
-            likeCount: '4,902',
+            viewCount: '93,683',
+            likeCount: '4,908',
             thumbnailUrl: 'https://i.ytimg.com/vi/iOVk_XuiK_g/mqdefault.jpg',
             overview: {
                 summary: 'FLOW GLOWのヴィヴィと枢が大阪を舞台に食レポに挑戦。まずはお好み焼き店「あじくらや」で自分好みの一枚をオーダーし、プロの調理を間近で見ながら舌鼓を打ちます。お好み焼きの味覚クイズでは意外な結果に。続いて、念願だった「551蓬莱」の豚まん工場に潜入し、普段見ることのできない豚まんの製造工程を徹底解剖。出来立ての豚まんを試食して大満足の二人は、最後にお土産探しに奔走します。大阪の食文化とものづくりの裏側に触れる、食欲そそる動画です。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

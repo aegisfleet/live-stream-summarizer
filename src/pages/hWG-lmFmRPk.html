@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: FLOW GLOW</p>
                     <p class="detail-date">配信日時: 2025-08-01 17:00:00</p>
                     <p class="detail-duration">配信時間: 17分43秒</p>
-                    <p class="detail-view-count">再生数: 128,204</p>
-                    <p class="detail-like-count">高評価数: 6,011</p>
+                    <p class="detail-view-count">再生数: 128,231</p>
+                    <p class="detail-like-count">高評価数: 6,014</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: 'FLOW GLOW',
             date: '2025-08-01 17:00:00',
             duration: '17分43秒',
-            viewCount: '128,204',
-            likeCount: '6,011',
+            viewCount: '128,231',
+            likeCount: '6,014',
             thumbnailUrl: 'https://i.ytimg.com/vi/hWG-lmFmRPk/mqdefault.jpg',
             overview: {
                 summary: 'バーチャルYouTuberユニット「FLOW GLOW」の綺々羅々ヴィヴィと水宮枢が、大阪梅田にオープンしたホロライブプロダクション公式ショップの魅力とグッズを徹底レポート。二人は大阪道頓堀のグリコサイン前で興奮を露わにし、予算の都合で二人でのレポートとなったが、他のメンバーの分まで頑張ることを誓う。店内では大阪梅田店限定のオリジナルグッズや等身大パネル、ミニキャラ展示などを紹介し、ファン必見のアイテムが多数登場。購入特典や公式アプリ「ホロプラス」の魅力も伝え、ファンとの交流を深める楽しさをアピールしている。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: ラプラス</p>
                     <p class="detail-date">配信日時: 2025-08-03 19:59:00</p>
                     <p class="detail-duration">配信時間: 41分32秒</p>
-                    <p class="detail-view-count">再生数: 706,925</p>
-                    <p class="detail-like-count">高評価数: 51,707</p>
+                    <p class="detail-view-count">再生数: 707,208</p>
+                    <p class="detail-like-count">高評価数: 51,723</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: 'ラプラス',
             date: '2025-08-03 19:59:00',
             duration: '41分32秒',
-            viewCount: '706,925',
-            likeCount: '51,707',
+            viewCount: '707,208',
+            likeCount: '51,723',
             thumbnailUrl: 'https://i.ytimg.com/vi/_1ffz3ADSNI/mqdefault_live.jpg',
             overview: {
                 summary: 'ラプラス・ダークネスさんがゲストにネリッサ・レイヴンクロフトさんとFUWAMOCOさんを招き、ASMRオフコラボを行いました。配信はラプラスさんの興奮とカオスな雰囲気で始まり、ネリッサさんに様々な「対吾輩用日本語」を教えるコーナーが展開されました。下品な言葉や命令形のフレーズ、さらには罰ゲーム的なASMRシチュエーションが次々と繰り出され、スタジオは終始盛り上がりました。ネリッサさんとFUWAMOCOさんのリアクションも相まって、予測不能な面白さに溢れた配信は、最終的にチャンネルのBANを心配する場面もありつつ、興奮冷めやらぬ中で締めくくられました。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

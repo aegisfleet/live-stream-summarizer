@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 虎金妃笑虎</p>
                     <p class="detail-date">配信日時: 2025-08-10 17:30:00</p>
                     <p class="detail-duration">配信時間: 1時間2分30秒</p>
-                    <p class="detail-view-count">再生数: 35,071</p>
-                    <p class="detail-like-count">高評価数: 4,173</p>
+                    <p class="detail-view-count">再生数: 35,114</p>
+                    <p class="detail-like-count">高評価数: 4,179</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '虎金妃笑虎',
             date: '2025-08-10 17:30:00',
             duration: '1時間2分30秒',
-            viewCount: '35,071',
-            likeCount: '4,173',
+            viewCount: '35,114',
+            likeCount: '4,179',
             thumbnailUrl: 'https://i.ytimg.com/vi/GROO1u6YzwU/mqdefault.jpg',
             overview: {
                 summary: '虎金妃笑虎がセクシー曲縛りで歌枠配信を行った。これまでの楽曲に加え、「恋人」「桃色吐息」「ラヴィ」「パイパイ仮面でどうかしらん」「ミス・ブランニューデイ」を披露。歌唱力とセクシーな表現でリスナーを魅了した。トークではセクシーの定義や自身の「虎」としてのアイデンティティに触れる一方で、歌枠での緊張を明かすなどユーモラスな一面も見せた。視聴者との軽快なやり取りや、誕生日グッズ、今後の配信告知なども行われ、終始情熱的かつ和やかな雰囲気で進行した。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

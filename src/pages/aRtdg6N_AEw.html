@@ -41,8 +41,8 @@
                     <p class="detail-streamer">配信者: 音乃瀬奏</p>
                     <p class="detail-date">配信日時: 2025-08-10 18:00:00</p>
                     <p class="detail-duration">配信時間: 1時間40分51秒</p>
-                    <p class="detail-view-count">再生数: 83,617</p>
-                    <p class="detail-like-count">高評価数: 6,776</p>
+                    <p class="detail-view-count">再生数: 83,777</p>
+                    <p class="detail-like-count">高評価数: 6,789</p>
                 </div>
             </div>
 
@@ -75,8 +75,9 @@
 
                 <div class="detail-actions">
                     <div class="share-buttons">
-                        <button id="copy-button" class="copy-button">コピー</button>
-                        <button id="share-button" class="share-button">𝕏で共有</button>
+                        <button id="copy-button" class="copy-button" title="タイトルとURLをコピー">コピー</button>
+                        <button id="share-button" class="share-button" title="この配信を𝕏で共有する">𝕏で共有</button>
+                        <span id="share-help-button" class="hint-icon" title="共有のヒント">?</span>
                     </div>
                 </div>
             </div>
@@ -99,8 +100,8 @@
             streamer: '音乃瀬奏',
             date: '2025-08-10 18:00:00',
             duration: '1時間40分51秒',
-            viewCount: '83,617',
-            likeCount: '6,776',
+            viewCount: '83,777',
+            likeCount: '6,789',
             thumbnailUrl: 'https://i.ytimg.com/vi/aRtdg6N_AEw/mqdefault_live.jpg',
             overview: {
                 summary: 'ホロライブDEV_IS所属の音乃瀬奏が、リスナーから募集した「くそマロ」と称されるマシュマロにユーモアとツッコミを交えながら回答していく配信。ストレス解消法や1日のスケジュールといった個人的な内容から、歌への深い見解、さらには人とのコミュニケーション術、学生時代の厨二病エピソード、そして夢の叶え方まで、様々なジャンルのマシュマロに答える。自身のカバー曲100万再生達成の喜びを分かち合い、オリジナル楽曲やLINEスタンプの告知も行い、ファンとの絆を深める。終始明るくテンポの良い雰囲気で、リスナーの奇抜な発想と奏ちゃんの魅力が光る雑談回。',
@@ -111,5 +112,13 @@
         };
     </script>
     <script src="../js/detail-page.js" type="module"></script>
+
+    <div id="share-help-dialog" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <h3>共有機能のヒント</h3>
+            <p>見どころを選択すると、その再生位置を含んだURLがコピー・共有されます。</p>
+            <button id="close-share-dialog">閉じる</button>
+        </div>
+    </div>
 </body>
 </html>

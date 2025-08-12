@@ -116,6 +116,7 @@ graph TD
 ├── server.js             # 開発用のローカルサーバーです。
 ├── .github/
 │   └── workflows/
+│       ├── cleanup-summaries.yml # GitHub Actionsのワークフローファイル。定期的に古いサマリーデータを削除します。
 │       ├── deploy-pages.yml  # GitHub Actionsのワークフローファイル。GitHub Pagesへのデプロイを自動化します。
 │       └── update-summaries.yml # GitHub Actionsのワークフローファイル。定期的にサマリーを更新します。
 ├── config/
@@ -129,6 +130,8 @@ graph TD
 ├── scripts/
 │   ├── check-archive/
 │   │   └── index.js      # アーカイブを確認するスクリプトです。
+│   ├── cleanup-summaries/
+│   │   └── index.js      # 古いサマリーデータを削除するスクリプトです。
 │   ├── fetch-schedule/
 │   │   └── index.js      # 配信スケジュールを取得するスクリプトです。
 │   ├── generate-pages/

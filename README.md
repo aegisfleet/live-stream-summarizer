@@ -129,10 +129,10 @@ graph TD
 ├── scripts/
 │   ├── check-archive/
 │   │   └── index.js      # アーカイブを確認するスクリプトです。
-│   ├── generate-pages/
-│   │   └── index.js      # 各配信の個別ページを生成するスクリプトです。
 │   ├── fetch-schedule/
 │   │   └── index.js      # 配信スケジュールを取得するスクリプトです。
+│   ├── generate-pages/
+│   │   └── index.js      # 各配信の個別ページを生成するスクリプトです。
 │   └── summarize/
 │       └── index.js      # 配信内容を要約するスクリプトです。
 └── src/

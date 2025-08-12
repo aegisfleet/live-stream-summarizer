@@ -186,6 +186,12 @@
     "date": "2025-08-11T23:41:00.000Z"
   },
   {
+    "videoId": "ad0cNlw6c8c",
+    "videoUrl": "https://www.youtube.com/watch?v=ad0cNlw6c8c",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-12T04:47:00.000Z"
+  },
+  {
     "videoId": "t1z1mSgWRXM",
     "videoUrl": "https://www.youtube.com/watch?v=t1z1mSgWRXM",
     "streamer": "角巻わため 🐏",
@@ -214,12 +220,6 @@
     "videoUrl": "https://www.youtube.com/watch?v=Kz_8bs6Ay_o",
     "streamer": "博衣こより",
     "date": "2025-08-12T12:05:00.000Z"
-  },
-  {
-    "videoId": "sa8S6bQzOEQ",
-    "videoUrl": "https://www.youtube.com/watch?v=sa8S6bQzOEQ",
-    "streamer": "赤井はあと ❤",
-    "date": "2025-08-12T17:00:00.000Z"
   },
   {
     "videoId": "hgXz_J9q9lg",
@@ -276,16 +276,22 @@
     "date": "2025-08-12T23:00:00.000Z"
   },
   {
-    "videoId": "TeCKTigQhm0",
-    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
-    "streamer": "天音かなた 💫",
-    "date": "2025-08-13T00:00:00.000Z"
+    "videoId": "sa8S6bQzOEQ",
+    "videoUrl": "https://www.youtube.com/watch?v=sa8S6bQzOEQ",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-12T23:00:00.000Z"
   },
   {
     "videoId": "4AIJm-aHX3k",
     "videoUrl": "https://www.youtube.com/watch?v=4AIJm-aHX3k",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-08-13T07:30:00.000Z"
+  },
+  {
+    "videoId": "TeCKTigQhm0",
+    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-13T18:00:00.000Z"
   },
   {
     "videoId": "PUaPSb3awvI",

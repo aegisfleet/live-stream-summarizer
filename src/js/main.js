@@ -942,7 +942,6 @@ class ArchiveManager {
             });
         }
     }
-}
 
     setupServiceWorker() {
         if ('serviceWorker' in navigator) {

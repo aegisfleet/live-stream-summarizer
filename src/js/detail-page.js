@@ -18,11 +18,15 @@ class DetailPageManager {
     }
 
     trackHistoryOnLoad() {
-        const entryPoint = {
-            length: history.length,
-            lang: this.lang
-        };
-        sessionStorage.setItem('entryPoint', JSON.stringify(entryPoint));
+        // Only set the entry point if it doesn't exist in the session yet.
+        const entryPointStr = sessionStorage.getItem('entryPoint');
+        if (entryPointStr === null) {
+            const entryPoint = {
+                length: history.length,
+                lang: this.lang
+            };
+            sessionStorage.setItem('entryPoint', JSON.stringify(entryPoint));
+        }
     }
 
     renderDetailPage() {

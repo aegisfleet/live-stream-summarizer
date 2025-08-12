@@ -144,7 +144,9 @@ graph TD
     ├── data/
     │   └── summaries.json    # 生成されたサマリーを保存するJSONファイルです。
     ├── js/
-    │   └── main.js       # Webページの動作を制御するJavaScriptファイルです。
+    │   ├── detail-page.js # 詳細ページのインタラクションを制御するJavaScriptファイルです。
+    │   ├── main.js       # Webページの動作を制御するJavaScriptファイルです。
+    │   └── utils.js      # 共通で利用する関数をまとめたJavaScriptファイルです。
     └── images/
         ├── character.png # イメージキャラクターの画像ファイルです。
         ├── favicon.png   # ファビコンの画像ファイルです。

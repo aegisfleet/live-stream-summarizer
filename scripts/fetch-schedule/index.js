@@ -3,13 +3,17 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
-const config = require('../../config/default.json');
+
+const SCHEDULE_URLS = [
+  "https://schedule.hololive.tv/simple/hololive",
+  "https://schedule.hololive.tv/simple/dev_is"
+];
 
 async function fetchSchedule() {
     try {
         let allStreams = [];
 
-        for (const url of config.schedule.urls) {
+        for (const url of SCHEDULE_URLS) {
             const response = await axios.get(url);
             const $ = cheerio.load(response.data);
             const streams = [];

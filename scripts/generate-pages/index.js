@@ -80,8 +80,10 @@ class PageGenerator {
             
             // サイトマップ生成
             this.generateSitemap(data);
+
+            this.updateServiceWorkerCacheName();
             
-            console.log(`Successfully generated ${data.length} individual pages and sitemap`);
+            console.log(`Successfully generated ${data.length} individual pages, sitemap, and updated service worker.`);
         } catch (error) {
             console.error('Error generating pages:', error);
             process.exit(1);
@@ -156,6 +158,38 @@ class PageGenerator {
             durationStr += `${seconds}秒`;
         }
         return durationStr.trim();
+    }
+
+    updateServiceWorkerCacheName() {
+        const swPath = path.join(__dirname, '../../src/service-worker.js');
+        try {
+            let swContent = fs.readFileSync(swPath, 'utf8');
+            const cacheNameRegex = /const CACHE_NAME = 'hololive-summary-cache-v(\d+)-(\d*)';/;
+            const match = swContent.match(cacheNameRegex);
+
+            if (match) {
+                const newVersion = Date.now();
+                const newCacheName = `const CACHE_NAME = 'hololive-summary-cache-v1-${newVersion}';`;
+                swContent = swContent.replace(cacheNameRegex, newCacheName);
+                fs.writeFileSync(swPath, swContent, 'utf8');
+                console.log(`Successfully updated service worker cache name to v1-${newVersion}`);
+            } else {
+                // If the pattern is not found, try the initial pattern
+                const initialCacheNameRegex = /const CACHE_NAME = 'hololive-summary-cache-v1';/;
+                const initialMatch = swContent.match(initialCacheNameRegex);
+                if (initialMatch) {
+                    const newVersion = Date.now();
+                    const newCacheName = `const CACHE_NAME = 'hololive-summary-cache-v1-${newVersion}';`;
+                    swContent = swContent.replace(initialCacheNameRegex, newCacheName);
+                    fs.writeFileSync(swPath, swContent, 'utf8');
+                    console.log(`Successfully updated service worker cache name to v1-${newVersion}`);
+                } else {
+                    console.warn('Could not find CACHE_NAME in service-worker.js');
+                }
+            }
+        } catch (error) {
+            console.error('Error updating service worker cache name:', error);
+        }
     }
 
     generateSitemap(archives) {

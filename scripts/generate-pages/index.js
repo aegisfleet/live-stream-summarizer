@@ -5,8 +5,14 @@ const { google } = require('googleapis');
 
 class PageGenerator {
     constructor() {
-        this.templatePath = path.join(__dirname, '../../src/templates/detail-page.html');
-        this.outputDir = path.join(__dirname, '../../src/pages');
+        this.templatePaths = {
+            ja: path.join(__dirname, '../../src/templates/detail-page.html'),
+            en: path.join(__dirname, '../../src/templates/detail-page.en.html'),
+        };
+        this.outputDirs = {
+            ja: path.join(__dirname, '../../src/pages'),
+            en: path.join(__dirname, '../../src/en/pages'),
+        };
         this.dataPath = path.join(__dirname, '../../src/data/summaries.json');
         this.sitemapPath = path.join(__dirname, '../../src/sitemap.xml');
         this.youtube = google.youtube({
@@ -66,44 +72,47 @@ class PageGenerator {
                 console.log('Successfully updated summaries.json with video statistics.');
             }
 
-            // 出力ディレクトリをクリーンアップ
-            if (fs.existsSync(this.outputDir)) {
-                fs.rmSync(this.outputDir, { recursive: true, force: true });
-            }
-            fs.mkdirSync(this.outputDir, { recursive: true });
+            // Clean up output directories
+            Object.values(this.outputDirs).forEach(dir => {
+                if (fs.existsSync(dir)) {
+                    fs.rmSync(dir, { recursive: true, force: true });
+                }
+                fs.mkdirSync(dir, { recursive: true });
+            });
             
-            console.log(`Starting to generate ${data.length} individual pages...`);
+            console.log(`Starting to generate ${data.length} individual pages in Japanese and English...`);
             
             for (const archive of data) {
-                await this.generatePage(archive);
+                await this.generatePage(archive, 'ja');
+                await this.generatePage(archive, 'en');
             }
             
-            // サイトマップ生成
+            // Generate sitemap
             this.generateSitemap(data);
 
             this.updateServiceWorkerCacheName();
             
-            console.log(`Successfully generated ${data.length} individual pages, sitemap, and updated service worker.`);
+            console.log(`Successfully generated ${data.length} individual pages in both languages, sitemap, and updated service worker.`);
         } catch (error) {
             console.error('Error generating pages:', error);
             process.exit(1);
         }
     }
 
-    async generatePage(archive) {
+    async generatePage(archive, lang) {
         try {
-            const template = fs.readFileSync(this.templatePath, 'utf8');
-            const pageContent = this.replaceTemplateVariables(template, archive);
-            const outputPath = path.join(this.outputDir, `${archive.videoId}.html`);
+            const template = fs.readFileSync(this.templatePaths[lang], 'utf8');
+            const pageContent = this.replaceTemplateVariables(template, archive, lang);
+            const outputPath = path.join(this.outputDirs[lang], `${archive.videoId}.html`);
             
             fs.writeFileSync(outputPath, pageContent);
-            console.log(`Generated: ${archive.videoId}.html`);
+            console.log(`Generated: ${lang}/${archive.videoId}.html`);
         } catch (error) {
-            console.error(`Error generating page for ${archive.videoId}:`, error);
+            console.error(`Error generating page for ${archive.videoId} (${lang}):`, error);
         }
     }
 
-    replaceTemplateVariables(template, archive) {
+    replaceTemplateVariables(template, archive, lang) {
         const viewCount = archive.viewCount ? this.formatNumber(archive.viewCount) : '0';
         const likeCount = archive.likeCount ? this.formatNumber(archive.likeCount) : '0';
 
@@ -113,7 +122,7 @@ class PageGenerator {
             .replace(/\{\{VIDEO_ID\}\}/g, archive.videoId)
             .replace(/\{\{STREAMER\}\}/g, this.escapeHtml(archive.streamer))
             .replace(/\{\{DATE\}\}/g, this.formatDate(archive.date))
-            .replace(/\{\{DURATION\}\}/g, this.formatDuration(archive.duration))
+            .replace(/\{\{DURATION\}\}/g, this.formatDuration(archive.duration, lang))
             .replace(/\{\{VIEW_COUNT\}\}/g, viewCount)
             .replace(/\{\{LIKE_COUNT\}\}/g, likeCount)
             .replace(/\{\{THUMBNAIL_URL\}\}/g, archive.thumbnailUrl)
@@ -142,11 +151,20 @@ class PageGenerator {
         return new Date(dateString).toISOString().slice(0, 19).replace('T', ' ');
     }
 
-    formatDuration(totalSeconds) {
+    formatDuration(totalSeconds, lang = 'ja') {
         const hours = Math.floor(totalSeconds / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
         const seconds = totalSeconds % 60;
 
+        if (lang === 'en') {
+            let durationStr = "";
+            if (hours > 0) durationStr += `${hours}h `;
+            if (minutes > 0) durationStr += `${minutes}m `;
+            if (seconds > 0 || durationStr === "") durationStr += `${seconds}s`;
+            return durationStr.trim();
+        }
+
+        // Default to Japanese
         let durationStr = "";
         if (hours > 0) {
             durationStr += `${hours}時間`;
@@ -196,19 +214,17 @@ class PageGenerator {
         const baseUrl = 'https://aegisfleet.github.io/live-stream-summarizer';
         let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
         sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n';
-        // トップページ
+
         const now = new Date().toISOString();
-        sitemap += `  <url>
-    <loc>${baseUrl}/</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-`;
         
-        // 個別ページ
+        // Home pages
+        sitemap += `  <url><loc>${baseUrl}/</loc><lastmod>${now}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
+        sitemap += `  <url><loc>${baseUrl}/en/</loc><lastmod>${now}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>\n`;
+
+        // Detail pages
         archives.forEach(archive => {
             sitemap += `  <url>\n    <loc>${baseUrl}/pages/${archive.videoId}.html</loc>\n    <lastmod>${archive.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+            sitemap += `  <url>\n    <loc>${baseUrl}/en/pages/${archive.videoId}.html</loc>\n    <lastmod>${archive.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
         });
         
         sitemap += '</urlset>';

@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aegisfleet.github.io/live-stream-summarizer/</loc>
-    <lastmod>2025-08-12T15:09:17.146Z</lastmod>
+    <lastmod>2025-08-12T14:27:20.299Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aegisfleet.github.io/live-stream-summarizer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aegisfleet.github.io/live-stream-summarizer/en/"/>
   </url>
   <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/DwGvCtIOtQY.html</loc>
-    <lastmod>2025-07-28T19:01:00.000Z</lastmod>
+    <loc>https://aegisfleet.github.io/live-stream-summarizer/en/</loc>
+    <lastmod>2025-08-12T14:27:20.299Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aegisfleet.github.io/live-stream-summarizer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aegisfleet.github.io/live-stream-summarizer/en/"/>
+  </url>
+  <url>
+    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/z1B2c3D4e5F.html</loc>
+    <lastmod>2025-08-12T12:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aegisfleet.github.io/live-stream-summarizer/pages/z1B2c3D4e5F.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aegisfleet.github.io/live-stream-summarizer/pages/en/z1B2c3D4e5F.html"/>
   </url>
   <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/qex8btUdSnk.html</loc>
-    <lastmod>2025-07-28T20:02:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/m1HvMx291VE.html</loc>
-    <lastmod>2025-07-28T18:00:00.000Z</lastmod>
+    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/en/z1B2c3D4e5F.html</loc>
+    <lastmod>2025-08-12T12:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1479,24 +1485,6 @@
   <url>
     <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/m8uYtmc0il0.html</loc>
     <lastmod>2025-08-12T20:01:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/KPZL5xI8krM.html</loc>
-    <lastmod>2025-08-12T20:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/amBKfML2HNM.html</loc>
-    <lastmod>2025-08-12T21:02:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aegisfleet.github.io/live-stream-summarizer/pages/05W3_z_In7s.html</loc>
-    <lastmod>2025-08-12T11:05:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

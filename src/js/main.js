@@ -791,6 +791,7 @@ class ArchiveManager {
 
         const detailPage = this.lang === 'en' ? 'en/' : '';
         const detailUrl = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
+        const shareUrl = `${location.origin}${detailUrl}`;
 
         const copyButton = document.createElement('button');
         copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
@@ -798,7 +799,7 @@ class ArchiveManager {
         copyButton.title = this.lang === 'en' ? 'Copy title and URL' : 'タイトルとURLをコピー';
         copyButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const copyText = `${archive.title}\n${detailUrl}`;
+            const copyText = `${archive.title}\n${shareUrl}`;
             navigator.clipboard.writeText(copyText).then(() => {
                 copyButton.textContent = this.lang === 'en' ? 'Copied!' : 'コピー完了！';
                 setTimeout(() => {
@@ -819,7 +820,7 @@ class ArchiveManager {
         shareButton.title = this.lang === 'en' ? 'Share this stream on 𝕏' : 'この配信を𝕏で共有する';
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareText = `${archive.title}\n${detailUrl}`;
+            const shareText = `${archive.title}\n${shareUrl}`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
         });

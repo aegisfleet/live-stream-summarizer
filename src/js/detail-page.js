@@ -18,10 +18,11 @@ class DetailPageManager {
     }
 
     trackHistoryOnLoad() {
-        const entryHistoryLength = sessionStorage.getItem('entryHistoryLength');
-        if (entryHistoryLength === null) {
-            sessionStorage.setItem('entryHistoryLength', history.length);
-        }
+        const entryPoint = {
+            length: history.length,
+            lang: this.lang
+        };
+        sessionStorage.setItem('entryPoint', JSON.stringify(entryPoint));
     }
 
     renderDetailPage() {

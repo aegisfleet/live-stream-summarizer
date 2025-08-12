@@ -1,12 +1,4 @@
-import { formatDuration, formatNumber, timestampToSeconds } from './utils.js';
-
-function getBasePath() {
-    const repoName = 'live-stream-summarizer';
-    if (location.hostname === 'github.io' || location.hostname.endsWith('.github.io')) {
-        return `/${repoName}`;
-    }
-    return '';
-}
+import { formatDuration, formatNumber, timestampToSeconds, goToHomeAndResetHistory, getBasePath } from './utils.js';
 
 class ArchiveManager {
     constructor() {
@@ -64,6 +56,7 @@ class ArchiveManager {
         this.setupSiteDescriptionToggle();
         this.setupBackToTopButton();
         this.setupBackToHomeButton();
+        this.setupTopLogoLink();
         this.setupWatchLaterButton();
         this.setupLoadMoreButton();
         this.setupSortControls();
@@ -193,8 +186,18 @@ class ArchiveManager {
         }
 
         backToHomeButton.addEventListener('click', () => {
-            window.location.href = window.location.pathname;
+            goToHomeAndResetHistory();
         });
+    }
+
+    setupTopLogoLink() {
+        const topLogoLink = document.getElementById('top-logo-link');
+        if (topLogoLink) {
+            topLogoLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                goToHomeAndResetHistory();
+            });
+        }
     }
 
     setupWatchLaterButton() {
@@ -374,7 +377,7 @@ class ArchiveManager {
         
         selectAllButton.addEventListener('click', () => {
             if (new URLSearchParams(window.location.search).has('videoId')) {
-                window.location.href = window.location.pathname;
+                goToHomeAndResetHistory();
             } else {
                 this.selectAllStreamers();
             }

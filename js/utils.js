@@ -51,24 +51,6 @@ export function goToHomeAndResetHistory() {
     const basePath = getBasePath();
     const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
 
-    // If we are on a detail page, try to go back in history smartly.
-    if (window.location.pathname.includes('/pages/')) {
-        const entryHistoryLengthStr = sessionStorage.getItem('entryHistoryLength');
-        sessionStorage.removeItem('entryHistoryLength');
-
-        if (entryHistoryLengthStr) {
-            const entryHistoryLength = parseInt(entryHistoryLengthStr, 10);
-            const delta = history.length - entryHistoryLength;
-            const backSteps = -(delta + 1);
-
-            if (history.length > Math.abs(backSteps)) {
-                 history.go(backSteps);
-                 return; // Important to exit here
-            }
-        }
-    }
-
-    // For the main page, or as a fallback for detail pages, just navigate to the home URL.
-    // This will effectively reload the page if already there.
+    // Always navigate directly to the correct home page to ensure bug-free redirection.
     window.location.href = homeUrl;
 }

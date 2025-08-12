@@ -15,6 +15,9 @@
     <meta name="twitter:image" content="https://aegisfleet.github.io/live-stream-summarizer/images/ogp.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="apple-touch-icon" href="images/character.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R51TKLHQR5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -117,5 +120,18 @@
     <button id="watch-later" title="あとで見る">🔖</button>
     <button id="back-to-top" title="トップに戻る">⬆️</button>
     <script src="js/main.js" type="module"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/live-stream-summarizer/service-worker.js', { scope: '/live-stream-summarizer/' })
+            .then(registration => {
+              console.log('Service Worker registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('Service Worker registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
 </body>
 </html>

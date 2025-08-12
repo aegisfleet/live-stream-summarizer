@@ -19,6 +19,7 @@ class ArchiveManager {
             viewCount: 'desc',
             likeCount: 'desc'
         };
+        this.lang = document.documentElement.lang || 'ja';
         
         this.init();
     }
@@ -73,7 +74,6 @@ class ArchiveManager {
                     this.sortOrders[sortKey] = this.sortOrders[sortKey] === 'desc' ? 'asc' : 'desc';
                 } else {
                     this.currentSortKey = sortKey;
-                    // 他のキーから切り替えた場合は常に降順から開始
                     this.sortOrders[sortKey] = 'desc';
                 }
 
@@ -97,7 +97,9 @@ class ArchiveManager {
                 document.title = `${archive.title} - ${this.originalTitle}`;
             }
         } else if (streamerName) {
-            document.title = `${streamerName}の配信一覧 - ${this.originalTitle}`;
+            document.title = this.lang === 'en'
+                ? `Streams by ${streamerName} - ${this.originalTitle}`
+                : `${streamerName}の配信一覧 - ${this.originalTitle}`;
         } else {
             document.title = this.originalTitle;
         }
@@ -224,16 +226,21 @@ class ArchiveManager {
     
     async loadData() {
         try {
-            const response = await fetch('data/summaries.json');
+            const dataPath = this.lang === 'en' ? '../data/summaries.json' : 'data/summaries.json';
+            const response = await fetch(dataPath);
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
             
             this.archiveData.forEach(archive => {
                 this.streamers.add(archive.streamer);
-                archive.tags.forEach(tag => this.tags.add(tag));
+                const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
+                if (tags) {
+                    tags.forEach(tag => this.tags.add(tag));
+                }
             });
         } catch (error) {
-            console.error('データの読み込みに失敗しました:', error);
+            const errorMsg = this.lang === 'en' ? 'Failed to load data:' : 'データの読み込みに失敗しました:';
+            console.error(errorMsg, error);
         }
     }
 
@@ -244,7 +251,8 @@ class ArchiveManager {
                 this.watchLaterList = new Set(JSON.parse(savedList));
             }
         } catch (error) {
-            console.error('あとで見るリストの読み込みに失敗しました:', error);
+            const errorMsg = this.lang === 'en' ? 'Failed to load Watch Later list:' : 'あとで見るリストの読み込みに失敗しました:';
+            console.error(errorMsg, error);
         }
     }
 
@@ -267,7 +275,8 @@ class ArchiveManager {
         try {
             localStorage.setItem('watchLaterList', JSON.stringify([...this.watchLaterList]));
         } catch (error) {
-            console.error('あとで見るリストの保存に失敗しました:', error);
+            const errorMsg = this.lang === 'en' ? 'Failed to save Watch Later list:' : 'あとで見るリストの保存に失敗しました:';
+            console.error(errorMsg, error);
         }
     }
 
@@ -314,11 +323,11 @@ class ArchiveManager {
         if (this.watchLaterList.has(videoId)) {
             this.watchLaterList.delete(videoId);
             bookmarkIcon.classList.remove('active');
-            bookmarkIcon.title = 'あとで見るに追加';
+            bookmarkIcon.title = this.lang === 'en' ? 'Add to Watch Later' : 'あとで見るに追加';
         } else {
             this.watchLaterList.add(videoId);
             bookmarkIcon.classList.add('active');
-            bookmarkIcon.title = 'あとで見るから削除';
+            bookmarkIcon.title = this.lang === 'en' ? 'Remove from Watch Later' : 'あとで見るから削除';
         }
         
         this.saveWatchLaterList();
@@ -362,7 +371,8 @@ class ArchiveManager {
         const selectAllButton = document.getElementById('select-all');
         
         if (!filterContainer || !selectAllButton) {
-            console.error('必要なDOM要素が見つかりません:', {
+            const errorMsg = this.lang === 'en' ? 'Required DOM elements not found:' : '必要なDOM要素が見つかりません:';
+            console.error(errorMsg, {
                 filterContainer: !!filterContainer,
                 selectAllButton: !!selectAllButton
             });
@@ -464,7 +474,8 @@ class ArchiveManager {
         const collapsibleContainer = document.querySelector('.filter-group.collapsible');
 
         if (!filterContainer || !selectAllButton || !toggleButton || !collapsibleContainer) {
-            console.error('タグフィルターに必要なDOM要素が見つかりません:', {
+            const errorMsg = this.lang === 'en' ? 'Required DOM elements for tag filter not found:' : 'タグフィルターに必要なDOM要素が見つかりません:';
+            console.error(errorMsg, {
                 filterContainer: !!filterContainer,
                 selectAllButton: !!selectAllButton,
                 toggleButton: !!toggleButton,
@@ -477,7 +488,9 @@ class ArchiveManager {
 
         const toggleTags = () => {
             const isOpen = collapsibleContainer.classList.toggle('open');
-            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+            toggleButton.textContent = isOpen
+                ? (this.lang === 'en' ? 'Close' : '閉じる')
+                : (this.lang === 'en' ? 'Show More' : 'もっと見る');
 
             const content = collapsibleContainer.querySelector('.collapsible-content');
             if (isOpen) {
@@ -501,7 +514,10 @@ class ArchiveManager {
         const relevantArchives = this.archiveData.filter(archive => this.selectedStreamers.has(archive.streamer));
         const visibleTags = new Set();
         relevantArchives.forEach(archive => {
-            archive.tags.forEach(tag => visibleTags.add(tag));
+            const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
+            if (tags) {
+                tags.forEach(tag => visibleTags.add(tag));
+            }
         });
 
         this.tags = visibleTags;
@@ -531,7 +547,9 @@ class ArchiveManager {
 
         const toggleDescription = () => {
             const isOpen = siteDescription.classList.toggle('open');
-            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+            toggleButton.textContent = isOpen
+                ? (this.lang === 'en' ? 'Close' : '閉じる')
+                : (this.lang === 'en' ? 'Read More' : 'もっと見る');
 
             if (isOpen) {
                 collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
@@ -597,8 +615,9 @@ class ArchiveManager {
         this.currentPage = 1;
         this.filteredData = this.archiveData.filter(archive => {
             const streamerMatch = this.selectedStreamers.has(archive.streamer);
+            const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
             const tagMatch = this.selectedTags.size === 0 || 
-                             archive.tags.some(tag => this.selectedTags.has(tag));
+                             (tags && tags.some(tag => this.selectedTags.has(tag)));
             return streamerMatch && tagMatch;
         });
         this.renderArchives(true);
@@ -609,7 +628,8 @@ class ArchiveManager {
         const loadMoreButton = document.getElementById('load-more');
 
         if (!grid) {
-            console.error('アーカイブグリッド要素が見つかりません。要素ID: archive-grid');
+            const errorMsg = this.lang === 'en' ? 'Archive grid element not found. Element ID: archive-grid' : 'アーカイブグリッド要素が見つかりません。要素ID: archive-grid';
+            console.error(errorMsg);
             return;
         }
         
@@ -666,19 +686,20 @@ class ArchiveManager {
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
         img.classList.add('clickable-thumbnail');
-        img.title = '詳細ページへ';
+        img.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         img.addEventListener('click', () => {
-            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
+            const detailPage = this.lang === 'en' ? 'en/' : '';
+            window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
         });
 
         const bookmarkIcon = document.createElement('button');
         bookmarkIcon.className = 'bookmark-icon';
         bookmarkIcon.innerHTML = '🔖';
-        bookmarkIcon.title = 'あとで見るに追加';
+        bookmarkIcon.title = this.lang === 'en' ? 'Add to Watch Later' : 'あとで見るに追加';
         
         if (this.watchLaterList.has(archive.videoId)) {
             bookmarkIcon.classList.add('active');
-            bookmarkIcon.title = 'あとで見るから削除';
+            bookmarkIcon.title = this.lang === 'en' ? 'Remove from Watch Later' : 'あとで見るから削除';
         }
         
         bookmarkIcon.addEventListener('click', (e) => {
@@ -704,43 +725,46 @@ class ArchiveManager {
         const title = document.createElement('h2');
         title.textContent = archive.title;
         title.classList.add('clickable-title');
-        title.title = '詳細ページへ';
+        title.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         title.addEventListener('click', () => {
-            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
+            const detailPage = this.lang === 'en' ? 'en/' : '';
+            window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
         });
 
         const dateElement = document.createElement('p');
         dateElement.className = 'archive-date';
-        dateElement.textContent = `配信日時: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
+        dateElement.textContent = `${this.lang === 'en' ? 'Stream Date' : '配信日時'}: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
 
         const duration = document.createElement('p');
         duration.className = 'duration';
-        duration.textContent = `配信時間: ${formatDuration(archive.duration)}`;
+        duration.textContent = `${this.lang === 'en' ? 'Duration' : '配信時間'}: ${formatDuration(archive.duration, this.lang)}`;
 
         const viewCount = document.createElement('p');
         viewCount.className = 'view-count';
-        viewCount.textContent = `再生数: ${formatNumber(archive.viewCount)}`;
+        viewCount.textContent = `${this.lang === 'en' ? 'Views' : '再生数'}: ${formatNumber(archive.viewCount)}`;
 
         const likeCount = document.createElement('p');
         likeCount.className = 'like-count';
-        likeCount.textContent = `高評価数: ${formatNumber(archive.likeCount)}`;
+        likeCount.textContent = `${this.lang === 'en' ? 'Likes' : '高評価数'}: ${formatNumber(archive.likeCount)}`;
 
         const streamer = document.createElement('p');
         streamer.className = 'streamer-name clickable-streamer';
-        streamer.textContent = `配信者: ${archive.streamer}`;
-        streamer.title = `配信者「${archive.streamer}」で絞り込む`;
+        streamer.textContent = `${this.lang === 'en' ? 'Streamer' : '配信者'}: ${archive.streamer}`;
+        streamer.title = this.lang === 'en' ? `Filter by streamer: "${archive.streamer}"` : `配信者「${archive.streamer}」で絞り込む`;
         streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer));
 
         const overview = document.createElement('div');
         overview.className = 'overview';
 
+        const overviewData = this.lang === 'en' && archive.overview_en ? archive.overview_en : archive.overview;
+
         const overviewSummary = document.createElement('p');
         overviewSummary.className = 'overview-summary';
-        overviewSummary.textContent = archive.overview.summary;
+        overviewSummary.textContent = overviewData.summary;
 
         const overviewMood = document.createElement('p');
         overviewMood.className = 'overview-mood';
-        overviewMood.textContent = `配信の雰囲気：${archive.overview.mood}`;
+        overviewMood.textContent = `${this.lang === 'en' ? 'Mood' : '配信の雰囲気'}：${overviewData.mood}`;
 
         overview.appendChild(dateElement);
         overview.appendChild(duration);
@@ -765,47 +789,48 @@ class ArchiveManager {
         const footer = document.createElement('div');
         footer.className = 'card-footer';
 
+        const detailPage = this.lang === 'en' ? 'en/' : '';
+        const detailUrl = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
+
         const copyButton = document.createElement('button');
-        copyButton.textContent = 'コピー';
+        copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
         copyButton.className = 'copy-button';
-        copyButton.title = 'タイトルとURLをコピー';
+        copyButton.title = this.lang === 'en' ? 'Copy title and URL' : 'タイトルとURLをコピー';
         copyButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
-            const copyText = `${archive.title}\n${shareUrl}`;
+            const copyText = `${archive.title}\n${detailUrl}`;
             navigator.clipboard.writeText(copyText).then(() => {
-                copyButton.textContent = 'コピー完了！';
+                copyButton.textContent = this.lang === 'en' ? 'Copied!' : 'コピー完了！';
                 setTimeout(() => {
-                    copyButton.textContent = 'コピー';
+                    copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
                 }, 2000);
             }).catch(err => {
                 console.error('クリップボードへのコピーに失敗しました:', err);
-                copyButton.textContent = '失敗';
+                copyButton.textContent = this.lang === 'en' ? 'Failed' : '失敗';
                  setTimeout(() => {
-                    copyButton.textContent = 'コピー';
+                    copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
                 }, 2000);
             });
         });
 
         const shareButton = document.createElement('button');
-        shareButton.textContent = '𝕏で共有';
+        shareButton.textContent = this.lang === 'en' ? 'Share on 𝕏' : '𝕏で共有';
         shareButton.className = 'share-button';
-        shareButton.title = 'この配信を𝕏で共有する';
+        shareButton.title = this.lang === 'en' ? 'Share this stream on 𝕏' : 'この配信を𝕏で共有する';
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareUrl = `https://aegisfleet.github.io/live-stream-summarizer/pages/${archive.videoId}.html`;
-            const shareText = `${archive.title}\n${shareUrl}`;
+            const shareText = `${archive.title}\n${detailUrl}`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
         });
 
         const detailButton = document.createElement('button');
-        detailButton.textContent = '詳細';
+        detailButton.textContent = this.lang === 'en' ? 'Details' : '詳細';
         detailButton.className = 'detail-button';
-        detailButton.title = '詳細ページを表示';
+        detailButton.title = this.lang === 'en' ? 'View details page' : '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `${getBasePath()}pages/${archive.videoId}.html`;
+            window.location.href = detailUrl;
         });
         footer.appendChild(detailButton);
 
@@ -823,64 +848,75 @@ class ArchiveManager {
         container.className = `${type}-container collapsible`;
 
         const title = document.createElement('strong');
-        title.textContent = type === 'highlights' ? '見どころ：' : 'タグ：';
+        title.textContent = type === 'highlights'
+            ? (this.lang === 'en' ? 'Highlights:' : '見どころ：')
+            : (this.lang === 'en' ? 'Tags:' : 'タグ：');
         title.className = 'collapsible-trigger';
 
         const listContainer = document.createElement('div');
         listContainer.className = `${type}-list collapsible-content`;
 
         if (type === 'highlights') {
-            archive.highlights.forEach(highlight => {
-                const li = document.createElement('li');
-                li.classList.add('clickable-highlight', 'highlight-item');
-                li.title = `クリックして ${highlight.timestamp} から再生`;
-                li.addEventListener('click', (e) => {
-                    const seconds = timestampToSeconds(highlight.timestamp);
-                    window.location.href = `${getBasePath()}pages/${archive.videoId}.html?t=${seconds}`;
+            const highlights = this.lang === 'en' && archive.highlights_en ? archive.highlights_en : archive.highlights;
+            if (highlights) {
+                highlights.forEach(highlight => {
+                    const li = document.createElement('li');
+                    li.classList.add('clickable-highlight', 'highlight-item');
+                    li.title = this.lang === 'en' ? `Click to play from ${highlight.timestamp}` : `クリックして ${highlight.timestamp} から再生`;
+                    li.addEventListener('click', (e) => {
+                        const seconds = timestampToSeconds(highlight.timestamp);
+                        const detailPage = this.lang === 'en' ? 'en/' : '';
+                        window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html?t=${seconds}`;
+                    });
+
+                    const h3 = document.createElement('h3');
+                    h3.textContent = highlight.title;
+
+                    const timestamp = document.createElement('span');
+                    timestamp.className = 'timestamp';
+                    timestamp.textContent = highlight.timestamp;
+
+                    const highlightType = document.createElement('span');
+                    highlightType.className = `highlight-type ${highlight.type}`;
+                    highlightType.textContent = highlight.type;
+
+                    const description = document.createElement('p');
+                    description.textContent = highlight.description;
+
+                    li.appendChild(h3);
+                    li.appendChild(timestamp);
+                    li.appendChild(document.createTextNode(' / '));
+                    li.appendChild(highlightType);
+                    li.appendChild(description);
+                    listContainer.appendChild(li);
                 });
-
-                const h3 = document.createElement('h3');
-                h3.textContent = highlight.title;
-
-                const timestamp = document.createElement('span');
-                timestamp.className = 'timestamp';
-                timestamp.textContent = highlight.timestamp;
-
-                const highlightType = document.createElement('span');
-                highlightType.className = `highlight-type ${highlight.type}`;
-                highlightType.textContent = highlight.type;
-
-                const description = document.createElement('p');
-                description.textContent = highlight.description;
-
-                li.appendChild(h3);
-                li.appendChild(timestamp);
-                li.appendChild(document.createTextNode(' / '));
-                li.appendChild(highlightType);
-                li.appendChild(description);
-                listContainer.appendChild(li);
-            });
+            }
         } else { // tags
-            const tags = document.createElement('div');
-            tags.className = 'tags';
-            archive.tags.forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.className = 'tag clickable-tag';
-                tagSpan.textContent = `#${tag}`;
-                tagSpan.title = `タグ「${tag}」で絞り込む`;
-                tagSpan.addEventListener('click', () => this.filterByTag(tag));
-                tags.appendChild(tagSpan);
-            });
-            listContainer.appendChild(tags);
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'tags';
+            const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
+            if (tags) {
+                tags.forEach(tag => {
+                    const tagSpan = document.createElement('span');
+                    tagSpan.className = 'tag clickable-tag';
+                    tagSpan.textContent = `#${tag}`;
+                    tagSpan.title = this.lang === 'en' ? `Filter by tag: "${tag}"` : `タグ「${tag}」で絞り込む`;
+                    tagSpan.addEventListener('click', () => this.filterByTag(tag));
+                    tagsContainer.appendChild(tagSpan);
+                });
+            }
+            listContainer.appendChild(tagsContainer);
         }
 
         const toggleButton = document.createElement('button');
         toggleButton.className = `toggle-${type}`;
-        toggleButton.textContent = 'もっと見る';
+        toggleButton.textContent = this.lang === 'en' ? 'Show More' : 'もっと見る';
 
         const toggleSection = () => {
             const isOpen = container.classList.toggle('open');
-            toggleButton.textContent = isOpen ? '閉じる' : 'もっと見る';
+            toggleButton.textContent = isOpen
+                ? (this.lang === 'en' ? 'Close' : '閉じる')
+                : (this.lang === 'en' ? 'Show More' : 'もっと見る');
 
             if (isOpen) {
                 listContainer.style.maxHeight = listContainer.scrollHeight + 'px';

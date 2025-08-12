@@ -689,7 +689,7 @@ class ArchiveManager {
         img.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         img.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
         });
 
         const bookmarkIcon = document.createElement('button');
@@ -728,7 +728,7 @@ class ArchiveManager {
         title.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         title.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
+            window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
         });
 
         const dateElement = document.createElement('p');
@@ -790,7 +790,7 @@ class ArchiveManager {
         footer.className = 'card-footer';
 
         const detailPage = this.lang === 'en' ? 'en/' : '';
-        const detailUrl = `${getBasePath()}pages/${detailPage}${archive.videoId}.html`;
+        const detailUrl = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
         const shareUrl = `${location.origin}${detailUrl}`;
 
         const copyButton = document.createElement('button');
@@ -867,7 +867,7 @@ class ArchiveManager {
                     li.addEventListener('click', (e) => {
                         const seconds = timestampToSeconds(highlight.timestamp);
                         const detailPage = this.lang === 'en' ? 'en/' : '';
-                        window.location.href = `${getBasePath()}pages/${detailPage}${archive.videoId}.html?t=${seconds}`;
+                        window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`;
                     });
 
                     const h3 = document.createElement('h3');

@@ -1,4 +1,4 @@
-import { timestampToSeconds } from './utils.js';
+import { timestampToSeconds, goToHomeAndResetHistory } from './utils.js';
 
 class DetailPageManager {
     constructor() {
@@ -178,7 +178,15 @@ class DetailPageManager {
         if (backToHomeButton) {
             backToHomeButton.classList.add('show');
             backToHomeButton.addEventListener('click', () => {
-                window.location.href = '../';
+                goToHomeAndResetHistory();
+            });
+        }
+
+        const topLogoLink = document.getElementById('top-logo-link');
+        if (topLogoLink) {
+            topLogoLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                goToHomeAndResetHistory();
             });
         }
 

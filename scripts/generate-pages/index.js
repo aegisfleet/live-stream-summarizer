@@ -116,9 +116,13 @@ class PageGenerator {
         const viewCount = archive.viewCount ? this.formatNumber(archive.viewCount) : '0';
         const likeCount = archive.likeCount ? this.formatNumber(archive.likeCount) : '0';
 
+        const overviewSummary = lang === 'en' && archive.overview_en ? archive.overview_en.summary : archive.overview.summary;
+        const overviewMood = lang === 'en' && archive.overview_en ? archive.overview_en.mood : archive.overview.mood;
+        const highlightsJson = lang === 'en' && archive.highlights_en ? JSON.stringify(archive.highlights_en) : JSON.stringify(archive.highlights);
+
         return template
             .replace(/\{\{TITLE\}\}/g, this.escapeHtml(archive.title))
-            .replace(/\{\{DESCRIPTION\}\}/g, this.escapeHtml(archive.overview.summary))
+            .replace(/\{\{DESCRIPTION\}\}/g, this.escapeHtml(overviewSummary))
             .replace(/\{\{VIDEO_ID\}\}/g, archive.videoId)
             .replace(/\{\{STREAMER\}\}/g, this.escapeHtml(archive.streamer))
             .replace(/\{\{DATE\}\}/g, this.formatDate(archive.date))
@@ -127,9 +131,9 @@ class PageGenerator {
             .replace(/\{\{LIKE_COUNT\}\}/g, likeCount)
             .replace(/\{\{THUMBNAIL_URL\}\}/g, archive.thumbnailUrl)
             .replace(/\{\{TAGS\}\}/g, this.escapeHtml(archive.tags.join(', ')))
-            .replace(/\{\{OVERVIEW_SUMMARY\}\}/g, this.escapeHtml(archive.overview.summary))
-            .replace(/\{\{OVERVIEW_MOOD\}\}/g, this.escapeHtml(archive.overview.mood))
-            .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, JSON.stringify(archive.highlights))
+            .replace(/\{\{OVERVIEW_SUMMARY\}\}/g, this.escapeHtml(overviewSummary))
+            .replace(/\{\{OVERVIEW_MOOD\}\}/g, this.escapeHtml(overviewMood))
+            .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, highlightsJson)
             .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(archive.tags));
     }
 

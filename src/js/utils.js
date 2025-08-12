@@ -47,30 +47,10 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    const currentLang = document.documentElement.lang || 'ja';
+    const lang = document.documentElement.lang || 'ja';
     const basePath = getBasePath();
-    const homeUrl = currentLang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
+    const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
 
-    if (window.location.pathname.includes('/pages/')) {
-        const entryPointStr = sessionStorage.getItem('entryPoint');
-        sessionStorage.removeItem('entryPoint'); // Clean up
-
-        if (entryPointStr) {
-            const entryPoint = JSON.parse(entryPointStr);
-            // If the language has not changed since entering the detail page, use history.go()
-            if (entryPoint.lang === currentLang) {
-                const delta = history.length - entryPoint.length;
-                const backSteps = -(delta + 1);
-
-                if (history.length > Math.abs(backSteps)) {
-                    history.go(backSteps);
-                    return; // Exit after navigating
-                }
-            }
-        }
-    }
-
-    // Fallback: navigate directly if not on a detail page, if entryPoint is missing,
-    // or if the language has changed.
+    // Always navigate directly to the correct home page to ensure bug-free redirection.
     window.location.href = homeUrl;
 }

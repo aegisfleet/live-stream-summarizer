@@ -47,7 +47,9 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    const homeUrl = getBasePath();
+    const lang = document.documentElement.lang || 'ja';
+    const basePath = getBasePath();
+    const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
 
     // If we are on a detail page, try to go back in history smartly.
     if (window.location.pathname.includes('/pages/')) {

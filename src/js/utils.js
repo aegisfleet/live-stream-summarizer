@@ -47,7 +47,9 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    if (history.length > 1) {
+    // history.length is 1 for a new tab, but can be 2 if the browser creates an initial about:blank page.
+    // Checking for > 2 is a safer way to see if there's a "real" page to go back to.
+    if (history.length > 2) {
         history.back();
     } else {
         const lang = document.documentElement.lang || 'ja';

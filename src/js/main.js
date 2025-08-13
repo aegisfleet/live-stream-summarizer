@@ -704,11 +704,6 @@ class ArchiveManager {
     }
     
     createArchiveCard(archive) {
-        // We use location.replace() to navigate to the detail page.
-        // This is an intentional change to keep the PWA's history stack at a single entry.
-        // This, combined with the location.replace() used in goToHomeAndResetHistory (utils.js),
-        // ensures that pressing the back button on the home screen exits the app,
-        // which is the desired behavior for this PWA.
         const card = document.createElement('div');
         card.className = 'archive-card';
         

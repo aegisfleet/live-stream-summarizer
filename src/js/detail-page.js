@@ -10,7 +10,6 @@ class DetailPageManager {
     }
 
     init() {
-        sessionStorage.setItem('entryHistoryLength', history.length);
         this.renderDetailPage();
         this.setupEventListeners();
         this.addStructuredData();
@@ -60,7 +59,7 @@ class DetailPageManager {
 
                 const url = new URL(window.location);
                 url.searchParams.set('t', seconds);
-                history.pushState({ t: seconds }, '', url);
+                history.replaceState({ t: seconds }, '', url);
             });
             
             highlightsList.appendChild(li);

@@ -51,22 +51,6 @@ export function goToHomeAndResetHistory() {
     const basePath = getBasePath();
     const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
 
-    // Try to go back in history smartly to clear the detail page and its related entries.
-    if (window.location.pathname.includes('/pages/')) {
-        const entryHistoryLengthStr = sessionStorage.getItem('entryHistoryLength');
-        sessionStorage.removeItem('entryHistoryLength'); // Clean up
-
-        if (entryHistoryLengthStr) {
-            const entryHistoryLength = parseInt(entryHistoryLengthStr, 10);
-            if (!isNaN(entryHistoryLength) && history.length > entryHistoryLength) {
-                const delta = history.length - entryHistoryLength;
-                history.go(-(delta + 1));
-                return; // Exit after navigating
-            }
-        }
-    }
-
-    // Fallback for the main page or if the smart history navigation fails.
-    // This ensures a reliable return to the correct language's home page.
+    // Always navigate directly to the correct home page to ensure bug-free redirection.
     location.replace(homeUrl);
 }

@@ -1,4 +1,15 @@
 (function() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang');
+
+    if (lang === 'ja') {
+        localStorage.setItem('preferredLanguage', 'ja');
+        // Remove the query parameter and reload
+        const newUrl = window.location.pathname;
+        window.location.replace(newUrl);
+        return; // Stop execution to prevent conflicts with the logic below
+    }
+
     const PREFERRED_LANGUAGE_KEY = 'preferredLanguage';
     const isEnglishPage = window.location.pathname.includes('/en/');
 

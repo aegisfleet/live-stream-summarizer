@@ -57,20 +57,6 @@ class PageGenerator {
 
             // Filter out any entries with missing or empty videoId
             const videoIds = data.map(archive => archive.videoId).filter(id => id);
-            
-            // if (videoIds.length > 0) {
-            //     const videoStats = await this.fetchVideoStatistics(videoIds);
-            //     data = data.map(archive => {
-            //         const stats = videoStats[archive.videoId];
-            //         return {
-            //             ...archive,
-            //             viewCount: stats ? stats.viewCount : 0,
-            //             likeCount: stats ? stats.likeCount : 0,
-            //         };
-            //     });
-            //     fs.writeFileSync(this.dataPath, JSON.stringify(data, null, 2), 'utf8');
-            //     console.log('Successfully updated summaries.json with video statistics.');
-            // }
 
             // Clean up output directories
             Object.values(this.outputDirs).forEach(dir => {

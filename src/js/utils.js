@@ -47,5 +47,18 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    history.back();
+    if (history.length > 1) {
+        history.back();
+    } else {
+        const lang = document.documentElement.lang || 'ja';
+        const basePath = getBasePath();
+        let homeUrl = basePath;
+
+        // The Japanese version is at the root, English is under /en/
+        if (lang === 'en') {
+            homeUrl = `${basePath}en/`;
+        }
+
+        location.assign(homeUrl);
+    }
 }

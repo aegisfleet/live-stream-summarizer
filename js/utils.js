@@ -61,6 +61,6 @@ export function goToHomeAndResetHistory() {
             homeUrl = `${basePath}en/`;
         }
 
-        location.assign(homeUrl);
+        location.replace(homeUrl);
     }
 }

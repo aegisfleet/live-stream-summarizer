@@ -63,6 +63,31 @@ class ArchiveManager {
         this.setupSortControls();
         this.setupHintDialog();
         this.setupServiceWorker();
+        this.setupLanguageSwitcher();
+    }
+
+    setupLanguageSwitcher() {
+        const PREFERRED_LANGUAGE_KEY = 'preferredLanguage';
+        const jaLink = document.getElementById('lang-ja');
+        const enLink = document.getElementById('lang-en');
+
+        if (jaLink) {
+            jaLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
+                const basePath = getBasePath();
+                location.replace(basePath);
+            });
+        }
+
+        if (enLink) {
+            enLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
+                const basePath = getBasePath();
+                location.replace(`${basePath}en/`);
+            });
+        }
     }
 
     setupSortControls() {

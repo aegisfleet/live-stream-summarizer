@@ -901,17 +901,17 @@ footer {
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -100px; /* Start off-screen */
+  top: -100px; /* Start off-screen */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: bottom 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .snackbar.show {
   visibility: visible;
-  bottom: 30px;
+  top: 30px;
 }
 
 .snackbar-text {

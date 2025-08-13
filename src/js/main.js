@@ -323,7 +323,7 @@ class ArchiveManager {
             const params = new URLSearchParams(window.location.search);
             params.set('watchLater', 'true');
             const newUrl = `${window.location.pathname}?${params.toString()}`;
-            history.pushState(null, '', newUrl);
+            history.replaceState(null, '', newUrl);
         } else {
             this._resetToDefaultView();
         }
@@ -379,7 +379,7 @@ class ArchiveManager {
         const params = new URLSearchParams(window.location.search);
         params.delete('watchLater');
         const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-        history.pushState(null, '', newUrl);
+        history.replaceState(null, '', newUrl);
 
         this.selectedStreamers = new Set(this.streamers);
         this.selectedTags = new Set(this.tags);
@@ -446,7 +446,7 @@ class ArchiveManager {
             this.selectedStreamers.add(clickedStreamer);
             params.set('streamer', clickedStreamer);
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-            history.pushState(null, '', newUrl);
+            history.replaceState(null, '', newUrl);
             this.setupStreamerFilter();
             this.setupTagFilter();
         } else if (this.selectedStreamers.has(clickedStreamer) && this.selectedStreamers.size === 1) {
@@ -456,7 +456,7 @@ class ArchiveManager {
             this.selectedStreamers.add(clickedStreamer);
             params.set('streamer', clickedStreamer);
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-            history.pushState(null, '', newUrl);
+            history.replaceState(null, '', newUrl);
         }
 
         const buttons = document.querySelectorAll('#filter-buttons button');
@@ -485,7 +485,7 @@ class ArchiveManager {
             const params = new URLSearchParams(window.location.search);
             params.delete('streamer');
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
-            history.pushState(null, '', newUrl);
+            history.replaceState(null, '', newUrl);
         }
         
         this.updateTagFilter();
@@ -613,7 +613,7 @@ class ArchiveManager {
 
     filterByTag(clickedTag) {
         if (new URLSearchParams(window.location.search).has('videoId')) {
-            history.pushState(null, '', window.location.pathname);
+            history.replaceState(null, '', window.location.pathname);
             document.getElementById('filter-container').style.display = 'block';
             document.querySelector('.filter-group.collapsible').style.display = 'block';
             this.setupStreamerFilter();

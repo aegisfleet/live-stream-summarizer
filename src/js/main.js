@@ -32,6 +32,7 @@ class ArchiveManager {
         this._setupEventListeners();
         this.renderArchives();
         this.updateTitle();
+        document.body.style.opacity = 1;
     }
 
     _setupInitialFilters() {

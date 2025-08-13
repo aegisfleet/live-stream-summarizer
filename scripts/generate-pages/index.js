@@ -57,20 +57,6 @@ class PageGenerator {
 
             // Filter out any entries with missing or empty videoId
             const videoIds = data.map(archive => archive.videoId).filter(id => id);
-            
-            if (videoIds.length > 0) {
-                const videoStats = await this.fetchVideoStatistics(videoIds);
-                data = data.map(archive => {
-                    const stats = videoStats[archive.videoId];
-                    return {
-                        ...archive,
-                        viewCount: stats ? stats.viewCount : 0,
-                        likeCount: stats ? stats.likeCount : 0,
-                    };
-                });
-                fs.writeFileSync(this.dataPath, JSON.stringify(data, null, 2), 'utf8');
-                console.log('Successfully updated summaries.json with video statistics.');
-            }
 
             // Clean up output directories
             Object.values(this.outputDirs).forEach(dir => {
@@ -116,12 +102,14 @@ class PageGenerator {
         const viewCount = archive.viewCount ? this.formatNumber(archive.viewCount) : '0';
         const likeCount = archive.likeCount ? this.formatNumber(archive.likeCount) : '0';
 
+        const title = lang === 'en' && archive.title_en ? archive.title_en : archive.title;
         const overviewSummary = lang === 'en' && archive.overview_en ? archive.overview_en.summary : archive.overview.summary;
         const overviewMood = lang === 'en' && archive.overview_en ? archive.overview_en.mood : archive.overview.mood;
         const highlightsJson = lang === 'en' && archive.highlights_en ? JSON.stringify(archive.highlights_en) : JSON.stringify(archive.highlights);
+        const tags = lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
 
         return template
-            .replace(/\{\{TITLE\}\}/g, this.escapeHtml(archive.title))
+            .replace(/\{\{TITLE\}\}/g, this.escapeHtml(title))
             .replace(/\{\{DESCRIPTION\}\}/g, this.escapeHtml(overviewSummary))
             .replace(/\{\{VIDEO_ID\}\}/g, archive.videoId)
             .replace(/\{\{STREAMER\}\}/g, this.escapeHtml(archive.streamer))
@@ -130,11 +118,11 @@ class PageGenerator {
             .replace(/\{\{VIEW_COUNT\}\}/g, viewCount)
             .replace(/\{\{LIKE_COUNT\}\}/g, likeCount)
             .replace(/\{\{THUMBNAIL_URL\}\}/g, archive.thumbnailUrl)
-            .replace(/\{\{TAGS\}\}/g, this.escapeHtml(archive.tags.join(', ')))
+            .replace(/\{\{TAGS\}\}/g, this.escapeHtml(tags.join(', ')))
             .replace(/\{\{OVERVIEW_SUMMARY\}\}/g, this.escapeHtml(overviewSummary))
             .replace(/\{\{OVERVIEW_MOOD\}\}/g, this.escapeHtml(overviewMood))
             .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, highlightsJson)
-            .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(archive.tags));
+            .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(tags));
     }
 
     formatNumber(num) {

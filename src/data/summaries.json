@@ -2,12 +2,17 @@
   {
     "videoId": "j7oyJg7AhPA",
     "title": "【新ボイス】はろー、わーるど！ 月曜のロボ子、スマイル起動中！",
+    "title_en": "[New Voice] Hello, World! Roboco Here, Smile Activated for Monday!",
     "streamer": "ホロライブ",
     "date": "2025-07-29T18:00:00.000Z",
     "thumbnailUrl": "https://i.ytimg.com/vi/j7oyJg7AhPA/mqdefault.jpg",
     "overview": {
       "summary": "ホロライブのロボ子さんが、長年お休みしていた相棒のカメラと再会し、過去の配信での思い出を振り返る。カメラのユニークな機能やいたずらっ子な一面を懐かしみつつ、これまでの活動の歩みを語る。また、今後の配信に対する意気込みとして、新しい挨拶「はろーぼー」の考案や、毎週月曜日の定期配信「月曜のロボ子」の構想、さらにリスナーやゲストとの交流を深める計画など、前向きな展望を共有する。最後には、広いソファで一人座る寂しさを語り、リスナーとの距離を縮めたいという想いを伝える。",
       "mood": "和やかで前向きな雰囲気の中に、時折懐かしさや少しの寂しさが垣間見える"
+    },
+    "overview_en": {
+      "summary": "Roboco-san from Hololive reunites with her long-lost camera companion and reminisces about past streams. While fondly recalling the camera's unique features and mischievous side, she reflects on her journey so far. She also shares her excitement for future streams, including a new greeting 'Hello-bo,' plans for a regular Monday stream called 'Monday Roboco,' and ideas for deepening interaction with viewers and guests. Finally, she expresses a touch of loneliness sitting alone on a large sofa, conveying her desire to get closer to her listeners.",
+      "mood": "A warm and positive atmosphere, with occasional hints of nostalgia and a little loneliness."
     },
     "duration": 369,
     "highlights": [
@@ -60,12 +65,69 @@
         "type": "トーク"
       }
     ],
+    "highlights_en": [
+      {
+        "title": "Roboco and Camera's Reunion",
+        "description": "She joyfully reunites with the mechanical camera that has been helping with her streams for a long time and talks about its history.",
+        "timestamp": "00:00:11",
+        "type": "Talk"
+      },
+      {
+        "title": "Introduction to the Camera's Unique Functions",
+        "description": "She introduces the camera's unusual features, such as having a single lens on its head and the ability to hold objects.",
+        "timestamp": "00:00:46",
+        "type": "Talk"
+      },
+      {
+        "title": "Past Memories with the Camera",
+        "description": "She nostalgically recounts episodes from her factory streaming days, the camera's pranks, and how it once ran away before a stream.",
+        "timestamp": "00:01:02",
+        "type": "Talk"
+      },
+      {
+        "title": "Proposal to Play Past Footage",
+        "description": "She suggests that the camera's memory might still hold old footage and proposes they try playing it.",
+        "timestamp": "00:02:02",
+        "type": "Talk"
+      },
+      {
+        "title": "Proposal for a New Greeting: 'Hello-bo'",
+        "description": "Prefacing that she wants to decide with her listeners, she announces her self-devised new greeting, 'Hello-bo.'",
+        "timestamp": "00:04:10",
+        "type": "Announcement"
+      },
+      {
+        "title": "Idea for a Regular Monday Stream",
+        "description": "She reveals plans for a weekly live broadcast at a set time, suggesting 'Monday Roboco' as a potential title.",
+        "timestamp": "00:04:34",
+        "type": "Announcement"
+      },
+      {
+        "title": "Anticipation for Listener Interaction",
+        "description": "She discusses plans to deepen interaction with everyone, such as soliciting mail, inviting guests, and bringing listeners to the factory.",
+        "timestamp": "00:04:51",
+        "type": "Talk"
+      },
+      {
+        "title": "The Big Sofa and Loneliness",
+        "description": "Sitting on a sofa that's too big for one person, she hints at her loneliness about the empty space next to her.",
+        "timestamp": "00:05:21",
+        "type": "Talk"
+      }
+    ],
     "tags": [
       "雑談",
       "思い出話",
       "今後の展望",
       "カメラ紹介",
       "新企画"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Reminiscence",
+      "Future Plans",
+      "Camera Introduction",
+      "New Project"
     ],
     "lastUpdated": "2025-07-29T10:07:51.618Z",
     "viewCount": 39916,
@@ -221,6 +283,17 @@
       "Shorts",
       "回線トラブル"
     ],
+    "tags_en": [
+      "Karaoke",
+      "Chatting",
+      "Hololive",
+      "Hakui Koyori",
+      "Summer Songs",
+      "Anisong",
+      "Swimsuit",
+      "Shorts",
+      "Connection Issues"
+    ],
     "lastUpdated": "2025-07-29T10:20:57.683Z",
     "viewCount": 47832,
     "likeCount": 5810
@@ -339,6 +412,24 @@
       "King of Prism",
       "テニスの王子様",
       "銀魂"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Hololive",
+      "Momosuzu Nene",
+      "Recording",
+      "YAGOO",
+      "Yukihana Lamy",
+      "Ichiban Kuji",
+      "Merchandise",
+      "Episode Talk",
+      "Listener Interaction",
+      "Love Reality Show",
+      "Anime",
+      "Otaku Culture",
+      "King of Prism",
+      "The Prince of Tennis",
+      "Gintama"
     ],
     "lastUpdated": "2025-07-29T13:48:31.567Z",
     "viewCount": 120142,
@@ -478,6 +569,26 @@
       "百鬼あやめ",
       "癒月ちょこ",
       "天音かなた"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Game Commentary",
+      "New Game",
+      "Hololive",
+      "Sakura Miko",
+      "Gorogoro Mountain",
+      "Aki Rosenthal",
+      "Shirakami Fubuki",
+      "Omaru Polka",
+      "Tokoyami Towa",
+      "Nekomata Okayu",
+      "Hololive Gorogoro Mountain",
+      "Hoshimachi Suisei",
+      "Ookami Mio",
+      "Inugami Korone",
+      "Nakiri Ayame",
+      "Yuzuki Choco",
+      "Amane Kanata"
     ],
     "lastUpdated": "2025-07-29T14:02:38.622Z",
     "viewCount": 283147,
@@ -634,6 +745,22 @@
       "ジブリ",
       "みきとP",
       "ポルカドットスティングレイ",
+      "Do As Infinity",
+      "ZARD",
+      "My Little Lover"
+    ],
+    "tags_en": [
+      "Karaoke",
+      "Song",
+      "J-POP",
+      "RADWIMPS",
+      "Kenshi Yonezu",
+      "DECO*27",
+      "Chatting",
+      "Seiko Matsuda",
+      "Ghibli",
+      "MikitoP",
+      "Polkadot Stingray",
       "Do As Infinity",
       "ZARD",
       "My Little Lover"
@@ -932,6 +1059,19 @@
       "格闘ゲーム",
       "VTuber"
     ],
+    "tags_en": [
+      "Ichijou Ririka",
+      "Hololive",
+      "Street Fighter 6",
+      "Game Commentary",
+      "Ranked Match",
+      "E. Honda",
+      "STREET FIGHTER 6",
+      "hololive DEV_IS",
+      "ReGLOSS",
+      "Fighting Game",
+      "VTuber"
+    ],
     "lastUpdated": "2025-07-29T14:22:54.019Z",
     "viewCount": 110208,
     "likeCount": 5547
@@ -1146,6 +1286,29 @@
       "最終ステージ",
       "再挑戦"
     ],
+    "tags_en": [
+      "Chatting",
+      "Game Commentary",
+      "Collaboration",
+      "Horror Game",
+      "Omaru Polka",
+      "Lamy",
+      "Koyori",
+      "Yukihana Lamy",
+      "Hakui Koyori",
+      "R.E.P.O.",
+      "Laughter",
+      "Happening",
+      "Teamwork",
+      "Voice Command",
+      "Miracle",
+      "Item Collection",
+      "Strategic Retreat",
+      "Tension",
+      "Cooperative Play",
+      "Final Stage",
+      "Retry"
+    ],
     "lastUpdated": "2025-07-29T16:42:43.638Z",
     "viewCount": 71675,
     "likeCount": 5115
@@ -1280,6 +1443,15 @@
       "グッズ紹介",
       "告知"
     ],
+    "tags_en": [
+      "Chatting",
+      "Game Commentary",
+      "Puzzle Game",
+      "Collaboration",
+      "Music",
+      "Merchandise Introduction",
+      "Announcement"
+    ],
     "lastUpdated": "2025-07-29T16:56:25.382Z",
     "viewCount": 62192,
     "likeCount": 6762
@@ -1398,6 +1570,18 @@
       "3Dライブ",
       "美容",
       "プレゼント"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Birthday",
+      "Countdown",
+      "Hololive",
+      "Houshou Marine",
+      "Announcement",
+      "Karaoke",
+      "3D Live",
+      "Beauty",
+      "Present"
     ],
     "lastUpdated": "2025-07-29T17:18:25.321Z",
     "viewCount": 343525,
@@ -1589,6 +1773,18 @@
       "煽り",
       "水宮枢",
       "司賀りこ"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Game Commentary",
+      "Mario Kart",
+      "Showdown",
+      "VTuber",
+      "Collaboration Stream",
+      "High Tension",
+      "Taunting",
+      "Miyako Suiu",
+      "Shiga Riko"
     ],
     "lastUpdated": "2025-07-29T17:28:05.216Z",
     "viewCount": 28572,
@@ -1788,6 +1984,19 @@
       "日常",
       "VRC"
     ],
+    "tags_en": [
+      "Chatting",
+      "Update",
+      "Poor Health",
+      "Ambulance",
+      "Fever",
+      "Sore Throat",
+      "Health",
+      "Holomem Interaction",
+      "Dream Analysis",
+      "Daily Life",
+      "VRC"
+    ],
     "lastUpdated": "2025-07-30T03:59:15.674Z",
     "viewCount": 59974,
     "likeCount": 6396
@@ -1855,6 +2064,15 @@
       "音楽",
       "夏色まつり",
       "響咲リオナ"
+    ],
+    "tags_en": [
+      "Exercise",
+      "Healthy Living",
+      "Chatting",
+      "Collaboration",
+      "Music",
+      "Natsuiro Matsuri",
+      "Hibiki Riona"
     ],
     "lastUpdated": "2025-07-30T11:52:12.405Z",
     "viewCount": 50467,
@@ -2022,6 +2240,29 @@
       "癒やし",
       "雑談メイン"
     ],
+    "tags_en": [
+      "Minecraft",
+      "Game Commentary",
+      "Chatting",
+      "Late Night Stream",
+      "Hololive",
+      "DEV_IS",
+      "Hibiki Riona",
+      "Minecraft",
+      "Diamond Mining",
+      "Endurance Stream",
+      "Tsundere",
+      "Happening",
+      "Item Loss",
+      "Revenge",
+      "Netherite Armor",
+      "Diamond Discovery",
+      "Collaboration Announcement",
+      "Pet",
+      "Rock-Paper-Scissors",
+      "Healing",
+      "Mainly Chatting"
+    ],
     "lastUpdated": "2025-07-30T04:56:06.555Z",
     "viewCount": 48507,
     "likeCount": 4642
@@ -2081,6 +2322,19 @@
       "lumière",
       "感動",
       "アニメーション"
+    ],
+    "tags_en": [
+      "Song",
+      "Music Video",
+      "MV",
+      "Memento Mori",
+      "Game Music",
+      "Character Song",
+      "Hololive",
+      "Amane Kanata",
+      "lumière",
+      "Touching",
+      "Animation"
     ],
     "lastUpdated": "2025-07-30T15:04:05.083Z",
     "viewCount": 110538,
@@ -2197,6 +2451,15 @@
       "雪花ラミィ",
       "レトロゲーム",
       "ワープゾーン"
+    ],
+    "tags_en": [
+      "Game Commentary",
+      "Super Mario Bros.",
+      "First Playthrough",
+      "Hololive",
+      "Yukihana Lamy",
+      "Retro Game",
+      "Warp Zone"
     ],
     "lastUpdated": "2025-07-30T15:07:56.734Z",
     "viewCount": 109544,
@@ -2367,6 +2630,15 @@
       "ゲーム実況",
       "ホロライブ",
       "エンディング"
+    ],
+    "tags_en": [
+      "Game",
+      "Mario Kart",
+      "Mario Kart World",
+      "Kazama Iroha",
+      "Game Commentary",
+      "Hololive",
+      "Ending"
     ],
     "lastUpdated": "2025-07-30T15:15:36.578Z",
     "viewCount": 78584,
@@ -2565,6 +2837,24 @@
       "ARカード",
       "色違い"
     ],
+    "tags_en": [
+      "Pokémon",
+      "Pokémon Trading Card Game Pocket",
+      "Pokéca",
+      "Card Opening",
+      "New Pack",
+      "Ho-Oh ex",
+      "Lugia ex",
+      "Gacha",
+      "Vtuber",
+      "Hololive",
+      "Hakui Koyori",
+      "Stream that can't end",
+      "Surprise",
+      "In-app purchase",
+      "AR Card",
+      "Shiny"
+    ],
     "lastUpdated": "2025-07-30T15:19:59.479Z",
     "viewCount": 61491,
     "likeCount": 3977
@@ -2700,6 +2990,22 @@
       "感動",
       "ハイテンション"
     ],
+    "tags_en": [
+      "Watchalong",
+      "Cheering Screening",
+      "KING OF PRISM",
+      "Kinpri",
+      "Movie Commentary",
+      "Virtual YouTuber",
+      "Hololive",
+      "Omaru Polka",
+      "Momosuzu Nene",
+      "Collaboration Stream",
+      "Reaction",
+      "Commentary",
+      "Touching",
+      "High Tension"
+    ],
     "lastUpdated": "2025-07-30T15:23:49.774Z",
     "viewCount": 28934,
     "likeCount": 3014
@@ -2818,6 +3124,23 @@
       "猫又おかゆ",
       "角巻わため"
     ],
+    "tags_en": [
+      "Karaoke",
+      "3D Live",
+      "Reveal",
+      "Collaboration",
+      "Hololive",
+      "Houshou Marine",
+      "Kohei Tanaka",
+      "Chisa Yokoyama",
+      "Major Announcement",
+      "Anniversary Stream",
+      "Sakura Miko",
+      "Shigure Ui",
+      "Ookami Mio",
+      "Nekomata Okayu",
+      "Tsunomaki Watame"
+    ],
     "lastUpdated": "2025-07-30T16:27:17.127Z",
     "viewCount": 1131131,
     "likeCount": 69672
@@ -2920,6 +3243,20 @@
       "ヤンデレ",
       "アイドル",
       "ダンス"
+    ],
+    "tags_en": [
+      "Hololive",
+      "Houshou Marine",
+      "Original Song",
+      "MV",
+      "Animation",
+      "Virtual Youtuber",
+      "VTuber",
+      "Dark Fantasy",
+      "Pop",
+      "Yandere",
+      "Idol",
+      "Dance"
     ],
     "lastUpdated": "2025-07-30T15:29:28.784Z",
     "viewCount": 3830405,
@@ -3107,6 +3444,32 @@
       "日本酒",
       "ファンレター",
       "告知"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Hololive",
+      "Offline Collaboration",
+      "Review",
+      "Gamers",
+      "Birthday",
+      "ASMR",
+      "Pokémon",
+      "Nagashi Somen",
+      "Takoyaki",
+      "Board Game",
+      "Theatergoing",
+      "Life",
+      "Harry Potter",
+      "Health",
+      "Doujin Event",
+      "Membership",
+      "Stamp",
+      "Hatotaurus",
+      "Gambling",
+      "Merchandise",
+      "Sake",
+      "Fan Letter",
+      "Announcement"
     ],
     "lastUpdated": "2025-07-30T15:44:34.619Z",
     "viewCount": 132919,
@@ -28332,6 +28695,20 @@
       "マルバツクイズ",
       "SF",
       "考察"
+    ],
+    "tags_en": [
+      "Chatting",
+      "Game Commentary",
+      "Horror Game",
+      "Human Identification",
+      "Viewer Participation",
+      "Hololive",
+      "Psychological Horror",
+      "Choice Game",
+      "Multiple Endings",
+      "Speculation",
+      "Alternate Route",
+      "Anticipation for full version"
     ],
     "lastUpdated": "2025-08-07T17:33:10.160Z",
     "viewCount": 116519,

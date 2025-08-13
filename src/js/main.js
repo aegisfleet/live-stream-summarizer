@@ -223,7 +223,7 @@ class ArchiveManager {
         if (topLogoLink) {
             topLogoLink.addEventListener('click', (event) => {
                 event.preventDefault();
-                goToHomeAndResetHistory();
+                location.reload();
             });
         }
     }

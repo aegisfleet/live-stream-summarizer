@@ -266,7 +266,7 @@ class DetailPageManager {
             jaLink.addEventListener('click', (e) => {
                 e.preventDefault();
                 localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
-                window.location.href = e.target.href;
+                location.replace(e.target.href);
             });
         }
 
@@ -274,7 +274,7 @@ class DetailPageManager {
             enLink.addEventListener('click', (e) => {
                 e.preventDefault();
                 localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
-                window.location.href = e.target.href;
+                location.replace(e.target.href);
             });
         }
     }

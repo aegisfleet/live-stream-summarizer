@@ -238,7 +238,7 @@ class DetailPageManager {
         if (!this.archiveData) return;
         
         // ページタイトルの更新
-        document.title = `${this.archiveData.title} - ホロライブ配信アーカイブサマリー`;
+        document.title = `${this.archiveData.title} - ホロサマリー`;
         
         // メタデータの更新
         this.updateMetaData();

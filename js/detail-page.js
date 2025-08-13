@@ -108,7 +108,8 @@ class DetailPageManager {
             playerVars: {
                 'playsinline': 1,
                 'rel': 0,
-                'modestbranding': 1
+                'modestbranding': 1,
+                'origin': window.location.origin
             },
             events: {
                 'onReady': this._onPlayerReady.bind(this),

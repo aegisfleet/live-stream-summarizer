@@ -1,26 +1,29 @@
 (function() {
     const PREFERRED_LANGUAGE_KEY = 'preferredLanguage';
-    const preferredLanguage = localStorage.getItem(PREFERRED_LANGUAGE_KEY);
     const isEnglishPage = window.location.pathname.includes('/en/');
 
+    // If the user explicitly navigates to a language-specific page,
+    // set their preference and do not redirect.
+    if (isEnglishPage) {
+        localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
+        return; // Stop further execution
+    }
+
+    // When on the default (Japanese) page, check for preference.
+    const preferredLanguage = localStorage.getItem(PREFERRED_LANGUAGE_KEY);
+
+    // If no preference is set, default to Japanese.
     if (!preferredLanguage) {
+        localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
         return;
     }
 
-    const basePath = window.location.pathname.includes('/live-stream-summarizer/')
-        ? '/live-stream-summarizer'
-        : '';
-
-    // User prefers English but is on the Japanese page.
-    if (preferredLanguage === 'en' && !isEnglishPage) {
-        // Correctly handle the base path for the en page.
+    // If preference is English, but user is on the Japanese page, redirect.
+    if (preferredLanguage === 'en') {
+        const basePath = window.location.pathname.includes('/live-stream-summarizer/')
+            ? '/live-stream-summarizer'
+            : '';
         const targetPath = basePath ? `${basePath}/en/` : '/en/';
-        location.replace(targetPath);
-    }
-    // User prefers Japanese but is on the English page.
-    else if (preferredLanguage === 'ja' && isEnglishPage) {
-        // Correctly handle the base path for the ja page (root).
-        const targetPath = basePath ? `${basePath}/` : '/';
         location.replace(targetPath);
     }
 })();

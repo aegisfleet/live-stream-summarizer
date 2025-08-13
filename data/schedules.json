@@ -258,6 +258,18 @@
     "date": "2025-08-13T13:00:00.000Z"
   },
   {
+    "videoId": "gLaqw0qb2gA",
+    "videoUrl": "https://www.youtube.com/watch?v=gLaqw0qb2gA",
+    "streamer": "博衣こより",
+    "date": "2025-08-13T17:00:00.000Z"
+  },
+  {
+    "videoId": "TeCKTigQhm0",
+    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-13T18:00:00.000Z"
+  },
+  {
     "videoId": "8K2hcZWuf_w",
     "videoUrl": "https://www.youtube.com/watch?v=8K2hcZWuf_w",
     "streamer": "鷹嶺ルイ",
@@ -270,10 +282,10 @@
     "date": "2025-08-13T18:00:00.000Z"
   },
   {
-    "videoId": "TeCKTigQhm0",
-    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
-    "streamer": "天音かなた 💫",
-    "date": "2025-08-13T18:00:00.000Z"
+    "videoId": "PUaPSb3awvI",
+    "videoUrl": "https://www.youtube.com/watch?v=PUaPSb3awvI",
+    "streamer": "風真いろは",
+    "date": "2025-08-13T19:00:00.000Z"
   },
   {
     "videoId": "EUt_8iax6Xo",
@@ -282,10 +294,10 @@
     "date": "2025-08-13T19:00:00.000Z"
   },
   {
-    "videoId": "PUaPSb3awvI",
-    "videoUrl": "https://www.youtube.com/watch?v=PUaPSb3awvI",
-    "streamer": "風真いろは",
-    "date": "2025-08-13T19:00:00.000Z"
+    "videoId": "8mkstRVs6Lk",
+    "videoUrl": "https://www.youtube.com/watch?v=8mkstRVs6Lk",
+    "streamer": "不知火フレア 🔥",
+    "date": "2025-08-13T20:00:00.000Z"
   },
   {
     "videoId": "Iz5kxenI7JQ",
@@ -294,10 +306,16 @@
     "date": "2025-08-13T20:00:00.000Z"
   },
   {
-    "videoId": "8mkstRVs6Lk",
-    "videoUrl": "https://www.youtube.com/watch?v=8mkstRVs6Lk",
-    "streamer": "不知火フレア 🔥",
-    "date": "2025-08-13T20:00:00.000Z"
+    "videoId": "-a4qSq-4AJI",
+    "videoUrl": "https://www.youtube.com/watch?v=-a4qSq-4AJI",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-13T21:00:00.000Z"
+  },
+  {
+    "videoId": "CpHhD3_m2FI",
+    "videoUrl": "https://www.youtube.com/watch?v=CpHhD3_m2FI",
+    "streamer": "桃鈴ねね",
+    "date": "2025-08-13T21:00:00.000Z"
   },
   {
     "videoId": "YMCP0VhKJfA",
@@ -315,6 +333,12 @@
     "videoId": "xhDUTA39a3Q",
     "videoUrl": "https://www.youtube.com/watch?v=xhDUTA39a3Q",
     "streamer": "赤井はあと ❤",
+    "date": "2025-08-13T22:00:00.000Z"
+  },
+  {
+    "videoId": "Nw4YN_m8eYI",
+    "videoUrl": "https://www.youtube.com/watch?v=Nw4YN_m8eYI",
+    "streamer": "雪花ラミィ",
     "date": "2025-08-13T22:00:00.000Z"
   },
   {
@@ -406,6 +430,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=F3msH0tTh3I",
     "streamer": "綺々羅々ヴィヴィ",
     "date": "2025-08-13T11:59:00.000Z"
+  },
+  {
+    "videoId": "2S-f9v5-5sU",
+    "videoUrl": "https://www.youtube.com/watch?v=2S-f9v5-5sU",
+    "streamer": "轟はじめ",
+    "date": "2025-08-13T17:00:00.000Z"
   },
   {
     "videoId": "cPZHg8J7jXM",
@@ -550,5 +580,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=9NlbGVIiZi4",
     "streamer": "Anya",
     "date": "2025-08-13T10:31:00.000Z"
+  },
+  {
+    "videoId": "HkF_orLN4j0",
+    "videoUrl": "https://www.youtube.com/watch?v=HkF_orLN4j0",
+    "streamer": "Anya",
+    "date": "2025-08-14T22:00:00.000Z"
   }
 ]

@@ -68,26 +68,31 @@ class ArchiveManager {
 
     setupLanguageSwitcher() {
         const PREFERRED_LANGUAGE_KEY = 'preferredLanguage';
-        const jaLink = document.getElementById('lang-ja');
-        const enLink = document.getElementById('lang-en');
+        const jaLinks = [document.getElementById('lang-ja'), document.getElementById('top-lang-ja')];
+        const enLinks = [document.getElementById('lang-en'), document.getElementById('top-lang-en')];
 
-        if (jaLink) {
-            jaLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
-                const basePath = getBasePath();
-                location.replace(basePath);
-            });
-        }
+        jaLinks.forEach(link => {
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
+                    const basePath = getBasePath();
+                    // The 'basePath' already includes a trailing slash if it's not the root.
+                    // For the root, it's '/'.
+                    location.replace(e.currentTarget.href);
+                });
+            }
+        });
 
-        if (enLink) {
-            enLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
-                const basePath = getBasePath();
-                location.replace(`${basePath}en/`);
-            });
-        }
+        enLinks.forEach(link => {
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
+                    location.replace(e.currentTarget.href);
+                });
+            }
+        });
     }
 
     setupSortControls() {

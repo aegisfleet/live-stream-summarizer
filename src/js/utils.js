@@ -52,5 +52,5 @@ export function goToHomeAndResetHistory() {
     const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
 
     // Always navigate directly to the correct home page to ensure bug-free redirection.
-    window.location.href = homeUrl;
+    location.replace(homeUrl);
 }

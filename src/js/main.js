@@ -704,6 +704,11 @@ class ArchiveManager {
     }
     
     createArchiveCard(archive) {
+        // We use location.replace() to navigate to the detail page.
+        // This is an intentional change to keep the PWA's history stack at a single entry.
+        // This, combined with the location.replace() used in goToHomeAndResetHistory (utils.js),
+        // ensures that pressing the back button on the home screen exits the app,
+        // which is the desired behavior for this PWA.
         const card = document.createElement('div');
         card.className = 'archive-card';
         
@@ -714,7 +719,7 @@ class ArchiveManager {
         img.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         img.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
+            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
         });
 
         const bookmarkIcon = document.createElement('button');
@@ -753,7 +758,7 @@ class ArchiveManager {
         title.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         title.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
+            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
         });
 
         const dateElement = document.createElement('p');
@@ -856,7 +861,7 @@ class ArchiveManager {
         detailButton.title = this.lang === 'en' ? 'View details page' : '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = detailUrl;
+            location.replace(detailUrl);
         });
         footer.appendChild(detailButton);
 
@@ -892,7 +897,7 @@ class ArchiveManager {
                     li.addEventListener('click', (e) => {
                         const seconds = timestampToSeconds(highlight.timestamp);
                         const detailPage = this.lang === 'en' ? 'en/' : '';
-                        window.location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`;
+                        location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`);
                     });
 
                     const h3 = document.createElement('h3');

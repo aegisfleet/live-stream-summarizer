@@ -10,6 +10,7 @@ class DetailPageManager {
     }
 
     init() {
+        sessionStorage.setItem('entryHistoryLength', history.length);
         this.renderDetailPage();
         this.setupEventListeners();
         this.addStructuredData();

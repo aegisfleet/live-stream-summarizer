@@ -1013,23 +1013,30 @@ class ArchiveManager {
     setupServiceWorker() {
         if ('serviceWorker' in navigator) {
             const basePath = getBasePath();
+
+            const showUpdateSnackbar = (worker) => {
+                const snackbar = document.getElementById('update-snackbar');
+                const updateButton = document.getElementById('update-button');
+                if (snackbar && updateButton) {
+                    snackbar.classList.add('show');
+                    updateButton.onclick = () => {
+                        worker.postMessage({ type: 'SKIP_WAITING' });
+                    };
+                }
+            };
+
             navigator.serviceWorker.register(`${basePath}service-worker.js`, { scope: basePath })
                 .then(registration => {
+                    if (registration.waiting) {
+                        showUpdateSnackbar(registration.waiting);
+                    }
                     registration.onupdatefound = () => {
                         const installingWorker = registration.installing;
                         if (installingWorker) {
                             installingWorker.onstatechange = () => {
                                 if (installingWorker.state === 'installed') {
                                     if (navigator.serviceWorker.controller) {
-                                        // New content is available, show the snackbar
-                                        const snackbar = document.getElementById('update-snackbar');
-                                        const updateButton = document.getElementById('update-button');
-                                        if (snackbar && updateButton) {
-                                            snackbar.classList.add('show');
-                                            updateButton.onclick = () => {
-                                                installingWorker.postMessage({ type: 'SKIP_WAITING' });
-                                            };
-                                        }
+                                        showUpdateSnackbar(installingWorker);
                                     }
                                 }
                             };

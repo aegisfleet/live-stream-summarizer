@@ -175,6 +175,7 @@ class DetailPageManager {
     }
 
     setupEventListeners() {
+        this.setupLanguageSwitcher();
         const backToHomeButton = document.getElementById('back-to-home');
         if (backToHomeButton) {
             backToHomeButton.classList.add('show');
@@ -252,6 +253,28 @@ class DetailPageManager {
                 if (e.target === shareHelpDialog) {
                     shareHelpDialog.style.display = 'none';
                 }
+            });
+        }
+    }
+
+    setupLanguageSwitcher() {
+        const PREFERRED_LANGUAGE_KEY = 'preferredLanguage';
+        const jaLink = document.getElementById('lang-ja');
+        const enLink = document.getElementById('lang-en');
+
+        if (jaLink) {
+            jaLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
+                window.location.href = e.target.href;
+            });
+        }
+
+        if (enLink) {
+            enLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'en');
+                window.location.href = e.target.href;
             });
         }
     }

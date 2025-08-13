@@ -47,10 +47,5 @@ export function getBasePath() {
 }
 
 export function goToHomeAndResetHistory() {
-    const lang = document.documentElement.lang || 'ja';
-    const basePath = getBasePath();
-    const homeUrl = lang === 'en' ? new URL('en/', location.origin + basePath).pathname : basePath;
-
-    // Always navigate directly to the correct home page to ensure bug-free redirection.
-    location.replace(homeUrl);
+    history.back();
 }

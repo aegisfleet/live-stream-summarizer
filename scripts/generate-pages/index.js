@@ -73,25 +73,24 @@ class PageGenerator {
             // }
 
             // Clean up output directories
-            // Object.values(this.outputDirs).forEach(dir => {
-            //     if (fs.existsSync(dir)) {
-            //         fs.rmSync(dir, { recursive: true, force: true });
-            //     }
-            //     fs.mkdirSync(dir, { recursive: true });
-            // });
+            Object.values(this.outputDirs).forEach(dir => {
+                if (fs.existsSync(dir)) {
+                    fs.rmSync(dir, { recursive: true, force: true });
+                }
+                fs.mkdirSync(dir, { recursive: true });
+            });
             
             console.log(`Starting to generate ${data.length} individual pages in Japanese and English...`);
             
             for (const archive of data) {
                 await this.generatePage(archive, 'ja');
                 await this.generatePage(archive, 'en');
-                break;
             }
             
             // Generate sitemap
-            // this.generateSitemap(data);
+            this.generateSitemap(data);
 
-            // this.updateServiceWorkerCacheName();
+            this.updateServiceWorkerCacheName();
             
             console.log(`Successfully generated ${data.length} individual pages in both languages, sitemap, and updated service worker.`);
         } catch (error) {

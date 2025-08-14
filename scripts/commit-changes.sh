@@ -59,9 +59,16 @@ setup_git_config() {
 # リモートとの同期
 sync_with_remote() {
   log "リモートリポジトリとの同期中..."
-  
-  # 現在の変更を一時保存
-  git stash push -m "Temporary stash before pull" || log "保存する変更がありません"
+
+  local stashed=false
+  # 現在の変更（未追跡ファイルを含む）を一時保存
+  if [[ -n "$(git status --porcelain)" ]]; then
+    git stash push -u -m "Temporary stash before pull"
+    stashed=true
+    log "ローカルの変更を一時保存しました"
+  else
+    log "保存するローカルの変更がありません"
+  fi
 
   # リモートの最新情報を取得
   git fetch origin
@@ -71,13 +78,49 @@ sync_with_remote() {
   current_branch=$(git branch --show-current)
 
   # リモートブランチとの差分を確認
-  if git rev-list HEAD...origin/"$current_branch" --count | grep -q "^[1-9]"; then
+  if git rev-list HEAD...origin/"$current_branch" --count | grep -q '^[1-9]'; then
     log "リモートに新しいコミットがあります。リモートに合わせてリセットします"
     git reset --hard "origin/$current_branch"
   fi
 
-  # 一時保存した変更を復元
-  git stash pop || log "復元する変更がありません"
+  # 一時保存した変更があれば復元
+  if [[ "$stashed" = true ]]; then
+    log "一時保存した変更を復元中..."
+    # set +e で stash pop のエラー時にスクリプトが停止しないようにする
+    set +e
+    git stash pop
+    local stash_pop_status=$?
+    set -e
+
+    if [[ $stash_pop_status -ne 0 ]]; then
+      log "コンフリクトを検出しました。自動マージを試みます..."
+      local conflict_files=("src/sitemap.xml" "src/service-worker.js")
+
+      for file in "${conflict_files[@]}"; do
+        # ファイルのコンフリクトがあるか確認
+        if git status --porcelain "$file" | grep -q "^UU"; then
+          log "ファイル '$file' のコンフリクトを解決しています（ローカルの変更を優先）"
+          git checkout --theirs "$file"
+          git add "$file"
+        fi
+      done
+
+      # 他のファイルでまだコンフリクトが残っているかチェック
+      if git status --porcelain | grep -q "^UU"; then
+        err "エラー: 自動解決できないコンフリクトが残っています"
+        git status
+        exit 1
+      else
+        log "コンフリクトは正常に解決されました"
+        log "復元に使用した stash を削除します"
+        git stash drop
+      fi
+    else
+      log "変更の復元が正常に完了しました"
+    fi
+  else
+    log "復元する変更がありません"
+  fi
 }
 
 # ファイルの追加

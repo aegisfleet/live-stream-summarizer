@@ -54,12 +54,6 @@
     "date": "2025-08-13T17:52:00.000Z"
   },
   {
-    "videoId": "TeCKTigQhm0",
-    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
-    "streamer": "天音かなた 💫",
-    "date": "2025-08-13T18:00:00.000Z"
-  },
-  {
     "videoId": "DpYSUe6Ca9o",
     "videoUrl": "https://www.youtube.com/watch?v=DpYSUe6Ca9o",
     "streamer": "天音かなた 💫",
@@ -174,21 +168,39 @@
     "date": "2025-08-14T07:00:00.000Z"
   },
   {
+    "videoId": "ZpGxQSv0bfs",
+    "videoUrl": "https://www.youtube.com/watch?v=ZpGxQSv0bfs",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-14T12:00:00.000Z"
+  },
+  {
     "videoId": "3OJ6jzZyyeI",
     "videoUrl": "https://www.youtube.com/watch?v=3OJ6jzZyyeI",
     "streamer": "博衣こより",
     "date": "2025-08-14T12:00:00.000Z"
   },
   {
-    "videoId": "wwDofKjr5Jo",
-    "videoUrl": "https://www.youtube.com/watch?v=wwDofKjr5Jo",
-    "streamer": "博衣こより",
-    "date": "2025-08-14T19:00:00.000Z"
+    "videoId": "k9z-0fWKw4s",
+    "videoUrl": "https://www.youtube.com/watch?v=k9z-0fWKw4s",
+    "streamer": "風真いろは",
+    "date": "2025-08-14T12:00:00.000Z"
   },
   {
     "videoId": "1zONbzdfMFA",
     "videoUrl": "https://www.youtube.com/watch?v=1zONbzdfMFA",
     "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "TeCKTigQhm0",
+    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "wwDofKjr5Jo",
+    "videoUrl": "https://www.youtube.com/watch?v=wwDofKjr5Jo",
+    "streamer": "博衣こより",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
@@ -297,7 +309,13 @@
     "videoId": "32qgc2oUG7Q",
     "videoUrl": "https://www.youtube.com/watch?v=32qgc2oUG7Q",
     "streamer": "儒烏風亭らでん",
-    "date": "2025-08-14T10:00:00.000Z"
+    "date": "2025-08-14T09:59:00.000Z"
+  },
+  {
+    "videoId": "7x7ezXFi0Ak",
+    "videoUrl": "https://www.youtube.com/watch?v=7x7ezXFi0Ak",
+    "streamer": "水宮枢",
+    "date": "2025-08-14T11:02:00.000Z"
   },
   {
     "videoId": "ut_0Z_lXYQc",
@@ -357,19 +375,25 @@
     "videoId": "UPN_bj5-Mmw",
     "videoUrl": "https://www.youtube.com/watch?v=UPN_bj5-Mmw",
     "streamer": "Nerissa",
-    "date": "2025-08-14T09:00:00.000Z"
+    "date": "2025-08-14T08:54:00.000Z"
   },
   {
-    "videoId": "XkX6IC6MTUc",
-    "videoUrl": "https://www.youtube.com/watch?v=XkX6IC6MTUc",
-    "streamer": "Baelz",
-    "date": "2025-08-14T10:00:00.000Z"
+    "videoId": "N3E67SUKqWI",
+    "videoUrl": "https://www.youtube.com/watch?v=N3E67SUKqWI",
+    "streamer": "Ina",
+    "date": "2025-08-14T09:00:00.000Z"
   },
   {
     "videoId": "AyjNTY2jWOQ",
     "videoUrl": "https://www.youtube.com/watch?v=AyjNTY2jWOQ",
     "streamer": "FUWAMOCO",
-    "date": "2025-08-14T10:00:00.000Z"
+    "date": "2025-08-14T09:55:00.000Z"
+  },
+  {
+    "videoId": "XkX6IC6MTUc",
+    "videoUrl": "https://www.youtube.com/watch?v=XkX6IC6MTUc",
+    "streamer": "Baelz",
+    "date": "2025-08-14T10:01:00.000Z"
   },
   {
     "videoId": "rXNanw5HuUY",

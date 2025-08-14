@@ -1,0 +1,3076 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "ホロサマリー":
+    - /url: "#"
+    - img "ホロサマリー"
+  - link "🌐 Switch to English":
+    - /url: en/
+  - heading "▶ サイト説明" [level=2]
+  - paragraph: 【重要】本サービスは生成AIの実験的な取り組みであり、動画の要約は生成AIによって作成されているため、内容が不正確な場合があります。予めご了承ください。
+  - paragraph: 本サービスをご利用いただく場合は、生成AIが必ずしも正確な情報を出力しないことに同意したものとみなします。
+  - paragraph: 本サービスは数多あるホロライブ配信アーカイブの概要や見どころを短時間で把握し、興味のある配信を見つけやすくすることを目的としています。
+  - paragraph: 技術的な仕組みは以下の通りです。
+  - list:
+    - listitem:
+      - text: ライブのスケジュール情報は、
+      - link "ホロライブスケジュール":
+        - /url: https://schedule.hololive.tv/
+      - text: から定期的に自動取得しています。
+    - listitem: 取得したスケジュール情報に基づき、YouTubeから動画のタイトルやURLなどの情報を収集します。※生成AIは無限に使える訳では無いため、2時間30分以内の動画を対象としています。
+    - listitem: 対象となる動画のコンテンツ（音声・映像）を直接GoogleのGemini APIに送信し、分析を依頼します。
+    - listitem: Gemini APIが動画の内容を分析し、要約テキストを生成します。
+    - listitem: 生成された要約はサービスに保存され、皆様が閲覧できるよう表示されます。
+  - paragraph: この一連のプロセスは全て自動化されており、最新のAI技術を活用して動画コンテンツへのアクセスをより手軽にすることを目指しています。
+  - paragraph:
+    - text: 詳しくは
+    - link "こちらの記事":
+      - /url: https://note.com/aegisfleet/n/ndbf2acba0a93
+    - text: をご覧ください。
+  - paragraph:
+    - text: 不具合があれば
+    - link "𝕏(旧:Twitter)":
+      - /url: https://x.com/aegisfleet
+    - text: でご連絡ください。
+  - paragraph: "データ保持期間: 要約したデータは2週間を超えると自動で削除されます。"
+  - paragraph: "免責事項: 生成AIによって提供される情報に誤りがあった場合でも、サイトの作者は一切の責任を負いません。利用者は、提供される情報が不正確である可能性を認識し、ご自身の判断と責任において本サービスをご利用ください。"
+  - paragraph: "よくある要約のミス:"
+  - list:
+    - listitem: 出演者を誤認してしまう（実際には出演していない人物が出演者として記載されるなど）
+    - listitem: 見どころの時間が正確ではない（実際のタイムスタンプと異なる場合がある）
+    - listitem: 配信内容の詳細が不正確（ゲームの進行状況や会話の内容が実際と異なる）
+  - button "もっと見る"
+  - heading "配信者で絞り込み" [level=3]
+  - text: "?"
+  - button "AZKi ⚒"
+  - button "Anya"
+  - button "FLOW GLOW"
+  - button "Gigi"
+  - button "IRyS"
+  - button "Ina"
+  - button "Kaela"
+  - button "Raora"
+  - button "ReGLOSS"
+  - button "Reine"
+  - button "Shiori"
+  - button "さくらみこ 🌸"
+  - button "ときのそら 🐻"
+  - button "アキロゼ 🍎"
+  - button "ホロライブ"
+  - button "ラプラス"
+  - button "ロボ子さん 🤖"
+  - button "一条莉々華"
+  - button "不知火フレア 🔥"
+  - button "儒烏風亭らでん"
+  - button "兎田ぺこら 👯"
+  - button "博衣こより"
+  - button "夏色まつり 🏮"
+  - button "大神ミオ 🌲"
+  - button "大空スバル 🚑"
+  - button "天音かなた 💫"
+  - button "姫森ルーナ 🍬"
+  - button "宝鐘マリン 🏴☠"
+  - button "尾丸ポルカ"
+  - button "常闇トワ 👾"
+  - button "戌神ころね 🥐"
+  - button "星街すいせい ☄"
+  - button "桃鈴ねね"
+  - button "水宮枢"
+  - button "猫又おかゆ 🍙"
+  - button "獅白ぼたん"
+  - button "癒月ちょこ 💋"
+  - button "白上フブキ 🌽"
+  - button "白銀ノエル ⚔"
+  - button "虎金妃笑虎"
+  - button "角巻わため 🐏"
+  - button "赤井はあと ❤"
+  - button "輪堂千速"
+  - button "轟はじめ"
+  - button "雪花ラミィ"
+  - button "音乃瀬奏"
+  - button "響咲リオナ"
+  - button "風真いろは"
+  - button "鷹嶺ルイ"
+  - button "すべて表示"
+  - heading "▶ タグで絞り込み" [level=3]
+  - button "2ndアルバム"
+  - button "2周年"
+  - button "2連ドン勝"
+  - button "3D"
+  - button "3Dお披露目"
+  - button "3Dモデル"
+  - button "3Dライブ"
+  - button "3D化"
+  - button "3D配信"
+  - button "551蓬莱"
+  - button "5周年"
+  - button "6周年"
+  - button "7DTD"
+  - button "7DaysToDie"
+  - button "7周年記念"
+  - button "AI"
+  - button "ASMR"
+  - button "AZKi"
+  - button "Among Us"
+  - button "Anya Melfissa"
+  - button "BGM"
+  - button "BL"
+  - button "Baby Cruising Love"
+  - button "Beyondtheway"
+  - button "Bibi"
+  - button "Blu-ray"
+  - button "CBC賞"
+  - button "COM戦"
+  - button "ChatGPT"
+  - button "ChewyChewy"
+  - button "Cooking"
+  - button "Cランク達成"
+  - button "DREAD FLATS"
+  - button "DREAD FLATS 凶寓"
+  - button "Devour"
+  - button "Electric Chair Game"
+  - button "FGL"
+  - button "FGO"
+  - button "FLOW GLOW"
+  - button "FLOWGLOW"
+  - button "FORK ROAD"
+  - button "FPS"
+  - button "FUWAMOCO"
+  - button "ForkRoad"
+  - button "Giga"
+  - button "Gold Ship"
+  - button "Groove Coaster"
+  - button "Gundam"
+  - button "HIKAKIN"
+  - button "Henceforth"
+  - button "HumanFallFlat"
+  - button "IQテスト"
+  - button "IRyS"
+  - button "J-POP"
+  - button "JRA"
+  - button "KARAOKE"
+  - button "KFC"
+  - button "King of the Losers"
+  - button "KirbyandtheForgottenLand"
+  - button "Kiriya"
+  - button "Koganei Niko"
+  - button "L3会"
+  - button "LEGENDUS"
+  - button "LINE"
+  - button "Lie ライ"
+  - button "Little Nightmares II"
+  - button "Live2D"
+  - button "Live2Dお披露目"
+  - button "Long Dark"
+  - button "MMO"
+  - button "MV"
+  - button "MVお披露目"
+  - button "Minecraft"
+  - button "Mythmash"
+  - button "NARUTO"
+  - button "NINTENDO64"
+  - button "Nika"
+  - button "Ninomae Ina'nis"
+  - button "Nintendo Direct"
+  - button "Nintendo Direct 2025.7.31"
+  - button "Nintendo Indie World"
+  - button "Nintendo Switch"
+  - button "NintendoDirect"
+  - button "Only Up!"
+  - button "Ordinary Day"
+  - button "PANDA HERO"
+  - button "PON"
+  - button "PS5"
+  - button "PUBG Mobile"
+  - button "PUBGモバイル"
+  - button "Pejuang Senin"
+  - button "Perfume"
+  - button "ProdzaP"
+  - button "R.E.P.O."
+  - button "REPOSTAL"
+  - button "RHINOSHIELD"
+  - button "RPG"
+  - button "RTA"
+  - button "Raora"
+  - button "ReGLOSS"
+  - button "Rindou Chihaya"
+  - button "Riona"
+  - button "Rusty Lake"
+  - button "SCANDAL"
+  - button "SF"
+  - button "SHIN"
+  - button "SNS調査"
+  - button "Shadowverse Worlds Beyond"
+  - button "Su"
+  - button "Supercell"
+  - button "Sushiro HK"
+  - button "Sweet Refrain"
+  - button "Switch2"
+  - button "T.M.Revolution"
+  - button "THREAT"
+  - button "Tamagotchi"
+  - button "Taxman"
+  - button "Towavel"
+  - button "Twitter"
+  - button "VOCALOIDカバー"
+  - button "VR"
+  - button "VRChat"
+  - button "VRchat"
+  - button "VTube"
+  - button "VTuber"
+  - button "VTuberグループ"
+  - button "VTuber川柳"
+  - button "VTuber裏話"
+  - button "Vaundy"
+  - button "Vlog"
+  - button "Vtuber"
+  - button "WINTICKET"
+  - button "World Grand Prix"
+  - button "YouTubeアニメ"
+  - button "YouTubeショート"
+  - button "ZONE"
+  - button "aiko"
+  - button "eスポーツ"
+  - button "hololive Alternative"
+  - button "me me she"
+  - button "mihimaruGT"
+  - button "omapol"
+  - button "あご出しりおな"
+  - button "いじめ"
+  - button "うんち"
+  - button "おえかきの森"
+  - button "おつまみ"
+  - button "おもかげ"
+  - button "お好み焼き"
+  - button "お嬢様構文"
+  - button "お弁当"
+  - button "お弁当作り"
+  - button "お披露目"
+  - button "お盆"
+  - button "お知らせ"
+  - button "お祝い"
+  - button "お絵かき配信"
+  - button "お絵描き"
+  - button "かわいい"
+  - button "きゅーはくのたから展"
+  - button "きら子"
+  - button "くそマロ"
+  - button "くら寿司"
+  - button "こいこい"
+  - button "ことわざ"
+  - button "こぼ・かなえる"
+  - button "ごろごろマウンテン"
+  - button "さくらみこ"
+  - button "ざくレイ"
+  - button "すき焼き"
+  - button "ずうっといっしょ！"
+  - button "たかねルイ"
+  - button "たこ焼き"
+  - button "ただ君に晴れ"
+  - button "たまごっち"
+  - button "ちいかわ"
+  - button "でびでび・でびる"
+  - button "ときのそら"
+  - button "なごやか3組"
+  - button "にじさんじ"
+  - button "ぬいぐるみ"
+  - button "ねぽらぼ"
+  - button "ばかうけ"
+  - button "ひぐらしのなく頃に"
+  - button "ぴったんこワード"
+  - button "ぷちホロの村"
+  - button "ぷよぷよテトリス2"
+  - button "ぺこぼた"
+  - button "ぺこマリ体操"
+  - button "ぼたん"
+  - button "みこち"
+  - button "もう金ルイ"
+  - button "やりこみ"
+  - button "ゆず"
+  - button "ゆるトーク"
+  - button "わたあめ"
+  - button "わため"
+  - button "わちゃわちゃ"
+  - button "アイスクリーム"
+  - button "アイテムロスト"
+  - button "アイテム収集"
+  - button "アイテム運搬"
+  - button "アイドル"
+  - button "アイビスサマーダッシュ"
+  - button "アイラニ・イオフィフティーン"
+  - button "アキロゼ"
+  - button "アキ・ローゼンタール"
+  - button "アクションRPG"
+  - button "アクションゲーム"
+  - button "アクリルスタンド"
+  - button "アップグレード"
+  - button "アップデート"
+  - button "アトラクション"
+  - button "アドベンチャー"
+  - button "アニソン"
+  - button "アニメ"
+  - button "アニメソング"
+  - button "アニメトーク"
+  - button "アニメーション"
+  - button "アニメーションMV"
+  - button "アニメーションPV"
+  - button "アバター"
+  - button "アホの子構文"
+  - button "アルティメットカップ"
+  - button "アルバイト経験"
+  - button "アレルギー"
+  - button "アンケート"
+  - button "アーティファクトネメシス"
+  - button "アーニャ・メルフィッサ"
+  - button "イヌチ"
+  - button "イベント"
+  - button "イベント情報"
+  - button "イラスト"
+  - button "イルカショー"
+  - button "インストゥルメンタル"
+  - button "インターネット"
+  - button "インテリア"
+  - button "インドネシア料理"
+  - button "ウォータースライダー"
+  - button "ウォーターボトル"
+  - button "ウマ娘"
+  - button "エクササイズ"
+  - button "エコバッグ"
+  - button "エスカレーター"
+  - button "エピソード"
+  - button "エピソードトーク"
+  - button "エルデンリング"
+  - button "エルフ"
+  - button "エロティカセブン"
+  - button "エンターテイメント"
+  - button "エンディング"
+  - button "オクトパストラベラー"
+  - button "オタク"
+  - button "オフコラボ"
+  - button "オムライス"
+  - button "オリジナル曲"
+  - button "オリジナル楽曲"
+  - button "オリ家具グランプリ"
+  - button "オンライン対戦"
+  - button "オーディション"
+  - button "カウントダウン"
+  - button "カオス"
+  - button "カジノ"
+  - button "カジュアルゲーム"
+  - button "カバー曲"
+  - button "カバー楽曲"
+  - button "カフェ巡り"
+  - button "カブトムシ"
+  - button "カラオケ"
+  - button "カレー作り"
+  - button "カードゲーム"
+  - button "カービィ"
+  - button "ガチャ"
+  - button "キタニタツヤ"
+  - button "キャラクターカスタマイズ"
+  - button "キャラクターソング"
+  - button "キャラクター育成"
+  - button "キャンペーン"
+  - button "キュリアユニバース"
+  - button "キューティーハニー"
+  - button "キングネキ"
+  - button "ギター"
+  - button "ギミック"
+  - button "ギミック攻略"
+  - button "ギャグ"
+  - button "ギャップ萌え"
+  - button "クイズ"
+  - button "クイーンステークス"
+  - button "クッキング"
+  - button "クラフト"
+  - button "クリア"
+  - button "クリエイティブモード"
+  - button "クレイジー・オリー"
+  - button "グッズ"
+  - button "グッズ紹介"
+  - button "グルメ"
+  - button "グルーヴコースター"
+  - button "ゲスト"
+  - button "ゲストコラボ"
+  - button "ゲストトーク"
+  - button "ゲリラ配信"
+  - button "ゲーム"
+  - button "ゲームオーバー"
+  - button "ゲームクリア"
+  - button "ゲームトーク"
+  - button "ゲームリアクション"
+  - button "ゲーム予想"
+  - button "ゲーム企画"
+  - button "ゲーム勝利"
+  - button "ゲーム大会"
+  - button "ゲーム実況"
+  - button "ゲーム感想"
+  - button "ゲーム攻略"
+  - button "ゲーム紹介"
+  - button "コミックマーケット"
+  - button "コミュニケーションゲーム"
+  - button "コラボ"
+  - button "コラボイベント"
+  - button "コラボエピソード"
+  - button "コラボカフェ"
+  - button "コラボグッズ"
+  - button "コラボ企画"
+  - button "コラボ告知"
+  - button "コラボ配信"
+  - button "コレクション"
+  - button "コンセプトムービー"
+  - button "ゴッホ"
+  - button "ゴブリン"
+  - button "サクラ大戦"
+  - button "サスペンスホラー"
+  - button "サバイバル"
+  - button "サバイバルゲーム"
+  - button "サバイバルレート"
+  - button "サプライズ"
+  - button "サマータイム"
+  - button "サマーパーク"
+  - button "サンドイッチ"
+  - button "サーバー落ち"
+  - button "シックス"
+  - button "シネマティック"
+  - button "シャドウバース"
+  - button "シュール"
+  - button "ショート動画"
+  - button "シンクロReGLOSS"
+  - button "ジジイ"
+  - button "ジャンプスケア"
+  - button "ジョニーは戦場へ行った"
+  - button "スイカゲーム"
+  - button "スイーツ"
+  - button "スカジャン"
+  - button "スケジュール告知"
+  - button "スターウォーズ"
+  - button "スターターデッキ"
+  - button "ステルスゲーム"
+  - button "ステージギミック"
+  - button "ストリートファイター"
+  - button "ストレッチ"
+  - button "ストーリー"
+  - button "ストーリーテリング"
+  - button "ストーリーモード"
+  - button "スパイダー"
+  - button "スパチャ読み"
+  - button "スパチャ読み上げ"
+  - button "スピーキング"
+  - button "スプリントスピードアップグレード"
+  - button "スポーツ"
+  - button "スマブラ"
+  - button "スマブラSP"
+  - button "スマホアクセサリー"
+  - button "スマホゲーム"
+  - button "スマートデバイス"
+  - button "スマートフォンケース"
+  - button "スレッジハンマー"
+  - button "スーパーチャット"
+  - button "スーパーチャット読み上げ"
+  - button "セクシー"
+  - button "セシリア"
+  - button "セブンデイズトゥダイ"
+  - button "ゼルダ"
+  - button "ゼログラビティオーブ"
+  - button "ソウル収集"
+  - button "ソロライブ"
+  - button "ソロ曲"
+  - button "ゾンビ"
+  - button "タクシー"
+  - button "タロット"
+  - button "ダンス"
+  - button "チェス"
+  - button "チャレンジ"
+  - button "チーズケーキ"
+  - button "チーズフォンデュ"
+  - button "チームプレイ"
+  - button "チームワーク"
+  - button "チーム運営"
+  - button "テトリス"
+  - button "デジタルリリース"
+  - button "デスゲーム"
+  - button "デッキ構築"
+  - button "デモ版"
+  - button "デート"
+  - button "デートスポット"
+  - button "トラウマ"
+  - button "トラップ"
+  - button "トラブル"
+  - button "トレーディングカードゲーム"
+  - button "トーク"
+  - button "ドM"
+  - button "ドイツ語"
+  - button "ドキュメンタリー"
+  - button "ドラゴンクエスト"
+  - button "ドラマ"
+  - button "ドンキーコング"
+  - button "ドン勝"
+  - button "ナイトパレット"
+  - button "ニコ"
+  - button "ネクロマンサー"
+  - button "ネリッサ・レイヴンクロフト"
+  - button "ノエル"
+  - button "ノロイヅキ"
+  - button "ノーダメージ"
+  - button "ハッピーエンド"
+  - button "ハプニング"
+  - button "ハラハラドキドキ"
+  - button "ハリーポッター"
+  - button "ハロー、ハッピー"
+  - button "ハンター"
+  - button "ハンターハンター"
+  - button "ハンバーグ餃子"
+  - button "ハードモード"
+  - button "バイオハザード風"
+  - button "バター"
+  - button "バター餃子"
+  - button "バッドエンド回避"
+  - button "バトルイベント"
+  - button "バトルロイヤル"
+  - button "バトルロワイヤル"
+  - button "バラエティ"
+  - button "バラード"
+  - button "バンド"
+  - button "バーチャルYouTuber"
+  - button "パイナップルピザ"
+  - button "パイパイ仮面でどうかしらん"
+  - button "パズル"
+  - button "パズルゲーム"
+  - button "パタポン"
+  - button "パニック"
+  - button "パネポン"
+  - button "パフォーマンス"
+  - button "パワーストーン"
+  - button "パンダヒーロー"
+  - button "ヒス構文"
+  - button "ビジュアルメンテナンス"
+  - button "ビビリ"
+  - button "ビーコン"
+  - button "ピカチュウげんきでちゅう"
+  - button "ピクセルアート"
+  - button "ファイアーエムブレム"
+  - button "ファンとの交流"
+  - button "ファンアート"
+  - button "ファンサービス"
+  - button "ファンミーティング"
+  - button "ファン交流"
+  - button "ファン投稿"
+  - button "フィギュア"
+  - button "フィルター遊び"
+  - button "フェザードローン"
+  - button "フェチ"
+  - button "フォトンブラスター"
+  - button "フブキ"
+  - button "フライドチキン"
+  - button "フリートーク"
+  - button "フロログロウ"
+  - button "フロントメモリー"
+  - button "フワモコ"
+  - button "フード"
+  - button "ブースターパック"
+  - button "プクリン"
+  - button "プレゼント"
+  - button "プロフィール帳"
+  - button "プロモーション"
+  - button "ヘアケア"
+  - button "ペコマリ体操"
+  - button "ペット"
+  - button "ペルソナ"
+  - button "ホテル"
+  - button "ホラゲ"
+  - button "ホラゲウィーク2025"
+  - button "ホラゲー"
+  - button "ホラー"
+  - button "ホラーゲーム"
+  - button "ホラー要素"
+  - button "ホロREPO"
+  - button "ホロのスイカ"
+  - button "ホロの花札"
+  - button "ホロアース"
+  - button "ホロカ"
+  - button "ホロカフェス"
+  - button "ホロメン頭部"
+  - button "ホロライブ"
+  - button "ホロライブ お宝マウンテン"
+  - button "ホロライブDEV_IS"
+  - button "ホロライブEN"
+  - button "ホロライブID"
+  - button "ホロライブごろごろマウンテン"
+  - button "ホロライブコラボ"
+  - button "ホロライブニュース"
+  - button "ホロライブ花札"
+  - button "ホロ鯖"
+  - button "ホロ鯖サマーパーク"
+  - button "ボイスコンテンツ"
+  - button "ボイスドラマ"
+  - button "ボイトレ"
+  - button "ボカロカバー"
+  - button "ボス戦"
+  - button "ボーカロイド"
+  - button "ボードゲーム"
+  - button "ポケモン"
+  - button "ポケモンカード"
+  - button "ポップ"
+  - button "ポポ"
+  - button "ポーカー"
+  - button "マイクラ"
+  - button "マイクラ建築"
+  - button "マイメロディ"
+  - button "マイラ"
+  - button "マイルーム"
+  - button "マインクラフト"
+  - button "マウスパッド"
+  - button "マウント構文"
+  - button "マシュマロ"
+  - button "マダミス"
+  - button "マッサージ"
+  - button "マネキン"
+  - button "マネージャー"
+  - button "マリオカート"
+  - button "マリオカートワールド"
+  - button "マリン"
+  - button "マルチエンディング"
+  - button "マルバツクイズ"
+  - button "ミステリー"
+  - button "ミス・ブランニューデイ"
+  - button "ミッションクリア"
+  - button "ミッドナイトラジオ"
+  - button "ミニキャラ"
+  - button "ミニゲーム"
+  - button "ミュージカル"
+  - button "ミラーマッチ"
+  - button "メイク"
+  - button "メリーゴーランド"
+  - button "メンタルケア"
+  - button "メンバーエピソード"
+  - button "メンバーコラボ"
+  - button "メンバーシップ"
+  - button "メンバー裏話"
+  - button "モチベーション"
+  - button "モノマネ"
+  - button "ユニバーサル・スタジオ・ジャパン"
+  - button "ユーザー制作"
+  - button "ユーモア"
+  - button "ヨルシカ"
+  - button "ライオン"
+  - button "ライティング"
+  - button "ライフスタイル"
+  - button "ライブ"
+  - button "ライブグッズ"
+  - button "ライブ告知"
+  - button "ライブ情報"
+  - button "ライブ裏話"
+  - button "ライブ鑑賞"
+  - button "ラジオ"
+  - button "ラジオ体操"
+  - button "ラジオ配信"
+  - button "ラスボス"
+  - button "ラップ"
+  - button "ラプラス・ダークネス"
+  - button "ラマ"
+  - button "ラミィ"
+  - button "ランクマッチ"
+  - button "ラヴィ"
+  - button "ラーメン"
+  - button "リアクション"
+  - button "リオナクイズ"
+  - button "リスナーとの交流"
+  - button "リスナー交流"
+  - button "リスニング"
+  - button "リズムゲーム"
+  - button "リチャージドローン"
+  - button "リトライ"
+  - button "リハーサル"
+  - button "リベンジ"
+  - button "リリカ"
+  - button "リレー配信"
+  - button "ルーティン"
+  - button "ループ"
+  - button "ルーレット"
+  - button "レコーディング"
+  - button "レコード"
+  - button "レッドストーン回路"
+  - button "レトロゲーム"
+  - button "レパードS"
+  - button "レビュー"
+  - button "レベルクリア"
+  - button "レポ"
+  - button "レポート"
+  - button "レース"
+  - button "レース反応"
+  - button "レート戦"
+  - button "ロイヤル"
+  - button "ロック"
+  - button "ロボ子さん"
+  - button "ローカル"
+  - button "ヴァネッサ・カールトン"
+  - button "一条莉々華"
+  - button "一条莉リカ"
+  - button "丁字路"
+  - button "上海ハニー"
+  - button "下弦の月"
+  - button "不和湊もこ"
+  - button "不知火フレア"
+  - button "世代間ギャップ"
+  - button "並走プレイ"
+  - button "中二病"
+  - button "乙女解剖"
+  - button "九州"
+  - button "九州国立博物館"
+  - button "予想"
+  - button "事件の真相"
+  - button "井筒"
+  - button "交流"
+  - button "交通事情"
+  - button "人形"
+  - button "人狼ゲーム"
+  - button "人生観"
+  - button "人間観察"
+  - button "仏像"
+  - button "令和"
+  - button "任天堂"
+  - button "企画"
+  - button "企画告知"
+  - button "企画配信"
+  - button "休暇"
+  - button "休暇計画"
+  - button "伝説"
+  - button "体操"
+  - button "体組成"
+  - button "体調"
+  - button "体調管理"
+  - button "体重管理"
+  - button "体験版"
+  - button "体験談"
+  - button "作業用BGM"
+  - button "作業配信"
+  - button "個性"
+  - button "健康"
+  - button "健康状態"
+  - button "健康管理"
+  - button "僕のヒーローアカデミア"
+  - button "儒烏風亭らでん"
+  - button "光が死んだ夏"
+  - button "兎田ぺこら"
+  - button "入浴"
+  - button "全ロス"
+  - button "八雲べに"
+  - button "公式グッズ"
+  - button "共同プレイ"
+  - button "共感"
+  - button "再会"
+  - button "再現料理"
+  - button "冨岡義勇"
+  - button "凸待ち"
+  - button "切ない"
+  - button "切り抜き"
+  - button "列車"
+  - button "初勝利"
+  - button "初心者向け"
+  - button "初見プレイ"
+  - button "判断ゲーム"
+  - button "制作秘話"
+  - button "努力遠足"
+  - button "勉強"
+  - button "動物"
+  - button "勝利"
+  - button "北海道"
+  - button "医療ミス"
+  - button "千景"
+  - button "協力"
+  - button "協力ゲーム"
+  - button "協力プレイ"
+  - button "博物館"
+  - button "博衣こより"
+  - button "占い"
+  - button "参加型"
+  - button "友人関係"
+  - button "友情"
+  - button "可愛い"
+  - button "台風"
+  - button "吉原ラメント"
+  - button "吉田美奈子"
+  - button "同時視聴"
+  - button "告知"
+  - button "周年"
+  - button "味ぽん"
+  - button "味覚"
+  - button "哲学"
+  - button "商品紹介"
+  - button "喉ケア"
+  - button "喋り方"
+  - button "喫茶店"
+  - button "困惑"
+  - button "囲碁"
+  - button "国宝"
+  - button "地元愛"
+  - button "地域紹介"
+  - button "埴輪"
+  - button "声優"
+  - button "壱百満天原サロメ"
+  - button "壺おじ"
+  - button "夏"
+  - button "夏の過ごし方"
+  - button "夏バテ"
+  - button "夏休み"
+  - button "夏休み企画"
+  - button "夏休み特番"
+  - button "夏曲"
+  - button "夏歌"
+  - button "夏競馬"
+  - button "夏色まつり"
+  - button "多人数ゲーム"
+  - button "夜空メル"
+  - button "夢で逢えたら"
+  - button "大分トリニータ"
+  - button "大神ミオ"
+  - button "大空スバル"
+  - button "大阪"
+  - button "大阪グルメ"
+  - button "天ぷら"
+  - button "天ノ弱"
+  - button "天宮こころ"
+  - button "天音かなた"
+  - button "奏"
+  - button "奮闘"
+  - button "女子会"
+  - button "女性VTuber"
+  - button "妹の安否"
+  - button "姫森ルーナ"
+  - button "孤独論"
+  - button "学習アドバイス"
+  - button "安楽死"
+  - button "完全初見"
+  - button "宝鐘マリン"
+  - button "家具デザイン"
+  - button "家族"
+  - button "家族エピソード"
+  - button "宿題"
+  - button "対戦"
+  - button "対戦イベント"
+  - button "対談"
+  - button "尊厳死"
+  - button "小ネタ"
+  - button "小学校"
+  - button "小野町春"
+  - button "尾丸ポルカ"
+  - button "尿管結石"
+  - button "屋上"
+  - button "展示会"
+  - button "山の日"
+  - button "川柳"
+  - button "工場見学"
+  - button "常闇トワ"
+  - button "平成"
+  - button "幻覚"
+  - button "幽遊白書"
+  - button "幽霊"
+  - button "店舗紹介"
+  - button "府内戦紙"
+  - button "建築"
+  - button "建設"
+  - button "待機画面"
+  - button "心理学"
+  - button "心霊現象"
+  - button "応援"
+  - button "怖い話"
+  - button "思い出"
+  - button "思い出話"
+  - button "怪奇現象"
+  - button "怪談"
+  - button "恋愛"
+  - button "恋愛相談"
+  - button "恐怖"
+  - button "恐怖体験"
+  - button "悩み相談"
+  - button "悪夢"
+  - button "悲鳴"
+  - button "情報まとめ"
+  - button "愛猫"
+  - button "感傷的"
+  - button "感動"
+  - button "感情"
+  - button "感情コントロール"
+  - button "感想"
+  - button "感謝"
+  - button "戌神ころね"
+  - button "成長"
+  - button "戦争映画"
+  - button "戦略"
+  - button "戦術"
+  - button "戦闘"
+  - button "手作り"
+  - button "手紙"
+  - button "手術"
+  - button "承太郎"
+  - button "抱負"
+  - button "抽選会"
+  - button "拠点作り"
+  - button "挑戦"
+  - button "挫折"
+  - button "振り返り"
+  - button "探索"
+  - button "推し活"
+  - button "教育"
+  - button "教養"
+  - button "文化"
+  - button "文化交流"
+  - button "文化財"
+  - button "文房具"
+  - button "文鎮"
+  - button "料理"
+  - button "料理体験"
+  - button "料理配信"
+  - button "新モデル"
+  - button "新企画"
+  - button "新作ゲーム"
+  - button "新作発表"
+  - button "新幹線餃子"
+  - button "新情報"
+  - button "新曲"
+  - button "新曲公開"
+  - button "新衣装"
+  - button "方言"
+  - button "旅行"
+  - button "旅館"
+  - button "日常"
+  - button "日常エピソード"
+  - button "日本刀"
+  - button "日焼け"
+  - button "星のカービィ"
+  - button "星のカービィ ディスカバリー"
+  - button "星街すいせい"
+  - button "映画"
+  - button "映画紹介"
+  - button "春先のどか"
+  - button "時事ネタ"
+  - button "時透無一郎"
+  - button "晩酌"
+  - button "最終回"
+  - button "最終決戦"
+  - button "朝こよ"
+  - button "朝ミオ"
+  - button "朝活"
+  - button "朝配信"
+  - button "根津っち"
+  - button "桃太郎電鉄"
+  - button "桃色吐息"
+  - button "桃鈴ねね"
+  - button "案件"
+  - button "桜みこ"
+  - button "楠木ともり"
+  - button "楽曲"
+  - button "機材トーク"
+  - button "歌"
+  - button "歌ってみた"
+  - button "歌唱"
+  - button "歌唱振り返り"
+  - button "歌枠"
+  - button "歌雑談"
+  - button "歩数計チャレンジ"
+  - button "歴史"
+  - button "死に戻り"
+  - button "水墨画"
+  - button "水宮枢"
+  - button "水族館"
+  - button "水着"
+  - button "沖縄"
+  - button "沙花叉クロヱ"
+  - button "活動休止"
+  - button "流しそうめん"
+  - button "海外ファン"
+  - button "深夜"
+  - button "深夜ラーメン"
+  - button "減量"
+  - button "温泉"
+  - button "温野菜"
+  - button "湊あくあ"
+  - button "漆器"
+  - button "漫画"
+  - button "激辛"
+  - button "火威青"
+  - button "無限ループ"
+  - button "焼却炉"
+  - button "焼肉"
+  - button "煉獄杏寿郎"
+  - button "熱中症"
+  - button "熱暴走"
+  - button "爆笑"
+  - button "牛丼"
+  - button "物理演算ゲーム"
+  - button "物資枯渇"
+  - button "物資調達"
+  - button "特別大会"
+  - button "特訓"
+  - button "犬"
+  - button "犬ち"
+  - button "猫"
+  - button "猫又おかゆ"
+  - button "獅白ぼたん"
+  - button "理不尽"
+  - button "環境保護"
+  - button "甘いもの"
+  - button "生活"
+  - button "生活習慣"
+  - button "生誕祭"
+  - button "用務員"
+  - button "画家"
+  - button "留学"
+  - button "異世界転生"
+  - button "病院"
+  - button "癒し"
+  - button "癒やし"
+  - button "癒月ちょこ"
+  - button "発表"
+  - button "登山ゲーム"
+  - button "白上フブキ"
+  - button "白猫プロジェクト"
+  - button "白銀ノエル"
+  - button "百鬼あやめ"
+  - button "的中"
+  - button "目標設定"
+  - button "真夏の夜なら"
+  - button "睡眠"
+  - button "睡眠導入チャレンジ"
+  - button "睡眠管理"
+  - button "矢吹健太朗"
+  - button "砂漠"
+  - button "砂漠襲撃"
+  - button "社会問題"
+  - button "祝日"
+  - button "科学"
+  - button "突発コラボ"
+  - button "競輪"
+  - button "競馬"
+  - button "競馬予想"
+  - button "筋トレ"
+  - button "精神崩壊"
+  - button "精神性"
+  - button "紫咲シオン"
+  - button "絆"
+  - button "絶叫"
+  - button "綺々羅々ヴィヴィ"
+  - button "緊急配信"
+  - button "縦型配信"
+  - button "罰ゲーム"
+  - button "罵倒"
+  - button "美容"
+  - button "美術"
+  - button "美術工芸品"
+  - button "翻訳"
+  - button "考察"
+  - button "耐久テスト"
+  - button "耐久配信"
+  - button "耐衝撃ケース"
+  - button "聖地巡礼"
+  - button "聞き込み"
+  - button "職業体験"
+  - button "脱出ゲーム"
+  - button "自己分析"
+  - button "自己啓発"
+  - button "自己成長"
+  - button "自己肯定感"
+  - button "自由研究"
+  - button "自習"
+  - button "自習室"
+  - button "興奮"
+  - button "舞台"
+  - button "花札"
+  - button "花札対戦"
+  - button "花火"
+  - button "花畑チャイカ"
+  - button "苦戦"
+  - button "英会話"
+  - button "英語"
+  - button "英語学習"
+  - button "茶道"
+  - button "落噺"
+  - button "蕎麦"
+  - button "虎金妃笑虎"
+  - button "衣装チェンジ"
+  - button "衣装披露"
+  - button "装飾"
+  - button "裏話"
+  - button "視聴者参加型"
+  - button "親知らず"
+  - button "観光"
+  - button "観劇"
+  - button "観覧車"
+  - button "角巻わため"
+  - button "解説"
+  - button "言葉遊び"
+  - button "記念撮影"
+  - button "記念配信"
+  - button "記念配信告知"
+  - button "記憶"
+  - button "記憶力ゲーム"
+  - button "試食"
+  - button "誕生日"
+  - button "誕生日ライブ"
+  - button "誕生日記念"
+  - button "語学"
+  - button "読書感想文"
+  - button "謎解き"
+  - button "豚まん"
+  - button "負けず嫌い"
+  - button "質問コーナー"
+  - button "質疑応答"
+  - button "赤井はあと"
+  - button "輪堂千速"
+  - button "轟はじめ"
+  - button "轟焦凍"
+  - button "辛いもの"
+  - button "近況報告"
+  - button "逆凸"
+  - button "逆転劇"
+  - button "逆転裁判"
+  - button "連携"
+  - button "連敗"
+  - button "週の概念"
+  - button "遊園地"
+  - button "遊戯王"
+  - button "運動"
+  - button "運動会"
+  - button "過去"
+  - button "達成"
+  - button "遺体発見"
+  - button "都市伝説"
+  - button "配信スタイル"
+  - button "配信告知"
+  - button "重大告知"
+  - button "重大発表"
+  - button "鑑賞"
+  - button "鑑賞会"
+  - button "開封"
+  - button "防水スマホ"
+  - button "阿部真央"
+  - button "集中"
+  - button "雑談"
+  - button "雪の宿"
+  - button "雪花ラミィ"
+  - button "音乃瀬奏"
+  - button "音楽"
+  - button "音楽鑑賞"
+  - button "響咲リオナ"
+  - button "顔"
+  - button "風真いろは"
+  - button "食"
+  - button "食べ比べ"
+  - button "食べ物"
+  - button "食レポ"
+  - button "食事"
+  - button "食事の好み"
+  - button "食品サンプル"
+  - button "食生活"
+  - button "飯テロ"
+  - button "飲酒"
+  - button "飲酒エピソード"
+  - button "飼い猫"
+  - button "餃子作り"
+  - button "香水"
+  - button "馬"
+  - button "馬券購入"
+  - button "驚き"
+  - button "鬱映画"
+  - button "鬼滅の刃"
+  - button "鷹嶺ルイ"
+  - button "黒歴史"
+  - button "鼻炎"
+  - button "龍が如く"
+  - button "すべてのタグを選択"
+  - button "もっと見る"
+  - heading "ソート" [level=3]
+  - button "投稿日時"
+  - button "再生数"
+  - button "高評価数"
+- main:
+  - button "🔖"
+  - img "【ポルカの伝説】質問100本ノックは無理でした！"
+  - heading "【ポルカの伝説】質問100本ノックは無理でした！" [level=2]
+  - paragraph: "配信者: 尾丸ポルカ"
+  - paragraph: "配信日時: 2025-08-14 19:00:00"
+  - paragraph: "配信時間: 16分32秒"
+  - paragraph: "再生数: 18,427"
+  - paragraph: "高評価数: 2,923"
+  - paragraph: ホロライブ所属の尾丸ポルカがスタッフの井筒さんと共に、視聴者から寄せられた50本の質問にテンポよく答えていく企画配信。お互いの印象や好きな食べ物といったパーソナルな質問から、配信企画の裏話や今後の展望に関する質問まで、多岐にわたる質問に回答。時には暴走気味のポルカと冷静な井筒さんの掛け合いが繰り広げられ、互いの新たな一面が垣間見える、終始和やかな雰囲気の雑談回です。
+  - paragraph: 配信の雰囲気：終始和やかな雰囲気で、ツッコミとボケが飛び交う明るい雑談
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:00:26 から再生":
+    - heading "企画の趣旨説明" [level=3]
+    - text: 00:00:26 / トーク
+    - paragraph: 今回の企画は、質問100本ノックを行う予定だったが、尺の都合で50本ノックに変更。尾丸ポルカとスタッフ井筒さんが交互に質問に答えていく形式。
+  - listitem "クリックして 00:02:48 から再生":
+    - heading "好きな食べ物の質問" [level=3]
+    - text: 00:02:48 / トーク
+    - paragraph: ポルカはシャインマスカット、井筒さんは肉が好きだと回答。
+  - listitem "クリックして 00:02:54 から再生":
+    - heading "お互いの第一印象の質問" [level=3]
+    - text: 00:02:54 / トーク
+    - paragraph: ポルカは井筒さんを「のんびり」した印象、井筒さんはポルカを「意外と仕事の時マジメ」と回答。
+  - listitem "クリックして 00:03:05 から再生":
+    - heading "お互いの今の印象の質問" [level=3]
+    - text: 00:03:05 / トーク
+    - paragraph: ポルカは井筒さんに対して「変わらず」、井筒さんはポルカに対して「充電切れまでが分かってきた」と回答。
+  - listitem "クリックして 00:03:16 から再生":
+    - heading "あだ名をつけるとしたらの質問" [level=3]
+    - text: 00:03:16 / トーク
+    - paragraph: 井筒さんには「いづっちゃん」、ポルカへのあだ名では井筒さんが回答に困る一幕も。
+  - listitem "クリックして 00:03:26 から再生":
+    - heading "今後やってみたい企画の質問" [level=3]
+    - text: 00:03:26 / トーク
+    - paragraph: ポルカは「海外ロケ」、井筒さんは「ゲーム」と回答。井筒さんは普通にゲームがしたいと話す。
+  - listitem "クリックして 00:03:35 から再生":
+    - heading "「ポルいづ」か「いづポル」かの質問" [level=3]
+    - text: 00:03:35 / トーク
+    - paragraph: ポルカは世間的には「いづポル」が受け入れられていると回答。
+  - listitem "クリックして 00:03:44 から再生":
+    - heading "井筒さんの新人卒業の質問" [level=3]
+    - text: 00:03:44 / トーク
+    - paragraph: 井筒さんは「新人じゃなくなる予定はありません」と回答。
+  - listitem "クリックして 00:03:47 から再生":
+    - heading "ポルカの伝説の全国ツアー予定の質問" [level=3]
+    - text: 00:03:47 / トーク
+    - paragraph: ポルカは「ありません」と即答。
+  - listitem "クリックして 00:03:50 から再生":
+    - heading "動物タワーバトル勝敗予想" [level=3]
+    - text: 00:03:50 / トーク
+    - paragraph: 井筒さんは井筒が、ポルカはポルカが勝つと回答し、互いに譲らない。
+  - listitem "クリックして 00:03:54 から再生":
+    - heading "第2回企画予定の質問" [level=3]
+    - text: 00:03:54 / トーク
+    - paragraph: ポルカは「構成作家に聞け」と回答。
+  - listitem "クリックして 00:03:57 から再生":
+    - heading "目玉焼きの味付けの質問" [level=3]
+    - text: 00:03:57 / トーク
+    - paragraph: 井筒さんは醤油、ポルカは塩と回答。
+  - listitem "クリックして 00:04:01 から再生":
+    - heading "質問採用の秘訣の質問" [level=3]
+    - text: 00:04:01 / トーク
+    - paragraph: ポルカは「小癪」だとコメントし、構成作家の質問の仕方を批判。
+  - listitem "クリックして 00:04:05 から再生":
+    - heading "現在の充実度について" [level=3]
+    - text: 00:04:05 / トーク
+    - paragraph: 井筒さんは「めっちゃ充実してます」と回答。
+  - listitem "クリックして 00:04:09 から再生":
+    - heading "ポルカの伝説の〇周年グッズ販売予定" [level=3]
+    - text: 00:04:09 / トーク
+    - paragraph: ポルカは「ポルカが人気になったら出る」と答え、井筒さんは「出してください」と要望。
+  - listitem "クリックして 00:04:19 から再生":
+    - heading "非常食のローリングストックについて" [level=3]
+    - text: 00:04:19 / トーク
+    - paragraph: ポルカは「してる気がする」と曖昧に回答。
+  - listitem "クリックして 00:04:22 から再生":
+    - heading "井筒さんのゲームプレイ状況" [level=3]
+    - text: 00:04:22 / トーク
+    - paragraph: 井筒さんは「ゲームめっちゃやる」と回答。
+  - listitem "クリックして 00:04:25 から再生":
+    - heading "ポルカの伝説のアドリブ率" [level=3]
+    - text: 00:04:25 / トーク
+    - paragraph: ポルカは「半分くらいアドリブ」だと回答。構成作家も笑って肯定する。
+  - listitem "クリックして 00:04:30 から再生":
+    - heading "ポルカの筋トレ継続について" [level=3]
+    - text: 00:04:30 / トーク
+    - paragraph: 井筒さんはポルカの筋トレについて「緩やかに続けてる」と回答。ポルカは井筒さんが知っていることに驚く。
+  - listitem "クリックして 00:04:36 から再生":
+    - heading "ポル伝の収支について" [level=3]
+    - text: 00:04:36 / トーク
+    - paragraph: ポルカは「マイナスは無い（多分）」と回答。
+  - listitem "クリックして 00:04:43 から再生":
+    - heading "前半戦終了と振り返り" [level=3]
+    - text: 00:04:43 / トーク
+    - paragraph: 質問50本ノックの前半戦が終了。井筒さんは「意外といけた」と振り返る。質問を振り返り、特に回答に困った質問を特定していく。
+  - listitem "クリックして 00:05:53 から再生":
+    - heading "井筒さんが座員をどう思っているか" [level=3]
+    - text: 00:05:53 / トーク
+    - paragraph: 井筒さんは「みんなめっちゃ優しい」と回答。ポルカも「受け入れてくれてる」と喜ぶ。
+  - listitem "クリックして 00:06:01 から再生":
+    - heading "井筒さんの好きなところ" [level=3]
+    - text: 00:06:01 / トーク
+    - paragraph: ポルカは井筒さんの「優しいところ」が好きだと回答。
+  - listitem "クリックして 00:06:08 から再生":
+    - heading "ポルカさんの好きなところ" [level=3]
+    - text: 00:06:08 / トーク
+    - paragraph: 井筒さんはポルカの「甘やかしてくれるところ」が好きだと回答。
+  - listitem "クリックして 00:06:15 から再生":
+    - heading "収録の大変さについて" [level=3]
+    - text: 00:06:15 / トーク
+    - paragraph: ポルカと井筒さん共に「大変」だと回答。
+  - listitem "クリックして 00:06:21 から再生":
+    - heading "どちらがよく食べるか" [level=3]
+    - text: 00:06:21 / トーク
+    - paragraph: 井筒さんは「一度に食べる量は井筒」だと回答。ポルカは「分かんない」と答える。
+  - listitem "クリックして 00:06:31 から再生":
+    - heading "おすすめのポル伝は？" [level=3]
+    - text: 00:06:31 / トーク
+    - paragraph: ポルカは「人気順と再生回数順に並べる」のがおすすめだと回答。
+  - listitem "クリックして 00:06:37 から再生":
+    - heading "ポル伝の打ち上げについて" [level=3]
+    - text: 00:06:37 / トーク
+    - paragraph: ポルカも井筒さんも「やりません」と回答。
+  - listitem "クリックして 00:06:49 から再生":
+    - heading "共通の趣味について" [level=3]
+    - text: 00:06:49 / トーク
+    - paragraph: 井筒さんは「アイカツ」と回答。ポルカはアイカツについて語り合ったことを思い出す。
+  - listitem "クリックして 00:07:07 から再生":
+    - heading "井筒さんが最近ハマっているお酒とおつまみ" [level=3]
+    - text: 00:07:07 / トーク
+    - paragraph: 井筒さんは「味付け煮卵」と「生ハム」だと回答。
+  - listitem "クリックして 00:07:21 から再生":
+    - heading "タラバガニとズワイガニの違い" [level=3]
+    - text: 00:07:21 / トーク
+    - paragraph: ポルカは「文字だろ」とツッコミ。井筒さんはカニがあまり食べられないことを明かす。
+  - listitem "クリックして 00:07:24 から再生":
+    - heading "井筒さんが大空スバルを言えるようになったか" [level=3]
+    - text: 00:07:24 / トーク
+    - paragraph: 井筒さんは「言えてる」と自信満々に答える。ポルカは驚きを隠せない。
+  - listitem "クリックして 00:07:35 から再生":
+    - heading "こだわりの調理方法について" [level=3]
+    - text: 00:07:35 / トーク
+    - paragraph: ポルカはこだわりがないため井筒さんに託す。井筒さんは「うどんを茹でる」と回答。
+  - listitem "クリックして 00:07:47 から再生":
+    - heading "明日のお昼ご飯の希望" [level=3]
+    - text: 00:07:47 / トーク
+    - paragraph: 井筒さんは「うどん」と回答。ポルカは直前の話題に引っ張られているとツッコミを入れる。
+  - listitem "クリックして 00:07:56 から再生":
+    - heading "ポル伝にリテイクはあるか" [level=3]
+    - text: 00:07:56 / トーク
+    - paragraph: ポルカは「ないないない」と回答。その場の空気で進行していることを明かす。
+  - listitem "クリックして 00:08:03 から再生":
+    - heading "足つぼマッサージ企画について" [level=3]
+    - text: 00:08:03 / トーク
+    - paragraph: 井筒さんは「痛い時は本気で怒る」と回答。ポルカは「一番嫌なタイプ」とコメント。
+  - listitem "クリックして 00:08:14 から再生":
+    - heading "どちらが力（物理）強いか" [level=3]
+    - text: 00:08:14 / トーク
+    - paragraph: ポルカは悩むが、井筒さんは「もしかしたら井筒」と自信を見せる。
+  - listitem "クリックして 00:08:29 から再生":
+    - heading "デリバリーピザの追加トッピングについて" [level=3]
+    - text: 00:08:29 / トーク
+    - paragraph: 井筒さんは「追いチーズ」と回答。ポルカも同じように考えていたと話す。
+  - listitem "クリックして 00:08:43 から再生":
+    - heading "なぜ「伝説」にしたんですか？" [level=3]
+    - text: 00:08:43 / トーク
+    - paragraph: ポルカは「カッコいいから」とシンプルに回答。
+  - listitem "クリックして 00:08:46 から再生":
+    - heading "井筒さんがポルカにすすめたいゲーム" [level=3]
+    - text: 00:08:46 / トーク
+    - paragraph: 井筒さんは「ELDEN RING NIGHT REIGN」を推すが、ポルカは「無理だよ」と拒否。
+  - listitem "クリックして 00:09:09 から再生":
+    - heading "ポルカの雑談時の口の開きについて" [level=3]
+    - text: 00:09:09 / トーク
+    - paragraph: 視聴者から「口が開いてる」と指摘され、ポルカは驚きを隠せない。
+  - listitem "クリックして 00:09:19 から再生":
+    - heading "井筒さんの運動神経について" [level=3]
+    - text: 00:09:19 / トーク
+    - paragraph: 井筒さんは「めちゃめちゃ悪い」が「筋トレはできる」と回答。
+  - listitem "クリックして 00:09:27 から再生":
+    - heading "ポルカの可愛さについて" [level=3]
+    - text: 00:09:27 / トーク
+    - paragraph: ポルカは「生まれた時からかわいいんだ」と自信満々に回答。
+  - listitem "クリックして 00:09:38 から再生":
+    - heading "井筒さんの黒歴史について" [level=3]
+    - text: 00:09:38 / トーク
+    - paragraph: 井筒さんは「漫画は描いていた」と告白。商業漫画のパロディ漫画をオリジナルキャラで描いていたと明かす。
+  - listitem "クリックして 00:10:15 から再生":
+    - heading "長時間配信企画について" [level=3]
+    - text: 00:10:15 / トーク
+    - paragraph: ポルカは井筒さんが配信に向いていないから難しいと話す。誰かを連れてくる必要があるが、そうすると「ポルカの伝説」ではなくなると懸念。
+  - listitem "クリックして 00:10:39 から再生":
+    - heading "井筒さんのワインの許容量" [level=3]
+    - text: 00:10:39 / トーク
+    - paragraph: 井筒さんは「1本は絶対いける」と回答。
+  - listitem "クリックして 00:10:53 から再生":
+    - heading "50本ノック終了と全体振り返り" [level=3]
+    - text: 00:10:53 / トーク
+    - paragraph: 全50問が終了し、2人は意外と多くの質問に答えられたことに驚く。テンポの良さから100問もいけたのではないかと話す。印象に残った質問を振り返りつつ、井筒さんが過去の動画では緊張していたこと、周囲の人間の変化に驚くポルカなど、様々なエピソードが語られる。
+  - listitem "クリックして 00:14:34 から再生":
+    - heading "ポルいづとカップルチャンネル感" [level=3]
+    - text: 00:14:34 / トーク
+    - paragraph: ポルカは今回の配信で「カップルチャンネルっぽさ」を感じたと発言。井筒の人気も出してグッズ化に繋げたいと意気込む。井筒は更なる高みを目指すと乗っかる。
+  - listitem "クリックして 00:15:08 から再生":
+    - heading "エンディング" [level=3]
+    - text: 00:15:08 / その他
+    - paragraph: 最後に、改めて今後への意気込みを語り、配信が終了する。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#雑談 #質問コーナー #フリートーク #コラボ #ホロライブ #井筒"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】"
+  - heading "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】" [level=2]
+  - paragraph: "配信者: 桃鈴ねね"
+  - paragraph: "配信日時: 2025-08-14 19:00:00"
+  - paragraph: "配信時間: 1時間51秒"
+  - paragraph: "再生数: 52,712"
+  - paragraph: "高評価数: 4,438"
+  - paragraph: 桃鈴ねねさんがホロライブサマーパークを舞台に、自由な発想でマインクラフト建築を楽しむ配信。これまでの配信では、可愛らしいテーブルセットや花壇、ユニークなオブジェなどを制作し、パークの景観を彩ることに奮闘していた。今回の終盤では、水槽付きのテーブル周りに水を流し込み、ツツジなどを配置し華やかさを増す作業を行うが、装飾の方向性や配置に悩み、「おしゃれって何だ？」と自問自答しながらも、最終的には一旦思考を整理するためゲームを終了する。
+  - paragraph: 配信の雰囲気：和やかで創造的な雰囲気、時折困惑
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:02:59 から再生":
+    - heading "配信開始とサマーパーク説明" [level=3]
+    - text: 00:02:59 / トーク
+    - paragraph: 配信が始まり、桃鈴ねねさんがホロライブサマーパークでの飾り付けに参加することを視聴者に説明します。
+  - listitem "クリックして 00:03:26 から再生":
+    - heading "アンハッピーガストとの遭遇" [level=3]
+    - text: 00:03:26 / 遊戲
+    - paragraph: マインクラフトにログイン後、ぺこらさんが設置したガストがピストンで押し出される「アンハッピーガスト」装置を発見し、その面白さにリアクションします。
+  - listitem "クリックして 00:04:05 から再生":
+    - heading "パーク内探索とクリエイティブモードへ" [level=3]
+    - text: 00:04:05 / ゲーム
+    - paragraph: サマーパーク内を探索し、他のメンバーの個性的な建築物を見学。その後、星街すいせいさんと合流し、クリエイティブモードに切り替えて自由に建築を始めます。
+  - listitem "クリックして 00:07:50 から再生":
+    - heading "星街すいせいさんとパークのデザイン相談" [level=3]
+    - text: 00:07:50 / トーク
+    - paragraph: 星街すいせいさんとボイスチャットでパーク内の道のデザインについて相談。ディズニーランドのように「ぐにゃっ」とした道を目指すことで意見が一致します。
+  - listitem "クリックして 00:11:15 から再生":
+    - heading "水槽付きテーブルの装飾" [level=3]
+    - text: 00:11:15 / ゲーム
+    - paragraph: パーク内に設置されたテーブルセットをベースに、ガラスと水、色とりどりのサンゴを使って水槽部分を華やかに飾り付けます。
+  - listitem "クリックして 00:16:15 から再生":
+    - heading "カラフルなカーペット敷設" [level=3]
+    - text: 00:16:15 / ゲーム
+    - paragraph: 地面にピンクと水色のチェック柄カーペットを敷き詰め、パークのエリアを明るく彩る装飾作業を進めます。
+  - listitem "クリックして 00:19:15 から再生":
+    - heading "個性的な建築物の試作" [level=3]
+    - text: 00:19:15 / ゲーム
+    - paragraph: エンドロッドとカーペットでパラソル風の装飾を試作。また、芝生やツツジの葉で花壇を作成したり、クォーツブロックで立体的な通路を建設したりと、様々なアイデアを形にしていきます。
+  - listitem "クリックして 00:33:20 から再生":
+    - heading "ポップコーンスタンドと街灯の建設" [level=3]
+    - text: 00:33:20 / ゲーム
+    - paragraph: ポップコーンブロックを使って可愛らしいポップコーンスタンドを建設。さらにランタンやトラップドアを組み合わせたミニチュアの街灯も試作します。
+  - listitem "クリックして 00:37:35 から再生":
+    - heading "建築の振り返りと配信の締め" [level=3]
+    - text: 00:37:35 / トーク
+    - paragraph: これまでの建築作業を振り返り、作り上げた様々な構造物や装飾に満足げな様子を見せます。今後のパークの装飾計画や配信の区切りについて話します。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "クォーツブロックで地面を装飾" [level=3]
+    - text: 00:40:00 / ゲーム
+    - paragraph: テーブルセットの周りの地面をクォーツのハーフブロックで埋め、おしゃれな雰囲気を出す作業に取り組みます。
+  - listitem "クリックして 00:46:00 から再生":
+    - heading "噴水風の装飾に試行錯誤" [level=3]
+    - text: 00:46:00 / ゲーム
+    - paragraph: テーブルセットの中央を掘り、水を流して噴水風の装飾を試みるも、芝生ブロックが浮いてしまうなど、思い通りにいかず困惑します。
+  - listitem "クリックして 00:49:00 から再生":
+    - heading "装飾の方向性に悩み立ち往生" [level=3]
+    - text: 00:49:00 / トーク
+    - paragraph: 水辺の装飾に使う花やブロックの配置に悩み、「おしゃれって何だ？」と自問自答を繰り返します。理想の形が見つからず、作業が行き詰まります。
+  - listitem "クリックして 00:52:00 から再生":
+    - heading "道の整備と天候の悪化" [level=3]
+    - text: 00:52:00 / ゲーム
+    - paragraph: 一度作った装飾を撤去し、通常の道を整備し直す作業を始めます。作業中に雨が降り出し、天候も相まって「最悪だ。道埋まっちゃったんだけど」と嘆きます。
+  - listitem "クリックして 00:56:00 から再生":
+    - heading "装飾再開と自己肯定の試み" [level=3]
+    - text: 00:56:00 / ゲーム
+    - paragraph: 雨の中、泥レンガやツツジなどを使って装飾を再開。「おしゃれそうでおしゃれそうじゃない？」「それっぽい、それっぽくなってきたやん」と自己肯定しながら作業を続けます。
+  - listitem "クリックして 00:58:00 から再生":
+    - heading "建築の限界とゲーム終了" [level=3]
+    - text: 00:58:00 / トーク
+    - paragraph: 装飾は続くものの、理想の完成形が見えず、「何にも考えず建設するって無理なんだ」と限界を感じます。最終的に「一旦脳内会議入ります」とゲームを終了しました。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#Minecraft #マイクラ #ゲーム実況 #ホロライブ #サマーパーク #建設 #建築 #コラボ #装飾 #挫折 #困惑"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【歌枠】久々にオリ曲歌おうかな？【ホロライブ/ときのそら】"
+  - heading "【歌枠】久々にオリ曲歌おうかな？【ホロライブ/ときのそら】" [level=2]
+  - paragraph: "配信者: ときのそら 🐻"
+  - paragraph: "配信日時: 2025-08-14 15:35:00"
+  - paragraph: "配信時間: 1時間43分59秒"
+  - paragraph: "再生数: 44,021"
+  - paragraph: "高評価数: 6,378"
+  - paragraph: ときのそらさんのオリジナル曲歌枠配信。ホロライブの最新情報やライブリハーサルのエピソードを交えつつ、普段あまり歌わないオリジナル曲を多数披露しました。ライブに向けたサイン作業の進捗や、睡眠時間確保への苦労をリスナーと共有する日常トークで和やかな雰囲気に。終盤には感動的な楽曲「Beyond」を歌い上げ、ファンとの絆を感じさせる配信でした。
+  - paragraph: 配信の雰囲気：和やかな雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:00:00 から再生":
+    - heading "配信開始前の新情報" [level=3]
+    - text: 00:00:00 / お知らせ
+    - paragraph: ホロライブの様々な新情報が紹介される待機画面。ぬいぐるみ、8thライブ、デジタルシングル、ファンクラブアプリなど多岐にわたる。
+  - listitem "クリックして 00:04:16 から再生":
+    - heading "配信開始と挨拶" [level=3]
+    - text: 00:04:16 / トーク
+    - paragraph: ときのそらさんが登場し、リスナーに挨拶。配信開始前の新情報が多かったことに触れ、今回の歌枠が自身のオリジナル曲中心であることを伝える。
+  - listitem "クリックして 00:05:20 から再生":
+    - heading "ライブまでの日数とリハーサル状況" [level=3]
+    - text: 00:05:20 / トーク
+    - paragraph: ライブまで約45日あることに言及。ライブの振り入れが1週間前に行われたが、全く覚えていなかったというエピソードを披露する。
+  - listitem "クリックして 00:08:33 から再生":
+    - heading "振り付けの先生とのエピソード" [level=3]
+    - text: 00:08:33 / トーク
+    - paragraph: 振り付けの先生がとても明るく、太陽のような人柄であることを語る。1週間で振り付けを覚えるのは難しいとこぼす場面も。
+  - listitem "クリックして 00:11:41 から再生":
+    - heading "1曲目「未練レコード」歌唱" [level=3]
+    - text: 00:11:41 / 歌
+    - paragraph: 最近あまり歌っていなかったという「未練レコード」を披露。しっとりとした雰囲気で歌い上げる。
+  - listitem "クリックして 00:15:30 から再生":
+    - heading "歌唱後トークと喉の調子" [level=3]
+    - text: 00:15:30 / トーク
+    - paragraph: 歌唱後、喉の調子が本調子ではないことを打ち明ける。リスナーからの温かいコメントに感謝を伝える。
+  - listitem "クリックして 00:18:00 から再生":
+    - heading "2曲目「羽を手にし」歌唱" [level=3]
+    - text: 00:18:00 / 歌
+    - paragraph: 「普段歌わない曲を選んだ」と語り、2曲目に「羽を手にし」を歌唱。明るく前向きな歌声でリスナーを魅了する。
+  - listitem "クリックして 00:22:00 から再生":
+    - heading "歌唱後トークと選曲理由" [level=3]
+    - text: 00:22:00 / トーク
+    - paragraph: リスナーが知らない曲を歌うことについて触れ、今回はあまり歌っていない曲を選んでみたと話す。視聴者との交流を楽しむ。
+  - listitem "クリックして 00:23:50 から再生":
+    - heading "3曲目「黄昏ミッドナイト」歌唱" [level=3]
+    - text: 00:23:50 / 歌
+    - paragraph: 続く3曲目として「黄昏ミッドナイト」を歌い上げる。ゆったりとしたメロディーと歌声が特徴的。
+  - listitem "クリックして 00:28:00 から再生":
+    - heading "4曲目「ピッと！マーマレード」歌唱" [level=3]
+    - text: 00:28:00 / 歌
+    - paragraph: 4曲目として「ピッと！マーマレード」を披露。可愛らしい歌声でリスナーを癒す。
+  - listitem "クリックして 00:33:30 から再生":
+    - heading "5曲目「エゴナデ・ラビリンス」歌唱" [level=3]
+    - text: 00:33:30 / 歌
+    - paragraph: 5曲目に「エゴナデ・ラビリンス」を披露。力強く感情豊かな歌声でリスナーを惹きつける。
+  - listitem "クリックして 00:38:52 から再生":
+    - heading "歌唱後の感想と歌リスト確認" [level=3]
+    - text: 00:38:52 / トーク
+    - paragraph: 歌唱後、これまでの楽曲について振り返り。リスナーに歌リストを読み上げ、今回の配信内容をまとめる。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "ライブリハーサルと新情報トーク" [level=3]
+    - text: 00:40:00 / トーク
+    - paragraph: 「エゴナデ・ラビリンス」歌唱後、ライブのリハーサルについて触れ、配信開始前の新情報について改めて言及する。
+  - listitem "クリックして 00:42:20 から再生":
+    - heading "掛け声練習に関するトーク" [level=3]
+    - text: 00:42:20 / トーク
+    - paragraph: 特定の曲の掛け声について言及し、掛け声練習の難しさについて話す。
+  - listitem "クリックして 00:43:03 から再生":
+    - heading "「再三縛り」は難しい？" [level=3]
+    - text: 00:43:03 / トーク
+    - paragraph: 「再三縛り」は難しいというコメントに反応し、別の曲にするという話題に触れる。
+  - listitem "クリックして 00:43:46 から再生":
+    - heading "ソラ祭りに関するトーク" [level=3]
+    - text: 00:43:46 / トーク
+    - paragraph: ソラ祭りがキツいというリスナーからのコメントに反応し、関連トークを続ける。
+  - listitem "クリックして 00:45:00 から再生":
+    - heading "「海より深い空の下」歌い出しの苦労" [level=3]
+    - text: 00:45:00 / トーク
+    - paragraph: 「海より深い空の下」の歌い出しの低音パートについて、難しさや苦労を語る。
+  - listitem "クリックして 00:47:31 から再生":
+    - heading "6曲目「海より深い空の下」歌唱" [level=3]
+    - text: 00:47:31 / 歌
+    - paragraph: 6曲目に「海より深い空の下」をしっとりと歌い上げる。
+  - listitem "クリックして 00:48:26 から再生":
+    - heading "歌唱後の低音に関するトーク" [level=3]
+    - text: 00:48:26 / トーク
+    - paragraph: 「海より深い空の下」歌唱後、冒頭の低音部分がやはり難しいことをリスナーと共有する。
+  - listitem "クリックして 00:50:29 から再生":
+    - heading "7曲目「刹那ティックコード」歌唱" [level=3]
+    - text: 00:50:29 / 歌
+    - paragraph: 7曲目として「刹那ティックコード」を披露。力強く歌い上げる。
+  - listitem "クリックして 00:51:48 から再生":
+    - heading "膝をぶつけたエピソード" [level=3]
+    - text: 00:51:48 / トーク
+    - paragraph: 自身の膝をテーブルにぶつけたエピソードを話し、しゃがむと痛みが続くことを明かす。
+  - listitem "クリックして 00:53:50 から再生":
+    - heading "8曲目「Dancing Reed」歌唱" [level=3]
+    - text: 00:53:50 / 歌
+    - paragraph: 8曲目に「Dancing Reed」を歌唱。リズミカルな楽曲を披露する。
+  - listitem "クリックして 00:55:08 から再生":
+    - heading "9曲目「ロゴバッジ」歌唱" [level=3]
+    - text: 00:55:08 / 歌
+    - paragraph: 9曲目に「ロゴバッジ」を歌唱。可愛らしい歌声でファンを魅了する。
+  - listitem "クリックして 00:56:02 から再生":
+    - heading "10曲目「フレフレLOVE」歌唱" [level=3]
+    - text: 00:56:02 / 歌
+    - paragraph: 10曲目に「フレフレLOVE」を歌唱。明るく元気な歌声で配信を盛り上げる。
+  - listitem "クリックして 00:56:29 から再生":
+    - heading "ライブへの意気込みと感謝" [level=3]
+    - text: 00:56:29 / トーク
+    - paragraph: 歌い終わった後、リスナーへの感謝を伝え、最高のライブにするために頑張るから、みんなもしっかりフリを覚えてきてほしいと話す。
+  - listitem "クリックして 00:58:15 から再生":
+    - heading "8thライブグッズ詳細告知" [level=3]
+    - text: 00:58:15 / お知らせ
+    - paragraph: ときのそら8thライブ「Re:Play」のグッズの詳細（ラバーバンド、Tシャツ、ペンライトなど）について具体的に紹介する。
+  - listitem "クリックして 00:59:00 から再生":
+    - heading "ライブ衣装のこだわりトーク" [level=3]
+    - text: 00:59:00 / トーク
+    - paragraph: 自身のライブ衣装のデザインポイントや制作時のこだわりについて熱心に語る。
+  - listitem "クリックして 01:00:00 から再生":
+    - heading "ホロライブプロダクション全体イベント告知" [level=3]
+    - text: 01:00:00 / お知らせ
+    - paragraph: ホロライブプロダクション初の全体イベント「hololive Fes. 2024 - Beyond the Stage -」について告知し、チケット情報も併せて伝える。
+  - listitem "クリックして 01:03:00 から再生":
+    - heading "配信終了の挨拶" [level=3]
+    - text: 01:03:00 / トーク
+    - paragraph: 本日の歌枠配信の締めとしてリスナーに感謝を伝え、次回の配信への期待を語り、挨拶をする。
+  - listitem "クリックして 01:03:59 から再生":
+    - heading "動画終了" [level=3]
+    - text: 01:03:59 / 配信終了
+    - paragraph: 配信が終了し、エンドロールが流れる。
+  - listitem "クリックして 01:20:00 から再生":
+    - heading "配信後のスケジュールとサイン作業" [level=3]
+    - text: 01:20:00 / トーク
+    - paragraph: 配信後の夕食やお風呂、そしてギリギリまでサインを書く予定を話す。リスナーから早く寝るよう促されるが、時間を忘れて作業に没頭しがちだと笑顔で語る。
+  - listitem "クリックして 01:39:00 から再生":
+    - heading "11曲目「Beyond」歌唱" [level=3]
+    - text: 01:39:00 / 歌
+    - paragraph: 最後に11曲目として「Beyond」を披露。感動的な歌声で、配信の締めくくりにふさわしいパフォーマンスを見せる。
+  - listitem "クリックして 01:43:59 から再生":
+    - heading "配信終了" [level=3]
+    - text: 01:43:59 / 配信終了
+    - paragraph: 配信が完全に終了し、エンドロールが流れる。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#歌枠 #雑談 #ときのそら #ホロライブ #オリジナル曲 #ライブ情報 #リハーサル"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【OFF COLLAB】COOKING INDONESIAN FOOD with RAORA!!! (CAMERA TIME)"
+  - heading "【OFF COLLAB】COOKING INDONESIAN FOOD with RAORA!!! (CAMERA TIME)" [level=2]
+  - paragraph: "配信者: Reine"
+  - paragraph: "配信日時: 2025-08-14 15:02:00"
+  - paragraph: "配信時間: 1時間45分1秒"
+  - paragraph: "再生数: 45,222"
+  - paragraph: "高評価数: 6,479"
+  - paragraph: ReineとゲストのRaora Panteraによるインドネシア料理「Soto Ayam」のクッキングコラボ配信です。鶏肉の皮剥ぎに苦戦しながらも調理を進め、Soto Ayamが完成した後は、Raoraが初めての本格的な味に感動する様子が描かれます。その後、料理の評価や食べ方、調味料について語り合います。さらに、配信の終盤では、次回のインドネシア料理企画として、ナシゴレン、ナシウドゥク、ナシクニンの中からどれを試すか視聴者と共に選び、和やかな雰囲気で次回への期待感を高めます。
+  - paragraph: 配信の雰囲気：終始和やかな雰囲気で、時折ハプニングや笑いが起こる賑やかな配信
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:01:01 から再生":
+    - heading "配信開始とゲスト紹介" [level=3]
+    - text: 00:01:01 / トーク
+    - paragraph: ReineとゲストのRaora Panteraが視聴者に挨拶し、音声チェックを行います。今日の料理について話し、Raoraがインドネシア語での挨拶について説明します。
+  - listitem "クリックして 00:01:23 から再生":
+    - heading "メイン料理と材料の紹介" [level=3]
+    - text: 00:01:23 / トーク
+    - paragraph: 今回の企画でインドネシア料理の「Soto Ayam」を作ることを発表。まずはインスタント調味料「Indofood Racik Bumbu Spesial Soto Ayam」を紹介し、本来はビーフンを使うが、手に入らなかったためうどんで代用することを説明します。
+  - listitem "クリックして 00:02:01 から再生":
+    - heading "副材料の紹介" [level=3]
+    - text: 00:02:01 / トーク
+    - paragraph: もやしと千切りキャベツを披露し、野菜もバランス良く摂ることを強調します。
+  - listitem "クリックして 00:02:31 から再生":
+    - heading "鶏肉の皮剥ぎに挑戦" [level=3]
+    - text: 00:02:31 / リアクション
+    - paragraph: メイン食材である鶏肉（ドラムスティック）が登場。Raoraが鶏肉の皮が苦手なため、Reineが皮剥ぎを担当することになります。
+  - listitem "クリックして 00:03:01 から再生":
+    - heading "苦戦する皮剥ぎ作業" [level=3]
+    - text: 00:03:01 / リアクション
+    - paragraph: Reineがゴム手袋をはめ、鶏肉の皮剥ぎに挑戦するが、皮がうまく剥がれず苦戦している様子が描かれます。骨付きのまま煮込み、後で身をほぐす予定です。
+  - listitem "クリックして 00:03:51 から再生":
+    - heading "飲み物と別料理の素の紹介" [level=3]
+    - text: 00:03:51 / トーク
+    - paragraph: 喉に良いとされるインドネシアの健康ドリンク「Este Emje (STMJ)」のインスタントパウダーを紹介。さらに別のインドネシア料理の素「OPOR AYAM」も披露されますが、今回は使用しないことを伝えます。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "鶏肉の皮剥ぎと切り分け（続き）" [level=3]
+    - text: 00:40:00 / 料理
+    - paragraph: Reineが鶏肉の皮を剥ぎ、食べやすい大きさにカットしています。Raoraは熱気と煙に苦戦しながらも、二人の和やかなやり取りが続きます。
+  - listitem "クリックして 00:40:40 から再生":
+    - heading "インドネシア語の発音レッスン" [level=3]
+    - text: 00:40:40 / トーク
+    - paragraph: Raoraが健康ドリンク「STMJ」の名前についてReineに尋ねます。Reineはインドネシア語の発音がイタリア語のように発音通り読むと説明し、Raoraは共通点に喜びを表現します。
+  - listitem "クリックして 00:42:30 から再生":
+    - heading "骨から身を外す「Focus!」チャレンジ" [level=3]
+    - text: 00:42:30 / リアクション
+    - paragraph: Reineが鶏肉の骨から身を外す作業に集中し、「Focus!」と何度も言う様子がコミカルに描かれます。この作業で肉をきれいに骨から外し終え、達成感を分かち合います。
+  - listitem "クリックして 00:46:30 から再生":
+    - heading "鶏肉の炒めとハプニング" [level=3]
+    - text: 00:46:30 / リアクション
+    - paragraph: 骨を外した鶏肉をフライパンで炒め始めます。肉の色がカメラの映り込みで赤く見えるハプニングが発生しますが、Reineは実際は黄色だと説明します。
+  - listitem "クリックして 00:50:10 から再生":
+    - heading "失われたガーリックとIndomie談義" [level=3]
+    - text: 00:50:10 / トーク
+    - paragraph: Raoraが調味料のガーリックを探し回るが見つからずパニックに。その間、Raoraがインドネシアの有名インスタント麺「Indomie」を食べたことがないと告白し、Reineを驚かせます。
+  - listitem "クリックして 00:51:20 から再生":
+    - heading "ゆで卵の準備" [level=3]
+    - text: 00:51:20 / 料理
+    - paragraph: Reineがゆで卵の皮を剥き、半分にカットする作業を披露します。カメラの色の問題で卵が赤く見えるハプニングも発生しますが、実際は黄色の白身だと説明します。
+  - listitem "クリックして 00:59:00 から再生":
+    - heading "ソトの盛り付けと完成" [level=3]
+    - text: 00:59:00 / 料理
+    - paragraph: 茹でたうどん、炒めた鶏肉、もやし、キャベツ、茹で卵を順番に器に盛り付け、最後にスープを注いでSoto Ayamが完成。Raoraが初めての本格的なSoto Ayamの味に感動します。
+  - listitem "クリックして 01:20:00 から再生":
+    - heading "Soto Ayamの試食と感動" [level=3]
+    - text: 01:20:00 / リアクション
+    - paragraph: 完成したSoto AyamをRaoraが試食し、「Yummy!」と感動の声をあげます。Reineも出来栄えに満足し、自分たちで作ったとは思えないと驚きます。
+  - listitem "クリックして 01:28:50 から再生":
+    - heading "インドネシア料理の具材とライムの重要性" [level=3]
+    - text: 01:28:50 / トーク
+    - paragraph: Soto Ayamに使われるキャベツの細切りやライムの役割について語ります。ライムが酸味と風味を加え、特に暑いインドネシアで食欲を増進させる効果があることを説明します。
+  - listitem "クリックして 01:36:50 から再生":
+    - heading "Nasi Goreng（ナシゴレン）の紹介" [level=3]
+    - text: 01:36:50 / トーク
+    - paragraph: 次回作るインドネシア料理として、インスタントのNasi Gorengの素を紹介します。チャット欄でNasi GorengとNasi Kuningのどちらを試したいか尋ね、視聴者の意見を募ります。
+  - listitem "クリックして 01:40:00 から再生":
+    - heading "Nasi Kuning（イエローライス）の試食" [level=3]
+    - text: 01:40:00 / 料理
+    - paragraph: 視聴者の希望が多かったNasi Kuning（イエローライス）を試すことに決定。粉末の素をご飯に混ぜて手軽に完成させ、Reineが試食します。Nasi Kuningは通常、揚げ鶏肉や卵と合わせて食べる伝統的な料理であることが説明されます。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#料理 #クッキング #インドネシア料理 #コラボ #雑談 #ASMR #試食"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【らでん自習室】8月14日10:00~11:00 【儒烏風亭らでん/ReGLOSS】"
+  - heading "【らでん自習室】8月14日10:00~11:00 【儒烏風亭らでん/ReGLOSS】" [level=2]
+  - paragraph: "配信者: 儒烏風亭らでん"
+  - paragraph: "配信日時: 2025-08-14 09:59:00"
+  - paragraph: "配信時間: 1時間15分59秒"
+  - paragraph: "再生数: 45,467"
+  - paragraph: "高評価数: 4,099"
+  - paragraph: 儒烏風亭らでんによる自習配信。リスナーが各自の課題や勉強を進める中、序盤は視聴者との交流や雑談を交え、読書感想文の効率的な書き方について具体的なアドバイスを提供した。その後は黙々と自習作業に集中する時間が続き、配信の終盤で自習の終了を告げた。ReGLOSSメンバーでの飲みコラボ配信の告知も行い、和やかな雰囲気でリスナーの学習をサポートしつつ配信を締めくくった。
+  - paragraph: 配信の雰囲気：明るく和やかな雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:02:07 から再生":
+    - heading "配信開始と自習室のアーカイブについて" [level=3]
+    - text: 00:02:07 / トーク
+    - paragraph: 朝の挨拶とともに配信を開始。昨日の自習配信が休みだったため、前々回分の自習室アーカイブを公開状態にしていると説明。限定公開にするのが面倒になったことに加え、リアルタイムで見られない人のために残していると話しました。
+  - listitem "クリックして 00:04:05 から再生":
+    - heading "今日の配信時間の変更" [level=3]
+    - text: 00:04:05 / お知らせ
+    - paragraph: 今日の配信時間を90分から60分に短縮することを発表しました。自身が塾の先生をしていた時の癖で、時間管理を間違えたことを冗談交じりに話しました。
+  - listitem "クリックして 00:07:18 から再生":
+    - heading "読書感想文の裏技・書き方のアドバイス" [level=3]
+    - text: 00:07:18 / トーク
+    - paragraph: 読書感想文の効率的な書き方について、行き詰まった際に文字数を稼ぐ裏技としてカタカナを多用することや、物語全体を要約するのではなく、特に印象に残った一場面を抜粋し、そのシーンについて深く語り、自身の経験と結びつける方法をアドバイスしました。
+  - listitem "クリックして 01:00:07 から再生":
+    - heading "配信終了の挨拶と自習の振り返り" [level=3]
+    - text: 01:00:07 / トーク
+    - paragraph: 配信の終了を告げ、リスナーの自習の進捗を労い、自身も作業を終えたことを報告。短い配信時間だったことに触れつつ、次回の自習室も活用してほしいと伝えた。
+  - listitem "クリックして 01:00:30 から再生":
+    - heading "ReGLOSS飲みコラボの告知" [level=3]
+    - text: 01:00:30 / お知らせ
+    - paragraph: 来月9月10日にReGLOSSメンバー（儒烏風亭らでん、轟はじめ、奏手ココ、一条莉々華）での飲みコラボ配信を告知。2周年記念としてただただ酒を飲んで話すだけの自由な配信になると説明し、視聴を促した。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#雑談 #自習 #勉強 #読書感想文 #学習アドバイス"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【＃ぺこマリ体操】ホロメン来るかな？みんなと一緒に朝の体操！１３日目【ホロライブ/兎田ぺこら/宝鐘マリン】"
+  - heading "【＃ぺこマリ体操】ホロメン来るかな？みんなと一緒に朝の体操！１３日目【ホロライブ/兎田ぺこら/宝鐘マリン】" [level=2]
+  - paragraph: "配信者: 兎田ぺこら 👯"
+  - paragraph: "配信日時: 2025-08-14 07:00:00"
+  - paragraph: "配信時間: 24分26秒"
+  - paragraph: "再生数: 243,953"
+  - paragraph: "高評価数: 16,482"
+  - paragraph: 「ぺこマリ体操」13日目の配信で、兎田ぺこらと宝鐘マリンを中心に、ゲストとしてビビ、リョナ、天音かなた、アキ・ローゼンタール（アズキ）が参加しました。夏らしい水着姿で体操を披露し、ゲストも加わり賑やかな配信となりました。体操後には、個性的なゲストたちが記念スタンプ押しに奮闘する姿がコミカルに描かれ、全員で楽しい記念撮影を行いました。終始、和やかで夏休みムード満載の楽しい配信となりました。
+  - paragraph: 配信の雰囲気：終始楽しく、和やかな雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:04:26 から再生":
+    - heading "ぺこマリ体操13日目スタート＆挨拶" [level=3]
+    - text: 00:04:26 / トーク
+    - paragraph: ぺこらとマリンが水着姿の3Dモデルで登場し、ぺこマリ体操13日目であること、お盆休み中の視聴者に挨拶しました。
+  - listitem "クリックして 00:06:15 から再生":
+    - heading "ゲスト「ビビ」と「リョナ」登場" [level=3]
+    - text: 00:06:15 / トーク
+    - paragraph: ちびキャラ姿のビビとリョナが登場。ビビがシャボン玉、リョナがスイカをそれぞれ持ち、楽しそうにしています。ぺこらとマリンが二人の生活習慣について言及します。
+  - listitem "クリックして 00:08:44 から再生":
+    - heading "ゲスト「天音かなた」と「アキ・ローゼンタール」登場" [level=3]
+    - text: 00:08:44 / トーク
+    - paragraph: 天音かなたとアキ・ローゼンタールが水着姿の3Dモデルで登場し、昨日のライブでの疲れや配信への意気込みを語りました。
+  - listitem "クリックして 00:13:50 から再生":
+    - heading "ぺこマリ体操、全員集合！" [level=3]
+    - text: 00:13:50 / トーク
+    - paragraph: ぺこら、マリン、かなた、アズキがステージに集合し、ぺこマリ体操を全員で踊る準備を始めました。
+  - listitem "クリックして 00:14:56 から再生":
+    - heading "全員でぺこマリ体操披露" [level=3]
+    - text: 00:14:56 / 歌
+    - paragraph: ぺこマリ体操の楽曲に合わせて、全員で体操を披露しました。途中、かなたとアズキがハイテンションになり、倒れてしまうなどコミカルな場面もありました。
+  - listitem "クリックして 00:17:38 から再生":
+    - heading "ぺこマリ体操記念スタンプコーナー開始" [level=3]
+    - text: 00:17:38 / トーク
+    - paragraph: 体操の後の記念スタンプ押しコーナーが始まりました。ぺこらとマリンがスタンプ台に移動し、スタンプを押そうとします。
+  - listitem "クリックして 00:18:44 から再生":
+    - heading "アズキ、テンション上がりすぎて倒れる" [level=3]
+    - text: 00:18:44 / リアクション
+    - paragraph: アズキがスタンプを押そうと試みますが、昨日のライブの余韻と今日の体操でテンションが上がりすぎてしまい、体がコントロールできなくなり床に倒れてしまいました。
+  - listitem "クリックして 00:21:58 から再生":
+    - heading "天音かなた、浮遊からの着地失敗で倒れる＆ビビ・リョナ巨大化" [level=3]
+    - text: 00:21:58 / リアクション
+    - paragraph: かなたがスタンプを押そうとしますが、突然体が浮遊し、そのまま着地に失敗して倒れてしまいます。その後、ビビとリョナが巨大化し、スタンプ押しに挑戦しました。
+  - listitem "クリックして 00:23:25 から再生":
+    - heading "全員で集合写真撮影" [level=3]
+    - text: 00:23:25 / トーク
+    - paragraph: 体操とスタンプ押しの後は、全員で記念撮影を行いました。それぞれが可愛らしいポーズを取り、配信を締めくくりました。
+  - listitem "クリックして 00:24:00 から再生":
+    - heading "エンディング" [level=3]
+    - text: 00:24:00 / お知らせ
+    - paragraph: 配信のエンディングに入り、ぺこらがたくさんのうさぎに埋もれていく可愛らしいアニメーションが流れました。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#雑談 #体操 #ホロライブ #コラボ #夏 #水着 #バーチャルYouTuber"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - 'img "【SHADOWVERSE: WORLDS BEYOND】i look into the abyss and it stares back at me #ad"'
+  - 'heading "【SHADOWVERSE: WORLDS BEYOND】i look into the abyss and it stares back at me #ad" [level=2]'
+  - paragraph: "配信者: Gigi"
+  - paragraph: "配信日時: 2025-08-14 06:59:00"
+  - paragraph: "配信時間: 1時間52分36秒"
+  - paragraph: "再生数: 40,189"
+  - paragraph: "高評価数: 5,570"
+  - paragraph: "配信者GigiがShadowverse: Worlds Beyondのスポンサー配信を継続。Abysscraftデッキでの2連勝後、新たに構築したSwordcraftデッキでランクマッチに挑む。序盤の盤面構築から、相手の強力なカード展開への対応、自身の盤面強化、そしてSuper-Evolveによるリーサルまで、詳細なゲームプレイを解説。見事な勝利を収め、連勝を重ねる。また、カードパック開封で新たなレジェンドカードを獲得し、バトルパスの進捗も確認。終始ハイテンションでゲームの戦略性と興奮を伝えている。"
+  - paragraph: 配信の雰囲気：終始ハイテンションで喜びや興奮が伝わる雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:04:08 から再生":
+    - 'heading "配信開始とShadowverse: Worlds Beyond紹介" [level=3]'
+    - text: 00:04:08 / トーク
+    - paragraph: "Gigiが視聴者に挨拶し、Shadowverse: Worlds Beyondのスポンサー配信であることを説明。自身がゲームにハマっていることや、対戦相手となるCeceのデッキ構成について語る。"
+  - listitem "クリックして 00:05:57 から再生":
+    - heading "レジェンダリーカードパック開封（1回目）" [level=3]
+    - text: 00:05:57 / ゲーム
+    - paragraph: レジェンダリーカードパックを8枚まとめて購入。最初のパックで新しいレジェンドカード「Charon, Stygian Oarswoman」を獲得し、喜びを表現。
+  - listitem "クリックして 00:07:16 から再生":
+    - heading "レジェンダリーカードパック開封（2回目以降）" [level=3]
+    - text: 00:07:16 / ゲーム
+    - paragraph: 続けてパックを開封し、次々と新しいレジェンドカード（Forte, Blackwing Dragon, Seria, Gunslinger Maid, Yurius, Levin Authority, Medusa, Venomfang Royalty, Burnite, Anathema of Flame, Neptune, Arbiter of Tides, Olivia, Heroic Dark Angel）を獲得。特にメデューサのプレミアム版に興奮する。
+  - listitem "クリックして 00:09:10 から再生":
+    - heading "クリスタルでのパック追加購入とオーディン獲得" [level=3]
+    - text: 00:09:10 / ゲーム
+    - paragraph: 所持クリスタルを使い追加のパックを購入。新たなレジェンドカード「Odin, Twilit Fate」を獲得し、対戦相手に勝てるかもしれないと大喜びする。
+  - listitem "クリックして 00:10:18 から再生":
+    - heading "購入特典のリーダーセット獲得" [level=3]
+    - text: 00:10:18 / ゲーム
+    - paragraph: パック購入の特典として「Aether」のリーダーセットを獲得。他のリーダーセット（Titania, Filene）についても言及し、ビサージセットの可愛さをアピールする。
+  - listitem "クリックして 00:14:59 から再生":
+    - heading "デッキ編成の確認と調整" [level=3]
+    - text: 00:14:59 / ゲーム
+    - paragraph: 自身の「アビスクラフト」デッキの状況を確認し、新たに獲得したメデューサやオーディンを組み込むことを検討する。視聴者からのアドバイスも募る。
+  - listitem "クリックして 00:17:03 から再生":
+    - heading "ストーリーモード「プロローグ」開始" [level=3]
+    - text: 00:17:03 / ゲーム
+    - paragraph: メインストーリーの「プロローグ」を開始。Kaori YuiharaとDreizehnの出会いのシーンが描かれ、迫力あるキャラクターデザインと会話が展開される。
+  - listitem "クリックして 00:17:54 から再生":
+    - heading "Diawlとの戦闘と新たなキャラクターの登場" [level=3]
+    - text: 00:17:54 / ゲーム
+    - paragraph: プロローグのストーリーが進行し、強力な敵キャラクターDiawlが登場。Galenという新しいキャラクターも現れ、Diawlとの激しいバトルを繰り広げる。
+  - listitem "クリックして 00:23:47 から再生":
+    - heading "Dreizehnの反撃と新たな協力者" [level=3]
+    - text: 00:23:47 / ゲーム
+    - paragraph: Galenの攻撃でダメージを受けたDiawlに対し、Dreizehnが強力な反撃を仕掛ける。その後、Marie MalisseやEsperanzaなど、新たなキャラクターが次々と登場する。
+  - listitem "クリックして 00:37:28 から再生":
+    - heading "ストーリーの結末と未来への展望" [level=3]
+    - text: 00:37:28 / ゲーム
+    - paragraph: ストーリーの最終盤。DreizehnとMarie Malisseが協力し、共に戦っていくことを決意する。新たな目標としてLibraryへの到達を目指す。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "ストーリーモード「The Family That Destroyed the World!」開始" [level=3]
+    - text: 00:40:00 / ゲーム
+    - paragraph: Gigiが新しいストーリーチャプター「The Family That Destroyed the World!」を開始。新たな物語の始まりに興奮する。
+  - listitem "クリックして 00:40:37 から再生":
+    - heading "ストーリー冒頭の華麗なオープニングムービー" [level=3]
+    - text: 00:40:37 / ゲーム
+    - paragraph: ストーリーの導入で流れる美しいアニメーションムービーにGigiが興奮と喜びを表現する。
+  - listitem "クリックして 00:42:18 から再生":
+    - heading "ストーリープロローグ完了とキャラクター紹介" [level=3]
+    - text: 00:42:18 / ゲーム
+    - paragraph: プロローグ完了後、ゲームのホーム画面に戻る。Gigiは様々なクラスやキャラクターの魅力を語る。
+  - listitem "クリックして 00:42:29 から再生":
+    - heading "カードコレクション確認とコメント" [level=3]
+    - text: 00:42:29 / ゲーム
+    - paragraph: Gigiが自身のカードコレクションを披露。特にYuriusとAmeliaといった強力なカードに言及し、今後のデッキ構築について考える。
+  - listitem "クリックして 00:43:10 から再生":
+    - heading "初めてのカードゲームプレイへのコメント" [level=3]
+    - text: 00:43:10 / トーク
+    - paragraph: Gigiがシャドウバースが自身にとって初のカードゲームであることを明かし、そのアクセシビリティとグラフィックの魅力を語る。
+  - listitem "クリックして 00:43:31 から再生":
+    - heading "ランクマッチ開始とAbysscraftデッキ紹介" [level=3]
+    - text: 00:43:31 / ゲーム
+    - paragraph: Gigiがランクマッチを開始。対戦相手の「yaoi」のデッキタイプがAbysscraft（アビスクラフト）であることを確認し、自身のデッキの強さに言及する。
+  - listitem "クリックして 00:43:56 から再生":
+    - heading "初戦（Cerberusデッキ）のゲームプレイ開始" [level=3]
+    - text: 00:43:56 / ゲーム
+    - paragraph: 対戦が始まり、手札の確認と交換を行う。Abysscraftデッキの基本戦略であるシャドウの貯蓄とネクロマンシー能力について言及する。
+  - listitem "クリックして 00:44:50 から再生":
+    - heading "Charon, Stygian Oarswomanの能力確認" [level=3]
+    - text: 00:44:50 / ゲーム
+    - paragraph: Gigiが「Charon, Stygian Oarswoman」のカード能力（Reanimate、Ward、Crest）を詳細に確認し、その戦略的な価値を理解する。
+  - listitem "クリックして 00:46:11 から再生":
+    - heading "Luminous Magusの登場と盤面強化" [level=3]
+    - text: 00:46:11 / ゲーム
+    - paragraph: 相手プレイヤーが「Luminous Magus」を召喚し、複数のKnightフォロワーを展開。Gigiは相手の強力な展開に驚きを隠せない。
+  - listitem "クリックして 00:48:00 から再生":
+    - heading "Odin, Twilit Fateによる相手フォロワーの除去" [level=3]
+    - text: 00:48:00 / ゲーム
+    - paragraph: Gigiが「Odin, Twilit Fate」をプレイし、相手の強力なフォロワーをフィールドから除去。戦況が大きく動く。
+  - listitem "クリックして 00:48:14 から再生":
+    - heading "Cerberus, Hellfire Unleashedの能力発動と盤面優勢" [level=3]
+    - text: 00:48:14 / ゲーム
+    - paragraph: Gigiが「Cerberus, Hellfire Unleashed」をSuper-evolveさせ、MimiとCocoを召喚。盤面を優位に進める。
+  - listitem "クリックして 00:49:16 から再生":
+    - heading "Albert, Levin Stormsaberの登場と決着" [level=3]
+    - text: 00:49:16 / ゲーム
+    - paragraph: 相手が「Albert, Levin Stormsaber」を召喚し、Gigiのリーダーに大ダメージを与える。緊張感が走るが、Gigiは耐え抜く。
+  - listitem "クリックして 00:49:59 から再生":
+    - heading "ランクマッチ初戦勝利！" [level=3]
+    - text: 00:49:59 / ゲーム
+    - paragraph: Gigiが熾烈なバトルを制し、ランクマッチ初戦で勝利を収める。大きな喜びを表現する。
+  - listitem "クリックして 00:50:08 から再生":
+    - heading "勝利報酬獲得とミッション確認" [level=3]
+    - text: 00:50:08 / ゲーム
+    - paragraph: 勝利の報酬としてルピとバイアルを獲得。デイリーミッションやバトルパスの進捗を確認し、ゲームの目標を再認識する。
+  - listitem "クリックして 00:50:23 から再生":
+    - heading "INFINITY EVOLVEDカードパック開封" [level=3]
+    - text: 00:50:23 / ゲーム
+    - paragraph: Gigiがルピを使って追加の「INFINITY EVOLVED」カードパックを開封。新たなカードの獲得に期待を寄せる。
+  - listitem "クリックして 00:51:00 から再生":
+    - heading "Forestcraftデッキ構築の可能性と他のクラスへの言及" [level=3]
+    - text: 00:51:00 / トーク
+    - paragraph: GigiがForestcraft（エルフ）デッキを構築する可能性に言及。自身が好きなカードデザインのクラス（Runecraft、Portalcraft、Havencraft）についても触れる。
+  - listitem "クリックして 00:52:24 から再生":
+    - heading "チュートリアルモード「Guided Puzzles」の解説" [level=3]
+    - text: 00:52:24 / ゲーム
+    - paragraph: Gigiがゲーム内のチュートリアルモード「Guided Puzzles」を紹介。各クラスの基本能力を学べるパズル形式のコンテンツの魅力を伝える。
+  - listitem "クリックして 00:53:13 から再生":
+    - heading "ランクマッチ第二戦開始と敵の戦略分析" [level=3]
+    - text: 00:53:13 / ゲーム
+    - paragraph: Gigiが再びランクマッチを開始。対戦相手がRunecraft（ウィッチ）であることを確認し、相手がスペルブースト型デッキであることを予想する。
+  - listitem "クリックして 00:53:30 から再生":
+    - heading "ゲームプレイとAbysscraft vs Runecraftの攻防" [level=3]
+    - text: 00:53:30 / ゲーム
+    - paragraph: Abysscraftデッキでの対戦が始まり、Gigiは相手のフォロワーを破壊し、自身の盤面を強化。相手のスペル使用に応じてシャドウを稼ぐ戦略を進める。
+  - listitem "クリックして 00:56:15 から再生":
+    - heading "Charon, Stygian Oarswomanの再臨と守備強化" [level=3]
+    - text: 00:56:15 / ゲーム
+    - paragraph: Gigiが再び「Charon, Stygian Oarswoman」をReanimateで召喚し、場のフォロワーにWardを付与。相手の攻撃からリーダーを守るための防御を固める。
+  - listitem "クリックして 00:58:00 から再生":
+    - heading "Medusa, Venomfang Royaltyの登場と反撃" [level=3]
+    - text: 00:58:00 / ゲーム
+    - paragraph: 相手が「Medusa, Venomfang Royalty」をSuper-evolveさせ、Gigiのフォロワーを破壊。Medusaの強力な能力（複数回攻撃、フォロワー破壊）で猛攻を仕掛ける。
+  - listitem "クリックして 00:59:12 から再生":
+    - heading "Odin, Twilit FateによるMedusaの除去" [level=3]
+    - text: 00:59:12 / ゲーム
+    - paragraph: Gigiは再び「Odin, Twilit Fate」をプレイし、脅威となっていた相手のMedusaをフィールドから排除。致命的な攻撃を防ぎ、戦況を立て直す。
+  - listitem "クリックして 00:59:47 から再生":
+    - heading "Cerberus, Hellfire Unleashedによるリーサルと勝利" [level=3]
+    - text: 00:59:47 / ゲーム
+    - paragraph: Gigiが「Cerberus, Hellfire Unleashed」を再びSuper-evolveさせ、リーダーへの直接ダメージを与えてリーサルを決める。2連勝を飾り、配信を終える。
+  - listitem "クリックして 01:20:00 から再生":
+    - heading "Swordcraftデッキでのランクマッチ開始と序盤の盤面構築" [level=3]
+    - text: 01:20:00 / ゲーム
+    - paragraph: Gigiが構築したばかりのSwordcraftデッキでランクマッチを開始。Flashstep Quickbladerなどをプレイし、序盤の盤面を固める。
+  - listitem "クリックして 01:21:00 から再生":
+    - heading "相手のMelvie, Adoring Witchによる手札強化とスペル展開" [level=3]
+    - text: 01:21:00 / ゲーム
+    - paragraph: 相手がMelvie, Adoring Witchをプレイし、Witch's New Brewで手札を増やし、複数のスペルを展開。Gigiは相手の戦略に対応を考える。
+  - listitem "クリックして 01:22:00 から再生":
+    - heading "Prim, Princess's PicnicのプレイとSuper-Evolveによるフォロワー強化" [level=3]
+    - text: 01:22:00 / ゲーム
+    - paragraph: GigiはPrim, Princess's Picnicをプレイし、手札にNonja, Silent Maidを追加。Super-Evolve効果で味方フォロワーのパワーを上げ、攻勢に出る。
+  - listitem "クリックして 01:24:00 から再生":
+    - heading "Dazzling Runeknightの登場と相手の守備強化" [level=3]
+    - text: 01:24:00 / ゲーム
+    - paragraph: 相手がDazzling Runeknightをプレイし、守りを固める。Gigiは相手の強固な盤面を崩す方法を模索する。
+  - listitem "クリックして 01:33:00 から再生":
+    - heading "Kuon, Fivefold Masterによる相手の猛攻とGigiの防御" [level=3]
+    - text: 01:33:00 / ゲーム
+    - paragraph: 相手がKuon, Fivefold Masterをプレイし、複数のShikigamiフォロワーを展開。Gigiは相手の激しい攻撃に耐えながら、反撃の機会をうかがう。
+  - listitem "クリックして 01:39:00 から再生":
+    - heading "Amalia, Luxsteel PaladinとJeno, Levin Axeraiderによるリーサル" [level=3]
+    - text: 01:39:00 / ゲーム
+    - paragraph: GigiはAmalia, Luxsteel PaladinとJeno, Levin Axeraiderをプレイし、フォロワーを強化。相手のライフを削り切り、見事ランクマッチに勝利する。
+  - listitem "クリックして 01:44:00 から再生":
+    - heading "ランクマッチ勝利とバトルパス進捗確認" [level=3]
+    - text: 01:44:00 / ゲーム
+    - paragraph: GigiはSwordcraftデッキでのランクマッチ勝利に大喜び。勝利報酬を受け取り、バトルパスのシーズン2目標達成に近づいたことを報告する。
+  - listitem "クリックして 01:46:00 から再生":
+    - heading "Fennie, Prismatic Phoenixのカードコレクション紹介" [level=3]
+    - text: 01:46:00 / ゲーム
+    - paragraph: Gigiがカードコレクション画面を開き、新しく獲得したレジェンドカード「Fennie, Prismatic Phoenix」について言及する。
+  - listitem "クリックして 01:47:00 から再生":
+    - heading "Swordcraftデッキのカード構成の見直し" [level=3]
+    - text: 01:47:00 / ゲーム
+    - paragraph: GigiはSwordcraftデッキのカード構成を調整。不要なカードを削除し、新しいカードを組み込む可能性を検討する。
+  - listitem "クリックして 01:50:00 から再生":
+    - heading "INFINITY EVOLVEDカードパック開封と新レジェンド獲得" [level=3]
+    - text: 01:50:00 / ゲーム
+    - paragraph: Gigiはルピを使って新しい「INFINITY EVOLVED」カードパックを開封。レジェンドカード「Filene, Whitefrost Bloom」を獲得し、喜びの声を上げる。
+  - listitem "クリックして 01:52:26 から再生":
+    - heading "配信終了の挨拶" [level=3]
+    - text: 01:52:26 / トーク
+    - paragraph: "Gigiが視聴者への感謝を述べ、配信を締めくくる。今回のプレイでShadowverse: Worlds Beyondの楽しさを再確認した様子。"
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#ゲーム実況 #Shadowverse Worlds Beyond #カードゲーム #VTuber #ガチャ #対戦 #戦略 #ゲーム勝利 #デッキ構築"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - 'img "【 DREAD FLATS 凶寓 】ダントツで今年一怖いホラゲー？！ふーんやってみます【音乃瀬奏】#hololiveDEV_IS #ReGLOSS"'
+  - 'heading "【 DREAD FLATS 凶寓 】ダントツで今年一怖いホラゲー？！ふーんやってみます【音乃瀬奏】#hololiveDEV_IS #ReGLOSS" [level=2]'
+  - paragraph: "配信者: 音乃瀬奏"
+  - paragraph: "配信日時: 2025-08-13 23:00:00"
+  - paragraph: "配信時間: 2時間7分30秒"
+  - paragraph: "再生数: 65,494"
+  - paragraph: "高評価数: 5,939"
+  - paragraph: 「DREAD FLATS 凶寓」のホラーゲーム実況。高額報酬で廃墟マンションに滞在する主人公が、不気味な雰囲気の中で集団失踪事件の謎を知る。夢と現実が入り混じる中で、ビーズ玉の音や不気味な人影、血文字のメッセージに追い詰められ、何度も同じ恐怖体験を繰り返す無限ループに陥る。配信者の音乃瀬奏は、次々と現れる怪奇現象や敵キャラにおびえながらも、驚きと絶叫、そして時折見せるユーモラスなコメントで視聴者を楽しませる。ゲームはプレイヤーの精神を削るようなジワジワとした恐怖で進行し、隠れる場所を見つけても敵にバレてしまう理不尽な展開や、音量調整中に敵が出現するなど、予期せぬ出来事の連続に翻弄される。最終的に、ループから脱出するための鍵となるアイテムを発見し、主人公が自らの肉体を犠牲にして悪夢を乗り越え、現実世界に戻る。しかし、事件の真相やその後の主人公の精神状態には謎が残り、ゲームは新たなDLCの存在を匂わせつつ終焉を迎える。音乃瀬奏は、このゲームが今年一番怖いと語り、恐怖と達成感が入り混じる配信となった。
+  - paragraph: 配信の雰囲気：終始ハイテンションで驚きと恐怖が入り混じる
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:01:13 から再生":
+    - heading "配信開始とホラゲータイトルでの困惑" [level=3]
+    - text: 00:01:13 / 雑談
+    - paragraph: 配信が始まり、音乃瀬奏がお盆休み中の過ごし方や、ホラーゲーム「DREAD FLATS 凶寓」のタイトル読み方に困惑し、視聴者に尋ねながら笑いと和やかな雰囲気で進む。
+  - listitem "クリックして 00:04:15 から再生":
+    - heading "150万円で廃墟マンションに3泊する企画に驚き" [level=3]
+    - text: 00:04:15 / ゲーム
+    - paragraph: ゲームの導入で、主人公が150万円の報酬と引き換えに廃墟マンションに3泊するという内容が明かされ、その高額さに驚きとツッコミを入れる。
+  - listitem "クリックして 00:04:36 から再生":
+    - heading "不気味な路地の探索とリアルなグラフィック" [level=3]
+    - text: 00:04:36 / ゲーム
+    - paragraph: ゲームが始まり、主人公が車を降りて薄暗く不気味な路地を探索し始める。リアルなグラフィックに音乃瀬奏は「おしゃれ」だと感想を漏らす。
+  - listitem "クリックして 00:07:10 から再生":
+    - heading "マンション内部へ侵入、警備室の鍵探し" [level=3]
+    - text: 00:07:10 / ゲーム
+    - paragraph: 芳江マンションの入り口に到着するも閉まっており、周辺を探索する。マンション内部に入ると警備室のドアが鍵で閉まっていることが判明し、鍵を探し始める。
+  - listitem "クリックして 00:09:20 から再生":
+    - heading "麻雀部屋での予期せぬ興奮" [level=3]
+    - text: 00:09:20 / ゲーム
+    - paragraph: 麻雀卓が2つ置かれた部屋を発見。卓上の牌が綺麗な役になっていることに気づき、ホラーゲームにもかかわらず興奮した声を上げる。
+  - listitem "クリックして 00:15:30 から再生":
+    - heading "新聞記事で集団失踪事件の謎を知る" [level=3]
+    - text: 00:15:30 / ゲーム
+    - paragraph: 部屋の探索中、過去の集団失踪事件に関する新聞記事を発見。事件の不気味な内容に触れ、真相が謎に包まれていることに恐怖を感じ始める。
+  - listitem "クリックして 00:16:00 から再生":
+    - heading "107号室での睡眠イベントと幻影の出現" [level=3]
+    - text: 00:16:00 / ゲーム
+    - paragraph: 107号室に到着し、ベッドで睡眠を取るイベントが発生。夜が明けると、おばあさんの幻影が現れ、部屋の中で奇妙な現象が起こり始め、恐怖を煽られる。
+  - listitem "クリックして 00:18:05 から再生":
+    - heading "2階探索で子供部屋を発見" [level=3]
+    - text: 00:18:05 / ゲーム
+    - paragraph: 2階へ上がると、子供部屋らしき部屋を発見。壁には可愛らしい落書きが描かれており、不気味な雰囲気の中で探索を続ける。
+  - listitem "クリックして 00:19:05 から再生":
+    - heading "ベッドの下から隠しカメラを発見" [level=3]
+    - text: 00:19:05 / ゲーム
+    - paragraph: 子供部屋を探索中、ベッドの下に隠されていたカメラを発見。カメラの録画機能を使って周囲を撮影し始める。
+  - listitem "クリックして 00:20:50 から再生":
+    - heading "カメラ映像で人影を発見し絶叫" [level=3]
+    - text: 00:20:50 / リアクション
+    - paragraph: カメラの録画映像を確認すると、部屋の中に不気味な人影が映り込んでいることに気づき、音乃瀬奏は絶叫。恐怖と驚きが最高潮に達する。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "悪夢の始まりとビーズ玉の音" [level=3]
+    - text: 00:40:00 / ゲーム
+    - paragraph: 部屋で新聞を確認中にビーズ玉の不気味な音が聞こえ始め、奏は「詰んだわ！」と絶叫する。ベッドの下を覗き込むと物音がして恐怖に怯え、悪夢へ突入する。
+  - listitem "クリックして 00:42:00 から再生":
+    - heading "暗視モードの夢の世界と人影" [level=3]
+    - text: 00:42:00 / ゲーム
+    - paragraph: 悪夢の中、暗視モードのカメラで不気味な廊下を探索。大きなビーズ玉を発見し、壁の向こうに人影が見える。
+  - listitem "クリックして 00:45:00 から再生":
+    - heading "人影の追跡と絶叫" [level=3]
+    - text: 00:45:00 / リアクション
+    - paragraph: 人影がこちらに迫る恐怖に絶叫。悪夢から覚めるが、再び現実世界でビーズ玉の音が聞こえ、ブレードが落ちるなどの怪奇現象が発生する。
+  - listitem "クリックして 00:48:00 から再生":
+    - heading "バッテリー切れとトイレへの切迫感" [level=3]
+    - text: 00:48:00 / ゲーム
+    - paragraph: カメラのバッテリーが切れ、暗闇の中での探索に。極限の恐怖からトイレに逃げ込もうとするが、中国式トイレの奇妙な形状に戸惑いを見せる。
+  - listitem "クリックして 00:50:00 から再生":
+    - heading "トイレでの怪奇現象と現実の異常" [level=3]
+    - text: 00:50:00 / ゲーム
+    - paragraph: トイレで用を足そうとするとネズミのような物音が聞こえ、動けなくなる。その時、突然画面が赤く染まり、奏は叫び声を上げる。
+  - listitem "クリックして 00:53:00 から再生":
+    - heading "無限ループの悪夢と精神的疲労" [level=3]
+    - text: 00:53:00 / ゲーム
+    - paragraph: 悪夢から覚めるが、同じ恐怖体験が何度も繰り返される無限ループに陥る。ビーズ玉の音、人影の出現、血文字のメッセージに精神的に追い詰められる。
+  - listitem "クリックして 00:55:00 から再生":
+    - heading "倒れたカメラの発見と夢の中の真実" [level=3]
+    - text: 00:55:00 / ゲーム
+    - paragraph: 夢の中で倒れたカメラを拾い、その映像から、おばあさんと子供たちがビーズ玉で遊ぶ姿が映し出された家族写真を発見する。
+  - listitem "クリックして 00:59:00 から再生":
+    - heading "キッチンでの不可解な物音と血痕" [level=3]
+    - text: 00:59:00 / ゲーム
+    - paragraph: 悪夢から覚めても、キッチンから食器が割れるような大きな物音や、水音が聞こえる。壁には血のような赤いシミが浮かび上がり、恐怖を煽られる。
+  - listitem "クリックして 01:03:00 から再生":
+    - heading "トイレでの衝撃体験と新たな追跡者" [level=3]
+    - text: 01:03:00 / ゲーム
+    - paragraph: トイレの個室からビーズ玉の音が聞こえ、奏が絶叫。逃げ出すと、画面が赤く染まり、赤い足跡が壁に現れて追いかけてくる。
+  - listitem "クリックして 01:06:00 から再生":
+    - heading "隠れる場所と見つかる恐怖" [level=3]
+    - text: 01:06:00 / ゲーム
+    - paragraph: 隠れる場所を探すが、どこに隠れても足音が近づいてくる。そして、隠れていた場所からおばあちゃんの幻影が現れ、叫び声を上げる。
+  - listitem "クリックして 01:09:00 から再生":
+    - heading "無限のループと絶望のゲームオーバー" [level=3]
+    - text: 01:09:00 / リアクション
+    - paragraph: おばあちゃんに襲われ、再びゲームオーバーとなるが、悪夢は終わらず無限ループの恐怖が続く。
+  - listitem "クリックして 01:12:00 から再生":
+    - heading "悪夢からの解放と物語の結末へ" [level=3]
+    - text: 01:12:00 / ゲーム
+    - paragraph: 何度も繰り返される悪夢の中、プレイヤーはついに老女の死体の部屋から脱出する方法を見つけ、悪夢から解放される。
+  - listitem "クリックして 01:15:00 から再生":
+    - heading "家族写真の発見と悲劇の過去" [level=3]
+    - text: 01:15:00 / ゲーム
+    - paragraph: 家族写真が隠された場所を見つけ、写真に写る子供たちがおばあちゃんとビーズ玉で遊ぶ姿から、悲しい過去が明らかになる。
+  - listitem "クリックして 01:18:00 から再生":
+    - heading "物語の終焉と新たな異変" [level=3]
+    - text: 01:18:00 / ゲーム
+    - paragraph: すべての謎が解き明かされ、物語は一旦の終わりを迎えるが、プレイヤーの周囲には不可解な現象が続き、ゲームはまだ終わっていないことを示唆する。
+  - listitem "クリックして 01:20:00 から再生":
+    - heading "隠れても追ってくるおばあちゃん" [level=3]
+    - text: 01:20:00 / ゲーム
+    - paragraph: 1階の廊下で再びおばあちゃんが出現し、逃げ回る奏。身をかがめて隠れるが、おばあちゃんが扉の隙間から覗き込んでくる。隠れること自体が無意味だと悟り、走って逃げる戦略に切り替える。
+  - listitem "クリックして 01:25:00 から再生":
+    - heading "ゲームオーバーの無限ループに絶望" [level=3]
+    - text: 01:25:00 / リアクション
+    - paragraph: おばあちゃんに追いつかれてゲームオーバー。同じ場所からゲームが再開され、ループしていることに気づいた奏は、音量を下げようとするなど精神的に追い詰められる。何度やっても隠れる場所が見つからず、おばあちゃんに捕まってしまう。
+  - listitem "クリックして 01:39:00 から再生":
+    - heading "謎の通路と鍵の発見" [level=3]
+    - text: 01:39:00 / ゲーム
+    - paragraph: ダクトのような狭い通路に入り込み、新たな道を発見。ダクトの奥の部屋に進むと、血のような痕跡があり、異様な雰囲気。さらに奥の部屋で鍵を見つけ、喜ぶ奏。
+  - listitem "クリックして 01:45:00 から再生":
+    - heading "鍵で開かない扉と新たな敵の出現" [level=3]
+    - text: 01:45:00 / ゲーム
+    - paragraph: 鍵を使って扉を開けようと試みるが、開かない。すると突然、背後から頭が異常に大きい敵が現れ、絶叫する奏。この敵が、以前の住民が白い怪物に殺された後、この白い怪物にさせられてしまった姿だということが日記から判明する。
+  - listitem "クリックして 01:50:00 から再生":
+    - heading "地下への新たな道と異形のマネキン" [level=3]
+    - text: 01:50:00 / ゲーム
+    - paragraph: 通路の奥にあったシャッターを抜けると、地下への階段を発見。地下に進むと、等間隔に並んだ異形のマネキンに囲まれた通路が広がり、恐怖を感じる。
+  - listitem "クリックして 01:55:00 から再生":
+    - heading "理不尽なゲームオーバーと謎の絵" [level=3]
+    - text: 01:55:00 / リアクション
+    - paragraph: マネキンたちに囲まれた通路を進むと、壁に謎の絵が描かれている部屋にたどり着く。絵を調べていると、突然後ろから何かが現れてゲームオーバー。音乃瀬奏は度重なる理不尽なゲームオーバーに精神が崩壊寸前になる。
+  - listitem "クリックして 01:55:00 から再生":
+    - heading "ループ脱出と「はさみ」の発見" [level=3]
+    - text: 01:55:00 / ゲーム
+    - paragraph: 同じ場面のループから抜け出すために試行錯誤する奏。最初の扉を塞いでいたロープをはさみで切ることで、次の展開へと進むことができると判明する。はさみを手に入れ、出口への希望を見出す。
+  - listitem "クリックして 02:00:00 から再生":
+    - heading "カメラのバッテリー切れと恐怖の再来" [level=3]
+    - text: 02:00:00 / リアクション
+    - paragraph: 手に入れたはさみでロープを切ると、カメラのバッテリーが切れて画面が真っ暗になる。壁に血文字のメッセージが現れ、さらに不気味な雰囲気の部屋に閉じ込められる。部屋の中央にある肖像画の目が光り出し、部屋が真っ赤に染まる中、おばあちゃんが再び現れる。
+  - listitem "クリックして 02:05:00 から再生":
+    - heading "宇宙人のような異形の敵とエンディング" [level=3]
+    - text: 02:05:00 / ゲーム
+    - paragraph: 地下へと進むと、マネキンに囲まれた通路が広がる。マネキンたちは宇宙人のような姿をしており、恐怖を煽る。通路の奥の扉を開けると、またしてもゲームオーバーになるが、今度はエンディングが流れる。しかし、エンディング後もゲームは続いており、謎が深まる。
+  - listitem "クリックして 02:00:40 から再生":
+    - heading "自殺行為の選択と実行" [level=3]
+    - text: 02:00:40 / ゲーム
+    - paragraph: ゲームの展開が進み、目玉をハンマーで潰すという衝撃的な選択肢が現れる。音乃瀬奏は悲鳴を上げながらも、恐怖に耐えかねて実行に移す。
+  - listitem "クリックして 02:01:35 から再生":
+    - heading "悪夢からの解放と報酬獲得" [level=3]
+    - text: 02:01:35 / ゲーム
+    - paragraph: 目玉を潰したことで悪夢から目覚め、主人公は廃墟マンションから無事に脱出。車で森の道を走り去る途中で「150万ドル」の報酬が確定し、音乃瀬奏は歓喜する。
+  - listitem "クリックして 02:03:00 から再生":
+    - heading "ゲーム終了と深まる謎" [level=3]
+    - text: 02:03:00 / ゲーム
+    - paragraph: 森を抜けた先に「おばあちゃん」の姿が現れ、その後画面がブラックアウト。「病院で検査した結果、ただの風邪による発熱だった」と診断されるが、「何かを経験したような気がしてならない」と主人公は語り、記憶障害や深まる謎を抱えたままゲームは「Thank you for playing」のメッセージで終わりを迎える。
+  - listitem "クリックして 02:05:20 から再生":
+    - heading "DLC情報と配信の締め" [level=3]
+    - text: 02:05:20 / お知らせ
+    - paragraph: ゲームクリア後、今後無料DLCがリリースされる予定であることが告知される。音乃瀬奏は今回のゲームを「今年一番怖い」と振り返り、視聴者への感謝や今後の活動について語り、配信を締めくくる。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#ゲーム実況 #ホラーゲーム #DREAD FLATS 凶寓 #音乃瀬奏 #恐怖 #驚き #絶叫 #雑談 #謎解き #悪夢 #ループ #精神崩壊 #怪奇現象 #理不尽 #ステルスゲーム #エンディング"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【 Minecraft 】#ホロ鯖サマーパーク ぼたんちゃんと一緒に建築！【角巻わため/ホロライブ４期生】"
+  - heading "【 Minecraft 】#ホロ鯖サマーパーク ぼたんちゃんと一緒に建築！【角巻わため/ホロライブ４期生】" [level=2]
+  - paragraph: "配信者: 角巻わため 🐏"
+  - paragraph: "配信日時: 2025-08-13 22:01:00"
+  - paragraph: "配信時間: 2時間18分29秒"
+  - paragraph: "再生数: 124,051"
+  - paragraph: "高評価数: 8,035"
+  - paragraph: Minecraftのホロライブサマーパークで、角巻わためと獅白ぼたんがアトラクション「コーヒーカップ」の建設を進める配信。レッドストーン回路やトロッコの速度調整に苦戦しつつも、協力して物理的な配置を試行錯誤する。ビーコンの設置で光の色が変わることを発見し、その壮大な光の柱に感激する。ヤギやクリーパーなど予期せぬ動物たちがアトラクションの周りに多数現れ、賑やかさを加える。コーヒーカップのベースが完成し、次にウォータースライダーの建設に取り掛かる。ウォータースライダーでは水流とレール、レバーを組み合わせてトロッコが自動で進む仕組みを構築。試行錯誤の末、トロッコが水流によって進むことに成功し、さらに長大なスライダーへと改良を進める。配信の終盤では、風真いろはを交えての会話が盛り上がり、彼女が作ったウォータースライダーのテストライドに挑戦。安全な滑走に成功し、パークの今後の展開や配信の締めくくりについて語り合った。
+  - paragraph: 配信の雰囲気：試行錯誤と発見、創造の楽しさに満ちた雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:01:54 から再生":
+    - heading "配信開始と獅白ぼたんの登場" [level=3]
+    - text: 00:01:54 / ゲーム
+    - paragraph: 配信開始画面の後、マイクラ画面に切り替わると獅白ぼたんがコタツの中に隠れており、わためが驚きとツッコミを入れます。
+  - listitem "クリックして 00:02:24 から再生":
+    - heading "ぼたんとサマーパーク建設開始" [level=3]
+    - text: 00:02:24 / ゲーム
+    - paragraph: 獅白ぼたんが特別なゲストとして登場し、ホロライブサマーパークに向けてアトラクション「コーヒーカップ」の建設を開始することを発表。わためは水着スキン、ぼたんはラーメン屋の店員スキンで登場し、互いのスキンにツッコミを入れます。
+  - listitem "クリックして 00:03:45 から再生":
+    - heading "風真いろはとラブクラブショップ" [level=3]
+    - text: 00:03:45 / ゲーム
+    - paragraph: サマーパーク内の建築物を探索中に、風真いろはの「ラブクラブショップ」を発見し、何を売っているのか、入れるのかなどについて話題が盛り上がります。風真いろはも登場し、ぼたんと並んで感想を言い合います。
+  - listitem "クリックして 00:04:55 から再生":
+    - heading "謎のラムラムショップと羊の丸焼き" [level=3]
+    - text: 00:04:55 / トーク
+    - paragraph: ラブクラブショップの話題が続く中、リスナーから「ラムラムショップ」というワードが飛び交い、羊の丸焼きに関する突然の話題で笑いが起こります。
+  - listitem "クリックして 00:05:50 から再生":
+    - heading "風真いろはのウォータースライダーとネタバレ回避" [level=3]
+    - text: 00:05:50 / ゲーム
+    - paragraph: 風真いろはが自身が制作中のウォータースライダーをチラ見せしますが、完成まで楽しみを取っておくため、全体像のネタバレは避けます。
+  - listitem "クリックして 00:06:30 から再生":
+    - heading "ホロメンによる建築物紹介と周年配信の告知" [level=3]
+    - text: 00:06:30 / トーク
+    - paragraph: サマーパーク内の他のホロメンによる建築物を紹介。わためが今日の自身の周年配信でカウントダウンを行うことを告知します。
+  - listitem "クリックして 00:07:05 から再生":
+    - heading "音符ブロックアトラクションの挑戦" [level=3]
+    - text: 00:07:05 / ゲーム
+    - paragraph: 音符ブロックとピストンを使った音楽アトラクションを発見し、ぼたんが音量調整をしながら試します。音が小さく聞こえづらいものの、2人で楽しそうにプレイします。
+  - listitem "クリックして 00:09:20 から再生":
+    - heading "音符ブロックゲームでぼたんが勝利" [level=3]
+    - text: 00:09:20 / ゲーム
+    - paragraph: 音符ブロックを踏む対戦形式のアトラクションで、ぼたんが勝利。勝利側には花火が上がる演出があり、わためは「勝ったぜ！」と喜びます。
+  - listitem "クリックして 00:11:10 から再生":
+    - heading "ラプラス・ダークネスとスナックトーク" [level=3]
+    - text: 00:11:10 / トーク
+    - paragraph: ラプラス・ダークネスがゲストとして登場し、ハート型の棒飴やポップコーン、チュロスを渡されます。チュロスの味を巡る会話で盛り上がります。
+  - listitem "クリックして 00:12:30 から再生":
+    - heading "MinecraftのSEに関する衝撃の裏話" [level=3]
+    - text: 00:12:30 / トーク
+    - paragraph: Minecraftの食べ物SE、特にゲップの音が男性の声であるという事実が明かされ、ラプラスは「知りたくなかった」とコメント。リスナーも衝撃を受けます。
+  - listitem "クリックして 00:16:00 から再生":
+    - heading "コーヒーカップの土台作り開始" [level=3]
+    - text: 00:16:00 / ゲーム
+    - paragraph: コーヒーカップのアトラクションの土台作りを開始。9x9マス、深さ3マスの穴を掘る作業に取り掛かります。
+  - listitem "クリックして 00:21:20 から再生":
+    - heading "レッドストーン回路の骨組み構築" [level=3]
+    - text: 00:21:20 / ゲーム
+    - paragraph: 掘り終えた穴の中に石ブロックを配置し、レッドストーン回路の骨組みを組んでいきます。地下での作業が続くため、リスナーも集中して見守ります。
+  - listitem "クリックして 00:23:20 から再生":
+    - heading "ホッパーとドロッパーの設置" [level=3]
+    - text: 00:23:20 / ゲーム
+    - paragraph: レッドストーン回路の上にホッパーとドロッパーを設置。これによりアイテムが自動で吸い込まれ、排出される仕組みを構築します。
+  - listitem "クリックして 00:24:20 から再生":
+    - heading "トロッコのレール設置と試運転" [level=3]
+    - text: 00:24:20 / ゲーム
+    - paragraph: 金ブロックの上にレールを敷き、トロッコが自動で周回するよう試運転を行います。ピカチュウの声のようなSEが聞こえ、リスナーも盛り上がります。
+  - listitem "クリックして 00:25:20 から再生":
+    - heading "トロッコの速度調整と改良" [level=3]
+    - text: 00:25:20 / ゲーム
+    - paragraph: トロッコの速度が速すぎるため、パワーレールの数を減らす、またはホッパーを調整することで速度調整が可能か検討。コケブロックや羊毛を使って装飾も施します。
+  - listitem "クリックして 00:32:20 から再生":
+    - heading "トロッコが自動で動くようになった！" [level=3]
+    - text: 00:32:20 / ゲーム
+    - paragraph: 試行錯誤の末、トロッコが自動で周回するようになり、リスナーからも拍手が送られます。わためは「すごい！めっちゃ嬉しい！」と喜びを表現します。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "トロッコの速度調整に試行錯誤" [level=3]
+    - text: 00:40:00 / ゲーム
+    - paragraph: パワードレールやトーチの配置を様々に変えて速度と停止を試みる。様々な色の羊毛を配置して見た目を試すが、速度調整のため物理的にレールを減らす検討。中央のトーチを撤去するがうまくいかず、再度レールの物理的調整に戻る。
+  - listitem "クリックして 00:40:51 から再生":
+    - heading "トロッコの自動周回と停止の問題" [level=3]
+    - text: 00:40:51 / ゲーム
+    - paragraph: レールの配置調整によりトロッコの自動周回には成功したが、停止させる方法がない問題が発生。物理的にレールを減らす方法が最適と判断し、レールの配置を調整し、試行錯誤を続ける。
+  - listitem "クリックして 00:42:58 から再生":
+    - heading "ビーコンの設置と光の発見" [level=3]
+    - text: 00:42:58 / ゲーム
+    - paragraph: コーヒーカップの動力源としてビーコンを設置しようとする。ビーコンが光らない問題が発生し、ピラミッド状の土台が必要なことを発見。金ブロックを積むことで光が伸び、その壮大な光の柱にわためは感激する。
+  - listitem "クリックして 00:48:18 から再生":
+    - heading "ビーコンの光の色の変化" [level=3]
+    - text: 00:48:18 / ゲーム
+    - paragraph: ビーコンに色を付けるために色付きガラスを置くことを試す。ガラスブロックをビーコンの上に置くと光の色が変わることを発見し、ピンクや黄色の光を出す。ヤギが鳴いたり、クリーパーが多数発生したりして賑やかになる。
+  - listitem "クリックして 00:52:26 から再生":
+    - heading "ビーコン周りの装飾とクリーパーの登場" [level=3]
+    - text: 00:52:26 / ゲーム
+    - paragraph: ビーコンの光の色を多様に変化させるため、様々な色のガラスブロックを置いて光の変化を楽しむ。その周りには大量のクリーパーが出現し、ヤギも登場するなど、賑やかな雰囲気となる。
+  - listitem "クリックして 01:01:34 から再生":
+    - heading "動物たちのアトラクションへの参加" [level=3]
+    - text: 01:01:34 / ゲーム
+    - paragraph: ビーコンの周りでヤギやクリーパーが動き回り、アトラクションに乗ったような光景が広がる。動物たちもコーヒーカップに参加しているかのようだ。
+  - listitem "クリックして 01:07:44 から再生":
+    - heading "ヤギがトロッコに乗る" [level=3]
+    - text: 01:07:44 / ゲーム
+    - paragraph: ヤギがトロッコに乗って動き出す。可愛らしい姿にわためも癒やされる。
+  - listitem "クリックして 01:14:04 から再生":
+    - heading "コーヒーカップのベース完成" [level=3]
+    - text: 01:14:04 / ゲーム
+    - paragraph: コーヒーカップのベースが完成し、様々な色の羊毛ブロックで装飾される。カラフルな見た目になり、遊園地らしさが際立つ。
+  - listitem "クリックして 01:20:28 から再生":
+    - heading "カカオ豆を育成？" [level=3]
+    - text: 01:20:28 / トーク
+    - paragraph: ぼたんがコーヒーカップの周りにカカオ豆を植えることを提案。わためがロイズのチョコレート工場に行った時の話や、生チョコの賞味期限が短いという話題で盛り上がる。
+  - listitem "クリックして 01:23:48 から再生":
+    - heading "ウォータースライダーの仕組み作り開始" [level=3]
+    - text: 01:23:48 / ゲーム
+    - paragraph: ショウの建物の横にウォータースライダーを作成するため、ソウルサンドとレバーを使って水流とトロッコの仕組みを作り始める。
+  - listitem "クリックして 01:26:21 から再生":
+    - heading "水流エレベーターでトロッコが動いた！" [level=3]
+    - text: 01:26:21 / ゲーム
+    - paragraph: 水流とレバーでトロッコがスムーズに動き出すことに成功。わためとぼたんの歓声が上がる。
+  - listitem "クリックして 01:27:54 から再生":
+    - heading "トロッコが遅い問題の解決" [level=3]
+    - text: 01:27:54 / ゲーム
+    - paragraph: 水流にレバーを設置し、ONにすることでトロッコの速度が向上することが判明。長大なウォータースライダーへの拡張に向けて調整を進める。
+  - listitem "クリックして 01:30:42 から再生":
+    - heading "メリーゴーランドの動物が動かない" [level=3]
+    - text: 01:30:42 / ゲーム
+    - paragraph: メリーゴーランドにラマを乗せてみるが、全く動かず苦戦。リードを使っても動かせないことが判明する。
+  - listitem "クリックして 01:34:20 から再生":
+    - heading "水が流れ出さないように工夫" [level=3]
+    - text: 01:34:20 / ゲーム
+    - paragraph: メリーゴーランドの水が流れ出さないようにトラップドアを設置し、水の流れを調整する。
+  - listitem "クリックして 01:38:30 から再生":
+    - heading "わためとぼたんが会話" [level=3]
+    - text: 01:38:30 / トーク
+    - paragraph: わためとぼたんがタクシーの運転手から聞いた話で盛り上がる。
+  - listitem "クリックして 01:43:00 から再生":
+    - heading "ウォータースライダー完成！" [level=3]
+    - text: 01:43:00 / ゲーム
+    - paragraph: ウォータースライダーが完成し、ぼたんが「ヤバい」と興奮。わためも「すごい！」と歓声を上げる。
+  - listitem "クリックして 01:44:40 から再生":
+    - heading "メリーゴーランドの装飾" [level=3]
+    - text: 01:44:40 / ゲーム
+    - paragraph: メリーゴーランドの装飾に取り掛かる。花や植物を配置し、華やかな雰囲気を作る。
+  - listitem "クリックして 01:48:29 から再生":
+    - heading "休憩と会話" [level=3]
+    - text: 01:48:29 / トーク
+    - paragraph: 残りの時間で休憩を取ることに。お互いのクリエイティブモードの進捗を報告し合う。
+  - listitem "クリックして 02:00:00 から再生":
+    - heading "周年お祝いと4期生の話" [level=3]
+    - text: 02:00:00 / トーク
+    - paragraph: わためが視聴者からの周年お祝いコメントに感謝し、獅白ぼたんと共に4期生の活動期間について話します。
+  - listitem "クリックして 02:04:55 から再生":
+    - heading "風真いろはと野生のポルカ先輩（ラマ）の話題" [level=3]
+    - text: 02:04:55 / トーク
+    - paragraph: 風真いろはが、自身のウォータースライダーの近くに野生のラマ（ラプラス・ダークネス）がいることを報告。ラプラス・ダークネスの「焼きショー」での出来事や、ラマをサンドバッグにする場所を作っているという話で盛り上がります。
+  - listitem "クリックして 02:09:50 から再生":
+    - heading "風真いろはのウォータースライダー試乗開始" [level=3]
+    - text: 02:09:50 / ゲーム
+    - paragraph: 風真いろはの作ったウォータースライダーをわためとぼたんが試乗。ボートに乗り込み、水流エレベーターで上昇し、安全に滑走を楽しみます。景色も良く、乗り心地に感動します。
+  - listitem "クリックして 02:13:30 から再生":
+    - heading "サマーパーク今後の計画と配信終了" [level=3]
+    - text: 02:13:30 / トーク
+    - paragraph: ウォータースライダーの感想を述べつつ、今後のサマーパークの計画について話します。残りの建物や装飾を完成させる予定であることを語り、配信の時間が迫る中、視聴者への感謝の挨拶を述べ、配信を締めくくりました。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#マインクラフト #ホロライブ #建築 #コラボ #雑談 #ゲーム実況 #アトラクション #獅白ぼたん #風真いろは #ラプラス・ダークネス #レッドストーン回路 #ビーコン #ウォータースライダー #メリーゴーランド #ラマ #動物 #装飾"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "世界で一番のアイドル / 天音かなた(official)"
+  - heading "世界で一番のアイドル / 天音かなた(official)" [level=2]
+  - paragraph: "配信者: 天音かなた 💫"
+  - paragraph: "配信日時: 2025-08-13 21:00:00"
+  - paragraph: "配信時間: 3分34秒"
+  - paragraph: "再生数: 96,007"
+  - paragraph: "高評価数: 16,194"
+  - paragraph: 天音かなたさんの楽曲「世界で一番のアイドル」のミュージックビデオです。アイドルとしての光と影、そして成長の軌跡が描かれています。ファンとの出会いや感謝、活動の中で経験する挫折、そしてそれらを乗り越えファンと共に未来へ進む決意が、煌びやかなステージと日常の風景を交えながら表現されており、ファンへの深い愛が伝わる感動的な内容です。
+  - paragraph: 配信の雰囲気：感動的で希望に満ちているが、時に苦悩も感じさせる
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:00:08 から再生":
+    - heading "ライブステージに登場" [level=3]
+    - text: 00:00:08 / MV
+    - paragraph: 豪華なステージに光が差し込み、天音かなたが煌びやかなアイドル衣装で登場し、観客に手を振ります。
+  - listitem "クリックして 00:00:19 から再生":
+    - heading "楽曲「世界で一番のアイドル」歌唱開始" [level=3]
+    - text: 00:00:19 / 歌
+    - paragraph: 「思い出して 出会った日のこと」「手を取って僕らの旅が始まった」と、ファンとの出会いや活動の始まりを歌います。
+  - listitem "クリックして 00:00:39 から再生":
+    - heading "PP天使Tシャツでの応援シーン" [level=3]
+    - text: 00:00:39 / MV
+    - paragraph: 「喜ぶ声が嬉しくて」という歌詞と共に、PP天使Tシャツ姿でペンライトを振る天音かなたが映し出されます。
+  - listitem "クリックして 00:01:22 から再生":
+    - heading "舞台裏と日常の描写" [level=3]
+    - text: 00:01:22 / MV
+    - paragraph: アイドル衣装から普段着に着替え、控え室や屋上で過去を振り返り、自問自答する天音かなたの素顔が描かれます。
+  - listitem "クリックして 00:02:20 から再生":
+    - heading "苦悩と葛藤" [level=3]
+    - text: 00:02:20 / MV
+    - paragraph: ステージ奥で闇に包まれ、「自信なんかない 不安ばっかだ」「もうやめようって泣いた日もあった」とアイドルとしての苦悩を表現します。
+  - listitem "クリックして 00:02:43 から再生":
+    - heading "ファンへの感謝と再出発" [level=3]
+    - text: 00:02:43 / 歌
+    - paragraph: 「みんなの声が」という歌詞でファンからの声援が力となり、「今までで一番諦めたくないの」「最強のアイドル」と決意を新たにします。
+  - listitem "クリックして 00:03:00 から再生":
+    - heading "クライマックス：未来への歌唱" [level=3]
+    - text: 00:03:00 / 歌
+    - paragraph: 再び光輝くステージで、「世界で一番のアイドル」としてファンへの感謝と大きな愛を込めて歌い上げます。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#歌 #MV #音楽 #天音かなた #ホロライブ #アイドル #感動 #成長 #感謝"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - 'img "【 #桃鈴ねね5周年 】はじめての逆凸に挑戦だぁああああ！！告知あり🍑【 桃鈴ねね / hololive 】"'
+  - 'heading "【 #桃鈴ねね5周年 】はじめての逆凸に挑戦だぁああああ！！告知あり🍑【 桃鈴ねね / hololive 】" [level=2]'
+  - paragraph: "配信者: 桃鈴ねね"
+  - paragraph: "配信日時: 2025-08-13 21:00:00"
+  - paragraph: "配信時間: 1時間10分34秒"
+  - paragraph: "再生数: 279,296"
+  - paragraph: "高評価数: 17,046"
+  - paragraph: 桃鈴ねねの活動5周年を記念した配信で、初めての「逆凸」に挑戦する企画。コメント欄のトラブルを乗り越え、緊張しながらも友人や後輩たち（雪花ラミィ、獅白ぼたん、不和湊もこ、夜空メル、常闇トワ、兎田ぺこら）との楽しい交流を続けた。活動5周年記念グッズの紹介や新曲「カラカラ！」のリリース告知など、盛りだくさんの内容でファンを喜ばせた。視聴者やゲストからの温かい応援メッセージに感動し、感謝を伝える笑顔と感動に満ちた配信となった。
+  - paragraph: 配信の雰囲気：緊張しつつも賑やかで感動的な雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:01:43 から再生":
+    - heading "5周年と初の逆凸企画発表" [level=3]
+    - text: 00:01:43 / トーク
+    - paragraph: 配信が始まり、桃鈴ねねが5周年を迎えたことを報告。そして、初めての逆凸企画に挑戦すると発表し、その緊張を語った。
+  - listitem "クリックして 00:02:16 から再生":
+    - heading "逆凸のやり方と相手の相談" [level=3]
+    - text: 00:02:16 / トーク
+    - paragraph: 視聴者と共に逆凸の具体的な方法や誰に電話をかけるかを検討。アポなしでの突撃か、事前の連絡が必要かなど、不安な気持ちを吐露した。
+  - listitem "クリックして 00:08:37 から再生":
+    - heading "ラミィに電話、5周年のお祝い" [level=3]
+    - text: 00:08:37 / トーク
+    - paragraph: 凸先の相手としてラミィの名前が挙がり、電話をかける。ラミィが電話に出て、「ねね、5周年おめでとう」と直接お祝いの言葉を贈った。
+  - listitem "クリックして 00:10:20 から再生":
+    - heading "ラミィとのトークテーマ募集" [level=3]
+    - text: 00:10:20 / トーク
+    - paragraph: ラミィとの会話中に、視聴者からトークテーマを募集。目玉焼きにかけるもの、ねねのいいところ、夏休みの思い出などが候補に挙がった。
+  - listitem "クリックして 00:16:16 から再生":
+    - heading "獅白ぼたんと通話開始" [level=3]
+    - text: 00:16:16 / トーク
+    - paragraph: ラミィとの通話が終わり、次に獅白ぼたんに電話をかける。ぼたんからねねへの愛のこもった祝福の言葉と褒め言葉が贈られた。
+  - listitem "クリックして 00:20:20 から再生":
+    - heading "獅白ぼたんとのトークテーマ" [level=3]
+    - text: 00:20:20 / トーク
+    - paragraph: 獅白ぼたんとのトークテーマとして「ねねとデートするならどこに行きたいか」について話し、具体的なデートプランを提案された。
+  - listitem "クリックして 00:22:15 から再生":
+    - heading "不和湊もこと通話開始" [level=3]
+    - text: 00:22:15 / トーク
+    - paragraph: 獅白ぼたんとの通話が終わり、不和湊もこと通話を開始。もこからねねのパンツの色について言及され、ねねが驚き戸惑う一幕も。
+  - listitem "クリックして 00:25:35 から再生":
+    - heading "不和湊もことのトークテーマ" [level=3]
+    - text: 00:25:35 / トーク
+    - paragraph: 不和湊もことのトークテーマは「夏休みよくやっていたこと」。もこの意外な夏休みの過ごし方や過去の創作活動が明かされた。
+  - listitem "クリックして 00:32:20 から再生":
+    - heading "3人との逆凸成功と喜び" [level=3]
+    - text: 00:32:20 / トーク
+    - paragraph: ラミィ、獅白ぼたん、不和湊もこの3人との逆凸を成功させ、ねねは喜びを爆発させた。「奇跡が起きた！」と感動を語った。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "コメント欄のトラブルと復旧" [level=3]
+    - text: 00:40:00 / リアクション
+    - paragraph: 配信中にコメント欄が固まるトラブルが発生。ねねちが困惑する中、視聴者のコメントが回復し、喜びの瞬間を迎えた。
+  - listitem "クリックして 00:42:30 から再生":
+    - heading "5周年記念グッズ「活動5周年記念フルセット」発表" [level=3]
+    - text: 00:42:30 / お知らせ
+    - paragraph: 桃鈴ねねの活動5周年を記念したフルセットグッズの販売が告知された。アクリルカードスタンド、痛バッグ、ねっ子のぬいぐるみキャップ、ボイスの4点セットで、本日20時10分から販売開始される。
+  - listitem "クリックして 00:44:47 から再生":
+    - heading "アクリルカードスタンド＆カードスリーブの紹介" [level=3]
+    - text: 00:44:47 / お知らせ
+    - paragraph: ホロライブOFFICIAL CARD GAMEのカードが飾れるアクリルスタンドと、60枚入りのカードスリーブについて詳細が説明された。カードがない場合でも裏面にねねちのイラストがある。
+  - listitem "クリックして 00:45:40 から再生":
+    - heading "ねねちの痛バッグの紹介" [level=3]
+    - text: 00:45:40 / お知らせ
+    - paragraph: ねねちの顔がデザインされた痛バッグが紹介された。口の部分が透明になっており、グッズを入れて見せられる。ショルダーを付け替えれば2WAYで使用可能。
+  - listitem "クリックして 00:47:02 から再生":
+    - heading "ねっ子のぬいぐるみキャップの紹介" [level=3]
+    - text: 00:47:02 / お知らせ
+    - paragraph: ねっ子のぬいぐるみキャップは、頭部だけでなく体もついたユニークなデザイン。蒸れずに着用できるキャップ仕様で、可愛らしい姿を披露した。
+  - listitem "クリックして 00:53:00 から再生":
+    - heading "ビビ（夜空メル）からのメッセージとお祝いトーク" [level=3]
+    - text: 00:53:00 / トーク
+    - paragraph: 夜空メルからの突然のメッセージにねねちは大喜び。目玉焼きにかけるものや、ねねちのいいところなど、お互いを褒め合う温かいトークが繰り広げられた。
+  - listitem "クリックして 00:54:39 から再生":
+    - heading "新曲「カラカラ！」リリース告知" [level=3]
+    - text: 00:54:39 / お知らせ
+    - paragraph: 桃鈴ねねの新曲「カラカラ！」が本日12時から各種音楽配信サイトでリリースされることが発表された。爽やかで青春をイメージした夏曲とのこと。
+  - listitem "クリックして 00:57:44 から再生":
+    - heading "トワ様（常闇トワ）からのメッセージとトーク" [level=3]
+    - text: 00:57:44 / トーク
+    - paragraph: 常闇トワからのメッセージが届き、ねねちは興奮状態に。目玉焼きにかけるものや、ねねちの魅力、強く生きるためのアドバイスなど、笑いの絶えないトークが展開された。
+  - listitem "クリックして 01:04:00 から再生":
+    - heading "ぺこら（兎田ぺこら）からのメッセージとトーク" [level=3]
+    - text: 01:04:00 / トーク
+    - paragraph: 兎田ぺこらからのメッセージが届き、ねねちは大興奮。目玉焼きにかけるもの、ねねちのいいところ、脱獄ゲームなど、お互いを褒め合いながらも笑いの絶えないトークを繰り広げた。
+  - listitem "クリックして 01:09:50 から再生":
+    - heading "配信エンディング" [level=3]
+    - text: 01:09:50 / トーク
+    - paragraph: ねねちが5周年のお祝いと、逆凸に挑戦したことへの感謝を視聴者やゲストに伝える。6年目への意気込みを語り、温かい雰囲気で配信を締めくくった。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#雑談 #逆凸 #記念配信 #ホロライブ #桃鈴ねね #ゲスト #ラミィ #獅白ぼたん #不和湊もこ #夜空メル #常闇トワ #兎田ぺこら #グッズ紹介 #新曲"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【白猫プロジェクト】ストーリーとかみんなで協力して遊ぼう！コラボ終了間際！締めくくり配信𓃠【不知火フレア/ホロライブ】"
+  - heading "【白猫プロジェクト】ストーリーとかみんなで協力して遊ぼう！コラボ終了間際！締めくくり配信𓃠【不知火フレア/ホロライブ】" [level=2]
+  - paragraph: "配信者: 不知火フレア 🔥"
+  - paragraph: "配信日時: 2025-08-13 20:01:00"
+  - paragraph: "配信時間: 1時間2分9秒"
+  - paragraph: "再生数: 41,397"
+  - paragraph: "高評価数: 4,597"
+  - paragraph: 不知火フレアが白猫プロジェクトのホロライブコラボ終了間際の締めくくり配信を実施。配信序盤の音声トラブル解決後、コラボイベントやタレントプロデュース衣装について説明し、リスナーと協力してコラボストーリーを進めた。メインコンテンツでは、協力バトルを3回実施し、参加者との連携を楽しみながらスムーズにクエストをクリア。また、白猫プロジェクト運営からホロライブメンバーの新規描き下ろしイラストがサプライズ発表され、感謝の言葉を述べた。最後には自身の新曲「きらめきミライ」のMVを一部公開し、ファンへの感謝と今後の活動への意気込みを語り、盛況のうちに配信を終えた。
+  - paragraph: 配信の雰囲気：音声トラブル時は一時不安そうな雰囲気だったが、解決後は終始和やかで楽しそうな雰囲気。サプライズイラストには喜びと感謝が見られ、新曲の紹介では情熱的な一面も覗かせた。
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:02:16 から再生":
+    - heading "配信開始とホロライブコラボについて" [level=3]
+    - text: 00:02:16 / トーク
+    - paragraph: 不知火フレアが挨拶し、白猫プロジェクトのホロライブコラボ配信であることを説明。
+  - listitem "クリックして 00:02:57 から再生":
+    - heading "音声トラブルの確認と調整" [level=3]
+    - text: 00:02:57 / トーク
+    - paragraph: 配信中に音声の不調（ゲーム音と声のバランス、プツプツ音）が発生し、不知火フレアが確認と調整を行う。
+  - listitem "クリックして 00:03:54 から再生":
+    - heading "音声トラブル解決" [level=3]
+    - text: 00:03:54 / トーク
+    - paragraph: スマホのカバーを外して差し直すことで音声が正常に戻ったことを報告。
+  - listitem "クリックして 00:04:22 から再生":
+    - heading "コラボ終了間近の告知と配信の趣旨説明" [level=3]
+    - text: 00:04:22 / トーク
+    - paragraph: 音声が正常に戻り、コラボ終了が間近であることを再度告知。今回の配信が「おかわりの配信」であり、前回見られなかったストーリーや協力クエストをリスナーと一緒にプレイしたいと話す。
+  - listitem "クリックして 00:06:49 から再生":
+    - heading "白猫プロジェクトとホロライブコラボ第2弾の詳細説明" [level=3]
+    - text: 00:06:49 / お知らせ
+    - paragraph: 白猫プロジェクトのゲーム紹介とホロライブコラボ第2弾の詳細を説明。イベントで4人のコラボキャラがゲットできるガチャが8月15日まで開催中であることを再度伝える。
+  - listitem "クリックして 00:08:02 から再生":
+    - heading "タレントプロデュース衣装の紹介とLive2Dアバター調整" [level=3]
+    - text: 00:08:02 / トーク
+    - paragraph: タレントプロデュース衣装について紹介。ホロライブメンバーが着ているオリジナル衣装について説明するが、Live2Dアバターが重なっているため見づらいと気づき、非表示にする調整を行う。
+  - listitem "クリックして 00:09:18 から再生":
+    - heading "ストーリークエスト「フートン島・西の森」マップ表示" [level=3]
+    - text: 00:09:18 / ゲーム
+    - paragraph: 「フートン島・西の森」のマップ画面を表示し、ストーリークエストを進めることを説明。プレイヤーが既にコンプリート済みであることを示唆しつつ、改めてストーリーを追っていくと話す。
+  - listitem "クリックして 00:10:20 から再生":
+    - heading "ハンディキャップ（難易度調整）機能の説明" [level=3]
+    - text: 00:10:20 / ゲーム
+    - paragraph: ゲームのハンディキャップ設定について説明。獲得ポイントが増えるため、難易度を上げてプレイできることを紹介する。
+  - listitem "クリックして 00:10:57 から再生":
+    - heading "ストーリークエスト「どこから来た？」「は！ここどこ！？」開始" [level=3]
+    - text: 00:10:57 / ゲーム
+    - paragraph: ストーリークエストを開始。ホロライブメンバー（ポルカ、ミコ、ノエル、フレア）が登場し、見慣れない場所（白猫プロジェクトの世界）にいることに困惑する会話が展開される。
+  - listitem "クリックして 00:12:13 から再生":
+    - heading "冒険中に登場した星タヌキの可愛さに言及" [level=3]
+    - text: 00:12:13 / ゲーム
+    - paragraph: ストーリーを進める中で、冒険中に登場した星タヌキの可愛さに触れる。ミコが星タヌキの可愛さに言及し、ポルカもどこかで見たことがあるような反応を示す。
+  - listitem "クリックして 00:13:18 から再生":
+    - heading "異世界転移した状況の説明" [level=3]
+    - text: 00:13:18 / ゲーム
+    - paragraph: フレアが状況を整理し、自分たちが白猫プロジェクトの世界に異世界転移してしまったことをメンバーに説明する。
+  - listitem "クリックして 00:13:54 から再生":
+    - heading "ミコが「ノリツッコミ」を担当することに" [level=3]
+    - text: 00:13:54 / トーク
+    - paragraph: ポルカが「ファシリテーター」という言葉に戸惑うノエルに対して、ミコが「ノリツッコミ」をすると発言し、今回の会話におけるミコの役割が決定する。
+  - listitem "クリックして 00:14:25 から再生":
+    - heading "過去の経験からの楽観的なフレア" [level=3]
+    - text: 00:14:25 / トーク
+    - paragraph: フレアが過去にも同じような現象が起きて元の世界に戻れたことを話し、今回も大丈夫だろうと楽観的な姿勢を見せる。
+  - listitem "クリックして 00:19:42 から再生":
+    - heading "カトラが精霊の力について説明" [level=3]
+    - text: 00:19:42 / ゲーム
+    - paragraph: カトラが精霊の力について説明。精霊の力を取り戻せば元の世界に戻れる可能性があると示唆する。
+  - listitem "クリックして 00:30:00 から再生":
+    - heading "ミコが魔王軍との戦いに意欲" [level=3]
+    - text: 00:30:00 / ゲーム
+    - paragraph: ミコが魔王軍と戦うダンジョン作成に興味を示し、カトラがダンジョンは作れるが魔王は作れないと語る。
+  - listitem "クリックして 00:30:40 から再生":
+    - heading "島おこしのための企画会議開始" [level=3]
+    - text: 00:30:40 / ゲーム
+    - paragraph: 人手不足の問題が解決したことで、ポルカが企画会議を始めることを宣言。島おこしに向けて具体的なアイデアを出し合う展開となる。
+  - listitem "クリックして 00:31:28 から再生":
+    - heading "観光名所のアイデア提案" [level=3]
+    - text: 00:31:28 / game
+    - paragraph: フレアが観光名所や特産品を動画で紹介することを提案し、ミコが屋台を作ることを提案する。
+  - listitem "クリックして 00:32:40 から再生":
+    - heading "島おこしの最終目標発表" [level=3]
+    - text: 00:32:40 / game
+    - paragraph: 最終的に島おこしを進めることで精霊の力を取り戻し、元の世界に戻ることを目標にすることを共有する。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "ストーリー進行：島おこし動画配信の方向性確定" [level=3]
+    - text: 00:40:00 / ゲーム
+    - paragraph: 物語が進行し、フートン島の島おこしと動画配信チャンネルの方向性が決まったことが語られる。
+  - listitem "クリックして 00:40:09 から再生":
+    - heading "観光名所としてオリジナルダンジョンを作る" [level=3]
+    - text: 00:40:09 / ゲーム
+    - paragraph: ポルカが島おこしの最初の計画として、観光名所となるオリジナルダンジョンを作ることを発表。
+  - listitem "クリックして 00:40:18 から再生":
+    - heading "お土産屋でダブルチーズバーガーとたい焼きを提供" [level=3]
+    - text: 00:40:18 / ゲーム
+    - paragraph: ミコが島のお土産屋として、自身が好きなダブルチーズバーガーとたい焼き屋を作りたいと提案する。
+  - listitem "クリックして 00:40:25 から再生":
+    - heading "精霊の神殿を歴史的な観光名所に" [level=3]
+    - text: 00:40:25 / ゲーム
+    - paragraph: ノエルが島の精霊の神殿を補修し、歴史的な観光名所にすることで島おこしに貢献すると提案。
+  - listitem "クリックして 00:40:36 から再生":
+    - heading "島おこしを動画で発信する応援チャンネル計画" [level=3]
+    - text: 00:40:36 / ゲーム
+    - paragraph: フレアが島おこしの作業を動画に収め、「島おこし応援チャンネル」として世に発信することを提案する。
+  - listitem "クリックして 00:40:46 から再生":
+    - heading "ミコのお土産屋メニューへの質問" [level=3]
+    - text: 00:40:46 / ゲーム
+    - paragraph: カトラがミコに、お土産屋でダブルチーズバーガーとたい焼きを出す理由を尋ねると、ミコは「ミコが好きなからです！」と回答。
+  - listitem "クリックして 00:41:00 から再生":
+    - heading "新キャラクター「セルピナ」と「ソフィ」登場" [level=3]
+    - text: 00:41:00 / ゲーム
+    - paragraph: カトラがカニカマ屋も作ってほしいとリクエストし、ミコが受け入れる。続いて新キャラクターのセルピナとソフィが登場する。
+  - listitem "クリックして 00:41:26 から再生":
+    - heading "セルピナとソフィの紹介と協力バトル参加ルール" [level=3]
+    - text: 00:41:26 / ゲーム
+    - paragraph: キャトラがセルピナの肩書きについてツッコミを入れ、ノエルはセルピナの出現を喜ぶ。その後、フレアは協力バトルを開始するにあたり、ホロライブコラボキャラ以外の使用制限を説明。
+  - listitem "クリックして 00:41:41 から再生":
+    - heading "協力バトル（1回目）開始" [level=3]
+    - text: 00:41:41 / ゲーム
+    - paragraph: 配信者（フレア）とリスナー3人（シュガー、モコ、ば〜ちゃるふる〜つ）による協力バトルが始まる。
+  - listitem "クリックして 00:42:16 から再生":
+    - heading "協力バトル1回目クリアと感想" [level=3]
+    - text: 00:42:16 / ゲーム
+    - paragraph: スコアアタック形式のクエストを素早くクリアし、配信者はスムーズな連携を評価する。
+  - listitem "クリックして 00:42:40 から再生":
+    - heading "協力バトル（2回目）開始" [level=3]
+    - text: 00:42:40 / ゲーム
+    - paragraph: 配信者とリスナー3人（シン、み〜ももふふ、ライトユーザー）による2回目の協力バトルが始まる。
+  - listitem "クリックして 00:43:52 から再生":
+    - heading "協力バトル2回目クリアと感想" [level=3]
+    - text: 00:43:52 / ゲーム
+    - paragraph: 協力バトル2回目をクリアし、配信者はプレイヤーたちの早さに驚きと喜びを表す。
+  - listitem "クリックして 00:44:15 から再生":
+    - heading "協力バトル（3回目）開始" [level=3]
+    - text: 00:44:15 / ゲーム
+    - paragraph: 配信者とリスナー3人（サリエル、テンテル、リンゴ）による3回目の協力バトルが始まる。
+  - listitem "クリックして 00:45:04 から再生":
+    - heading "協力バトル3回目クリアと感想" [level=3]
+    - text: 00:45:04 / ゲーム
+    - paragraph: 協力バトル3回目を驚異的な速さでクリアし、配信者はその速さに感動する。
+  - listitem "クリックして 00:45:20 から再生":
+    - heading "白猫プロジェクト運営からのサプライズイラスト発表" [level=3]
+    - text: 00:45:20 / お知らせ
+    - paragraph: 白猫プロジェクトの運営から、ホロライブメンバーの新規描き下ろしイラストがサプライズでプレゼントされたことが発表される。
+  - listitem "クリックして 00:45:51 から再生":
+    - heading "ホロライブメンバーの新規描き下ろしイラストお披露目" [level=3]
+    - text: 00:45:51 / お知らせ
+    - paragraph: 白猫プロジェクトのために描き下ろされたホロライブメンバー4人のイラストが画面いっぱいに表示される。配信者はそのクオリティに感謝と喜びを表す。
+  - listitem "クリックして 00:48:00 から再生":
+    - heading "配信終了の挨拶と白猫プロジェクトコラボイベント紹介" [level=3]
+    - text: 00:48:00 / トーク
+    - paragraph: 不知火フレアが配信終了の挨拶を行い、リスナーや協力プレイ参加者へ感謝を述べる。また、白猫プロジェクトのホロライブコラボが8月15日(金)15:59まで開催中であること、QRコードから特別クエストに参加できることを改めて告知。
+  - listitem "クリックして 00:49:50 から再生":
+    - heading "不知火フレアの新曲「きらめきミライ」MVの一部公開" [level=3]
+    - text: 00:49:50 / 歌
+    - paragraph: 配信最後に不知火フレアの新曲「きらめきミライ」のミュージックビデオが一部公開され、可愛らしい振付で踊るフレアの姿が映し出される。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#白猫プロジェクト #ホロライブ #不知火フレア #ゲーム実況 #協力プレイ #ストーリー #ガチャ #コラボイベント #VTuber #アクションRPG #新曲 #MV #イラスト #サプライズ"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【#生スバル】夏休み特番！！！スバルの小屋！！！～ゲスト：サロメちゃん～【ホロライブ/大空スバル】"
+  - heading "【#生スバル】夏休み特番！！！スバルの小屋！！！～ゲスト：サロメちゃん～【ホロライブ/大空スバル】" [level=2]
+  - paragraph: "配信者: 大空スバル 🚑"
+  - paragraph: "配信日時: 2025-08-13 20:00:00"
+  - paragraph: "配信時間: 59分7秒"
+  - paragraph: "再生数: 369,957"
+  - paragraph: "高評価数: 21,804"
+  - paragraph: 夏休み特別企画として、大空スバルが壱百満天原サロメをゲストに招いた「スバルの小屋」が開催されました。二人の出会いのきっかけやカフェ巡りのエピソードが語られた前半に続き、後半では現在流行しているものや、サロメ様の知られざる秘密、そして個人的なフェチズムに至るまで、ルーレット形式で深掘りトークが展開されました。予測不能な展開や意外な一面が次々と明かされ、終始和やかで爆笑の連続となるエピソードが満載の、二人の仲の良さが際立つ配信となっています。
+  - paragraph: 配信の雰囲気：終始和やかな雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:04:00 から再生":
+    - heading "開演＆ゲスト挨拶" [level=3]
+    - text: 00:04:00 / トーク
+    - paragraph: 大空スバルが「スバルの小屋」を開演し、ゲストの壱百満天原サロメを紹介。スバルがサロメの美しい声を絶賛し、サロメが自己紹介と挨拶を行いました。
+  - listitem "クリックして 00:04:50 から再生":
+    - heading "音量バランス調整" [level=3]
+    - text: 00:04:50 / トーク
+    - paragraph: 配信中の音量バランスについて調整。スバルがサロメの美しい声がマイクを通して部屋中に響き渡っていると驚きを表現しました。
+  - listitem "クリックして 00:07:30 から再生":
+    - heading "コラボのきっかけ探し" [level=3]
+    - text: 00:07:30 / トーク
+    - paragraph: 二人がなぜコラボすることになったのかの経緯を話そうとしますが、お互いに記憶が曖昧で笑いが起きました。
+  - listitem "クリックして 00:08:20 から再生":
+    - heading "ストリートファイター6コラボが縁" [level=3]
+    - text: 00:08:20 / トーク
+    - paragraph: サロメが、ストリートファイター6のオフコラボで会ったことが二人の出会いのきっかけだったことを思い出しました。
+  - listitem "クリックして 00:10:20 から再生":
+    - heading "カフェ巡りの共通の趣味" [level=3]
+    - text: 00:10:20 / トーク
+    - paragraph: ストリートファイター6のコラボ後、カフェ巡りに行った話。サロメはカフェ巡りが趣味で、スバルが一緒に付き合ってくれたことに感動したと語りました。
+  - listitem "クリックして 00:12:00 から再生":
+    - heading "初DMの公開" [level=3]
+    - text: 00:12:00 / トーク
+    - paragraph: 大空スバルが壱百満天原サロメから送られてきたDM（ダイレクトメッセージ）のチャット履歴を読み上げ、当時のやり取りを振り返りました。
+  - listitem "クリックして 00:14:50 から再生":
+    - heading "お互いの第一印象" [level=3]
+    - text: 00:14:50 / トーク
+    - paragraph: サロメはスバルの第一印象を「すごい元気な人だわ」と語り、スバルはサロメの第一印象を「コミュ力たけぇ」と語り、お互いに驚きの声をあげました。
+  - listitem "クリックして 00:17:44 から再生":
+    - heading "お互いの今の印象" [level=3]
+    - text: 00:17:44 / トーク
+    - paragraph: サロメは今のスバルの印象を「すごく優しい」と語り、スバルは今のサロメの印象を「変わった女」と表現し、お互いをからかい合いました。
+  - listitem "クリックして 00:18:00 から再生":
+    - heading "冬のカフェ巡りオモロエピソード" [level=3]
+    - text: 00:18:00 / トーク
+    - paragraph: 冬に屋外のカフェで震えながらお茶をした思い出を語るサロメ。スバルが「屋根ない」と突っ込み、当時を振り返って笑い合いました。
+  - listitem "クリックして 00:22:50 から再生":
+    - heading "クリーム事件のハプニング" [level=3]
+    - text: 00:22:50 / トーク
+    - paragraph: サロメが飲み物のクリームをスバルの服にこぼしてしまい、泣きそうになりながら謝罪するも、スバルが「全然大丈夫」と優しく対応してくれたエピソードを披露しました。
+  - listitem "クリックして 00:24:50 から再生":
+    - heading "グループ間の文化の違い" [level=3]
+    - text: 00:24:50 / トーク
+    - paragraph: にじさんじとホロライブのグループの雰囲気やメンバー間の交流の傾向について、それぞれの視点から語り合いました。
+  - listitem "クリックして 00:30:00 から再生":
+    - heading "ぬいぐるみを使った推し活トーク" [level=3]
+    - text: 00:30:00 / トーク
+    - paragraph: スバルが推しの樋口楓のぬいぐるみを弄んでいたら、顔がクリームだらけになったというエピソードを披露。サロメも推しのぬいぐるみを動かして遊ぶと話しました。
+  - listitem "クリックして 00:33:00 から再生":
+    - heading "クリスマスケーキ配信の思い出" [level=3]
+    - text: 00:33:00 / トーク
+    - paragraph: サロメが毎年クリスマスにしているケーキを食べる配信の話。誰が参加しているか分からない状態で配信しているというエピソードを語りました。
+  - listitem "クリックして 00:35:00 から再生":
+    - heading "樋口楓さんの魅力" [level=3]
+    - text: 00:35:00 / トーク
+    - paragraph: スバルが推しの樋口楓について、普段はクールだが配信では可愛らしい一面を見せると語り、サロメもそれに共感しました。
+  - listitem "クリックして 00:37:00 から再生":
+    - heading "グループ間の交流傾向の続き" [level=3]
+    - text: 00:37:00 / トーク
+    - paragraph: ホロライブはメンバー間の距離が近く、にじさんじは大人数ゆえに個別の交流が少ないという違いについて掘り下げて話しました。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "流行りのラーメンについて" [level=3]
+    - text: 00:40:00 / トーク
+    - paragraph: HIKAKINさんの味噌キンからラーメンが流行しているという話で、深夜にラーメンを食べに行くという流れになるとスバルが話す。
+  - listitem "クリックして 00:40:44 から再生":
+    - heading "たまごっちの話題とまさかの捕食論争" [level=3]
+    - text: 00:40:44 / トーク
+    - paragraph: 最近の流行りとしてたまごっちの話題に。スバルがもらったちいかわのたまごっちについて話すが、たまごっち同士の合体や捕食の可能性について論争になる。
+  - listitem "クリックして 00:41:40 から再生":
+    - heading "たまごっちの捕食機能が判明" [level=3]
+    - text: 00:41:40 / トーク
+    - paragraph: スバルが検索した結果、たまごっちが空腹時に他のたまごっちを捕食する機能があることが判明し、サロメは驚きを隠せない様子。
+  - listitem "クリックして 00:42:20 から再生":
+    - heading "サロメのハマっている「レポ」について" [level=3]
+    - text: 00:42:20 / トーク
+    - paragraph: 流行りの話題としてサロメが「レポ」というゲームにハマっていることを話す。ソロプレイも楽しいが、他の人と一緒にやるのも楽しいと語る。
+  - listitem "クリックして 00:44:55 から再生":
+    - heading "ルーレット企画「今流行っているもの」" [level=3]
+    - text: 00:44:55 / 企画
+    - paragraph: ルーレット企画がスタートし、ルーレットのテーマは「今流行っているもの」。当たったテーマについてサロメがミッションをこなすという内容。
+  - listitem "クリックして 00:45:29 から再生":
+    - heading "サロメの「秘密大暴露」" [level=3]
+    - text: 00:45:29 / トーク
+    - paragraph: ルーレットの針が「秘密大暴露」を指し、サロメが今まで話したことのない自身の秘密を明かすことになる。
+  - listitem "クリックして 00:46:00 から再生":
+    - heading "7万円の帽子と指輪をなくした秘密" [level=3]
+    - text: 00:46:00 / トーク
+    - paragraph: サロメが7万円相当の帽子と指輪をなくしてしまい、一人で泣いたという悲しい秘密を暴露。スバルも驚きと共感を示す。
+  - listitem "クリックして 00:47:50 から再生":
+    - heading "サロメの「フェチズム」告白" [level=3]
+    - text: 00:47:50 / トーク
+    - paragraph: ルーレットの次の項目が「フェチズム」となり、サロメが自身のフェチについて語り始める。
+  - listitem "クリックして 00:48:10 から再生":
+    - heading "むちむちボディ＆喉仏フェチ" [level=3]
+    - text: 00:48:10 / トーク
+    - paragraph: サロメは、肉体的なフェチとして「もっちりむちむちした人」と「喉仏」が好きだと語る。喉仏は不思議で、無意識に見てしまうとのこと。
+  - listitem "クリックして 00:49:00 から再生":
+    - heading "ポケットパンパンフェチ" [level=3]
+    - text: 00:49:00 / トーク
+    - paragraph: さらにサロメは「ポケットがパンパンの人」にフェチを感じると告白。「何が入っているんだろう」と想像が膨らむという独特のフェチを明かす。
+  - listitem "クリックして 00:51:00 から再生":
+    - heading "サロメの「モノマネ」披露" [level=3]
+    - text: 00:51:00 / モノマネ
+    - paragraph: ルーレットが「モノマネ」を指し、サロメが得意だというモノマネを披露することになる。
+  - listitem "クリックして 00:52:00 から再生":
+    - heading "初音ミクのモノマネ" [level=3]
+    - text: 00:52:00 / モノマネ
+    - paragraph: サロメが「初音ミク」のモノマネを披露。緊張しつつも、棒読みで独特のミク声を出してみせる。
+  - listitem "クリックして 00:53:00 から再生":
+    - heading "「最初に怖かった人」について" [level=3]
+    - text: 00:53:00 / トーク
+    - paragraph: ルーレットの最後の項目は「最初に怖かった人」。サロメは誰とも言わないが、心の中では怖がっていたと話す。
+  - listitem "クリックして 00:54:00 から再生":
+    - heading "マネージャーが一番怖かった" [level=3]
+    - text: 00:54:00 / トーク
+    - paragraph: サロメはマネージャーが一番怖かったと告白。マネージャーの仕事的なシャキシャキとした態度と、忘れ物を届けてくれる優しさのギャップを語る。
+  - listitem "クリックして 00:55:30 から再生":
+    - heading "エンディングトーク" [level=3]
+    - text: 00:55:30 / エンディング
+    - paragraph: 配信終了の時間となり、スバルが「おつサロスバ」で締めの挨拶。サロメも一緒に「おつサロスバ」と声を合わせ、配信が終了する。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#雑談 #コラボ #トーク #VTuber #大空スバル #壱百満天原サロメ #夏休み特番 #ルーレット #レポ #たまごっち #フェチ #モノマネ"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - img "【チラ見せ】Amane Kanata 1st Solo Live \"LOCK ON\" 有明アリーナ"
+  - heading "【チラ見せ】Amane Kanata 1st Solo Live \"LOCK ON\" 有明アリーナ" [level=2]
+  - paragraph: "配信者: 天音かなた 💫"
+  - paragraph: "配信日時: 2025-08-13 18:00:00"
+  - paragraph: "配信時間: 56分6秒"
+  - paragraph: "再生数: 263,314"
+  - paragraph: "高評価数: 20,705"
+  - paragraph: 天音かなたの1stソロライブ「LOCK ON」のYouTubeチラ見せ枠の動画です。ライブ開演までの待ち時間や二次グッズ紹介、ファンからの応援メッセージが続いた後、動画の後半ではライブ本編の映像が初公開されます。オープニングアクトとして「おどろき人間」の歌唱が披露され、華やかなステージ演出と多くのファンで埋め尽くされた会場の熱気が伝わります。その後、ライブのMCで天音かなたがファンへの感謝やバンドメンバーの紹介を行い、有料パートへの誘導で動画は終了します。
+  - paragraph: 配信の雰囲気：期待と応援に満ちた賑やかな雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:00:00 から再生":
+    - heading "ライブオープニング画面と注意事項" [level=3]
+    - text: 00:00:00 / お知らせ
+    - paragraph: 天音かなた1stソロライブ「LOCK ON」のオープニング画面が表示され、ライブに関する注意事項（スクリーンショット可、録音録画禁止）が案内されます。開演までのカウントダウンを待つ時間が続きます。
+  - listitem "クリックして 00:00:23 から再生":
+    - heading "2次販売グッズ紹介" [level=3]
+    - text: 00:00:23 / お知らせ
+    - paragraph: ライブの2次販売グッズが紹介されます。Tシャツ、羽織、ペンライト、缶バッジ、アクリルスタンド、トートバッグ、ドッグタグ、ブランケットなど、多岐にわたるアイテムが展示されています。販売期間も合わせて案内されます。
+  - listitem "クリックして 00:00:34 から再生":
+    - heading "ファンからの応援メッセージ" [level=3]
+    - text: 00:00:34 / ファンからのメッセージ
+    - paragraph: 多数のファンから天音かなたへの応援メッセージが次々と表示されます。ライブの成功を祈る言葉や、これまでの活動への感謝、今後の活躍への期待などが込められています。イラスト付きのメッセージも多数見られます。
+  - listitem "クリックして 00:00:51 から再生":
+    - heading "応援メッセージが続く" [level=3]
+    - text: 00:00:51 / ファンからのメッセージ
+    - paragraph: 引き続き、多くのファンからの温かい応援メッセージが画面いっぱいに表示されます。ライブへの期待感と愛情が伝わるメッセージが続きます。
+  - listitem "クリックして 00:01:05 から再生":
+    - heading "メッセージボードの切り替わり" [level=3]
+    - text: 00:01:05 / ファンからのメッセージ
+    - paragraph: 画面に表示される応援メッセージのレイアウトやイラストが切り替わり、様々な視点からのファンメッセージが続きます。
+  - listitem "クリックして 00:01:22 から再生":
+    - heading "ファンからの熱いエール" [level=3]
+    - text: 00:01:22 / ファンからのメッセージ
+    - paragraph: 「頑張ってね！」「最高の一日になりますように！」といった熱いエールや、具体的なライブへの期待を綴ったメッセージが多数寄せられています。
+  - listitem "クリックして 00:01:33 から再生":
+    - heading "イラスト付き応援メッセージ" [level=3]
+    - text: 00:01:33 / ファンからのメッセージ
+    - paragraph: 可愛らしいイラストが添えられた応援メッセージが次々と表示されます。それぞれのファンが独自のイラストで天音かなたへの思いを表現しています。
+  - listitem "クリックして 00:01:44 から再生":
+    - heading "多種多様なメッセージ" [level=3]
+    - text: 00:01:44 / ファンからのメッセージ
+    - paragraph: 国内外のファンから寄せられた多種多様な応援メッセージが画面を彩ります。各メッセージには個性が光り、天音かなたへの深い愛情が感じられます。
+  - listitem "クリックして 00:01:54 から再生":
+    - heading "ライブへの期待高まるメッセージ" [level=3]
+    - text: 00:01:54 / ファンからのメッセージ
+    - paragraph: 「最高のライブにしようね！」「ずっとついていくよ！」など、ライブへの期待と連帯感を強調するメッセージが多く見られます。
+  - listitem "クリックして 00:02:04 から再生":
+    - heading "「祝 1st Solo Live」のメッセージ" [level=3]
+    - text: 00:02:04 / ファンからのメッセージ
+    - paragraph: ファンから贈られた「祝 1st Solo Live」のイラストと共に、ライブの成功を祈るメッセージが続々と表示されます。中には具体的な目標や願いを込めたメッセージも見られます。
+  - listitem "クリックして 00:02:14 から再生":
+    - heading "色とりどりの応援" [level=3]
+    - text: 00:02:14 / ファンからのメッセージ
+    - paragraph: カラフルな文字やイラストで表現された応援メッセージが画面いっぱいに広がり、会場全体が一体となって天音かなたを応援しているような雰囲気を醸し出しています。
+  - listitem "クリックして 00:02:24 から再生":
+    - heading "「LOVE LOVE かなた」メッセージ" [level=3]
+    - text: 00:02:24 / ファンからのメッセージ
+    - paragraph: 「LOVE LOVE かなた」という言葉が際立つメッセージや、天音かなたの歌声への期待、最高のライブになることへの願いが中心に綴られています。
+  - listitem "クリックして 00:02:35 から再生":
+    - heading "情熱的な応援メッセージ" [level=3]
+    - text: 00:02:35 / ファンからのメッセージ
+    - paragraph: 「全力で応援する！」「夢に胸を張って」といった情熱的な言葉が多く見られ、ファン一人ひとりの強い思いが伝わってきます。
+  - listitem "クリックして 00:02:44 から再生":
+    - heading "様々な言語での応援" [level=3]
+    - text: 00:02:44 / ファンからのメッセージ
+    - paragraph: 日本語だけでなく、英語や韓国語など、様々な言語での応援メッセージも登場し、国際的なファンからの支持の大きさが伺えます。
+  - listitem "クリックして 00:02:54 から再生":
+    - heading "「たそ愛」メッセージ" [level=3]
+    - text: 00:02:54 / ファンからのメッセージ
+    - paragraph: 天音かなたの愛称「たそ」や「たそ愛」という言葉を使ったメッセージが多く、親しみやすさが感じられます。ファンとの強い絆が表現されています。
+  - listitem "クリックして 00:03:04 から再生":
+    - heading "温かい感謝のメッセージ" [level=3]
+    - text: 00:03:04 / ファンからのメッセージ
+    - paragraph: ファンからの温かい感謝の言葉や、天音かなたへの思いを伝えるメッセージが画面に溢れます。「いつもありがとう」「最高の日になる！」など、感謝と期待の言葉が多く見られます。
+  - listitem "クリックして 00:03:14 から再生":
+    - heading "未来への希望を込めたメッセージ" [level=3]
+    - text: 00:03:14 / ファンからのメッセージ
+    - paragraph: 「未来へ羽ばたけ」という言葉や、今後の活動への期待を込めたメッセージが特徴的です。ファンが天音かなたの成長と夢の実現を強く願っていることが伝わります。
+  - listitem "クリックして 00:03:24 から再生":
+    - heading "ライブ成功への願い" [level=3]
+    - text: 00:03:24 / ファンからのメッセージ
+    - paragraph: 「ライブ大成功を願っています！」「最高の景色を見られることを願っています！」といった、ライブの成功を心から願うメッセージが多く見られます。
+  - listitem "クリックして 00:03:33 から再生":
+    - heading "「ソラライブおめでとう」の言葉" [level=3]
+    - text: 00:03:33 / ファンからのメッセージ
+    - paragraph: 「ソラライブおめでとう」という言葉が多数を占め、ファンからの祝福と喜びが溢れています。多くの人々が天音かなたのソロライブ開催を待ち望んでいたことが伺えます。
+  - listitem "クリックして 00:03:44 から再生":
+    - heading "感謝と感動のメッセージ" [level=3]
+    - text: 00:03:44 / ファンからのメッセージ
+    - paragraph: 「感謝と感動をありがとう」「夢を叶えてくれてありがとう」といった、ファンがライブを通じて感じた感謝や感動の気持ちが伝わるメッセージが多く見られます。
+  - listitem "クリックして 00:03:54 から再生":
+    - heading "未来への期待が込められたメッセージ" [level=3]
+    - text: 00:03:54 / ファンからのメッセージ
+    - paragraph: 「これからも応援します！」「次も楽しみ！」など、ライブの成功を喜びつつ、今後の活動や次のライブへの期待を表明するメッセージが多く見られます。
+  - listitem "クリックして 00:04:04 から再生":
+    - heading "イラストと感謝の言葉" [level=3]
+    - text: 00:04:04 / ファンからのメッセージ
+    - paragraph: ファンからのイラストと共に、「夢を見せてくれてありがとう」「最高の歌声」といった、天音かなたの魅力に対する感謝の言葉が綴られています。
+  - listitem "クリックして 00:04:14 から再生":
+    - heading "ライブへの情熱を伝えるメッセージ" [level=3]
+    - text: 00:04:14 / ファンからのメッセージ
+    - paragraph: 「全力で楽しんでる！」「最高の1日にしようね！」といった、ライブへの情熱と喜びを表現するメッセージが多く見られます。ファンがライブを心から楽しみにしていることが伝わります。
+  - listitem "クリックして 00:04:24 から再生":
+    - heading "「LOCK ON」への期待" [level=3]
+    - text: 00:04:24 / ファンからのメッセージ
+    - paragraph: 「LOCK ON」というライブタイトルにちなんだメッセージや、ライブの成功を願う言葉が多く見られます。ライブへの期待が最大限に高まっていることが伺えます。
+  - listitem "クリックして 00:04:34 から再生":
+    - heading "力強い応援メッセージ" [level=3]
+    - text: 00:04:34 / ファンからのメッセージ
+    - paragraph: 「頑張って！」「全力で応援する！」といった力強い言葉が多く見られ、ファンが天音かなたを強く支え、共に夢を追いかける姿勢が表現されています。
+  - listitem "クリックして 00:04:44 から再生":
+    - heading "感謝と祝福のメッセージ" [level=3]
+    - text: 00:04:44 / ファンからのメッセージ
+    - paragraph: 「おめでとう！」「ありがとう！」といった感謝と祝福の言葉が多く見られ、ライブの開催を祝う気持ちが伝わります。天音かなたへの温かい言葉が多く見られます。
+  - listitem "クリックして 00:04:54 から再生":
+    - heading "ライブへの情熱と感謝" [level=3]
+    - text: 00:04:54 / ファンからのメッセージ
+    - paragraph: 「最高のライブ」「夢が一つ叶った」といった、ライブへの情熱と感謝の言葉が繰り返されます。ファンがライブを心から楽しみ、感動していることが伝わります。
+  - listitem "クリックして 00:05:04 から再生":
+    - heading "「たそ愛」の表現" [level=3]
+    - text: 00:05:04 / ファンからのメッセージ
+    - paragraph: 天音かなたの愛称「たそ」や「たそ愛」という言葉を使ったメッセージが多く、親しみやすさが感じられます。ファンとの強い絆が表現されています。
+  - listitem "クリックして 00:05:14 から再生":
+    - heading "継続的な応援の約束" [level=3]
+    - text: 00:05:14 / ファンからのメッセージ
+    - paragraph: 「これからもずっと応援しているよ！」「ずっとそばにいるよ！」といった、継続的な応援を約束するメッセージが多く見られ、ファンが天音かなたを長く支え続ける意思が示されています。
+  - listitem "クリックして 00:05:24 から再生":
+    - heading "イラストとライブへの喜び" [level=3]
+    - text: 00:05:24 / ファンからのメッセージ
+    - paragraph: イラストが添えられたメッセージや、「ライブ楽しい！」「最高の思い出」といった、ライブへの喜びと感動を表現する言葉が多く見られます。
+  - listitem "クリックして 00:05:34 から再生":
+    - heading "ライブの成功を願うメッセージ" [level=3]
+    - text: 00:05:34 / ファンからのメッセージ
+    - paragraph: 「ライブ大成功を願っています！」「最高の景色を見られることを願っています！」といった、ライブの成功を心から願うメッセージが多く見られます。天音かなたの夢が叶うことへの期待が表現されています。
+  - listitem "クリックして 00:05:44 から再生":
+    - heading "「ソラライブおめでとう」の祝福" [level=3]
+    - text: 00:05:44 / ファンからのメッセージ
+    - paragraph: 「ソラライブおめでとう」という言葉が多数を占め、ファンからの祝福と喜びが溢れています。多くの人々が天音かなたのソロライブ開催を待ち望んでいたことが伺えます。
+  - listitem "クリックして 00:05:54 から再生":
+    - heading "夢と感動のメッセージ" [level=3]
+    - text: 00:05:54 / ファンからのメッセージ
+    - paragraph: 「夢が一つ叶った」「感動をありがとう」といった、ライブを通じて感じた夢や感動の気持ちが伝わるメッセージが多く見られます。ファンがライブを心から楽しみ、感動していることが伺えます。
+  - listitem "クリックして 00:06:04 から再生":
+    - heading "絆を感じるメッセージ" [level=3]
+    - text: 00:06:04 / ファンからのメッセージ
+    - paragraph: 「これからもずっと応援してるよ！」「ずっとそばにいるよ！」といった、継続的な応援を約束するメッセージが多く見られ、ファンが天音かなたを長く支え続ける意思が示されています。
+  - listitem "クリックして 00:06:14 から再生":
+    - heading "感謝と祝福のメッセージ" [level=3]
+    - text: 00:06:14 / ファンからのメッセージ
+    - paragraph: 「おめでとう！」「ありがとう！」といった感謝と祝福の言葉が多く見られ、ライブの開催を祝う気持ちが伝わります。天音かなたへの温かい言葉が多く見られます。
+  - listitem "クリックして 00:06:24 から再生":
+    - heading "ライブオープニング画面（再々表示）" [level=3]
+    - text: 00:06:24 / お知らせ
+    - paragraph: ライブの開始画面と注意事項、グッズ紹介、そしてファンからの応援メッセージが再度表示されます。ライブへの期待感が引き続き高められます。
+  - listitem "クリックして 00:09:52 から再生":
+    - heading "JOYSOUND X1 CM" [level=3]
+    - text: 00:09:52 / その他
+    - paragraph: カラオケ「JOYSOUND X1」のCM映像が挿入されます。ライブの雰囲気を盛り上げるための広告として機能しています。
+  - listitem "クリックして 00:26:42 から再生":
+    - heading "ライブ会場の様子" [level=3]
+    - text: 00:26:42 / ライブ
+    - paragraph: 天音かなたの1stソロライブ「LOCK ON」の会場の様子が映し出されます。多くのファンがペンライトを振っており、会場全体が青い光に包まれています。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "ライブ本編「おどろき人間」歌唱開始" [level=3]
+    - text: 00:40:00 / 歌
+    - paragraph: 天音かなたの1stソロライブ本編が始まり、最初の楽曲「おどろき人間」の歌唱とパフォーマンスが披露されます。ステージ上には天音かなたが一人で立ち、観客席は多くのファンで埋め尽くされ、ペンライトの光が揺れています。
+  - listitem "クリックして 00:44:00 から再生":
+    - heading "「おどろき人間」歌唱終了と歓声" [level=3]
+    - text: 00:44:00 / 歌
+    - paragraph: 楽曲「おどろき人間」の歌唱が終わり、会場からは大きな拍手と歓声が上がります。天音かなたは深々とお辞儀をして、ファンへの感謝を示します。
+  - listitem "クリックして 00:45:00 から再生":
+    - heading "MC開始とファンとの交流" [level=3]
+    - text: 00:45:00 / トーク
+    - paragraph: ライブ本編後のMCが始まり、天音かなたがファンに向けて「みんなー！」と呼びかけます。会場からの大きな声援に笑顔で応え、水を飲む一幕もあります。
+  - listitem "クリックして 00:47:00 から再生":
+    - heading "初ソロライブへの思いとバンドメンバー紹介" [level=3]
+    - text: 00:47:00 / トーク
+    - paragraph: 天音かなたが念願だった初めてのソロライブへの喜びを語り、ファンへの感謝を伝えます。続けて、今回のライブをサポートするガールズバンドのメンバーが一人ずつ紹介されます。
+  - listitem "クリックして 00:50:00 から再生":
+    - heading "配信視聴者へのアピールと無料パート終了告知" [level=3]
+    - text: 00:50:00 / お知らせ
+    - paragraph: ライブの配信を視聴しているファン（おらーい）に向けて「推しカメラ」を通してアピール。そして、無料チラ見せパートが終了し、ここから先が有料コンテンツとなることを説明。有料配信サイトへの誘導が行われます。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#ホロライブ #天音かなた #ソロライブ #ライブ #告知 #応援 #VTuber #音楽 #バンド #パフォーマンス"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "🔖"
+  - 'img "【 THREAT -SCREAM AND ESCAPE- 】ホラゲウィーク第参夜／叫び声なら得意です。任せてください。 #ホラゲウィーク2025【鷹嶺ルイ/ホロライブ】"'
+  - 'heading "【 THREAT -SCREAM AND ESCAPE- 】ホラゲウィーク第参夜／叫び声なら得意です。任せてください。 #ホラゲウィーク2025【鷹嶺ルイ/ホロライブ】" [level=2]'
+  - paragraph: "配信者: 鷹嶺ルイ"
+  - paragraph: "配信日時: 2025-08-13 18:00:00"
+  - paragraph: "配信時間: 41分47秒"
+  - paragraph: "再生数: 49,596"
+  - paragraph: "高評価数: 4,383"
+  - paragraph: 鷹嶺ルイがホラーゲーム「THREAT -SCREAM AND ESCAPE-」をプレイしました。このゲームは声を出して敵を撃退するシステムが特徴で、配信者はゲーム開始直後から画面表示のトラブルに見舞われるも、解決後は叫び声を上げてモンスターを撃退。ゲームを進めるにつれて必要な声のレベルが上がり、最終的にはゲームオーバーとなるなど、終始驚きと叫び声に満ちた配信でした。ゲーム終了後も、声を使った撃退システムを振り返りつつ、視聴者への感謝と次回配信の告知を行い、恐怖と興奮が入り混じる実況を締めくくりました。
+  - paragraph: 配信の雰囲気：驚きと叫び声に満ちた、恐怖と興奮が入り混じる雰囲気
+  - strong: ▶ 見どころ：
+  - listitem "クリックして 00:02:57 から再生":
+    - heading "配信開始とゲーム紹介" [level=3]
+    - text: 00:02:57 / ゲーム
+    - paragraph: 配信が始まり、鷹嶺ルイがホラーゲーム「THREAT」をプレイすることを発表します。このゲームは声を出して敵を撃退するシステムが特徴です。
+  - listitem "クリックして 00:03:15 から再生":
+    - heading "ゲーム画面表示トラブル発生" [level=3]
+    - text: 00:03:15 / トーク
+    - paragraph: ゲームのタイトル画面が表示されず、画面が真っ暗な状態が続きます。鷹嶺ルイは戸惑いながらもOBSの設定を確認し、問題解決を試みます。
+  - listitem "クリックして 00:04:51 から再生":
+    - heading "設定調整でゲーム画面復旧" [level=3]
+    - text: 00:04:51 / トーク
+    - paragraph: 鷹嶺ルイがマイクの入力設定などを調整した結果、無事にゲーム画面が表示されるようになります。不気味な効果音に怖がりながらもゲームを進める準備をします。
+  - listitem "クリックして 00:07:11 から再生":
+    - heading "ゲーム本編開始と音声認識テスト" [level=3]
+    - text: 00:07:11 / ゲーム
+    - paragraph: ゲームが始まり、主人公のセリフ「身体が痛い…」「ここはどこだ？」などを読み上げながら、声の認識テストを行います。絶叫テストでは「ああああ！」と叫び、モンスターを気絶させる機能を確認します。
+  - listitem "クリックして 00:09:53 から再生":
+    - heading "最初の怪物遭遇と絶叫撃退" [level=3]
+    - text: 00:09:53 / リアクション
+    - paragraph: 病院のような場所を探索していると、人型の不気味な怪物が突然現れます。鷹嶺ルイは驚きとともに叫び声を上げ、怪物を気絶させることに成功します。
+  - listitem "クリックして 00:10:44 から再生":
+    - heading "絶叫システム詳細説明" [level=3]
+    - text: 00:10:44 / ゲーム
+    - paragraph: ゲームシステムの説明が表示され、「絶叫」を重ねるごとに必要な音量が上がっていくことが判明します。鷹嶺ルイは、先ほどの絶叫で既にかなり大きな声を出していたことに驚きます。
+  - listitem "クリックして 00:11:11 から再生":
+    - heading "地図と鍵の入手" [level=3]
+    - text: 00:11:11 / ゲーム
+    - paragraph: 倒れている人物を調べて地図と最初の鍵（1/3）を入手します。地図には出口と鍵の場所が示されています。
+  - listitem "クリックして 00:12:30 から再生":
+    - heading "2つ目と3つ目の鍵の発見" [level=3]
+    - text: 00:12:30 / ゲーム
+    - paragraph: 探索を続け、倒れている人物から2つ目（2/3）と3つ目（3/3）の鍵を立て続けに入手します。順調に鍵が集まり、クリアへの期待が高まります。
+  - listitem "クリックして 00:14:03 から再生":
+    - heading "連続絶叫で怪物撃退" [level=3]
+    - text: 00:14:03 / リアクション
+    - paragraph: 出口へ向かう途中、再び怪物が現れますが、鷹嶺ルイは立て続けに叫び声を上げて怪物を撃退します。驚きながらもなんとか対処します。
+  - listitem "クリックして 00:15:54 から再生":
+    - heading "ステージクリアと謎のメモ" [level=3]
+    - text: 00:15:54 / ゲーム
+    - paragraph: 全ての鍵を集め、出口に到達してステージクリアとなります。しかし、表示されたメモには「研究は順調」「生体兵器を月内に納品」「病院からの検体があったおかげ」「俺は病院に来て…さらわれたってのか？」と書かれており、主人公の正体と状況に新たな疑問が提示されます。
+  - listitem "クリックして 00:16:22 から再生":
+    - heading "次のステージと蜘蛛型モンスター" [level=3]
+    - text: 00:16:22 / ゲーム
+    - paragraph: 次のステージが始まり、地図はリセットされ鍵も0/5から再開。今回は蜘蛛のような見た目のモンスターが次々と現れ、鷹嶺ルイは連続で叫び声を上げて撃退していきます。
+  - listitem "クリックして 00:22:03 から再生":
+    - heading "鍵の入手とモンスターの猛攻" [level=3]
+    - text: 00:22:03 / ゲーム
+    - paragraph: 探索中に4つ目と5つ目の鍵を見つけます。しかし、最後の鍵を入手した途端、大量の蜘蛛型モンスターに囲まれてしまい、絶叫ゲージが最大になります。
+  - listitem "クリックして 00:23:50 から再生":
+    - heading "ゲームオーバーとツッコミ" [level=3]
+    - text: 00:23:50 / リアクション
+    - paragraph: 大量のモンスターに囲まれ、絶叫を続けるも力尽きてゲームオーバーとなります。リトライ画面の「絶叫が発生しにくい場合は設定から入力レベルを上げよう」というヒントに対し、鷹嶺ルイは「絶叫してんのこっちだわ！」とツッコミを入れます。
+  - listitem "クリックして 00:25:44 から再生":
+    - heading "マイクレベル調整と再挑戦" [level=3]
+    - text: 00:25:44 / トーク
+    - paragraph: 鷹嶺ルイはヒントに従い、マイクの入力レベルを最大まで上げて再挑戦を決意します。より大きな声での絶叫が期待されます。
+  - listitem "クリックして 00:36:59 から再生":
+    - heading "最後のステージと衝撃の結末" [level=3]
+    - text: 00:36:59 / ゲーム
+    - paragraph: 最終ステージに進み、外に出たところで怪しい人影を発見します。主人公が助けを呼ぶと、人影は「なんだ…声がおかしい…」と反応。直後にゲームオーバーとなり、クリアは果たせませんでした。
+  - listitem "クリックして 00:40:00 から再生":
+    - heading "叫び声システムの振り返り" [level=3]
+    - text: 00:40:00 / トーク
+    - paragraph: 鷹嶺ルイが、ホラゲの叫び声システムについて「オペラだった」「ノイキャンされる」などと振り返り、ゲーム中の絶叫が大変だったことを語ります。
+  - listitem "クリックして 00:40:39 から再生":
+    - heading "視聴者への感謝と奮闘の振り返り" [level=3]
+    - text: 00:40:39 / トーク
+    - paragraph: 視聴者が楽しんでくれたことに感謝しつつ、自身は必死でゲームをプレイしていたことを振り返ります。
+  - listitem "クリックして 00:40:54 から再生":
+    - heading "次回配信の告知と締めくくりの挨拶" [level=3]
+    - text: 00:40:54 / お知らせ
+    - paragraph: チャンネル登録と高評価のお願いをし、明日23時から次回の配信があることを告知。最後に「おつるいる」と締めくくりの挨拶をします。
+  - button "もっと見る"
+  - strong: ▶ タグ：
+  - text: "#ゲーム実況 #ホラーゲーム #THREAT #鷹嶺ルイ #絶叫 #悲鳴 #トラブル"
+  - button "もっと見る"
+  - button "詳細"
+  - button "コピー"
+  - button "𝕏で共有"
+  - button "続きを見る"
+- contentinfo:
+  - paragraph: © 2025 ホロサマリー
+  - paragraph:
+    - text: Developed by
+    - link "ポち":
+      - /url: https://x.com/aegisfleet
+  - link "日本語":
+    - /url: ./
+  - text: "|"
+  - link "English":
+    - /url: en/
+- button "🔖"
+```

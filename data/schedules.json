@@ -42,12 +42,6 @@
     "date": "2025-08-13T17:00:00.000Z"
   },
   {
-    "videoId": "5W-1_S4Qb5g",
-    "videoUrl": "https://www.youtube.com/watch?v=5W-1_S4Qb5g",
-    "streamer": "ラプラス",
-    "date": "2025-08-13T17:23:00.000Z"
-  },
-  {
     "videoId": "8D5c91dnBAw",
     "videoUrl": "https://www.youtube.com/watch?v=8D5c91dnBAw",
     "streamer": "風真いろは",
@@ -186,15 +180,27 @@
     "date": "2025-08-14T12:00:00.000Z"
   },
   {
-    "videoId": "1zONbzdfMFA",
-    "videoUrl": "https://www.youtube.com/watch?v=1zONbzdfMFA",
-    "streamer": "姫森ルーナ 🍬",
+    "videoId": "BI7Ky1TDqSo",
+    "videoUrl": "https://www.youtube.com/watch?v=BI7Ky1TDqSo",
+    "streamer": "ときのそら 🐻",
+    "date": "2025-08-14T15:35:00.000Z"
+  },
+  {
+    "videoId": "FDj7GkWlFaI",
+    "videoUrl": "https://www.youtube.com/watch?v=FDj7GkWlFaI",
+    "streamer": "雪花ラミィ",
+    "date": "2025-08-14T18:00:00.000Z"
+  },
+  {
+    "videoId": "wwDofKjr5Jo",
+    "videoUrl": "https://www.youtube.com/watch?v=wwDofKjr5Jo",
+    "streamer": "博衣こより",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
-    "videoId": "QF83eOTDnJQ",
-    "videoUrl": "https://www.youtube.com/watch?v=QF83eOTDnJQ",
-    "streamer": "尾丸ポルカ",
+    "videoId": "c1lnLaLf028",
+    "videoUrl": "https://www.youtube.com/watch?v=c1lnLaLf028",
+    "streamer": "星街すいせい ☄",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
@@ -204,9 +210,15 @@
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
-    "videoId": "wwDofKjr5Jo",
-    "videoUrl": "https://www.youtube.com/watch?v=wwDofKjr5Jo",
-    "streamer": "博衣こより",
+    "videoId": "QF83eOTDnJQ",
+    "videoUrl": "https://www.youtube.com/watch?v=QF83eOTDnJQ",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-08-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "1zONbzdfMFA",
+    "videoUrl": "https://www.youtube.com/watch?v=1zONbzdfMFA",
+    "streamer": "姫森ルーナ 🍬",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
@@ -225,6 +237,12 @@
     "videoId": "QXhOh5LXjNk",
     "videoUrl": "https://www.youtube.com/watch?v=QXhOh5LXjNk",
     "streamer": "鷹嶺ルイ",
+    "date": "2025-08-14T23:00:00.000Z"
+  },
+  {
+    "videoId": "274_2pNSaCQ",
+    "videoUrl": "https://www.youtube.com/watch?v=274_2pNSaCQ",
+    "streamer": "赤井はあと ❤",
     "date": "2025-08-14T23:00:00.000Z"
   },
   {
@@ -333,7 +351,19 @@
     "videoId": "ut_0Z_lXYQc",
     "videoUrl": "https://www.youtube.com/watch?v=ut_0Z_lXYQc",
     "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-14T16:57:00.000Z"
+  },
+  {
+    "videoId": "v20LRSY0M8w",
+    "videoUrl": "https://www.youtube.com/watch?v=v20LRSY0M8w",
+    "streamer": "轟はじめ",
     "date": "2025-08-14T17:00:00.000Z"
+  },
+  {
+    "videoId": "ato27clLL0U",
+    "videoUrl": "https://www.youtube.com/watch?v=ato27clLL0U",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-14T22:00:00.000Z"
   },
   {
     "videoId": "NlF5B32giPk",
@@ -420,6 +450,12 @@
     "date": "2025-08-15T02:00:00.000Z"
   },
   {
+    "videoId": "uztQKN5V5ho",
+    "videoUrl": "https://www.youtube.com/watch?v=uztQKN5V5ho",
+    "streamer": "Cecilia",
+    "date": "2025-08-15T04:00:00.000Z"
+  },
+  {
     "videoId": "VwDZaW6R0g8",
     "videoUrl": "https://www.youtube.com/watch?v=VwDZaW6R0g8",
     "streamer": "Reine",
@@ -435,12 +471,18 @@
     "videoId": "Wl4vk8Ehvrg",
     "videoUrl": "https://www.youtube.com/watch?v=Wl4vk8Ehvrg",
     "streamer": "Reine",
-    "date": "2025-08-14T15:00:00.000Z"
+    "date": "2025-08-14T15:02:00.000Z"
   },
   {
     "videoId": "HkF_orLN4j0",
     "videoUrl": "https://www.youtube.com/watch?v=HkF_orLN4j0",
     "streamer": "Anya",
+    "date": "2025-08-14T22:00:00.000Z"
+  },
+  {
+    "videoId": "eQu9v6rTiXY",
+    "videoUrl": "https://www.youtube.com/watch?v=eQu9v6rTiXY",
+    "streamer": "Zeta",
     "date": "2025-08-14T22:00:00.000Z"
   },
   {

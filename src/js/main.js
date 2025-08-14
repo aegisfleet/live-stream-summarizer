@@ -1062,10 +1062,18 @@ class ArchiveManager {
                 refreshing = true;
             });
 
-            // PWAがフォアグラウンドになった際に更新をチェックする
+            // PWAの表示状態が変わった際の処理
             document.addEventListener('visibilitychange', () => {
                 if (document.visibilityState === 'visible') {
+                    // PWAがフォアグラウンドになった際に更新をチェックする
                     checkForUpdate();
+                } else if (document.visibilityState === 'hidden') {
+                    // PWAがバックグラウンドに移動した際に、待機中の更新があれば適用する
+                    navigator.serviceWorker.getRegistration().then(registration => {
+                        if (registration && registration.waiting) {
+                            registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                        }
+                    });
                 }
             });
         }

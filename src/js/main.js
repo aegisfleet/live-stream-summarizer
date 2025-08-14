@@ -1025,6 +1025,14 @@ class ArchiveManager {
                 }
             };
 
+            const checkForUpdate = () => {
+                navigator.serviceWorker.ready.then(registration => {
+                    registration.update();
+                }).catch(error => {
+                    console.error('Error during service worker update check:', error);
+                });
+            };
+
             navigator.serviceWorker.register(`${basePath}service-worker.js`, { scope: basePath })
                 .then(registration => {
                     if (registration.waiting) {
@@ -1052,6 +1060,13 @@ class ArchiveManager {
                 if (refreshing) return;
                 window.location.reload();
                 refreshing = true;
+            });
+
+            // PWAがフォアグラウンドになった際に更新をチェックする
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    checkForUpdate();
+                }
             });
         }
     }

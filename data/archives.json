@@ -50,16 +50,6 @@
     "duration": 992
   },
   {
-    "videoId": "TeCKTigQhm0",
-    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
-    "streamer": "天音かなた 💫",
-    "date": "2025-08-14T19:00:00.000Z",
-    "title": "【後夜祭】8/13 1stソロライブ「LOCK ON」有明アリーナ💫配信チケット発売中✨ / Amane Kanata 1st Solo Live \"LOCK ON\" 💫",
-    "thumbnailUrl": "https://i.ytimg.com/vi/TeCKTigQhm0/mqdefault.jpg",
-    "endTime": "2025-08-14T11:07:58Z",
-    "duration": 4024
-  },
-  {
     "videoId": "f1SDHBOWBpA",
     "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
     "streamer": "桃鈴ねね",
@@ -68,6 +58,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/f1SDHBOWBpA/mqdefault.jpg",
     "endTime": "2025-08-14T11:01:36Z",
     "duration": 3651
+  },
+  {
+    "videoId": "TeCKTigQhm0",
+    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-14T19:00:00.000Z",
+    "title": "【後夜祭】8/13 1stソロライブ「LOCK ON」有明アリーナ💫配信チケット発売中✨ / Amane Kanata 1st Solo Live \"LOCK ON\" 💫",
+    "thumbnailUrl": "https://i.ytimg.com/vi/TeCKTigQhm0/mqdefault.jpg",
+    "endTime": "2025-08-14T11:07:58Z",
+    "duration": 4024
   },
   {
     "videoId": "x6QC_5Avl44",
@@ -188,6 +188,36 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/NHFOar5lLJU/mqdefault.jpg",
     "endTime": "2025-08-14T21:49:45Z",
     "duration": 4650
+  },
+  {
+    "videoId": "cfX-LD1q930",
+    "videoUrl": "https://www.youtube.com/watch?v=cfX-LD1q930",
+    "streamer": "輪堂千速",
+    "date": "2025-08-15T07:33:00.000Z",
+    "title": "【朝活 】あさですよ～～【#輪堂千速 / #hololivedev_is  #FLOWGLOW 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/cfX-LD1q930/mqdefault.jpg",
+    "endTime": "2025-08-14T23:45:36Z",
+    "duration": 4292
+  },
+  {
+    "videoId": "_p1nkA5-Hhc",
+    "videoUrl": "https://www.youtube.com/watch?v=_p1nkA5-Hhc",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-15T08:35:00.000Z",
+    "title": "【 朝活 / FreeTalk 】お仕事前に・・・！【#綺々羅々ヴィヴィ #hololiveDEV_IS #FLOWGLOW】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/_p1nkA5-Hhc/mqdefault.jpg",
+    "endTime": "2025-08-15T00:41:18Z",
+    "duration": 3971
+  },
+  {
+    "videoId": "uit6N5Ize00",
+    "videoUrl": "https://www.youtube.com/watch?v=uit6N5Ize00",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-08-15T10:00:00.000Z",
+    "title": "【らでん自習室】8月15日10:00~11:30 【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uit6N5Ize00/mqdefault.jpg",
+    "endTime": "2025-08-15T02:11:40Z",
+    "duration": 4253
   },
   {
     "videoId": "wpZFczoHchk",

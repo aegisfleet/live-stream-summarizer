@@ -10,8 +10,8 @@ describe('Frontend Verification', () => {
     // b. Click on the first video link to go to a detail page
     cy.get('#archive-grid .archive-card .clickable-thumbnail').first().click();
 
-    // c. On the detail page, wait for it to load
-    cy.get('#youtube-player', { timeout: 30000 }).scrollIntoView().should('be.visible');
+    // c. On the detail page, wait for the YouTube player's iframe to load
+    cy.get('#youtube-player iframe', { timeout: 30000 }).scrollIntoView().should('be.visible');
 
     // d. Locate the "みどころ" (highlights) list and click the first three items
     cy.get('#highlights-list .highlight-item').should('have.length.gt', 0);

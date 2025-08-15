@@ -50,16 +50,6 @@
     "duration": 992
   },
   {
-    "videoId": "f1SDHBOWBpA",
-    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
-    "streamer": "桃鈴ねね",
-    "date": "2025-08-14T19:00:00.000Z",
-    "title": "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/f1SDHBOWBpA/mqdefault.jpg",
-    "endTime": "2025-08-14T11:01:36Z",
-    "duration": 3651
-  },
-  {
     "videoId": "TeCKTigQhm0",
     "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
     "streamer": "天音かなた 💫",
@@ -68,6 +58,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/TeCKTigQhm0/mqdefault.jpg",
     "endTime": "2025-08-14T11:07:58Z",
     "duration": 4024
+  },
+  {
+    "videoId": "f1SDHBOWBpA",
+    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
+    "streamer": "桃鈴ねね",
+    "date": "2025-08-14T19:00:00.000Z",
+    "title": "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/f1SDHBOWBpA/mqdefault.jpg",
+    "endTime": "2025-08-14T11:01:36Z",
+    "duration": 3651
   },
   {
     "videoId": "x6QC_5Avl44",

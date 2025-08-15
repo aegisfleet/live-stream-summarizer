@@ -72,15 +72,15 @@
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
-    "videoId": "f1SDHBOWBpA",
-    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
-    "streamer": "桃鈴ねね",
-    "date": "2025-08-14T19:00:00.000Z"
-  },
-  {
     "videoId": "TeCKTigQhm0",
     "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
     "streamer": "天音かなた 💫",
+    "date": "2025-08-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "f1SDHBOWBpA",
+    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
+    "streamer": "桃鈴ねね",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
@@ -216,6 +216,12 @@
     "date": "2025-08-15T12:00:00.000Z"
   },
   {
+    "videoId": "T-Qkg7z8wE0",
+    "videoUrl": "https://www.youtube.com/watch?v=T-Qkg7z8wE0",
+    "streamer": "AZKi ⚒",
+    "date": "2025-08-15T18:00:00.000Z"
+  },
+  {
     "videoId": "Wgm-YLSlnCU",
     "videoUrl": "https://www.youtube.com/watch?v=Wgm-YLSlnCU",
     "streamer": "ホロライブ",
@@ -268,6 +274,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=ONHD1Vr3Jvk",
     "streamer": "大空スバル 🚑",
     "date": "2025-08-16T10:00:00.000Z"
+  },
+  {
+    "videoId": "30X_JCklKog",
+    "videoUrl": "https://www.youtube.com/watch?v=30X_JCklKog",
+    "streamer": "博衣こより",
+    "date": "2025-08-16T11:00:00.000Z"
   },
   {
     "videoId": "R_0v5_TnKPQ",
@@ -489,7 +501,19 @@
     "videoId": "I9Nil_GNdMA",
     "videoUrl": "https://www.youtube.com/watch?v=I9Nil_GNdMA",
     "streamer": "Raora",
-    "date": "2025-08-15T12:30:00.000Z"
+    "date": "2025-08-15T12:36:00.000Z"
+  },
+  {
+    "videoId": "AVulAPIU8p4",
+    "videoUrl": "https://www.youtube.com/watch?v=AVulAPIU8p4",
+    "streamer": "Kronii",
+    "date": "2025-08-15T13:01:00.000Z"
+  },
+  {
+    "videoId": "LgJhnGLg6wg",
+    "videoUrl": "https://www.youtube.com/watch?v=LgJhnGLg6wg",
+    "streamer": "IRyS",
+    "date": "2025-08-15T13:46:00.000Z"
   },
   {
     "videoId": "F__bBQoFCZY",

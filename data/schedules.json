@@ -72,15 +72,15 @@
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
-    "videoId": "TeCKTigQhm0",
-    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
-    "streamer": "天音かなた 💫",
-    "date": "2025-08-14T19:00:00.000Z"
-  },
-  {
     "videoId": "f1SDHBOWBpA",
     "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
     "streamer": "桃鈴ねね",
+    "date": "2025-08-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "TeCKTigQhm0",
+    "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
+    "streamer": "天音かなた 💫",
     "date": "2025-08-14T19:00:00.000Z"
   },
   {
@@ -228,15 +228,15 @@
     "date": "2025-08-15T18:00:00.000Z"
   },
   {
-    "videoId": "gNOI4kpg8xs",
-    "videoUrl": "https://www.youtube.com/watch?v=gNOI4kpg8xs",
-    "streamer": "風真いろは",
-    "date": "2025-08-15T19:00:00.000Z"
-  },
-  {
     "videoId": "kp653OI0mPA",
     "videoUrl": "https://www.youtube.com/watch?v=kp653OI0mPA",
     "streamer": "獅白ぼたん",
+    "date": "2025-08-15T19:00:00.000Z"
+  },
+  {
+    "videoId": "gNOI4kpg8xs",
+    "videoUrl": "https://www.youtube.com/watch?v=gNOI4kpg8xs",
+    "streamer": "風真いろは",
     "date": "2025-08-15T19:00:00.000Z"
   },
   {
@@ -249,6 +249,12 @@
     "videoId": "bYFY8eHiexk",
     "videoUrl": "https://www.youtube.com/watch?v=bYFY8eHiexk",
     "streamer": "大空スバル 🚑",
+    "date": "2025-08-15T21:00:00.000Z"
+  },
+  {
+    "videoId": "zPlt4zPyHVI",
+    "videoUrl": "https://www.youtube.com/watch?v=zPlt4zPyHVI",
+    "streamer": "夏色まつり 🏮",
     "date": "2025-08-15T21:00:00.000Z"
   },
   {
@@ -408,10 +414,28 @@
     "date": "2025-08-15T10:00:00.000Z"
   },
   {
+    "videoId": "a0OWPUNbJk4",
+    "videoUrl": "https://www.youtube.com/watch?v=a0OWPUNbJk4",
+    "streamer": "輪堂千速",
+    "date": "2025-08-15T15:45:00.000Z"
+  },
+  {
     "videoId": "1EAsbLm6ZR0",
     "videoUrl": "https://www.youtube.com/watch?v=1EAsbLm6ZR0",
     "streamer": "綺々羅々ヴィヴィ",
-    "date": "2025-08-15T17:00:00.000Z"
+    "date": "2025-08-15T16:55:00.000Z"
+  },
+  {
+    "videoId": "5xOO6SXVWiU",
+    "videoUrl": "https://www.youtube.com/watch?v=5xOO6SXVWiU",
+    "streamer": "一条莉々華",
+    "date": "2025-08-15T21:00:00.000Z"
+  },
+  {
+    "videoId": "k1mEBdI6FOc",
+    "videoUrl": "https://www.youtube.com/watch?v=k1mEBdI6FOc",
+    "streamer": "響咲リオナ",
+    "date": "2025-08-15T21:00:00.000Z"
   },
   {
     "videoId": "yRLs1rXAgyQ",

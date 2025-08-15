@@ -234,27 +234,27 @@
     "date": "2025-08-16T10:00:00.000Z"
   },
   {
-    "videoId": "R_0v5_TnKPQ",
-    "videoUrl": "https://www.youtube.com/watch?v=R_0v5_TnKPQ",
-    "streamer": "白銀ノエル ⚔",
-    "date": "2025-08-16T11:00:00.000Z"
-  },
-  {
     "videoId": "30X_JCklKog",
     "videoUrl": "https://www.youtube.com/watch?v=30X_JCklKog",
     "streamer": "博衣こより",
     "date": "2025-08-16T11:00:00.000Z"
   },
   {
-    "videoId": "HVJ5stO5YAM",
-    "videoUrl": "https://www.youtube.com/watch?v=HVJ5stO5YAM",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-08-16T12:00:00.000Z"
+    "videoId": "R_0v5_TnKPQ",
+    "videoUrl": "https://www.youtube.com/watch?v=R_0v5_TnKPQ",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-08-16T11:00:00.000Z"
   },
   {
     "videoId": "PiWihSDkhT4",
     "videoUrl": "https://www.youtube.com/watch?v=PiWihSDkhT4",
     "streamer": "鷹嶺ルイ",
+    "date": "2025-08-16T12:00:00.000Z"
+  },
+  {
+    "videoId": "HVJ5stO5YAM",
+    "videoUrl": "https://www.youtube.com/watch?v=HVJ5stO5YAM",
+    "streamer": "兎田ぺこら 👯",
     "date": "2025-08-16T12:00:00.000Z"
   },
   {
@@ -276,15 +276,21 @@
     "date": "2025-08-16T19:00:00.000Z"
   },
   {
-    "videoId": "qDkSajr21_s",
-    "videoUrl": "https://www.youtube.com/watch?v=qDkSajr21_s",
-    "streamer": "大空スバル 🚑",
-    "date": "2025-08-16T20:00:00.000Z"
-  },
-  {
     "videoId": "ty9yISSKDbo",
     "videoUrl": "https://www.youtube.com/watch?v=ty9yISSKDbo",
     "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-16T20:00:00.000Z"
+  },
+  {
+    "videoId": "fQ1-vUzfV_M",
+    "videoUrl": "https://www.youtube.com/watch?v=fQ1-vUzfV_M",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-16T20:00:00.000Z"
+  },
+  {
+    "videoId": "qDkSajr21_s",
+    "videoUrl": "https://www.youtube.com/watch?v=qDkSajr21_s",
+    "streamer": "大空スバル 🚑",
     "date": "2025-08-16T20:00:00.000Z"
   },
   {
@@ -396,6 +402,12 @@
     "date": "2025-08-16T09:00:00.000Z"
   },
   {
+    "videoId": "0ahcIvweTQQ",
+    "videoUrl": "https://www.youtube.com/watch?v=0ahcIvweTQQ",
+    "streamer": "一条莉々華",
+    "date": "2025-08-16T13:00:00.000Z"
+  },
+  {
     "videoId": "T0D2Tv0K_hw",
     "videoUrl": "https://www.youtube.com/watch?v=T0D2Tv0K_hw",
     "streamer": "FLOW GLOW",
@@ -483,13 +495,13 @@
     "videoId": "CVQWMQwStPw",
     "videoUrl": "https://www.youtube.com/watch?v=CVQWMQwStPw",
     "streamer": "Kiara",
-    "date": "2025-08-16T03:00:00.000Z"
+    "date": "2025-08-16T03:03:00.000Z"
   },
   {
     "videoId": "ykyZoZT89zU",
     "videoUrl": "https://www.youtube.com/watch?v=ykyZoZT89zU",
     "streamer": "Shiori",
-    "date": "2025-08-16T05:00:00.000Z"
+    "date": "2025-08-16T04:58:00.000Z"
   },
   {
     "videoId": "iv2GQEFNFWs",

@@ -50,16 +50,6 @@
     "duration": 992
   },
   {
-    "videoId": "f1SDHBOWBpA",
-    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
-    "streamer": "桃鈴ねね",
-    "date": "2025-08-14T19:00:00.000Z",
-    "title": "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/f1SDHBOWBpA/mqdefault.jpg",
-    "endTime": "2025-08-14T11:01:36Z",
-    "duration": 3651
-  },
-  {
     "videoId": "TeCKTigQhm0",
     "videoUrl": "https://www.youtube.com/watch?v=TeCKTigQhm0",
     "streamer": "天音かなた 💫",
@@ -68,6 +58,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/TeCKTigQhm0/mqdefault.jpg",
     "endTime": "2025-08-14T11:07:58Z",
     "duration": 4024
+  },
+  {
+    "videoId": "f1SDHBOWBpA",
+    "videoUrl": "https://www.youtube.com/watch?v=f1SDHBOWBpA",
+    "streamer": "桃鈴ねね",
+    "date": "2025-08-14T19:00:00.000Z",
+    "title": "【 Minecraft 】サマーパークで何か作る！【 桃鈴ねね / hololive 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/f1SDHBOWBpA/mqdefault.jpg",
+    "endTime": "2025-08-14T11:01:36Z",
+    "duration": 3651
   },
   {
     "videoId": "x6QC_5Avl44",
@@ -128,6 +128,26 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/2KuHsuN0Cgc/mqdefault.jpg",
     "endTime": "2025-08-14T22:25:16Z",
     "duration": 1441
+  },
+  {
+    "videoId": "Wgm-YLSlnCU",
+    "videoUrl": "https://www.youtube.com/watch?v=Wgm-YLSlnCU",
+    "streamer": "ホロライブ",
+    "date": "2025-08-15T18:00:00.000Z",
+    "title": "【新ボイス】波音とチルタイム",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Wgm-YLSlnCU/mqdefault.jpg",
+    "endTime": "2025-08-15T09:04:08Z",
+    "duration": 101
+  },
+  {
+    "videoId": "gNOI4kpg8xs",
+    "videoUrl": "https://www.youtube.com/watch?v=gNOI4kpg8xs",
+    "streamer": "風真いろは",
+    "date": "2025-08-15T19:00:00.000Z",
+    "title": "チェリーポップ - DECO*27 / Covered by 風真いろは",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gNOI4kpg8xs/mqdefault.jpg",
+    "endTime": "2025-08-15T10:04:37Z",
+    "duration": 141
   },
   {
     "videoId": "2NB30__bZEI",

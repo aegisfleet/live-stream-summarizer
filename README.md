@@ -76,6 +76,7 @@ graph TD
   - `schedule.hololive.tv`: 配信スケジュールの取得
   - `YouTube Data API v3`: 動画情報の取得
 - **開発支援AI**:
+  - **Google's Jules**: 開発支援
   - **GitHub Copilot (Agentモード)**: コーディング支援
   - **Gemini Code Assist (Agentモード)**: コーディング支援
 

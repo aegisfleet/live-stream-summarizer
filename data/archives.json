@@ -110,6 +110,16 @@
     "duration": 99
   },
   {
+    "videoId": "zB23htsJWaM",
+    "videoUrl": "https://www.youtube.com/watch?v=zB23htsJWaM",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-17T11:59:00.000Z",
+    "title": "【 リングフィット アドベンチャー 】Ring Fit ！運動の習慣化！【#綺々羅々ヴィヴィ #hololiveDEV_IS #FLOWGLOW】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zB23htsJWaM/mqdefault_live.jpg",
+    "endTime": "2025-08-17T05:08:10Z",
+    "duration": 7729
+  },
+  {
     "videoId": "WMQi-1t9M0k",
     "videoUrl": "https://www.youtube.com/watch?v=WMQi-1t9M0k",
     "streamer": "holo EN",
@@ -158,5 +168,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/ok24HgzbeLs/mqdefault.jpg",
     "endTime": "2025-08-17T01:23:07Z",
     "duration": 224
+  },
+  {
+    "videoId": "uLMkU-xc1Hw",
+    "videoUrl": "https://www.youtube.com/watch?v=uLMkU-xc1Hw",
+    "streamer": "Raora",
+    "date": "2025-08-17T12:01:00.000Z",
+    "title": "【MEMBERS ONLY】3D JUSTICE COLLAB AFTERPARTY! 🎉",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uLMkU-xc1Hw/mqdefault.jpg",
+    "endTime": "2025-08-17T04:52:05Z",
+    "duration": 6639
   }
 ]

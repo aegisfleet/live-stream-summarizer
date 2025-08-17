@@ -186,6 +186,12 @@
     "date": "2025-08-18T07:30:00.000Z"
   },
   {
+    "videoId": "toelgnW_D-o",
+    "videoUrl": "https://www.youtube.com/watch?v=toelgnW_D-o",
+    "streamer": "博衣こより",
+    "date": "2025-08-18T19:00:00.000Z"
+  },
+  {
     "videoId": "UKOr_F2KGcg",
     "videoUrl": "https://www.youtube.com/watch?v=UKOr_F2KGcg",
     "streamer": "ホロライブ",
@@ -198,16 +204,22 @@
     "date": "2025-08-18T19:00:00.000Z"
   },
   {
-    "videoId": "toelgnW_D-o",
-    "videoUrl": "https://www.youtube.com/watch?v=toelgnW_D-o",
-    "streamer": "博衣こより",
-    "date": "2025-08-18T19:00:00.000Z"
+    "videoId": "RXKr4yMylEE",
+    "videoUrl": "https://www.youtube.com/watch?v=RXKr4yMylEE",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-18T20:00:00.000Z"
   },
   {
     "videoId": "YBjaxAfhgiQ",
     "videoUrl": "https://www.youtube.com/watch?v=YBjaxAfhgiQ",
     "streamer": "ホロライブ",
     "date": "2025-08-18T20:00:00.000Z"
+  },
+  {
+    "videoId": "Ktd7zS3E-tM",
+    "videoUrl": "https://www.youtube.com/watch?v=Ktd7zS3E-tM",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-18T22:00:00.000Z"
   },
   {
     "videoId": "grVbrq1y9_g",
@@ -268,6 +280,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=Wreee0go3s4",
     "streamer": "音乃瀬奏",
     "date": "2025-08-17T22:00:00.000Z"
+  },
+  {
+    "videoId": "Uyw5uUy2iQA",
+    "videoUrl": "https://www.youtube.com/watch?v=Uyw5uUy2iQA",
+    "streamer": "水宮枢",
+    "date": "2025-08-18T22:00:00.000Z"
   },
   {
     "videoId": "3SeKxtUuZdA",
@@ -357,13 +375,25 @@
     "videoId": "MxQd1uPFAuw",
     "videoUrl": "https://www.youtube.com/watch?v=MxQd1uPFAuw",
     "streamer": "Cecilia",
-    "date": "2025-08-18T05:00:00.000Z"
+    "date": "2025-08-18T05:06:00.000Z"
+  },
+  {
+    "videoId": "vtPQzYKU-bc",
+    "videoUrl": "https://www.youtube.com/watch?v=vtPQzYKU-bc",
+    "streamer": "Elizabeth",
+    "date": "2025-08-18T05:15:00.000Z"
   },
   {
     "videoId": "AB_CKhn3ZrI",
     "videoUrl": "https://www.youtube.com/watch?v=AB_CKhn3ZrI",
     "streamer": "holo EN",
     "date": "2025-08-18T11:00:00.000Z"
+  },
+  {
+    "videoId": "XnlTvSr0hrM",
+    "videoUrl": "https://www.youtube.com/watch?v=XnlTvSr0hrM",
+    "streamer": "Shiori",
+    "date": "2025-08-19T05:00:00.000Z"
   },
   {
     "videoId": "Wh9GfSyJOk8",

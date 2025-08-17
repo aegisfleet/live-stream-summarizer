@@ -90,6 +90,16 @@
     "duration": 159
   },
   {
+    "videoId": "otYzoqDBJEg",
+    "videoUrl": "https://www.youtube.com/watch?v=otYzoqDBJEg",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-08-17T06:01:00.000Z",
+    "title": "【OHAPOL】#176 8/17日曜日！みんな大好き朝活の時間🌄 #ポルカ公演中 【尾丸ポルカ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/otYzoqDBJEg/mqdefault.jpg",
+    "endTime": "2025-08-16T23:18:11Z",
+    "duration": 8183
+  },
+  {
     "videoId": "rSTjJ8slzdk",
     "videoUrl": "https://www.youtube.com/watch?v=rSTjJ8slzdk",
     "streamer": "ReGLOSS",
@@ -118,5 +128,35 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/9Qh6UaKdsm8/mqdefault.jpg",
     "endTime": "2025-08-16T21:16:43Z",
     "duration": 8005
+  },
+  {
+    "videoId": "jTwfreav8SQ",
+    "videoUrl": "https://www.youtube.com/watch?v=jTwfreav8SQ",
+    "streamer": "FUWAMOCO",
+    "date": "2025-08-17T08:51:00.000Z",
+    "title": "【#Justice3D 3D COLLAB WATCHALONG】keep your \"enemies\" close 🐾 #holoAdvent【FUWAMOCO｜同時視聴】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/jTwfreav8SQ/mqdefault.jpg",
+    "endTime": "2025-08-17T01:29:48Z",
+    "duration": 5909
+  },
+  {
+    "videoId": "U0Rfu47fo64",
+    "videoUrl": "https://www.youtube.com/watch?v=U0Rfu47fo64",
+    "streamer": "holo EN",
+    "date": "2025-08-17T08:58:00.000Z",
+    "title": "【#Justice3D】 A Special 3D Collab! 【hololive English -Justice-】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/U0Rfu47fo64/mqdefault.jpg",
+    "endTime": "2025-08-17T01:16:14Z",
+    "duration": 4697
+  },
+  {
+    "videoId": "ok24HgzbeLs",
+    "videoUrl": "https://www.youtube.com/watch?v=ok24HgzbeLs",
+    "streamer": "holo EN",
+    "date": "2025-08-17T10:17:00.000Z",
+    "title": "【MV】All for One【hololive English Original Song】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/ok24HgzbeLs/mqdefault.jpg",
+    "endTime": "2025-08-17T01:23:07Z",
+    "duration": 224
   }
 ]

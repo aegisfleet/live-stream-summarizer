@@ -180,18 +180,6 @@
     "date": "2025-08-19T07:00:00.000Z"
   },
   {
-    "videoId": "DVirOoXH2DA",
-    "videoUrl": "https://www.youtube.com/watch?v=DVirOoXH2DA",
-    "streamer": "博衣こより",
-    "date": "2025-08-19T19:00:00.000Z"
-  },
-  {
-    "videoId": "_I8m4ZBmmlk",
-    "videoUrl": "https://www.youtube.com/watch?v=_I8m4ZBmmlk",
-    "streamer": "風真いろは",
-    "date": "2025-08-19T19:00:00.000Z"
-  },
-  {
     "videoId": "aA1WjJfRQ3Q",
     "videoUrl": "https://www.youtube.com/watch?v=aA1WjJfRQ3Q",
     "streamer": "AZKi ⚒",
@@ -202,6 +190,36 @@
     "videoUrl": "https://www.youtube.com/watch?v=oNye6RKKqMM",
     "streamer": "姫森ルーナ 🍬",
     "date": "2025-08-19T19:00:00.000Z"
+  },
+  {
+    "videoId": "_I8m4ZBmmlk",
+    "videoUrl": "https://www.youtube.com/watch?v=_I8m4ZBmmlk",
+    "streamer": "風真いろは",
+    "date": "2025-08-19T19:00:00.000Z"
+  },
+  {
+    "videoId": "DVirOoXH2DA",
+    "videoUrl": "https://www.youtube.com/watch?v=DVirOoXH2DA",
+    "streamer": "博衣こより",
+    "date": "2025-08-19T19:00:00.000Z"
+  },
+  {
+    "videoId": "ixnW1oLmFEU",
+    "videoUrl": "https://www.youtube.com/watch?v=ixnW1oLmFEU",
+    "streamer": "大空スバル 🚑",
+    "date": "2025-08-19T20:00:00.000Z"
+  },
+  {
+    "videoId": "PlSY-SBy0xU",
+    "videoUrl": "https://www.youtube.com/watch?v=PlSY-SBy0xU",
+    "streamer": "赤井はあと ❤",
+    "date": "2025-08-19T21:00:00.000Z"
+  },
+  {
+    "videoId": "iCxlxM87NIc",
+    "videoUrl": "https://www.youtube.com/watch?v=iCxlxM87NIc",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-19T22:00:00.000Z"
   },
   {
     "videoId": "2hS7-c-v8f8",
@@ -357,7 +375,7 @@
     "videoId": "XnlTvSr0hrM",
     "videoUrl": "https://www.youtube.com/watch?v=XnlTvSr0hrM",
     "streamer": "Shiori",
-    "date": "2025-08-19T05:00:00.000Z"
+    "date": "2025-08-19T04:55:00.000Z"
   },
   {
     "videoId": "reZ1VGaoerc",

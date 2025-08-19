@@ -276,6 +276,12 @@
     "date": "2025-08-20T21:00:00.000Z"
   },
   {
+    "videoId": "yxKFOmn7kGo",
+    "videoUrl": "https://www.youtube.com/watch?v=yxKFOmn7kGo",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-20T22:00:00.000Z"
+  },
+  {
     "videoId": "R6SBAiy8BOk",
     "videoUrl": "https://www.youtube.com/watch?v=R6SBAiy8BOk",
     "streamer": "ロボ子さん 🤖",
@@ -360,6 +366,12 @@
     "date": "2025-08-19T22:45:00.000Z"
   },
   {
+    "videoId": "pXz7f2oZD7c",
+    "videoUrl": "https://www.youtube.com/watch?v=pXz7f2oZD7c",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-08-20T18:00:00.000Z"
+  },
+  {
     "videoId": "SfbfA9Ckkmg",
     "videoUrl": "https://www.youtube.com/watch?v=SfbfA9Ckkmg",
     "streamer": "Kiara",
@@ -438,10 +450,16 @@
     "date": "2025-08-20T01:56:00.000Z"
   },
   {
+    "videoId": "k4NZg4GxNTA",
+    "videoUrl": "https://www.youtube.com/watch?v=k4NZg4GxNTA",
+    "streamer": "Elizabeth Sub",
+    "date": "2025-08-20T03:21:00.000Z"
+  },
+  {
     "videoId": "JUwTVz5maMU",
     "videoUrl": "https://www.youtube.com/watch?v=JUwTVz5maMU",
     "streamer": "Elizabeth",
-    "date": "2025-08-20T03:30:00.000Z"
+    "date": "2025-08-20T03:51:00.000Z"
   },
   {
     "videoId": "ckmLlctcHm8",
@@ -450,15 +468,21 @@
     "date": "2025-08-20T09:00:00.000Z"
   },
   {
-    "videoId": "jFQE2VMnGCg",
-    "videoUrl": "https://www.youtube.com/watch?v=jFQE2VMnGCg",
-    "streamer": "Calli",
-    "date": "2025-08-20T10:00:00.000Z"
+    "videoId": "ru_rnXXm5gI",
+    "videoUrl": "https://www.youtube.com/watch?v=ru_rnXXm5gI",
+    "streamer": "Ina",
+    "date": "2025-08-20T09:00:00.000Z"
   },
   {
     "videoId": "Hv_55sjQKGI",
     "videoUrl": "https://www.youtube.com/watch?v=Hv_55sjQKGI",
     "streamer": "Raora",
+    "date": "2025-08-20T10:00:00.000Z"
+  },
+  {
+    "videoId": "jFQE2VMnGCg",
+    "videoUrl": "https://www.youtube.com/watch?v=jFQE2VMnGCg",
+    "streamer": "Calli",
     "date": "2025-08-20T10:00:00.000Z"
   },
   {

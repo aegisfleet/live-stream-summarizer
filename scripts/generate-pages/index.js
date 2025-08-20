@@ -122,6 +122,10 @@ class PageGenerator {
         const highlightsJson = lang === 'en' && archive.highlights_en ? JSON.stringify(archive.highlights_en) : JSON.stringify(archive.highlights);
         const tags = lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
 
+        // Escape solidus to prevent script injection issues
+        const safeHighlightsJson = highlightsJson.replace(/\//g, '\\/');
+        const safeTagsJson = JSON.stringify(tags).replace(/\//g, '\\/');
+
         return template
             .replace(/\{\{TITLE\}\}/g, this.escapeHtml(title))
             .replace(/\{\{DESCRIPTION\}\}/g, this.escapeHtml(overviewSummary))
@@ -135,8 +139,8 @@ class PageGenerator {
             .replace(/\{\{TAGS\}\}/g, this.escapeHtml(tags.join(', ')))
             .replace(/\{\{OVERVIEW_SUMMARY\}\}/g, this.escapeHtml(overviewSummary))
             .replace(/\{\{OVERVIEW_MOOD\}\}/g, this.escapeHtml(overviewMood))
-            .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, highlightsJson)
-            .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(tags));
+            .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, safeHighlightsJson)
+            .replace(/\{\{TAGS_JSON\}\}/g, safeTagsJson);
     }
 
     formatNumber(num) {

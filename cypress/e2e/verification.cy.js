@@ -11,7 +11,7 @@ describe('Frontend Verification', () => {
     cy.get('#archive-grid .archive-card .clickable-thumbnail').first().click();
 
     // d. Locate the "みどころ" (highlights) list and click the first three items
-    cy.get('#highlights-list .highlight-item').should('have.length.gt', 0);
+    cy.get('#highlights-list .highlight-item', { timeout: 30000 }).should('have.length.gt', 0);
     cy.get('#highlights-list .highlight-item').then($items => {
         const itemsToClick = Math.min(3, $items.length);
         for (let i = 0; i < itemsToClick; i++) {

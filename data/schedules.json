@@ -252,12 +252,6 @@
     "date": "2025-08-20T12:00:00.000Z"
   },
   {
-    "videoId": "qfPtSRBS68U",
-    "videoUrl": "https://www.youtube.com/watch?v=qfPtSRBS68U",
-    "streamer": "猫又おかゆ 🍙",
-    "date": "2025-08-20T19:00:00.000Z"
-  },
-  {
     "videoId": "2hS7-c-v8f8",
     "videoUrl": "https://www.youtube.com/watch?v=2hS7-c-v8f8",
     "streamer": "常闇トワ 👾",
@@ -267,6 +261,12 @@
     "videoId": "mnVcV5or5tw",
     "videoUrl": "https://www.youtube.com/watch?v=mnVcV5or5tw",
     "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-20T19:00:00.000Z"
+  },
+  {
+    "videoId": "qfPtSRBS68U",
+    "videoUrl": "https://www.youtube.com/watch?v=qfPtSRBS68U",
+    "streamer": "猫又おかゆ 🍙",
     "date": "2025-08-20T19:00:00.000Z"
   },
   {
@@ -288,10 +288,22 @@
     "date": "2025-08-20T22:00:00.000Z"
   },
   {
+    "videoId": "X8PExNoApDk",
+    "videoUrl": "https://www.youtube.com/watch?v=X8PExNoApDk",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-20T22:00:00.000Z"
+  },
+  {
     "videoId": "yxKFOmn7kGo",
     "videoUrl": "https://www.youtube.com/watch?v=yxKFOmn7kGo",
     "streamer": "獅白ぼたん",
     "date": "2025-08-20T22:00:00.000Z"
+  },
+  {
+    "videoId": "6BeTy2IL8sI",
+    "videoUrl": "https://www.youtube.com/watch?v=6BeTy2IL8sI",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-21T21:00:00.000Z"
   },
   {
     "videoId": "R6SBAiy8BOk",
@@ -508,6 +520,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=Hv_55sjQKGI",
     "streamer": "Raora",
     "date": "2025-08-20T10:01:00.000Z"
+  },
+  {
+    "videoId": "_Zx3TJ42bo8",
+    "videoUrl": "https://www.youtube.com/watch?v=_Zx3TJ42bo8",
+    "streamer": "Ina",
+    "date": "2025-08-20T12:04:00.000Z"
+  },
+  {
+    "videoId": "tvw24XmekUA",
+    "videoUrl": "https://www.youtube.com/watch?v=tvw24XmekUA",
+    "streamer": "IRyS",
+    "date": "2025-08-20T12:45:00.000Z"
+  },
+  {
+    "videoId": "FpF5Z9oZ9jE",
+    "videoUrl": "https://www.youtube.com/watch?v=FpF5Z9oZ9jE",
+    "streamer": "Kronii",
+    "date": "2025-08-20T13:11:00.000Z"
   },
   {
     "videoId": "8T5rJQA9gY8",

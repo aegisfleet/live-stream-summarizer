@@ -252,6 +252,12 @@
     "date": "2025-08-20T12:00:00.000Z"
   },
   {
+    "videoId": "qfPtSRBS68U",
+    "videoUrl": "https://www.youtube.com/watch?v=qfPtSRBS68U",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-20T19:00:00.000Z"
+  },
+  {
     "videoId": "2hS7-c-v8f8",
     "videoUrl": "https://www.youtube.com/watch?v=2hS7-c-v8f8",
     "streamer": "常闇トワ 👾",
@@ -261,12 +267,6 @@
     "videoId": "mnVcV5or5tw",
     "videoUrl": "https://www.youtube.com/watch?v=mnVcV5or5tw",
     "streamer": "姫森ルーナ 🍬",
-    "date": "2025-08-20T19:00:00.000Z"
-  },
-  {
-    "videoId": "qfPtSRBS68U",
-    "videoUrl": "https://www.youtube.com/watch?v=qfPtSRBS68U",
-    "streamer": "猫又おかゆ 🍙",
     "date": "2025-08-20T19:00:00.000Z"
   },
   {
@@ -280,6 +280,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=R7C5Hb4Lp8I",
     "streamer": "大神ミオ 🌲",
     "date": "2025-08-20T21:00:00.000Z"
+  },
+  {
+    "videoId": "I2o7MplrtrU",
+    "videoUrl": "https://www.youtube.com/watch?v=I2o7MplrtrU",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-20T22:00:00.000Z"
   },
   {
     "videoId": "yxKFOmn7kGo",
@@ -483,25 +489,25 @@
     "videoId": "ckmLlctcHm8",
     "videoUrl": "https://www.youtube.com/watch?v=ckmLlctcHm8",
     "streamer": "FUWAMOCO",
-    "date": "2025-08-20T09:00:00.000Z"
+    "date": "2025-08-20T08:55:00.000Z"
   },
   {
     "videoId": "ru_rnXXm5gI",
     "videoUrl": "https://www.youtube.com/watch?v=ru_rnXXm5gI",
     "streamer": "Ina",
-    "date": "2025-08-20T09:00:00.000Z"
-  },
-  {
-    "videoId": "Hv_55sjQKGI",
-    "videoUrl": "https://www.youtube.com/watch?v=Hv_55sjQKGI",
-    "streamer": "Raora",
-    "date": "2025-08-20T10:00:00.000Z"
+    "date": "2025-08-20T09:02:00.000Z"
   },
   {
     "videoId": "jFQE2VMnGCg",
     "videoUrl": "https://www.youtube.com/watch?v=jFQE2VMnGCg",
     "streamer": "Calli",
     "date": "2025-08-20T10:00:00.000Z"
+  },
+  {
+    "videoId": "Hv_55sjQKGI",
+    "videoUrl": "https://www.youtube.com/watch?v=Hv_55sjQKGI",
+    "streamer": "Raora",
+    "date": "2025-08-20T10:01:00.000Z"
   },
   {
     "videoId": "8T5rJQA9gY8",

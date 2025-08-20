@@ -470,6 +470,7 @@ footer {
     padding: 0.5rem 0;
     margin-top: 0.5rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .toggle-highlights:hover {

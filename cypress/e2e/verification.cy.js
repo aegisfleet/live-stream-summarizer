@@ -25,5 +25,8 @@ describe('Frontend Verification', () => {
 
     // f. Verify that the current URL is the home page URL
     cy.url().should('eq', 'http://localhost:3000/');
+
+    // g. Take a screenshot
+    cy.screenshot('final-state');
   });
 });

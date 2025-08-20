@@ -393,6 +393,7 @@ footer {
     padding: 0.5rem 0;
     margin-top: 0.5rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .toggle-tags:hover {
@@ -483,6 +484,7 @@ footer {
     padding: 0.1rem 0;
     margin-top: 0.9rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .toggle-site-description:hover {

@@ -1,14 +1,12 @@
 require('dotenv').config();
-const axios = require('axios');
+const { default: axios } = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
 
 const SCHEDULE_URLS = [
-  "https://schedule.hololive.tv/simple/hololive",
-  "https://schedule.hololive.tv/simple/dev_is",
-  "https://schedule.hololive.tv/simple/english",
-  "https://schedule.hololive.tv/simple/indonesia"
+  "https://schedule.hololive.tv/simple",
+  "https://schedule.hololive.tv/simple/stars"
 ];
 
 async function fetchSchedule() {
@@ -16,8 +14,8 @@ async function fetchSchedule() {
         let allStreams = [];
 
         for (const url of SCHEDULE_URLS) {
-            const response = await axios.get(url);
-            const $ = cheerio.load(response.data);
+            const { data } = await axios.get(url);
+            const $ = cheerio.load(data);
             const streams = [];
 
             // 配信枠の情報を取得
@@ -63,7 +61,9 @@ async function fetchSchedule() {
                     const [time, ...streamerParts] = linkText.split(/\s+/);
                     const streamer = streamerParts.join(' ');
                     // 日付と時間のパース
-                    const [month, day] = currentDate.match(/(\d{2})\/(\d{2})/).slice(1);
+                    const match = currentDate.match(/(\d{2})\/(\d{2})/);
+                    if (!match) return;
+                    const [month, day] = match.slice(1);
                     const year = new Date().getFullYear();
                     const [hours, minutes] = time.split(':');
                     const date = new Date(year, parseInt(month) - 1, parseInt(day), parseInt(hours), parseInt(minutes));

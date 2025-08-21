@@ -140,6 +140,14 @@ button.active {
 #tag-filter-buttons button {
     background-color: #e9ecef;
     color: #333;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+#select-all,
+#select-all-tags {
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 #filter-buttons button.active,
@@ -163,6 +171,8 @@ button.active {
 #sort-buttons button {
     background-color: #e9ecef;
     color: #333;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 main {

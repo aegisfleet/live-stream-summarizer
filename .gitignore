@@ -5,3 +5,6 @@
 
 # OS generated files
 .DS_Store
+
+# Cypress screenshots
+/cypress/screenshots

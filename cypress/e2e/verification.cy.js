@@ -57,4 +57,21 @@ describe('Frontend Verification', () => {
     // It might be 'about:blank' or the Cypress runner's URL.
     cy.location('pathname').should('not.eq', '/');
   });
+
+  it('should exit the app when using the back button after switching languages', () => {
+    // a. Navigate to the main page
+    cy.visit('/');
+
+    // b. Click the language switch button to go to the English page
+    cy.get('#lang-en').click();
+
+    // c. Verify navigation to the English page
+    cy.url().should('include', '/en/');
+
+    // f. Press the browser's back button again
+    cy.go('back');
+
+    // g. Verify that the app has "exited"
+    cy.location('pathname').should('not.eq', '/');
+  });
 });

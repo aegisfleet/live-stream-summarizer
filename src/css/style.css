@@ -144,6 +144,12 @@ button.active {
     white-space: nowrap;
 }
 
+#select-all,
+#select-all-tags {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 #filter-buttons button.active,
 #tag-filter-buttons button.active,
 #sort-buttons button.active {

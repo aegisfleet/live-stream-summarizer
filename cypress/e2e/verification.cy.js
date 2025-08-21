@@ -10,6 +10,9 @@ describe('Frontend Verification', () => {
     // b. Click on the first video link to go to a detail page
     cy.get('#archive-grid .archive-card .clickable-thumbnail').first().click();
 
+    // c. Verify navigation to a detail page, waiting up to 10 seconds
+    cy.url({ timeout: 10000 }).should('include', '/pages/');
+
     // d. Locate the "みどころ" (highlights) list and click the first three items
     cy.get('#highlights-list .highlight-item').should('have.length.gt', 0);
     cy.get('#highlights-list .highlight-item').then($items => {
@@ -30,7 +33,7 @@ describe('Frontend Verification', () => {
     cy.screenshot('final-state');
   });
 
-  it('should exit the app when using the back button after returning from detail page via back-to-home button', () => {
+  it('should navigate back to the main page when using the back button from the detail page', () => {
     // a. Navigate to the main page
     cy.visit('/');
 
@@ -43,23 +46,15 @@ describe('Frontend Verification', () => {
     // c. Verify navigation to a detail page
     cy.url().should('include', '/pages/');
 
-    // d. Click the "ホームに戻る" (Back to Home) button, which uses location.replace
-    cy.get('#back-to-home', { timeout: 10000 }).should('be.visible').click();
+    // d. Press the browser's back button
+    cy.go('back');
 
     // e. Verify that the URL is the home page URL
     cy.location('pathname').should('eq', '/');
-
-    // f. Press the browser's back button
-    cy.go('back');
-
-    // g. Verify that the app has "exited"
-    // After cy.go('back') from the first page in the history, the URL should no longer be the app's URL.
-    // It might be 'about:blank' or the Cypress runner's URL.
-    cy.location('pathname').should('not.eq', '/');
   });
 
-  it('should exit the app when using the back button after switching languages', () => {
-    // a. Navigate to the main page
+  it('should navigate back to the previous language page when using the back button', () => {
+    // a. Navigate to the main page (Japanese)
     cy.visit('/');
 
     // b. Click the language switch button to go to the English page
@@ -68,10 +63,10 @@ describe('Frontend Verification', () => {
     // c. Verify navigation to the English page
     cy.url().should('include', '/en/');
 
-    // f. Press the browser's back button again
+    // d. Press the browser's back button
     cy.go('back');
 
-    // g. Verify that the app has "exited"
-    cy.location('pathname').should('not.eq', '/');
+    // e. Verify that the URL is the Japanese home page URL
+    cy.location('pathname').should('eq', '/');
   });
 });

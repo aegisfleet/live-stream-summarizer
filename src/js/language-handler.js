@@ -28,13 +28,4 @@
         localStorage.setItem(PREFERRED_LANGUAGE_KEY, 'ja');
         return;
     }
-
-    // If preference is English, but user is on the Japanese page, redirect.
-    if (preferredLanguage === 'en') {
-        const basePath = window.location.pathname.includes('/live-stream-summarizer/')
-            ? '/live-stream-summarizer'
-            : '';
-        const targetPath = basePath ? `${basePath}/en/` : '/en/';
-        location.replace(targetPath);
-    }
 })();

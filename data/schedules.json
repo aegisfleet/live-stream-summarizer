@@ -186,22 +186,34 @@
     "date": "2025-08-21T06:00:00.000Z"
   },
   {
-    "videoId": "0vsdnvL4JKs",
-    "videoUrl": "https://www.youtube.com/watch?v=0vsdnvL4JKs",
-    "streamer": "博衣こより",
-    "date": "2025-08-21T19:00:00.000Z"
-  },
-  {
     "videoId": "GAkwPTEwcGs",
     "videoUrl": "https://www.youtube.com/watch?v=GAkwPTEwcGs",
     "streamer": "大神ミオ 🌲",
     "date": "2025-08-21T19:00:00.000Z"
   },
   {
+    "videoId": "0vsdnvL4JKs",
+    "videoUrl": "https://www.youtube.com/watch?v=0vsdnvL4JKs",
+    "streamer": "博衣こより",
+    "date": "2025-08-21T19:00:00.000Z"
+  },
+  {
+    "videoId": "C5MMY9-eWFo",
+    "videoUrl": "https://www.youtube.com/watch?v=C5MMY9-eWFo",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-08-21T20:00:00.000Z"
+  },
+  {
     "videoId": "6BeTy2IL8sI",
     "videoUrl": "https://www.youtube.com/watch?v=6BeTy2IL8sI",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-08-21T21:00:00.000Z"
+  },
+  {
+    "videoId": "M65KGyr1hrU",
+    "videoUrl": "https://www.youtube.com/watch?v=M65KGyr1hrU",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-21T22:00:00.000Z"
   },
   {
     "videoId": "R6SBAiy8BOk",
@@ -406,5 +418,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=LRDwwUc31a4",
     "streamer": "Reine",
     "date": "2025-08-20T22:00:00.000Z"
+  },
+  {
+    "videoId": "UxJRvcp-B0E",
+    "videoUrl": "https://www.youtube.com/watch?v=UxJRvcp-B0E",
+    "streamer": "Kaela",
+    "date": "2025-08-21T12:30:00.000Z"
   }
 ]

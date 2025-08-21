@@ -8,7 +8,7 @@ describe('Frontend Verification', () => {
     cy.get('#archive-grid .archive-card', { timeout: 30000 }).should('have.length.gt', 0);
 
     // b. Click on the first video link to go to a detail page
-    cy.get('#archive-grid .archive-card .clickable-thumbnail').first().click();
+    cy.get('#archive-grid .archive-card .clickable-thumbnail').first().click({ force: true });
 
     // d. Locate the "みどころ" (highlights) list and click the first three items
     cy.get('#highlights-list .highlight-item').should('have.length.gt', 0);

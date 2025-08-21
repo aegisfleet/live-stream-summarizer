@@ -719,7 +719,7 @@ class ArchiveManager {
         img.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         img.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
+            location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
         });
 
         const bookmarkIcon = document.createElement('button');
@@ -758,7 +758,7 @@ class ArchiveManager {
         title.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         title.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
+            location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
         });
 
         const dateElement = document.createElement('p');
@@ -861,7 +861,7 @@ class ArchiveManager {
         detailButton.title = this.lang === 'en' ? 'View details page' : '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            location.replace(detailUrl);
+            location.href = detailUrl;
         });
         footer.appendChild(detailButton);
 
@@ -897,7 +897,7 @@ class ArchiveManager {
                     li.addEventListener('click', (e) => {
                         const seconds = timestampToSeconds(highlight.timestamp);
                         const detailPage = this.lang === 'en' ? 'en/' : '';
-                        location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`);
+                        location.href = `${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`;
                     });
 
                     const h3 = document.createElement('h3');

@@ -56,5 +56,7 @@ export function goToHomeAndResetHistory() {
         homeUrl = `${basePath}en/`;
     }
 
-    location.replace(homeUrl);
+    // Replace current history state and navigate
+    history.replaceState(null, '', homeUrl);
+    window.location.replace(homeUrl);
 }

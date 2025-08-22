@@ -56,5 +56,9 @@ export function goToHomeAndResetHistory() {
         homeUrl = `${basePath}en/`;
     }
 
-    location.replace(homeUrl);
+    // Use history.pushState to update the URL without triggering a page reload
+    history.pushState({ page: 'home' }, '', homeUrl);
+    
+    // Dispatch a custom event to notify the app that we need to reload the content
+    window.dispatchEvent(new CustomEvent('navigateToHome'));
 }

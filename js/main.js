@@ -1,4 +1,4 @@
-import { formatDuration, formatNumber, timestampToSeconds, goToHomeAndResetHistory, getBasePath } from './utils.js';
+import { formatDuration, formatNumber, getBasePath, goToHomeAndResetHistory, timestampToSeconds } from './utils.js';
 
 class ArchiveManager {
     constructor() {
@@ -20,6 +20,14 @@ class ArchiveManager {
             likeCount: 'desc'
         };
         this.lang = document.documentElement.lang || 'ja';
+        
+        // Listen for custom navigateToHome event
+        window.addEventListener('navigateToHome', () => {
+            this._resetToDefaultView();
+            this.currentPage = 1;
+            this.renderArchives(true);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
         
         this.init();
     }

@@ -180,10 +180,16 @@
     "date": "2025-08-22T06:00:00.000Z"
   },
   {
+    "videoId": "mwhcZmc6-s8",
+    "videoUrl": "https://www.youtube.com/watch?v=mwhcZmc6-s8",
+    "streamer": "風真いろは",
+    "date": "2025-08-22T19:00:00.000Z"
+  },
+  {
     "videoId": "bnVpHxLcdb0",
     "videoUrl": "https://www.youtube.com/watch?v=bnVpHxLcdb0",
     "streamer": "アキロゼ 🍎",
-    "date": "2025-08-22T18:00:00.000Z"
+    "date": "2025-08-22T19:00:00.000Z"
   },
   {
     "videoId": "Im_EVlKASuM",
@@ -192,10 +198,10 @@
     "date": "2025-08-22T19:00:00.000Z"
   },
   {
-    "videoId": "mwhcZmc6-s8",
-    "videoUrl": "https://www.youtube.com/watch?v=mwhcZmc6-s8",
-    "streamer": "風真いろは",
-    "date": "2025-08-22T19:00:00.000Z"
+    "videoId": "bDxB6BrjVYk",
+    "videoUrl": "https://www.youtube.com/watch?v=bDxB6BrjVYk",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-08-22T20:00:00.000Z"
   },
   {
     "videoId": "sHBXJI4qfVE",
@@ -346,5 +352,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=2iUP4T9vCAk",
     "streamer": "Reine",
     "date": "2025-08-21T22:00:00.000Z"
+  },
+  {
+    "videoId": "GuYxgr7AUuw",
+    "videoUrl": "https://www.youtube.com/watch?v=GuYxgr7AUuw",
+    "streamer": "Kaela",
+    "date": "2025-08-22T10:59:00.000Z"
   }
 ]

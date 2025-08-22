@@ -1,4 +1,4 @@
-import { formatDuration, formatNumber, getBasePath, goToHomeAndResetHistory, timestampToSeconds } from './utils.js';
+import { formatDuration, formatNumber, timestampToSeconds, goToHomeAndResetHistory, getBasePath } from './utils.js';
 
 class ArchiveManager {
     constructor() {
@@ -20,14 +20,6 @@ class ArchiveManager {
             likeCount: 'desc'
         };
         this.lang = document.documentElement.lang || 'ja';
-        
-        // Listen for custom navigateToHome event
-        window.addEventListener('navigateToHome', () => {
-            this._resetToDefaultView();
-            this.currentPage = 1;
-            this.renderArchives(true);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
         
         this.init();
     }
@@ -727,9 +719,7 @@ class ArchiveManager {
         img.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         img.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            const url = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
-            history.pushState({ page: 'detail' }, '', url);
-            window.location.href = url;
+            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
         });
 
         const bookmarkIcon = document.createElement('button');
@@ -768,9 +758,7 @@ class ArchiveManager {
         title.title = this.lang === 'en' ? 'Go to details page' : '詳細ページへ';
         title.addEventListener('click', () => {
             const detailPage = this.lang === 'en' ? 'en/' : '';
-            const url = `${getBasePath()}${detailPage}pages/${archive.videoId}.html`;
-            history.pushState({ page: 'detail' }, '', url);
-            window.location.href = url;
+            location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html`);
         });
 
         const dateElement = document.createElement('p');
@@ -873,8 +861,7 @@ class ArchiveManager {
         detailButton.title = this.lang === 'en' ? 'View details page' : '詳細ページを表示';
         detailButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            history.pushState({ page: 'detail' }, '', detailUrl);
-            window.location.href = detailUrl;
+            location.replace(detailUrl);
         });
         footer.appendChild(detailButton);
 
@@ -910,9 +897,7 @@ class ArchiveManager {
                     li.addEventListener('click', (e) => {
                         const seconds = timestampToSeconds(highlight.timestamp);
                         const detailPage = this.lang === 'en' ? 'en/' : '';
-                        const url = `${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`;
-                        history.pushState({ page: 'detail' }, '', url);
-                        window.location.href = url;
+                        location.replace(`${getBasePath()}${detailPage}pages/${archive.videoId}.html?t=${seconds}`);
                     });
 
                     const h3 = document.createElement('h3');

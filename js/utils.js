@@ -56,7 +56,5 @@ export function goToHomeAndResetHistory() {
         homeUrl = `${basePath}en/`;
     }
 
-    // Push new state for home page
-    history.pushState({ page: 'home' }, '', homeUrl);
-    window.location.href = homeUrl;
+    location.replace(homeUrl);
 }

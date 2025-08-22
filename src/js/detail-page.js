@@ -1,4 +1,4 @@
-import { timestampToSeconds, goToHomeAndResetHistory } from './utils.js';
+import { getBasePath, timestampToSeconds } from './utils.js';
 
 class DetailPageManager {
     constructor() {
@@ -10,6 +10,21 @@ class DetailPageManager {
     }
 
     init() {
+        // Save the initial state when loading the detail page
+        const basePath = getBasePath();
+        const lang = document.documentElement.lang || 'ja';
+        const homeUrl = lang === 'en' ? `${basePath}en/` : basePath;
+
+        // Setup popstate event listener for handling browser back button
+        window.addEventListener('popstate', () => {
+            window.location.href = homeUrl;
+        });
+
+        // Only pushState if we haven't already
+        if (!history.state || history.state.page !== 'detail') {
+            history.pushState({ page: 'detail' }, '', window.location.href);
+        }
+
         this.renderDetailPage();
         this.setupEventListeners();
         this.addStructuredData();
@@ -180,8 +195,10 @@ class DetailPageManager {
         const backToHomeButton = document.getElementById('back-to-home');
         if (backToHomeButton) {
             backToHomeButton.classList.add('show');
-            backToHomeButton.addEventListener('click', () => {
-                goToHomeAndResetHistory();
+            backToHomeButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                // バックボタンをシミュレートして、アプリを終了させる
+                history.back();
             });
         }
 
@@ -189,7 +206,8 @@ class DetailPageManager {
         if (topLogoLink) {
             topLogoLink.addEventListener('click', (event) => {
                 event.preventDefault();
-                goToHomeAndResetHistory();
+                // バックボタンをシミュレートして、アプリを終了させる
+                history.back();
             });
         }
 

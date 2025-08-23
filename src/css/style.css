@@ -145,7 +145,7 @@ button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 20px;
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -157,7 +157,7 @@ button {
 }
 
 button:hover {
-    background-color: #5da3e8;
+    background: linear-gradient(135deg, #5da3e8, #4a90e2);
     box-shadow: 0 4px 12px var(--soft-shadow);
 }
 
@@ -167,29 +167,29 @@ button:focus {
 }
 
 button.active {
-    background-color: #2a2a2a;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
 }
 
 /* Safari特有のボタン調整 */
 @supports (-webkit-appearance: none) {
     button {
-        background-color: #5da3e8;
+        background: linear-gradient(135deg, #5da3e8, #4a90e2);
         border: 1px solid #4a90e2;
     }
 
     button:hover {
-        background-color: #4a90e2;
+        background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     }
 
     button.active {
-        background-color: #1a1a1a;
+        background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
         border-color: #1a1a1a;
     }
 }
 
 #filter-buttons button,
 #tag-filter-buttons button {
-    background-color: #e9ecef;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
     color: #333;
     font-size: 0.9rem;
     white-space: nowrap;
@@ -204,7 +204,7 @@ button.active {
 #filter-buttons button.active,
 #tag-filter-buttons button.active,
 #sort-buttons button.active {
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: #fff;
     box-shadow: 0 2px 8px var(--soft-shadow);
 }
@@ -215,7 +215,7 @@ button.active {
     #filter-buttons button.active,
     #tag-filter-buttons button.active,
     #sort-buttons button.active {
-        background-color: #4a90e2;
+        background: linear-gradient(135deg, #4a90e2, #3a7bc8);
         border: 1px solid #3a7bc8;
         font-weight: 600;
     }
@@ -233,7 +233,7 @@ button.active {
 }
 
 #sort-buttons button {
-    background-color: #e9ecef;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
     color: #333;
     font-size: 0.9rem;
     white-space: nowrap;
@@ -637,7 +637,7 @@ main {
 
 .copy-button,
 .share-button {
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -650,7 +650,7 @@ main {
 }
 
 .detail-button {
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -664,12 +664,12 @@ main {
 
 .copy-button:hover,
 .share-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     opacity: 1;
 }
 
 .detail-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     opacity: 1;
 }
 
@@ -679,7 +679,7 @@ main {
     .copy-button,
     .share-button,
     .detail-button {
-        background-color: #4a90e2;
+        background: linear-gradient(135deg, #4a90e2, #3a7bc8);
         border: 1px solid #3a7bc8;
         font-weight: 500;
     }
@@ -687,7 +687,7 @@ main {
     .copy-button:hover,
     .share-button:hover,
     .detail-button:hover {
-        background-color: #3a7bc8;
+        background: linear-gradient(135deg, #3a7bc8, #2a5aa0);
         border-color: #2a5aa0;
     }
 }
@@ -770,7 +770,7 @@ footer {
 }
 
 .toggle-tags {
-    background-color: rgba(114, 181, 238, 0.1);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.1), rgba(114, 181, 238, 0.15));
     border: 1px solid rgba(114, 181, 238, 0.2);
     color: var(--accent-blue);
     cursor: pointer;
@@ -783,7 +783,7 @@ footer {
 }
 
 .toggle-tags:hover {
-    background-color: rgba(114, 181, 238, 0.2);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.2), rgba(114, 181, 238, 0.25));
     border-color: var(--accent-blue);
 }
 
@@ -851,7 +851,7 @@ footer {
 }
 
 .toggle-highlights {
-    background-color: rgba(114, 181, 238, 0.1);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.1), rgba(114, 181, 238, 0.15));
     border: 1px solid rgba(114, 181, 238, 0.2);
     color: var(--accent-blue);
     cursor: pointer;
@@ -864,12 +864,12 @@ footer {
 }
 
 .toggle-highlights:hover {
-    background-color: rgba(114, 181, 238, 0.2);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.2), rgba(114, 181, 238, 0.25));
     border-color: var(--accent-blue);
 }
 
 .toggle-site-description {
-    background-color: rgba(114, 181, 238, 0.1);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.1), rgba(114, 181, 238, 0.15));
     border: 1px solid rgba(114, 181, 238, 0.2);
     color: var(--accent-blue);
     cursor: pointer;
@@ -882,7 +882,7 @@ footer {
 }
 
 .toggle-site-description:hover {
-    background-color: rgba(114, 181, 238, 0.2);
+    background: linear-gradient(135deg, rgba(114, 181, 238, 0.2), rgba(114, 181, 238, 0.25));
     border-color: var(--accent-blue);
 }
 
@@ -895,7 +895,7 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -919,7 +919,7 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -943,7 +943,7 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -963,7 +963,7 @@ footer {
     margin: 2rem auto 0;
     padding: 0.75rem 2rem;
     font-size: 1rem;
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #5da3e8);
     color: white;
     border: none;
     border-radius: 8px;
@@ -976,7 +976,7 @@ footer {
 }
 
 #load-more:hover {
-    background-color: #5da3e8;
+    background: linear-gradient(135deg, #5da3e8, #4a90e2);
     box-shadow: 0 4px 16px rgba(114, 181, 238, 0.4);
 }
 
@@ -996,17 +996,17 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     opacity: 0.9;
 }
 
 #back-to-home:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     opacity: 0.9;
 }
 
 #watch-later:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8);
     opacity: 0.9;
 }
 
@@ -1017,7 +1017,7 @@ footer {
 #watch-later:active,
 #watch-later:focus {
     opacity: 1;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -1079,7 +1079,7 @@ footer {
 .hint-icon {
     margin-left: 8px;
     cursor: pointer;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -1088,6 +1088,12 @@ footer {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.hint-icon:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: scale(1.1);
 }
 
 .dialog-overlay {
@@ -1119,12 +1125,17 @@ footer {
 
 .dialog-box button {
     margin-top: 1rem;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dialog-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
 }
 
 #detail-container {
@@ -1327,19 +1338,19 @@ footer {
 }
 
 .back-button {
-    background-color: #6c757d;
+    background: linear-gradient(135deg, #6c757d, #5a6268);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
     margin-right: auto;
 }
 
 .back-button:hover {
-    background-color: #5a6268;
+    background: linear-gradient(135deg, #5a6268, #495057);
 }
 
 .share-buttons {
@@ -1460,11 +1471,12 @@ footer {
     padding: 0.5rem 1rem;
     border: 1px solid #007bff;
     border-radius: 5px;
+    background: linear-gradient(135deg, transparent, rgba(0, 123, 255, 0.05));
     transition: all 0.3s ease;
 }
 
 .top-language-switcher a:hover {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
 }
 

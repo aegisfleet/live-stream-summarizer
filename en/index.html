@@ -97,7 +97,7 @@
         <div id="sort-container" class="filter-group">
             <h3>Sort by</h3>
             <div id="sort-buttons">
-                <button id="sort-by-date" class="active" data-sort-key="date">Date</button>
+                <button id="sort-by-date" class="active" data-sort-key="date">Stream Date</button>
                 <button id="sort-by-viewCount" data-sort-key="viewCount">Views</button>
                 <button id="sort-by-likeCount" data-sort-key="likeCount">Likes</button>
             </div>
@@ -130,6 +130,36 @@
             <p>To use the "Watch Later" feature, first click the 🔖 icon in the top right of a video's thumbnail to add it to your "Watch Later" list.</p>
             <p>You can then view the videos you've added to the list by clicking this button.</p>
             <button id="close-watch-later-dialog">Close</button>
+        </div>
+    </div>
+
+    <!-- Bookmark List Modal -->
+    <div id="bookmark-modal" class="bookmark-modal" style="display: none;">
+        <div class="bookmark-modal-backdrop"></div>
+        <div class="bookmark-modal-content">
+            <div class="bookmark-header">
+                <h2>Bookmarks</h2>
+                <div class="bookmark-controls">
+                    <select class="bookmark-sort" id="bookmark-sort">
+                        <option value="datePublished">Stream Date</option>
+                        <option value="viewCount">View Count</option>
+                        <option value="likeCount">Like Count</option>
+                        <option value="streamer">Streamer</option>
+                    </select>
+                    <button class="bookmark-clear-all" id="bookmark-clear-all">Clear All</button>
+                    <button class="bookmark-close" id="bookmark-close">×</button>
+                </div>
+            </div>
+            
+            <div class="bookmark-list" id="bookmark-list">
+                <!-- Dynamically generated -->
+            </div>
+            
+            <div class="bookmark-empty" id="bookmark-empty" style="display: none;">
+                <div class="empty-illustration">🔖</div>
+                <h3>No bookmarks yet</h3>
+                <p>When you find an interesting stream, click the 🔖 icon on the thumbnail to save it.</p>
+            </div>
         </div>
     </div>
     <button id="back-to-home" title="Back to Home">🏠</button>

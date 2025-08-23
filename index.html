@@ -97,7 +97,7 @@
         <div id="sort-container" class="filter-group">
             <h3>ソート</h3>
             <div id="sort-buttons">
-                <button id="sort-by-date" class="active" data-sort-key="date">投稿日時</button>
+                <button id="sort-by-date" class="active" data-sort-key="date">配信日</button>
                 <button id="sort-by-viewCount" data-sort-key="viewCount">再生数</button>
                 <button id="sort-by-likeCount" data-sort-key="likeCount">高評価数</button>
             </div>
@@ -130,6 +130,36 @@
             <p>「あとで見る」機能を使用するには、まず興味のある動画のサムネイル右上にある🔖アイコンをクリックして、動画を「あとで見る」リストに追加してください。</p>
             <p>リストに追加した動画は、このボタンを押すことでまとめて確認できます。</p>
             <button id="close-watch-later-dialog">閉じる</button>
+        </div>
+    </div>
+
+    <!-- ブックマーク一覧モーダル -->
+    <div id="bookmark-modal" class="bookmark-modal" style="display: none;">
+        <div class="bookmark-modal-backdrop"></div>
+        <div class="bookmark-modal-content">
+            <div class="bookmark-header">
+                <h2>ブックマーク</h2>
+                <div class="bookmark-controls">
+                    <select class="bookmark-sort" id="bookmark-sort">
+                        <option value="datePublished">配信日順</option>
+                        <option value="viewCount">再生数順</option>
+                        <option value="likeCount">高評価数順</option>
+                        <option value="streamer">配信者順</option>
+                    </select>
+                    <button class="bookmark-clear-all" id="bookmark-clear-all">すべて削除</button>
+                    <button class="bookmark-close" id="bookmark-close">×</button>
+                </div>
+            </div>
+            
+            <div class="bookmark-list" id="bookmark-list">
+                <!-- 動的に生成される -->
+            </div>
+            
+            <div class="bookmark-empty" id="bookmark-empty" style="display: none;">
+                <div class="empty-illustration">🔖</div>
+                <h3>ブックマークがありません</h3>
+                <p>気になる配信を見つけたら、サムネイルの🔖アイコンをクリックして保存しましょう。</p>
+            </div>
         </div>
     </div>
     <button id="back-to-home" title="ホームに戻る">🏠</button>

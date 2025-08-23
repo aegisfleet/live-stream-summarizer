@@ -540,45 +540,43 @@ class ArchiveManager {
     }
 
     toggleWatchLaterMode() {
-        // 新しいブックマーク機能を使用
-        const bookmarkCount = this.bookmarkManager ? 
-            this.bookmarkManager.getBookmarkCount() : 
-            this.watchLaterList.size;
-        
-        if (bookmarkCount === 0) {
-            this.showWatchLaterDialog();
-            return;
-        }
-        
-        this.isWatchLaterMode = !this.isWatchLaterMode;
-        
-        if (this.isWatchLaterMode) {
-            // 新しいブックマーク機能を使用
-            const bookmarkedVideoIds = this.bookmarkManager ? 
-                this.bookmarkManager.getBookmarks() : 
-                Array.from(this.watchLaterList);
-            
-            this.filteredData = this.archiveData.filter(archive => 
-                bookmarkedVideoIds.includes(archive.videoId)
-            );
-            
-            document.getElementById('filter-container').style.display = 'none';
-            document.querySelector('.filter-group.collapsible').style.display = 'none';
-            
-            const params = new URLSearchParams(window.location.search);
-            params.set('watchLater', 'true');
-            const newUrl = `${window.location.pathname}?${params.toString()}`;
-            history.replaceState(null, '', newUrl);
+        // 新しいブックマーク機能を使用してモーダルを表示
+        if (this.bookmarkManager) {
+            this.bookmarkManager.showBookmarkList();
         } else {
-            this._resetToDefaultView();
-        }
-        
-        this.currentPage = 1;
-        this.renderArchives(true);
-        
-        const archiveGrid = document.getElementById('archive-grid');
-        if (archiveGrid) {
-            archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // フォールバック: 既存の機能
+            const bookmarkCount = this.watchLaterList.size;
+            
+            if (bookmarkCount === 0) {
+                this.showWatchLaterDialog();
+                return;
+            }
+            
+            this.isWatchLaterMode = !this.isWatchLaterMode;
+            
+            if (this.isWatchLaterMode) {
+                this.filteredData = this.archiveData.filter(archive => 
+                    this.watchLaterList.has(archive.videoId)
+                );
+                
+                document.getElementById('filter-container').style.display = 'none';
+                document.querySelector('.filter-group.collapsible').style.display = 'none';
+                
+                const params = new URLSearchParams(window.location.search);
+                params.set('watchLater', 'true');
+                const newUrl = `${window.location.pathname}?${params.toString()}`;
+                history.replaceState(null, '', newUrl);
+            } else {
+                this._resetToDefaultView();
+            }
+            
+            this.currentPage = 1;
+            this.renderArchives(true);
+            
+            const archiveGrid = document.getElementById('archive-grid');
+            if (archiveGrid) {
+                archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     }
 

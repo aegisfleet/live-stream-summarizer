@@ -996,23 +996,23 @@ class ArchiveManager {
 
         const dateElement = document.createElement('p');
         dateElement.className = 'archive-date';
-        dateElement.textContent = `${this.lang === 'en' ? 'Stream Date' : '配信日時'}: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
+        dateElement.textContent = `📅 ${this.lang === 'en' ? 'Stream Date' : '配信日時'}: ${new Date(archive.date).toISOString().slice(0, 19).replace('T', ' ')}`;
 
         const duration = document.createElement('p');
         duration.className = 'duration';
-        duration.textContent = `${this.lang === 'en' ? 'Duration' : '配信時間'}: ${formatDuration(archive.duration, this.lang)}`;
+        duration.textContent = `⏱️ ${this.lang === 'en' ? 'Duration' : '配信時間'}: ${formatDuration(archive.duration, this.lang)}`;
 
         const viewCount = document.createElement('p');
         viewCount.className = 'view-count';
-        viewCount.textContent = `${this.lang === 'en' ? 'Views' : '再生数'}: ${formatNumber(archive.viewCount)}`;
+        viewCount.textContent = `👀 ${this.lang === 'en' ? 'Views' : '再生数'}: ${formatNumber(archive.viewCount)}`;
 
         const likeCount = document.createElement('p');
         likeCount.className = 'like-count';
-        likeCount.textContent = `${this.lang === 'en' ? 'Likes' : '高評価数'}: ${formatNumber(archive.likeCount)}`;
+        likeCount.textContent = `👍 ${this.lang === 'en' ? 'Likes' : '高評価数'}: ${formatNumber(archive.likeCount)}`;
 
         const streamer = document.createElement('p');
         streamer.className = 'streamer-name clickable-streamer';
-        streamer.textContent = `${this.lang === 'en' ? 'Streamer' : '配信者'}: ${archive.streamer}`;
+        streamer.textContent = `🎭 ${this.lang === 'en' ? 'Streamer' : '配信者'}: ${archive.streamer}`;
         streamer.title = this.lang === 'en' ? `Filter by streamer: "${archive.streamer}"` : `配信者「${archive.streamer}」で絞り込む`;
         streamer.addEventListener('click', () => this.filterByStreamer(archive.streamer));
 
@@ -1027,7 +1027,7 @@ class ArchiveManager {
 
         const overviewMood = document.createElement('p');
         overviewMood.className = 'overview-mood';
-        overviewMood.textContent = `${this.lang === 'en' ? 'Mood' : '配信の雰囲気'}：${overviewData.mood}`;
+        overviewMood.textContent = `🎨 ${this.lang === 'en' ? 'Mood' : '配信の雰囲気'}：${overviewData.mood}`;
 
         overview.appendChild(dateElement);
         overview.appendChild(duration);
@@ -1114,8 +1114,8 @@ class ArchiveManager {
 
         const title = document.createElement('strong');
         title.textContent = type === 'highlights'
-            ? (this.lang === 'en' ? 'Highlights:' : '見どころ：')
-            : (this.lang === 'en' ? 'Tags:' : 'タグ：');
+            ? (this.lang === 'en' ? '✨ Highlights:' : '✨ 見どころ：')
+            : (this.lang === 'en' ? '🏷️ Tags:' : '🏷️ タグ：');
         title.className = 'collapsible-trigger';
 
         const listContainer = document.createElement('div');

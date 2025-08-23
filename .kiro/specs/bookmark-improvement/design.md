@@ -113,11 +113,13 @@ const bookmarkData = {
             addedAt: "ISO8601 timestamp",
             title: "string", // キャッシュ用
             streamer: "string", // キャッシュ用
-            thumbnailUrl: "string" // キャッシュ用
+            thumbnailUrl: "string", // キャッシュ用
+            viewCount: "number", // 再生数
+            likeCount: "number" // 高評価数
         }
     ],
     settings: {
-        sortOrder: "dateAdded|datePublished|streamer",
+        sortOrder: "datePublished|viewCount|likeCount|streamer",
         showNotifications: true,
         enableHaptics: true
     }
@@ -311,8 +313,9 @@ class DataMigration {
             <h2>ブックマーク</h2>
             <div class="bookmark-controls">
                 <select class="bookmark-sort">
-                    <option value="dateAdded">追加日順</option>
                     <option value="datePublished">配信日順</option>
+                    <option value="viewCount">再生数順</option>
+                    <option value="likeCount">高評価数順</option>
                     <option value="streamer">配信者順</option>
                 </select>
                 <button class="bookmark-clear-all">すべて削除</button>
@@ -425,6 +428,34 @@ class DataMigration {
 .bookmark-item-meta {
     color: #666;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.bookmark-item-streamer {
+    font-weight: 500;
+    color: #007bff;
+}
+
+.bookmark-item-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.bookmark-item-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.bookmark-item-views,
+.bookmark-item-likes {
+    display: flex;
+    align-items: center;
+    gap: 2px;
 }
 
 .bookmark-item-actions {

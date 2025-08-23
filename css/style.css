@@ -1267,10 +1267,10 @@ footer {
 .snackbar {
     visibility: hidden;
     min-width: 250px;
-    background-color: #333;
+    background: linear-gradient(135deg, #4a90e2 0%, #2c5aa0 100%);
     color: #fff;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 16px;
     position: fixed;
     z-index: 100;
@@ -1282,7 +1282,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     transition: bottom 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(74, 144, 226, 0.4);
 }
 
 .snackbar.show {
@@ -1296,22 +1296,23 @@ footer {
 }
 
 .snackbar-button {
-    background-color: #4CAF50;
-    /* Green */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
     color: white;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     white-space: nowrap;
+    transition: all 0.2s ease;
 }
 
 .snackbar-button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .top-language-switcher {
@@ -1391,11 +1392,11 @@ footer {
 
 .bookmark-header {
     padding: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(114, 181, 238, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2c5aa0 0%, #4a90e2 100%);
     color: white;
 }
 
@@ -1467,18 +1468,20 @@ footer {
 }
 
 .bookmark-clear-all {
-    background: rgba(255, 71, 87, 0.9);
+    background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 8px 16px;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
 }
 
 .bookmark-clear-all:hover {
-    background: rgba(255, 71, 87, 1);
+    background: linear-gradient(135deg, #ff3742 0%, #e53935 100%);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
 }
 
 .bookmark-close {
@@ -1923,13 +1926,13 @@ footer {
 
 /* ブックマークモーダル */
 .bookmark-header {
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, #2c5aa0 0%, #4a90e2 100%);
 }
 
 /* スナックバー */
 .snackbar {
-    background-color: #333;
-    border: 1px solid rgba(114, 181, 238, 0.2);
+    background: linear-gradient(135deg, #4a90e2 0%, #2c5aa0 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* 言語切り替えボタン */

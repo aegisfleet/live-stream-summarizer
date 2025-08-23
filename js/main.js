@@ -14,14 +14,12 @@ class ArchiveManager {
         this.currentPage = 1;
         this.itemsPerPage = 15;
         this.originalTitle = document.title;
-        
+
         // 新しいブックマーク機能
         this.bookmarkManager = null;
         this.notificationSystem = null;
         this.bookmarkAccessibility = null;
-        
-        // 既存機能との互換性のため残す（後で削除予定）
-        this.watchLaterList = new Set();
+
         this.isWatchLaterMode = false;
         this.currentSortKey = 'date';
         this.sortOrders = {
@@ -30,7 +28,7 @@ class ArchiveManager {
             likeCount: 'desc'
         };
         this.lang = document.documentElement.lang || 'ja';
-        
+
         // Listen for custom navigateToHome event
         window.addEventListener('navigateToHome', () => {
             this._resetToDefaultView();
@@ -51,19 +49,17 @@ class ArchiveManager {
                 history.back();
             }
         });
-        
+
         this.init();
     }
-    
+
     async init() {
         await this.loadData();
-        
+
         // 新しいブックマーク機能の初期化
         await this.initializeBookmarkSystem();
-        
-        // 既存機能（互換性のため）
-        this.loadWatchLaterList();
-        this.cleanupWatchLaterList();
+
+
         this._setupInitialFilters();
         this._setupEventListeners();
         this.renderArchives();
@@ -83,25 +79,24 @@ class ArchiveManager {
         try {
             // 通知システムの初期化
             this.notificationSystem = new NotificationSystem();
-            
+
             // アクセシビリティ機能の初期化
             this.bookmarkAccessibility = new BookmarkAccessibility();
-            
+
             // ブックマークマネージャーの初期化
             this.bookmarkManager = new BookmarkManager(this);
-            
-            // 既存のwatchLaterListとの統合
-            await this.migrateFromWatchLaterList();
-            
+
+
+
             // イベントリスナーの設定
             this.setupBookmarkEventListeners();
-            
+
             console.log('新しいブックマーク機能が初期化されました');
-            
+
         } catch (error) {
             console.error('ブックマーク機能の初期化に失敗:', error);
-            
-            // フォールバック: 既存機能を使用
+
+            // フォールバック: 基本的な通知機能を使用
             this.notificationSystem = {
                 showBookmarkSuccess: (added, archiveData) => {
                     console.log(`ブックマーク${added ? '追加' : '削除'}: ${archiveData?.title || 'Unknown'}`);
@@ -113,46 +108,24 @@ class ArchiveManager {
         }
     }
 
-    /**
-     * 既存のwatchLaterListから新しいブックマーク機能への移行
-     */
-    async migrateFromWatchLaterList() {
-        try {
-            // 既存のwatchLaterListがある場合は移行
-            if (this.watchLaterList && this.watchLaterList.size > 0) {
-                console.log(`${this.watchLaterList.size}件のwatchLaterListを新しいブックマーク機能に移行中...`);
-                
-                for (const videoId of this.watchLaterList) {
-                    await this.bookmarkManager.addBookmark(videoId);
-                }
-                
-                // 移行完了後、古いデータをクリア
-                this.watchLaterList.clear();
-                localStorage.removeItem('watchLaterList');
-                
-                console.log('watchLaterListの移行が完了しました');
-            }
-        } catch (error) {
-            console.warn('watchLaterListの移行に失敗:', error);
-        }
-    }
+
 
     /**
      * ブックマーク関連のイベントリスナーを設定
      */
     setupBookmarkEventListeners() {
         // ブックマーク切り替えイベントは直接処理するため削除
-        
+
         // ブックマーク一覧切り替えイベント
         document.addEventListener('bookmark-list-toggle', () => {
             this.toggleWatchLaterMode();
         });
-        
+
         // ストレージクリーンアップイベント
         document.addEventListener('storage-cleanup', () => {
             this.cleanupStorage();
         });
-        
+
         // ブックマーク再試行イベント
         document.addEventListener('bookmark-retry', async (event) => {
             const { archiveData } = event.detail;
@@ -180,21 +153,22 @@ class ArchiveManager {
             // 古いデータを削除
             const keysToRemove = [
                 'holoSummary_old_data',
+                'watchLaterList',
                 'watchLaterList_backup',
                 'temp_bookmark_data'
             ];
-            
+
             keysToRemove.forEach(key => {
                 localStorage.removeItem(key);
             });
-            
+
             if (this.notificationSystem) {
                 this.notificationSystem.showToast(
                     this.lang === 'en' ? 'Storage cleaned up successfully' : 'ストレージのクリーンアップが完了しました',
                     'success'
                 );
             }
-            
+
         } catch (error) {
             console.error('ストレージクリーンアップエラー:', error);
         }
@@ -206,17 +180,17 @@ class ArchiveManager {
     updateWatchLaterMode() {
         if (this.isWatchLaterMode && this.bookmarkManager) {
             const bookmarkedVideoIds = this.bookmarkManager.getBookmarks();
-            
+
             if (bookmarkedVideoIds.length === 0) {
                 // ブックマークがなくなった場合は通常モードに戻る
                 this._resetToDefaultView();
             } else {
                 // ブックマークされた配信のみを表示
-                this.filteredData = this.archiveData.filter(archive => 
+                this.filteredData = this.archiveData.filter(archive =>
                     bookmarkedVideoIds.includes(archive.videoId)
                 );
             }
-            
+
             this.currentPage = 1;
             this.renderArchives(true);
         }
@@ -224,17 +198,18 @@ class ArchiveManager {
 
     _setupInitialFilters() {
         const hasUrlParams = this.filterByUrlParams();
-        
+
         if (!hasUrlParams || new URLSearchParams(window.location.search).get('watchLater') === 'true') {
             this.setupStreamerFilter();
             this.setupTagFilter();
         }
-        
+
         const params = new URLSearchParams(window.location.search);
-        if (params.get('watchLater') === 'true' && this.watchLaterList.size > 0) {
+        if (params.get('watchLater') === 'true' && this.bookmarkManager && this.bookmarkManager.getBookmarkCount() > 0) {
             this.isWatchLaterMode = true;
-            this.filteredData = this.archiveData.filter(archive => 
-                this.watchLaterList.has(archive.videoId)
+            const bookmarkedVideoIds = this.bookmarkManager.getBookmarks();
+            this.filteredData = this.archiveData.filter(archive =>
+                bookmarkedVideoIds.includes(archive.videoId)
             );
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
@@ -338,10 +313,11 @@ class ArchiveManager {
         }
 
         const watchLater = params.get('watchLater');
-        if (watchLater === 'true' && this.watchLaterList.size > 0) {
+        if (watchLater === 'true' && this.bookmarkManager && this.bookmarkManager.getBookmarkCount() > 0) {
             this.isWatchLaterMode = true;
-            this.filteredData = this.archiveData.filter(archive => 
-                this.watchLaterList.has(archive.videoId)
+            const bookmarkedVideoIds = this.bookmarkManager.getBookmarks();
+            this.filteredData = this.archiveData.filter(archive =>
+                bookmarkedVideoIds.includes(archive.videoId)
             );
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
@@ -376,7 +352,7 @@ class ArchiveManager {
             return;
         }
 
-        window.onscroll = function() {
+        window.onscroll = function () {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 backToTopButton.classList.add('show');
             } else {
@@ -435,7 +411,7 @@ class ArchiveManager {
             watchLaterButton.classList.remove('show');
         } else {
             watchLaterButton.classList.add('show');
-            
+
             // ブックマーク数の表示を更新
             this.updateBookmarkButtonDisplay();
         }
@@ -452,13 +428,13 @@ class ArchiveManager {
         const watchLaterButton = document.getElementById('watch-later');
         if (!watchLaterButton) return;
 
-        const bookmarkCount = this.bookmarkManager ? 
-            this.bookmarkManager.getBookmarkCount() : 
-            this.watchLaterList.size;
+        const bookmarkCount = this.bookmarkManager ?
+            this.bookmarkManager.getBookmarkCount() :
+            0;
 
         // カウンターバッジの更新または作成
         let countBadge = watchLaterButton.querySelector('.bookmark-count');
-        
+
         if (!countBadge) {
             countBadge = document.createElement('span');
             countBadge.className = 'bookmark-count';
@@ -470,26 +446,26 @@ class ArchiveManager {
 
         // ボタンのタイトル更新
         const title = bookmarkCount > 0
-            ? (this.lang === 'en' 
-                ? `View ${bookmarkCount} bookmarked streams` 
+            ? (this.lang === 'en'
+                ? `View ${bookmarkCount} bookmarked streams`
                 : `${bookmarkCount}件のブックマークを表示`)
-            : (this.lang === 'en' 
-                ? 'No bookmarks yet' 
+            : (this.lang === 'en'
+                ? 'No bookmarks yet'
                 : 'ブックマークはありません');
-        
+
         watchLaterButton.title = title;
 
         // アクセシビリティ対応
         watchLaterButton.setAttribute('aria-label', title);
     }
-    
+
     async loadData() {
         try {
             const dataPath = this.lang === 'en' ? '../data/summaries.json' : 'data/summaries.json';
             const response = await fetch(dataPath);
             this.archiveData = await response.json();
             this.filteredData = [...this.archiveData];
-            
+
             this.archiveData.forEach(archive => {
                 this.streamers.add(archive.streamer);
                 const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
@@ -503,80 +479,15 @@ class ArchiveManager {
         }
     }
 
-    loadWatchLaterList() {
-        try {
-            const savedList = localStorage.getItem('watchLaterList');
-            if (savedList) {
-                this.watchLaterList = new Set(JSON.parse(savedList));
-            }
-        } catch (error) {
-            const errorMsg = this.lang === 'en' ? 'Failed to load Watch Later list:' : 'あとで見るリストの読み込みに失敗しました:';
-            console.error(errorMsg, error);
-        }
-    }
 
-    cleanupWatchLaterList() {
-        const existingVideoIds = new Set(this.archiveData.map(archive => archive.videoId));
-        const originalSize = this.watchLaterList.size;
-
-        for (const videoId of this.watchLaterList) {
-            if (!existingVideoIds.has(videoId)) {
-                this.watchLaterList.delete(videoId);
-            }
-        }
-        
-        if (this.watchLaterList.size !== originalSize) {
-            this.saveWatchLaterList();
-        }
-    }
-
-    saveWatchLaterList() {
-        try {
-            localStorage.setItem('watchLaterList', JSON.stringify([...this.watchLaterList]));
-        } catch (error) {
-            const errorMsg = this.lang === 'en' ? 'Failed to save Watch Later list:' : 'あとで見るリストの保存に失敗しました:';
-            console.error(errorMsg, error);
-        }
-    }
 
     toggleWatchLaterMode() {
         // 新しいブックマーク機能を使用してモーダルを表示
         if (this.bookmarkManager) {
             this.bookmarkManager.showBookmarkList();
         } else {
-            // フォールバック: 既存の機能
-            const bookmarkCount = this.watchLaterList.size;
-            
-            if (bookmarkCount === 0) {
-                this.showWatchLaterDialog();
-                return;
-            }
-            
-            this.isWatchLaterMode = !this.isWatchLaterMode;
-            
-            if (this.isWatchLaterMode) {
-                this.filteredData = this.archiveData.filter(archive => 
-                    this.watchLaterList.has(archive.videoId)
-                );
-                
-                document.getElementById('filter-container').style.display = 'none';
-                document.querySelector('.filter-group.collapsible').style.display = 'none';
-                
-                const params = new URLSearchParams(window.location.search);
-                params.set('watchLater', 'true');
-                const newUrl = `${window.location.pathname}?${params.toString()}`;
-                history.replaceState(null, '', newUrl);
-            } else {
-                this._resetToDefaultView();
-            }
-            
-            this.currentPage = 1;
-            this.renderArchives(true);
-            
-            const archiveGrid = document.getElementById('archive-grid');
-            if (archiveGrid) {
-                archiveGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            // フォールバック: 基本的なブックマーク機能
+            console.warn('BookmarkManagerが利用できません。基本機能を使用します。');
         }
     }
 
@@ -587,31 +498,7 @@ class ArchiveManager {
         }
     }
 
-    toggleWatchLater(videoId, bookmarkIcon) {
-        if (this.watchLaterList.has(videoId)) {
-            this.watchLaterList.delete(videoId);
-            bookmarkIcon.classList.remove('active');
-            bookmarkIcon.title = this.lang === 'en' ? 'Add to Watch Later' : 'あとで見るに追加';
-        } else {
-            this.watchLaterList.add(videoId);
-            bookmarkIcon.classList.add('active');
-            bookmarkIcon.title = this.lang === 'en' ? 'Remove from Watch Later' : 'あとで見るから削除';
-        }
-        
-        this.saveWatchLaterList();
-        
-        if (this.isWatchLaterMode) {
-            if (this.watchLaterList.size === 0) {
-                this._resetToDefaultView();
-            } else {
-                this.filteredData = this.archiveData.filter(archive => 
-                    this.watchLaterList.has(archive.videoId)
-                );
-            }
-            this.currentPage = 1;
-            this.renderArchives(true);
-        }
-    }
+
 
     _resetToDefaultView() {
         this.isWatchLaterMode = false;
@@ -632,14 +519,14 @@ class ArchiveManager {
 
         const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
         tagButtons.forEach(button => button.classList.add('active'));
-        
+
 
     }
-    
+
     setupStreamerFilter() {
         const filterContainer = document.getElementById('filter-buttons');
         const selectAllButton = document.getElementById('select-all');
-        
+
         if (!filterContainer || !selectAllButton) {
             const errorMsg = this.lang === 'en' ? 'Required DOM elements not found:' : '必要なDOM要素が見つかりません:';
             console.error(errorMsg, {
@@ -648,14 +535,14 @@ class ArchiveManager {
             });
             return;
         }
-        
+
         Array.from(this.streamers).sort().forEach(streamer => {
             const button = document.createElement('button');
             button.textContent = streamer;
             button.addEventListener('click', () => this.filterByStreamer(streamer));
             filterContainer.appendChild(button);
         });
-        
+
         selectAllButton.addEventListener('click', () => {
             if (new URLSearchParams(window.location.search).has('videoId')) {
                 goToHomeAndResetHistory();
@@ -663,7 +550,7 @@ class ArchiveManager {
                 this.selectAllStreamers();
             }
         });
-        
+
         if (this.selectedStreamers.size > 0) {
             const buttons = document.querySelectorAll('#filter-buttons button');
             buttons.forEach(button => {
@@ -677,7 +564,7 @@ class ArchiveManager {
             this.selectAllStreamers(false);
         }
     }
-    
+
     filterByStreamer(clickedStreamer) {
         const params = new URLSearchParams(window.location.search);
         const videoIdPresent = params.has('videoId');
@@ -720,23 +607,23 @@ class ArchiveManager {
         this.updateTitle();
         this.setupBackToHomeButton();
     }
-    
+
     selectAllStreamers(updateHistory = true) {
         const buttons = document.querySelectorAll('#filter-buttons button');
         this.selectedStreamers = new Set(this.streamers);
         buttons.forEach(button => button.classList.add('active'));
-        
+
         if (updateHistory) {
             const params = new URLSearchParams(window.location.search);
             params.delete('streamer');
             const newUrl = `${window.location.pathname}?${params.toString()}`.replace(/\?$/, '');
             history.replaceState(null, '', newUrl);
         }
-        
+
         this.updateTagFilter();
         this.updateTitle();
     }
-    
+
     setupTagFilter() {
         const filterContainer = document.getElementById('tag-filter-buttons');
         const selectAllButton = document.getElementById('select-all-tags');
@@ -865,7 +752,7 @@ class ArchiveManager {
             this.setupTagFilter();
             this.setupBackToHomeButton();
         }
-        
+
         if (this.selectedTags.has(clickedTag) && this.selectedTags.size === 1) {
             return;
         }
@@ -886,13 +773,13 @@ class ArchiveManager {
         this.filteredData = this.archiveData.filter(archive => {
             const streamerMatch = this.selectedStreamers.has(archive.streamer);
             const tags = this.lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
-            const tagMatch = this.selectedTags.size === 0 || 
-                             (tags && tags.some(tag => this.selectedTags.has(tag)));
+            const tagMatch = this.selectedTags.size === 0 ||
+                (tags && tags.some(tag => this.selectedTags.has(tag)));
             return streamerMatch && tagMatch;
         });
         this.renderArchives(true);
     }
-    
+
     renderArchives(clearGrid = true) {
         const grid = document.getElementById('archive-grid');
         const loadMoreButton = document.getElementById('load-more');
@@ -902,7 +789,7 @@ class ArchiveManager {
             console.error(errorMsg);
             return;
         }
-        
+
         if (clearGrid) {
             grid.innerHTML = '';
         }
@@ -929,7 +816,7 @@ class ArchiveManager {
             }
             return 0;
         });
-        
+
         const startIndex = (this.currentPage - 1) * this.itemsPerPage;
         const endIndex = startIndex + this.itemsPerPage;
         const archivesToRender = sortedData.slice(startIndex, endIndex);
@@ -947,11 +834,11 @@ class ArchiveManager {
             }
         }
     }
-    
+
     createArchiveCard(archive) {
         const card = document.createElement('div');
         card.className = 'archive-card';
-        
+
         const img = document.createElement('img');
         img.src = archive.thumbnailUrl;
         img.alt = archive.title;
@@ -968,22 +855,22 @@ class ArchiveManager {
         bookmarkIcon.className = 'bookmark-icon';
         bookmarkIcon.innerHTML = '🔖';
         bookmarkIcon.setAttribute('data-video-id', archive.videoId);
-        
+
         // 新しいブックマーク機能を使用
-        const isBookmarked = this.bookmarkManager ? 
-            this.bookmarkManager.hasBookmark(archive.videoId) : 
+        const isBookmarked = this.bookmarkManager ?
+            this.bookmarkManager.hasBookmark(archive.videoId) :
             this.watchLaterList.has(archive.videoId);
-        
+
         if (isBookmarked) {
             bookmarkIcon.classList.add('active');
         }
-        
+
         // アクセシビリティ対応
         if (this.bookmarkAccessibility) {
             this.bookmarkAccessibility.setupBookmarkIcon(
-                bookmarkIcon, 
-                archive.videoId, 
-                isBookmarked, 
+                bookmarkIcon,
+                archive.videoId,
+                isBookmarked,
                 archive
             );
         } else {
@@ -992,46 +879,46 @@ class ArchiveManager {
                 ? (this.lang === 'en' ? 'Remove from bookmarks' : 'ブックマークから削除')
                 : (this.lang === 'en' ? 'Add to bookmarks' : 'ブックマークに追加');
         }
-        
+
         bookmarkIcon.addEventListener('click', async (e) => {
             e.stopPropagation();
-            
+
             if (this.bookmarkManager) {
                 // 即座にUIを更新（楽観的更新）
                 const currentState = this.bookmarkManager.hasBookmark(archive.videoId);
                 const newState = !currentState;
-                
+
                 // アイコンの状態を即座に変更
                 if (newState) {
                     bookmarkIcon.classList.add('active');
                 } else {
                     bookmarkIcon.classList.remove('active');
                 }
-                
+
                 // アクセシビリティ状態も即座に更新
                 if (this.bookmarkAccessibility) {
                     this.bookmarkAccessibility.updateBookmarkIconState(
-                        bookmarkIcon, 
-                        newState, 
+                        bookmarkIcon,
+                        newState,
                         archive
                     );
                 }
-                
+
                 // 実際のブックマーク操作を実行
                 try {
                     const success = await this.bookmarkManager.toggleBookmark(archive.videoId);
-                    
+
                     if (success) {
                         // 成功時の通知表示（1回のみ）
                         if (this.notificationSystem) {
                             this.notificationSystem.showBookmarkSuccess(newState, archive);
                         }
-                        
+
                         // アクセシビリティアナウンス
                         if (this.bookmarkAccessibility) {
                             this.bookmarkAccessibility.announceBookmarkAction(newState, archive);
                         }
-                        
+
                         // ブックマークモードの場合はリストを更新
                         if (this.isWatchLaterMode) {
                             this.updateWatchLaterMode();
@@ -1043,11 +930,11 @@ class ArchiveManager {
                         } else {
                             bookmarkIcon.classList.remove('active');
                         }
-                        
+
                         if (this.bookmarkAccessibility) {
                             this.bookmarkAccessibility.updateBookmarkIconState(
-                                bookmarkIcon, 
-                                currentState, 
+                                bookmarkIcon,
+                                currentState,
                                 archive
                             );
                         }
@@ -1059,28 +946,28 @@ class ArchiveManager {
                     } else {
                         bookmarkIcon.classList.remove('active');
                     }
-                    
+
                     if (this.bookmarkAccessibility) {
                         this.bookmarkAccessibility.updateBookmarkIconState(
-                            bookmarkIcon, 
-                            currentState, 
+                            bookmarkIcon,
+                            currentState,
                             archive
                         );
                     }
-                    
+
                     // エラー通知
                     if (this.notificationSystem) {
                         this.notificationSystem.showBookmarkError(error.message, archive);
                     }
-                    
+
                     console.error('ブックマーク操作エラー:', error);
                 }
             } else {
-                // フォールバック: 既存機能を使用
-                this.toggleWatchLater(archive.videoId, bookmarkIcon);
+                // フォールバック: 基本的なブックマーク機能
+                console.warn('BookmarkManagerが利用できません');
             }
         });
-        
+
         const content = this._createCardContent(archive);
         const footer = this._createCardFooter(archive);
 
@@ -1184,7 +1071,7 @@ class ArchiveManager {
             }).catch(err => {
                 console.error('クリップボードへのコピーに失敗しました:', err);
                 copyButton.textContent = this.lang === 'en' ? 'Failed' : '失敗';
-                 setTimeout(() => {
+                setTimeout(() => {
                     copyButton.textContent = this.lang === 'en' ? 'Copy' : 'コピー';
                 }, 2000);
             });

@@ -177,9 +177,11 @@ class BookmarkManager {
             this.bookmarks.delete(videoId);
             await this.saveBookmarks();
 
-            // UI更新
-            this.updateBookmarkIcon(videoId, false);
-            this.updateBookmarkCounter();
+            // UI更新を確実に実行
+            setTimeout(() => {
+                this.updateBookmarkIcon(videoId, false);
+                this.updateBookmarkCounter();
+            }, 0);
 
             // 通知は呼び出し元で処理するため、ここでは表示しない
 
@@ -549,6 +551,10 @@ class BookmarkManager {
                 // リストを更新
                 this.updateBookmarkList();
 
+                // メインページのアイコンを確実に更新
+                this.updateBookmarkIcon(videoId, false);
+                this.updateBookmarkCounter();
+
                 // 通知表示
                 this.showNotification(
                     this.lang === 'en' ? 'Bookmark removed' : 'ブックマークを削除しました',
@@ -765,7 +771,24 @@ class BookmarkManager {
      * ブックマークアイコンの更新
      */
     updateBookmarkIcon(videoId, isActive) {
-        const icons = document.querySelectorAll(`[data-video-id="${videoId}"] .bookmark-icon`);
+        // より広範囲でアイコンを検索
+        const selectors = [
+            `[data-video-id="${videoId}"] .bookmark-icon`,
+            `.bookmark-icon[data-video-id="${videoId}"]`,
+            `#video-${videoId} .bookmark-icon`,
+            `.video-item[data-video-id="${videoId}"] .bookmark-icon`
+        ];
+
+        let icons = [];
+        selectors.forEach(selector => {
+            const found = document.querySelectorAll(selector);
+            icons = icons.concat(Array.from(found));
+        });
+
+        // 重複を除去
+        icons = [...new Set(icons)];
+
+        console.log(`Updating ${icons.length} bookmark icons for video ${videoId} to ${isActive ? 'active' : 'inactive'}`);
 
         icons.forEach(icon => {
             if (isActive) {

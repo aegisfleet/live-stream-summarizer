@@ -8,7 +8,7 @@ class NotificationSystem {
         this.activeToasts = new Map();
         this.toastContainer = null;
         this.maxToasts = 5;
-        this.defaultDuration = 4000;
+        this.defaultDuration = 2500;
         
         this.init();
     }
@@ -653,7 +653,7 @@ class NotificationSystem {
         
         this.showToast(message, 'success', {
             title: toastTitle,
-            duration: 3000
+            duration: 1500
         });
     }
 
@@ -667,7 +667,7 @@ class NotificationSystem {
         
         this.showToast(error, 'error', {
             title,
-            duration: 5000,
+            duration: 1500,
             actions: [
                 {
                     text: this.lang === 'en' ? 'Retry' : '再試行',

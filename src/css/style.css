@@ -1257,12 +1257,19 @@ footer {
         color: #4a90e2;
         font-weight: 600;
     }
+
+    .timestamp {
+        color: #4a90e2;
+    }
 }
 
 .timestamp {
-    color: #007bff;
+    color: var(--primary-color);
     font-weight: bold;
     margin-right: 0.5rem;
+    /* Safari用の調整 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .highlight-type {

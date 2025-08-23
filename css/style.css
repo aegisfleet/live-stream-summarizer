@@ -106,6 +106,12 @@
     margin: 0 auto .5rem auto;
     padding: .1rem
   }
+  .filter-group h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem
+  }
   #filter-buttons,
   #tag-filter-buttons {
     display: flex;
@@ -453,7 +459,10 @@
     color: var(--primary-color);
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
   }
   @supports (-webkit-appearance:none) {
     .archive-card .streamer {
@@ -473,13 +482,19 @@
   .view-count {
     margin: .2rem 0;
     font-size: .9rem;
-    color: #666
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
   }
   .like-count {
     margin-bottom: 1rem
   }
   .overview-mood {
-    margin-top: .75rem
+    margin-top: .75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
   }
   .last-updated,
   .tags {
@@ -670,7 +685,8 @@
   .collapsible-trigger {
     cursor: pointer;
     display: flex;
-    align-items: center
+    align-items: center;
+    gap: 0.5rem
   }
   .collapsible-trigger::before {
     content: '▶ ';
@@ -962,7 +978,10 @@
     font-size: .9rem
   }
   .detail-meta p {
-    margin: 0
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
   }
   .detail-content {
     display: flex;

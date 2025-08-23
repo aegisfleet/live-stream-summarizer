@@ -52,7 +52,7 @@ header {
 
 
 #site-description {
-    background-color: var(--soft-blue);
+    background-color: #e6f9ff;
     padding: 1.5rem;
     margin: 0 auto 0.5rem auto;
     max-width: 1800px;
@@ -719,7 +719,7 @@ footer {
 }
 
 #site-description .collapsible-content::after {
-    background: linear-gradient(to top, var(--soft-blue), transparent);
+    background: linear-gradient(to top, #e6f9ff, transparent);
 }
 
 .collapsible.open .collapsible-content {
@@ -1893,7 +1893,7 @@ footer {
 }
 
 .highlight-item:hover {
-    background-color: var(--soft-blue);
+    background-color: #e6f9ff;
     border-color: var(--accent-blue);
     box-shadow: 0 4px 12px var(--soft-shadow);
 }

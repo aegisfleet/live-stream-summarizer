@@ -1,4 +1,7 @@
 import { formatDuration, formatNumber, getBasePath, goToHomeAndResetHistory, timestampToSeconds } from './utils.js';
+import BookmarkManager from './bookmark-manager.js';
+import NotificationSystem from './notification-system.js';
+import BookmarkAccessibility from './bookmark-accessibility.js';
 
 class ArchiveManager {
     constructor() {
@@ -11,6 +14,13 @@ class ArchiveManager {
         this.currentPage = 1;
         this.itemsPerPage = 15;
         this.originalTitle = document.title;
+        
+        // 新しいブックマーク機能
+        this.bookmarkManager = null;
+        this.notificationSystem = null;
+        this.bookmarkAccessibility = null;
+        
+        // 既存機能との互換性のため残す（後で削除予定）
         this.watchLaterList = new Set();
         this.isWatchLaterMode = false;
         this.currentSortKey = 'date';
@@ -47,6 +57,11 @@ class ArchiveManager {
     
     async init() {
         await this.loadData();
+        
+        // 新しいブックマーク機能の初期化
+        await this.initializeBookmarkSystem();
+        
+        // 既存機能（互換性のため）
         this.loadWatchLaterList();
         this.cleanupWatchLaterList();
         this._setupInitialFilters();
@@ -58,6 +73,152 @@ class ArchiveManager {
         // replace the current history entry
         if (!history.state) {
             history.replaceState(null, '', window.location.href);
+        }
+    }
+
+    /**
+     * 新しいブックマーク機能の初期化
+     */
+    async initializeBookmarkSystem() {
+        try {
+            // 通知システムの初期化
+            this.notificationSystem = new NotificationSystem();
+            
+            // アクセシビリティ機能の初期化
+            this.bookmarkAccessibility = new BookmarkAccessibility();
+            
+            // ブックマークマネージャーの初期化
+            this.bookmarkManager = new BookmarkManager(this);
+            
+            // 既存のwatchLaterListとの統合
+            await this.migrateFromWatchLaterList();
+            
+            // イベントリスナーの設定
+            this.setupBookmarkEventListeners();
+            
+            console.log('新しいブックマーク機能が初期化されました');
+            
+        } catch (error) {
+            console.error('ブックマーク機能の初期化に失敗:', error);
+            
+            // フォールバック: 既存機能を使用
+            this.notificationSystem = {
+                showBookmarkSuccess: (added, archiveData) => {
+                    console.log(`ブックマーク${added ? '追加' : '削除'}: ${archiveData?.title || 'Unknown'}`);
+                },
+                showBookmarkError: (error) => {
+                    console.error('ブックマークエラー:', error);
+                }
+            };
+        }
+    }
+
+    /**
+     * 既存のwatchLaterListから新しいブックマーク機能への移行
+     */
+    async migrateFromWatchLaterList() {
+        try {
+            // 既存のwatchLaterListがある場合は移行
+            if (this.watchLaterList && this.watchLaterList.size > 0) {
+                console.log(`${this.watchLaterList.size}件のwatchLaterListを新しいブックマーク機能に移行中...`);
+                
+                for (const videoId of this.watchLaterList) {
+                    await this.bookmarkManager.addBookmark(videoId);
+                }
+                
+                // 移行完了後、古いデータをクリア
+                this.watchLaterList.clear();
+                localStorage.removeItem('watchLaterList');
+                
+                console.log('watchLaterListの移行が完了しました');
+            }
+        } catch (error) {
+            console.warn('watchLaterListの移行に失敗:', error);
+        }
+    }
+
+    /**
+     * ブックマーク関連のイベントリスナーを設定
+     */
+    setupBookmarkEventListeners() {
+        // ブックマーク切り替えイベントは直接処理するため削除
+        
+        // ブックマーク一覧切り替えイベント
+        document.addEventListener('bookmark-list-toggle', () => {
+            this.toggleWatchLaterMode();
+        });
+        
+        // ストレージクリーンアップイベント
+        document.addEventListener('storage-cleanup', () => {
+            this.cleanupStorage();
+        });
+        
+        // ブックマーク再試行イベント
+        document.addEventListener('bookmark-retry', async (event) => {
+            const { archiveData } = event.detail;
+            if (archiveData) {
+                // 再試行ロジック
+                await this.bookmarkManager.toggleBookmark(archiveData.videoId);
+            }
+        });
+    }
+
+    /**
+     * アーカイブデータの取得
+     * @param {string} videoId - 動画ID
+     * @returns {Object|null} アーカイブデータ
+     */
+    getArchiveData(videoId) {
+        return this.archiveData.find(archive => archive.videoId === videoId) || null;
+    }
+
+    /**
+     * ストレージのクリーンアップ
+     */
+    cleanupStorage() {
+        try {
+            // 古いデータを削除
+            const keysToRemove = [
+                'holoSummary_old_data',
+                'watchLaterList_backup',
+                'temp_bookmark_data'
+            ];
+            
+            keysToRemove.forEach(key => {
+                localStorage.removeItem(key);
+            });
+            
+            if (this.notificationSystem) {
+                this.notificationSystem.showToast(
+                    this.lang === 'en' ? 'Storage cleaned up successfully' : 'ストレージのクリーンアップが完了しました',
+                    'success'
+                );
+            }
+            
+        } catch (error) {
+            console.error('ストレージクリーンアップエラー:', error);
+        }
+    }
+
+    /**
+     * ブックマークモードの更新
+     */
+    updateWatchLaterMode() {
+        if (this.isWatchLaterMode && this.bookmarkManager) {
+            const bookmarkedVideoIds = this.bookmarkManager.getBookmarks();
+            
+            if (bookmarkedVideoIds.length === 0) {
+                // ブックマークがなくなった場合は通常モードに戻る
+                this._resetToDefaultView();
+            } else {
+                // ブックマークされた配信のみを表示
+                this.filteredData = this.archiveData.filter(archive => 
+                    bookmarkedVideoIds.includes(archive.videoId)
+                );
+            }
+            
+            this.currentPage = 1;
+            this.renderArchives(true);
         }
     }
 
@@ -274,11 +435,52 @@ class ArchiveManager {
             watchLaterButton.classList.remove('show');
         } else {
             watchLaterButton.classList.add('show');
+            
+            // ブックマーク数の表示を更新
+            this.updateBookmarkButtonDisplay();
         }
 
         watchLaterButton.addEventListener('click', () => {
             this.toggleWatchLaterMode();
         });
+    }
+
+    /**
+     * ブックマークボタンの表示を更新
+     */
+    updateBookmarkButtonDisplay() {
+        const watchLaterButton = document.getElementById('watch-later');
+        if (!watchLaterButton) return;
+
+        const bookmarkCount = this.bookmarkManager ? 
+            this.bookmarkManager.getBookmarkCount() : 
+            this.watchLaterList.size;
+
+        // カウンターバッジの更新または作成
+        let countBadge = watchLaterButton.querySelector('.bookmark-count');
+        
+        if (!countBadge) {
+            countBadge = document.createElement('span');
+            countBadge.className = 'bookmark-count';
+            watchLaterButton.appendChild(countBadge);
+        }
+
+        countBadge.textContent = bookmarkCount;
+        countBadge.setAttribute('data-count', bookmarkCount);
+
+        // ボタンのタイトル更新
+        const title = bookmarkCount > 0
+            ? (this.lang === 'en' 
+                ? `View ${bookmarkCount} bookmarked streams` 
+                : `${bookmarkCount}件のブックマークを表示`)
+            : (this.lang === 'en' 
+                ? 'No bookmarks yet' 
+                : 'ブックマークはありません');
+        
+        watchLaterButton.title = title;
+
+        // アクセシビリティ対応
+        watchLaterButton.setAttribute('aria-label', title);
     }
     
     async loadData() {
@@ -338,7 +540,12 @@ class ArchiveManager {
     }
 
     toggleWatchLaterMode() {
-        if (this.watchLaterList.size === 0) {
+        // 新しいブックマーク機能を使用
+        const bookmarkCount = this.bookmarkManager ? 
+            this.bookmarkManager.getBookmarkCount() : 
+            this.watchLaterList.size;
+        
+        if (bookmarkCount === 0) {
             this.showWatchLaterDialog();
             return;
         }
@@ -346,9 +553,15 @@ class ArchiveManager {
         this.isWatchLaterMode = !this.isWatchLaterMode;
         
         if (this.isWatchLaterMode) {
+            // 新しいブックマーク機能を使用
+            const bookmarkedVideoIds = this.bookmarkManager ? 
+                this.bookmarkManager.getBookmarks() : 
+                Array.from(this.watchLaterList);
+            
             this.filteredData = this.archiveData.filter(archive => 
-                this.watchLaterList.has(archive.videoId)
+                bookmarkedVideoIds.includes(archive.videoId)
             );
+            
             document.getElementById('filter-container').style.display = 'none';
             document.querySelector('.filter-group.collapsible').style.display = 'none';
             
@@ -421,6 +634,8 @@ class ArchiveManager {
 
         const tagButtons = document.querySelectorAll('#tag-filter-buttons button');
         tagButtons.forEach(button => button.classList.add('active'));
+        
+
     }
     
     setupStreamerFilter() {
@@ -754,16 +969,118 @@ class ArchiveManager {
         const bookmarkIcon = document.createElement('button');
         bookmarkIcon.className = 'bookmark-icon';
         bookmarkIcon.innerHTML = '🔖';
-        bookmarkIcon.title = this.lang === 'en' ? 'Add to Watch Later' : 'あとで見るに追加';
+        bookmarkIcon.setAttribute('data-video-id', archive.videoId);
         
-        if (this.watchLaterList.has(archive.videoId)) {
+        // 新しいブックマーク機能を使用
+        const isBookmarked = this.bookmarkManager ? 
+            this.bookmarkManager.hasBookmark(archive.videoId) : 
+            this.watchLaterList.has(archive.videoId);
+        
+        if (isBookmarked) {
             bookmarkIcon.classList.add('active');
-            bookmarkIcon.title = this.lang === 'en' ? 'Remove from Watch Later' : 'あとで見るから削除';
         }
         
-        bookmarkIcon.addEventListener('click', (e) => {
+        // アクセシビリティ対応
+        if (this.bookmarkAccessibility) {
+            this.bookmarkAccessibility.setupBookmarkIcon(
+                bookmarkIcon, 
+                archive.videoId, 
+                isBookmarked, 
+                archive
+            );
+        } else {
+            // フォールバック
+            bookmarkIcon.title = isBookmarked
+                ? (this.lang === 'en' ? 'Remove from bookmarks' : 'ブックマークから削除')
+                : (this.lang === 'en' ? 'Add to bookmarks' : 'ブックマークに追加');
+        }
+        
+        bookmarkIcon.addEventListener('click', async (e) => {
             e.stopPropagation();
-            this.toggleWatchLater(archive.videoId, bookmarkIcon);
+            
+            if (this.bookmarkManager) {
+                // 即座にUIを更新（楽観的更新）
+                const currentState = this.bookmarkManager.hasBookmark(archive.videoId);
+                const newState = !currentState;
+                
+                // アイコンの状態を即座に変更
+                if (newState) {
+                    bookmarkIcon.classList.add('active');
+                } else {
+                    bookmarkIcon.classList.remove('active');
+                }
+                
+                // アクセシビリティ状態も即座に更新
+                if (this.bookmarkAccessibility) {
+                    this.bookmarkAccessibility.updateBookmarkIconState(
+                        bookmarkIcon, 
+                        newState, 
+                        archive
+                    );
+                }
+                
+                // 実際のブックマーク操作を実行
+                try {
+                    const success = await this.bookmarkManager.toggleBookmark(archive.videoId);
+                    
+                    if (success) {
+                        // 成功時の通知表示（1回のみ）
+                        if (this.notificationSystem) {
+                            this.notificationSystem.showBookmarkSuccess(newState, archive);
+                        }
+                        
+                        // アクセシビリティアナウンス
+                        if (this.bookmarkAccessibility) {
+                            this.bookmarkAccessibility.announceBookmarkAction(newState, archive);
+                        }
+                        
+                        // ブックマークモードの場合はリストを更新
+                        if (this.isWatchLaterMode) {
+                            this.updateWatchLaterMode();
+                        }
+                    } else {
+                        // 失敗した場合は元に戻す
+                        if (currentState) {
+                            bookmarkIcon.classList.add('active');
+                        } else {
+                            bookmarkIcon.classList.remove('active');
+                        }
+                        
+                        if (this.bookmarkAccessibility) {
+                            this.bookmarkAccessibility.updateBookmarkIconState(
+                                bookmarkIcon, 
+                                currentState, 
+                                archive
+                            );
+                        }
+                    }
+                } catch (error) {
+                    // エラーの場合も元に戻す
+                    if (currentState) {
+                        bookmarkIcon.classList.add('active');
+                    } else {
+                        bookmarkIcon.classList.remove('active');
+                    }
+                    
+                    if (this.bookmarkAccessibility) {
+                        this.bookmarkAccessibility.updateBookmarkIconState(
+                            bookmarkIcon, 
+                            currentState, 
+                            archive
+                        );
+                    }
+                    
+                    // エラー通知
+                    if (this.notificationSystem) {
+                        this.notificationSystem.showBookmarkError(error.message, archive);
+                    }
+                    
+                    console.error('ブックマーク操作エラー:', error);
+                }
+            } else {
+                // フォールバック: 既存機能を使用
+                this.toggleWatchLater(archive.videoId, bookmarkIcon);
+            }
         });
         
         const content = this._createCardContent(archive);

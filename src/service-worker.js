@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1755936956166';
+const CACHE_NAME = 'hololive-summary-cache-v1-1755936956167';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
@@ -7,6 +7,11 @@ const ASSETS_TO_CACHE = [
   'js/main.js',
   'js/detail-page.js',
   'js/utils.js',
+  'js/bookmark-manager.js',
+  'js/bookmark-storage.js',
+  'js/bookmark-migration.js',
+  'js/bookmark-accessibility.js',
+  'js/notification-system.js',
   'data/summaries.json',
   'images/character.png',
   'images/ogp.png',
@@ -44,8 +49,8 @@ self.addEventListener('activate', event => {
         })
       );
     }).then(() => {
-        console.log('Service Worker: Claiming clients');
-        return self.clients.claim();
+      console.log('Service Worker: Claiming clients');
+      return self.clients.claim();
     })
   );
 });

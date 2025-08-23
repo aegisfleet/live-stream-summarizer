@@ -379,10 +379,12 @@ class BookmarkManager {
                     <div class="bookmark-item-title">${bookmark.title}</div>
                     <div class="bookmark-item-meta">
                         <div class="bookmark-item-streamer">${bookmark.streamer}</div>
-                        <div class="bookmark-item-date">${publishedDate}</div>
-                        <div class="bookmark-item-stats">
-                            <span class="bookmark-item-views">👁 ${viewCount}</span>
-                            <span class="bookmark-item-likes">👍 ${likeCount}</span>
+                        <div class="bookmark-item-date-stats">
+                            <span class="bookmark-item-date">${publishedDate}</span>
+                            <div class="bookmark-item-stats">
+                                <span class="bookmark-item-views">👁 ${viewCount}</span>
+                                <span class="bookmark-item-likes">👍 ${likeCount}</span>
+                            </div>
                         </div>
                     </div>
                 </div>

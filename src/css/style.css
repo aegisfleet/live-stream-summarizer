@@ -1733,7 +1733,8 @@ footer {
 .streamer-buttons-container {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  gap: 1em
+  gap: 1em;
+  align-items: start
 }
 .streamer-category {
   margin-bottom: .5em;

@@ -1,4 +1,4 @@
-{
+﻿{
   "version": "1.0.0",
   "lastUpdated": "2025-08-24",
   "categories": {
@@ -80,19 +80,45 @@
           "members": [
             {
               "name": {
+                "ja": "百鬼あやめ",
+                "en": "Nakiri Ayame"
+              },
+              "aliases": ["あやめちゃん", "Ayame", "余", "nakiri", "🎪"],
+              "id": "UC7fk0CB07ly8oSl0aqKkqFg"
+            },
+            {
+              "name": {
+                "ja": "癒月ちょこ",
+                "en": "Yuzuki Choco"
+              },
+              "aliases": ["ちょこ先生", "Choco-sensei", "💋"],
+              "id": "UC1suqwovbL1kzsoaZgFZLKg"
+            },
+            {
+              "name": {
+                "ja": "大空スバル",
+                "en": "Oozora Subaru"
+              },
+              "aliases": ["スバル", "Subaru", "スバルーン", "🚑"],
+              "id": "UCvzGlP9oQwU--Y0r9id_jnA"
+            },
+            {
+              "name": {
                 "ja": "湊あくあ",
                 "en": "Minato Aqua"
               },
-              "aliases": ["あくあちゃん", "Aqua"],
-              "id": "UC1opHUrw8rvnsadT-iGp7Cg"
+              "aliases": ["あくあちゃん", "Aqua", "⚓"],
+              "id": "UC1opHUrw8rvnsadT-iGp7Cg",
+              "graduated": true
             },
             {
               "name": {
                 "ja": "紫咲シオン",
                 "en": "Murasaki Shion"
               },
-              "aliases": ["シオンちゃん", "Shion"],
-              "id": "UCXTpFs_3PqI41qX2d9tL2Rw"
+              "aliases": ["シオンちゃん", "Shion", "🌙"],
+              "id": "UCXTpFs_3PqI41qX2d9tL2Rw",
+              "graduated": true
             }
           ]
         },
@@ -201,23 +227,47 @@
           ]
         },
         "generation_6": {
-          "ja": "6期生",
-          "en": "Generation 6",
+          "ja": "秘密結社holoX",
+          "en": "Secret Society holoX",
           "members": [
+            {
+              "name": {
+                "ja": "ラプラス・ダークネス",
+                "en": "La+ Darknesss"
+              },
+              "aliases": ["ラプラス", "La+", "らぷ様", "ラプ様", "👑"],
+              "id": "UCENwRMx5Yh42zWpzURebzTw"
+            },
+            {
+              "name": {
+                "ja": "鷹嶺ルイ",
+                "en": "Takane Lui"
+              },
+              "aliases": ["ルイ", "Lui", "ルイねえ", "🥀"],
+              "id": "UCs9_O1tRPMQTHQ-N_L6FU2g"
+            },
             {
               "name": {
                 "ja": "博衣こより",
                 "en": "Hakui Koyori"
               },
-              "aliases": ["こよりん", "Koyori", "こより先生"],
+              "aliases": ["こよりん", "Koyori", "こより先生", "🧪"],
               "id": "UC6eWCld0KwmyHFbAqK3V-Rw"
+            },
+            {
+              "name": {
+                "ja": "沙花叉クロヱ",
+                "en": "Sakamata Chloe"
+              },
+              "aliases": ["クロヱ", "Chloe", "さかまた", "🎣"],
+              "id": "UCIBY1ollUsauvVi4hW4cumw"
             },
             {
               "name": {
                 "ja": "風真いろは",
                 "en": "Kazama Iroha"
               },
-              "aliases": ["いろは", "Iroha", "いろはちゃん"],
+              "aliases": ["いろは", "Iroha", "いろはちゃん", "🍃"],
               "id": "UC_vMYWcDjmfdpH6r4TTn1MQ"
             }
           ]
@@ -228,19 +278,35 @@
           "members": [
             {
               "name": {
-                "ja": "戌神ころね",
-                "en": "Inugami Korone"
-              },
-              "aliases": ["ころね", "Korone", "ころさん", "🥐"],
-              "id": "UChAnqc_AY5_I3Px5dig3X1Q"
-            },
-            {
-              "name": {
                 "ja": "白上フブキ",
                 "en": "Shirakami Fubuki"
               },
               "aliases": ["フブキ", "Fubuki", "フブちゃん", "🌽"],
               "id": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+            },
+            {
+              "name": {
+                "ja": "大神ミオ",
+                "en": "Ookami Mio"
+              },
+              "aliases": ["ミオ", "Mio", "ミオしゃ", "🌲"],
+              "id": "UCp-5t9SrOQwXMU7iIjQfARg"
+            },
+            {
+              "name": {
+                "ja": "猫又おかゆ",
+                "en": "Nekomata Okayu"
+              },
+              "aliases": ["おかゆ", "Okayu", "おにぎりゃー", "�"],
+              "id": "UCvaTdHTWBGv3MKj3KVqJVCw"
+            },
+            {
+              "name": {
+                "ja": "戌神ころね",
+                "en": "Inugami Korone"
+              },
+              "aliases": ["ころね", "Korone", "ころさん", "🥐"],
+              "id": "UChAnqc_AY5_I3Px5dig3X1Q"
             }
           ]
         }
@@ -250,6 +316,88 @@
       "ja": "ホロライブDEV_IS",
       "en": "Hololive DEV_IS",
       "talents": {
+        "regloss": {
+          "ja": "ReGLOSS",
+          "en": "ReGLOSS",
+          "members": [
+            {
+              "name": {
+                "ja": "火威青",
+                "en": "Hiodoshi Ao"
+              },
+              "aliases": ["青", "Ao"]
+            },
+            {
+              "name": {
+                "ja": "音乃瀬奏",
+                "en": "Otonose Kanade"
+              },
+              "aliases": ["奏", "Kanade"]
+            },
+            {
+              "name": {
+                "ja": "一条莉々華",
+                "en": "Ichijou Ririka"
+              },
+              "aliases": ["莉々華", "Ririka"]
+            },
+            {
+              "name": {
+                "ja": "儒烏風亭らでん",
+                "en": "Juufuutei Raden"
+              },
+              "aliases": ["らでん", "Raden"]
+            },
+            {
+              "name": {
+                "ja": "轟はじめ",
+                "en": "Todoroki Hajime"
+              },
+              "aliases": ["はじめ", "Hajime"]
+            }
+          ]
+        },
+        "flow_glow": {
+          "ja": "FLOW GLOW",
+          "en": "FLOW GLOW",
+          "members": [
+            {
+              "name": {
+                "ja": "響咲リオナ",
+                "en": "Isaki Riona"
+              },
+              "aliases": ["リオナ", "Riona"]
+            },
+            {
+              "name": {
+                "ja": "虎金妃笑虎",
+                "en": "Koganei Niko"
+              },
+              "aliases": ["笑虎", "Niko"]
+            },
+            {
+              "name": {
+                "ja": "水宮枢",
+                "en": "Mizumiya Su"
+              },
+              "aliases": ["枢", "Su"]
+            },
+            {
+              "name": {
+                "ja": "輪堂千速",
+                "en": "Rindo Chihaya"
+              },
+              "aliases": ["千速", "Chihaya"]
+            },
+            {
+              "name": {
+                "ja": "綺々羅々ヴィヴィ",
+                "en": "Kikirara Vivi"
+              },
+              "aliases": ["ヴィヴィ", "Vivi"]
+            }
+          ]
+        },
         "project_beta": {
           "ja": "Project BETA",
           "en": "Project BETA",

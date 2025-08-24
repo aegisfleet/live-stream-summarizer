@@ -112,12 +112,17 @@
     gap: 0.5rem;
     margin-bottom: 0.5rem
   }
-  #filter-buttons,
+  #filter-buttons {
+    display: block;
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+
   #tag-filter-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
   }
   button {
     padding: .5rem 1rem;
@@ -1728,6 +1733,12 @@
   }
 
 /* Streamer Filter Categories */
+.streamer-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+}
+
 .streamer-category {
     margin-bottom: 0.5em;
     border: 1px solid #ddd;

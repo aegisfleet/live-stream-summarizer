@@ -15,7 +15,7 @@
                 "ja": "ときのそら",
                 "en": "Tokino Sora"
               },
-              "aliases": ["そらちゃん", "Sora-chan", "Tokino"],
+              "aliases": ["そらちゃん", "Sora-chan", "Tokino", "🐻"],
               "id": "UCp6993wxpyDPHUpavwDFqgg"
             },
             {
@@ -23,15 +23,23 @@
                 "ja": "ロボ子さん",
                 "en": "Roboco"
               },
-              "aliases": ["ロボ子", "Roboko-san"],
+              "aliases": ["ロボ子", "Roboko-san", "🤖"],
               "id": "UCDqI2jOz0weumE8s7paEk6g"
+            },
+            {
+              "name": {
+                "ja": "AZKi",
+                "en": "AZKi"
+              },
+              "aliases": ["アズキ", "⚒"],
+              "id": "UC0TXe_LYZ4scaW2XMyi5_kw"
             },
             {
               "name": {
                 "ja": "さくらみこ",
                 "en": "Sakura Miko"
               },
-              "aliases": ["みこち", "Miko", "Elite Miko"],
+              "aliases": ["みこち", "Miko", "Elite Miko", "🌸"],
               "id": "UC-hM6YJuNYVAmUWxeIr9FeA"
             },
             {
@@ -39,7 +47,7 @@
                 "ja": "星街すいせい",
                 "en": "Hoshimachi Suisei"
               },
-              "aliases": ["すいちゃん", "Sui-chan", "Suisei"],
+              "aliases": ["すいちゃん", "Sui-chan", "Suisei", "☄️"],
               "id": "UC5CwaMl1eIgY8h02uZw7u8A"
             }
           ]
@@ -53,7 +61,7 @@
                 "ja": "夜空メル",
                 "en": "Yozora Mel"
               },
-              "aliases": ["めるちゃん", "Mel-chan"],
+              "aliases": ["めるちゃん", "Mel-chan", "🌟"],
               "id": "UCD8HOxPs4Xvsm8H0ZxXGiBw"
             },
             {
@@ -61,7 +69,7 @@
                 "ja": "アキ・ローゼンタール",
                 "en": "Aki Rosenthal"
               },
-              "aliases": ["アキロゼ", "Akirose"],
+              "aliases": ["アキロゼ", "Akirose", "🍎"],
               "id": "UCFTLzh12_nrtzqBPsTCqenA"
             },
             {
@@ -69,8 +77,16 @@
                 "ja": "赤井はあと",
                 "en": "Akai Haato"
               },
-              "aliases": ["はあちゃま", "Haachama"],
+              "aliases": ["はあちゃま", "Haachama", "❤️"],
               "id": "UC1CfXB_kRs3C-zaeTG3oGyg"
+            },
+            {
+              "name": {
+                "ja": "夏色まつり",
+                "en": "Natsuiro Matsuri"
+              },
+              "aliases": ["まつり", "Matsuri", "まつりちゃん", "🏮"],
+              "id": "UCQ0UDLQCjY0rmuxCDE38FGg"
             }
           ]
         },
@@ -119,20 +135,6 @@
               "aliases": ["シオンちゃん", "Shion", "🌙"],
               "id": "UCXTpFs_3PqI41qX2d9tL2Rw",
               "graduated": true
-            }
-          ]
-        },
-        "azki": {
-          "ja": "AZKi",
-          "en": "AZKi",
-          "members": [
-            {
-              "name": {
-                "ja": "AZKi",
-                "en": "AZKi"
-              },
-              "aliases": ["アズキ", "⚒"],
-              "id": "UC0TXe_LYZ4scaW2XMyi5_kw"
             }
           ]
         },
@@ -196,11 +198,28 @@
             },
             {
               "name": {
+                "ja": "常闇トワ",
+                "en": "Tokoyami Towa"
+              },
+              "aliases": ["トワ様", "Towa-sama", "トワ", "Towa", "👾"],
+              "id": "UC1uv2Oq6kNxgATlCiez59hw"
+            },
+            {
+              "name": {
                 "ja": "姫森ルーナ",
                 "en": "Himemori Luna"
               },
               "aliases": ["ルーナ", "Luna", "ルーナたん", "🍬"],
               "id": "UCa9Y57gfeY0Zro_noHRVrnw"
+            },
+            {
+              "name": {
+                "ja": "【卒業生】桐生ココ",
+                "en": "[Graduated] Kiryu Coco"
+              },
+              "aliases": ["ココ", "Coco", "会長", "🐉"],
+              "id": "UCS9uQI-jC3DE0L4IpXyvr6w",
+              "graduated": true
             }
           ]
         },
@@ -210,18 +229,34 @@
           "members": [
             {
               "name": {
+                "ja": "雪花ラミィ",
+                "en": "Yukihana Lamy"
+              },
+              "aliases": ["ラミィ", "Lamy", "ラミちゃん", "🥃"],
+              "id": "UCFKOVgVbGmX65RxO3EtH3iw"
+            },
+            {
+              "name": {
                 "ja": "桃鈴ねね",
                 "en": "Momosuzu Nene"
               },
-              "aliases": ["ねねち", "Nene", "スーパーねねち"],
+              "aliases": ["ねねち", "Nene", "スーパーねねち", "🥟"],
               "id": "UCAWSyEs_Io8MtpY3m-zqILA"
+            },
+            {
+              "name": {
+                "ja": "獅白ぼたん",
+                "en": "Shishiro Botan"
+              },
+              "aliases": ["ぼたん", "Botan", "らみらみ", "♌"],
+              "id": "UCUKD-uaobj9jiqB-VXt71mA"
             },
             {
               "name": {
                 "ja": "尾丸ポルカ",
                 "en": "Omaru Polka"
               },
-              "aliases": ["ポルカ", "Polka", "ポルちゃん"],
+              "aliases": ["ポルカ", "Polka", "ポルちゃん", "🎪"],
               "id": "UCK9V2B22uJYu3N7eR_BT9QA"
             }
           ]

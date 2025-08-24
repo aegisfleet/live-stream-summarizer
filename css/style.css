@@ -1752,12 +1752,16 @@ footer {
   border-radius: 8px;
   border-bottom: none;
   box-shadow: 0 4px 10px rgba(0,0,0,.1);
-  transition: all .3s ease
+  transition: all .3s ease;
+  user-select: none;
+  -webkit-user-select: none
 }
 .streamer-category h3:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0,0,0,.2);
-  background: linear-gradient(135deg,#4a90e2,#3a7bc8)
+  background: linear-gradient(135deg,#4a90e2,#3a7bc8);
+  user-select: none;
+  -webkit-user-select: none;
 }
 .streamer-generation {
   margin-bottom: 1em;

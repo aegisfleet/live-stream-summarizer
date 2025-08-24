@@ -108,7 +108,7 @@ class CategoryEngine {
       const category = this.talentData.categories[result.categoryId];
       if (category && category.talents) {
         for (const [genKey, genData] of Object.entries(category.talents)) {
-          if (genData.members.some(member => member.id === result.talent.id)) {
+          if (genData.members.some(member => member.name.ja === result.talent.name.ja)) {
             generationInfo = {
               ja: genData.ja,
               en: genData.en

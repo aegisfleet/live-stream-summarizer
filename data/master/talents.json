@@ -432,11 +432,6 @@
               "aliases": ["ヴィヴィ", "Vivi"]
             }
           ]
-        },
-        "project_beta": {
-          "ja": "Project BETA",
-          "en": "Project BETA",
-          "members": []
         }
       }
     },
@@ -445,8 +440,8 @@
       "en": "Hololive EN",
       "talents": {
         "myth": {
-          "ja": "一期生 -Myth-",
-          "en": "Generation 1 -Myth-",
+          "ja": "-Myth-",
+          "en": "-Myth-",
           "members": [
             {
               "name": {
@@ -506,8 +501,8 @@
           ]
         },
         "council": {
-          "ja": "二期生 -Council-",
-          "en": "Generation 2 -Council-",
+          "ja": "-Council-",
+          "en": "-Council-",
           "members": [
             {
               "name": {
@@ -553,8 +548,8 @@
           ]
         },
         "advent": {
-          "ja": "三期生 -Advent-",
-          "en": "Generation 3 -Advent-",
+          "ja": "-Advent-",
+          "en": "-Advent-",
           "members": [
             {
               "name": {

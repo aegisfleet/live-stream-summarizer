@@ -2,9 +2,19 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 const { google } = require('googleapis');
+const categoryEngine = require('../categorization/category-engine');
 
 class PageGenerator {
     constructor() {
+        this.categoryEngine = categoryEngine;
+        this.categoryNamesInEnglish = {
+            'hololive': 'hololive',
+            'holostars': 'HOLOSTARS',
+            'others': 'Others',
+            'indies': 'Independent',
+            'staff': 'Staff',
+            'official': 'Official'
+        };
         this.templatePaths = {
             ja: path.join(__dirname, '../../src/templates/detail-page.html'),
             en: path.join(__dirname, '../../src/templates/detail-page.en.html'),
@@ -53,23 +63,62 @@ class PageGenerator {
 
     async generatePages() {
         try {
+            // カテゴリ判定エンジンの初期化
+            await this.categoryEngine.initialize();
+
+            // スケジュールデータの読み込みとカテゴリ判定
+            const schedulesPath = path.join(__dirname, '../../data/schedules.json');
+            const schedules = JSON.parse(fs.readFileSync(schedulesPath, 'utf8'));
+            
+            // カテゴリ情報を付与
+            const schedulesWithCategories = schedules.map(schedule => {
+                const category = this.categoryEngine.determineCategory(schedule.streamer);
+                return {
+                    ...schedule,
+                    category: {
+                        id: category.categoryId,
+                        name: category.categoryName,
+                        talent: category.talent ? {
+                            id: category.talent.id,
+                            name: category.talent.name
+                        } : null
+                    }
+                };
+            });
+
+            // summaries.jsonの読み込みと更新
             let data = JSON.parse(fs.readFileSync(this.dataPath, 'utf8'));
 
             // Filter out any entries with missing or empty videoId
             const videoIds = data.map(archive => archive.videoId).filter(id => id);
 
+            // カテゴリ情報とビデオ統計情報を追加
             if (videoIds.length > 0) {
                 const videoStats = await this.fetchVideoStatistics(videoIds);
                 data = data.map(archive => {
                     const stats = videoStats[archive.videoId];
+                    const category = this.categoryEngine.determineCategory(archive.streamer);
+                    const talent = category.talent ? {
+                        id: category.talent.id,
+                        name: category.talent.name,
+                        generation: category.talent.generation || {
+                            ja: category.generationInfo?.ja,
+                            en: category.generationInfo?.en
+                        }
+                    } : null;
                     return {
                         ...archive,
                         viewCount: stats ? stats.viewCount : 0,
                         likeCount: stats ? stats.likeCount : 0,
+                        category: {
+                            id: category.categoryId,
+                            name: category.categoryName,
+                            talent: talent
+                        }
                     };
                 });
                 fs.writeFileSync(this.dataPath, JSON.stringify(data, null, 2), 'utf8');
-                console.log('Successfully updated summaries.json with video statistics.');
+                console.log('Successfully updated summaries.json with video statistics and categories.');
             }
 
             // Clean up output directories
@@ -122,6 +171,16 @@ class PageGenerator {
         const highlightsJson = lang === 'en' && archive.highlights_en ? JSON.stringify(archive.highlights_en) : JSON.stringify(archive.highlights);
         const tags = lang === 'en' && archive.tags_en ? archive.tags_en : archive.tags;
 
+        // カテゴリ情報の整形
+        const categoryInfo = archive.category ? {
+            id: archive.category.id,
+            name: lang === 'en' ? this.getCategoryNameInEnglish(archive.category.id) : archive.category.name,
+            talent: archive.category.talent ? {
+                id: archive.category.talent.id,
+                name: archive.category.talent.name
+            } : null
+        } : null;
+
         return template
             .replace(/\{\{TITLE\}\}/g, this.escapeHtml(title))
             .replace(/\{\{DESCRIPTION\}\}/g, this.escapeHtml(overviewSummary))
@@ -136,7 +195,8 @@ class PageGenerator {
             .replace(/\{\{OVERVIEW_SUMMARY\}\}/g, this.escapeHtml(overviewSummary))
             .replace(/\{\{OVERVIEW_MOOD\}\}/g, this.escapeHtml(overviewMood))
             .replace(/\{\{HIGHLIGHTS_JSON\}\}/g, highlightsJson)
-            .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(tags));
+            .replace(/\{\{TAGS_JSON\}\}/g, JSON.stringify(tags))
+            .replace(/\{\{CATEGORY_JSON\}\}/g, JSON.stringify(categoryInfo));
     }
 
     formatNumber(num) {
@@ -214,6 +274,10 @@ class PageGenerator {
         } catch (error) {
             console.error('Error updating service worker cache name:', error);
         }
+    }
+
+    getCategoryNameInEnglish(categoryId) {
+        return this.categoryNamesInEnglish[categoryId] || categoryId;
     }
 
     generateSitemap(archives) {

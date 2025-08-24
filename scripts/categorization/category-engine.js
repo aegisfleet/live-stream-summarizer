@@ -84,6 +84,7 @@ class CategoryEngine {
       .replace(/\s*[\u{1F300}-\u{1F9FF}][\u{FE00}-\u{FE0F}]?\s*/gu, '')
       .replace(/\s*[\u{2600}-\u{26FF}][\u{FE00}-\u{FE0F}]?\s*/gu, '')
       // 各種記号を除去
+      .replace(/\s*[\u{2700}-\u{27BF}][\u{FE00}-\u{FE0F}]?\s*/gu, '')
       .replace(/[\s\-_・.]/g, '')
       .replace(/[！!？?]/g, '');
   }

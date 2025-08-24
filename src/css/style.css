@@ -1739,7 +1739,7 @@
 .streamer-category h3 {
     margin-top: 0;
     margin-bottom: 0.5em;
-    font-size: 1.0em;
+    font-size: 0.9em;
     color: #fff; /* Changed to white for better contrast with gradient */
     background: linear-gradient(135deg, var(--accent-blue), #4a90e2); /* Updated gradient */
     padding: 0.75em 1em; /* Adjusted padding */
@@ -1767,7 +1767,7 @@
 .streamer-generation h4 {
     margin-top: 0;
     margin-bottom: 0.5em;
-    font-size: 1.1em;
+    font-size: 1.0em;
     color: #555;
 }
 

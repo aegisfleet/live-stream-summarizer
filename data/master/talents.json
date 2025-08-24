@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0",
   "lastUpdated": "2025-08-24",
   "categories": {
@@ -546,7 +546,7 @@
             },
             {
               "name": {
-                "ja": "アイオフィ・イナニス",
+                "ja": "アイラニ・イオフィフティーン",
                 "en": "Airani Iofifteen"
               },
               "aliases": ["Iofi", "Iofifteen", "イオフィ", "🎨"],
@@ -558,6 +558,22 @@
           "ja": "2期生",
           "en": "Generation 2",
           "members": [
+            {
+              "name": {
+                "ja": "クレイジー・オリー",
+                "en": "Kureiji Ollie"
+              },
+              "aliases": ["Ollie", "オリー", "🧟‍♀️"],
+              "id": "UCHsx4Hqa-1ORjQTh9TYDhww"
+            },
+            {
+              "name": {
+                "ja": "アーニャ・メルフィッサ",
+                "en": "Anya Melfissa"
+              },
+              "aliases": ["Anya", "アーニャ", "🔪"],
+              "id": "UC727SQYUvx5pDDGQpTICNWg"
+            },
             {
               "name": {
                 "ja": "パヴォリア・レイネ",
@@ -579,6 +595,22 @@
               },
               "aliases": ["Zeta", "ゼータ", "📎"],
               "id": "UCTvHWSfBZgtxE4sILOaurIQ"
+            },
+            {
+              "name": {
+                "ja": "カエラ・コヴァルスキア",
+                "en": "Kaela Kovalskia"
+              },
+              "aliases": ["Kaela", "カエラ", "🔨"],
+              "id": "UCZLZ8Jjx_RN2CXloOmgTHVg"
+            },
+            {
+              "name": {
+                "ja": "こぼ・かなえる",
+                "en": "Kobo Kanaeru"
+              },
+              "aliases": ["Kobo", "こぼ", "☔"],
+              "id": "UCHgU55mmBiGZ1vXdA22FF-A"
             }
           ]
         }

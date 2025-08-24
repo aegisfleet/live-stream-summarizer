@@ -1,7 +1,7 @@
-import { formatDuration, formatNumber, getBasePath, goToHomeAndResetHistory, timestampToSeconds } from './utils.js';
+import BookmarkAccessibility from './bookmark-accessibility.js';
 import BookmarkManager from './bookmark-manager.js';
 import NotificationSystem from './notification-system.js';
-import BookmarkAccessibility from './bookmark-accessibility.js';
+import { formatDuration, formatNumber, getBasePath, goToHomeAndResetHistory, timestampToSeconds } from './utils.js';
 
 class ArchiveManager {
     constructor() {
@@ -14,6 +14,7 @@ class ArchiveManager {
         this.currentPage = 1;
         this.itemsPerPage = 15;
         this.originalTitle = document.title;
+        this.streamerCategories = {};
 
         // 新しいブックマーク機能
         this.bookmarkManager = null;
@@ -473,13 +474,65 @@ class ArchiveManager {
                     tags.forEach(tag => this.tags.add(tag));
                 }
             });
+
+            this._buildStreamerCategories(); // Build the category structure
+
         } catch (error) {
             const errorMsg = this.lang === 'en' ? 'Failed to load data:' : 'データの読み込みに失敗しました:';
             console.error(errorMsg, error);
         }
     }
 
+    _buildStreamerCategories() {
+        const categories = {};
+        const lang = this.lang;
 
+        this.archiveData.forEach(archive => {
+            let categoryName;
+            let generationName;
+            const streamerName = archive.streamer;
+
+            if (!archive.category || !archive.category.name || !archive.category.talent || !archive.category.talent.generation) {
+                categoryName = (lang === 'en' ? 'Other' : 'その他');
+                generationName = (lang === 'en' ? 'Uncategorized' : '未分類');
+            } else {
+                categoryName = archive.category.name[lang];
+                generationName = archive.category.talent.generation[lang];
+            }
+
+            if (!categoryName || !generationName) return; // Still skip if names are empty after fallback
+
+            if (!categories[categoryName]) {
+                categories[categoryName] = {};
+            }
+            if (!categories[categoryName][generationName]) {
+                categories[categoryName][generationName] = new Set();
+            }
+            categories[categoryName][generationName].add(streamerName);
+        });
+
+        const sortedCategories = {};
+        const categoryKeys = Object.keys(categories).sort();
+
+        const otherCategoryKey = (lang === 'en' ? 'Other' : 'その他');
+        const otherCategoryIndex = categoryKeys.indexOf(otherCategoryKey);
+
+        if (otherCategoryIndex > -1) {
+            categoryKeys.splice(otherCategoryIndex, 1); // Remove 'Other' from its sorted position
+            categoryKeys.push(otherCategoryKey); // Add 'Other' to the end
+        }
+
+        categoryKeys.forEach(categoryKey => {
+            const generations = categories[categoryKey];
+            const sortedGenerations = {};
+            Object.keys(generations).sort().forEach(generationKey => {
+                sortedGenerations[generationKey] = generations[generationKey];
+            });
+            sortedCategories[categoryKey] = sortedGenerations;
+        });
+
+        this.streamerCategories = sortedCategories;
+    }
 
     toggleWatchLaterMode() {
         // 新しいブックマーク機能を使用してモーダルを表示
@@ -536,12 +589,60 @@ class ArchiveManager {
             return;
         }
 
-        Array.from(this.streamers).sort().forEach(streamer => {
-            const button = document.createElement('button');
-            button.textContent = streamer;
-            button.addEventListener('click', () => this.filterByStreamer(streamer));
-            filterContainer.appendChild(button);
-        });
+        filterContainer.innerHTML = ''; // Clear existing buttons
+
+        const streamerButtonsContainer = document.createElement('div');
+        streamerButtonsContainer.className = 'streamer-buttons-container';
+
+        for (const categoryName in this.streamerCategories) {
+            const categoryContainer = document.createElement('div');
+            categoryContainer.className = 'streamer-category collapsible'; // Add 'collapsible'
+
+            const categoryHeader = document.createElement('h3');
+            categoryHeader.textContent = categoryName;
+            categoryHeader.className = 'collapsible-trigger'; // Add 'collapsible-trigger'
+            categoryContainer.appendChild(categoryHeader);
+
+            const allGenerationsContainer = document.createElement('div');
+            allGenerationsContainer.className = 'collapsible-content';
+
+            const generations = this.streamerCategories[categoryName];
+            for (const generationName in generations) {
+                const generationContainer = document.createElement('div');
+                generationContainer.className = 'streamer-generation';
+
+                const generationHeader = document.createElement('h4');
+                generationHeader.textContent = generationName;
+                generationContainer.appendChild(generationHeader);
+
+                const memberContainer = document.createElement('div');
+                memberContainer.className = 'streamer-members';
+
+                const members = Array.from(generations[generationName]).sort();
+                members.forEach(streamerName => {
+                    const button = document.createElement('button');
+                    button.textContent = streamerName;
+                    button.addEventListener('click', () => this.filterByStreamer(streamerName));
+                    memberContainer.appendChild(button);
+                });
+
+                generationContainer.appendChild(memberContainer);
+                allGenerationsContainer.appendChild(generationContainer);
+            }
+            categoryContainer.appendChild(allGenerationsContainer);
+            streamerButtonsContainer.appendChild(categoryContainer);
+
+            categoryHeader.addEventListener('click', () => {
+                categoryContainer.classList.toggle('open');
+                if (categoryContainer.classList.contains('open')) {
+                    allGenerationsContainer.style.maxHeight = allGenerationsContainer.scrollHeight + 'px';
+                } else {
+                    allGenerationsContainer.style.maxHeight = null;
+                }
+            });
+        }
+
+        filterContainer.appendChild(streamerButtonsContainer);
 
         selectAllButton.addEventListener('click', () => {
             if (new URLSearchParams(window.location.search).has('videoId')) {
@@ -1062,7 +1163,8 @@ class ArchiveManager {
         copyButton.title = this.lang === 'en' ? 'Copy title and URL' : 'タイトルとURLをコピー';
         copyButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const copyText = `${archive.title}\n${shareUrl}`;
+            const copyText = `${archive.title}
+${shareUrl}`;
             navigator.clipboard.writeText(copyText).then(() => {
                 copyButton.textContent = this.lang === 'en' ? 'Copied!' : 'コピー完了！';
                 setTimeout(() => {
@@ -1083,7 +1185,8 @@ class ArchiveManager {
         shareButton.title = this.lang === 'en' ? 'Share this stream on 𝕏' : 'この配信を𝕏で共有する';
         shareButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const shareText = `${archive.title}\n${shareUrl}`;
+            const shareText = `${archive.title}
+${shareUrl}`;
             const twitterIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(twitterIntentUrl, '_blank');
         });

@@ -646,7 +646,7 @@
     border-color: var(--accent-blue)
   }
   .collapsible .collapsible-content {
-    max-height: 100px;
+    max-height: 0;
     overflow: hidden;
     position: relative;
     transition: max-height .5s ease-in-out
@@ -1726,3 +1726,53 @@
     color: #fff;
     box-shadow: 0 4px 12px var(--soft-shadow)
   }
+
+/* Streamer Filter Categories */
+.streamer-category {
+    margin-bottom: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #ebf8ff;
+}
+
+.streamer-category h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.0em;
+    color: #fff; /* Changed to white for better contrast with gradient */
+    background: linear-gradient(135deg, var(--accent-blue), #4a90e2); /* Updated gradient */
+    padding: 0.75em 1em; /* Adjusted padding */
+    border-radius: 8px; /* Added border-radius */
+    border-bottom: none; /* Removed border-bottom as gradient covers it */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+    transition: all 0.3s ease; /* Added transition for hover effect */
+}
+
+.streamer-category h3:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #4a90e2, #3a7bc8); /* Updated hover gradient */
+}
+
+.streamer-generation {
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
+.streamer-generation:last-child {
+    margin-bottom: 0;
+}
+
+.streamer-generation h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.streamer-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}

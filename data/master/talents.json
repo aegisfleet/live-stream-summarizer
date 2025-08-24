@@ -15,40 +15,57 @@
                 "ja": "ときのそら",
                 "en": "Tokino Sora"
               },
-              "aliases": ["そらちゃん", "Sora-chan", "Tokino", "🐻"],
-              "id": "UCp6993wxpyDPHUpavwDFqgg"
+              "aliases": [
+                "そらちゃん",
+                "Sora-chan",
+                "Tokino",
+                "🐻"
+              ]
             },
             {
               "name": {
                 "ja": "ロボ子さん",
                 "en": "Roboco"
               },
-              "aliases": ["ロボ子", "Roboko-san", "🤖"],
-              "id": "UCDqI2jOz0weumE8s7paEk6g"
+              "aliases": [
+                "ロボ子",
+                "Roboko-san",
+                "🤖"
+              ]
             },
             {
               "name": {
                 "ja": "AZKi",
                 "en": "AZKi"
               },
-              "aliases": ["アズキ", "⚒"],
-              "id": "UC0TXe_LYZ4scaW2XMyi5_kw"
+              "aliases": [
+                "アズキ",
+                "⚒"
+              ]
             },
             {
               "name": {
                 "ja": "さくらみこ",
                 "en": "Sakura Miko"
               },
-              "aliases": ["みこち", "Miko", "Elite Miko", "🌸"],
-              "id": "UC-hM6YJuNYVAmUWxeIr9FeA"
+              "aliases": [
+                "みこち",
+                "Miko",
+                "Elite Miko",
+                "🌸"
+              ]
             },
             {
               "name": {
                 "ja": "星街すいせい",
                 "en": "Hoshimachi Suisei"
               },
-              "aliases": ["すいちゃん", "Sui-chan", "Suisei", "☄️"],
-              "id": "UC5CwaMl1eIgY8h02uZw7u8A"
+              "aliases": [
+                "すいちゃん",
+                "Sui-chan",
+                "Suisei",
+                "☄️"
+              ]
             }
           ]
         },
@@ -61,32 +78,45 @@
                 "ja": "夜空メル",
                 "en": "Yozora Mel"
               },
-              "aliases": ["めるちゃん", "Mel-chan", "🌟"],
-              "id": "UCD8HOxPs4Xvsm8H0ZxXGiBw"
+              "aliases": [
+                "めるちゃん",
+                "Mel-chan",
+                "🌟"
+              ]
             },
             {
               "name": {
                 "ja": "アキ・ローゼンタール",
                 "en": "Aki Rosenthal"
               },
-              "aliases": ["アキロゼ", "Akirose", "🍎"],
-              "id": "UCFTLzh12_nrtzqBPsTCqenA"
+              "aliases": [
+                "アキロゼ",
+                "Akirose",
+                "🍎"
+              ]
             },
             {
               "name": {
                 "ja": "赤井はあと",
                 "en": "Akai Haato"
               },
-              "aliases": ["はあちゃま", "Haachama", "❤️"],
-              "id": "UC1CfXB_kRs3C-zaeTG3oGyg"
+              "aliases": [
+                "はあちゃま",
+                "Haachama",
+                "❤️"
+              ]
             },
             {
               "name": {
                 "ja": "夏色まつり",
                 "en": "Natsuiro Matsuri"
               },
-              "aliases": ["まつり", "Matsuri", "まつりちゃん", "🏮"],
-              "id": "UCQ0UDLQCjY0rmuxCDE38FGg"
+              "aliases": [
+                "まつり",
+                "Matsuri",
+                "まつりちゃん",
+                "🏮"
+              ]
             }
           ]
         },
@@ -99,32 +129,47 @@
                 "ja": "百鬼あやめ",
                 "en": "Nakiri Ayame"
               },
-              "aliases": ["あやめちゃん", "Ayame", "余", "nakiri", "🎪"],
-              "id": "UC7fk0CB07ly8oSl0aqKkqFg"
+              "aliases": [
+                "あやめちゃん",
+                "Ayame",
+                "余",
+                "nakiri",
+                "🎪"
+              ]
             },
             {
               "name": {
                 "ja": "癒月ちょこ",
                 "en": "Yuzuki Choco"
               },
-              "aliases": ["ちょこ先生", "Choco-sensei", "💋"],
-              "id": "UC1suqwovbL1kzsoaZgFZLKg"
+              "aliases": [
+                "ちょこ先生",
+                "Choco-sensei",
+                "💋"
+              ]
             },
             {
               "name": {
                 "ja": "大空スバル",
                 "en": "Oozora Subaru"
               },
-              "aliases": ["スバル", "Subaru", "スバルーン", "🚑"],
-              "id": "UCvzGlP9oQwU--Y0r9id_jnA"
+              "aliases": [
+                "スバル",
+                "Subaru",
+                "スバルーン",
+                "🚑"
+              ]
             },
             {
               "name": {
                 "ja": "湊あくあ",
                 "en": "Minato Aqua"
               },
-              "aliases": ["あくあちゃん", "Aqua", "⚓"],
-              "id": "UC1opHUrw8rvnsadT-iGp7Cg",
+              "aliases": [
+                "あくあちゃん",
+                "Aqua",
+                "⚓"
+              ],
               "graduated": true
             },
             {
@@ -132,8 +177,11 @@
                 "ja": "紫咲シオン",
                 "en": "Murasaki Shion"
               },
-              "aliases": ["シオンちゃん", "Shion", "🌙"],
-              "id": "UCXTpFs_3PqI41qX2d9tL2Rw",
+              "aliases": [
+                "シオンちゃん",
+                "Shion",
+                "🌙"
+              ],
               "graduated": true
             }
           ]
@@ -147,32 +195,48 @@
                 "ja": "兎田ぺこら",
                 "en": "Usada Pekora"
               },
-              "aliases": ["ぺこら", "Pekora", "ぺこちゃん", "👯"],
-              "id": "UC1DCedRgGHBdm81E1llLhOQ"
+              "aliases": [
+                "ぺこら",
+                "Pekora",
+                "ぺこちゃん",
+                "👯"
+              ]
             },
             {
               "name": {
                 "ja": "不知火フレア",
                 "en": "Shiranui Flare"
               },
-              "aliases": ["フレア", "Flare", "フレちゃん", "🔥"],
-              "id": "UCvInZx9h3jC2JzsIzoOebWg"
+              "aliases": [
+                "フレア",
+                "Flare",
+                "フレちゃん",
+                "🔥"
+              ]
             },
             {
               "name": {
                 "ja": "白銀ノエル",
                 "en": "Shirogane Noel"
               },
-              "aliases": ["ノエル", "Noel", "ノエちゃん", "⚔"],
-              "id": "UCdyqAaZDKHXg4Ahi7VENThQ"
+              "aliases": [
+                "ノエル",
+                "Noel",
+                "ノエちゃん",
+                "⚔"
+              ]
             },
             {
               "name": {
                 "ja": "宝鐘マリン",
                 "en": "Houshou Marine"
               },
-              "aliases": ["マリン", "Marine", "せんちょう", "🏴☠"],
-              "id": "UCCzUftO8KOVkV4wQG1vkUvg"
+              "aliases": [
+                "マリン",
+                "Marine",
+                "せんちょう",
+                "🏴☠"
+              ]
             }
           ]
         },
@@ -185,40 +249,60 @@
                 "ja": "天音かなた",
                 "en": "Amane Kanata"
               },
-              "aliases": ["かなたん", "Kanatan", "💫"],
-              "id": "UCZlDXzGoo7d44bwdNObFacg"
+              "aliases": [
+                "かなたん",
+                "Kanatan",
+                "💫"
+              ]
             },
             {
               "name": {
                 "ja": "角巻わため",
                 "en": "Tsunomaki Watame"
               },
-              "aliases": ["わため", "Watame", "わたメェ", "🐏"],
-              "id": "UCqm3BQLlJfvkTsX_hvm0UmA"
+              "aliases": [
+                "わため",
+                "Watame",
+                "わたメェ",
+                "🐏"
+              ]
             },
             {
               "name": {
                 "ja": "常闇トワ",
                 "en": "Tokoyami Towa"
               },
-              "aliases": ["トワ様", "Towa-sama", "トワ", "Towa", "👾"],
-              "id": "UC1uv2Oq6kNxgATlCiez59hw"
+              "aliases": [
+                "トワ様",
+                "Towa-sama",
+                "トワ",
+                "Towa",
+                "👾"
+              ]
             },
             {
               "name": {
                 "ja": "姫森ルーナ",
                 "en": "Himemori Luna"
               },
-              "aliases": ["ルーナ", "Luna", "ルーナたん", "🍬"],
-              "id": "UCa9Y57gfeY0Zro_noHRVrnw"
+              "aliases": [
+                "ルーナ",
+                "Luna",
+                "ルーナたん",
+                "🍬"
+              ]
             },
             {
               "name": {
                 "ja": "【卒業生】桐生ココ",
                 "en": "[Graduated] Kiryu Coco"
               },
-              "aliases": ["ココ", "Coco", "会長", "🐉"],
-              "id": "UCS9uQI-jC3DE0L4IpXyvr6w",
+              "aliases": [
+                "ココ",
+                "Coco",
+                "会長",
+                "🐉"
+              ],
               "graduated": true
             }
           ]
@@ -232,32 +316,48 @@
                 "ja": "雪花ラミィ",
                 "en": "Yukihana Lamy"
               },
-              "aliases": ["ラミィ", "Lamy", "ラミちゃん", "🥃"],
-              "id": "UCFKOVgVbGmX65RxO3EtH3iw"
+              "aliases": [
+                "ラミィ",
+                "Lamy",
+                "ラミちゃん",
+                "🥃"
+              ]
             },
             {
               "name": {
                 "ja": "桃鈴ねね",
                 "en": "Momosuzu Nene"
               },
-              "aliases": ["ねねち", "Nene", "スーパーねねち", "🥟"],
-              "id": "UCAWSyEs_Io8MtpY3m-zqILA"
+              "aliases": [
+                "ねねち",
+                "Nene",
+                "スーパーねねち",
+                "🥟"
+              ]
             },
             {
               "name": {
                 "ja": "獅白ぼたん",
                 "en": "Shishiro Botan"
               },
-              "aliases": ["ぼたん", "Botan", "らみらみ", "♌"],
-              "id": "UCUKD-uaobj9jiqB-VXt71mA"
+              "aliases": [
+                "ぼたん",
+                "Botan",
+                "らみらみ",
+                "♌"
+              ]
             },
             {
               "name": {
                 "ja": "尾丸ポルカ",
                 "en": "Omaru Polka"
               },
-              "aliases": ["ポルカ", "Polka", "ポルちゃん", "🎪"],
-              "id": "UCK9V2B22uJYu3N7eR_BT9QA"
+              "aliases": [
+                "ポルカ",
+                "Polka",
+                "ポルちゃん",
+                "🎪"
+              ]
             }
           ]
         },
@@ -270,40 +370,61 @@
                 "ja": "ラプラス・ダークネス",
                 "en": "La+ Darknesss"
               },
-              "aliases": ["ラプラス", "La+", "らぷ様", "ラプ様", "👑"],
-              "id": "UCENwRMx5Yh42zWpzURebzTw"
+              "aliases": [
+                "ラプラス",
+                "La+",
+                "らぷ様",
+                "ラプ様",
+                "👑"
+              ]
             },
             {
               "name": {
                 "ja": "鷹嶺ルイ",
                 "en": "Takane Lui"
               },
-              "aliases": ["ルイ", "Lui", "ルイねえ", "🥀"],
-              "id": "UCs9_O1tRPMQTHQ-N_L6FU2g"
+              "aliases": [
+                "ルイ",
+                "Lui",
+                "ルイねえ",
+                "🥀"
+              ]
             },
             {
               "name": {
                 "ja": "博衣こより",
                 "en": "Hakui Koyori"
               },
-              "aliases": ["こよりん", "Koyori", "こより先生", "🧪"],
-              "id": "UC6eWCld0KwmyHFbAqK3V-Rw"
+              "aliases": [
+                "こよりん",
+                "Koyori",
+                "こより先生",
+                "🧪"
+              ]
             },
             {
               "name": {
                 "ja": "沙花叉クロヱ",
                 "en": "Sakamata Chloe"
               },
-              "aliases": ["クロヱ", "Chloe", "さかまた", "🎣"],
-              "id": "UCIBY1ollUsauvVi4hW4cumw"
+              "aliases": [
+                "クロヱ",
+                "Chloe",
+                "さかまた",
+                "🎣"
+              ]
             },
             {
               "name": {
                 "ja": "風真いろは",
                 "en": "Kazama Iroha"
               },
-              "aliases": ["いろは", "Iroha", "いろはちゃん", "🍃"],
-              "id": "UC_vMYWcDjmfdpH6r4TTn1MQ"
+              "aliases": [
+                "いろは",
+                "Iroha",
+                "いろはちゃん",
+                "🍃"
+              ]
             }
           ]
         },
@@ -316,32 +437,48 @@
                 "ja": "白上フブキ",
                 "en": "Shirakami Fubuki"
               },
-              "aliases": ["フブキ", "Fubuki", "フブちゃん", "🌽"],
-              "id": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+              "aliases": [
+                "フブキ",
+                "Fubuki",
+                "フブちゃん",
+                "🌽"
+              ]
             },
             {
               "name": {
                 "ja": "大神ミオ",
                 "en": "Ookami Mio"
               },
-              "aliases": ["ミオ", "Mio", "ミオしゃ", "🌲"],
-              "id": "UCp-5t9SrOQwXMU7iIjQfARg"
+              "aliases": [
+                "ミオ",
+                "Mio",
+                "ミオしゃ",
+                "🌲"
+              ]
             },
             {
               "name": {
                 "ja": "猫又おかゆ",
                 "en": "Nekomata Okayu"
               },
-              "aliases": ["おかゆ", "Okayu", "おにぎりゃー", "🍙"],
-              "id": "UCvaTdHTWBGv3MKj3KVqJVCw"
+              "aliases": [
+                "おかゆ",
+                "Okayu",
+                "おにぎりゃー",
+                "🍙"
+              ]
             },
             {
               "name": {
                 "ja": "戌神ころね",
                 "en": "Inugami Korone"
               },
-              "aliases": ["ころね", "Korone", "ころさん", "🥐"],
-              "id": "UChAnqc_AY5_I3Px5dig3X1Q"
+              "aliases": [
+                "ころね",
+                "Korone",
+                "ころさん",
+                "🥐"
+              ]
             }
           ]
         }
@@ -360,35 +497,50 @@
                 "ja": "火威青",
                 "en": "Hiodoshi Ao"
               },
-              "aliases": ["青", "Ao"]
+              "aliases": [
+                "青",
+                "Ao"
+              ]
             },
             {
               "name": {
                 "ja": "音乃瀬奏",
                 "en": "Otonose Kanade"
               },
-              "aliases": ["奏", "Kanade"]
+              "aliases": [
+                "奏",
+                "Kanade"
+              ]
             },
             {
               "name": {
                 "ja": "一条莉々華",
                 "en": "Ichijou Ririka"
               },
-              "aliases": ["莉々華", "Ririka"]
+              "aliases": [
+                "莉々華",
+                "Ririka"
+              ]
             },
             {
               "name": {
                 "ja": "儒烏風亭らでん",
                 "en": "Juufuutei Raden"
               },
-              "aliases": ["らでん", "Raden"]
+              "aliases": [
+                "らでん",
+                "Raden"
+              ]
             },
             {
               "name": {
                 "ja": "轟はじめ",
                 "en": "Todoroki Hajime"
               },
-              "aliases": ["はじめ", "Hajime"]
+              "aliases": [
+                "はじめ",
+                "Hajime"
+              ]
             }
           ]
         },
@@ -401,35 +553,50 @@
                 "ja": "響咲リオナ",
                 "en": "Isaki Riona"
               },
-              "aliases": ["リオナ", "Riona"]
+              "aliases": [
+                "リオナ",
+                "Riona"
+              ]
             },
             {
               "name": {
                 "ja": "虎金妃笑虎",
                 "en": "Koganei Niko"
               },
-              "aliases": ["笑虎", "Niko"]
+              "aliases": [
+                "笑虎",
+                "Niko"
+              ]
             },
             {
               "name": {
                 "ja": "水宮枢",
                 "en": "Mizumiya Su"
               },
-              "aliases": ["枢", "Su"]
+              "aliases": [
+                "枢",
+                "Su"
+              ]
             },
             {
               "name": {
                 "ja": "輪堂千速",
                 "en": "Rindo Chihaya"
               },
-              "aliases": ["千速", "Chihaya"]
+              "aliases": [
+                "千速",
+                "Chihaya"
+              ]
             },
             {
               "name": {
                 "ja": "綺々羅々ヴィヴィ",
                 "en": "Kikirara Vivi"
               },
-              "aliases": ["ヴィヴィ", "Vivi"]
+              "aliases": [
+                "ヴィヴィ",
+                "Vivi"
+              ]
             }
           ]
         }
@@ -448,40 +615,54 @@
                 "ja": "森カリオペ",
                 "en": "Mori Calliope"
               },
-              "aliases": ["Calli", "かりちゃん", "Dad"],
-              "id": "UCL_qhgtOy0dy1Agp8vkySQg"
+              "aliases": [
+                "Calli",
+                "かりちゃん",
+                "Dad"
+              ]
             },
             {
               "name": {
                 "ja": "小鳥遊キアラ",
                 "en": "Takanashi Kiara"
               },
-              "aliases": ["Kiara", "キアラ", "店長"],
-              "id": "UCHsx4Hqa-1ORjQTh9TYDhww"
+              "aliases": [
+                "Kiara",
+                "キアラ",
+                "店長"
+              ]
             },
             {
               "name": {
                 "ja": "一伊那尓栖",
                 "en": "Ninomae Ina'nis"
               },
-              "aliases": ["Ina", "イナ"],
-              "id": "UCMwGHR0BTZuLsmjY_NT5Pwg"
+              "aliases": [
+                "Ina",
+                "イナ"
+              ]
             },
             {
               "name": {
                 "ja": "がうる・ぐら",
                 "en": "Gawr Gura"
               },
-              "aliases": ["Gura", "ぐらちゃん", "Same-chan"],
-              "id": "UCoSrY_IQQVpmIRZ9Xf-y93g"
+              "aliases": [
+                "Gura",
+                "ぐらちゃん",
+                "Same-chan"
+              ]
             },
             {
               "name": {
                 "ja": "【配信活動終了】 ワトソン・アメリア",
                 "en": "Watson Amelia"
               },
-              "aliases": ["Ame", "あめちゃん", "Detective"],
-              "id": "UCyl1z3jo3XHR1riLFKG5UAg",
+              "aliases": [
+                "Ame",
+                "あめちゃん",
+                "Detective"
+              ],
               "graduated": true
             }
           ]
@@ -495,8 +676,9 @@
                 "ja": "IRyS",
                 "en": "IRyS"
               },
-              "aliases": ["アイリス"],
-              "id": "UC8rcEBzJSleTkf_-agPM20g"
+              "aliases": [
+                "アイリス"
+              ]
             }
           ]
         },
@@ -509,8 +691,10 @@
                 "ja": "九十九佐命",
                 "en": "Tsukumo Sana"
               },
-              "aliases": ["Sana", "サナ"],
-              "id": "UCsUj0dszADCGbF3gNrQEuSQ",
+              "aliases": [
+                "Sana",
+                "サナ"
+              ],
               "graduated": true
             },
             {
@@ -518,32 +702,42 @@
                 "ja": "セレス・ファウナ",
                 "en": "Ceres Fauna"
               },
-              "aliases": ["Fauna", "ファウナちゃん"],
-              "id": "UCO_aKKYxn4tvrqPjcTzZ6EQ"
+              "aliases": [
+                "Fauna",
+                "ファウナちゃん"
+              ]
             },
             {
               "name": {
                 "ja": "オーロ・クロニー",
                 "en": "Ouro Kronii"
               },
-              "aliases": ["Kronii", "クロニーちゃん"],
-              "id": "UCmbs8T6MWqUHP1tIQvSgKrg"
+              "aliases": [
+                "Kronii",
+                "クロニーちゃん"
+              ]
             },
             {
               "name": {
                 "ja": "七詩ムメイ",
                 "en": "Nanashi Mumei"
               },
-              "aliases": ["Mumei", "ムメイ"],
-              "id": "UC3n5uGu18FoCy23ggWWp8tA"
+              "aliases": [
+                "Mumei",
+                "ムメイ"
+              ]
             },
             {
               "name": {
                 "ja": "ハコス・ベールズ",
                 "en": "Hakos Baelz"
               },
-              "aliases": ["Bae", "Baelz", "ベールズ", "🎲"],
-              "id": "UCgmPnx-EEeOrZSg5Tiw7ZRQ"
+              "aliases": [
+                "Bae",
+                "Baelz",
+                "ベールズ",
+                "🎲"
+              ]
             }
           ]
         },
@@ -556,40 +750,53 @@
                 "ja": "シオリ・ノヴェラ",
                 "en": "Shiori Novella"
               },
-              "aliases": ["Shiori", "シオリ", "📖"],
-              "id": "UCgnfPPb9JI3e9A4cXHnWbyg"
+              "aliases": [
+                "Shiori",
+                "シオリ",
+                "📖"
+              ]
             },
             {
               "name": {
                 "ja": "古石ビジュー",
                 "en": "Koseki Bijou"
               },
-              "aliases": ["Bijou", "ビジュー"],
-              "id": "UC9p_lqQ0FEDz327Vgf5JwqA"
+              "aliases": [
+                "Bijou",
+                "ビジュー"
+              ]
             },
             {
               "name": {
                 "ja": "ネリッサ・レイヴンクロフト",
                 "en": "Nerissa Ravencroft"
               },
-              "aliases": ["Nerissa", "ネリッサ"],
-              "id": "UC_sUe0jB_N2gw4_d6NVG2gQ"
+              "aliases": [
+                "Nerissa",
+                "ネリッサ"
+              ]
             },
             {
               "name": {
                 "ja": "フワワ・アビスガード",
                 "en": "Fuwawa Abyssgard"
               },
-              "aliases": ["Fuwawa", "フワワ", "FUWAMOCO"],
-              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
+              "aliases": [
+                "Fuwawa",
+                "フワワ",
+                "FUWAMOCO"
+              ]
             },
             {
               "name": {
                 "ja": "モココ・アビスガード",
                 "en": "Mococo Abyssgard"
               },
-              "aliases": ["Mococo", "モココ", "FUWAMOCO"],
-              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
+              "aliases": [
+                "Mococo",
+                "モココ",
+                "FUWAMOCO"
+              ]
             }
           ]
         },
@@ -602,32 +809,40 @@
                 "ja": "エリザベス・ローズ・ブラッドフレイム",
                 "en": "Elizabeth Rose Bloodflame"
               },
-              "aliases": ["Elizabeth", "エリザベス"],
-              "id": "UCZp1jS_r5_mO-eJp1d7kZ-g"
+              "aliases": [
+                "Elizabeth",
+                "エリザベス"
+              ]
             },
             {
               "name": {
                 "ja": "ジジ・ムリン",
                 "en": "Gigi Murin"
               },
-              "aliases": ["Gigi", "ジジ"],
-              "id": "UCa_hK6vS3aGgA4v4DTi_w-w"
+              "aliases": [
+                "Gigi",
+                "ジジ"
+              ]
             },
             {
               "name": {
                 "ja": "セシリア・イマーグリーン",
                 "en": "Cecilia Immergreen"
               },
-              "aliases": ["Cecilia", "セシリア"],
-              "id": "UC4-cd0qWp_pWp9g5-d_atYg"
+              "aliases": [
+                "Cecilia",
+                "セシリア"
+              ]
             },
             {
               "name": {
                 "ja": "ラオーラ・パンテーラ",
                 "en": "Raora Panthera"
               },
-              "aliases": ["Raora", "ラオーラ"],
-              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
+              "aliases": [
+                "Raora",
+                "ラオーラ"
+              ]
             }
           ]
         }
@@ -646,24 +861,33 @@
                 "ja": "アユンダ・リス",
                 "en": "Ayunda Risu"
               },
-              "aliases": ["Risu", "リスちゃん"],
-              "id": "UCOyYb1c43VlX9rc_lT6NKQw"
+              "aliases": [
+                "Risu",
+                "リスちゃん"
+              ]
             },
             {
               "name": {
                 "ja": "ムーナ・ホシノヴァ",
                 "en": "Moona Hoshinova"
               },
-              "aliases": ["Moona", "ムーナちゃん", "🔮"],
-              "id": "UCP0BspO_AMEe3aQqqpo89Dg"
+              "aliases": [
+                "Moona",
+                "ムーナちゃん",
+                "🔮"
+              ]
             },
             {
               "name": {
                 "ja": "アイラニ・イオフィフティーン",
                 "en": "Airani Iofifteen"
               },
-              "aliases": ["Iofi", "Iofifteen", "イオフィ", "🎨"],
-              "id": "UCAoy6rzhSf4ydcYjJw3WoVg"
+              "aliases": [
+                "Iofi",
+                "Iofifteen",
+                "イオフィ",
+                "🎨"
+              ]
             }
           ]
         },
@@ -676,24 +900,33 @@
                 "ja": "クレイジー・オリー",
                 "en": "Kureiji Ollie"
               },
-              "aliases": ["Ollie", "オリー", "🧟‍♀️"],
-              "id": "UCHsx4Hqa-1ORjQTh9TYDhww"
+              "aliases": [
+                "Ollie",
+                "オリー",
+                "🧟‍♀️"
+              ]
             },
             {
               "name": {
                 "ja": "アーニャ・メルフィッサ",
                 "en": "Anya Melfissa"
               },
-              "aliases": ["Anya", "アーニャ", "🔪"],
-              "id": "UC727SQYUvx5pDDGQpTICNWg"
+              "aliases": [
+                "Anya",
+                "アーニャ",
+                "🔪"
+              ]
             },
             {
               "name": {
                 "ja": "パヴォリア・レイネ",
                 "en": "Pavolia Reine"
               },
-              "aliases": ["Reine", "レイネ", "🦚"],
-              "id": "UChgTyjG-pdNvxxhdsXfHQ5Q"
+              "aliases": [
+                "Reine",
+                "レイネ",
+                "🦚"
+              ]
             }
           ]
         },
@@ -706,24 +939,33 @@
                 "ja": "ベスティア・ゼータ",
                 "en": "Vestia Zeta"
               },
-              "aliases": ["Zeta", "ゼータ", "📎"],
-              "id": "UCTvHWSfBZgtxE4sILOaurIQ"
+              "aliases": [
+                "Zeta",
+                "ゼータ",
+                "📎"
+              ]
             },
             {
               "name": {
                 "ja": "カエラ・コヴァルスキア",
                 "en": "Kaela Kovalskia"
               },
-              "aliases": ["Kaela", "カエラ", "🔨"],
-              "id": "UCZLZ8Jjx_RN2CXloOmgTHVg"
+              "aliases": [
+                "Kaela",
+                "カエラ",
+                "🔨"
+              ]
             },
             {
               "name": {
                 "ja": "こぼ・かなえる",
                 "en": "Kobo Kanaeru"
               },
-              "aliases": ["Kobo", "こぼ", "☔"],
-              "id": "UCHgU55mmBiGZ1vXdA22FF-A"
+              "aliases": [
+                "Kobo",
+                "こぼ",
+                "☔"
+              ]
             }
           ]
         }

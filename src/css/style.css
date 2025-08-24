@@ -646,7 +646,7 @@
     border-color: var(--accent-blue)
   }
   .collapsible .collapsible-content {
-    max-height: 100px;
+    max-height: 0;
     overflow: hidden;
     position: relative;
     transition: max-height .5s ease-in-out
@@ -1726,3 +1726,43 @@
     color: #fff;
     box-shadow: 0 4px 12px var(--soft-shadow)
   }
+
+/* Streamer Filter Categories */
+.streamer-category {
+    margin-bottom: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #f9f9f9;
+}
+
+.streamer-category h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+}
+
+.streamer-generation {
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
+.streamer-generation:last-child {
+    margin-bottom: 0;
+}
+
+.streamer-generation h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.streamer-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}

@@ -450,6 +450,30 @@
           "members": [
             {
               "name": {
+                "ja": "森カリオペ",
+                "en": "Mori Calliope"
+              },
+              "aliases": ["Calli", "かりちゃん", "Dad"],
+              "id": "UCL_qhgtOy0dy1Agp8vkySQg"
+            },
+            {
+              "name": {
+                "ja": "小鳥遊キアラ",
+                "en": "Takanashi Kiara"
+              },
+              "aliases": ["Kiara", "キアラ", "店長"],
+              "id": "UCHsx4Hqa-1ORjQTh9TYDhww"
+            },
+            {
+              "name": {
+                "ja": "一伊那尓栖",
+                "en": "Ninomae Ina'nis"
+              },
+              "aliases": ["Ina", "イナ"],
+              "id": "UCMwGHR0BTZuLsmjY_NT5Pwg"
+            },
+            {
+              "name": {
                 "ja": "がうる・ぐら",
                 "en": "Gawr Gura"
               },
@@ -458,19 +482,26 @@
             },
             {
               "name": {
-                "ja": "ワトソン・アメリア",
+                "ja": "【配信活動終了】 ワトソン・アメリア",
                 "en": "Watson Amelia"
               },
               "aliases": ["Ame", "あめちゃん", "Detective"],
-              "id": "UCyl1z3jo3XHR1riLFKG5UAg"
-            },
+              "id": "UCyl1z3jo3XHR1riLFKG5UAg",
+              "graduated": true
+            }
+          ]
+        },
+        "project_hope": {
+          "ja": "Project: HOPE",
+          "en": "Project: HOPE",
+          "members": [
             {
               "name": {
-                "ja": "森カリオペ",
-                "en": "Mori Calliope"
+                "ja": "IRyS",
+                "en": "IRyS"
               },
-              "aliases": ["Calli", "かりちゃん", "Dad"],
-              "id": "UCL_qhgtOy0dy1Agp8vkySQg"
+              "aliases": ["アイリス"],
+              "id": "UC8rcEBzJSleTkf_-agPM20g"
             }
           ]
         },
@@ -478,6 +509,15 @@
           "ja": "二期生 -Council-",
           "en": "Generation 2 -Council-",
           "members": [
+            {
+              "name": {
+                "ja": "九十九佐命",
+                "en": "Tsukumo Sana"
+              },
+              "aliases": ["Sana", "サナ"],
+              "id": "UCsUj0dszADCGbF3gNrQEuSQ",
+              "graduated": true
+            },
             {
               "name": {
                 "ja": "セレス・ファウナ",
@@ -493,6 +533,14 @@
               },
               "aliases": ["Kronii", "クロニーちゃん"],
               "id": "UCmbs8T6MWqUHP1tIQvSgKrg"
+            },
+            {
+              "name": {
+                "ja": "七詩ムメイ",
+                "en": "Nanashi Mumei"
+              },
+              "aliases": ["Mumei", "ムメイ"],
+              "id": "UC3n5uGu18FoCy23ggWWp8tA"
             },
             {
               "name": {
@@ -515,6 +563,76 @@
               },
               "aliases": ["Shiori", "シオリ", "📖"],
               "id": "UCgnfPPb9JI3e9A4cXHnWbyg"
+            },
+            {
+              "name": {
+                "ja": "古石ビジュー",
+                "en": "Koseki Bijou"
+              },
+              "aliases": ["Bijou", "ビジュー"],
+              "id": "UC9p_lqQ0FEDz327Vgf5JwqA"
+            },
+            {
+              "name": {
+                "ja": "ネリッサ・レイヴンクロフト",
+                "en": "Nerissa Ravencroft"
+              },
+              "aliases": ["Nerissa", "ネリッサ"],
+              "id": "UC_sUe0jB_N2gw4_d6NVG2gQ"
+            },
+            {
+              "name": {
+                "ja": "フワワ・アビスガード",
+                "en": "Fuwawa Abyssgard"
+              },
+              "aliases": ["Fuwawa", "フワワ", "FUWAMOCO"],
+              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
+            },
+            {
+              "name": {
+                "ja": "モココ・アビスガード",
+                "en": "Mococo Abyssgard"
+              },
+              "aliases": ["Mococo", "モココ", "FUWAMOCO"],
+              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
+            }
+          ]
+        },
+        "justice": {
+          "ja": "-Justice-",
+          "en": "-Justice-",
+          "members": [
+            {
+              "name": {
+                "ja": "エリザベス・ローズ・ブラッドフレイム",
+                "en": "Elizabeth Rose Bloodflame"
+              },
+              "aliases": ["Elizabeth", "エリザベス"],
+              "id": "UCZp1jS_r5_mO-eJp1d7kZ-g"
+            },
+            {
+              "name": {
+                "ja": "ジジ・ムリン",
+                "en": "Gigi Murin"
+              },
+              "aliases": ["Gigi", "ジジ"],
+              "id": "UCa_hK6vS3aGgA4v4DTi_w-w"
+            },
+            {
+              "name": {
+                "ja": "セシリア・イマーグリーン",
+                "en": "Cecilia Immergreen"
+              },
+              "aliases": ["Cecilia", "セシリア"],
+              "id": "UC4-cd0qWp_pWp9g5-d_atYg"
+            },
+            {
+              "name": {
+                "ja": "ラオーラ・パンテーラ",
+                "en": "Raora Panthera"
+              },
+              "aliases": ["Raora", "ラオーラ"],
+              "id": "UC6pGDc4bFGD1_36IKv3FnYg"
             }
           ]
         }

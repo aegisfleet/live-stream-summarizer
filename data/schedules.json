@@ -180,15 +180,15 @@
     "date": "2025-08-26T19:00:00.000Z"
   },
   {
-    "videoId": "FkCuyEIx2PM",
-    "videoUrl": "https://www.youtube.com/watch?v=FkCuyEIx2PM",
-    "streamer": "白銀ノエル ⚔",
-    "date": "2025-08-26T19:00:00.000Z"
-  },
-  {
     "videoId": "JaD7H9kavNE",
     "videoUrl": "https://www.youtube.com/watch?v=JaD7H9kavNE",
     "streamer": "ラプラス",
+    "date": "2025-08-26T19:00:00.000Z"
+  },
+  {
+    "videoId": "FkCuyEIx2PM",
+    "videoUrl": "https://www.youtube.com/watch?v=FkCuyEIx2PM",
+    "streamer": "白銀ノエル ⚔",
     "date": "2025-08-26T19:00:00.000Z"
   },
   {
@@ -196,6 +196,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=AXTIbGC8Zno",
     "streamer": "AZKi ⚒",
     "date": "2025-08-26T19:00:00.000Z"
+  },
+  {
+    "videoId": "-DjyftlN8PE",
+    "videoUrl": "https://www.youtube.com/watch?v=-DjyftlN8PE",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-26T22:00:00.000Z"
   },
   {
     "videoId": "eTSAUIRUICY",
@@ -328,6 +334,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=CiXVKkO7zTc",
     "streamer": "Nerissa",
     "date": "2025-08-26T00:00:00.000Z"
+  },
+  {
+    "videoId": "3PZedEMs_VM",
+    "videoUrl": "https://www.youtube.com/watch?v=3PZedEMs_VM",
+    "streamer": "Kiara",
+    "date": "2025-08-26T02:58:00.000Z"
   },
   {
     "videoId": "8deE3F_WgBA",

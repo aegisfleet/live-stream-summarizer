@@ -174,6 +174,18 @@
     "date": "2025-08-26T22:06:00.000Z"
   },
   {
+    "videoId": "f_Y381TW2v0",
+    "videoUrl": "https://www.youtube.com/watch?v=f_Y381TW2v0",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-08-27T05:59:00.000Z"
+  },
+  {
+    "videoId": "AQsa-pTiz7I",
+    "videoUrl": "https://www.youtube.com/watch?v=AQsa-pTiz7I",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-27T06:00:00.000Z"
+  },
+  {
     "videoId": "aAFfUAoB39A",
     "videoUrl": "https://www.youtube.com/watch?v=aAFfUAoB39A",
     "streamer": "姫森ルーナ 🍬",
@@ -342,6 +354,12 @@
     "date": "2025-08-27T00:00:00.000Z"
   },
   {
+    "videoId": "CHxZ25IutO8",
+    "videoUrl": "https://www.youtube.com/watch?v=CHxZ25IutO8",
+    "streamer": "FUWAMOCO",
+    "date": "2025-08-27T08:00:00.000Z"
+  },
+  {
     "videoId": "8deE3F_WgBA",
     "videoUrl": "https://www.youtube.com/watch?v=8deE3F_WgBA",
     "streamer": "Kiara",
@@ -406,5 +424,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=NJSoBC0AxR4",
     "streamer": "Reine",
     "date": "2025-08-27T00:27:00.000Z"
+  },
+  {
+    "videoId": "qvaCooY-ZFk",
+    "videoUrl": "https://www.youtube.com/watch?v=qvaCooY-ZFk",
+    "streamer": "Kaela",
+    "date": "2025-08-27T08:03:00.000Z"
   }
 ]

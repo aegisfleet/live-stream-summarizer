@@ -664,6 +664,7 @@ class ArchiveManager {
         } else {
             this.selectAllStreamers(false);
         }
+        this.updateSelectAllStreamersButtonState();
     }
 
     filterByStreamer(clickedStreamer) {
@@ -697,6 +698,7 @@ class ArchiveManager {
             button.classList.toggle('active', this.selectedStreamers.has(button.textContent));
         });
 
+        this.updateSelectAllStreamersButtonState();
         this.updateTagFilter();
         this.filterArchives();
 
@@ -723,6 +725,14 @@ class ArchiveManager {
 
         this.updateTagFilter();
         this.updateTitle();
+        this.updateSelectAllStreamersButtonState();
+    }
+
+    updateSelectAllStreamersButtonState() {
+        const selectAllButton = document.getElementById('select-all');
+        if (selectAllButton) {
+            selectAllButton.disabled = this.selectedStreamers.size === this.streamers.size;
+        }
     }
 
     setupTagFilter() {
@@ -828,6 +838,14 @@ class ArchiveManager {
         this.selectedTags = new Set(this.tags);
         buttons.forEach(button => button.classList.add('active'));
         this.filterArchives();
+        this.updateSelectAllTagsButtonState();
+    }
+
+    updateSelectAllTagsButtonState() {
+        const selectAllButton = document.getElementById('select-all-tags');
+        if (selectAllButton) {
+            selectAllButton.disabled = this.selectedTags.size === this.tags.size;
+        }
     }
 
     checkContentOverflow(content) {
@@ -867,6 +885,7 @@ class ArchiveManager {
         });
 
         this.filterArchives();
+        this.updateSelectAllTagsButtonState();
     }
 
     filterArchives() {

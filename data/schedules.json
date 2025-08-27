@@ -42,15 +42,15 @@
     "date": "2025-08-27T18:00:00.000Z"
   },
   {
-    "videoId": "PnMImRbpnAs",
-    "videoUrl": "https://www.youtube.com/watch?v=PnMImRbpnAs",
-    "streamer": "赤井はあと ❤",
-    "date": "2025-08-27T18:00:00.000Z"
-  },
-  {
     "videoId": "TETv_kVxV14",
     "videoUrl": "https://www.youtube.com/watch?v=TETv_kVxV14",
     "streamer": "ときのそら 🐻",
+    "date": "2025-08-27T18:00:00.000Z"
+  },
+  {
+    "videoId": "PnMImRbpnAs",
+    "videoUrl": "https://www.youtube.com/watch?v=PnMImRbpnAs",
+    "streamer": "赤井はあと ❤",
     "date": "2025-08-27T18:00:00.000Z"
   },
   {
@@ -184,6 +184,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=Vf6zwB0PnA4",
     "streamer": "夏色まつり 🏮",
     "date": "2025-08-28T19:00:00.000Z"
+  },
+  {
+    "videoId": "WFdM1mzoQC8",
+    "videoUrl": "https://www.youtube.com/watch?v=WFdM1mzoQC8",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-08-28T20:00:00.000Z"
   },
   {
     "videoId": "WptFGUTBLPE",
@@ -366,10 +372,22 @@
     "date": "2025-08-27T11:00:00.000Z"
   },
   {
+    "videoId": "2KBVSCMnh1Q",
+    "videoUrl": "https://www.youtube.com/watch?v=2KBVSCMnh1Q",
+    "streamer": "IRyS",
+    "date": "2025-08-28T02:39:00.000Z"
+  },
+  {
     "videoId": "8deE3F_WgBA",
     "videoUrl": "https://www.youtube.com/watch?v=8deE3F_WgBA",
     "streamer": "Kiara",
-    "date": "2025-08-28T03:00:00.000Z"
+    "date": "2025-08-28T03:03:00.000Z"
+  },
+  {
+    "videoId": "ltzWlEkXxh0",
+    "videoUrl": "https://www.youtube.com/watch?v=ltzWlEkXxh0",
+    "streamer": "Raora",
+    "date": "2025-08-28T08:00:00.000Z"
   },
   {
     "videoId": "LMXky-XlUqM",
@@ -381,13 +399,13 @@
     "videoId": "_vyduA98lP0",
     "videoUrl": "https://www.youtube.com/watch?v=_vyduA98lP0",
     "streamer": "IRyS",
-    "date": "2025-08-28T08:00:00.000Z"
+    "date": "2025-08-28T11:00:00.000Z"
   },
   {
-    "videoId": "ltzWlEkXxh0",
-    "videoUrl": "https://www.youtube.com/watch?v=ltzWlEkXxh0",
-    "streamer": "Raora",
-    "date": "2025-08-28T08:00:00.000Z"
+    "videoId": "l1yac6nR9MM",
+    "videoUrl": "https://www.youtube.com/watch?v=l1yac6nR9MM",
+    "streamer": "Calli",
+    "date": "2025-08-28T11:00:00.000Z"
   },
   {
     "videoId": "S0JRuVVnWDg",

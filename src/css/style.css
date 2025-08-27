@@ -1781,3 +1781,23 @@ footer {
   flex-wrap: wrap;
   gap: .5em
 }
+
+#filter-buttons button:disabled,
+#sort-buttons button:disabled,
+#tag-filter-buttons button:disabled,
+#select-all:disabled,
+#select-all-tags:disabled {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#filter-buttons button:disabled:hover,
+#sort-buttons button:disabled:hover,
+#tag-filter-buttons button:disabled:hover,
+#select-all:disabled:hover,
+#select-all-tags:disabled:hover {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    box-shadow: none;
+}

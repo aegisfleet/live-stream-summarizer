@@ -1,0 +1,36 @@
+name: Preview Site
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Preview target branch'
+        required: true
+        default: 'main'
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start server
+        run: nohup npm start &
+
+      - name: Start Cloudflare Tunnel
+        run: |
+          curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
+          chmod +x cloudflared
+          ./cloudflared tunnel --url http://localhost:3000 > tunnel.log 2>&1 &
+
+      - name: Show Tunnel URL
+        run: sleep 5 && grep -o 'https://[-0-9a-z]*\.trycloudflare\.com' tunnel.log | head -n 1
+
+      - name: Keep runner alive
+        run: sleep 3600  # 最大1時間アクセス可能（手動キャンセル可）

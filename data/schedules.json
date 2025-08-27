@@ -174,6 +174,12 @@
     "date": "2025-08-27T23:33:00.000Z"
   },
   {
+    "videoId": "7Bgt4HUOIVE",
+    "videoUrl": "https://www.youtube.com/watch?v=7Bgt4HUOIVE",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-28T06:00:00.000Z"
+  },
+  {
     "videoId": "c3uO-sYEfek",
     "videoUrl": "https://www.youtube.com/watch?v=c3uO-sYEfek",
     "streamer": "ホロライブ",
@@ -196,6 +202,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=WptFGUTBLPE",
     "streamer": "博衣こより",
     "date": "2025-08-28T20:00:00.000Z"
+  },
+  {
+    "videoId": "PBeOKCTJa2Y",
+    "videoUrl": "https://www.youtube.com/watch?v=PBeOKCTJa2Y",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-08-28T22:00:00.000Z"
   },
   {
     "videoId": "JFbNiwZg5qc",
@@ -318,15 +330,15 @@
     "date": "2025-08-28T00:15:00.000Z"
   },
   {
-    "videoId": "QYP3_zsXQeo",
-    "videoUrl": "https://www.youtube.com/watch?v=QYP3_zsXQeo",
-    "streamer": "虎金妃笑虎",
-    "date": "2025-08-28T18:00:00.000Z"
-  },
-  {
     "videoId": "VFRHmf6k-rQ",
     "videoUrl": "https://www.youtube.com/watch?v=VFRHmf6k-rQ",
     "streamer": "水宮枢",
+    "date": "2025-08-28T18:00:00.000Z"
+  },
+  {
+    "videoId": "QYP3_zsXQeo",
+    "videoUrl": "https://www.youtube.com/watch?v=QYP3_zsXQeo",
+    "streamer": "虎金妃笑虎",
     "date": "2025-08-28T18:00:00.000Z"
   },
   {

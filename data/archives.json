@@ -20,16 +20,6 @@
     "duration": 178
   },
   {
-    "videoId": "AXTIbGC8Zno",
-    "videoUrl": "https://www.youtube.com/watch?v=AXTIbGC8Zno",
-    "streamer": "AZKi ⚒",
-    "date": "2025-08-26T19:01:00.000Z",
-    "title": "【歌枠】重大告知あり！平成アニソン歌う！！！！！SINGING STREAM【ホロライブ / AZKi】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/AXTIbGC8Zno/mqdefault.jpg",
-    "endTime": "2025-08-26T11:41:12Z",
-    "duration": 5966
-  },
-  {
     "videoId": "SVmENz7QKvE",
     "videoUrl": "https://www.youtube.com/watch?v=SVmENz7QKvE",
     "streamer": "大神ミオ 🌲",
@@ -38,6 +28,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/SVmENz7QKvE/mqdefault.jpg",
     "endTime": "2025-08-26T12:22:58Z",
     "duration": 8479
+  },
+  {
+    "videoId": "AXTIbGC8Zno",
+    "videoUrl": "https://www.youtube.com/watch?v=AXTIbGC8Zno",
+    "streamer": "AZKi ⚒",
+    "date": "2025-08-26T19:01:00.000Z",
+    "title": "【歌枠】重大告知あり！平成アニソン歌う！！！！！SINGING STREAM【ホロライブ / AZKi】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/AXTIbGC8Zno/mqdefault.jpg",
+    "endTime": "2025-08-26T11:41:12Z",
+    "duration": 5966
   },
   {
     "videoId": "BiAMhXRVP-s",

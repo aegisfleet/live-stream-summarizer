@@ -66,15 +66,15 @@
     "date": "2025-08-26T19:00:00.000Z"
   },
   {
-    "videoId": "AXTIbGC8Zno",
-    "videoUrl": "https://www.youtube.com/watch?v=AXTIbGC8Zno",
-    "streamer": "AZKi ⚒",
-    "date": "2025-08-26T19:01:00.000Z"
-  },
-  {
     "videoId": "SVmENz7QKvE",
     "videoUrl": "https://www.youtube.com/watch?v=SVmENz7QKvE",
     "streamer": "大神ミオ 🌲",
+    "date": "2025-08-26T19:01:00.000Z"
+  },
+  {
+    "videoId": "AXTIbGC8Zno",
+    "videoUrl": "https://www.youtube.com/watch?v=AXTIbGC8Zno",
+    "streamer": "AZKi ⚒",
     "date": "2025-08-26T19:01:00.000Z"
   },
   {
@@ -192,15 +192,21 @@
     "date": "2025-08-27T19:00:00.000Z"
   },
   {
-    "videoId": "vNNJG2wtd_Y",
-    "videoUrl": "https://www.youtube.com/watch?v=vNNJG2wtd_Y",
-    "streamer": "赤井はあと ❤",
-    "date": "2025-08-27T22:00:00.000Z"
+    "videoId": "wrgXwiWgXaI",
+    "videoUrl": "https://www.youtube.com/watch?v=wrgXwiWgXaI",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-08-27T20:00:00.000Z"
   },
   {
     "videoId": "b_GWiMPuAiA",
     "videoUrl": "https://www.youtube.com/watch?v=b_GWiMPuAiA",
     "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-27T22:00:00.000Z"
+  },
+  {
+    "videoId": "vNNJG2wtd_Y",
+    "videoUrl": "https://www.youtube.com/watch?v=vNNJG2wtd_Y",
+    "streamer": "赤井はあと ❤",
     "date": "2025-08-27T22:00:00.000Z"
   },
   {
@@ -360,6 +366,12 @@
     "date": "2025-08-27T08:00:00.000Z"
   },
   {
+    "videoId": "VZ2cO2AzugQ",
+    "videoUrl": "https://www.youtube.com/watch?v=VZ2cO2AzugQ",
+    "streamer": "Bijou",
+    "date": "2025-08-27T11:00:00.000Z"
+  },
+  {
     "videoId": "8deE3F_WgBA",
     "videoUrl": "https://www.youtube.com/watch?v=8deE3F_WgBA",
     "streamer": "Kiara",
@@ -430,5 +442,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=qvaCooY-ZFk",
     "streamer": "Kaela",
     "date": "2025-08-27T08:03:00.000Z"
+  },
+  {
+    "videoId": "x8JjDZ73IYA",
+    "videoUrl": "https://www.youtube.com/watch?v=x8JjDZ73IYA",
+    "streamer": "Moona 🔮",
+    "date": "2025-08-27T21:30:00.000Z"
   }
 ]

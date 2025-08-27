@@ -186,6 +186,18 @@
     "date": "2025-08-27T06:00:00.000Z"
   },
   {
+    "videoId": "I8haw5xyxOg",
+    "videoUrl": "https://www.youtube.com/watch?v=I8haw5xyxOg",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-27T18:00:00.000Z"
+  },
+  {
+    "videoId": "KK4kh1s4Gxc",
+    "videoUrl": "https://www.youtube.com/watch?v=KK4kh1s4Gxc",
+    "streamer": "博衣こより",
+    "date": "2025-08-27T19:00:00.000Z"
+  },
+  {
     "videoId": "aAFfUAoB39A",
     "videoUrl": "https://www.youtube.com/watch?v=aAFfUAoB39A",
     "streamer": "姫森ルーナ 🍬",
@@ -198,15 +210,15 @@
     "date": "2025-08-27T20:00:00.000Z"
   },
   {
-    "videoId": "b_GWiMPuAiA",
-    "videoUrl": "https://www.youtube.com/watch?v=b_GWiMPuAiA",
-    "streamer": "猫又おかゆ 🍙",
-    "date": "2025-08-27T22:00:00.000Z"
+    "videoId": "9W2hQk-TbuU",
+    "videoUrl": "https://www.youtube.com/watch?v=9W2hQk-TbuU",
+    "streamer": "AZKi ⚒",
+    "date": "2025-08-27T21:00:00.000Z"
   },
   {
-    "videoId": "vNNJG2wtd_Y",
-    "videoUrl": "https://www.youtube.com/watch?v=vNNJG2wtd_Y",
-    "streamer": "赤井はあと ❤",
+    "videoId": "1raOYVMqDKI",
+    "videoUrl": "https://www.youtube.com/watch?v=1raOYVMqDKI",
+    "streamer": "角巻わため 🐏",
     "date": "2025-08-27T22:00:00.000Z"
   },
   {
@@ -216,9 +228,15 @@
     "date": "2025-08-27T22:00:00.000Z"
   },
   {
-    "videoId": "1raOYVMqDKI",
-    "videoUrl": "https://www.youtube.com/watch?v=1raOYVMqDKI",
-    "streamer": "角巻わため 🐏",
+    "videoId": "b_GWiMPuAiA",
+    "videoUrl": "https://www.youtube.com/watch?v=b_GWiMPuAiA",
+    "streamer": "猫又おかゆ 🍙",
+    "date": "2025-08-27T22:00:00.000Z"
+  },
+  {
+    "videoId": "vNNJG2wtd_Y",
+    "videoUrl": "https://www.youtube.com/watch?v=vNNJG2wtd_Y",
+    "streamer": "赤井はあと ❤",
     "date": "2025-08-27T22:00:00.000Z"
   },
   {
@@ -294,16 +312,16 @@
     "date": "2025-08-26T22:59:00.000Z"
   },
   {
-    "videoId": "Q74jNfwJRBs",
-    "videoUrl": "https://www.youtube.com/watch?v=Q74jNfwJRBs",
-    "streamer": "響咲リオナ",
-    "date": "2025-08-27T12:00:00.000Z"
-  },
-  {
     "videoId": "zJEM5_nt2S8",
     "videoUrl": "https://www.youtube.com/watch?v=zJEM5_nt2S8",
     "streamer": "水宮枢",
     "date": "2025-08-27T12:00:00.000Z"
+  },
+  {
+    "videoId": "Q74jNfwJRBs",
+    "videoUrl": "https://www.youtube.com/watch?v=Q74jNfwJRBs",
+    "streamer": "響咲リオナ",
+    "date": "2025-08-27T12:01:00.000Z"
   },
   {
     "videoId": "m0WPezM8uzE",
@@ -358,12 +376,6 @@
     "videoUrl": "https://www.youtube.com/watch?v=1HSTqBibIDk",
     "streamer": "Baelz",
     "date": "2025-08-27T00:00:00.000Z"
-  },
-  {
-    "videoId": "CHxZ25IutO8",
-    "videoUrl": "https://www.youtube.com/watch?v=CHxZ25IutO8",
-    "streamer": "FUWAMOCO",
-    "date": "2025-08-27T08:00:00.000Z"
   },
   {
     "videoId": "VZ2cO2AzugQ",
@@ -442,6 +454,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=qvaCooY-ZFk",
     "streamer": "Kaela",
     "date": "2025-08-27T08:03:00.000Z"
+  },
+  {
+    "videoId": "a_VAB-Y4BNU",
+    "videoUrl": "https://www.youtube.com/watch?v=a_VAB-Y4BNU",
+    "streamer": "Reine",
+    "date": "2025-08-27T13:00:00.000Z"
+  },
+  {
+    "videoId": "Vdt_dscItYE",
+    "videoUrl": "https://www.youtube.com/watch?v=Vdt_dscItYE",
+    "streamer": "Iofi 🎨",
+    "date": "2025-08-27T18:00:00.000Z"
+  },
+  {
+    "videoId": "wBs3kZCRwY0",
+    "videoUrl": "https://www.youtube.com/watch?v=wBs3kZCRwY0",
+    "streamer": "Iofi 🎨",
+    "date": "2025-08-27T21:30:00.000Z"
   },
   {
     "videoId": "x8JjDZ73IYA",

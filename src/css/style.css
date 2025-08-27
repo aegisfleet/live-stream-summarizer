@@ -1791,6 +1791,7 @@ footer {
     color: #a0a0a0;
     cursor: not-allowed;
     box-shadow: none;
+    border: 1px solid #ccc;
 }
 
 #filter-buttons button:disabled:hover,

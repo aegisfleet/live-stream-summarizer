@@ -192,6 +192,12 @@
     "date": "2025-08-28T19:00:00.000Z"
   },
   {
+    "videoId": "QTxOZrr1Gr4",
+    "videoUrl": "https://www.youtube.com/watch?v=QTxOZrr1Gr4",
+    "streamer": "獅白ぼたん",
+    "date": "2025-08-28T20:00:00.000Z"
+  },
+  {
     "videoId": "WFdM1mzoQC8",
     "videoUrl": "https://www.youtube.com/watch?v=WFdM1mzoQC8",
     "streamer": "白上フブキ 🌽",
@@ -204,15 +210,15 @@
     "date": "2025-08-28T20:00:00.000Z"
   },
   {
-    "videoId": "PBeOKCTJa2Y",
-    "videoUrl": "https://www.youtube.com/watch?v=PBeOKCTJa2Y",
-    "streamer": "角巻わため 🐏",
-    "date": "2025-08-28T22:00:00.000Z"
-  },
-  {
     "videoId": "JFbNiwZg5qc",
     "videoUrl": "https://www.youtube.com/watch?v=JFbNiwZg5qc",
     "streamer": "博衣こより",
+    "date": "2025-08-28T22:00:00.000Z"
+  },
+  {
+    "videoId": "PBeOKCTJa2Y",
+    "videoUrl": "https://www.youtube.com/watch?v=PBeOKCTJa2Y",
+    "streamer": "角巻わため 🐏",
     "date": "2025-08-28T22:00:00.000Z"
   },
   {
@@ -330,15 +336,15 @@
     "date": "2025-08-28T00:15:00.000Z"
   },
   {
-    "videoId": "VFRHmf6k-rQ",
-    "videoUrl": "https://www.youtube.com/watch?v=VFRHmf6k-rQ",
-    "streamer": "水宮枢",
-    "date": "2025-08-28T18:00:00.000Z"
-  },
-  {
     "videoId": "QYP3_zsXQeo",
     "videoUrl": "https://www.youtube.com/watch?v=QYP3_zsXQeo",
     "streamer": "虎金妃笑虎",
+    "date": "2025-08-28T18:00:00.000Z"
+  },
+  {
+    "videoId": "VFRHmf6k-rQ",
+    "videoUrl": "https://www.youtube.com/watch?v=VFRHmf6k-rQ",
+    "streamer": "水宮枢",
     "date": "2025-08-28T18:00:00.000Z"
   },
   {
@@ -396,21 +402,15 @@
     "date": "2025-08-28T03:03:00.000Z"
   },
   {
-    "videoId": "ltzWlEkXxh0",
-    "videoUrl": "https://www.youtube.com/watch?v=ltzWlEkXxh0",
-    "streamer": "Raora",
-    "date": "2025-08-28T08:00:00.000Z"
-  },
-  {
     "videoId": "LMXky-XlUqM",
     "videoUrl": "https://www.youtube.com/watch?v=LMXky-XlUqM",
     "streamer": "Ina",
     "date": "2025-08-28T08:00:00.000Z"
   },
   {
-    "videoId": "_vyduA98lP0",
-    "videoUrl": "https://www.youtube.com/watch?v=_vyduA98lP0",
-    "streamer": "IRyS",
+    "videoId": "W5PwesR9E4c",
+    "videoUrl": "https://www.youtube.com/watch?v=W5PwesR9E4c",
+    "streamer": "Nerissa",
     "date": "2025-08-28T11:00:00.000Z"
   },
   {
@@ -418,6 +418,36 @@
     "videoUrl": "https://www.youtube.com/watch?v=l1yac6nR9MM",
     "streamer": "Calli",
     "date": "2025-08-28T11:00:00.000Z"
+  },
+  {
+    "videoId": "_vyduA98lP0",
+    "videoUrl": "https://www.youtube.com/watch?v=_vyduA98lP0",
+    "streamer": "IRyS",
+    "date": "2025-08-28T11:01:00.000Z"
+  },
+  {
+    "videoId": "hi4ju6GO8Rw",
+    "videoUrl": "https://www.youtube.com/watch?v=hi4ju6GO8Rw",
+    "streamer": "Kiara",
+    "date": "2025-08-28T23:00:00.000Z"
+  },
+  {
+    "videoId": "ltzWlEkXxh0",
+    "videoUrl": "https://www.youtube.com/watch?v=ltzWlEkXxh0",
+    "streamer": "Raora",
+    "date": "2025-08-29T05:00:00.000Z"
+  },
+  {
+    "videoId": "FEA-KjSI0yk",
+    "videoUrl": "https://www.youtube.com/watch?v=FEA-KjSI0yk",
+    "streamer": "Shiori",
+    "date": "2025-08-29T08:00:00.000Z"
+  },
+  {
+    "videoId": "1RjMJFPUXe0",
+    "videoUrl": "https://www.youtube.com/watch?v=1RjMJFPUXe0",
+    "streamer": "Nerissa",
+    "date": "2025-08-29T09:00:00.000Z"
   },
   {
     "videoId": "S0JRuVVnWDg",
@@ -477,6 +507,12 @@
     "videoId": "8_0dnC6bGPs",
     "videoUrl": "https://www.youtube.com/watch?v=8_0dnC6bGPs",
     "streamer": "Kaela",
-    "date": "2025-08-28T11:00:00.000Z"
+    "date": "2025-08-28T11:02:00.000Z"
+  },
+  {
+    "videoId": "Z_4Vt0Ossg8",
+    "videoUrl": "https://www.youtube.com/watch?v=Z_4Vt0Ossg8",
+    "streamer": "Anya",
+    "date": "2025-08-28T11:31:00.000Z"
   }
 ]

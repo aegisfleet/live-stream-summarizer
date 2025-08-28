@@ -125,7 +125,7 @@
     "streamer": "ときのそら 🐻",
     "date": "2025-08-28T23:55:00.000Z",
     "title": "【ネタバレ注意】都市伝説によばれし主人公っていいよね～都市伝説解体センター～【ホロライブ/ときのそら】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/9wzexvF9V4o/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/9wzexvF9V4o/mqdefault.jpg",
     "endTime": "2025-08-28T16:51:39Z",
     "duration": 6977
   },
@@ -228,5 +228,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/L-G-WblGHoc/mqdefault.jpg",
     "endTime": "2025-08-28T15:52:26Z",
     "duration": 4487
+  },
+  {
+    "videoId": "PgxLnEp413k",
+    "videoUrl": "https://www.youtube.com/watch?v=PgxLnEp413k",
+    "streamer": "Zeta",
+    "date": "2025-08-29T00:00:00.000Z",
+    "title": "【BUM Simulator】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/PgxLnEp413k/mqdefault.jpg",
+    "endTime": "2025-08-28T17:24:51Z",
+    "duration": 8664
   }
 ]

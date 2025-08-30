@@ -135,9 +135,9 @@
     "streamer": "大空スバル 🚑",
     "date": "2025-08-30T10:01:00.000Z",
     "title": "【#生スバル】おはすば！！！！！ / OHASHUBA！！！FREE TALK【ホロライブ/大空スバル】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/-2S1oYAtz80/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-2S1oYAtz80/mqdefault.jpg",
     "endTime": "2025-08-30T02:47:22Z",
-    "duration": 6379
+    "duration": 6380
   },
   {
     "videoId": "08BX2T5XO0g",
@@ -238,6 +238,36 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/lUhX1uhd2oY/mqdefault.jpg",
     "endTime": "2025-08-30T00:57:35Z",
     "duration": 7307
+  },
+  {
+    "videoId": "dpcCFGRm5zM",
+    "videoUrl": "https://www.youtube.com/watch?v=dpcCFGRm5zM",
+    "streamer": "holo EN",
+    "date": "2025-08-30T10:57:00.000Z",
+    "title": "【3D】hololive English -Advent- 2nd Anniversary Live: On the Run!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/dpcCFGRm5zM/mqdefault.jpg",
+    "endTime": "2025-08-30T03:04:59Z",
+    "duration": 4047
+  },
+  {
+    "videoId": "YDyrIDHAdDY",
+    "videoUrl": "https://www.youtube.com/watch?v=YDyrIDHAdDY",
+    "streamer": "holo EN",
+    "date": "2025-08-30T12:06:00.000Z",
+    "title": "【MV】Prisoner【hololive English -Advent- Original Song】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YDyrIDHAdDY/mqdefault.jpg",
+    "endTime": "2025-08-30T03:11:02Z",
+    "duration": 177
+  },
+  {
+    "videoId": "StO3iBb0es8",
+    "videoUrl": "https://www.youtube.com/watch?v=StO3iBb0es8",
+    "streamer": "holo EN",
+    "date": "2025-08-30T12:30:00.000Z",
+    "title": "Forgive Us, Shiori, For We Have Sinned #holoEN3DRepeat",
+    "thumbnailUrl": "https://i.ytimg.com/vi/StO3iBb0es8/mqdefault.jpg",
+    "endTime": "2025-08-30T03:34:02Z",
+    "duration": 92
   },
   {
     "videoId": "PgxLnEp413k",

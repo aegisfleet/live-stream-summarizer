@@ -160,6 +160,16 @@
     "duration": 499
   },
   {
+    "videoId": "bLTVdFMS1Qg",
+    "videoUrl": "https://www.youtube.com/watch?v=bLTVdFMS1Qg",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-08-30T18:00:00.000Z",
+    "title": "【歌枠/KARAOKE】夏のおわりに騒ぐ～～～歌う～～～🎤✨️🎶【尾丸ポルカ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bLTVdFMS1Qg/mqdefault.jpg",
+    "endTime": "2025-08-30T11:07:56Z",
+    "duration": 7650
+  },
+  {
     "videoId": "jGRE-J7kSOY",
     "videoUrl": "https://www.youtube.com/watch?v=jGRE-J7kSOY",
     "streamer": "博衣こより",
@@ -168,6 +178,26 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/jGRE-J7kSOY/mqdefault.jpg",
     "endTime": "2025-08-30T10:49:31Z",
     "duration": 2979
+  },
+  {
+    "videoId": "HPKW-iU3Eds",
+    "videoUrl": "https://www.youtube.com/watch?v=HPKW-iU3Eds",
+    "streamer": "星街すいせい ☄",
+    "date": "2025-08-30T19:01:00.000Z",
+    "title": "【雑談】全員優勝！名古屋いってきた！【ホロライブ / 星街すいせい】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/HPKW-iU3Eds/mqdefault.jpg",
+    "endTime": "2025-08-30T11:04:26Z",
+    "duration": 3782
+  },
+  {
+    "videoId": "LHg1yJ9AJ7k",
+    "videoUrl": "https://www.youtube.com/watch?v=LHg1yJ9AJ7k",
+    "streamer": "ホロライブ",
+    "date": "2025-08-30T19:57:00.000Z",
+    "title": "【重大告知あり】魔法少女集結！力を合わせて試練をクリアせよ！【フブキ&ラミィ #ホロウィッチ 衣装3Dお披露目】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/LHg1yJ9AJ7k/mqdefault.jpg",
+    "endTime": "2025-08-30T11:55:31Z",
+    "duration": 3511
   },
   {
     "videoId": "08BX2T5XO0g",
@@ -275,9 +305,29 @@
     "streamer": "響咲リオナ",
     "date": "2025-08-30T18:59:00.000Z",
     "title": "【歌枠 / 告知アリ！】告知します！歌います！！【ホロライブ DEV_IS 響咲リオナ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/xup6KMhz-9M/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/xup6KMhz-9M/mqdefault.jpg",
     "endTime": "2025-08-30T10:59:46Z",
-    "duration": 3594
+    "duration": 3605
+  },
+  {
+    "videoId": "485Bai2zm_M",
+    "videoUrl": "https://www.youtube.com/watch?v=485Bai2zm_M",
+    "streamer": "轟はじめ",
+    "date": "2025-08-30T19:00:00.000Z",
+    "title": "【Abyssdia】スカヤさんから学ぶ！新作ゲーム『アビスディア』の魅力！【轟はじめ/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/485Bai2zm_M/mqdefault.jpg",
+    "endTime": "2025-08-30T11:01:34Z",
+    "duration": 3664
+  },
+  {
+    "videoId": "XeP-uZ3_Bgc",
+    "videoUrl": "https://www.youtube.com/watch?v=XeP-uZ3_Bgc",
+    "streamer": "響咲リオナ",
+    "date": "2025-08-30T20:00:00.000Z",
+    "title": "SAD SONG／響咲リオナ(Cover)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XeP-uZ3_Bgc/mqdefault.jpg",
+    "endTime": "2025-08-30T11:05:08Z",
+    "duration": 219
   },
   {
     "videoId": "1RjMJFPUXe0",

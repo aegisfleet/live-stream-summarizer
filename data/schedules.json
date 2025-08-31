@@ -300,6 +300,12 @@
     "date": "2025-08-31T18:00:00.000Z"
   },
   {
+    "videoId": "ARx9pY1U3aA",
+    "videoUrl": "https://www.youtube.com/watch?v=ARx9pY1U3aA",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-08-31T19:00:00.000Z"
+  },
+  {
     "videoId": "XeMP4UUKyw0",
     "videoUrl": "https://www.youtube.com/watch?v=XeMP4UUKyw0",
     "streamer": "博衣こより",
@@ -318,15 +324,15 @@
     "date": "2025-08-31T20:00:00.000Z"
   },
   {
-    "videoId": "g_y4uHSd5Ro",
-    "videoUrl": "https://www.youtube.com/watch?v=g_y4uHSd5Ro",
-    "streamer": "鷹嶺ルイ",
-    "date": "2025-08-31T21:00:00.000Z"
-  },
-  {
     "videoId": "E2D_YFRHFG8",
     "videoUrl": "https://www.youtube.com/watch?v=E2D_YFRHFG8",
     "streamer": "兎田ぺこら 👯",
+    "date": "2025-08-31T21:00:00.000Z"
+  },
+  {
+    "videoId": "g_y4uHSd5Ro",
+    "videoUrl": "https://www.youtube.com/watch?v=g_y4uHSd5Ro",
+    "streamer": "鷹嶺ルイ",
     "date": "2025-08-31T21:00:00.000Z"
   },
   {
@@ -345,6 +351,18 @@
     "videoId": "EV8XDjR4CRg",
     "videoUrl": "https://www.youtube.com/watch?v=EV8XDjR4CRg",
     "streamer": "角巻わため 🐏",
+    "date": "2025-08-31T22:00:00.000Z"
+  },
+  {
+    "videoId": "EiWh3xMKGVs",
+    "videoUrl": "https://www.youtube.com/watch?v=EiWh3xMKGVs",
+    "streamer": "天音かなた 💫",
+    "date": "2025-08-31T22:00:00.000Z"
+  },
+  {
+    "videoId": "HdgO1QB-Gqc",
+    "videoUrl": "https://www.youtube.com/watch?v=HdgO1QB-Gqc",
+    "streamer": "姫森ルーナ 🍬",
     "date": "2025-08-31T22:00:00.000Z"
   },
   {
@@ -489,7 +507,7 @@
     "videoId": "xJ0ro12eOAc",
     "videoUrl": "https://www.youtube.com/watch?v=xJ0ro12eOAc",
     "streamer": "水宮枢",
-    "date": "2025-08-31T11:00:00.000Z"
+    "date": "2025-08-31T11:07:00.000Z"
   },
   {
     "videoId": "lDuzHYLPopk",
@@ -606,10 +624,16 @@
     "date": "2025-08-31T04:02:00.000Z"
   },
   {
+    "videoId": "nzOVeqgRBpI",
+    "videoUrl": "https://www.youtube.com/watch?v=nzOVeqgRBpI",
+    "streamer": "Shiori",
+    "date": "2025-08-31T08:59:00.000Z"
+  },
+  {
     "videoId": "m7QERH7_gOw",
     "videoUrl": "https://www.youtube.com/watch?v=m7QERH7_gOw",
     "streamer": "Bijou",
-    "date": "2025-08-31T10:00:00.000Z"
+    "date": "2025-08-31T10:03:00.000Z"
   },
   {
     "videoId": "stbK9qvv-ZI",
@@ -622,6 +646,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=hhUGqnfqCBk",
     "streamer": "Calli",
     "date": "2025-08-31T19:00:00.000Z"
+  },
+  {
+    "videoId": "USRojXwfi3w",
+    "videoUrl": "https://www.youtube.com/watch?v=USRojXwfi3w",
+    "streamer": "Kiara",
+    "date": "2025-09-01T00:00:00.000Z"
   },
   {
     "videoId": "AzzsvLmBk-o",

@@ -280,6 +280,16 @@
     "duration": 4501
   },
   {
+    "videoId": "n_qhDgOvO_8",
+    "videoUrl": "https://www.youtube.com/watch?v=n_qhDgOvO_8",
+    "streamer": "ホロライブ",
+    "date": "2025-09-01T18:00:00.000Z",
+    "title": "【新ボイス】むかーし、むかし、あるところに…",
+    "thumbnailUrl": "https://i.ytimg.com/vi/n_qhDgOvO_8/mqdefault.jpg",
+    "endTime": "2025-09-01T09:05:58Z",
+    "duration": 222
+  },
+  {
     "videoId": "CJu--agTZ6Q",
     "videoUrl": "https://www.youtube.com/watch?v=CJu--agTZ6Q",
     "streamer": "音乃瀬奏",
@@ -408,5 +418,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/u-yA5-i2zZU/mqdefault.jpg",
     "endTime": "2025-09-01T04:53:36Z",
     "duration": 8631
+  },
+  {
+    "videoId": "Ib_wD210D6M",
+    "videoUrl": "https://www.youtube.com/watch?v=Ib_wD210D6M",
+    "streamer": "Anya",
+    "date": "2025-09-01T18:01:00.000Z",
+    "title": "【HorrorToleranceTest | 恐怖耐性診断テスト】I Tolerate Demons and Ghosts【hololive ID | Anya Melfissa】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Ib_wD210D6M/mqdefault.jpg",
+    "endTime": "2025-09-01T10:23:53Z",
+    "duration": 4968
   }
 ]

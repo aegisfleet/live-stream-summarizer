@@ -300,6 +300,18 @@
     "date": "2025-09-01T23:00:00.000Z"
   },
   {
+    "videoId": "2jQHXa8uXFc",
+    "videoUrl": "https://www.youtube.com/watch?v=2jQHXa8uXFc",
+    "streamer": "水宮枢",
+    "date": "2025-09-02T05:00:00.000Z"
+  },
+  {
+    "videoId": "Xdu9brUQHrY",
+    "videoUrl": "https://www.youtube.com/watch?v=Xdu9brUQHrY",
+    "streamer": "轟はじめ",
+    "date": "2025-09-02T19:00:00.000Z"
+  },
+  {
     "videoId": "wgP_4s7mJ-Y",
     "videoUrl": "https://www.youtube.com/watch?v=wgP_4s7mJ-Y",
     "streamer": "Elizabeth",
@@ -369,19 +381,25 @@
     "videoId": "gvetgoZMlR8",
     "videoUrl": "https://www.youtube.com/watch?v=gvetgoZMlR8",
     "streamer": "Cecilia",
-    "date": "2025-09-02T04:00:00.000Z"
+    "date": "2025-09-02T04:01:00.000Z"
   },
   {
     "videoId": "_2a78vZW_bU",
     "videoUrl": "https://www.youtube.com/watch?v=_2a78vZW_bU",
     "streamer": "Shiori",
-    "date": "2025-09-02T05:00:00.000Z"
+    "date": "2025-09-02T04:59:00.000Z"
   },
   {
     "videoId": "ZgnZfYGcO6o",
     "videoUrl": "https://www.youtube.com/watch?v=ZgnZfYGcO6o",
     "streamer": "Gigi",
     "date": "2025-09-02T06:00:00.000Z"
+  },
+  {
+    "videoId": "sy70Cwz13wA",
+    "videoUrl": "https://www.youtube.com/watch?v=sy70Cwz13wA",
+    "streamer": "Bijou",
+    "date": "2025-09-02T08:00:00.000Z"
   },
   {
     "videoId": "afD-_pZ1Z9I",

@@ -210,6 +210,12 @@
     "date": "2025-09-02T07:00:00.000Z"
   },
   {
+    "videoId": "3Rg8B1PNtkQ",
+    "videoUrl": "https://www.youtube.com/watch?v=3Rg8B1PNtkQ",
+    "streamer": "風真いろは",
+    "date": "2025-09-02T12:00:00.000Z"
+  },
+  {
     "videoId": "dr8eaR6Eod8",
     "videoUrl": "https://www.youtube.com/watch?v=dr8eaR6Eod8",
     "streamer": "博衣こより",
@@ -520,5 +526,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=29pBpS4fCzg",
     "streamer": "Zeta",
     "date": "2025-09-02T00:00:00.000Z"
+  },
+  {
+    "videoId": "oZhtNPB3Emw",
+    "videoUrl": "https://www.youtube.com/watch?v=oZhtNPB3Emw",
+    "streamer": "Kaela",
+    "date": "2025-09-02T12:11:00.000Z"
   }
 ]

@@ -216,6 +216,18 @@
     "date": "2025-09-02T12:00:00.000Z"
   },
   {
+    "videoId": "Q5pXHmXc0eM",
+    "videoUrl": "https://www.youtube.com/watch?v=Q5pXHmXc0eM",
+    "streamer": "ラプラス",
+    "date": "2025-09-02T16:44:00.000Z"
+  },
+  {
+    "videoId": "V2lswb9vsqQ",
+    "videoUrl": "https://www.youtube.com/watch?v=V2lswb9vsqQ",
+    "streamer": "風真いろは",
+    "date": "2025-09-02T17:00:00.000Z"
+  },
+  {
     "videoId": "dr8eaR6Eod8",
     "videoUrl": "https://www.youtube.com/watch?v=dr8eaR6Eod8",
     "streamer": "博衣こより",
@@ -228,21 +240,27 @@
     "date": "2025-09-02T19:00:00.000Z"
   },
   {
-    "videoId": "6K6OK8hwZ2Q",
-    "videoUrl": "https://www.youtube.com/watch?v=6K6OK8hwZ2Q",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-09-02T20:00:00.000Z"
-  },
-  {
     "videoId": "3nfkl8_tWM0",
     "videoUrl": "https://www.youtube.com/watch?v=3nfkl8_tWM0",
     "streamer": "ホロライブ",
     "date": "2025-09-02T20:00:00.000Z"
   },
   {
+    "videoId": "6K6OK8hwZ2Q",
+    "videoUrl": "https://www.youtube.com/watch?v=6K6OK8hwZ2Q",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-02T20:00:00.000Z"
+  },
+  {
     "videoId": "3aGST7jGkx0",
     "videoUrl": "https://www.youtube.com/watch?v=3aGST7jGkx0",
     "streamer": "ときのそら 🐻",
+    "date": "2025-09-02T21:00:00.000Z"
+  },
+  {
+    "videoId": "0fmu1C8o4sc",
+    "videoUrl": "https://www.youtube.com/watch?v=0fmu1C8o4sc",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-09-02T21:00:00.000Z"
   },
   {
@@ -324,12 +342,6 @@
     "date": "2025-09-02T05:00:00.000Z"
   },
   {
-    "videoId": "mIuO4RdcP3M",
-    "videoUrl": "https://www.youtube.com/watch?v=mIuO4RdcP3M",
-    "streamer": "虎金妃笑虎",
-    "date": "2025-09-02T17:30:00.000Z"
-  },
-  {
     "videoId": "3LWk5QjBVWI",
     "videoUrl": "https://www.youtube.com/watch?v=3LWk5QjBVWI",
     "streamer": "一条莉々華",
@@ -339,6 +351,12 @@
     "videoId": "Xdu9brUQHrY",
     "videoUrl": "https://www.youtube.com/watch?v=Xdu9brUQHrY",
     "streamer": "轟はじめ",
+    "date": "2025-09-02T19:00:00.000Z"
+  },
+  {
+    "videoId": "mIuO4RdcP3M",
+    "videoUrl": "https://www.youtube.com/watch?v=mIuO4RdcP3M",
+    "streamer": "虎金妃笑虎",
     "date": "2025-09-02T19:00:00.000Z"
   },
   {
@@ -532,5 +550,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=oZhtNPB3Emw",
     "streamer": "Kaela",
     "date": "2025-09-02T12:11:00.000Z"
+  },
+  {
+    "videoId": "q9ZgtFXFswI",
+    "videoUrl": "https://www.youtube.com/watch?v=q9ZgtFXFswI",
+    "streamer": "Zeta",
+    "date": "2025-09-02T21:00:00.000Z"
   }
 ]

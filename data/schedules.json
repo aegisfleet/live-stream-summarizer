@@ -168,6 +168,12 @@
     "date": "2025-09-03T20:00:00.000Z"
   },
   {
+    "videoId": "XYY_hPtLMOg",
+    "videoUrl": "https://www.youtube.com/watch?v=XYY_hPtLMOg",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-09-03T21:00:00.000Z"
+  },
+  {
     "videoId": "sqNGYGYa700",
     "videoUrl": "https://www.youtube.com/watch?v=sqNGYGYa700",
     "streamer": "大空スバル 🚑",
@@ -363,7 +369,13 @@
     "videoId": "t7qzTPw9ybk",
     "videoUrl": "https://www.youtube.com/watch?v=t7qzTPw9ybk",
     "streamer": "FUWAMOCO",
-    "date": "2025-09-03T10:00:00.000Z"
+    "date": "2025-09-03T09:55:00.000Z"
+  },
+  {
+    "videoId": "xzfZijTSVuI",
+    "videoUrl": "https://www.youtube.com/watch?v=xzfZijTSVuI",
+    "streamer": "Shiori",
+    "date": "2025-09-04T07:00:00.000Z"
   },
   {
     "videoId": "b2bZNauvNmA",
@@ -412,5 +424,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=_ftXKVlJFKw",
     "streamer": "Reine",
     "date": "2025-09-02T23:29:00.000Z"
+  },
+  {
+    "videoId": "RiP8_wLKpps",
+    "videoUrl": "https://www.youtube.com/watch?v=RiP8_wLKpps",
+    "streamer": "Kobo",
+    "date": "2025-09-03T22:00:00.000Z"
   }
 ]

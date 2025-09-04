@@ -312,6 +312,12 @@
     "date": "2025-09-05T06:00:00.000Z"
   },
   {
+    "videoId": "7zSa-8zmR88",
+    "videoUrl": "https://www.youtube.com/watch?v=7zSa-8zmR88",
+    "streamer": "響咲リオナ",
+    "date": "2025-09-05T22:00:00.000Z"
+  },
+  {
     "videoId": "E3wWj3si0WQ",
     "videoUrl": "https://www.youtube.com/watch?v=E3wWj3si0WQ",
     "streamer": "水宮枢",
@@ -322,12 +328,6 @@
     "videoUrl": "https://www.youtube.com/watch?v=hLKhY3M5lcE",
     "streamer": "綺々羅々ヴィヴィ",
     "date": "2025-09-05T22:00:00.000Z"
-  },
-  {
-    "videoId": "7zSa-8zmR88",
-    "videoUrl": "https://www.youtube.com/watch?v=7zSa-8zmR88",
-    "streamer": "響咲リオナ",
-    "date": "2025-09-05T23:00:00.000Z"
   },
   {
     "videoId": "7XA6cd5UNPU",
@@ -393,7 +393,7 @@
     "videoId": "1G6mWYMaKXI",
     "videoUrl": "https://www.youtube.com/watch?v=1G6mWYMaKXI",
     "streamer": "Cecilia",
-    "date": "2025-09-05T03:00:00.000Z"
+    "date": "2025-09-05T03:07:00.000Z"
   },
   {
     "videoId": "bjLyPA4HcBU",
@@ -406,6 +406,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=RKPS3dJUskE",
     "streamer": "Bijou",
     "date": "2025-09-05T08:00:00.000Z"
+  },
+  {
+    "videoId": "Z9zz1_KQ3L4",
+    "videoUrl": "https://www.youtube.com/watch?v=Z9zz1_KQ3L4",
+    "streamer": "Ina",
+    "date": "2025-09-05T09:00:00.000Z"
   },
   {
     "videoId": "wyuB5FhZLOA",

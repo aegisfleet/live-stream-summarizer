@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757071866889';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757079631403';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',

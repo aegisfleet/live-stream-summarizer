@@ -1369,6 +1369,9 @@ ${shareUrl}`;
     }
 
     setupServiceWorker() {
+        // 通知の許可をリクエスト
+        this.requestNotificationPermission();
+
         if ('serviceWorker' in navigator) {
             const basePath = getBasePath();
 
@@ -1432,6 +1435,18 @@ ${shareUrl}`;
                             registration.waiting.postMessage({ type: 'SKIP_WAITING' });
                         }
                     });
+                }
+            });
+        }
+    }
+
+    requestNotificationPermission() {
+        if ('Notification' in window) {
+            Notification.requestPermission().then(permission => {
+                if (permission === 'granted') {
+                    console.log('Notification permission granted.');
+                } else {
+                    console.log('Notification permission denied.');
                 }
             });
         }

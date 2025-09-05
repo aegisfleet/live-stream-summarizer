@@ -1,6 +1,30 @@
+// Firebase SDKのインポート
+import { initializeApp } from 'firebase/app';
+import { getMessaging, getToken, deleteToken } from 'firebase/messaging';
+import { getDatabase, ref, set, remove } from 'firebase/database';
+
+// ユーザーから提供されたFirebase設定
+const firebaseConfig = {
+  apiKey: "AIzaSyCQQvoJJ6vGiNhpM5y2v0M1RwyTLZVy5rs",
+  authDomain: "live-stream-summarizer-2971a.firebaseapp.com",
+  projectId: "live-stream-summarizer-2971a",
+  storageBucket: "live-stream-summarizer-2971a.firebasestorage.app",
+  messagingSenderId: "946045800307",
+  appId: "1:946045800307:web:cd9fda752ba8cd07d6bf06",
+  measurementId: "G-2ZVN3NQD4W"
+};
+
+// 以前生成したVAPIDキー（Push通知の暗号化に必要）
+const VAPID_PUBLIC_KEY = 'BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM';
+
+// Firebaseの初期化
+const firebaseApp = initializeApp(firebaseConfig);
+const messaging = getMessaging(firebaseApp);
+const database = getDatabase(firebaseApp);
+
 /**
  * 通知システムを管理するクラス
- * トースト通知、フィードバック、ハプティック効果を担当
+ * トースト通知、フィードバック、ハプティック効果、そしてWeb Push通知を担当
  */
 class NotificationSystem {
     constructor() {
@@ -9,6 +33,9 @@ class NotificationSystem {
         this.toastContainer = null;
         this.maxToasts = 5;
         this.defaultDuration = 2500;
+        this.pushSubscriptionButton = null;
+        this.isSubscribed = false;
+        this.currentToken = null;
         
         this.init();
     }
@@ -20,7 +47,156 @@ class NotificationSystem {
         this.createToastContainer();
         this.setupGlobalStyles();
         this.loadUserPreferences();
+        this.initializePushNotifications();
     }
+
+    /**
+     * Web Push通知の初期化処理
+     */
+    async initializePushNotifications() {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+            console.warn('Push notifications are not supported in this browser.');
+            return;
+        }
+
+        this.createSubscriptionButton();
+
+        // 現在の購読状態を確認
+        try {
+            const registration = await navigator.serviceWorker.ready;
+            this.currentToken = await getToken(messaging, { serviceWorkerRegistration: registration, vapidKey: VAPID_PUBLIC_KEY });
+            this.isSubscribed = !!this.currentToken;
+        } catch (error) {
+            this.isSubscribed = false;
+        }
+        
+        this.updateSubscriptionButton();
+    }
+
+    /**
+     * プッシュ通知購読ボタンの作成と配置
+     */
+    createSubscriptionButton() {
+        this.pushSubscriptionButton = document.createElement('button');
+        this.pushSubscriptionButton.id = 'push-subscription-btn';
+        this.pushSubscriptionButton.className = 'push-btn';
+        this.pushSubscriptionButton.addEventListener('click', () => {
+            this.pushSubscriptionButton.disabled = true; // Prevent double-clicking
+            if (this.isSubscribed) {
+                this.unsubscribeUser();
+            } else {
+                this.subscribeUser();
+            }
+        });
+
+        const footer = document.querySelector('footer .language-switcher');
+        if (footer) {
+            footer.insertAdjacentElement('beforebegin', this.pushSubscriptionButton);
+            const style = document.createElement('style');
+            style.textContent = `
+                .push-btn {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 8px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    transition: background-color 0.3s;
+                }
+                .push-btn:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+
+    /**
+     * 購読ボタンのUIを更新
+     */
+    updateSubscriptionButton() {
+        if (Notification.permission === 'denied') {
+            this.pushSubscriptionButton.textContent = '通知はブロックされています';
+            this.pushSubscriptionButton.disabled = true;
+            return;
+        }
+
+        if (this.isSubscribed) {
+            this.pushSubscriptionButton.textContent = '更新通知を解除する';
+        } else {
+            this.pushSubscriptionButton.textContent = '更新通知を受け取る';
+        }
+        this.pushSubscriptionButton.disabled = false;
+    }
+
+    /**
+     * ユーザーをプッシュ通知に購読させる (Firebase)
+     */
+    async subscribeUser() {
+        try {
+            const registration = await navigator.serviceWorker.ready;
+            const permission = await Notification.requestPermission();
+
+            if (permission === 'granted') {
+                const token = await getToken(messaging, { serviceWorkerRegistration: registration, vapidKey: VAPID_PUBLIC_KEY });
+                
+                if (token) {
+                    // Realtime Databaseにトークンを保存
+                    const dbRef = ref(database, 'fcmTokens/' + token);
+                    await set(dbRef, true);
+
+                    console.log('FCM Token stored in DB: ', token);
+                    this.showToast('更新通知を購読しました', 'success');
+                    this.isSubscribed = true;
+                    this.currentToken = token;
+                } else {
+                    this.isSubscribed = false;
+                }
+            } else {
+                console.log('Unable to get permission to notify.');
+                this.isSubscribed = false;
+            }
+        } catch (error) {
+            console.error('An error occurred while subscribing: ', error);
+            this.showToast('通知の購読に失敗しました', 'error');
+            this.isSubscribed = false;
+        }
+        this.updateSubscriptionButton();
+    }
+
+    /**
+     * ユーザーのプッシュ通知購読を解除する (Firebase)
+     */
+    async unsubscribeUser() {
+        try {
+            if (this.currentToken) {
+                // Realtime Databaseからトークンを削除
+                const dbRef = ref(database, 'fcmTokens/' + this.currentToken);
+                await remove(dbRef);
+                console.log('Token removed from DB.');
+            }
+
+            // FCMからトークンを無効化
+            await deleteToken(messaging);
+            console.log('Token deleted from FCM.');
+
+            this.showToast('更新通知を解除しました', 'info');
+            this.isSubscribed = false;
+            this.currentToken = null;
+        } catch (error) {
+            console.error('An error occurred while unsubscribing. ', error);
+            this.showToast('通知の解除に失敗しました', 'error');
+            this.isSubscribed = true; // 失敗した場合は購読状態のまま
+        }
+        this.updateSubscriptionButton();
+    }
+
+
+    // ここから下は既存のトースト通知関連のメソッド
+    // =================================================
 
     /**
      * トーストコンテナの作成

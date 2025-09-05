@@ -1,0 +1,27 @@
+name: Send Notifications
+
+on:
+  deployment_status:
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+    # デプロイが成功し、かつ対象の環境が `github-pages` の場合のみ実行
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'github-pages'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send push notifications
+        run: node scripts/send-notifications.js
+        env:
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}

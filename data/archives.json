@@ -50,6 +50,36 @@
     "duration": 3120
   },
   {
+    "videoId": "pm4YznwZTqk",
+    "videoUrl": "https://www.youtube.com/watch?v=pm4YznwZTqk",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-05T18:00:00.000Z",
+    "title": "【縦型歌枠】もう9月だし大雨だけど…！夏歌うたいたい🎶【白銀ノエル/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pm4YznwZTqk/mqdefault_live.jpg",
+    "endTime": "2025-09-05T11:01:14Z",
+    "duration": 7254
+  },
+  {
+    "videoId": "IehMVylI6vM",
+    "videoUrl": "https://www.youtube.com/watch?v=IehMVylI6vM",
+    "streamer": "桃鈴ねね",
+    "date": "2025-09-05T18:00:00.000Z",
+    "title": "【 ８番出口 】大型アプデ！？新しい異変、あるらしい・・・！【 桃鈴ねね / hololive 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/IehMVylI6vM/mqdefault_live.jpg",
+    "endTime": "2025-09-05T10:49:08Z",
+    "duration": 6499
+  },
+  {
+    "videoId": "IAxYDe_JM00",
+    "videoUrl": "https://www.youtube.com/watch?v=IAxYDe_JM00",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-05T19:00:00.000Z",
+    "title": "ホロライブサマーはここにあったんだ...！！！【ギリギリわるくないわため】 #ギリわる",
+    "thumbnailUrl": "https://i.ytimg.com/vi/IAxYDe_JM00/mqdefault.jpg",
+    "endTime": "2025-09-05T10:02:33Z",
+    "duration": 11
+  },
+  {
     "videoId": "Vi2ScP1xCLA",
     "videoUrl": "https://www.youtube.com/watch?v=Vi2ScP1xCLA",
     "streamer": "綺々羅々ヴィヴィ",
@@ -178,5 +208,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/doORSrl5UKw/mqdefault.jpg",
     "endTime": "2025-09-05T07:46:53Z",
     "duration": 6386
+  },
+  {
+    "videoId": "7DhSEkmieFs",
+    "videoUrl": "https://www.youtube.com/watch?v=7DhSEkmieFs",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-05T17:29:00.000Z",
+    "title": "I AM BACK FOR MORE SWBF II",
+    "thumbnailUrl": "https://i.ytimg.com/vi/7DhSEkmieFs/mqdefault_live.jpg",
+    "endTime": "2025-09-05T10:57:50Z",
+    "duration": 8877
   }
 ]

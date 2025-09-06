@@ -1,4 +1,4 @@
-const VAPID_PUBLIC_KEY = 'BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM';
+const VAPID_PUBLIC_KEY = 'BNwCsdDI5d5pHqITS3xxzCdtpd7feeGyu2jjEQZz1XsPw_QcoaeEGkwJd8wDd6AZNPeFsHNVilxgIkj5ovO6CO4';
 const SUBSCRIBE_ENDPOINT_URL = 'https://holosumm-pusher.aegisfleet.workers.dev/subscribe';
 
 /**

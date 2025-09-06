@@ -121,7 +121,7 @@ self.addEventListener('push', event => {
             summaries.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
             const latestSummary = summaries[0];
 
-            const title = '新しい要約が追加されました';
+            const title = `${latestSummary.streamer}の動画が追加されました`;
             const body = latestSummary.title;
             const icon = latestSummary.thumbnailUrl || '/live-stream-summarizer/images/favicon.png';
             const url = `${SITE_URL}pages/${latestSummary.videoId}.html`;

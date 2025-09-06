@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757152612742';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757154050185';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -99,45 +99,61 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('push', event => {
     console.log('[Service Worker] Push Received.');
-    console.log('[Service Worker] event object:', event);
-    console.log('[Service Worker] event.data object:', event.data);
 
-    let notificationTitle = '新しい要約が追加されました';
-    let notificationOptions = {
-        body: 'サイトで最新の情報を確認しましょう！',
-        icon: '/live-stream-summarizer/images/favicon.png',
-        badge: '/live-stream-summarizer/images/favicon.png',
-        data: { url: SITE_URL }
-    };
+    const notificationPromise = fetch('data/summaries.json', { cache: 'no-cache' })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(summaries => {
+            if (!summaries || summaries.length === 0) {
+                console.log('[Service Worker] No summaries found, showing default notification.');
+                return self.registration.showNotification('新しい要約が追加されました', {
+                    body: 'サイトで最新の情報を確認しましょう！',
+                    icon: '/live-stream-summarizer/images/favicon.png',
+                    badge: '/live-stream-summarizer/images/favicon.png',
+                    data: { url: SITE_URL }
+                });
+            }
 
-    if (event.data) {
-        try {
-            console.log('[Service Worker] event.data is present, trying to parse...');
-            const dataText = event.data.text();
-            console.log(`[Service Worker] Push had this data: "${dataText}"`);
-            const data = JSON.parse(dataText);
+            // Sort summaries by lastUpdated date in descending order to get the latest
+            summaries.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+            const latestSummary = summaries[0];
 
-            notificationTitle = data.title || notificationTitle;
-            notificationOptions.body = data.body || notificationOptions.body;
-            notificationOptions.icon = data.icon || notificationOptions.icon;
-            notificationOptions.data.url = data.url || notificationOptions.data.url;
+            const title = '新しい要約が追加されました';
+            const body = latestSummary.title;
+            // Use thumbnail if available, otherwise fallback to default icon
+            const icon = latestSummary.thumbnailUrl || '/live-stream-summarizer/images/favicon.png';
+            const url = `${SITE_URL}pages/${latestSummary.videoId}.html`;
 
-        } catch (e) {
-            console.error('[Service Worker] Failed to parse push data:', e);
-            notificationTitle = '更新情報の取得に失敗';
-            notificationOptions.body = 'プッシュデータの処理中にエラーが発生しました。';
-        }
-    } else {
-        console.log('[Service Worker] Push event had no data.');
-        notificationTitle = '更新情報あり';
-        notificationOptions.body = 'サイトで最新の情報を確認してください。';
-    }
+            console.log(`[Service Worker] Showing notification for: ${body}`);
 
-    event.waitUntil(
-        self.registration.showNotification(notificationTitle, notificationOptions)
-    );
+            const options = {
+                body: body,
+                icon: icon,
+                badge: '/live-stream-summarizer/images/favicon.png',
+                data: {
+                    url: url
+                }
+            };
+
+            return self.registration.showNotification(title, options);
+        })
+        .catch(error => {
+            console.error('[Service Worker] Failed to fetch summary for push notification:', error);
+            // Fallback notification on error
+            return self.registration.showNotification('新しい要約が追加されました', {
+                body: 'サイトで最新の情報を確認しましょう！',
+                icon: '/live-stream-summarizer/images/favicon.png',
+                badge: '/live-stream-summarizer/images/favicon.png',
+                data: { url: SITE_URL }
+            });
+        });
+
+    event.waitUntil(notificationPromise);
 });
-
 
 self.addEventListener('notificationclick', event => {
     console.log('[Service Worker] Notification click Received.');

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757198046745';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757198642731';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -121,7 +121,7 @@ self.addEventListener('push', event => {
             summaries.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
             const latestSummary = summaries[0];
 
-            const title = '新しい要約が追加されました';
+            const title = `${latestSummary.streamer}の動画が追加されました`;
             const body = latestSummary.title;
             const icon = latestSummary.thumbnailUrl || '/live-stream-summarizer/images/favicon.png';
             const url = `${SITE_URL}pages/${latestSummary.videoId}.html`;

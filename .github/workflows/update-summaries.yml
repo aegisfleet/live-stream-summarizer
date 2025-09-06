@@ -92,11 +92,11 @@ jobs:
           echo "OLD_COUNT: $OLD_COUNT"
           echo "NEW_COUNT: $NEW_COUNT"
 
-          # if [ "$NEW_COUNT" -gt "$OLD_COUNT" ]; then
+          if [ "$NEW_COUNT" -gt "$OLD_COUNT" ]; then
             echo "has_new_summaries=true" >> $GITHUB_OUTPUT
-          # else
-          #   echo "has_new_summaries=false" >> $GITHUB_OUTPUT
-          # fi
+          else
+            echo "has_new_summaries=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and push changes
         if: ${{ github.event.inputs.test_push_notification != 'true' }}

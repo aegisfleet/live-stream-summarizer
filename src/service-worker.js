@@ -98,29 +98,35 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('push', event => {
-    let data;
+    console.log('[Service Worker] Push Received.');
+    let data = {};
     try {
-        data = event.data.json();
+        if (event.data) {
+            const dataText = event.data.text();
+            // Log received data for debugging
+            console.log(`[Service Worker] Push had this data: "${dataText}"`);
+            data = JSON.parse(dataText);
+        }
     } catch (e) {
-        data = {
-            title: '新しい要約が追加されました',
-            body: 'サイトで最新の情報を確認しましょう！',
-            icon: '/live-stream-summarizer/images/favicon.png',
-            url: SITE_URL
-        };
+        console.error('[Service Worker] Failed to parse push data:', e);
     }
 
+    const title = data.title || '新しい要約が追加されました';
+    const body = data.body || 'サイトで最新の情報を確認しましょう！';
+    const icon = data.icon || '/live-stream-summarizer/images/favicon.png';
+    const url = data.url || SITE_URL;
+
     const options = {
-        body: data.body,
-        icon: data.icon,
+        body: body,
+        icon: icon,
         badge: '/live-stream-summarizer/images/favicon.png',
         data: {
-            url: data.url
+            url: url
         }
     };
 
     event.waitUntil(
-        self.registration.showNotification(data.title, options)
+        self.registration.showNotification(title, options)
     );
 });
 

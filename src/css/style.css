@@ -1180,51 +1180,7 @@ footer {
     overflow-y: auto
   }
 }
-.snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  background: linear-gradient(135deg,#4a90e2 0,#2c5aa0 100%);
-  color: #fff;
-  text-align: center;
-  border-radius: 12px;
-  padding: 16px;
-  position: fixed;
-  z-index: 100;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: bottom .5s ease-in-out;
-  box-shadow: 0 4px 16px rgba(74,144,226,.4)
-}
-.snackbar.show {
-  visibility: visible;
-  bottom: 30px
-}
-.snackbar-text {
-  margin: 0;
-  padding-right: 16px
-}
-.snackbar-button {
-  background: linear-gradient(135deg,rgba(255,255,255,.2) 0,rgba(255,255,255,.1) 100%);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.3);
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 8px;
-  white-space: nowrap;
-  transition: all .2s ease
-}
-.snackbar-button:hover {
-  background: linear-gradient(135deg,rgba(255,255,255,.3) 0,rgba(255,255,255,.2) 100%);
-  border-color: rgba(255,255,255,.5)
-}
+
 .top-language-switcher {
   text-align: center;
   margin: 1rem auto

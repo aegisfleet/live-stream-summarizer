@@ -20,7 +20,7 @@ const ASSETS_TO_CACHE = [
   'manifest.json'
 ];
 
-// install イベント: アセットをキャッシュに保存する
+// install イベント: アセットをキャッシュに保存し、即座にアクティブ化する
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -28,13 +28,12 @@ self.addEventListener('install', event => {
         console.log('Service Worker: Caching app shell');
         return cache.addAll(ASSETS_TO_CACHE);
       })
+      .then(() => {
+        // 新しい Service Worker を即座にアクティブにする
+        console.log('Service Worker: Skip waiting and activate immediately.');
+        return self.skipWaiting();
+      })
   );
-});
-
-self.addEventListener('message', event => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
 });
 
 // activate イベント: 古いキャッシュを削除する

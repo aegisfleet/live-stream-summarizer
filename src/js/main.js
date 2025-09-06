@@ -1384,67 +1384,20 @@ ${shareUrl}`;
         if ('serviceWorker' in navigator) {
             const basePath = getBasePath();
 
-            const showUpdateSnackbar = (worker) => {
-                const snackbar = document.getElementById('update-snackbar');
-                const updateButton = document.getElementById('update-button');
-                if (snackbar && updateButton) {
-                    snackbar.classList.add('show');
-                    updateButton.onclick = () => {
-                        worker.postMessage({ type: 'SKIP_WAITING' });
-                    };
-                }
-            };
-
-            const checkForUpdate = () => {
-                navigator.serviceWorker.ready.then(registration => {
-                    registration.update();
-                }).catch(error => {
-                    console.error('Error during service worker update check:', error);
-                });
-            };
-
             navigator.serviceWorker.register(`${basePath}service-worker.js`, { scope: basePath })
                 .then(registration => {
-                    if (registration.waiting) {
-                        showUpdateSnackbar(registration.waiting);
-                    }
-                    registration.onupdatefound = () => {
-                        const installingWorker = registration.installing;
-                        if (installingWorker) {
-                            installingWorker.onstatechange = () => {
-                                if (installingWorker.state === 'installed') {
-                                    if (navigator.serviceWorker.controller) {
-                                        showUpdateSnackbar(installingWorker);
-                                    }
-                                }
-                            };
-                        }
-                    };
+                    console.log('Service Worker registered successfully.');
                 })
                 .catch(error => {
                     console.error('Error during service worker registration:', error);
                 });
 
+            // Service Workerが更新され、controllerが変更されたときにページをリロードする
             let refreshing;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
                 if (refreshing) return;
                 window.location.reload();
                 refreshing = true;
-            });
-
-            // PWAの表示状態が変わった際の処理
-            document.addEventListener('visibilitychange', () => {
-                if (document.visibilityState === 'visible') {
-                    // PWAがフォアグラウンドになった際に更新をチェックする
-                    checkForUpdate();
-                } else if (document.visibilityState === 'hidden') {
-                    // PWAがバックグラウンドに移動した際に、待機中の更新があれば適用する
-                    navigator.serviceWorker.getRegistration().then(registration => {
-                        if (registration && registration.waiting) {
-                            registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-                        }
-                    });
-                }
             });
         }
     }

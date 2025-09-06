@@ -73,6 +73,23 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
+      - name: Check for new summaries
+        id: check_summaries
+        run: |
+          # Get summary count from HEAD. If the file doesn't exist, count is 0.
+          OLD_COUNT=$(git show HEAD:src/data/summaries.json 2>/dev/null | jq 'length' || echo 0)
+          # Get summary count from current file
+          NEW_COUNT=$(jq 'length' src/data/summaries.json)
+
+          echo "OLD_COUNT: $OLD_COUNT"
+          echo "NEW_COUNT: $NEW_COUNT"
+
+          if [ "$NEW_COUNT" -gt "$OLD_COUNT" ]; then
+            echo "has_new_summaries=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_new_summaries=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit and push changes
         run: |
           bash ./scripts/commit-changes.sh "chore: Update stream summaries and generate pages"
@@ -82,6 +99,21 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src
+
+      - name: Send Push Notification
+        if: steps.check_summaries.outputs.has_new_summaries == 'true'
+        run: |
+          LATEST_TITLE=$(jq -r '.[0].title' src/data/summaries.json)
+          LATEST_STREAMER=$(jq -r '.[0].streamer' src/data/summaries.json)
+          LATEST_VIDEO_ID=$(jq -r '.[0].videoId' src/data/summaries.json)
+
+          PAGE_URL="https://aegisfleet.github.io/live-stream-summarizer/pages/${LATEST_VIDEO_ID}.html"
+
+          curl -X POST \
+            "${{ secrets.CF_WORKER_URL }}/send-notification" \
+            -H "Authorization: Bearer ${{ secrets.CF_AUTH_KEY }}" \
+            -H "Content-Type: application/json" \
+            --data-raw '{ "title": "更新情報 '$LATEST_STREAMER'", "body": "'$LATEST_TITLE'", "icon": "https://aegisfleet.github.io/live-stream-summarizer/images/character.png", "url": "'$PAGE_URL'" }'
 
       - name: Check for failures
         if: failure()

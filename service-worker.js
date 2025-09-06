@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757148699026';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757152612742';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -99,34 +99,42 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('push', event => {
     console.log('[Service Worker] Push Received.');
-    let data = {};
-    try {
-        if (event.data) {
-            const dataText = event.data.text();
-            // Log received data for debugging
-            console.log(`[Service Worker] Push had this data: "${dataText}"`);
-            data = JSON.parse(dataText);
-        }
-    } catch (e) {
-        console.error('[Service Worker] Failed to parse push data:', e);
-    }
+    console.log('[Service Worker] event object:', event);
+    console.log('[Service Worker] event.data object:', event.data);
 
-    const title = data.title || '新しい要約が追加されました';
-    const body = data.body || 'サイトで最新の情報を確認しましょう！';
-    const icon = data.icon || '/live-stream-summarizer/images/favicon.png';
-    const url = data.url || SITE_URL;
-
-    const options = {
-        body: body,
-        icon: icon,
+    let notificationTitle = '新しい要約が追加されました';
+    let notificationOptions = {
+        body: 'サイトで最新の情報を確認しましょう！',
+        icon: '/live-stream-summarizer/images/favicon.png',
         badge: '/live-stream-summarizer/images/favicon.png',
-        data: {
-            url: url
-        }
+        data: { url: SITE_URL }
     };
 
+    if (event.data) {
+        try {
+            console.log('[Service Worker] event.data is present, trying to parse...');
+            const dataText = event.data.text();
+            console.log(`[Service Worker] Push had this data: "${dataText}"`);
+            const data = JSON.parse(dataText);
+
+            notificationTitle = data.title || notificationTitle;
+            notificationOptions.body = data.body || notificationOptions.body;
+            notificationOptions.icon = data.icon || notificationOptions.icon;
+            notificationOptions.data.url = data.url || notificationOptions.data.url;
+
+        } catch (e) {
+            console.error('[Service Worker] Failed to parse push data:', e);
+            notificationTitle = '更新情報の取得に失敗';
+            notificationOptions.body = 'プッシュデータの処理中にエラーが発生しました。';
+        }
+    } else {
+        console.log('[Service Worker] Push event had no data.');
+        notificationTitle = '更新情報あり';
+        notificationOptions.body = 'サイトで最新の情報を確認してください。';
+    }
+
     event.waitUntil(
-        self.registration.showNotification(title, options)
+        self.registration.showNotification(notificationTitle, notificationOptions)
     );
 });
 

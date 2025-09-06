@@ -44,12 +44,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Node.js
+        if: ${{ github.event.inputs.test_push_notification != 'true' }}
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
+        if: ${{ github.event.inputs.test_push_notification != 'true' }}
         run: npm ci
 
       - name: Fetch schedule
@@ -58,25 +60,26 @@ jobs:
 
       - name: Check archives
         if: ${{ github.event.inputs.skip_check_archives != 'true' }}
-        run: npm run check-archive
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run check-archive
 
       - name: Generate summaries
         if: ${{ github.event.inputs.skip_generate_summaries != 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.videoId }}" ]; then
             npm run summarize -- ${{ github.event.inputs.videoId }}
           else
             npm run summarize
           fi
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Generate individual pages
-        run: npm run generate-pages
+        if: ${{ github.event.inputs.test_push_notification != 'true' }}
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run generate-pages
 
       - name: Check for new summaries
         id: check_summaries
@@ -129,7 +132,7 @@ jobs:
             --data-raw "${JSON_PAYLOAD}"
 
       - name: Check for failures
-        if: failure()
+        if: failure() && github.event.inputs.test_push_notification != 'true'
         uses: actions/github-script@v6
         with:
           script: |

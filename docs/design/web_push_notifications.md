@@ -63,7 +63,7 @@ graph TD
 
 ### ステップ2: VAPIDキーの確認
 
-提供いただいた公開鍵 `BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM` に対応する\*\*秘密鍵(Private Key)\*\*を準備してください。
+提供いただいた公開鍵 `BNwCsdDI5d5pHqITS3xxzCdtpd7feeGyu2jjEQZz1XsPw_QcoaeEGkwJd8wDd6AZNPeFsHNVilxgIkj5ovO6CO4` に対応する\*\*秘密鍵(Private Key)\*\*を準備してください。
 
 もし秘密鍵が不明な場合は、お手数ですが再度キーペアを生成し直す必要があります。その際はローカルの開発環境で以下のコマンドを実行し、生成された公開鍵と秘密鍵を両方ともメモしておいてください。
 
@@ -99,7 +99,7 @@ npx web-push generate-vapid-keys
 
 1. 同じく **「Settings」** \> **「Variables」** の画面内にある **「Environment Variables」** セクションで「Add variable」をクリックします。
 2. 以下の**3つの変数**を一つずつ追加していきます。`Value`を入力したら「Encrypt」をクリックして暗号化してください。
-      * **`VAPID_PUBLIC_KEY`**: `BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM`
+      * **`VAPID_PUBLIC_KEY`**: `BNwCsdDI5d5pHqITS3xxzCdtpd7feeGyu2jjEQZz1XsPw_QcoaeEGkwJd8wDd6AZNPeFsHNVilxgIkj5ovO6CO4`
       * **`VAPID_PRIVATE_KEY`**: 上記公開鍵に対応する**秘密鍵**
       * **`AUTH_KEY`**: 自身で生成したランダムで長い文字列（GitHub Actions認証用）
 3. すべての変数を追加したら、「Save and deploy」をクリックします。
@@ -115,7 +115,7 @@ npx web-push generate-vapid-keys
 ```javascript
 // main.js に追記する処理の例
 
-const VAPID_PUBLIC_KEY = 'BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM';
+const VAPID_PUBLIC_KEY = 'BNwCsdDI5d5pHqITS3xxzCdtpd7feeGyu2jjEQZz1XsPw_QcoaeEGkwJd8wDd6AZNPeFsHNVilxgIkj5ovO6CO4';
 const SUBSCRIBE_ENDPOINT_URL = 'https://holosumm-pusher.aegisfleet.workers.dev/subscribe';
 
 // ... (通知ボタンのクリックイベントリスナー) ...

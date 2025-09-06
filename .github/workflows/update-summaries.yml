@@ -24,6 +24,11 @@ on:
         type: boolean
         required: false
         default: false
+      test_push_notification:
+        description: 'Test Push Notification'
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: update-summaries
@@ -91,29 +96,37 @@ jobs:
           fi
 
       - name: Commit and push changes
+        if: ${{ github.event.inputs.test_push_notification != 'true' }}
         run: |
           bash ./scripts/commit-changes.sh "chore: Update stream summaries and generate pages"
 
       - name: Deploy to GitHub Pages
+        if: ${{ github.event.inputs.test_push_notification != 'true' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src
 
       - name: Send Push Notification
-        if: steps.check_summaries.outputs.has_new_summaries == 'true'
+        if: ${{ steps.check_summaries.outputs.has_new_summaries == 'true' || github.event.inputs.test_push_notification == 'true' }}
         run: |
           LATEST_TITLE=$(jq -r '.[0].title' src/data/summaries.json)
           LATEST_STREAMER=$(jq -r '.[0].streamer' src/data/summaries.json)
           LATEST_VIDEO_ID=$(jq -r '.[0].videoId' src/data/summaries.json)
-
           PAGE_URL="https://aegisfleet.github.io/live-stream-summarizer/pages/${LATEST_VIDEO_ID}.html"
+
+          JSON_PAYLOAD=$(jq -n \
+            --arg title "更新情報 ${LATEST_STREAMER}" \
+            --arg body "${LATEST_TITLE}" \
+            --arg icon "https://aegisfleet.github.io/live-stream-summarizer/images/character.png" \
+            --arg url "${PAGE_URL}" \
+            '{ "title": $title, "body": $body, "icon": $icon, "url": $url }')
 
           curl -X POST \
             "${{ secrets.CF_WORKER_URL }}/send-notification" \
             -H "Authorization: Bearer ${{ secrets.CF_AUTH_KEY }}" \
             -H "Content-Type: application/json" \
-            --data-raw '{ "title": "更新情報 '$LATEST_STREAMER'", "body": "'$LATEST_TITLE'", "icon": "https://aegisfleet.github.io/live-stream-summarizer/images/character.png", "url": "'$PAGE_URL'" }'
+            --data-raw "${JSON_PAYLOAD}"
 
       - name: Check for failures
         if: failure()

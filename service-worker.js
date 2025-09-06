@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757174007526';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757175611993';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -99,65 +99,67 @@ self.addEventListener('fetch', event => {
 self.addEventListener('push', event => {
     console.log('[Service Worker] Push Received.');
 
-    // キャッシュを更新してから通知を表示する処理
-    const cacheAndUpdatePromise = caches.open(CACHE_NAME).then(cache => {
-        console.log('[Service Worker] Updating cache on push.');
-        // summaries.jsonを常にネットワークから取得し、キャッシュを更新
-        return cache.add(new Request('data/summaries.json', {cache: 'no-cache'})).then(() => {
-            // summaries.json以外のコアアセットも更新
-            return cache.addAll(ASSETS_TO_CACHE);
-        });
-    }).then(() => {
-        // キャッシュ更新後、最新の要約情報を取得して通知を作成
-        return fetch('data/summaries.json', { cache: 'no-cache' })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(summaries => {
-                if (!summaries || summaries.length === 0) {
-                    console.log('[Service Worker] No summaries found, showing default notification.');
-                    return self.registration.showNotification('新しい要約が追加されました', {
-                        body: 'サイトで最新の情報を確認しましょう！',
-                        icon: '/live-stream-summarizer/images/favicon.png',
-                        badge: '/live-stream-summarizer/images/favicon.png',
-                        data: { url: SITE_URL }
-                    });
-                }
-
-                summaries.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
-                const latestSummary = summaries[0];
-
-                const title = '新しい要約が追加されました';
-                const body = latestSummary.title;
-                const icon = latestSummary.thumbnailUrl || '/live-stream-summarizer/images/favicon.png';
-                const url = `${SITE_URL}pages/${latestSummary.videoId}.html`;
-
-                console.log(`[Service Worker] Showing notification for: ${body}`);
-
-                const options = {
-                    body: body,
-                    icon: icon,
+    // 通知を表示してからキャッシュを更新する処理
+    const notificationAndCachePromise = fetch('data/summaries.json', { cache: 'no-cache' })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(summaries => {
+            if (!summaries || summaries.length === 0) {
+                console.log('[Service Worker] No summaries found, showing default notification.');
+                return self.registration.showNotification('新しい要約が追加されました', {
+                    body: 'サイトで最新の情報を確認しましょう！',
+                    icon: '/live-stream-summarizer/images/favicon.png',
                     badge: '/live-stream-summarizer/images/favicon.png',
-                    data: { url: url }
-                };
+                    data: { url: SITE_URL }
+                });
+            }
 
-                return self.registration.showNotification(title, options);
+            summaries.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+            const latestSummary = summaries[0];
+
+            const title = '新しい要約が追加されました';
+            const body = latestSummary.title;
+            const icon = latestSummary.thumbnailUrl || '/live-stream-summarizer/images/favicon.png';
+            const url = `${SITE_URL}pages/${latestSummary.videoId}.html`;
+
+            console.log(`[Service Worker] Showing notification for: ${body}`);
+
+            const options = {
+                body: body,
+                icon: icon,
+                badge: '/live-stream-summarizer/images/favicon.png',
+                data: { url: url }
+            };
+
+            return self.registration.showNotification(title, options);
+        })
+        .then(() => {
+            // 通知表示後、キャッシュを更新
+            return caches.open(CACHE_NAME).then(cache => {
+                console.log('[Service Worker] Updating cache on push.');
+                // summaries.jsonを常にネットワークから取得し、キャッシュを更新
+                return cache.add(new Request('data/summaries.json', {cache: 'no-cache'})).then(() => {
+                    // summaries.json以外のコアアセットも更新
+                    return cache.addAll(ASSETS_TO_CACHE);
+                });
             });
-    }).catch(error => {
-        console.error('[Service Worker] Failed to update cache or show notification:', error);
-        // エラーが発生した場合のフォールバック通知
-        return self.registration.showNotification('新しい情報があります', {
-            body: 'サイトをチェックして最新情報を確認してください。',
-            icon: '/live-stream-summarizer/images/favicon.png',
-            badge: '/live-stream-summarizer/images/favicon.png',
-            data: { url: SITE_URL }
+        })
+        .catch(error => {
+            console.error('[Service Worker] Failed to show notification or update cache:', error);
+            // エラーが発生した場合のフォールバック通知
+            return self.registration.showNotification('新しい情報があります', {
+                body: 'サイトをチェックして最新情報を確認してください。',
+                icon: '/live-stream-summarizer/images/favicon.png',
+                badge: '/live-stream-summarizer/images/favicon.png',
+                data: { url: SITE_URL }
+            });
         });
-    });
 
-    event.waitUntil(cacheAndUpdatePromise);
+    event.waitUntil(notificationAndCachePromise);
 });
 
 self.addEventListener('notificationclick', event => {

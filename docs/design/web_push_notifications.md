@@ -226,7 +226,7 @@ self.addEventListener('notificationclick', event => {
 `web-push`ライブラリに依存せず、Cloudflare Workersの標準機能（`fetch`, `crypto`）のみで動作するコードです。
 
 ```javascript
-// Cloudflare Worker Script (web-push library not used)
+// Cloudflare Worker Script (Fixed VAPID key handling)
 
 export default {
     async fetch(request, env) {
@@ -247,7 +247,7 @@ export default {
             }
         } catch (e) {
             console.error(e);
-            response = new Response('Internal Server Error', { status: 500 });
+            response = new Response(`Internal Server Error: ${e.message}`, { status: 500 });
         }
         
         const newHeaders = new Headers(response.headers);
@@ -303,7 +303,7 @@ async function handleSendNotification(request, env) {
             promises.push(
                 triggerPushMsg(subscription, JSON.stringify(notificationPayload), vapidDetails)
                 .catch(err => {
-                    if (err.statusCode === 410) {
+                    if (err.statusCode === 410 || err.statusCode === 404) {
                         console.log(`Subscription ${key.name} is gone. Deleting.`);
                         return env.PUSH_SUBSCRIPTIONS.delete(key.name);
                     }
@@ -347,12 +347,13 @@ async function triggerPushMsg(subscription, payload, vapidDetails) {
     const headers = {
         'TTL': 60,
         'Authorization': `WebPush ${token}`,
+        'Content-Encoding': 'aesgcm' // ペイロードを送信しない場合でも指定が必要な場合がある
     };
 
     const response = await fetch(endpoint, {
         method: 'POST',
         headers,
-        body: payload ? null : payload, // ペイロード付きは暗号化が必要なため、ここではペイロードなし
+        body: payload, // ペイロードをそのまま送信
     });
 
     if (response.status >= 400 && response.status < 500) {
@@ -367,17 +368,26 @@ async function getVapidToken(audience, vapidDetails) {
     const payload = {
         "aud": audience,
         "exp": Math.floor(Date.now() / 1000) + (12 * 60 * 60),
-        "sub": "mailto:example@example.com", // 連絡先メールアドレス
+        "sub": "mailto:example@example.com",
     };
 
     const b64Header = urlsafeBase64Encode(JSON.stringify(header));
     const b64Payload = urlsafeBase64Encode(JSON.stringify(payload));
     const signingInput = `${b64Header}.${b64Payload}`;
     
-    const privateKeyData = urlsafeBase64Decode(vapidDetails.privateKey);
+    const { x, y } = getPublicKeyXY(vapidDetails.publicKey);
+
+    const privateKeyJwk = {
+        kty: 'EC',
+        crv: 'P-256',
+        d: vapidDetails.privateKey,
+        x: x,
+        y: y,
+    };
+
     const privateKey = await crypto.subtle.importKey(
-        'pkcs8',
-        privateKeyData,
+        'jwk',
+        privateKeyJwk,
         { name: 'ECDSA', namedCurve: 'P-256' },
         true,
         ['sign']
@@ -408,6 +418,18 @@ function urlsafeBase64Decode(base64) {
         buffer[i] = decoded.charCodeAt(i);
     }
     return buffer;
+}
+
+function getPublicKeyXY(publicKey_b64) {
+    const decoded = urlsafeBase64Decode(publicKey_b64);
+    // The first byte (0x04) indicates uncompressed key.
+    // The next 32 bytes are the x-coordinate, and the following 32 are the y-coordinate.
+    const x = decoded.slice(1, 33);
+    const y = decoded.slice(33, 65);
+    return {
+        x: urlsafeBase64Encode(x),
+        y: urlsafeBase64Encode(y)
+    };
 }
 ```
 

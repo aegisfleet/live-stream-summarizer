@@ -226,7 +226,7 @@ self.addEventListener('notificationclick', event => {
 `web-push`ライブラリに依存せず、Cloudflare Workersの標準機能（`fetch`, `crypto`）のみで動作するコードです。
 
 ```javascript
-// Cloudflare Worker Script (Fixed VAPID key handling)
+// Cloudflare Worker Script (Fixed Crypto-Key header)
 
 export default {
     async fetch(request, env) {
@@ -246,7 +246,7 @@ export default {
                 response = new Response('Not Found', { status: 404 });
             }
         } catch (e) {
-            console.error(e);
+            console.error(`Internal Server Error: ${e.stack}`);
             response = new Response(`Internal Server Error: ${e.message}`, { status: 500 });
         }
         
@@ -307,7 +307,7 @@ async function handleSendNotification(request, env) {
                         console.log(`Subscription ${key.name} is gone. Deleting.`);
                         return env.PUSH_SUBSCRIPTIONS.delete(key.name);
                     }
-                    console.error(`Failed to send to ${key.name}:`, err);
+                    console.error(`Failed to send to ${key.name}:`, JSON.stringify(err, Object.getOwnPropertyNames(err)));
                 })
             );
         }
@@ -347,17 +347,21 @@ async function triggerPushMsg(subscription, payload, vapidDetails) {
     const headers = {
         'TTL': 60,
         'Authorization': `WebPush ${token}`,
-        'Content-Encoding': 'aesgcm' // ペイロードを送信しない場合でも指定が必要な場合がある
+        'Content-Encoding': 'aesgcm',
+        'Crypto-Key': `p256ecdsa=${vapidDetails.publicKey}`
     };
 
     const response = await fetch(endpoint, {
         method: 'POST',
         headers,
-        body: payload, // ペイロードをそのまま送信
+        body: payload,
     });
 
-    if (response.status >= 400 && response.status < 500) {
-        const error = new Error(`Push subscription failed with status code: ${response.status}`);
+    if (!response.ok) {
+        const responseBody = await response.text();
+        console.error(`Push subscription failed for endpoint: ${endpoint}`);
+        console.error(`Status: ${response.status}, Body: ${responseBody}`);
+        const error = new Error(`Push subscription failed with status code: ${response.status}. Body: ${responseBody}`);
         error.statusCode = response.status;
         throw error;
     }

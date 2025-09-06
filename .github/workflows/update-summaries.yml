@@ -113,6 +113,11 @@ jobs:
       - name: Send Push Notification
         if: ${{ steps.check_summaries.outputs.has_new_summaries == 'true' || github.event.inputs.test_push_notification == 'true' }}
         run: |
+          if [[ "${{ github.event.inputs.test_push_notification }}" != "true" ]]; then
+            echo "Waiting for 5 minutes for deployment to complete..."
+            sleep 300
+          fi
+
           LATEST_TITLE=$(jq -r '.[0].title' src/data/summaries.json)
           LATEST_STREAMER=$(jq -r '.[0].streamer' src/data/summaries.json)
           LATEST_VIDEO_ID=$(jq -r '.[0].videoId' src/data/summaries.json)

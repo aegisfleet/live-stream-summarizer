@@ -1,4 +1,5 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757128314045';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757130414870';
+const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
@@ -94,4 +95,55 @@ self.addEventListener('fetch', event => {
         });
       })
   );
+});
+
+self.addEventListener('push', event => {
+    let data;
+    try {
+        data = event.data.json();
+    } catch (e) {
+        data = {
+            title: '新しい要約が追加されました',
+            body: 'サイトで最新の情報を確認しましょう！',
+            icon: '/live-stream-summarizer/images/favicon.png',
+            url: SITE_URL
+        };
+    }
+
+    const options = {
+        body: data.body,
+        icon: data.icon,
+        badge: '/live-stream-summarizer/images/favicon.png',
+        data: {
+            url: data.url
+        }
+    };
+
+    event.waitUntil(
+        self.registration.showNotification(data.title, options)
+    );
+});
+
+
+self.addEventListener('notificationclick', event => {
+    console.log('[Service Worker] Notification click Received.');
+
+    event.notification.close();
+
+    const urlToOpen = event.notification.data.url || SITE_URL;
+
+    event.waitUntil(
+        clients.matchAll({
+            type: "window"
+        }).then(clientList => {
+            for (const client of clientList) {
+                if (client.url === urlToOpen && 'focus' in client) {
+                    return client.focus();
+                }
+            }
+            if (clients.openWindow) {
+                return clients.openWindow(urlToOpen);
+            }
+        })
+    );
 });

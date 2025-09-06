@@ -228,6 +228,18 @@ class ArchiveManager {
         this.setupHintDialog();
         this.setupServiceWorker();
         this.setupLanguageSwitcher();
+        this.setupPushNotifications();
+    }
+
+    setupPushNotifications() {
+        const pushButton = document.getElementById('push-notification-toggle');
+        if (pushButton) {
+            pushButton.addEventListener('click', () => {
+                if (this.notificationSystem) {
+                    this.notificationSystem.togglePushSubscription();
+                }
+            });
+        }
     }
 
     setupLanguageSwitcher() {

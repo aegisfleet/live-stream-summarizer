@@ -1,6 +1,26 @@
+const VAPID_PUBLIC_KEY = 'BFx5eoV3lsYGbmRTDDvh-9l-r6MP186geGuuv_2rUDCMZ1ckbR-wle3Zit2iwhQ3zSeSe8JAWQTxfn_JraT0gKM';
+const SUBSCRIBE_ENDPOINT_URL = 'https://holosumm-pusher.aegisfleet.workers.dev/subscribe';
+
+/**
+ * Base64文字列をUint8Arrayに変換
+ * @param {string} base64String
+ * @returns {Uint8Array}
+ */
+function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+}
+
+
 /**
  * 通知システムを管理するクラス
- * トースト通知、フィードバック、ハプティック効果を担当
+ * トースト通知、フィードバック、ハプティック効果、Push通知を担当
  */
 class NotificationSystem {
     constructor() {
@@ -9,7 +29,9 @@ class NotificationSystem {
         this.toastContainer = null;
         this.maxToasts = 5;
         this.defaultDuration = 2500;
-        
+        this.isSubscribed = false;
+        this.swRegistration = null;
+
         this.init();
     }
 
@@ -20,6 +42,7 @@ class NotificationSystem {
         this.createToastContainer();
         this.setupGlobalStyles();
         this.loadUserPreferences();
+        this.initPushNotifications();
     }
 
     /**
@@ -808,6 +831,127 @@ class NotificationSystem {
         const styles = document.getElementById('notification-styles');
         if (styles && styles.parentNode) {
             styles.parentNode.removeChild(styles);
+        }
+    }
+
+    // --- Push Notification Methods ---
+
+    /**
+     * Push通知機能の初期化
+     */
+    initPushNotifications() {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+            console.warn('Push通知は、このブラウザではサポートされていません。');
+            const button = document.getElementById('push-notification-toggle');
+            if(button) button.style.display = 'none';
+            return;
+        }
+
+        navigator.serviceWorker.ready.then(registration => {
+            this.swRegistration = registration;
+            this.updateSubscriptionStatus();
+        });
+    }
+
+    /**
+     * 現在の購読状態を確認し、UIを更新
+     */
+    async updateSubscriptionStatus() {
+        const subscription = await this.swRegistration.pushManager.getSubscription();
+        this.isSubscribed = !(subscription === null);
+        this.updatePushToggleButton();
+    }
+
+    /**
+     * Push通知の購読/購読解除をトグル
+     */
+    togglePushSubscription() {
+        if (this.isSubscribed) {
+            this.unsubscribeUserFromPush();
+        } else {
+            this.subscribeUserToPush();
+        }
+    }
+
+    /**
+     * ユーザーをPush通知に購読させる
+     */
+    async subscribeUserToPush() {
+        try {
+            const subscription = await this.swRegistration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+            });
+
+            await this.sendSubscriptionToServer(subscription);
+            this.showToast(this.lang === 'en' ? 'Push notifications enabled!' : 'Push通知を有効にしました！', 'success');
+            this.isSubscribed = true;
+            this.updatePushToggleButton();
+
+        } catch (error) {
+            console.error('Push購読に失敗しました:', error);
+            this.showToast(this.lang === 'en' ? 'Failed to enable push notifications.' : 'Push通知を有効にできませんでした。', 'error');
+            this.isSubscribed = false;
+            this.updatePushToggleButton();
+        }
+    }
+
+    /**
+     * ユーザーのPush通知購読を解除する
+     */
+    async unsubscribeUserFromPush() {
+        const subscription = await this.swRegistration.pushManager.getSubscription();
+        if (subscription) {
+            try {
+                await subscription.unsubscribe();
+                // TODO: サーバー側で購読情報を削除するエンドポイントも呼び出す
+                this.showToast(this.lang === 'en' ? 'Push notifications disabled.' : 'Push通知を無効にしました。', 'info');
+                this.isSubscribed = false;
+                this.updatePushToggleButton();
+            } catch (error) {
+                console.error('Push購読解除に失敗しました:', error);
+                this.showToast(this.lang === 'en' ? 'Failed to disable push notifications.' : 'Push通知を無効にできませんでした。', 'error');
+            }
+        }
+    }
+
+    /**
+     * 購読情報をサーバーに送信
+     * @param {PushSubscription} subscription
+     */
+    async sendSubscriptionToServer(subscription) {
+        try {
+            const response = await fetch(SUBSCRIBE_ENDPOINT_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(subscription),
+            });
+            if (!response.ok) {
+                throw new Error('サーバーへの購読情報送信に失敗しました。');
+            }
+            console.log('Push購読情報をサーバーに送信しました。');
+        } catch (error) {
+            console.error(error);
+            // 購読解除処理をここで行う必要はない。サーバーがダウンしていても、
+            // ブラウザ側の購読は成功しているため。
+        }
+    }
+
+    /**
+     * Push通知ボタンの表示を更新
+     */
+    updatePushToggleButton() {
+        const button = document.getElementById('push-notification-toggle');
+        if (!button) return;
+
+        if (this.isSubscribed) {
+            button.textContent = this.lang === 'en' ? 'Disable Notifications' : '通知を無効化';
+            button.title = this.lang === 'en' ? 'Disable new summary push notifications' : '新しい要約のPush通知を無効にします';
+            button.classList.add('subscribed');
+        } else {
+            button.textContent = this.lang === 'en' ? 'Enable Notifications' : '通知を有効化';
+            button.title = this.lang === 'en' ? 'Enable new summary push notifications' : '新しい要約のPush通知を有効にします';
+            button.classList.remove('subscribed');
         }
     }
 }

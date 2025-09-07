@@ -99,8 +99,8 @@ self.addEventListener('fetch', event => {
 self.addEventListener('push', event => {
     console.log('[Service Worker] Push Received.');
 
-    // 通知を表示してからキャッシュを更新する処理
-    const notificationAndCachePromise = fetch('data/summaries.json', { cache: 'no-cache' })
+    // 通知を表示する処理
+    const notificationPromise = fetch('data/summaries.json', { cache: 'no-cache' })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -137,19 +137,8 @@ self.addEventListener('push', event => {
 
             return self.registration.showNotification(title, options);
         })
-        .then(() => {
-            // 通知表示後、キャッシュを更新
-            return caches.open(CACHE_NAME).then(cache => {
-                console.log('[Service Worker] Updating cache on push.');
-                // summaries.jsonを常にネットワークから取得し、キャッシュを更新
-                return cache.add(new Request('data/summaries.json', {cache: 'no-cache'})).then(() => {
-                    // summaries.json以外のコアアセットも更新
-                    return cache.addAll(ASSETS_TO_CACHE);
-                });
-            });
-        })
         .catch(error => {
-            console.error('[Service Worker] Failed to show notification or update cache:', error);
+            console.error('[Service Worker] Failed to show notification:', error);
             // エラーが発生した場合のフォールバック通知
             return self.registration.showNotification('新しい情報があります', {
                 body: 'サイトをチェックして最新情報を確認してください。',
@@ -159,7 +148,7 @@ self.addEventListener('push', event => {
             });
         });
 
-    event.waitUntil(notificationAndCachePromise);
+    event.waitUntil(notificationPromise);
 });
 
 self.addEventListener('notificationclick', event => {
@@ -183,4 +172,20 @@ self.addEventListener('notificationclick', event => {
             }
         })
     );
+});
+
+self.addEventListener('message', event => {
+    if (event.data && event.data.action === 'updateCache') {
+        console.log('[Service Worker] Updating cache on client request.');
+        event.waitUntil(
+            caches.open(CACHE_NAME).then(cache => {
+                console.log('[Service Worker] Updating cache.');
+                // summaries.jsonを常にネットワークから取得し、キャッシュを更新
+                return cache.add(new Request('data/summaries.json', {cache: 'no-cache'})).then(() => {
+                    // summaries.json以外のコアアセットも更新
+                    return cache.addAll(ASSETS_TO_CACHE);
+                });
+            })
+        );
+    }
 });

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757256491152';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757258465853';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -158,20 +158,26 @@ self.addEventListener('notificationclick', event => {
 
     const urlToOpen = event.notification.data.url || SITE_URL;
 
-    event.waitUntil(
-        clients.matchAll({
-            type: "window"
-        }).then(clientList => {
-            for (const client of clientList) {
-                if (client.url === urlToOpen && 'focus' in client) {
-                    return client.focus();
-                }
+    // キャッシュを更新する処理を追加
+    const updateCachePromise = caches.open(CACHE_NAME).then(cache => {
+        console.log('[Service Worker] Deleting summaries.json from cache.');
+        return cache.delete('data/summaries.json');
+    });
+
+    const openWindowPromise = clients.matchAll({
+        type: "window"
+    }).then(clientList => {
+        for (const client of clientList) {
+            if (client.url === urlToOpen && 'focus' in client) {
+                return client.focus();
             }
-            if (clients.openWindow) {
-                return clients.openWindow(urlToOpen);
-            }
-        })
-    );
+        }
+        if (clients.openWindow) {
+            return clients.openWindow(urlToOpen);
+        }
+    });
+
+    event.waitUntil(Promise.all([updateCachePromise, openWindowPromise]));
 });
 
 self.addEventListener('message', event => {

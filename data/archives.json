@@ -200,6 +200,16 @@
     "duration": 5553
   },
   {
+    "videoId": "RXAc_AHkONU",
+    "videoUrl": "https://www.youtube.com/watch?v=RXAc_AHkONU",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-09-07T16:07:00.000Z",
+    "title": "【メン歌枠】ちょこっと歌う夕方歌枠【儒烏風亭らでん/ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/RXAc_AHkONU/mqdefault.jpg",
+    "endTime": "2025-09-07T08:18:13Z",
+    "duration": 4261
+  },
+  {
     "videoId": "wyuB5FhZLOA",
     "videoUrl": "https://www.youtube.com/watch?v=wyuB5FhZLOA",
     "streamer": "Calli",
@@ -308,5 +318,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/7WR7TveTfS8/mqdefault.jpg",
     "endTime": "2025-09-06T16:11:40Z",
     "duration": 7886
+  },
+  {
+    "videoId": "2xJuHgWf-Qk",
+    "videoUrl": "https://www.youtube.com/watch?v=2xJuHgWf-Qk",
+    "streamer": "Anya",
+    "date": "2025-09-07T15:00:00.000Z",
+    "title": "【The Exit 8 | 8番出口】GAME UPDATE: New Anomalies Added【hololive ID 2nd Generation | Anya Melfissa】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/2xJuHgWf-Qk/mqdefault.jpg",
+    "endTime": "2025-09-07T08:28:46Z",
+    "duration": 8871
   }
 ]

@@ -1392,6 +1392,14 @@ ${shareUrl}`;
                     console.error('Error during service worker registration:', error);
                 });
 
+            // PWA起動時にキャッシュを更新するようService Workerにメッセージを送信
+            navigator.serviceWorker.ready.then(registration => {
+                if (registration.active) {
+                    console.log('Service Worker is active, sending updateCache message.');
+                    registration.active.postMessage({ action: 'updateCache' });
+                }
+            });
+
             // Service Workerが更新され、controllerが変更されたときにページをリロードする
             let refreshing;
             navigator.serviceWorker.addEventListener('controllerchange', () => {

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757233582181';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757236203753';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -20,18 +20,13 @@ const ASSETS_TO_CACHE = [
   'manifest.json'
 ];
 
-// install イベント: アセットをキャッシュに保存し、即座にアクティブ化する
+// install イベント: アセットをキャッシュに保存する
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: Caching app shell');
         return cache.addAll(ASSETS_TO_CACHE);
-      })
-      .then(() => {
-        // 新しい Service Worker を即座にアクティブにする
-        console.log('Service Worker: Skip waiting and activate immediately.');
-        return self.skipWaiting();
       })
   );
 });

@@ -1193,7 +1193,7 @@ footer {
   color: #007bff;
   font-size: 1rem;
   font-weight: 700;
-  padding: .5rem 1rem;
+  padding: .5rem .6rem;
   border: 1px solid #007bff;
   border-radius: 5px;
   background: linear-gradient(135deg,transparent,rgba(0,123,255,.05));
@@ -1207,8 +1207,7 @@ footer {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
-  font-weight: 700;
-  padding: .6rem 1rem;
+  padding: .6rem .7rem;
   border: none;
   border-radius: 5px;
   background: linear-gradient(135deg,var(--accent-blue),#5da3e8);
@@ -1218,6 +1217,14 @@ footer {
 .notification-button:hover {
   background: linear-gradient(135deg,#5da3e8,#4a90e2);
   box-shadow: 0 4px 12px var(--soft-shadow)
+}
+.notification-button.disabled {
+  background: #ccc;
+  color: #000;
+}
+.notification-button.disabled:hover {
+  background: #bbb;
+  box-shadow: 0 4px 12px var(--soft-shadow);
 }
 .bookmark-modal {
   position: fixed;

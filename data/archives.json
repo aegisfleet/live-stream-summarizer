@@ -150,6 +150,26 @@
     "duration": 1374
   },
   {
+    "videoId": "M3Ea1BgqdZI",
+    "videoUrl": "https://www.youtube.com/watch?v=M3Ea1BgqdZI",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-09-09T00:26:00.000Z",
+    "title": "【雀魂】明日からはじまるので士気高めるぞ🀄DREAM MATCH 🀄雀魂下剋上リーグ【ホロライブ/アキロゼ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/M3Ea1BgqdZI/mqdefault.jpg",
+    "endTime": "2025-09-08T17:30:39Z",
+    "duration": 7439
+  },
+  {
+    "videoId": "zhwPoMIM-R8",
+    "videoUrl": "https://www.youtube.com/watch?v=zhwPoMIM-R8",
+    "streamer": "癒月ちょこ 💋",
+    "date": "2025-09-09T01:04:00.000Z",
+    "title": "【禁足地 - 青鬼の窟 -】決して踏み入れてはならない禁忌の場所ー。無事脱出なるか！？【ホロライブ/癒月ちょこ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/zhwPoMIM-R8/mqdefault.jpg",
+    "endTime": "2025-09-08T18:04:30Z",
+    "duration": 7221
+  },
+  {
     "videoId": "VZ-QH7ESL7c",
     "videoUrl": "https://www.youtube.com/watch?v=VZ-QH7ESL7c",
     "streamer": "響咲リオナ",
@@ -175,9 +195,9 @@
     "streamer": "輪堂千速",
     "date": "2025-09-08T21:08:00.000Z",
     "title": "【恐怖耐性診断テスト】耐性はあると思います！！【#輪堂千速 / #hololivedev_is  #FLOWGLOW 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/VsNxnMCZAcI/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/VsNxnMCZAcI/mqdefault.jpg",
     "endTime": "2025-09-08T13:31:00Z",
-    "duration": 4941
+    "duration": 4639
   },
   {
     "videoId": "NEVCP4a_PEY",
@@ -185,9 +205,9 @@
     "streamer": "響咲リオナ",
     "date": "2025-09-08T23:30:00.000Z",
     "title": "【深夜歌枠】ボイトレ帰りの深夜歌枠🎵【ホロライブ DEV_IS 響咲リオナ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/NEVCP4a_PEY/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/NEVCP4a_PEY/mqdefault.jpg",
     "endTime": "2025-09-08T16:37:34Z",
-    "duration": 7607
+    "duration": 7616
   },
   {
     "videoId": "GAHCzzY_iuU",
@@ -195,7 +215,7 @@
     "streamer": "音乃瀬奏",
     "date": "2025-09-08T23:45:00.000Z",
     "title": "【 2周年カウントダウン 】もう2年たったらしい【音乃瀬奏】#hololiveDEV_IS #ReGLOSS",
-    "thumbnailUrl": "https://i.ytimg.com/vi/GAHCzzY_iuU/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/GAHCzzY_iuU/mqdefault.jpg",
     "endTime": "2025-09-08T15:16:21Z",
     "duration": 1842
   },
@@ -215,9 +235,9 @@
     "streamer": "FUWAMOCO",
     "date": "2025-09-08T23:55:00.000Z",
     "title": "【FUWAMOCO MORNING】episode 171 🐾 #FWMCMORNING",
-    "thumbnailUrl": "https://i.ytimg.com/vi/b6ftikeREro/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/b6ftikeREro/mqdefault.jpg",
     "endTime": "2025-09-08T15:43:37Z",
-    "duration": 2870
+    "duration": 2875
   },
   {
     "videoId": "tK4PcWqZllQ",
@@ -245,8 +265,18 @@
     "streamer": "Iofi 🎨",
     "date": "2025-09-08T23:59:00.000Z",
     "title": "【Senin Produktif】HOLOID GIRLS INTO UMA 🐴🐎🐎🐎【 iofi / hololiveID 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/sZdlJd1WVwY/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/sZdlJd1WVwY/mqdefault.jpg",
     "endTime": "2025-09-08T16:35:30Z",
-    "duration": 5751
+    "duration": 5756
+  },
+  {
+    "videoId": "SFjxd-RjsoA",
+    "videoUrl": "https://www.youtube.com/watch?v=SFjxd-RjsoA",
+    "streamer": "Reine",
+    "date": "2025-09-09T00:02:00.000Z",
+    "title": "【#ReineMEPtember2025】It's So SOON!? Talking & Birthday Countdown【Pavolia Reine/hololiveID 2ndgen】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/SFjxd-RjsoA/mqdefault.jpg",
+    "endTime": "2025-09-08T17:19:59Z",
+    "duration": 8277
   }
 ]

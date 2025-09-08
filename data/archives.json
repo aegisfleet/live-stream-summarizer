@@ -170,6 +170,16 @@
     "duration": 3808
   },
   {
+    "videoId": "fAD96voSjZg",
+    "videoUrl": "https://www.youtube.com/watch?v=fAD96voSjZg",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-09-08T10:02:00.000Z",
+    "title": "【 Stardew Valley 】#13 ：2年目夏🍉朝活【常闇トワ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/fAD96voSjZg/mqdefault.jpg",
+    "endTime": "2025-09-08T03:20:29Z",
+    "duration": 8265
+  },
+  {
     "videoId": "JkVudr6je4M",
     "videoUrl": "https://www.youtube.com/watch?v=JkVudr6je4M",
     "streamer": "綺々羅々ヴィヴィ",
@@ -278,5 +288,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/2xJuHgWf-Qk/mqdefault.jpg",
     "endTime": "2025-09-07T08:28:46Z",
     "duration": 8871
+  },
+  {
+    "videoId": "tK4PcWqZllQ",
+    "videoUrl": "https://www.youtube.com/watch?v=tK4PcWqZllQ",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-08T11:29:00.000Z",
+    "title": "Monday Morning Malas : Wow it's Monday already",
+    "thumbnailUrl": "https://i.ytimg.com/vi/tK4PcWqZllQ/mqdefault.jpg",
+    "endTime": "2025-09-08T04:45:41Z",
+    "duration": 8183
   }
 ]

@@ -258,6 +258,12 @@
     "date": "2025-09-08T10:02:00.000Z"
   },
   {
+    "videoId": "Jm5F6gi5DoM",
+    "videoUrl": "https://www.youtube.com/watch?v=Jm5F6gi5DoM",
+    "streamer": "風真いろは",
+    "date": "2025-09-08T12:00:00.000Z"
+  },
+  {
     "videoId": "AEMrNHYNSi4",
     "videoUrl": "https://www.youtube.com/watch?v=AEMrNHYNSi4",
     "streamer": "夏色まつり 🏮",
@@ -270,15 +276,15 @@
     "date": "2025-09-08T19:00:00.000Z"
   },
   {
-    "videoId": "FGYbHR1ZGXw",
-    "videoUrl": "https://www.youtube.com/watch?v=FGYbHR1ZGXw",
-    "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-08T19:00:00.000Z"
-  },
-  {
     "videoId": "0LlSFYSkPys",
     "videoUrl": "https://www.youtube.com/watch?v=0LlSFYSkPys",
     "streamer": "博衣こより",
+    "date": "2025-09-08T19:00:00.000Z"
+  },
+  {
+    "videoId": "FGYbHR1ZGXw",
+    "videoUrl": "https://www.youtube.com/watch?v=FGYbHR1ZGXw",
+    "streamer": "姫森ルーナ 🍬",
     "date": "2025-09-08T19:00:00.000Z"
   },
   {
@@ -426,12 +432,6 @@
     "date": "2025-09-08T04:30:00.000Z"
   },
   {
-    "videoId": "-X_DgGiy5ek",
-    "videoUrl": "https://www.youtube.com/watch?v=-X_DgGiy5ek",
-    "streamer": "儒烏風亭らでん",
-    "date": "2025-09-08T09:00:00.000Z"
-  },
-  {
     "videoId": "G-V4GKlpOXw",
     "videoUrl": "https://www.youtube.com/watch?v=G-V4GKlpOXw",
     "streamer": "綺々羅々ヴィヴィ",
@@ -448,6 +448,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=euNJVr16vtA",
     "streamer": "一条莉々華",
     "date": "2025-09-08T23:00:00.000Z"
+  },
+  {
+    "videoId": "GdOjkBz6E2U",
+    "videoUrl": "https://www.youtube.com/watch?v=GdOjkBz6E2U",
+    "streamer": "一条莉々華",
+    "date": "2025-09-09T00:10:00.000Z"
   },
   {
     "videoId": "HiUeLe5T8vg",
@@ -540,6 +546,18 @@
     "date": "2025-09-08T11:03:00.000Z"
   },
   {
+    "videoId": "8KKnj3AHPcc",
+    "videoUrl": "https://www.youtube.com/watch?v=8KKnj3AHPcc",
+    "streamer": "holo EN",
+    "date": "2025-09-08T12:00:00.000Z"
+  },
+  {
+    "videoId": "86h0Z7q7tZA",
+    "videoUrl": "https://www.youtube.com/watch?v=86h0Z7q7tZA",
+    "streamer": "IRyS",
+    "date": "2025-09-08T12:21:00.000Z"
+  },
+  {
     "videoId": "b6ftikeREro",
     "videoUrl": "https://www.youtube.com/watch?v=b6ftikeREro",
     "streamer": "FUWAMOCO",
@@ -592,6 +610,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=tK4PcWqZllQ",
     "streamer": "Risu 🐿",
     "date": "2025-09-08T11:29:00.000Z"
+  },
+  {
+    "videoId": "hQ_zDbyat78",
+    "videoUrl": "https://www.youtube.com/watch?v=hQ_zDbyat78",
+    "streamer": "Reine",
+    "date": "2025-09-08T14:00:00.000Z"
   },
   {
     "videoId": "7-DyY5n_Sao",

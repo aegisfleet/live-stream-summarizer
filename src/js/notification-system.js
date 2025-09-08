@@ -844,7 +844,7 @@ class NotificationSystem {
 
         if (!('serviceWorker' in navigator) || !('PushManager' in window) || isSafari) {
             console.warn('Push通知は、このブラウザではサポートされていません。');
-            const button = document.getElementById('push-notification-toggle');
+            const button = document.getElementById('top-push-notification-toggle');
             if(button) button.style.display = 'none';
             return;
         }
@@ -943,15 +943,15 @@ class NotificationSystem {
      * Push通知ボタンの表示を更新
      */
     updatePushToggleButton() {
-        const button = document.getElementById('push-notification-toggle');
+        const button = document.getElementById('top-push-notification-toggle');
         if (!button) return;
 
         if (this.isSubscribed) {
-            button.textContent = this.lang === 'en' ? 'Disable Notifications' : '通知を無効化';
+            button.textContent = this.lang === 'en' ? '🔕 Disable Notifications' : '🔕 通知を無効化';
             button.title = this.lang === 'en' ? 'Disable new summary push notifications' : '新しい要約のPush通知を無効にします';
             button.classList.add('subscribed');
         } else {
-            button.textContent = this.lang === 'en' ? 'Enable Notifications' : '通知を有効化';
+            button.textContent = this.lang === 'en' ? '🔔 Enable Notifications' : '🔔 通知を有効化';
             button.title = this.lang === 'en' ? 'Enable new summary push notifications' : '新しい要約のPush通知を有効にします';
             button.classList.remove('subscribed');
         }

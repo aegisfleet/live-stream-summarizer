@@ -232,7 +232,7 @@ class ArchiveManager {
     }
 
     setupPushNotifications() {
-        const pushButton = document.getElementById('push-notification-toggle');
+        const pushButton = document.getElementById('top-push-notification-toggle');
         if (pushButton) {
             pushButton.addEventListener('click', () => {
                 if (this.notificationSystem) {

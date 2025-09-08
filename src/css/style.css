@@ -1182,6 +1182,10 @@ footer {
 }
 
 .top-language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   margin: 1rem auto
 }
@@ -1199,6 +1203,22 @@ footer {
 .top-language-switcher a:hover {
   background: linear-gradient(135deg,#007bff,#0056b3);
   color: #fff
+}
+.notification-button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg,var(--accent-blue),#5da3e8);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.notification-button:hover {
+  background: linear-gradient(135deg,#5da3e8,#4a90e2);
+  box-shadow: 0 4px 12px var(--soft-shadow);
 }
 .bookmark-modal {
   position: fixed;

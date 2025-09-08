@@ -1219,11 +1219,11 @@ footer {
   box-shadow: 0 4px 12px var(--soft-shadow)
 }
 .notification-button.disabled {
-  background: #ccc;
-  color: #000;
+  background: #f8f9fa;
+  color: #333;
 }
 .notification-button.disabled:hover {
-  background: #bbb;
+  background: #e6e9ea;
   box-shadow: 0 4px 12px var(--soft-shadow);
 }
 .bookmark-modal {

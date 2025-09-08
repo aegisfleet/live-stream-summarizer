@@ -949,11 +949,11 @@ class NotificationSystem {
         if (this.isSubscribed) {
             button.textContent = this.lang === 'en' ? '🔕 Disable Notifications' : '🔕 通知を無効化';
             button.title = this.lang === 'en' ? 'Disable new summary push notifications' : '新しい要約のPush通知を無効にします';
-            button.classList.add('subscribed');
+            button.classList.add('disabled');
         } else {
             button.textContent = this.lang === 'en' ? '🔔 Enable Notifications' : '🔔 通知を有効化';
             button.title = this.lang === 'en' ? 'Enable new summary push notifications' : '新しい要約のPush通知を有効にします';
-            button.classList.remove('subscribed');
+            button.classList.remove('disabled');
         }
     }
 }

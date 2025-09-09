@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1757425701161';
+const CACHE_NAME = 'hololive-summary-cache-v1-1757426142912';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',
@@ -182,15 +182,17 @@ self.addEventListener('notificationclick', event => {
 
 self.addEventListener('message', event => {
     if (event.data && event.data.action === 'updateCache') {
-        console.log('[Service Worker] Updating cache on client request.');
+        console.log('[Service Worker] Updating cache for summaries.json on client request.');
         event.waitUntil(
             caches.open(CACHE_NAME).then(cache => {
-                console.log('[Service Worker] Updating cache.');
-                // summaries.jsonを常にネットワークから取得し、キャッシュを更新
-                return cache.add(new Request('data/summaries.json', {cache: 'no-cache'})).then(() => {
-                    // summaries.json以外のコアアセットも更新
-                    return cache.addAll(ASSETS_TO_CACHE);
-                });
+                return fetch(new Request('data/summaries.json', {cache: 'no-cache'}))
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to fetch summaries.json');
+                        }
+                        console.log('[Service Worker] Putting updated summaries.json into cache.');
+                        return cache.put('data/summaries.json', response);
+                    });
             })
         );
     }

@@ -204,6 +204,18 @@
     "date": "2025-09-09T23:07:00.000Z"
   },
   {
+    "videoId": "b-yEQht6IBQ",
+    "videoUrl": "https://www.youtube.com/watch?v=b-yEQht6IBQ",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-10T06:00:00.000Z"
+  },
+  {
+    "videoId": "JBALqia8eeE",
+    "videoUrl": "https://www.youtube.com/watch?v=JBALqia8eeE",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-10T08:00:00.000Z"
+  },
+  {
     "videoId": "9XrqmccVUEk",
     "videoUrl": "https://www.youtube.com/watch?v=9XrqmccVUEk",
     "streamer": "白銀ノエル ⚔",
@@ -214,6 +226,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=pChQkIDyOJA",
     "streamer": "大神ミオ 🌲",
     "date": "2025-09-10T18:00:00.000Z"
+  },
+  {
+    "videoId": "8tlbOLm0cRc",
+    "videoUrl": "https://www.youtube.com/watch?v=8tlbOLm0cRc",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-10T22:00:00.000Z"
   },
   {
     "videoId": "64MB7Nmmqbg",
@@ -330,6 +348,12 @@
     "date": "2025-09-09T23:30:00.000Z"
   },
   {
+    "videoId": "qnRwprPLRmE",
+    "videoUrl": "https://www.youtube.com/watch?v=qnRwprPLRmE",
+    "streamer": "FLOW GLOW",
+    "date": "2025-09-10T07:00:00.000Z"
+  },
+  {
     "videoId": "OYD1kf5IbAs",
     "videoUrl": "https://www.youtube.com/watch?v=OYD1kf5IbAs",
     "streamer": "水宮枢",
@@ -399,18 +423,18 @@
     "videoId": "xqRkXQVX0yg",
     "videoUrl": "https://www.youtube.com/watch?v=xqRkXQVX0yg",
     "streamer": "Gigi",
-    "date": "2025-09-10T06:00:00.000Z"
-  },
-  {
-    "videoId": "C-qGFb1SGiw",
-    "videoUrl": "https://www.youtube.com/watch?v=C-qGFb1SGiw",
-    "streamer": "Kronii",
-    "date": "2025-09-10T10:00:00.000Z"
+    "date": "2025-09-10T06:01:00.000Z"
   },
   {
     "videoId": "TZ_GNARfwhc",
     "videoUrl": "https://www.youtube.com/watch?v=TZ_GNARfwhc",
     "streamer": "FUWAMOCO",
+    "date": "2025-09-10T10:00:00.000Z"
+  },
+  {
+    "videoId": "C-qGFb1SGiw",
+    "videoUrl": "https://www.youtube.com/watch?v=C-qGFb1SGiw",
+    "streamer": "Kronii",
     "date": "2025-09-10T10:00:00.000Z"
   },
   {

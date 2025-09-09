@@ -199,6 +199,15 @@ graph TD
     npm start
     ```
 
+### E2Eテスト
+
+Cypressを使用したE2E（End-to-End）テストを実行します。
+このコマンドは、開発サーバーを起動し、テストを実行した後、サーバーを自動的に停止します。
+
+```bash
+npm run test:e2e
+```
+
 ## イメージキャラクター
 
 ![イメージキャラクター](src/images/character.png)

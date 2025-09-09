@@ -1392,13 +1392,8 @@ ${shareUrl}`;
                     console.error('Error during service worker registration:', error);
                 });
 
-            // PWA起動時にキャッシュを更新するようService Workerにメッセージを送信
-            navigator.serviceWorker.ready.then(registration => {
-                if (registration.active) {
-                    console.log('Service Worker is active, sending updateCache message.');
-                    registration.active.postMessage({ action: 'updateCache' });
-                }
-            });
+            // Check for updates and notify the service worker if necessary
+            this.checkForUpdates();
 
             // Service Workerが更新され、controllerが変更されたときにページをリロードする
             let refreshing;
@@ -1407,6 +1402,29 @@ ${shareUrl}`;
                 window.location.reload();
                 refreshing = true;
             });
+        }
+    }
+
+    async checkForUpdates() {
+        try {
+            const dataPath = this.lang === 'en' ? '../data/summaries.json' : 'data/summaries.json';
+            const response = await fetch(dataPath, { method: 'HEAD' });
+            const lastModified = response.headers.get('Last-Modified');
+            const storedLastModified = localStorage.getItem('summariesLastModified');
+
+            if (lastModified && lastModified !== storedLastModified) {
+                console.log('New data found, updating cache...');
+                navigator.serviceWorker.ready.then(registration => {
+                    if (registration.active) {
+                        registration.active.postMessage({ action: 'updateCache' });
+                    }
+                });
+                localStorage.setItem('summariesLastModified', lastModified);
+            } else {
+                console.log('Cache is up to date.');
+            }
+        } catch (error) {
+            console.error('Error checking for updates:', error);
         }
     }
 }

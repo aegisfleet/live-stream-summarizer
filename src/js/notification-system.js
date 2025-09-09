@@ -955,7 +955,7 @@ class NotificationSystem {
             button.title = this.lang === 'en' ? 'Enable new summary push notifications' : '新しい要約のPush通知を有効にします';
             button.classList.remove('disabled');
         }
-        button.disabled = false;
+        button.style.display = 'block';
     }
 }
 

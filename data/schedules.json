@@ -150,6 +150,12 @@
     "date": "2025-09-10T22:40:00.000Z"
   },
   {
+    "videoId": "94qnieo08Zw",
+    "videoUrl": "https://www.youtube.com/watch?v=94qnieo08Zw",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-11T06:00:00.000Z"
+  },
+  {
     "videoId": "N0aiKp9s5xw",
     "videoUrl": "https://www.youtube.com/watch?v=N0aiKp9s5xw",
     "streamer": "白銀ノエル ⚔",
@@ -172,6 +178,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=PXEBYPJKXHo",
     "streamer": "赤井はあと ❤",
     "date": "2025-09-11T20:00:00.000Z"
+  },
+  {
+    "videoId": "JeQxf0Yhtcg",
+    "videoUrl": "https://www.youtube.com/watch?v=JeQxf0Yhtcg",
+    "streamer": "獅白ぼたん",
+    "date": "2025-09-11T21:00:00.000Z"
   },
   {
     "videoId": "lKTJcCrY1k0",
@@ -369,7 +381,7 @@
     "videoId": "OOGJN8Xyy2M",
     "videoUrl": "https://www.youtube.com/watch?v=OOGJN8Xyy2M",
     "streamer": "Cecilia",
-    "date": "2025-09-11T05:00:00.000Z"
+    "date": "2025-09-11T05:04:00.000Z"
   },
   {
     "videoId": "QuRlb9IwDj4",
@@ -378,15 +390,9 @@
     "date": "2025-09-11T08:00:00.000Z"
   },
   {
-    "videoId": "ir6Bc2CJ1Ps",
-    "videoUrl": "https://www.youtube.com/watch?v=ir6Bc2CJ1Ps",
-    "streamer": "Bijou",
-    "date": "2025-09-11T10:00:00.000Z"
-  },
-  {
-    "videoId": "U1HXO-hbEe0",
-    "videoUrl": "https://www.youtube.com/watch?v=U1HXO-hbEe0",
-    "streamer": "FUWAMOCO",
+    "videoId": "26-4XEQa5Jk",
+    "videoUrl": "https://www.youtube.com/watch?v=26-4XEQa5Jk",
+    "streamer": "Shiori",
     "date": "2025-09-11T10:00:00.000Z"
   },
   {
@@ -396,9 +402,15 @@
     "date": "2025-09-11T10:00:00.000Z"
   },
   {
-    "videoId": "26-4XEQa5Jk",
-    "videoUrl": "https://www.youtube.com/watch?v=26-4XEQa5Jk",
-    "streamer": "Shiori",
+    "videoId": "U1HXO-hbEe0",
+    "videoUrl": "https://www.youtube.com/watch?v=U1HXO-hbEe0",
+    "streamer": "FUWAMOCO",
+    "date": "2025-09-11T10:00:00.000Z"
+  },
+  {
+    "videoId": "ir6Bc2CJ1Ps",
+    "videoUrl": "https://www.youtube.com/watch?v=ir6Bc2CJ1Ps",
+    "streamer": "Bijou",
     "date": "2025-09-11T10:00:00.000Z"
   },
   {
@@ -406,6 +418,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=lap1RP2TOd0",
     "streamer": "Kronii",
     "date": "2025-09-11T12:00:00.000Z"
+  },
+  {
+    "videoId": "tG8argZMgCI",
+    "videoUrl": "https://www.youtube.com/watch?v=tG8argZMgCI",
+    "streamer": "Kiara",
+    "date": "2025-09-12T00:00:00.000Z"
   },
   {
     "videoId": "CkoKm_PKhXo",

@@ -150,15 +150,15 @@
     "date": "2025-09-10T22:40:00.000Z"
   },
   {
-    "videoId": "fIPpvJInkcQ",
-    "videoUrl": "https://www.youtube.com/watch?v=fIPpvJInkcQ",
-    "streamer": "ホロライブ",
-    "date": "2025-09-11T18:00:00.000Z"
-  },
-  {
     "videoId": "N0aiKp9s5xw",
     "videoUrl": "https://www.youtube.com/watch?v=N0aiKp9s5xw",
     "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-11T18:00:00.000Z"
+  },
+  {
+    "videoId": "fIPpvJInkcQ",
+    "videoUrl": "https://www.youtube.com/watch?v=fIPpvJInkcQ",
+    "streamer": "ホロライブ",
     "date": "2025-09-11T18:00:00.000Z"
   },
   {
@@ -186,10 +186,22 @@
     "date": "2025-09-12T18:00:00.000Z"
   },
   {
+    "videoId": "xCcmGJ_r5sM",
+    "videoUrl": "https://www.youtube.com/watch?v=xCcmGJ_r5sM",
+    "streamer": "博衣こより",
+    "date": "2025-09-12T19:00:00.000Z"
+  },
+  {
     "videoId": "ouxWppgejdk",
     "videoUrl": "https://www.youtube.com/watch?v=ouxWppgejdk",
     "streamer": "風真いろは",
     "date": "2025-09-12T20:00:00.000Z"
+  },
+  {
+    "videoId": "I0OY2hfCTI0",
+    "videoUrl": "https://www.youtube.com/watch?v=I0OY2hfCTI0",
+    "streamer": "博衣こより",
+    "date": "2025-09-12T21:50:00.000Z"
   },
   {
     "videoId": "qnRwprPLRmE",
@@ -288,6 +300,12 @@
     "date": "2025-09-11T22:00:00.000Z"
   },
   {
+    "videoId": "yTH_rgOJxqE",
+    "videoUrl": "https://www.youtube.com/watch?v=yTH_rgOJxqE",
+    "streamer": "水宮枢",
+    "date": "2025-09-11T22:00:00.000Z"
+  },
+  {
     "videoId": "ID4nl2YR91w",
     "videoUrl": "https://www.youtube.com/watch?v=ID4nl2YR91w",
     "streamer": "響咲リオナ",
@@ -354,15 +372,33 @@
     "date": "2025-09-11T05:00:00.000Z"
   },
   {
-    "videoId": "26-4XEQa5Jk",
-    "videoUrl": "https://www.youtube.com/watch?v=26-4XEQa5Jk",
-    "streamer": "Shiori",
+    "videoId": "QuRlb9IwDj4",
+    "videoUrl": "https://www.youtube.com/watch?v=QuRlb9IwDj4",
+    "streamer": "Bijou",
+    "date": "2025-09-11T08:00:00.000Z"
+  },
+  {
+    "videoId": "ir6Bc2CJ1Ps",
+    "videoUrl": "https://www.youtube.com/watch?v=ir6Bc2CJ1Ps",
+    "streamer": "Bijou",
     "date": "2025-09-11T10:00:00.000Z"
   },
   {
     "videoId": "U1HXO-hbEe0",
     "videoUrl": "https://www.youtube.com/watch?v=U1HXO-hbEe0",
     "streamer": "FUWAMOCO",
+    "date": "2025-09-11T10:00:00.000Z"
+  },
+  {
+    "videoId": "QmaA6e83YJk",
+    "videoUrl": "https://www.youtube.com/watch?v=QmaA6e83YJk",
+    "streamer": "Nerissa",
+    "date": "2025-09-11T10:00:00.000Z"
+  },
+  {
+    "videoId": "26-4XEQa5Jk",
+    "videoUrl": "https://www.youtube.com/watch?v=26-4XEQa5Jk",
+    "streamer": "Shiori",
     "date": "2025-09-11T10:00:00.000Z"
   },
   {

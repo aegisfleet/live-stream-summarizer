@@ -222,6 +222,12 @@
     "date": "2025-09-10T08:06:00.000Z"
   },
   {
+    "videoId": "4XfYqXBHiCI",
+    "videoUrl": "https://www.youtube.com/watch?v=4XfYqXBHiCI",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-09-10T12:00:00.000Z"
+  },
+  {
     "videoId": "9XrqmccVUEk",
     "videoUrl": "https://www.youtube.com/watch?v=9XrqmccVUEk",
     "streamer": "白銀ノエル ⚔",
@@ -232,6 +238,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=pChQkIDyOJA",
     "streamer": "大神ミオ 🌲",
     "date": "2025-09-10T18:00:00.000Z"
+  },
+  {
+    "videoId": "9nBusk0vfp4",
+    "videoUrl": "https://www.youtube.com/watch?v=9nBusk0vfp4",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-09-10T20:00:00.000Z"
+  },
+  {
+    "videoId": "P8PyhBVz6DU",
+    "videoUrl": "https://www.youtube.com/watch?v=P8PyhBVz6DU",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-10T20:00:00.000Z"
+  },
+  {
+    "videoId": "cYn77PqeQ1w",
+    "videoUrl": "https://www.youtube.com/watch?v=cYn77PqeQ1w",
+    "streamer": "博衣こより",
+    "date": "2025-09-10T22:00:00.000Z"
   },
   {
     "videoId": "8tlbOLm0cRc",
@@ -514,5 +538,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=CkoKm_PKhXo",
     "streamer": "Kaela",
     "date": "2025-09-10T11:29:00.000Z"
+  },
+  {
+    "videoId": "n9AxJFyzG_U",
+    "videoUrl": "https://www.youtube.com/watch?v=n9AxJFyzG_U",
+    "streamer": "Zeta",
+    "date": "2025-09-10T22:00:00.000Z"
   }
 ]

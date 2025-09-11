@@ -174,6 +174,12 @@
     "date": "2025-09-11T23:30:00.000Z"
   },
   {
+    "videoId": "L9rBmc_2h6U",
+    "videoUrl": "https://www.youtube.com/watch?v=L9rBmc_2h6U",
+    "streamer": "夏色まつり 🏮",
+    "date": "2025-09-12T16:00:00.000Z"
+  },
+  {
     "videoId": "5LV1J6HUFj8",
     "videoUrl": "https://www.youtube.com/watch?v=5LV1J6HUFj8",
     "streamer": "ホロライブ",
@@ -186,15 +192,15 @@
     "date": "2025-09-12T18:30:00.000Z"
   },
   {
-    "videoId": "psAyIF0Mv7k",
-    "videoUrl": "https://www.youtube.com/watch?v=psAyIF0Mv7k",
-    "streamer": "白銀ノエル ⚔",
-    "date": "2025-09-12T19:00:00.000Z"
-  },
-  {
     "videoId": "xCcmGJ_r5sM",
     "videoUrl": "https://www.youtube.com/watch?v=xCcmGJ_r5sM",
     "streamer": "博衣こより",
+    "date": "2025-09-12T19:00:00.000Z"
+  },
+  {
+    "videoId": "psAyIF0Mv7k",
+    "videoUrl": "https://www.youtube.com/watch?v=psAyIF0Mv7k",
+    "streamer": "白銀ノエル ⚔",
     "date": "2025-09-12T19:00:00.000Z"
   },
   {
@@ -207,6 +213,12 @@
     "videoId": "emIVAwIamZ4",
     "videoUrl": "https://www.youtube.com/watch?v=emIVAwIamZ4",
     "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-12T21:00:00.000Z"
+  },
+  {
+    "videoId": "qpn6GCE9HoY",
+    "videoUrl": "https://www.youtube.com/watch?v=qpn6GCE9HoY",
+    "streamer": "角巻わため 🐏",
     "date": "2025-09-12T21:00:00.000Z"
   },
   {
@@ -226,6 +238,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=I0OY2hfCTI0",
     "streamer": "博衣こより",
     "date": "2025-09-12T21:50:00.000Z"
+  },
+  {
+    "videoId": "eF6ORfcguIA",
+    "videoUrl": "https://www.youtube.com/watch?v=eF6ORfcguIA",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-12T22:00:00.000Z"
   },
   {
     "videoId": "GnFR0SbgkC0",
@@ -336,6 +354,12 @@
     "date": "2025-09-11T23:06:00.000Z"
   },
   {
+    "videoId": "4XalEsq3KYw",
+    "videoUrl": "https://www.youtube.com/watch?v=4XalEsq3KYw",
+    "streamer": "輪堂千速",
+    "date": "2025-09-12T12:00:00.000Z"
+  },
+  {
     "videoId": "lXten0BT3ZE",
     "videoUrl": "https://www.youtube.com/watch?v=lXten0BT3ZE",
     "streamer": "ReGLOSS",
@@ -387,7 +411,7 @@
     "videoId": "bSumuJU3r3M",
     "videoUrl": "https://www.youtube.com/watch?v=bSumuJU3r3M",
     "streamer": "Cecilia",
-    "date": "2025-09-12T04:00:00.000Z"
+    "date": "2025-09-12T04:02:00.000Z"
   },
   {
     "videoId": "YLLXbwM0Xlk",
@@ -454,5 +478,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=5URQ7iSsjmg",
     "streamer": "Anya",
     "date": "2025-09-11T22:01:00.000Z"
+  },
+  {
+    "videoId": "F1PRA4IBP8c",
+    "videoUrl": "https://www.youtube.com/watch?v=F1PRA4IBP8c",
+    "streamer": "Kobo",
+    "date": "2025-09-12T23:00:00.000Z"
   }
 ]

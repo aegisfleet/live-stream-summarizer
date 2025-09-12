@@ -198,6 +198,12 @@
     "date": "2025-09-12T23:02:00.000Z"
   },
   {
+    "videoId": "wFrS17Lx1F8",
+    "videoUrl": "https://www.youtube.com/watch?v=wFrS17Lx1F8",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-13T06:01:00.000Z"
+  },
+  {
     "videoId": "lPaJh_Cx1j0",
     "videoUrl": "https://www.youtube.com/watch?v=lPaJh_Cx1j0",
     "streamer": "大空スバル 🚑",
@@ -232,6 +238,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=q0cyR-0HZkY",
     "streamer": "ホロライブ",
     "date": "2025-09-13T18:00:00.000Z"
+  },
+  {
+    "videoId": "98E0p8VdVBI",
+    "videoUrl": "https://www.youtube.com/watch?v=98E0p8VdVBI",
+    "streamer": "獅白ぼたん",
+    "date": "2025-09-13T19:00:00.000Z"
   },
   {
     "videoId": "NplKSsbhqHc",
@@ -441,19 +453,31 @@
     "videoId": "yR-Zo_Sixq4",
     "videoUrl": "https://www.youtube.com/watch?v=yR-Zo_Sixq4",
     "streamer": "Cecilia",
-    "date": "2025-09-13T05:00:00.000Z"
+    "date": "2025-09-13T05:01:00.000Z"
   },
   {
     "videoId": "b8ZlD4X1JKk",
     "videoUrl": "https://www.youtube.com/watch?v=b8ZlD4X1JKk",
     "streamer": "Gigi",
-    "date": "2025-09-13T06:00:00.000Z"
+    "date": "2025-09-13T06:03:00.000Z"
+  },
+  {
+    "videoId": "K0UCqgBd6Nk",
+    "videoUrl": "https://www.youtube.com/watch?v=K0UCqgBd6Nk",
+    "streamer": "Kiara",
+    "date": "2025-09-13T07:15:00.000Z"
   },
   {
     "videoId": "QVpQyyQleTo",
     "videoUrl": "https://www.youtube.com/watch?v=QVpQyyQleTo",
     "streamer": "Ina",
     "date": "2025-09-13T08:00:00.000Z"
+  },
+  {
+    "videoId": "Mqp2EVG5BHs",
+    "videoUrl": "https://www.youtube.com/watch?v=Mqp2EVG5BHs",
+    "streamer": "Nerissa",
+    "date": "2025-09-13T09:00:00.000Z"
   },
   {
     "videoId": "MryxToVvJO0",
@@ -484,6 +508,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=NVbmNAlbkKU",
     "streamer": "holo EN",
     "date": "2025-09-13T12:30:00.000Z"
+  },
+  {
+    "videoId": "DWuvly5vOpQ",
+    "videoUrl": "https://www.youtube.com/watch?v=DWuvly5vOpQ",
+    "streamer": "Kiara",
+    "date": "2025-09-13T19:00:00.000Z"
+  },
+  {
+    "videoId": "63w9OBWCF84",
+    "videoUrl": "https://www.youtube.com/watch?v=63w9OBWCF84",
+    "streamer": "Kiara",
+    "date": "2025-09-14T04:00:00.000Z"
   },
   {
     "videoId": "vHlrUFFQhGs",

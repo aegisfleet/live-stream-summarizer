@@ -180,6 +180,18 @@
     "date": "2025-09-12T06:00:00.000Z"
   },
   {
+    "videoId": "iWKeNg1OUcU",
+    "videoUrl": "https://www.youtube.com/watch?v=iWKeNg1OUcU",
+    "streamer": "風真いろは",
+    "date": "2025-09-12T12:00:00.000Z"
+  },
+  {
+    "videoId": "3tC0QRXRm9M",
+    "videoUrl": "https://www.youtube.com/watch?v=3tC0QRXRm9M",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-09-12T13:00:00.000Z"
+  },
+  {
     "videoId": "L9rBmc_2h6U",
     "videoUrl": "https://www.youtube.com/watch?v=L9rBmc_2h6U",
     "streamer": "夏色まつり 🏮",
@@ -222,9 +234,9 @@
     "date": "2025-09-12T20:00:00.000Z"
   },
   {
-    "videoId": "ylsIXGpR1IQ",
-    "videoUrl": "https://www.youtube.com/watch?v=ylsIXGpR1IQ",
-    "streamer": "大空スバル 🚑",
+    "videoId": "emIVAwIamZ4",
+    "videoUrl": "https://www.youtube.com/watch?v=emIVAwIamZ4",
+    "streamer": "ロボ子さん 🤖",
     "date": "2025-09-12T21:00:00.000Z"
   },
   {
@@ -234,9 +246,9 @@
     "date": "2025-09-12T21:00:00.000Z"
   },
   {
-    "videoId": "emIVAwIamZ4",
-    "videoUrl": "https://www.youtube.com/watch?v=emIVAwIamZ4",
-    "streamer": "ロボ子さん 🤖",
+    "videoId": "ylsIXGpR1IQ",
+    "videoUrl": "https://www.youtube.com/watch?v=ylsIXGpR1IQ",
+    "streamer": "大空スバル 🚑",
     "date": "2025-09-12T21:00:00.000Z"
   },
   {
@@ -388,6 +400,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=ONwKC57rHX0",
     "streamer": "綺々羅々ヴィヴィ",
     "date": "2025-09-12T17:00:00.000Z"
+  },
+  {
+    "videoId": "gTLE8O7uOtQ",
+    "videoUrl": "https://www.youtube.com/watch?v=gTLE8O7uOtQ",
+    "streamer": "ReGLOSS",
+    "date": "2025-09-12T18:00:00.000Z"
   },
   {
     "videoId": "HoNbWtObYjg",
@@ -550,6 +568,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=vHlrUFFQhGs",
     "streamer": "Anya",
     "date": "2025-09-12T11:01:00.000Z"
+  },
+  {
+    "videoId": "Qkd49ftDppM",
+    "videoUrl": "https://www.youtube.com/watch?v=Qkd49ftDppM",
+    "streamer": "Kaela",
+    "date": "2025-09-12T14:00:00.000Z"
   },
   {
     "videoId": "F1PRA4IBP8c",

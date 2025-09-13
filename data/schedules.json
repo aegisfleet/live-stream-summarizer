@@ -231,7 +231,13 @@
     "videoId": "qJtgDHe6apc",
     "videoUrl": "https://www.youtube.com/watch?v=qJtgDHe6apc",
     "streamer": "大空スバル 🚑",
-    "date": "2025-09-13T13:00:00.000Z"
+    "date": "2025-09-13T13:02:00.000Z"
+  },
+  {
+    "videoId": "q5ViOKHmlHw",
+    "videoUrl": "https://www.youtube.com/watch?v=q5ViOKHmlHw",
+    "streamer": "天音かなた 💫",
+    "date": "2025-09-13T14:00:00.000Z"
   },
   {
     "videoId": "q0cyR-0HZkY",
@@ -507,7 +513,7 @@
     "videoId": "WklHGBhrF8g",
     "videoUrl": "https://www.youtube.com/watch?v=WklHGBhrF8g",
     "streamer": "FUWAMOCO",
-    "date": "2025-09-13T12:15:00.000Z"
+    "date": "2025-09-13T12:09:00.000Z"
   },
   {
     "videoId": "QLBcYP2UNb8",
@@ -580,5 +586,17 @@
     "videoUrl": "https://www.youtube.com/watch?v=F1PRA4IBP8c",
     "streamer": "Kobo",
     "date": "2025-09-12T23:00:00.000Z"
+  },
+  {
+    "videoId": "eyD8ssaHzCE",
+    "videoUrl": "https://www.youtube.com/watch?v=eyD8ssaHzCE",
+    "streamer": "Kaela",
+    "date": "2025-09-13T14:30:00.000Z"
+  },
+  {
+    "videoId": "OTBK1HFbPVE",
+    "videoUrl": "https://www.youtube.com/watch?v=OTBK1HFbPVE",
+    "streamer": "Anya",
+    "date": "2025-09-13T15:00:00.000Z"
   }
 ]

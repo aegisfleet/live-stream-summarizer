@@ -180,16 +180,16 @@
     "date": "2025-09-14T10:00:00.000Z"
   },
   {
-    "videoId": "IyEr2Naq2SA",
-    "videoUrl": "https://www.youtube.com/watch?v=IyEr2Naq2SA",
-    "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-14T12:00:00.000Z"
-  },
-  {
     "videoId": "gp6sEpUhGN0",
     "videoUrl": "https://www.youtube.com/watch?v=gp6sEpUhGN0",
     "streamer": "兎田ぺこら 👯",
     "date": "2025-09-14T12:00:00.000Z"
+  },
+  {
+    "videoId": "iI42tEidAQg",
+    "videoUrl": "https://www.youtube.com/watch?v=iI42tEidAQg",
+    "streamer": "天音かなた 💫",
+    "date": "2025-09-14T13:00:00.000Z"
   },
   {
     "videoId": "Cq-AUniEPSU",
@@ -204,16 +204,22 @@
     "date": "2025-09-14T13:00:00.000Z"
   },
   {
-    "videoId": "iI42tEidAQg",
-    "videoUrl": "https://www.youtube.com/watch?v=iI42tEidAQg",
-    "streamer": "天音かなた 💫",
-    "date": "2025-09-14T13:00:00.000Z"
-  },
-  {
     "videoId": "s5qx7nhiGUE",
     "videoUrl": "https://www.youtube.com/watch?v=s5qx7nhiGUE",
     "streamer": "鷹嶺ルイ",
     "date": "2025-09-14T14:30:00.000Z"
+  },
+  {
+    "videoId": "IyEr2Naq2SA",
+    "videoUrl": "https://www.youtube.com/watch?v=IyEr2Naq2SA",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-14T16:00:00.000Z"
+  },
+  {
+    "videoId": "czvQNaevBo4",
+    "videoUrl": "https://www.youtube.com/watch?v=czvQNaevBo4",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-09-14T17:00:00.000Z"
   },
   {
     "videoId": "b8cTDF2jWjs",
@@ -240,15 +246,15 @@
     "date": "2025-09-14T21:00:00.000Z"
   },
   {
-    "videoId": "-ogX0gTiffA",
-    "videoUrl": "https://www.youtube.com/watch?v=-ogX0gTiffA",
-    "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-14T22:00:00.000Z"
-  },
-  {
     "videoId": "w0l_zrx7i88",
     "videoUrl": "https://www.youtube.com/watch?v=w0l_zrx7i88",
     "streamer": "赤井はあと ❤",
+    "date": "2025-09-14T22:00:00.000Z"
+  },
+  {
+    "videoId": "-ogX0gTiffA",
+    "videoUrl": "https://www.youtube.com/watch?v=-ogX0gTiffA",
+    "streamer": "姫森ルーナ 🍬",
     "date": "2025-09-14T22:00:00.000Z"
   },
   {
@@ -261,7 +267,7 @@
     "videoId": "yflhaVXyDr4",
     "videoUrl": "https://www.youtube.com/watch?v=yflhaVXyDr4",
     "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-15T16:00:00.000Z"
+    "date": "2025-09-15T15:00:00.000Z"
   },
   {
     "videoId": "JnncOMMe2Ks",
@@ -339,7 +345,13 @@
     "videoId": "gJZNtCafWJs",
     "videoUrl": "https://www.youtube.com/watch?v=gJZNtCafWJs",
     "streamer": "水宮枢",
-    "date": "2025-09-14T09:30:00.000Z"
+    "date": "2025-09-14T09:31:00.000Z"
+  },
+  {
+    "videoId": "lAqbhdgs5jU",
+    "videoUrl": "https://www.youtube.com/watch?v=lAqbhdgs5jU",
+    "streamer": "轟はじめ",
+    "date": "2025-09-14T16:00:00.000Z"
   },
   {
     "videoId": "KW9vLauxiuc",
@@ -364,6 +376,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=o0aEg03bbOc",
     "streamer": "一条莉々華",
     "date": "2025-09-14T19:00:00.000Z"
+  },
+  {
+    "videoId": "-BtzzcSZu30",
+    "videoUrl": "https://www.youtube.com/watch?v=-BtzzcSZu30",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-14T21:00:00.000Z"
   },
   {
     "videoId": "MNkO--oi-CM",
@@ -483,19 +501,25 @@
     "videoId": "4g9JyWS9YAQ",
     "videoUrl": "https://www.youtube.com/watch?v=4g9JyWS9YAQ",
     "streamer": "Shiori",
-    "date": "2025-09-14T09:00:00.000Z"
+    "date": "2025-09-14T08:55:00.000Z"
   },
   {
     "videoId": "J5d-bZt-H38",
     "videoUrl": "https://www.youtube.com/watch?v=J5d-bZt-H38",
     "streamer": "Elizabeth",
-    "date": "2025-09-14T09:00:00.000Z"
+    "date": "2025-09-14T08:57:00.000Z"
   },
   {
     "videoId": "9FltsLFPwXw",
     "videoUrl": "https://www.youtube.com/watch?v=9FltsLFPwXw",
     "streamer": "Baelz",
-    "date": "2025-09-14T10:00:00.000Z"
+    "date": "2025-09-14T10:15:00.000Z"
+  },
+  {
+    "videoId": "XBZiDRNo-wI",
+    "videoUrl": "https://www.youtube.com/watch?v=XBZiDRNo-wI",
+    "streamer": "Kiara",
+    "date": "2025-09-15T03:00:00.000Z"
   },
   {
     "videoId": "1aumaSFICCE",

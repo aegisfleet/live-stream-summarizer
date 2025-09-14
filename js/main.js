@@ -229,6 +229,18 @@ class ArchiveManager {
         this.setupServiceWorker();
         this.setupLanguageSwitcher();
         this.setupPushNotifications();
+        this.setupFocusListener();
+    }
+
+    setupFocusListener() {
+        window.addEventListener('focus', () => {
+            console.log('Window focused. Checking for updates.');
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage({
+                    action: 'updateCache'
+                });
+            }
+        });
     }
 
     setupPushNotifications() {

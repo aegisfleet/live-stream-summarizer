@@ -180,6 +180,16 @@
     "duration": 284
   },
   {
+    "videoId": "lScG1ISHAiA",
+    "videoUrl": "https://www.youtube.com/watch?v=lScG1ISHAiA",
+    "streamer": "水宮枢",
+    "date": "2025-09-15T18:00:00.000Z",
+    "title": "【ホラゲ】失踪 - タケシ、お前の言う通りだった。あの廃村はヤバすぎる。【水宮枢／ホロライブDEV_IS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/lScG1ISHAiA/mqdefault.jpg",
+    "endTime": "2025-09-15T10:21:11Z",
+    "duration": 4865
+  },
+  {
     "videoId": "63w9OBWCF84",
     "videoUrl": "https://www.youtube.com/watch?v=63w9OBWCF84",
     "streamer": "Kiara",
@@ -275,8 +285,38 @@
     "streamer": "Risu 🐿",
     "date": "2025-09-15T11:32:00.000Z",
     "title": "M.M.M. is always on Monday",
-    "thumbnailUrl": "https://i.ytimg.com/vi/IRkT55Pwfos/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/IRkT55Pwfos/mqdefault.jpg",
     "endTime": "2025-09-15T04:18:43Z",
     "duration": 6355
+  },
+  {
+    "videoId": "DXppwowHp-A",
+    "videoUrl": "https://www.youtube.com/watch?v=DXppwowHp-A",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-15T15:19:00.000Z",
+    "title": "【Sea of Thieves】AHOY EVERYONE!【 iofi / hololiveID 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/DXppwowHp-A/mqdefault.jpg",
+    "endTime": "2025-09-15T08:21:28Z",
+    "duration": 7308
+  },
+  {
+    "videoId": "K8oKdwas3Lg",
+    "videoUrl": "https://www.youtube.com/watch?v=K8oKdwas3Lg",
+    "streamer": "Moona 🔮",
+    "date": "2025-09-15T15:20:00.000Z",
+    "title": "【Sea of Thieves】Time to sail again!!【Moona | holoID】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/K8oKdwas3Lg/mqdefault.jpg",
+    "endTime": "2025-09-15T08:21:13Z",
+    "duration": 7234
+  },
+  {
+    "videoId": "UhOcS5qmreU",
+    "videoUrl": "https://www.youtube.com/watch?v=UhOcS5qmreU",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-15T15:20:00.000Z",
+    "title": "Sea Of Thieves with AREA15 IKZZZZZ !!!!!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/UhOcS5qmreU/mqdefault.jpg",
+    "endTime": "2025-09-15T08:22:47Z",
+    "duration": 7341
   }
 ]

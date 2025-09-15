@@ -198,10 +198,22 @@
     "date": "2025-09-15T12:00:00.000Z"
   },
   {
+    "videoId": "KAnX1AqkrEM",
+    "videoUrl": "https://www.youtube.com/watch?v=KAnX1AqkrEM",
+    "streamer": "風真いろは",
+    "date": "2025-09-15T12:00:00.000Z"
+  },
+  {
     "videoId": "jxMyiYZ6ChA",
     "videoUrl": "https://www.youtube.com/watch?v=jxMyiYZ6ChA",
     "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-15T13:00:00.000Z"
+    "date": "2025-09-15T12:59:00.000Z"
+  },
+  {
+    "videoId": "WPxVowPHw8c",
+    "videoUrl": "https://www.youtube.com/watch?v=WPxVowPHw8c",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-09-15T13:01:00.000Z"
   },
   {
     "videoId": "DTHNgKCp_XY",
@@ -381,13 +393,19 @@
     "videoId": "A2IqtOGrmYc",
     "videoUrl": "https://www.youtube.com/watch?v=A2IqtOGrmYc",
     "streamer": "一条莉々華",
-    "date": "2025-09-15T13:00:00.000Z"
+    "date": "2025-09-15T12:59:00.000Z"
   },
   {
     "videoId": "lScG1ISHAiA",
     "videoUrl": "https://www.youtube.com/watch?v=lScG1ISHAiA",
     "streamer": "水宮枢",
     "date": "2025-09-15T18:00:00.000Z"
+  },
+  {
+    "videoId": "aoz2aQM2mcw",
+    "videoUrl": "https://www.youtube.com/watch?v=aoz2aQM2mcw",
+    "streamer": "轟はじめ",
+    "date": "2025-09-15T19:00:00.000Z"
   },
   {
     "videoId": "MNkO--oi-CM",
@@ -474,16 +492,22 @@
     "date": "2025-09-15T11:48:00.000Z"
   },
   {
+    "videoId": "ZSUy8e5o4i4",
+    "videoUrl": "https://www.youtube.com/watch?v=ZSUy8e5o4i4",
+    "streamer": "holo EN",
+    "date": "2025-09-15T12:00:00.000Z"
+  },
+  {
     "videoId": "WHcApxr5heQ",
     "videoUrl": "https://www.youtube.com/watch?v=WHcApxr5heQ",
     "streamer": "IRyS",
-    "date": "2025-09-15T12:00:00.000Z"
+    "date": "2025-09-15T12:04:00.000Z"
   },
   {
     "videoId": "nYd_ijtM12M",
     "videoUrl": "https://www.youtube.com/watch?v=nYd_ijtM12M",
     "streamer": "FUWAMOCO",
-    "date": "2025-09-15T12:30:00.000Z"
+    "date": "2025-09-15T12:25:00.000Z"
   },
   {
     "videoId": "Is1xWDBVKVI",
@@ -538,6 +562,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=IRkT55Pwfos",
     "streamer": "Risu 🐿",
     "date": "2025-09-15T11:32:00.000Z"
+  },
+  {
+    "videoId": "UhOcS5qmreU",
+    "videoUrl": "https://www.youtube.com/watch?v=UhOcS5qmreU",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-15T15:00:00.000Z"
+  },
+  {
+    "videoId": "K8oKdwas3Lg",
+    "videoUrl": "https://www.youtube.com/watch?v=K8oKdwas3Lg",
+    "streamer": "Moona 🔮",
+    "date": "2025-09-15T15:00:00.000Z"
+  },
+  {
+    "videoId": "DXppwowHp-A",
+    "videoUrl": "https://www.youtube.com/watch?v=DXppwowHp-A",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-15T15:00:00.000Z"
   },
   {
     "videoId": "POBs09IFbF8",

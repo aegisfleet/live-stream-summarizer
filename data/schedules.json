@@ -198,6 +198,12 @@
     "date": "2025-09-15T12:00:00.000Z"
   },
   {
+    "videoId": "jxMyiYZ6ChA",
+    "videoUrl": "https://www.youtube.com/watch?v=jxMyiYZ6ChA",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-15T13:00:00.000Z"
+  },
+  {
     "videoId": "DTHNgKCp_XY",
     "videoUrl": "https://www.youtube.com/watch?v=DTHNgKCp_XY",
     "streamer": "鷹嶺ルイ",
@@ -252,6 +258,12 @@
     "date": "2025-09-15T21:00:00.000Z"
   },
   {
+    "videoId": "QEEbrNWfjXQ",
+    "videoUrl": "https://www.youtube.com/watch?v=QEEbrNWfjXQ",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-15T22:00:00.000Z"
+  },
+  {
     "videoId": "2rcPQJ-X9Is",
     "videoUrl": "https://www.youtube.com/watch?v=2rcPQJ-X9Is",
     "streamer": "鷹嶺ルイ",
@@ -268,6 +280,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=VM1gFSyyYb4",
     "streamer": "アキロゼ 🍎",
     "date": "2025-09-15T23:40:00.000Z"
+  },
+  {
+    "videoId": "0JQRdPegyd4",
+    "videoUrl": "https://www.youtube.com/watch?v=0JQRdPegyd4",
+    "streamer": "博衣こより",
+    "date": "2025-09-16T07:00:00.000Z"
   },
   {
     "videoId": "TLw3Taw5jxI",
@@ -435,25 +453,37 @@
     "videoId": "1aumaSFICCE",
     "videoUrl": "https://www.youtube.com/watch?v=1aumaSFICCE",
     "streamer": "holo EN",
-    "date": "2025-09-15T09:00:00.000Z"
+    "date": "2025-09-15T08:57:00.000Z"
+  },
+  {
+    "videoId": "2iIjzCh7-GE",
+    "videoUrl": "https://www.youtube.com/watch?v=2iIjzCh7-GE",
+    "streamer": "holo EN",
+    "date": "2025-09-15T10:30:00.000Z"
   },
   {
     "videoId": "vF7s4BdNLPU",
     "videoUrl": "https://www.youtube.com/watch?v=vF7s4BdNLPU",
     "streamer": "Baelz",
-    "date": "2025-09-15T10:00:00.000Z"
+    "date": "2025-09-15T10:45:00.000Z"
   },
   {
-    "videoId": "nYd_ijtM12M",
-    "videoUrl": "https://www.youtube.com/watch?v=nYd_ijtM12M",
-    "streamer": "FUWAMOCO",
-    "date": "2025-09-15T11:30:00.000Z"
+    "videoId": "6VvXq3Og2bw",
+    "videoUrl": "https://www.youtube.com/watch?v=6VvXq3Og2bw",
+    "streamer": "Calli",
+    "date": "2025-09-15T11:48:00.000Z"
   },
   {
     "videoId": "WHcApxr5heQ",
     "videoUrl": "https://www.youtube.com/watch?v=WHcApxr5heQ",
     "streamer": "IRyS",
     "date": "2025-09-15T12:00:00.000Z"
+  },
+  {
+    "videoId": "nYd_ijtM12M",
+    "videoUrl": "https://www.youtube.com/watch?v=nYd_ijtM12M",
+    "streamer": "FUWAMOCO",
+    "date": "2025-09-15T12:30:00.000Z"
   },
   {
     "videoId": "Is1xWDBVKVI",
@@ -502,6 +532,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=JLF79IOubNQ",
     "streamer": "Zeta",
     "date": "2025-09-15T00:01:00.000Z"
+  },
+  {
+    "videoId": "IRkT55Pwfos",
+    "videoUrl": "https://www.youtube.com/watch?v=IRkT55Pwfos",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-15T11:32:00.000Z"
   },
   {
     "videoId": "POBs09IFbF8",

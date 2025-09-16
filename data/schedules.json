@@ -222,6 +222,18 @@
     "date": "2025-09-16T17:00:00.000Z"
   },
   {
+    "videoId": "JmKWSN9VZU4",
+    "videoUrl": "https://www.youtube.com/watch?v=JmKWSN9VZU4",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-09-16T18:00:00.000Z"
+  },
+  {
+    "videoId": "isVqsF9hrQU",
+    "videoUrl": "https://www.youtube.com/watch?v=isVqsF9hrQU",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-16T18:00:00.000Z"
+  },
+  {
     "videoId": "5BoNSBqGjLc",
     "videoUrl": "https://www.youtube.com/watch?v=5BoNSBqGjLc",
     "streamer": "博衣こより",
@@ -390,12 +402,6 @@
     "date": "2025-09-15T23:55:00.000Z"
   },
   {
-    "videoId": "XBZiDRNo-wI",
-    "videoUrl": "https://www.youtube.com/watch?v=XBZiDRNo-wI",
-    "streamer": "Kiara",
-    "date": "2025-09-16T04:30:00.000Z"
-  },
-  {
     "videoId": "GDfNEEMYpSE",
     "videoUrl": "https://www.youtube.com/watch?v=GDfNEEMYpSE",
     "streamer": "Raora",
@@ -417,13 +423,43 @@
     "videoId": "ztEdwzbkPRU",
     "videoUrl": "https://www.youtube.com/watch?v=ztEdwzbkPRU",
     "streamer": "Bijou",
+    "date": "2025-09-16T09:55:00.000Z"
+  },
+  {
+    "videoId": "C7fwLPpkJcY",
+    "videoUrl": "https://www.youtube.com/watch?v=C7fwLPpkJcY",
+    "streamer": "Shiori",
     "date": "2025-09-16T10:00:00.000Z"
+  },
+  {
+    "videoId": "adMdzX25cPE",
+    "videoUrl": "https://www.youtube.com/watch?v=adMdzX25cPE",
+    "streamer": "Kronii",
+    "date": "2025-09-16T10:08:00.000Z"
   },
   {
     "videoId": "BtRo31JES2U",
     "videoUrl": "https://www.youtube.com/watch?v=BtRo31JES2U",
     "streamer": "IRyS",
     "date": "2025-09-16T12:00:00.000Z"
+  },
+  {
+    "videoId": "84KzO2UNxWY",
+    "videoUrl": "https://www.youtube.com/watch?v=84KzO2UNxWY",
+    "streamer": "Kiara",
+    "date": "2025-09-17T00:00:00.000Z"
+  },
+  {
+    "videoId": "3eRosZbN0bQ",
+    "videoUrl": "https://www.youtube.com/watch?v=3eRosZbN0bQ",
+    "streamer": "Shiori",
+    "date": "2025-09-17T06:00:00.000Z"
+  },
+  {
+    "videoId": "LypevHw4vRc",
+    "videoUrl": "https://www.youtube.com/watch?v=LypevHw4vRc",
+    "streamer": "Calli",
+    "date": "2025-09-17T09:00:00.000Z"
   },
   {
     "videoId": "JLF79IOubNQ",

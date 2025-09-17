@@ -42,15 +42,15 @@
     "date": "2025-09-16T17:34:00.000Z"
   },
   {
-    "videoId": "GOqZD007ZfA",
-    "videoUrl": "https://www.youtube.com/watch?v=GOqZD007ZfA",
-    "streamer": "獅白ぼたん",
-    "date": "2025-09-16T18:00:00.000Z"
-  },
-  {
     "videoId": "GCiG31ppJlA",
     "videoUrl": "https://www.youtube.com/watch?v=GCiG31ppJlA",
     "streamer": "博衣こより",
+    "date": "2025-09-16T18:00:00.000Z"
+  },
+  {
+    "videoId": "GOqZD007ZfA",
+    "videoUrl": "https://www.youtube.com/watch?v=GOqZD007ZfA",
+    "streamer": "獅白ぼたん",
     "date": "2025-09-16T18:00:00.000Z"
   },
   {
@@ -168,6 +168,12 @@
     "date": "2025-09-17T06:01:00.000Z"
   },
   {
+    "videoId": "oDlSalCrjCI",
+    "videoUrl": "https://www.youtube.com/watch?v=oDlSalCrjCI",
+    "streamer": "風真いろは",
+    "date": "2025-09-17T16:00:00.000Z"
+  },
+  {
     "videoId": "LUDUDsPs1pI",
     "videoUrl": "https://www.youtube.com/watch?v=LUDUDsPs1pI",
     "streamer": "ホロライブ",
@@ -186,27 +192,27 @@
     "date": "2025-09-17T19:00:00.000Z"
   },
   {
-    "videoId": "exZiGgrLDQ0",
-    "videoUrl": "https://www.youtube.com/watch?v=exZiGgrLDQ0",
-    "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-17T20:00:00.000Z"
-  },
-  {
     "videoId": "99Ogx4qus3Y",
     "videoUrl": "https://www.youtube.com/watch?v=99Ogx4qus3Y",
     "streamer": "兎田ぺこら 👯",
     "date": "2025-09-17T20:00:00.000Z"
   },
   {
-    "videoId": "GZ9Ag-IpIEU",
-    "videoUrl": "https://www.youtube.com/watch?v=GZ9Ag-IpIEU",
-    "streamer": "博衣こより",
-    "date": "2025-09-17T21:00:00.000Z"
+    "videoId": "exZiGgrLDQ0",
+    "videoUrl": "https://www.youtube.com/watch?v=exZiGgrLDQ0",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-09-17T20:00:00.000Z"
   },
   {
     "videoId": "jugRWTnZ9AI",
     "videoUrl": "https://www.youtube.com/watch?v=jugRWTnZ9AI",
     "streamer": "戌神ころね 🥐",
+    "date": "2025-09-17T21:00:00.000Z"
+  },
+  {
+    "videoId": "GZ9Ag-IpIEU",
+    "videoUrl": "https://www.youtube.com/watch?v=GZ9Ag-IpIEU",
+    "streamer": "博衣こより",
     "date": "2025-09-17T21:00:00.000Z"
   },
   {
@@ -276,12 +282,6 @@
     "date": "2025-09-17T12:01:00.000Z"
   },
   {
-    "videoId": "T57DoXmnyQQ",
-    "videoUrl": "https://www.youtube.com/watch?v=T57DoXmnyQQ",
-    "streamer": "響咲リオナ",
-    "date": "2025-09-17T18:00:00.000Z"
-  },
-  {
     "videoId": "dqH2DQ3Lrpw",
     "videoUrl": "https://www.youtube.com/watch?v=dqH2DQ3Lrpw",
     "streamer": "綺々羅々ヴィヴィ",
@@ -291,6 +291,12 @@
     "videoId": "qx_3xhF9UKI",
     "videoUrl": "https://www.youtube.com/watch?v=qx_3xhF9UKI",
     "streamer": "儒烏風亭らでん",
+    "date": "2025-09-17T18:00:00.000Z"
+  },
+  {
+    "videoId": "T57DoXmnyQQ",
+    "videoUrl": "https://www.youtube.com/watch?v=T57DoXmnyQQ",
+    "streamer": "響咲リオナ",
     "date": "2025-09-17T18:00:00.000Z"
   },
   {
@@ -306,15 +312,21 @@
     "date": "2025-09-17T19:00:00.000Z"
   },
   {
+    "videoId": "lJNEe9iS7Po",
+    "videoUrl": "https://www.youtube.com/watch?v=lJNEe9iS7Po",
+    "streamer": "響咲リオナ",
+    "date": "2025-09-17T21:00:00.000Z"
+  },
+  {
     "videoId": "0pSTfFdkYJ4",
     "videoUrl": "https://www.youtube.com/watch?v=0pSTfFdkYJ4",
     "streamer": "音乃瀬奏",
     "date": "2025-09-17T21:00:00.000Z"
   },
   {
-    "videoId": "lJNEe9iS7Po",
-    "videoUrl": "https://www.youtube.com/watch?v=lJNEe9iS7Po",
-    "streamer": "響咲リオナ",
+    "videoId": "Je1bz4O5RQg",
+    "videoUrl": "https://www.youtube.com/watch?v=Je1bz4O5RQg",
+    "streamer": "水宮枢",
     "date": "2025-09-17T21:00:00.000Z"
   },
   {
@@ -420,6 +432,12 @@
     "date": "2025-09-18T06:00:00.000Z"
   },
   {
+    "videoId": "dDfgg8bWpeQ",
+    "videoUrl": "https://www.youtube.com/watch?v=dDfgg8bWpeQ",
+    "streamer": "Kronii",
+    "date": "2025-09-18T10:00:00.000Z"
+  },
+  {
     "videoId": "NFbLiV8JB4s",
     "videoUrl": "https://www.youtube.com/watch?v=NFbLiV8JB4s",
     "streamer": "Reine",
@@ -448,6 +466,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=DKVvbVvmDPM",
     "streamer": "Reine",
     "date": "2025-09-16T23:00:00.000Z"
+  },
+  {
+    "videoId": "tCqEqrklP7I",
+    "videoUrl": "https://www.youtube.com/watch?v=tCqEqrklP7I",
+    "streamer": "Reine",
+    "date": "2025-09-17T16:00:00.000Z"
+  },
+  {
+    "videoId": "Xyd4GX0CaHU",
+    "videoUrl": "https://www.youtube.com/watch?v=Xyd4GX0CaHU",
+    "streamer": "Kaela",
+    "date": "2025-09-17T16:19:00.000Z"
   },
   {
     "videoId": "JPVIdWTJOWU",

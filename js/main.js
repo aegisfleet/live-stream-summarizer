@@ -233,12 +233,14 @@ class ArchiveManager {
     }
 
     setupFocusListener() {
-        window.addEventListener('focus', () => {
-            console.log('Window focused. Checking for updates.');
-            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-                navigator.serviceWorker.controller.postMessage({
-                    action: 'updateCache'
-                });
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                console.log('App became visible. Checking for updates.');
+                if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                    navigator.serviceWorker.controller.postMessage({
+                        action: 'updateCache'
+                    });
+                }
             }
         });
     }

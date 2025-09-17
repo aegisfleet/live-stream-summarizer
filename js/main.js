@@ -1401,6 +1401,29 @@ ${shareUrl}`;
             navigator.serviceWorker.register(`${basePath}service-worker.js`, { scope: basePath })
                 .then(registration => {
                     console.log('Service Worker registered successfully.');
+
+                    // 登録後すぐに更新を確認
+                    registration.update();
+
+                    // 新しいService Workerが見つかったときの処理
+                    registration.onupdatefound = () => {
+                        const installingWorker = registration.installing;
+                        if (installingWorker == null) {
+                            return;
+                        }
+                        installingWorker.onstatechange = () => {
+                            if (installingWorker.state === 'installed') {
+                                if (navigator.serviceWorker.controller) {
+                                    // 新しいコンテンツが利用可能です。
+                                    // service-worker.jsのskipWaiting()により、この後すぐにcontrollerchangeイベントが発火し、ページがリロードされます。
+                                    console.log('New content is available and will be automatically updated.');
+                                } else {
+                                    // 初回インストール時
+                                    console.log('Content is cached for offline use.');
+                                }
+                            }
+                        };
+                    };
                 })
                 .catch(error => {
                     console.error('Error during service worker registration:', error);
@@ -1413,6 +1436,7 @@ ${shareUrl}`;
             let refreshing;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
                 if (refreshing) return;
+                console.log('Controller changed. Reloading page...');
                 window.location.reload();
                 refreshing = true;
             });

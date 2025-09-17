@@ -105,6 +105,12 @@ self.addEventListener('push', event => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
+            // レスポンスをクローンしてキャッシュに保存
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+                console.log('[Service Worker] Updating summaries.json in cache on push event.');
+                cache.put('data/summaries.json', responseToCache);
+            });
             return response.json();
         })
         .then(summaries => {

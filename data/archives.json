@@ -1,115 +1,5 @@
 [
   {
-    "videoId": "LUDUDsPs1pI",
-    "videoUrl": "https://www.youtube.com/watch?v=LUDUDsPs1pI",
-    "streamer": "ホロライブ",
-    "date": "2025-09-17T18:00:00.000Z",
-    "title": "【新ボイス】声で繋がる、キミとの距離。",
-    "thumbnailUrl": "https://i.ytimg.com/vi/LUDUDsPs1pI/mqdefault.jpg",
-    "endTime": "2025-09-17T09:03:32Z",
-    "duration": 86
-  },
-  {
-    "videoId": "bzwLp1gAy7s",
-    "videoUrl": "https://www.youtube.com/watch?v=bzwLp1gAy7s",
-    "streamer": "天音かなた 💫",
-    "date": "2025-09-17T19:00:00.000Z",
-    "title": "【プチお披露目】何かが増えました！！！！！【天音かなた/ホロライブ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/bzwLp1gAy7s/mqdefault.jpg",
-    "endTime": "2025-09-17T10:42:17Z",
-    "duration": 2519
-  },
-  {
-    "videoId": "YxLE_AXMEuk",
-    "videoUrl": "https://www.youtube.com/watch?v=YxLE_AXMEuk",
-    "streamer": "AZKi ⚒",
-    "date": "2025-09-17T19:02:00.000Z",
-    "title": "【#あずいろ3Dカラオケ】重大告知あり！あずいろ結成3周年！？歌うよ～～！！！【ホロライブ / AZKi / 風真いろは】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/YxLE_AXMEuk/mqdefault.jpg",
-    "endTime": "2025-09-17T11:05:34Z",
-    "duration": 3802
-  },
-  {
-    "videoId": "exZiGgrLDQ0",
-    "videoUrl": "https://www.youtube.com/watch?v=exZiGgrLDQ0",
-    "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-17T20:00:00.000Z",
-    "title": "【 Keep Digging 】ぺこちゃん企画！地下1000mの深淵へと４人で掘り進むのら！！！【姫森ルーナ/ホロライブ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/exZiGgrLDQ0/mqdefault.jpg",
-    "endTime": "2025-09-17T13:09:16Z",
-    "duration": 7716
-  },
-  {
-    "videoId": "99Ogx4qus3Y",
-    "videoUrl": "https://www.youtube.com/watch?v=99Ogx4qus3Y",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-09-17T20:00:00.000Z",
-    "title": "【Keep Digging】一週間企画3日目！掘って掘って1000mのゴール目指す！ぺこ！【ホロライブ/兎田ぺこら/姫森ルーナ/天音かなた/尾丸ポルカ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/99Ogx4qus3Y/mqdefault.jpg",
-    "endTime": "2025-09-17T13:08:27Z",
-    "duration": 7665
-  },
-  {
-    "videoId": "GZ9Ag-IpIEU",
-    "videoUrl": "https://www.youtube.com/watch?v=GZ9Ag-IpIEU",
-    "streamer": "博衣こより",
-    "date": "2025-09-17T20:59:00.000Z",
-    "title": "【 #突発ホロAmongUs 】5億年ぶりにアモアスやるうううううううう！！！きゃっほぅ！！！【博衣こより視点/ホロライブ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/GZ9Ag-IpIEU/mqdefault.jpg",
-    "endTime": "2025-09-17T13:57:12Z",
-    "duration": 7029
-  },
-  {
-    "videoId": "GP-dRMhBqJ4",
-    "videoUrl": "https://www.youtube.com/watch?v=GP-dRMhBqJ4",
-    "streamer": "さくらみこ 🌸",
-    "date": "2025-09-17T21:00:00.000Z",
-    "title": "【#突発ホロAmongUs】みこちゃんはPONじゃない、無害なだけだ🚀【ホロライブ/さくらみこ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/GP-dRMhBqJ4/mqdefault.jpg",
-    "endTime": "2025-09-17T13:56:25Z",
-    "duration": 6949
-  },
-  {
-    "videoId": "WeTm1MA-nLg",
-    "videoUrl": "https://www.youtube.com/watch?v=WeTm1MA-nLg",
-    "streamer": "桃鈴ねね",
-    "date": "2025-09-17T21:00:00.000Z",
-    "title": "【 #突発ホロAmongUs 】いちばんかしこいこうさつが見れる視点、ねね【 桃鈴ねね / hololive 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/WeTm1MA-nLg/mqdefault.jpg",
-    "endTime": "2025-09-17T13:56:15Z",
-    "duration": 6920
-  },
-  {
-    "videoId": "jugRWTnZ9AI",
-    "videoUrl": "https://www.youtube.com/watch?v=jugRWTnZ9AI",
-    "streamer": "戌神ころね 🥐",
-    "date": "2025-09-17T21:01:00.000Z",
-    "title": "【#突発ホロAmongUs】こちら、ころね支店 ←←← ⊆^U)┬┬~——–o(^^ ;)o… 【戌神ころね】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/jugRWTnZ9AI/mqdefault.jpg",
-    "endTime": "2025-09-17T13:59:11Z",
-    "duration": 7069
-  },
-  {
-    "videoId": "xlAjopyTv7U",
-    "videoUrl": "https://www.youtube.com/watch?v=xlAjopyTv7U",
-    "streamer": "夏色まつり 🏮",
-    "date": "2025-09-17T21:01:00.000Z",
-    "title": "【 #突発ホロAmongUs 】食いしん坊なんで全員食べます！【ホロライブ/夏色まつり】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/xlAjopyTv7U/mqdefault.jpg",
-    "endTime": "2025-09-17T13:56:19Z",
-    "duration": 6917
-  },
-  {
-    "videoId": "E2UjZ0rX8NE",
-    "videoUrl": "https://www.youtube.com/watch?v=E2UjZ0rX8NE",
-    "streamer": "ラプラス",
-    "date": "2025-09-17T23:00:00.000Z",
-    "title": "Departures 〜あなたにおくるアイの歌〜 / ラプラス・ダークネス-cover",
-    "thumbnailUrl": "https://i.ytimg.com/vi/E2UjZ0rX8NE/mqdefault.jpg",
-    "endTime": "2025-09-17T14:06:35Z",
-    "duration": 260
-  },
-  {
     "videoId": "qThwfHi8GdM",
     "videoUrl": "https://www.youtube.com/watch?v=qThwfHi8GdM",
     "streamer": "アキロゼ 🍎",
@@ -170,94 +60,34 @@
     "duration": 5756
   },
   {
-    "videoId": "eiZ9KyRJenI",
-    "videoUrl": "https://www.youtube.com/watch?v=eiZ9KyRJenI",
-    "streamer": "響咲リオナ",
-    "date": "2025-09-17T12:01:00.000Z",
-    "title": "【定期配信＃５】お昼休憩ですか？１２時はリオナとご飯食べよう🎵【ホロライブ DEV_IS 響咲リオナ】#リオナとランチ",
-    "thumbnailUrl": "https://i.ytimg.com/vi/eiZ9KyRJenI/mqdefault.jpg",
-    "endTime": "2025-09-17T04:05:25Z",
-    "duration": 3873
+    "videoId": "k5kWbY06LfU",
+    "videoUrl": "https://www.youtube.com/watch?v=k5kWbY06LfU",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-09-18T20:58:00.000Z",
+    "title": "【 歌枠｜縦型 】L'Arc〜en〜Ciel (ラルク) をふなふな歌うのら～！！！🎵 ～ KARAOKE #shorts【姫森ルーナ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/k5kWbY06LfU/mqdefault.jpg",
+    "endTime": "2025-09-18T14:08:52Z",
+    "duration": 7828
   },
   {
-    "videoId": "qx_3xhF9UKI",
-    "videoUrl": "https://www.youtube.com/watch?v=qx_3xhF9UKI",
-    "streamer": "儒烏風亭らでん",
-    "date": "2025-09-17T18:00:00.000Z",
-    "title": "【 #らぽラボ 】出張らぽラボ備前焼編！作陶から研究最前線までやきものの美術＆科学に迫る！！【儒烏風亭らでん/北白川かかぽ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/qx_3xhF9UKI/mqdefault.jpg",
-    "endTime": "2025-09-17T10:30:55Z",
-    "duration": 5305
+    "videoId": "uWcSGNdbcb8",
+    "videoUrl": "https://www.youtube.com/watch?v=uWcSGNdbcb8",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-18T22:03:00.000Z",
+    "title": "【逆凸】一週間企画4日目！夜中にいきなり『今からオフコラボ』しようと電話したら何人来てくれるのか？ぺこ！【ホロライブ/兎田ぺこら/ラプラスダークネス】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uWcSGNdbcb8/mqdefault.jpg",
+    "endTime": "2025-09-18T14:35:12Z",
+    "duration": 5403
   },
   {
-    "videoId": "T57DoXmnyQQ",
-    "videoUrl": "https://www.youtube.com/watch?v=T57DoXmnyQQ",
-    "streamer": "響咲リオナ",
-    "date": "2025-09-17T18:00:00.000Z",
-    "title": "【PR配信】『ホグワーツ・レガシー』初見プレイ✨リオナはレイブンクローっぽくない！？ねえ！！ねええ！！？【ホロライブ DEV_IS 響咲リオナ】＃PR",
-    "thumbnailUrl": "https://i.ytimg.com/vi/T57DoXmnyQQ/mqdefault.jpg",
-    "endTime": "2025-09-17T11:01:31Z",
-    "duration": 7287
-  },
-  {
-    "videoId": "KkgAmb5n7bk",
-    "videoUrl": "https://www.youtube.com/watch?v=KkgAmb5n7bk",
-    "streamer": "水宮枢",
-    "date": "2025-09-17T18:29:00.000Z",
-    "title": "【告知あり】ホロライブの曲縛り歌枠【水宮枢／FLOW GLOW】#hololiveDEV_IS",
-    "thumbnailUrl": "https://i.ytimg.com/vi/KkgAmb5n7bk/mqdefault.jpg",
-    "endTime": "2025-09-17T10:29:45Z",
-    "duration": 3603
-  },
-  {
-    "videoId": "fapf0wbEswU",
-    "videoUrl": "https://www.youtube.com/watch?v=fapf0wbEswU",
-    "streamer": "水宮枢",
-    "date": "2025-09-17T19:30:00.000Z",
-    "title": "ずうっといっしょ！／水宮枢 【歌ってみた】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/fapf0wbEswU/mqdefault.jpg",
-    "endTime": "2025-09-17T10:35:32Z",
-    "duration": 182
-  },
-  {
-    "videoId": "Je1bz4O5RQg",
-    "videoUrl": "https://www.youtube.com/watch?v=Je1bz4O5RQg",
-    "streamer": "水宮枢",
-    "date": "2025-09-17T21:00:00.000Z",
-    "title": "【 #突発ホロAmongUs 】人を信じて生存ルート視点【水宮枢／ホロライブDEV_IS】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Je1bz4O5RQg/mqdefault.jpg",
-    "endTime": "2025-09-17T13:56:58Z",
-    "duration": 6997
-  },
-  {
-    "videoId": "lJNEe9iS7Po",
-    "videoUrl": "https://www.youtube.com/watch?v=lJNEe9iS7Po",
-    "streamer": "響咲リオナ",
-    "date": "2025-09-17T21:00:00.000Z",
-    "title": "【 #突発ホロAmongUs 】はいっ！洞察力のリオ――ナです！！(￣▽￣)【ホロライブ DEV_IS 響咲リオナ】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/lJNEe9iS7Po/mqdefault.jpg",
-    "endTime": "2025-09-17T13:57:35Z",
-    "duration": 7028
-  },
-  {
-    "videoId": "0pSTfFdkYJ4",
-    "videoUrl": "https://www.youtube.com/watch?v=0pSTfFdkYJ4",
-    "streamer": "音乃瀬奏",
-    "date": "2025-09-17T21:00:00.000Z",
-    "title": "【 #突発ホロAmongUs 】天才的な頭脳で人狼を暴いていく【音乃瀬奏】#hololiveDEV_IS #ReGLOSS",
-    "thumbnailUrl": "https://i.ytimg.com/vi/0pSTfFdkYJ4/mqdefault.jpg",
-    "endTime": "2025-09-17T13:56:18Z",
-    "duration": 6923
-  },
-  {
-    "videoId": "IzFQjXujg90",
-    "videoUrl": "https://www.youtube.com/watch?v=IzFQjXujg90",
-    "streamer": "輪堂千速",
-    "date": "2025-09-17T21:01:00.000Z",
-    "title": "【 #突発ホロAmongUs】インポスターは嫌だインポスターは嫌だ・・・【#輪堂千速 / #hololivedev_is  #FLOWGLOW 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/IzFQjXujg90/mqdefault.jpg",
-    "endTime": "2025-09-17T13:58:26Z",
-    "duration": 7014
+    "videoId": "8PGWEkHS8-E",
+    "videoUrl": "https://www.youtube.com/watch?v=8PGWEkHS8-E",
+    "streamer": "雪花ラミィ",
+    "date": "2025-09-18T23:01:00.000Z",
+    "title": "【メンバー限定】秘密のお話し会しよ？【雪花ラミィ /ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8PGWEkHS8-E/mqdefault.jpg",
+    "endTime": "2025-09-18T15:38:47Z",
+    "duration": 5834
   },
   {
     "videoId": "oq_Qsdbf4bI",
@@ -290,6 +120,16 @@
     "duration": 3237
   },
   {
+    "videoId": "V_KUm2N_jqs",
+    "videoUrl": "https://www.youtube.com/watch?v=V_KUm2N_jqs",
+    "streamer": "水宮枢",
+    "date": "2025-09-18T22:00:00.000Z",
+    "title": "【#すうさーち】ちはのアレこれサーチ🔧🔎【輪堂千速／水宮枢】#hololiveDEV_IS",
+    "thumbnailUrl": "https://i.ytimg.com/vi/V_KUm2N_jqs/mqdefault.jpg",
+    "endTime": "2025-09-18T14:13:50Z",
+    "duration": 4400
+  },
+  {
     "videoId": "oNTZku_JLd4",
     "videoUrl": "https://www.youtube.com/watch?v=oNTZku_JLd4",
     "streamer": "Nerissa",
@@ -298,16 +138,6 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/oNTZku_JLd4/mqdefault.jpg",
     "endTime": "2025-09-18T02:20:07Z",
     "duration": 8736
-  },
-  {
-    "videoId": "h0pqXWXk3Ws",
-    "videoUrl": "https://www.youtube.com/watch?v=h0pqXWXk3Ws",
-    "streamer": "Risu 🐿",
-    "date": "2025-09-17T20:59:00.000Z",
-    "title": "WATCH CONJURING 3 w/ @sammybollivienn",
-    "thumbnailUrl": "https://i.ytimg.com/vi/h0pqXWXk3Ws/mqdefault.jpg",
-    "endTime": "2025-09-17T14:13:30Z",
-    "duration": 8029
   },
   {
     "videoId": "r7cAijjIey8",
@@ -378,5 +208,35 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/uVY072bGXb0/mqdefault.jpg",
     "endTime": "2025-09-18T13:24:01Z",
     "duration": 4990
+  },
+  {
+    "videoId": "QMcHreKI_Tg",
+    "videoUrl": "https://www.youtube.com/watch?v=QMcHreKI_Tg",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-18T22:00:00.000Z",
+    "title": "【 Troublemaker 2: Beyond Dream 】PARAKACUK KEMBALI GENGS 😎【 iofi / hololiveID 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/QMcHreKI_Tg/mqdefault.jpg",
+    "endTime": "2025-09-18T14:25:31Z",
+    "duration": 4941
+  },
+  {
+    "videoId": "6GlHwBjPUT0",
+    "videoUrl": "https://www.youtube.com/watch?v=6GlHwBjPUT0",
+    "streamer": "Reine",
+    "date": "2025-09-18T22:58:00.000Z",
+    "title": "UMA MUSUME SEASON 2",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6GlHwBjPUT0/mqdefault.jpg",
+    "endTime": "2025-09-18T16:28:12Z",
+    "duration": 8971
+  },
+  {
+    "videoId": "iLJSbDS8p94",
+    "videoUrl": "https://www.youtube.com/watch?v=iLJSbDS8p94",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-18T23:26:00.000Z",
+    "title": "【 Troublemaker 2: Beyond Dream 】PARAKACUK KEMBALI GENGS 😎【 iofi / hololiveID 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/iLJSbDS8p94/mqdefault.jpg",
+    "endTime": "2025-09-18T14:49:59Z",
+    "duration": 1199
   }
 ]

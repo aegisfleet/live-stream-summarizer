@@ -126,15 +126,15 @@
     "date": "2025-09-19T21:04:00.000Z"
   },
   {
-    "videoId": "87YalBjTGcQ",
-    "videoUrl": "https://www.youtube.com/watch?v=87YalBjTGcQ",
-    "streamer": "白上フブキ 🌽",
-    "date": "2025-09-19T21:15:00.000Z"
-  },
-  {
     "videoId": "cZxlliuL2wE",
     "videoUrl": "https://www.youtube.com/watch?v=cZxlliuL2wE",
     "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-19T21:15:00.000Z"
+  },
+  {
+    "videoId": "87YalBjTGcQ",
+    "videoUrl": "https://www.youtube.com/watch?v=87YalBjTGcQ",
+    "streamer": "白上フブキ 🌽",
     "date": "2025-09-19T21:15:00.000Z"
   },
   {
@@ -204,15 +204,15 @@
     "date": "2025-09-20T12:00:00.000Z"
   },
   {
-    "videoId": "2v6dta6WyL0",
-    "videoUrl": "https://www.youtube.com/watch?v=2v6dta6WyL0",
-    "streamer": "常闇トワ 👾",
-    "date": "2025-09-20T12:45:00.000Z"
-  },
-  {
     "videoId": "5SnCcnPijjs",
     "videoUrl": "https://www.youtube.com/watch?v=5SnCcnPijjs",
     "streamer": "アキロゼ 🍎",
+    "date": "2025-09-20T12:45:00.000Z"
+  },
+  {
+    "videoId": "2v6dta6WyL0",
+    "videoUrl": "https://www.youtube.com/watch?v=2v6dta6WyL0",
+    "streamer": "常闇トワ 👾",
     "date": "2025-09-20T12:45:00.000Z"
   },
   {
@@ -268,6 +268,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=hoCCgeh-xIA",
     "streamer": "博衣こより",
     "date": "2025-09-21T20:00:00.000Z"
+  },
+  {
+    "videoId": "WBFlk4EqMz0",
+    "videoUrl": "https://www.youtube.com/watch?v=WBFlk4EqMz0",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-21T22:00:00.000Z"
+  },
+  {
+    "videoId": "ZouFh8rpq3s",
+    "videoUrl": "https://www.youtube.com/watch?v=ZouFh8rpq3s",
+    "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-21T23:05:00.000Z"
   },
   {
     "videoId": "NdDLxN6JG_s",
@@ -354,15 +366,15 @@
     "date": "2025-09-20T13:00:00.000Z"
   },
   {
-    "videoId": "D_OracY7roM",
-    "videoUrl": "https://www.youtube.com/watch?v=D_OracY7roM",
-    "streamer": "轟はじめ",
-    "date": "2025-09-20T19:00:00.000Z"
-  },
-  {
     "videoId": "xbPWMmKFvpk",
     "videoUrl": "https://www.youtube.com/watch?v=xbPWMmKFvpk",
     "streamer": "ReGLOSS",
+    "date": "2025-09-20T19:00:00.000Z"
+  },
+  {
+    "videoId": "D_OracY7roM",
+    "videoUrl": "https://www.youtube.com/watch?v=D_OracY7roM",
+    "streamer": "轟はじめ",
     "date": "2025-09-20T19:00:00.000Z"
   },
   {

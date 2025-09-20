@@ -90,16 +90,6 @@
     "duration": 3307
   },
   {
-    "videoId": "cZxlliuL2wE",
-    "videoUrl": "https://www.youtube.com/watch?v=cZxlliuL2wE",
-    "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-19T21:15:00.000Z",
-    "title": "【 PEAK】ふぶきいいいいい！！ビンボンをもって生き残りたい！byポルカ＆ろぼこ【ホロライブ/ ロボ子さん】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/cZxlliuL2wE/mqdefault.jpg",
-    "endTime": "2025-09-19T14:21:46Z",
-    "duration": 7593
-  },
-  {
     "videoId": "87YalBjTGcQ",
     "videoUrl": "https://www.youtube.com/watch?v=87YalBjTGcQ",
     "streamer": "白上フブキ 🌽",
@@ -108,6 +98,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/87YalBjTGcQ/mqdefault.jpg",
     "endTime": "2025-09-19T14:22:11Z",
     "duration": 7582
+  },
+  {
+    "videoId": "cZxlliuL2wE",
+    "videoUrl": "https://www.youtube.com/watch?v=cZxlliuL2wE",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-19T21:15:00.000Z",
+    "title": "【 PEAK】ふぶきいいいいい！！ビンボンをもって生き残りたい！byポルカ＆ろぼこ【ホロライブ/ ロボ子さん】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/cZxlliuL2wE/mqdefault.jpg",
+    "endTime": "2025-09-19T14:21:46Z",
+    "duration": 7593
   },
   {
     "videoId": "ovsvilY4ZbU",
@@ -185,7 +185,7 @@
     "streamer": "博衣こより",
     "date": "2025-09-20T18:01:00.000Z",
     "title": "【うたわれるもの歌枠】うたわれるものをうたうもの【博衣こより/ホロライブ】 #Shorts",
-    "thumbnailUrl": "https://i.ytimg.com/vi/znT9mgEwBI8/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/znT9mgEwBI8/mqdefault.jpg",
     "endTime": "2025-09-20T10:49:40Z",
     "duration": 6515
   },
@@ -208,6 +208,26 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/t4x0E9eRBAw/mqdefault.jpg",
     "endTime": "2025-09-20T10:06:33Z",
     "duration": 238
+  },
+  {
+    "videoId": "SMgktyBOeWw",
+    "videoUrl": "https://www.youtube.com/watch?v=SMgktyBOeWw",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-20T21:00:00.000Z",
+    "title": "【プレゼン】一週間企画6日目！ぼたんちゃんとおすすめゲームプレゼン会！ぺこ！【ホロライブ/兎田ぺこら/獅白ぼたん】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/SMgktyBOeWw/mqdefault.jpg",
+    "endTime": "2025-09-20T13:22:51Z",
+    "duration": 4897
+  },
+  {
+    "videoId": "IM9eo1WBQHE",
+    "videoUrl": "https://www.youtube.com/watch?v=IM9eo1WBQHE",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-09-20T21:00:00.000Z",
+    "title": "【QQQbeats!!!】　視聴者参加で対決！？協力！？一緒に遊んじゃいましょぉおおお！！！　【ホロライブ/白上フブキ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/IM9eo1WBQHE/mqdefault.jpg",
+    "endTime": "2025-09-20T13:05:11Z",
+    "duration": 3860
   },
   {
     "videoId": "gk0ZR8u87Rw",
@@ -308,6 +328,26 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/xbPWMmKFvpk/mqdefault.jpg",
     "endTime": "2025-09-20T10:04:42Z",
     "duration": 189
+  },
+  {
+    "videoId": "bnjs6ai_atc",
+    "videoUrl": "https://www.youtube.com/watch?v=bnjs6ai_atc",
+    "streamer": "FLOW GLOW",
+    "date": "2025-09-20T19:58:00.000Z",
+    "title": "【笑虎の持ち込み企画】FGみんなに通知表をつけたらギリアウトだった件【#ポルカとコラボ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/bnjs6ai_atc/mqdefault.jpg",
+    "endTime": "2025-09-20T12:04:03Z",
+    "duration": 3959
+  },
+  {
+    "videoId": "KD_YYGZA0A0",
+    "videoUrl": "https://www.youtube.com/watch?v=KD_YYGZA0A0",
+    "streamer": "FLOW GLOW",
+    "date": "2025-09-20T21:15:00.000Z",
+    "title": "FLOW GLOW / good enough【Official Music Video】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/KD_YYGZA0A0/mqdefault.jpg",
+    "endTime": "2025-09-20T12:20:29Z",
+    "duration": 181
   },
   {
     "videoId": "aMXomPnP_BI",

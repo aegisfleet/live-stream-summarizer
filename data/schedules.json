@@ -171,7 +171,13 @@
     "videoId": "z5N_sBbcEgA",
     "videoUrl": "https://www.youtube.com/watch?v=z5N_sBbcEgA",
     "streamer": "不知火フレア 🔥",
-    "date": "2025-09-21T02:00:00.000Z"
+    "date": "2025-09-21T02:01:00.000Z"
+  },
+  {
+    "videoId": "MdsdBvlIUMM",
+    "videoUrl": "https://www.youtube.com/watch?v=MdsdBvlIUMM",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-21T08:00:00.000Z"
   },
   {
     "videoId": "pmc6NVpoYfI",
@@ -198,6 +204,12 @@
     "date": "2025-09-21T13:00:00.000Z"
   },
   {
+    "videoId": "RrULzwCY9Dk",
+    "videoUrl": "https://www.youtube.com/watch?v=RrULzwCY9Dk",
+    "streamer": "大空スバル 🚑",
+    "date": "2025-09-21T13:00:00.000Z"
+  },
+  {
     "videoId": "kGkMI4XCCWY",
     "videoUrl": "https://www.youtube.com/watch?v=kGkMI4XCCWY",
     "streamer": "角巻わため 🐏",
@@ -220,6 +232,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=WBFlk4EqMz0",
     "streamer": "白銀ノエル ⚔",
     "date": "2025-09-21T22:00:00.000Z"
+  },
+  {
+    "videoId": "AkcGtZ7Gd9s",
+    "videoUrl": "https://www.youtube.com/watch?v=AkcGtZ7Gd9s",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-21T23:00:00.000Z"
   },
   {
     "videoId": "ZouFh8rpq3s",
@@ -336,6 +354,12 @@
     "date": "2025-09-21T14:30:00.000Z"
   },
   {
+    "videoId": "RwEkFi6UdiU",
+    "videoUrl": "https://www.youtube.com/watch?v=RwEkFi6UdiU",
+    "streamer": "水宮枢",
+    "date": "2025-09-21T16:00:00.000Z"
+  },
+  {
     "videoId": "r8EwKj5SovQ",
     "videoUrl": "https://www.youtube.com/watch?v=r8EwKj5SovQ",
     "streamer": "音乃瀬奏",
@@ -414,15 +438,21 @@
     "date": "2025-09-21T12:00:00.000Z"
   },
   {
-    "videoId": "jAWd_CsWt58",
-    "videoUrl": "https://www.youtube.com/watch?v=jAWd_CsWt58",
-    "streamer": "Baelz",
+    "videoId": "4uwiAljDW50",
+    "videoUrl": "https://www.youtube.com/watch?v=4uwiAljDW50",
+    "streamer": "IRyS",
     "date": "2025-09-21T13:00:00.000Z"
   },
   {
     "videoId": "TCRg30fGsXU",
     "videoUrl": "https://www.youtube.com/watch?v=TCRg30fGsXU",
     "streamer": "holo EN",
+    "date": "2025-09-21T13:00:00.000Z"
+  },
+  {
+    "videoId": "jAWd_CsWt58",
+    "videoUrl": "https://www.youtube.com/watch?v=jAWd_CsWt58",
+    "streamer": "Baelz",
     "date": "2025-09-21T13:00:00.000Z"
   },
   {
@@ -472,5 +502,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=tFIC1HMrTiw",
     "streamer": "Risu 🐿",
     "date": "2025-09-20T22:47:00.000Z"
+  },
+  {
+    "videoId": "5-um81cgAhw",
+    "videoUrl": "https://www.youtube.com/watch?v=5-um81cgAhw",
+    "streamer": "Anya",
+    "date": "2025-09-21T15:00:00.000Z"
   }
 ]

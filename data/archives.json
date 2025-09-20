@@ -160,16 +160,6 @@
     "duration": 5823
   },
   {
-    "videoId": "9SndC3jdSq4",
-    "videoUrl": "https://www.youtube.com/watch?v=9SndC3jdSq4",
-    "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-20T07:00:00.000Z",
-    "title": "#01【 牧場物語 Let's！風のグランドバザール 】　初めての牧場物語 🐄✨ ※ネタバレあり【ホロライブ/ロボ子さん】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/9SndC3jdSq4/mqdefault.jpg",
-    "endTime": "2025-09-19T22:03:03Z",
-    "duration": 151
-  },
-  {
     "videoId": "5iM1kcG5s1c",
     "videoUrl": "https://www.youtube.com/watch?v=5iM1kcG5s1c",
     "streamer": "大空スバル 🚑",
@@ -178,6 +168,16 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/5iM1kcG5s1c/mqdefault.jpg",
     "endTime": "2025-09-20T02:29:47Z",
     "duration": 4418
+  },
+  {
+    "videoId": "5SnCcnPijjs",
+    "videoUrl": "https://www.youtube.com/watch?v=5SnCcnPijjs",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-09-20T12:47:00.000Z",
+    "title": "【 STREET FIGHTER 6】常闇祭本番！どこまでいけるのか！？w/ だいだら,RiskivzyAt'z【アキロゼ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5SnCcnPijjs/mqdefault.jpg",
+    "endTime": "2025-09-20T04:34:14Z",
+    "duration": 2827
   },
   {
     "videoId": "gk0ZR8u87Rw",
@@ -298,5 +298,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/cg6AAyAbUmM/mqdefault.jpg",
     "endTime": "2025-09-19T16:13:00Z",
     "duration": 7864
+  },
+  {
+    "videoId": "0sNr5rrBnzk",
+    "videoUrl": "https://www.youtube.com/watch?v=0sNr5rrBnzk",
+    "streamer": "Ollie",
+    "date": "2025-09-20T11:01:00.000Z",
+    "title": "【FREETALK】 MCHAN REMINDED ME THAT THERE'S SOMETHING THAT I NEEDED TO TELL YOU 【Kureiji Ollie】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0sNr5rrBnzk/mqdefault.jpg",
+    "endTime": "2025-09-20T04:08:57Z",
+    "duration": 7679
   }
 ]

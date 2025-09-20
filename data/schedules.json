@@ -186,12 +186,6 @@
     "date": "2025-09-20T06:00:00.000Z"
   },
   {
-    "videoId": "9SndC3jdSq4",
-    "videoUrl": "https://www.youtube.com/watch?v=9SndC3jdSq4",
-    "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-20T07:00:00.000Z"
-  },
-  {
     "videoId": "Jlyh9i34BiE",
     "videoUrl": "https://www.youtube.com/watch?v=Jlyh9i34BiE",
     "streamer": "ロボ子さん 🤖",
@@ -219,7 +213,7 @@
     "videoId": "WDuR08Ctl_c",
     "videoUrl": "https://www.youtube.com/watch?v=WDuR08Ctl_c",
     "streamer": "鷹嶺ルイ",
-    "date": "2025-09-20T12:00:00.000Z"
+    "date": "2025-09-20T12:02:00.000Z"
   },
   {
     "videoId": "2v6dta6WyL0",
@@ -231,7 +225,13 @@
     "videoId": "5SnCcnPijjs",
     "videoUrl": "https://www.youtube.com/watch?v=5SnCcnPijjs",
     "streamer": "アキロゼ 🍎",
-    "date": "2025-09-20T12:45:00.000Z"
+    "date": "2025-09-20T12:47:00.000Z"
+  },
+  {
+    "videoId": "-Pp-tzblQRE",
+    "videoUrl": "https://www.youtube.com/watch?v=-Pp-tzblQRE",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-09-20T12:59:00.000Z"
   },
   {
     "videoId": "uaRDqK-dDcI",
@@ -243,13 +243,13 @@
     "videoId": "KMaciu9cZIw",
     "videoUrl": "https://www.youtube.com/watch?v=KMaciu9cZIw",
     "streamer": "大空スバル 🚑",
-    "date": "2025-09-20T13:00:00.000Z"
+    "date": "2025-09-20T13:02:00.000Z"
   },
   {
-    "videoId": "-Pp-tzblQRE",
-    "videoUrl": "https://www.youtube.com/watch?v=-Pp-tzblQRE",
-    "streamer": "白上フブキ 🌽",
-    "date": "2025-09-20T13:00:00.000Z"
+    "videoId": "sf8TkVS63oc",
+    "videoUrl": "https://www.youtube.com/watch?v=sf8TkVS63oc",
+    "streamer": "アキロゼ 🍎",
+    "date": "2025-09-20T13:35:00.000Z"
   },
   {
     "videoId": "gF0Reet7Ybw",
@@ -411,7 +411,7 @@
     "videoId": "feSJSx8I1HY",
     "videoUrl": "https://www.youtube.com/watch?v=feSJSx8I1HY",
     "streamer": "一条莉々華",
-    "date": "2025-09-20T13:00:00.000Z"
+    "date": "2025-09-20T13:21:00.000Z"
   },
   {
     "videoId": "ZceDvNF7vaM",
@@ -442,6 +442,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=KD_YYGZA0A0",
     "streamer": "FLOW GLOW",
     "date": "2025-09-20T21:15:00.000Z"
+  },
+  {
+    "videoId": "YabRgudLI1M",
+    "videoUrl": "https://www.youtube.com/watch?v=YabRgudLI1M",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-20T22:30:00.000Z"
   },
   {
     "videoId": "VeQMtXJBVbw",
@@ -531,7 +537,19 @@
     "videoId": "3NvLQFEEgN4",
     "videoUrl": "https://www.youtube.com/watch?v=3NvLQFEEgN4",
     "streamer": "Calli",
-    "date": "2025-09-20T12:00:00.000Z"
+    "date": "2025-09-20T11:59:00.000Z"
+  },
+  {
+    "videoId": "kfKIoC_Qhgs",
+    "videoUrl": "https://www.youtube.com/watch?v=kfKIoC_Qhgs",
+    "streamer": "holo EN",
+    "date": "2025-09-20T12:01:00.000Z"
+  },
+  {
+    "videoId": "0c94IyQiJa0",
+    "videoUrl": "https://www.youtube.com/watch?v=0c94IyQiJa0",
+    "streamer": "IRyS",
+    "date": "2025-09-20T12:30:00.000Z"
   },
   {
     "videoId": "s_pC7QbwD8o",

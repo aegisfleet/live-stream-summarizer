@@ -180,6 +180,36 @@
     "duration": 2827
   },
   {
+    "videoId": "znT9mgEwBI8",
+    "videoUrl": "https://www.youtube.com/watch?v=znT9mgEwBI8",
+    "streamer": "博衣こより",
+    "date": "2025-09-20T18:01:00.000Z",
+    "title": "【うたわれるもの歌枠】うたわれるものをうたうもの【博衣こより/ホロライブ】 #Shorts",
+    "thumbnailUrl": "https://i.ytimg.com/vi/znT9mgEwBI8/mqdefault_live.jpg",
+    "endTime": "2025-09-20T10:49:40Z",
+    "duration": 6515
+  },
+  {
+    "videoId": "JCMLKgHCRWc",
+    "videoUrl": "https://www.youtube.com/watch?v=JCMLKgHCRWc",
+    "streamer": "桃鈴ねね",
+    "date": "2025-09-20T18:03:00.000Z",
+    "title": "【 歌枠 】元気いっぱいソングでみんな元気になれ～～🌟【 桃鈴ねね / hololive 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/JCMLKgHCRWc/mqdefault.jpg",
+    "endTime": "2025-09-20T10:49:51Z",
+    "duration": 6387
+  },
+  {
+    "videoId": "t4x0E9eRBAw",
+    "videoUrl": "https://www.youtube.com/watch?v=t4x0E9eRBAw",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-20T19:00:00.000Z",
+    "title": "解放区  / 角巻わため(Cover)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/t4x0E9eRBAw/mqdefault.jpg",
+    "endTime": "2025-09-20T10:06:33Z",
+    "duration": 238
+  },
+  {
     "videoId": "gk0ZR8u87Rw",
     "videoUrl": "https://www.youtube.com/watch?v=gk0ZR8u87Rw",
     "streamer": "轟はじめ",
@@ -270,6 +300,16 @@
     "duration": 6568
   },
   {
+    "videoId": "xbPWMmKFvpk",
+    "videoUrl": "https://www.youtube.com/watch?v=xbPWMmKFvpk",
+    "streamer": "ReGLOSS",
+    "date": "2025-09-20T19:00:00.000Z",
+    "title": "ReGLOSS 'アワータイムイエロー'  Rehearsal Video【#ReGLOSS2周年】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/xbPWMmKFvpk/mqdefault.jpg",
+    "endTime": "2025-09-20T10:04:42Z",
+    "duration": 189
+  },
+  {
     "videoId": "aMXomPnP_BI",
     "videoUrl": "https://www.youtube.com/watch?v=aMXomPnP_BI",
     "streamer": "Iofi 🎨",
@@ -318,5 +358,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/0sNr5rrBnzk/mqdefault.jpg",
     "endTime": "2025-09-20T04:08:57Z",
     "duration": 7679
+  },
+  {
+    "videoId": "3gqLEwxxlZs",
+    "videoUrl": "https://www.youtube.com/watch?v=3gqLEwxxlZs",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-20T17:00:00.000Z",
+    "title": "【 Troublemaker 2: Beyond Dream 】Kita Jadi Intel?【 iofi / hololiveID 】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3gqLEwxxlZs/mqdefault.jpg",
+    "endTime": "2025-09-20T10:10:26Z",
+    "duration": 7783
   }
 ]

@@ -174,6 +174,18 @@
     "date": "2025-09-21T02:01:00.000Z"
   },
   {
+    "videoId": "SYEUUkgQ-os",
+    "videoUrl": "https://www.youtube.com/watch?v=SYEUUkgQ-os",
+    "streamer": "尾丸ポルカ",
+    "date": "2025-09-21T06:00:00.000Z"
+  },
+  {
+    "videoId": "muIJ_640DG0",
+    "videoUrl": "https://www.youtube.com/watch?v=muIJ_640DG0",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-21T06:01:00.000Z"
+  },
+  {
     "videoId": "MdsdBvlIUMM",
     "videoUrl": "https://www.youtube.com/watch?v=MdsdBvlIUMM",
     "streamer": "ロボ子さん 🤖",
@@ -186,15 +198,21 @@
     "date": "2025-09-21T10:00:00.000Z"
   },
   {
-    "videoId": "I73QCHRLb28",
-    "videoUrl": "https://www.youtube.com/watch?v=I73QCHRLb28",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-09-21T12:00:00.000Z"
-  },
-  {
     "videoId": "MwM-uYjwH10",
     "videoUrl": "https://www.youtube.com/watch?v=MwM-uYjwH10",
     "streamer": "雪花ラミィ",
+    "date": "2025-09-21T12:00:00.000Z"
+  },
+  {
+    "videoId": "34tAVXFbDj0",
+    "videoUrl": "https://www.youtube.com/watch?v=34tAVXFbDj0",
+    "streamer": "桃鈴ねね",
+    "date": "2025-09-21T12:00:00.000Z"
+  },
+  {
+    "videoId": "I73QCHRLb28",
+    "videoUrl": "https://www.youtube.com/watch?v=I73QCHRLb28",
+    "streamer": "兎田ぺこら 👯",
     "date": "2025-09-21T12:00:00.000Z"
   },
   {
@@ -454,6 +472,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=jAWd_CsWt58",
     "streamer": "Baelz",
     "date": "2025-09-21T13:00:00.000Z"
+  },
+  {
+    "videoId": "gCGCoTeofkE",
+    "videoUrl": "https://www.youtube.com/watch?v=gCGCoTeofkE",
+    "streamer": "Gigi",
+    "date": "2025-09-22T08:00:00.000Z"
   },
   {
     "videoId": "adS4wn24ank",

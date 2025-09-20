@@ -126,15 +126,15 @@
     "date": "2025-09-19T21:04:00.000Z"
   },
   {
-    "videoId": "87YalBjTGcQ",
-    "videoUrl": "https://www.youtube.com/watch?v=87YalBjTGcQ",
-    "streamer": "白上フブキ 🌽",
-    "date": "2025-09-19T21:15:00.000Z"
-  },
-  {
     "videoId": "cZxlliuL2wE",
     "videoUrl": "https://www.youtube.com/watch?v=cZxlliuL2wE",
     "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-19T21:15:00.000Z"
+  },
+  {
+    "videoId": "87YalBjTGcQ",
+    "videoUrl": "https://www.youtube.com/watch?v=87YalBjTGcQ",
+    "streamer": "白上フブキ 🌽",
     "date": "2025-09-19T21:15:00.000Z"
   },
   {
@@ -252,8 +252,20 @@
     "date": "2025-09-20T13:35:00.000Z"
   },
   {
-    "videoId": "gF0Reet7Ybw",
-    "videoUrl": "https://www.youtube.com/watch?v=gF0Reet7Ybw",
+    "videoId": "prY8iO7poDI",
+    "videoUrl": "https://www.youtube.com/watch?v=prY8iO7poDI",
+    "streamer": "ラプラス",
+    "date": "2025-09-20T17:01:00.000Z"
+  },
+  {
+    "videoId": "JCMLKgHCRWc",
+    "videoUrl": "https://www.youtube.com/watch?v=JCMLKgHCRWc",
+    "streamer": "桃鈴ねね",
+    "date": "2025-09-20T18:00:00.000Z"
+  },
+  {
+    "videoId": "znT9mgEwBI8",
+    "videoUrl": "https://www.youtube.com/watch?v=znT9mgEwBI8",
     "streamer": "博衣こより",
     "date": "2025-09-20T18:00:00.000Z"
   },
@@ -276,15 +288,15 @@
     "date": "2025-09-20T20:00:00.000Z"
   },
   {
-    "videoId": "IM9eo1WBQHE",
-    "videoUrl": "https://www.youtube.com/watch?v=IM9eo1WBQHE",
-    "streamer": "白上フブキ 🌽",
-    "date": "2025-09-20T21:00:00.000Z"
-  },
-  {
     "videoId": "SMgktyBOeWw",
     "videoUrl": "https://www.youtube.com/watch?v=SMgktyBOeWw",
     "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-20T21:00:00.000Z"
+  },
+  {
+    "videoId": "IM9eo1WBQHE",
+    "videoUrl": "https://www.youtube.com/watch?v=IM9eo1WBQHE",
+    "streamer": "白上フブキ 🌽",
     "date": "2025-09-20T21:00:00.000Z"
   },
   {
@@ -417,7 +429,7 @@
     "videoId": "ZceDvNF7vaM",
     "videoUrl": "https://www.youtube.com/watch?v=ZceDvNF7vaM",
     "streamer": "音乃瀬奏",
-    "date": "2025-09-20T17:00:00.000Z"
+    "date": "2025-09-20T17:01:00.000Z"
   },
   {
     "videoId": "D_OracY7roM",
@@ -552,6 +564,12 @@
     "date": "2025-09-20T12:30:00.000Z"
   },
   {
+    "videoId": "AFxbi6oC93g",
+    "videoUrl": "https://www.youtube.com/watch?v=AFxbi6oC93g",
+    "streamer": "Calli",
+    "date": "2025-09-20T21:00:00.000Z"
+  },
+  {
     "videoId": "s_pC7QbwD8o",
     "videoUrl": "https://www.youtube.com/watch?v=s_pC7QbwD8o",
     "streamer": "Kiara",
@@ -634,6 +652,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=0sNr5rrBnzk",
     "streamer": "Ollie",
     "date": "2025-09-20T11:01:00.000Z"
+  },
+  {
+    "videoId": "8zPmbYCXh8g",
+    "videoUrl": "https://www.youtube.com/watch?v=8zPmbYCXh8g",
+    "streamer": "Anya",
+    "date": "2025-09-20T15:01:00.000Z"
+  },
+  {
+    "videoId": "3gqLEwxxlZs",
+    "videoUrl": "https://www.youtube.com/watch?v=3gqLEwxxlZs",
+    "streamer": "Iofi 🎨",
+    "date": "2025-09-20T17:00:00.000Z"
   },
   {
     "videoId": "i0l8A_u5mSI",

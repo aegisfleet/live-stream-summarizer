@@ -243,7 +243,13 @@
     "videoId": "JMMBslkfKg8",
     "videoUrl": "https://www.youtube.com/watch?v=JMMBslkfKg8",
     "streamer": "鷹嶺ルイ",
-    "date": "2025-09-21T16:00:00.000Z"
+    "date": "2025-09-21T16:03:00.000Z"
+  },
+  {
+    "videoId": "3cFQOuv2aJE",
+    "videoUrl": "https://www.youtube.com/watch?v=3cFQOuv2aJE",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-09-21T18:00:00.000Z"
   },
   {
     "videoId": "kGkMI4XCCWY",
@@ -273,6 +279,12 @@
     "videoId": "WBFlk4EqMz0",
     "videoUrl": "https://www.youtube.com/watch?v=WBFlk4EqMz0",
     "streamer": "白銀ノエル ⚔",
+    "date": "2025-09-21T22:00:00.000Z"
+  },
+  {
+    "videoId": "_Cz0lBRoLBc",
+    "videoUrl": "https://www.youtube.com/watch?v=_Cz0lBRoLBc",
+    "streamer": "角巻わため 🐏",
     "date": "2025-09-21T22:00:00.000Z"
   },
   {
@@ -408,10 +420,22 @@
     "date": "2025-09-21T14:30:00.000Z"
   },
   {
+    "videoId": "6dOmcbX9AMQ",
+    "videoUrl": "https://www.youtube.com/watch?v=6dOmcbX9AMQ",
+    "streamer": "水宮枢",
+    "date": "2025-09-21T15:00:00.000Z"
+  },
+  {
     "videoId": "RwEkFi6UdiU",
     "videoUrl": "https://www.youtube.com/watch?v=RwEkFi6UdiU",
     "streamer": "水宮枢",
     "date": "2025-09-21T16:00:00.000Z"
+  },
+  {
+    "videoId": "u_j-kkRp_sg",
+    "videoUrl": "https://www.youtube.com/watch?v=u_j-kkRp_sg",
+    "streamer": "響咲リオナ",
+    "date": "2025-09-21T17:00:00.000Z"
   },
   {
     "videoId": "r8EwKj5SovQ",
@@ -591,6 +615,12 @@
     "videoId": "5-um81cgAhw",
     "videoUrl": "https://www.youtube.com/watch?v=5-um81cgAhw",
     "streamer": "Anya",
-    "date": "2025-09-21T15:00:00.000Z"
+    "date": "2025-09-21T15:01:00.000Z"
+  },
+  {
+    "videoId": "kMcnWpID65A",
+    "videoUrl": "https://www.youtube.com/watch?v=kMcnWpID65A",
+    "streamer": "Ollie",
+    "date": "2025-09-21T22:00:00.000Z"
   }
 ]

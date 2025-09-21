@@ -198,6 +198,12 @@
     "date": "2025-09-22T18:00:00.000Z"
   },
   {
+    "videoId": "1QdQeQ31wO0",
+    "videoUrl": "https://www.youtube.com/watch?v=1QdQeQ31wO0",
+    "streamer": "ラプラス",
+    "date": "2025-09-22T19:00:00.000Z"
+  },
+  {
     "videoId": "Mn1ZXjx1q90",
     "videoUrl": "https://www.youtube.com/watch?v=Mn1ZXjx1q90",
     "streamer": "姫森ルーナ 🍬",
@@ -207,12 +213,6 @@
     "videoId": "axFuZn-Z8j0",
     "videoUrl": "https://www.youtube.com/watch?v=axFuZn-Z8j0",
     "streamer": "天音かなた 💫",
-    "date": "2025-09-22T19:00:00.000Z"
-  },
-  {
-    "videoId": "1QdQeQ31wO0",
-    "videoUrl": "https://www.youtube.com/watch?v=1QdQeQ31wO0",
-    "streamer": "ラプラス",
     "date": "2025-09-22T19:00:00.000Z"
   },
   {
@@ -324,10 +324,22 @@
     "date": "2025-09-22T19:00:00.000Z"
   },
   {
+    "videoId": "4sB_E_9kj1M",
+    "videoUrl": "https://www.youtube.com/watch?v=4sB_E_9kj1M",
+    "streamer": "水宮枢",
+    "date": "2025-09-22T22:00:00.000Z"
+  },
+  {
     "videoId": "atsdABxo8DQ",
     "videoUrl": "https://www.youtube.com/watch?v=atsdABxo8DQ",
     "streamer": "虎金妃笑虎",
     "date": "2025-09-22T22:00:00.000Z"
+  },
+  {
+    "videoId": "5yw1DPeP2H4",
+    "videoUrl": "https://www.youtube.com/watch?v=5yw1DPeP2H4",
+    "streamer": "水宮枢",
+    "date": "2025-09-23T11:00:00.000Z"
   },
   {
     "videoId": "s_pC7QbwD8o",
@@ -399,7 +411,7 @@
     "videoId": "sTZzvG_MAi4",
     "videoUrl": "https://www.youtube.com/watch?v=sTZzvG_MAi4",
     "streamer": "Elizabeth",
-    "date": "2025-09-22T04:00:00.000Z"
+    "date": "2025-09-22T04:01:00.000Z"
   },
   {
     "videoId": "gCGCoTeofkE",
@@ -408,15 +420,15 @@
     "date": "2025-09-22T08:00:00.000Z"
   },
   {
-    "videoId": "adS4wn24ank",
-    "videoUrl": "https://www.youtube.com/watch?v=adS4wn24ank",
-    "streamer": "Calli",
-    "date": "2025-09-22T10:00:00.000Z"
-  },
-  {
     "videoId": "y7d8zL_FpjI",
     "videoUrl": "https://www.youtube.com/watch?v=y7d8zL_FpjI",
     "streamer": "Baelz",
+    "date": "2025-09-22T10:00:00.000Z"
+  },
+  {
+    "videoId": "adS4wn24ank",
+    "videoUrl": "https://www.youtube.com/watch?v=adS4wn24ank",
+    "streamer": "Calli",
     "date": "2025-09-22T10:00:00.000Z"
   },
   {

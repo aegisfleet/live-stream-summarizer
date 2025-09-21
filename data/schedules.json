@@ -252,27 +252,57 @@
     "date": "2025-09-21T18:00:00.000Z"
   },
   {
+    "videoId": "6kC69CJzlHQ",
+    "videoUrl": "https://www.youtube.com/watch?v=6kC69CJzlHQ",
+    "streamer": "博衣こより",
+    "date": "2025-09-21T18:00:00.000Z"
+  },
+  {
+    "videoId": "FFJ158GaArY",
+    "videoUrl": "https://www.youtube.com/watch?v=FFJ158GaArY",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-21T18:00:00.000Z"
+  },
+  {
+    "videoId": "y8YxAhB6-6M",
+    "videoUrl": "https://www.youtube.com/watch?v=y8YxAhB6-6M",
+    "streamer": "ラプラス",
+    "date": "2025-09-21T18:01:00.000Z"
+  },
+  {
+    "videoId": "vQJm1fSVobw",
+    "videoUrl": "https://www.youtube.com/watch?v=vQJm1fSVobw",
+    "streamer": "ホロライブ",
+    "date": "2025-09-21T18:01:00.000Z"
+  },
+  {
     "videoId": "kGkMI4XCCWY",
     "videoUrl": "https://www.youtube.com/watch?v=kGkMI4XCCWY",
     "streamer": "角巻わため 🐏",
-    "date": "2025-09-21T19:00:00.000Z"
+    "date": "2025-09-21T19:01:00.000Z"
   },
   {
     "videoId": "hoCCgeh-xIA",
     "videoUrl": "https://www.youtube.com/watch?v=hoCCgeh-xIA",
     "streamer": "博衣こより",
-    "date": "2025-09-21T20:00:00.000Z"
-  },
-  {
-    "videoId": "LxxyT9QdI80",
-    "videoUrl": "https://www.youtube.com/watch?v=LxxyT9QdI80",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-09-21T21:00:00.000Z"
+    "date": "2025-09-21T19:57:00.000Z"
   },
   {
     "videoId": "yAi4TDkpi20",
     "videoUrl": "https://www.youtube.com/watch?v=yAi4TDkpi20",
     "streamer": "白上フブキ 🌽",
+    "date": "2025-09-21T21:00:00.000Z"
+  },
+  {
+    "videoId": "Uf5IPItH1vQ",
+    "videoUrl": "https://www.youtube.com/watch?v=Uf5IPItH1vQ",
+    "streamer": "さくらみこ 🌸",
+    "date": "2025-09-21T21:00:00.000Z"
+  },
+  {
+    "videoId": "LxxyT9QdI80",
+    "videoUrl": "https://www.youtube.com/watch?v=LxxyT9QdI80",
+    "streamer": "兎田ぺこら 👯",
     "date": "2025-09-21T21:00:00.000Z"
   },
   {
@@ -288,16 +318,16 @@
     "date": "2025-09-21T22:00:00.000Z"
   },
   {
-    "videoId": "AkcGtZ7Gd9s",
-    "videoUrl": "https://www.youtube.com/watch?v=AkcGtZ7Gd9s",
-    "streamer": "ロボ子さん 🤖",
-    "date": "2025-09-21T23:00:00.000Z"
-  },
-  {
     "videoId": "ZouFh8rpq3s",
     "videoUrl": "https://www.youtube.com/watch?v=ZouFh8rpq3s",
     "streamer": "白銀ノエル ⚔",
     "date": "2025-09-21T23:05:00.000Z"
+  },
+  {
+    "videoId": "AkcGtZ7Gd9s",
+    "videoUrl": "https://www.youtube.com/watch?v=AkcGtZ7Gd9s",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-22T00:00:00.000Z"
   },
   {
     "videoId": "1QdQeQ31wO0",
@@ -396,12 +426,6 @@
     "date": "2025-09-20T23:22:00.000Z"
   },
   {
-    "videoId": "YabRgudLI1M",
-    "videoUrl": "https://www.youtube.com/watch?v=YabRgudLI1M",
-    "streamer": "綺々羅々ヴィヴィ",
-    "date": "2025-09-20T23:30:00.000Z"
-  },
-  {
     "videoId": "VeQMtXJBVbw",
     "videoUrl": "https://www.youtube.com/watch?v=VeQMtXJBVbw",
     "streamer": "虎金妃笑虎",
@@ -442,6 +466,24 @@
     "videoUrl": "https://www.youtube.com/watch?v=r8EwKj5SovQ",
     "streamer": "音乃瀬奏",
     "date": "2025-09-21T17:00:00.000Z"
+  },
+  {
+    "videoId": "rTydh9RCJwA",
+    "videoUrl": "https://www.youtube.com/watch?v=rTydh9RCJwA",
+    "streamer": "ReGLOSS",
+    "date": "2025-09-21T18:01:00.000Z"
+  },
+  {
+    "videoId": "1b0pmCwxG0M",
+    "videoUrl": "https://www.youtube.com/watch?v=1b0pmCwxG0M",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-21T18:26:00.000Z"
+  },
+  {
+    "videoId": "YabRgudLI1M",
+    "videoUrl": "https://www.youtube.com/watch?v=YabRgudLI1M",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-21T21:00:00.000Z"
   },
   {
     "videoId": "atsdABxo8DQ",
@@ -616,6 +658,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=5-um81cgAhw",
     "streamer": "Anya",
     "date": "2025-09-21T15:01:00.000Z"
+  },
+  {
+    "videoId": "94IdLuJhLbA",
+    "videoUrl": "https://www.youtube.com/watch?v=94IdLuJhLbA",
+    "streamer": "Risu 🐿",
+    "date": "2025-09-21T18:30:00.000Z"
+  },
+  {
+    "videoId": "A6snW819EEw",
+    "videoUrl": "https://www.youtube.com/watch?v=A6snW819EEw",
+    "streamer": "Reine",
+    "date": "2025-09-21T19:00:00.000Z"
   },
   {
     "videoId": "kMcnWpID65A",

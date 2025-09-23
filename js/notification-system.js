@@ -840,9 +840,7 @@ class NotificationSystem {
      * Push通知機能の初期化
      */
     initPushNotifications() {
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-        if (!('serviceWorker' in navigator) || !('PushManager' in window) || isSafari) {
+        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
             console.warn('Push通知は、このブラウザではサポートされていません。');
             const button = document.getElementById('top-push-notification-toggle');
             if(button) button.style.display = 'none';

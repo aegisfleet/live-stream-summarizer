@@ -204,6 +204,12 @@
     "date": "2025-09-24T21:00:00.000Z"
   },
   {
+    "videoId": "tKL_91rb_yA",
+    "videoUrl": "https://www.youtube.com/watch?v=tKL_91rb_yA",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-25T00:00:00.000Z"
+  },
+  {
     "videoId": "s0NOju_nPuI",
     "videoUrl": "https://www.youtube.com/watch?v=s0NOju_nPuI",
     "streamer": "博衣こより",
@@ -274,6 +280,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=jjB7pZfgRHs",
     "streamer": "虎金妃笑虎",
     "date": "2025-09-24T17:00:00.000Z"
+  },
+  {
+    "videoId": "golMogcJ1tg",
+    "videoUrl": "https://www.youtube.com/watch?v=golMogcJ1tg",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-24T22:00:00.000Z"
   },
   {
     "videoId": "TFtk3vm9ZO4",
@@ -378,34 +390,52 @@
     "date": "2025-09-24T07:25:00.000Z"
   },
   {
+    "videoId": "z2MPFnjBV5w",
+    "videoUrl": "https://www.youtube.com/watch?v=z2MPFnjBV5w",
+    "streamer": "Nerissa",
+    "date": "2025-09-24T08:55:00.000Z"
+  },
+  {
     "videoId": "a3l6_Vhtp4o",
     "videoUrl": "https://www.youtube.com/watch?v=a3l6_Vhtp4o",
     "streamer": "FUWAMOCO",
-    "date": "2025-09-24T09:00:00.000Z"
+    "date": "2025-09-24T08:55:00.000Z"
+  },
+  {
+    "videoId": "ak4U7n9iJIM",
+    "videoUrl": "https://www.youtube.com/watch?v=ak4U7n9iJIM",
+    "streamer": "Shiori",
+    "date": "2025-09-24T08:55:00.000Z"
   },
   {
     "videoId": "ro4p4oIStBI",
     "videoUrl": "https://www.youtube.com/watch?v=ro4p4oIStBI",
     "streamer": "Bijou",
-    "date": "2025-09-24T09:00:00.000Z"
-  },
-  {
-    "videoId": "z2MPFnjBV5w",
-    "videoUrl": "https://www.youtube.com/watch?v=z2MPFnjBV5w",
-    "streamer": "Nerissa",
-    "date": "2025-09-24T09:00:00.000Z"
+    "date": "2025-09-24T08:56:00.000Z"
   },
   {
     "videoId": "1banhZRNQ-k",
     "videoUrl": "https://www.youtube.com/watch?v=1banhZRNQ-k",
     "streamer": "Baelz",
-    "date": "2025-09-24T10:00:00.000Z"
+    "date": "2025-09-24T10:01:00.000Z"
+  },
+  {
+    "videoId": "bXrhQj0h_k0",
+    "videoUrl": "https://www.youtube.com/watch?v=bXrhQj0h_k0",
+    "streamer": "Kiara",
+    "date": "2025-09-24T10:03:00.000Z"
+  },
+  {
+    "videoId": "XfIeDZsGE_o",
+    "videoUrl": "https://www.youtube.com/watch?v=XfIeDZsGE_o",
+    "streamer": "Kronii",
+    "date": "2025-09-24T10:13:00.000Z"
   },
   {
     "videoId": "aEeA9oBsuHM",
     "videoUrl": "https://www.youtube.com/watch?v=aEeA9oBsuHM",
     "streamer": "FUWAMOCO",
-    "date": "2025-09-24T11:30:00.000Z"
+    "date": "2025-09-24T11:25:00.000Z"
   },
   {
     "videoId": "fAMJYt4rN-w",
@@ -418,6 +448,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=XYXC1xU4qOQ",
     "streamer": "Kiara",
     "date": "2025-09-25T00:00:00.000Z"
+  },
+  {
+    "videoId": "HZHMPVmyEkI",
+    "videoUrl": "https://www.youtube.com/watch?v=HZHMPVmyEkI",
+    "streamer": "Shiori",
+    "date": "2025-09-25T05:00:00.000Z"
+  },
+  {
+    "videoId": "6205T1jAc5M",
+    "videoUrl": "https://www.youtube.com/watch?v=6205T1jAc5M",
+    "streamer": "Kronii",
+    "date": "2025-09-25T10:00:00.000Z"
   },
   {
     "videoId": "fKXh7HQNpf4",
@@ -442,5 +484,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=SLSh9lsS7zk",
     "streamer": "Moona 🔮",
     "date": "2025-09-23T23:30:00.000Z"
+  },
+  {
+    "videoId": "0a6ojttHXx0",
+    "videoUrl": "https://www.youtube.com/watch?v=0a6ojttHXx0",
+    "streamer": "Kaela",
+    "date": "2025-09-24T12:30:00.000Z"
   }
 ]

@@ -156,10 +156,22 @@
     "date": "2025-09-25T06:00:00.000Z"
   },
   {
+    "videoId": "Aa62TQthy8c",
+    "videoUrl": "https://www.youtube.com/watch?v=Aa62TQthy8c",
+    "streamer": "鷹嶺ルイ",
+    "date": "2025-09-25T10:36:00.000Z"
+  },
+  {
     "videoId": "YVqxMyIeJq0",
     "videoUrl": "https://www.youtube.com/watch?v=YVqxMyIeJq0",
     "streamer": "獅白ぼたん",
     "date": "2025-09-25T14:55:00.000Z"
+  },
+  {
+    "videoId": "9e4VrUtSvMU",
+    "videoUrl": "https://www.youtube.com/watch?v=9e4VrUtSvMU",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-09-25T19:00:00.000Z"
   },
   {
     "videoId": "dHj1VWeDJaM",
@@ -441,19 +453,19 @@
     "videoId": "6205T1jAc5M",
     "videoUrl": "https://www.youtube.com/watch?v=6205T1jAc5M",
     "streamer": "Kronii",
-    "date": "2025-09-25T10:00:00.000Z"
+    "date": "2025-09-25T10:03:00.000Z"
   },
   {
     "videoId": "xS1s8w9svJo",
     "videoUrl": "https://www.youtube.com/watch?v=xS1s8w9svJo",
     "streamer": "Calli",
-    "date": "2025-09-25T10:00:00.000Z"
+    "date": "2025-09-25T10:30:00.000Z"
   },
   {
     "videoId": "nJQzIBTsiKA",
     "videoUrl": "https://www.youtube.com/watch?v=nJQzIBTsiKA",
     "streamer": "Baelz",
-    "date": "2025-09-25T11:00:00.000Z"
+    "date": "2025-09-25T11:01:00.000Z"
   },
   {
     "videoId": "AbDYqbDbvI4",
@@ -514,6 +526,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=xGgpJN7O-RY",
     "streamer": "Reine",
     "date": "2025-09-24T23:05:00.000Z"
+  },
+  {
+    "videoId": "PkiszFeIAlA",
+    "videoUrl": "https://www.youtube.com/watch?v=PkiszFeIAlA",
+    "streamer": "Ollie",
+    "date": "2025-09-25T10:00:00.000Z"
   },
   {
     "videoId": "mgw-lnvzoHM",

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1758891600079';
+const CACHE_NAME = 'hololive-summary-cache-v1-1758892868820';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const CACHE_MAX_AGE = 7 * 24 * 60 * 60 * 1000; // 7日間（ミリ秒）
 const DYNAMIC_CONTENT_MAX_AGE = 30 * 60 * 1000; // 30分（ミリ秒）

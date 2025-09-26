@@ -212,11 +212,18 @@ ${JSON.stringify(existingSummary, null, 2)}
 
             currentSummary.overview.summary = chunkSummary.overview.summary;
             currentSummary.overview.mood = chunkSummary.overview.mood;
-            currentSummary.highlights = chunkSummary.highlights.map(h => ({
+            currentSummary.highlights.push(...chunkSummary.highlights.map(h => ({
                 ...h,
+                // Adjust timestamp to be relative to the start of the video, not the chunk
                 timestamp: h.timestamp ? formatTimestamp(parseTimestampToSeconds(h.timestamp)) : 'タイムスタンプなし'
-            }));
-            currentSummary.tags = chunkSummary.tags;
+            })));
+            // Deduplicate highlights based on title and timestamp
+            currentSummary.highlights = Array.from(new Map(currentSummary.highlights.map(item => [`${item.title}-${item.timestamp}`, item])).values());
+            chunkSummary.tags.forEach(tag => {
+                if (!currentSummary.tags.includes(tag)) {
+                    currentSummary.tags.push(tag);
+                }
+            });
 
             // Update overall mood from the first successful chunk
             if (currentSummary.overview.mood === "不明" && chunkSummary.overview.mood) {

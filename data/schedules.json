@@ -120,6 +120,18 @@
     "date": "2025-09-27T00:37:00.000Z"
   },
   {
+    "videoId": "nMS2hM291s8",
+    "videoUrl": "https://www.youtube.com/watch?v=nMS2hM291s8",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-09-27T06:00:00.000Z"
+  },
+  {
+    "videoId": "U5ChVNgq5ig",
+    "videoUrl": "https://www.youtube.com/watch?v=U5ChVNgq5ig",
+    "streamer": "不知火フレア 🔥",
+    "date": "2025-09-27T08:00:00.000Z"
+  },
+  {
     "videoId": "L9lH7K2kYG8",
     "videoUrl": "https://www.youtube.com/watch?v=L9lH7K2kYG8",
     "streamer": "大空スバル 🚑",
@@ -324,15 +336,15 @@
     "date": "2025-09-27T18:00:00.000Z"
   },
   {
-    "videoId": "njGNF8qcvLY",
-    "videoUrl": "https://www.youtube.com/watch?v=njGNF8qcvLY",
-    "streamer": "一条莉々華",
-    "date": "2025-09-27T19:00:00.000Z"
-  },
-  {
     "videoId": "eOUxSBAGGIU",
     "videoUrl": "https://www.youtube.com/watch?v=eOUxSBAGGIU",
     "streamer": "ReGLOSS",
+    "date": "2025-09-27T19:00:00.000Z"
+  },
+  {
+    "videoId": "njGNF8qcvLY",
+    "videoUrl": "https://www.youtube.com/watch?v=njGNF8qcvLY",
+    "streamer": "一条莉々華",
     "date": "2025-09-27T19:00:00.000Z"
   },
   {
@@ -429,7 +441,13 @@
     "videoId": "8ICt_Aypv-s",
     "videoUrl": "https://www.youtube.com/watch?v=8ICt_Aypv-s",
     "streamer": "Gigi",
-    "date": "2025-09-27T06:00:00.000Z"
+    "date": "2025-09-27T06:01:00.000Z"
+  },
+  {
+    "videoId": "jc-r38sCNN8",
+    "videoUrl": "https://www.youtube.com/watch?v=jc-r38sCNN8",
+    "streamer": "holo EN",
+    "date": "2025-09-27T07:00:00.000Z"
   },
   {
     "videoId": "_-9QjVI7vcg",
@@ -450,15 +468,15 @@
     "date": "2025-09-27T10:00:00.000Z"
   },
   {
-    "videoId": "qvzrpY1FSlk",
-    "videoUrl": "https://www.youtube.com/watch?v=qvzrpY1FSlk",
-    "streamer": "IRyS",
-    "date": "2025-09-27T11:00:00.000Z"
-  },
-  {
     "videoId": "VkMy1pQIo6w",
     "videoUrl": "https://www.youtube.com/watch?v=VkMy1pQIo6w",
     "streamer": "Raora",
+    "date": "2025-09-27T11:00:00.000Z"
+  },
+  {
+    "videoId": "qvzrpY1FSlk",
+    "videoUrl": "https://www.youtube.com/watch?v=qvzrpY1FSlk",
+    "streamer": "IRyS",
     "date": "2025-09-27T11:00:00.000Z"
   },
   {
@@ -490,6 +508,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=4bdhrWn3yRc",
     "streamer": "FUWAMOCO",
     "date": "2025-09-28T11:00:00.000Z"
+  },
+  {
+    "videoId": "TZiMgUFHN_Y",
+    "videoUrl": "https://www.youtube.com/watch?v=TZiMgUFHN_Y",
+    "streamer": "Elizabeth",
+    "date": "2025-09-28T11:45:00.000Z"
   },
   {
     "videoId": "U57K6P_yeLw",

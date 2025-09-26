@@ -111,7 +111,7 @@ ${JSON.stringify(formatExample, null, 2)}
 ## 既存の要約データ:
 この要約データを更新・追記する形で、新しい期間の情報を追加する。
 - overviewは全体を考慮して更新する。
-- highlightsとtagsは既存の内容をそのまま残して、新しい情報を追加する。
+- highlightsとtagsは既存の内容を更新・拡充し、常に最新のリストとして出力する。
 
 ### これまでの要約データ:
 \`\`\`
@@ -212,18 +212,11 @@ ${JSON.stringify(existingSummary, null, 2)}
 
             currentSummary.overview.summary = chunkSummary.overview.summary;
             currentSummary.overview.mood = chunkSummary.overview.mood;
-            currentSummary.highlights.push(...chunkSummary.highlights.map(h => ({
+            currentSummary.highlights = chunkSummary.highlights.map(h => ({
                 ...h,
-                // Adjust timestamp to be relative to the start of the video, not the chunk
                 timestamp: h.timestamp ? formatTimestamp(parseTimestampToSeconds(h.timestamp)) : 'タイムスタンプなし'
-            })));
-            // Deduplicate highlights based on title and timestamp
-            currentSummary.highlights = Array.from(new Map(currentSummary.highlights.map(item => [`${item.title}-${item.timestamp}`, item])).values());
-            chunkSummary.tags.forEach(tag => {
-                if (!currentSummary.tags.includes(tag)) {
-                    currentSummary.tags.push(tag);
-                }
-            });
+            }));
+            currentSummary.tags = chunkSummary.tags;
 
             // Update overall mood from the first successful chunk
             if (currentSummary.overview.mood === "不明" && chunkSummary.overview.mood) {

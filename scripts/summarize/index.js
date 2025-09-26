@@ -6,7 +6,7 @@ const axios = require('axios');
 
 // Gemini APIの初期化
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
 
 // Retry function with exponential backoff
 async function retry(fn, retries = 5, delay = 30000) { // Increased default delay to 30 seconds

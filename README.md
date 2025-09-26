@@ -70,7 +70,7 @@ graph TD
   - > GitHubに組み込まれている、様々な処理を自動化するための仕組みです。公開リポジトリなら無料枠の範囲で自由に利用できます。
 - **PWA (Progressive Web Apps)**
   - > Webサイトをネイティブアプリのように利用可能にする技術です。Service Workerによるオフライン対応や、Web App Manifestによるホーム画面へのインストール機能などを提供します。
-- **コンテンツ生成**: **Gemini API (model: gemini-2.5-flash)**
+- **コンテンツ生成**: **Gemini API (model: gemini-2.5-flash-preview-09-2025)**
   - > Googleが開発した高性能な生成AIです。動画を直接理解して処理する能力（マルチモーダル）を持っています。一定の利用量までは無料で使えます。
 - **データソース**:
   - `schedule.hololive.tv`: 配信スケジュールの取得

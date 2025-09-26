@@ -840,10 +840,13 @@ class NotificationSystem {
      * Push通知機能の初期化
      */
     initPushNotifications() {
-        if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+        // iPhoneでは現在の実装ではPush通知が機能しないため、ボタンを非表示にします。
+        const isIPhone = /iPhone/i.test(navigator.userAgent);
+
+        if (isIPhone || !('serviceWorker' in navigator) || !('PushManager' in window)) {
             console.warn('Push通知は、このブラウザではサポートされていません。');
             const button = document.getElementById('top-push-notification-toggle');
-            if(button) button.style.display = 'none';
+            if (button) button.style.display = 'none';
             return;
         }
 

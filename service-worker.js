@@ -1,5 +1,8 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1758891600079';
+const CACHE_NAME = 'hololive-summary-cache-v1-1758892868820';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
+const CACHE_MAX_AGE = 7 * 24 * 60 * 60 * 1000; // 7日間（ミリ秒）
+const DYNAMIC_CONTENT_MAX_AGE = 30 * 60 * 1000; // 30分（ミリ秒）
+
 const ASSETS_TO_CACHE = [
   './',
   'index.html',
@@ -55,44 +58,137 @@ self.addEventListener('activate', event => {
   );
 });
 
-// fetch イベント: ネットワークリクエストを横取りし、キャッシュまたはネットワークから応答する
+// fetch イベント: ネットワークリクエストを横取りし、適切な戦略でレスポンスを返す
 self.addEventListener('fetch', event => {
   // GETリクエスト以外、また同一オリジンでないリクエストは無視する
   if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
     return;
   }
 
-  // キャッシュ優先戦略
+  // URLからリクエストのパスを取得
+  const url = new URL(event.request.url);
+  const pathname = url.pathname;
+
+  // 動的コンテンツの特別処理
+  if (pathname.endsWith('/data/summaries.json')) {
+    event.respondWith(
+      Promise.all([
+        caches.match(event.request),
+        fetch(event.request).then(networkResponse => {
+          if (!networkResponse || networkResponse.status !== 200) {
+            throw new Error('Network response was not ok');
+          }
+          
+          // 新しいレスポンスをキャッシュに保存
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME)
+            .then(cache => cache.put(event.request, responseToCache))
+            .then(() => {
+              // クライアントに更新を通知
+              self.clients.matchAll().then(clients => {
+                clients.forEach(client => {
+                  client.postMessage({
+                    type: 'CONTENT_UPDATED',
+                    url: event.request.url
+                  });
+                });
+              });
+            });
+            
+          return networkResponse;
+        }).catch(err => {
+          console.log('Network fetch failed, falling back to cache:', err);
+          return null;
+        })
+      ]).then(([cachedResponse, networkResponse]) => {
+        return networkResponse || cachedResponse;
+      })
+    );
+    return;
+  }
+              // その他のJSONファイルにはNetwork First戦略を使用
+  else if (pathname.endsWith('.json')) {
+    event.respondWith(
+      caches.match(event.request).then(async cachedResponse => {
+        // キャッシュの有効期限をチェック
+        if (cachedResponse) {
+          const cachedDate = new Date(cachedResponse.headers.get('date'));
+          const now = new Date();
+          const age = now.getTime() - cachedDate.getTime();
+          if (age < DYNAMIC_CONTENT_MAX_AGE) {
+            return cachedResponse;
+          }
+        }
+
+        try {
+          const networkResponse = await fetch(event.request);
+          if (!networkResponse || networkResponse.status !== 200) {
+            throw new Error('Network response was not ok');
+          }
+          
+          // レスポンスをクローンしてキャッシュに保存
+          const responseToCache = networkResponse.clone();
+          await caches.open(CACHE_NAME)
+            .then(cache => cache.put(event.request, responseToCache));
+            
+          return networkResponse;
+        } catch (error) {
+          console.error('Fetch failed:', error);
+          return cachedResponse || new Response(null, {
+            status: 504,
+            statusText: 'Network or Cache Unavailable'
+          });
+        }
+      })
+    );
+    return;
+  }  // 静的アセットにはStale-While-Revalidate戦略を使用（有効期限付き）
   event.respondWith(
-    caches.match(event.request)
-      .then(cachedResponse => {
-        // キャッシュがあればそれを返す
+    caches.match(event.request).then(async cachedResponse => {
+      // キャッシュの有効期限をチェック
+      if (cachedResponse) {
+        const cachedDate = new Date(cachedResponse.headers.get('date'));
+        const now = new Date();
+        const age = now.getTime() - cachedDate.getTime();
+
+        // キャッシュが有効期限内の場合は、バックグラウンドで更新
+        if (age < CACHE_MAX_AGE) {
+          // バックグラウンドでキャッシュを更新
+          fetch(event.request).then(networkResponse => {
+            if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+              const responseToCache = networkResponse.clone();
+              caches.open(CACHE_NAME)
+                .then(cache => cache.put(event.request, responseToCache));
+            }
+          }).catch(error => {
+            console.error('Service Worker: Background fetch failed:', error);
+          });
+
+          return cachedResponse;
+        }
+      }
+
+      // キャッシュがない、または期限切れの場合はネットワークから取得
+      try {
+        const networkResponse = await fetch(event.request);
+        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+          return networkResponse;
+        }
+
+        const responseToCache = networkResponse.clone();
+        await caches.open(CACHE_NAME)
+          .then(cache => cache.put(event.request, responseToCache));
+
+        return networkResponse;
+      } catch (error) {
+        console.error('Service Worker: Fetch failed:', error);
+        // キャッシュがあれば、期限切れでも最後の手段として使用
         if (cachedResponse) {
           return cachedResponse;
         }
-
-        // キャッシュになければネットワークにリクエストし、レスポンスをキャッシュに保存する
-        return fetch(event.request).then(
-          networkResponse => {
-            // レスポンスが有効かチェック
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
-            }
-
-            // レスポンスをクローンしてキャッシュに保存
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME)
-              .then(cache => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return networkResponse;
-          }
-        ).catch(error => {
-          console.error('Service Worker: Fetch failed:', error);
-          throw error;
-        });
-      })
+        throw error;
+      }
+    })
   );
 });
 

@@ -1440,6 +1440,20 @@ ${shareUrl}`;
                 window.location.reload();
                 refreshing = true;
             });
+
+            // Service Workerからのメッセージを受け取る
+            navigator.serviceWorker.addEventListener('message', event => {
+                if (event.data.type === 'CONTENT_UPDATED') {
+                    console.log('Content updated, reloading data...');
+                    this.loadData().then(() => {
+                        this.filterArchives();
+                        // ブックマークモードの場合はリストを更新
+                        if (this.isWatchLaterMode) {
+                            this.updateWatchLaterMode();
+                        }
+                    });
+                }
+            });
         }
     }
 

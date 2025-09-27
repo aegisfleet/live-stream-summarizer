@@ -204,15 +204,15 @@
     "date": "2025-09-28T11:00:00.000Z"
   },
   {
+    "videoId": "MO1x3itm800",
+    "videoUrl": "https://www.youtube.com/watch?v=MO1x3itm800",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-28T12:00:00.000Z"
+  },
+  {
     "videoId": "94q3dHH_eIY",
     "videoUrl": "https://www.youtube.com/watch?v=94q3dHH_eIY",
     "streamer": "戌神ころね 🥐",
-    "date": "2025-09-28T13:00:00.000Z"
-  },
-  {
-    "videoId": "qBePVxXKlbo",
-    "videoUrl": "https://www.youtube.com/watch?v=qBePVxXKlbo",
-    "streamer": "天音かなた 💫",
     "date": "2025-09-28T13:00:00.000Z"
   },
   {
@@ -222,10 +222,22 @@
     "date": "2025-09-28T13:00:00.000Z"
   },
   {
+    "videoId": "qBePVxXKlbo",
+    "videoUrl": "https://www.youtube.com/watch?v=qBePVxXKlbo",
+    "streamer": "天音かなた 💫",
+    "date": "2025-09-28T13:00:00.000Z"
+  },
+  {
     "videoId": "8q9MP_IRHOw",
     "videoUrl": "https://www.youtube.com/watch?v=8q9MP_IRHOw",
     "streamer": "鷹嶺ルイ",
     "date": "2025-09-28T14:30:00.000Z"
+  },
+  {
+    "videoId": "8s-9lZPnep4",
+    "videoUrl": "https://www.youtube.com/watch?v=8s-9lZPnep4",
+    "streamer": "不知火フレア 🔥",
+    "date": "2025-09-28T15:00:00.000Z"
   },
   {
     "videoId": "JyDDLZxxJZI",
@@ -240,10 +252,22 @@
     "date": "2025-09-28T16:00:00.000Z"
   },
   {
+    "videoId": "pzszlW7m4eA",
+    "videoUrl": "https://www.youtube.com/watch?v=pzszlW7m4eA",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-09-28T18:00:00.000Z"
+  },
+  {
     "videoId": "-yjdEkaPtCA",
     "videoUrl": "https://www.youtube.com/watch?v=-yjdEkaPtCA",
     "streamer": "博衣こより",
     "date": "2025-09-28T18:30:00.000Z"
+  },
+  {
+    "videoId": "-Uq_XR6jbfo",
+    "videoUrl": "https://www.youtube.com/watch?v=-Uq_XR6jbfo",
+    "streamer": "鷹嶺ルイ",
+    "date": "2025-09-28T19:00:00.000Z"
   },
   {
     "videoId": "9Lpa0NJvKbE",
@@ -372,16 +396,28 @@
     "date": "2025-09-27T23:00:00.000Z"
   },
   {
+    "videoId": "2VdzswB3YyM",
+    "videoUrl": "https://www.youtube.com/watch?v=2VdzswB3YyM",
+    "streamer": "轟はじめ",
+    "date": "2025-09-28T15:00:00.000Z"
+  },
+  {
     "videoId": "PYeFa7VpzOs",
     "videoUrl": "https://www.youtube.com/watch?v=PYeFa7VpzOs",
     "streamer": "一条莉々華",
     "date": "2025-09-28T15:00:00.000Z"
   },
   {
-    "videoId": "2VdzswB3YyM",
-    "videoUrl": "https://www.youtube.com/watch?v=2VdzswB3YyM",
-    "streamer": "轟はじめ",
-    "date": "2025-09-28T15:00:00.000Z"
+    "videoId": "ocutlIfFQPg",
+    "videoUrl": "https://www.youtube.com/watch?v=ocutlIfFQPg",
+    "streamer": "音乃瀬奏",
+    "date": "2025-09-28T17:00:00.000Z"
+  },
+  {
+    "videoId": "UyrY4rFFR5w",
+    "videoUrl": "https://www.youtube.com/watch?v=UyrY4rFFR5w",
+    "streamer": "水宮枢",
+    "date": "2025-09-28T18:00:00.000Z"
   },
   {
     "videoId": "kIsrEx4rJ2A",
@@ -489,7 +525,7 @@
     "videoId": "ReNPs64EIcI",
     "videoUrl": "https://www.youtube.com/watch?v=ReNPs64EIcI",
     "streamer": "Shiori",
-    "date": "2025-09-28T03:00:00.000Z"
+    "date": "2025-09-28T02:55:00.000Z"
   },
   {
     "videoId": "ub9_vBd6N30",
@@ -522,6 +558,12 @@
     "date": "2025-09-28T11:45:00.000Z"
   },
   {
+    "videoId": "3NyZZxjFibA",
+    "videoUrl": "https://www.youtube.com/watch?v=3NyZZxjFibA",
+    "streamer": "Baelz",
+    "date": "2025-09-28T12:00:00.000Z"
+  },
+  {
     "videoId": "FrTbNGMrUcs",
     "videoUrl": "https://www.youtube.com/watch?v=FrTbNGMrUcs",
     "streamer": "Bijou",
@@ -534,9 +576,9 @@
     "date": "2025-09-28T12:00:00.000Z"
   },
   {
-    "videoId": "3NyZZxjFibA",
-    "videoUrl": "https://www.youtube.com/watch?v=3NyZZxjFibA",
-    "streamer": "Baelz",
+    "videoId": "_OZyTg6L-Zs",
+    "videoUrl": "https://www.youtube.com/watch?v=_OZyTg6L-Zs",
+    "streamer": "IRyS",
     "date": "2025-09-28T12:00:00.000Z"
   },
   {
@@ -549,6 +591,12 @@
     "videoId": "B97QLAf50sY",
     "videoUrl": "https://www.youtube.com/watch?v=B97QLAf50sY",
     "streamer": "Kiara",
+    "date": "2025-09-28T22:00:00.000Z"
+  },
+  {
+    "videoId": "Z83z0Or0EuA",
+    "videoUrl": "https://www.youtube.com/watch?v=Z83z0Or0EuA",
+    "streamer": "IRyS",
     "date": "2025-09-28T22:00:00.000Z"
   },
   {

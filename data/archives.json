@@ -120,6 +120,16 @@
     "duration": 6249
   },
   {
+    "videoId": "pj_TXxk-ECs",
+    "videoUrl": "https://www.youtube.com/watch?v=pj_TXxk-ECs",
+    "streamer": "ロボ子さん 🤖",
+    "date": "2025-09-27T21:00:00.000Z",
+    "title": "アタシポンコツアンドロイド/ さくらみこ×ロボ子さん feat.桃鈴ねね・風真いろは・一条莉々華 (cover)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/pj_TXxk-ECs/mqdefault.jpg",
+    "endTime": "2025-09-27T12:06:58Z",
+    "duration": 269
+  },
+  {
     "videoId": "9QIp3A6accY",
     "videoUrl": "https://www.youtube.com/watch?v=9QIp3A6accY",
     "streamer": "虎金妃笑虎",
@@ -200,16 +210,6 @@
     "duration": 3586
   },
   {
-    "videoId": "eOUxSBAGGIU",
-    "videoUrl": "https://www.youtube.com/watch?v=eOUxSBAGGIU",
-    "streamer": "ReGLOSS",
-    "date": "2025-09-27T19:00:00.000Z",
-    "title": "ReGLOSS 'アワータイムイエロー' 練習風景Behind",
-    "thumbnailUrl": "https://i.ytimg.com/vi/eOUxSBAGGIU/mqdefault.jpg",
-    "endTime": "2025-09-27T10:17:41Z",
-    "duration": 995
-  },
-  {
     "videoId": "3jgf1Q7nMxI",
     "videoUrl": "https://www.youtube.com/watch?v=3jgf1Q7nMxI",
     "streamer": "水宮枢",
@@ -220,14 +220,44 @@
     "duration": 209
   },
   {
+    "videoId": "eOUxSBAGGIU",
+    "videoUrl": "https://www.youtube.com/watch?v=eOUxSBAGGIU",
+    "streamer": "ReGLOSS",
+    "date": "2025-09-27T19:00:00.000Z",
+    "title": "ReGLOSS 'アワータイムイエロー' 練習風景Behind",
+    "thumbnailUrl": "https://i.ytimg.com/vi/eOUxSBAGGIU/mqdefault.jpg",
+    "endTime": "2025-09-27T10:17:41Z",
+    "duration": 995
+  },
+  {
+    "videoId": "L8TMuy5q5D8",
+    "videoUrl": "https://www.youtube.com/watch?v=L8TMuy5q5D8",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-27T19:00:00.000Z",
+    "title": "【 nosh  ナッシュ 】生活リズム心配される私に必要な健康的な食事します！！【#綺々羅々ヴィヴィ #hololiveDEV_IS #FLOWGLOW】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/L8TMuy5q5D8/mqdefault.jpg",
+    "endTime": "2025-09-27T11:04:14Z",
+    "duration": 3847
+  },
+  {
+    "videoId": "njGNF8qcvLY",
+    "videoUrl": "https://www.youtube.com/watch?v=njGNF8qcvLY",
+    "streamer": "一条莉々華",
+    "date": "2025-09-27T19:00:00.000Z",
+    "title": "【シャドバWB/Shadowverse】指示大歓迎✨グラマスになるという約束を果たしに来た【一条莉々華/hololive DEV_IS　ReGLOSS】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/njGNF8qcvLY/mqdefault.jpg",
+    "endTime": "2025-09-27T12:27:58Z",
+    "duration": 8807
+  },
+  {
     "videoId": "-8maf1KY4jk",
     "videoUrl": "https://www.youtube.com/watch?v=-8maf1KY4jk",
     "streamer": "虎金妃笑虎",
     "date": "2025-09-27T19:00:00.000Z",
     "title": "【雑談】興奮しています【虎金妃笑虎】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/-8maf1KY4jk/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/-8maf1KY4jk/mqdefault.jpg",
     "endTime": "2025-09-27T10:58:56Z",
-    "duration": 3493
+    "duration": 3499
   },
   {
     "videoId": "hB-8gdbL7hw",
@@ -288,5 +318,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/zcwfc8hmnKM/mqdefault.jpg",
     "endTime": "2025-09-27T07:20:12Z",
     "duration": 8354
+  },
+  {
+    "videoId": "6IbCal1-HRI",
+    "videoUrl": "https://www.youtube.com/watch?v=6IbCal1-HRI",
+    "streamer": "Zeta",
+    "date": "2025-09-27T19:30:00.000Z",
+    "title": "【SILENT HILL f】First time ever ※Spoilers!",
+    "thumbnailUrl": "https://i.ytimg.com/vi/6IbCal1-HRI/mqdefault.jpg",
+    "endTime": "2025-09-27T12:34:19Z",
+    "duration": 7381
   }
 ]

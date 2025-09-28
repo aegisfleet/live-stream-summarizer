@@ -261,7 +261,7 @@
     "videoId": "pzszlW7m4eA",
     "videoUrl": "https://www.youtube.com/watch?v=pzszlW7m4eA",
     "streamer": "姫森ルーナ 🍬",
-    "date": "2025-09-28T18:00:00.000Z"
+    "date": "2025-09-28T17:57:00.000Z"
   },
   {
     "videoId": "qBePVxXKlbo",
@@ -270,10 +270,10 @@
     "date": "2025-09-28T18:00:00.000Z"
   },
   {
-    "videoId": "Mlz1VKp6suc",
-    "videoUrl": "https://www.youtube.com/watch?v=Mlz1VKp6suc",
-    "streamer": "風真いろは",
-    "date": "2025-09-28T18:30:00.000Z"
+    "videoId": "ov5uCuX1MhU",
+    "videoUrl": "https://www.youtube.com/watch?v=ov5uCuX1MhU",
+    "streamer": "ホロライブ",
+    "date": "2025-09-28T18:01:00.000Z"
   },
   {
     "videoId": "-yjdEkaPtCA",
@@ -285,7 +285,13 @@
     "videoId": "-Uq_XR6jbfo",
     "videoUrl": "https://www.youtube.com/watch?v=-Uq_XR6jbfo",
     "streamer": "鷹嶺ルイ",
-    "date": "2025-09-28T18:30:00.000Z"
+    "date": "2025-09-28T18:31:00.000Z"
+  },
+  {
+    "videoId": "Mlz1VKp6suc",
+    "videoUrl": "https://www.youtube.com/watch?v=Mlz1VKp6suc",
+    "streamer": "風真いろは",
+    "date": "2025-09-28T18:32:00.000Z"
   },
   {
     "videoId": "9Lpa0NJvKbE",
@@ -297,7 +303,7 @@
     "videoId": "M9S4lwFl0xE",
     "videoUrl": "https://www.youtube.com/watch?v=M9S4lwFl0xE",
     "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-09-28T19:00:00.000Z"
+    "date": "2025-09-28T19:01:00.000Z"
   },
   {
     "videoId": "IgCzJLp2VqQ",
@@ -334,6 +340,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=h5PxX-CGNZA",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-09-28T23:00:00.000Z"
+  },
+  {
+    "videoId": "kl38aoL4Pio",
+    "videoUrl": "https://www.youtube.com/watch?v=kl38aoL4Pio",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-09-29T07:30:00.000Z"
+  },
+  {
+    "videoId": "YcLb5YyEdck",
+    "videoUrl": "https://www.youtube.com/watch?v=YcLb5YyEdck",
+    "streamer": "博衣こより",
+    "date": "2025-09-29T19:00:00.000Z"
   },
   {
     "videoId": "ZVeBrjeq-kU",
@@ -471,7 +489,25 @@
     "videoId": "UyrY4rFFR5w",
     "videoUrl": "https://www.youtube.com/watch?v=UyrY4rFFR5w",
     "streamer": "水宮枢",
-    "date": "2025-09-28T18:00:00.000Z"
+    "date": "2025-09-28T18:01:00.000Z"
+  },
+  {
+    "videoId": "ndGbiluC0mI",
+    "videoUrl": "https://www.youtube.com/watch?v=ndGbiluC0mI",
+    "streamer": "ReGLOSS",
+    "date": "2025-09-28T18:01:00.000Z"
+  },
+  {
+    "videoId": "83ZyIqHsRpU",
+    "videoUrl": "https://www.youtube.com/watch?v=83ZyIqHsRpU",
+    "streamer": "輪堂千速",
+    "date": "2025-09-28T19:00:00.000Z"
+  },
+  {
+    "videoId": "KHzMxgAotPI",
+    "videoUrl": "https://www.youtube.com/watch?v=KHzMxgAotPI",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-28T20:00:00.000Z"
   },
   {
     "videoId": "kIsrEx4rJ2A",
@@ -636,6 +672,12 @@
     "date": "2025-09-28T12:05:00.000Z"
   },
   {
+    "videoId": "yCvs-DUWXMk",
+    "videoUrl": "https://www.youtube.com/watch?v=yCvs-DUWXMk",
+    "streamer": "Bijou",
+    "date": "2025-09-28T22:00:00.000Z"
+  },
+  {
     "videoId": "gvNGbSlGJ40",
     "videoUrl": "https://www.youtube.com/watch?v=gvNGbSlGJ40",
     "streamer": "Kronii",
@@ -654,9 +696,9 @@
     "date": "2025-09-28T22:00:00.000Z"
   },
   {
-    "videoId": "Z83z0Or0EuA",
-    "videoUrl": "https://www.youtube.com/watch?v=Z83z0Or0EuA",
-    "streamer": "IRyS",
+    "videoId": "0Y9AdbfKtdg",
+    "videoUrl": "https://www.youtube.com/watch?v=0Y9AdbfKtdg",
+    "streamer": "FUWAMOCO",
     "date": "2025-09-28T22:00:00.000Z"
   },
   {
@@ -672,9 +714,9 @@
     "date": "2025-09-28T22:00:00.000Z"
   },
   {
-    "videoId": "0Y9AdbfKtdg",
-    "videoUrl": "https://www.youtube.com/watch?v=0Y9AdbfKtdg",
-    "streamer": "FUWAMOCO",
+    "videoId": "Z83z0Or0EuA",
+    "videoUrl": "https://www.youtube.com/watch?v=Z83z0Or0EuA",
+    "streamer": "IRyS",
     "date": "2025-09-28T22:00:00.000Z"
   },
   {
@@ -694,6 +736,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=qd5NSKAxlr8",
     "streamer": "Gigi",
     "date": "2025-09-29T07:00:00.000Z"
+  },
+  {
+    "videoId": "uAMDJlgdLdk",
+    "videoUrl": "https://www.youtube.com/watch?v=uAMDJlgdLdk",
+    "streamer": "Bijou",
+    "date": "2025-09-29T08:00:00.000Z"
   },
   {
     "videoId": "9ybSgLgloVs",
@@ -742,6 +790,18 @@
     "videoUrl": "https://www.youtube.com/watch?v=PVX9YQrO-JA",
     "streamer": "Reine",
     "date": "2025-09-27T22:05:00.000Z"
+  },
+  {
+    "videoId": "OZOfj_JpNZs",
+    "videoUrl": "https://www.youtube.com/watch?v=OZOfj_JpNZs",
+    "streamer": "Reine",
+    "date": "2025-09-28T19:00:00.000Z"
+  },
+  {
+    "videoId": "a5h_NI8wC0M",
+    "videoUrl": "https://www.youtube.com/watch?v=a5h_NI8wC0M",
+    "streamer": "Zeta",
+    "date": "2025-09-28T20:00:00.000Z"
   },
   {
     "videoId": "cpRVqgMFcO0",

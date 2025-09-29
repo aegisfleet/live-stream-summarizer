@@ -192,6 +192,12 @@
     "date": "2025-09-29T07:30:00.000Z"
   },
   {
+    "videoId": "wLvtWvQY5Iw",
+    "videoUrl": "https://www.youtube.com/watch?v=wLvtWvQY5Iw",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-09-29T17:05:00.000Z"
+  },
+  {
     "videoId": "cCWduqAyLig",
     "videoUrl": "https://www.youtube.com/watch?v=cCWduqAyLig",
     "streamer": "姫森ルーナ 🍬",
@@ -226,6 +232,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=stg52WsaSko",
     "streamer": "白上フブキ 🌽",
     "date": "2025-09-29T20:30:00.000Z"
+  },
+  {
+    "videoId": "g0vK84LTx0E",
+    "videoUrl": "https://www.youtube.com/watch?v=g0vK84LTx0E",
+    "streamer": "夏色まつり 🏮",
+    "date": "2025-09-29T21:00:00.000Z"
   },
   {
     "videoId": "qWn4pb2wv2k",
@@ -292,6 +304,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=kIsrEx4rJ2A",
     "streamer": "一条莉々華",
     "date": "2025-09-28T23:01:00.000Z"
+  },
+  {
+    "videoId": "FsUG7FumdJ8",
+    "videoUrl": "https://www.youtube.com/watch?v=FsUG7FumdJ8",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-09-29T18:00:00.000Z"
   },
   {
     "videoId": "eUIPWUj2Nyg",
@@ -492,15 +510,15 @@
     "date": "2025-09-29T12:33:00.000Z"
   },
   {
-    "videoId": "GHk0GDxB08k",
-    "videoUrl": "https://www.youtube.com/watch?v=GHk0GDxB08k",
-    "streamer": "Kiara",
-    "date": "2025-09-30T00:00:00.000Z"
-  },
-  {
     "videoId": "1WcE8TGm7gs",
     "videoUrl": "https://www.youtube.com/watch?v=1WcE8TGm7gs",
     "streamer": "FUWAMOCO",
+    "date": "2025-09-30T00:00:00.000Z"
+  },
+  {
+    "videoId": "GHk0GDxB08k",
+    "videoUrl": "https://www.youtube.com/watch?v=GHk0GDxB08k",
+    "streamer": "Kiara",
     "date": "2025-09-30T00:00:00.000Z"
   },
   {

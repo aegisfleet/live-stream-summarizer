@@ -180,6 +180,18 @@
     "date": "2025-09-30T21:00:00.000Z"
   },
   {
+    "videoId": "Slug6bINSwQ",
+    "videoUrl": "https://www.youtube.com/watch?v=Slug6bINSwQ",
+    "streamer": "姫森ルーナ 🍬",
+    "date": "2025-09-30T22:00:00.000Z"
+  },
+  {
+    "videoId": "BjWce7canq4",
+    "videoUrl": "https://www.youtube.com/watch?v=BjWce7canq4",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-09-30T23:00:00.000Z"
+  },
+  {
     "videoId": "kJgs622sztA",
     "videoUrl": "https://www.youtube.com/watch?v=kJgs622sztA",
     "streamer": "風真いろは",
@@ -222,15 +234,15 @@
     "date": "2025-09-29T21:30:00.000Z"
   },
   {
-    "videoId": "PCqixk8tkb8",
-    "videoUrl": "https://www.youtube.com/watch?v=PCqixk8tkb8",
-    "streamer": "音乃瀬奏",
-    "date": "2025-09-29T22:00:00.000Z"
-  },
-  {
     "videoId": "hppMvpw_ooY",
     "videoUrl": "https://www.youtube.com/watch?v=hppMvpw_ooY",
     "streamer": "水宮枢",
+    "date": "2025-09-29T22:00:00.000Z"
+  },
+  {
+    "videoId": "PCqixk8tkb8",
+    "videoUrl": "https://www.youtube.com/watch?v=PCqixk8tkb8",
+    "streamer": "音乃瀬奏",
     "date": "2025-09-29T22:00:00.000Z"
   },
   {
@@ -363,7 +375,13 @@
     "videoId": "e9sGwDFTEJU",
     "videoUrl": "https://www.youtube.com/watch?v=e9sGwDFTEJU",
     "streamer": "Nerissa",
-    "date": "2025-09-30T09:00:00.000Z"
+    "date": "2025-09-30T08:55:00.000Z"
+  },
+  {
+    "videoId": "uC_UB9z1jDQ",
+    "videoUrl": "https://www.youtube.com/watch?v=uC_UB9z1jDQ",
+    "streamer": "FUWAMOCO",
+    "date": "2025-09-30T09:55:00.000Z"
   },
   {
     "videoId": "0kc1cmtAaMQ",
@@ -372,10 +390,10 @@
     "date": "2025-09-30T10:00:00.000Z"
   },
   {
-    "videoId": "uC_UB9z1jDQ",
-    "videoUrl": "https://www.youtube.com/watch?v=uC_UB9z1jDQ",
-    "streamer": "FUWAMOCO",
-    "date": "2025-09-30T10:00:00.000Z"
+    "videoId": "8tTaGTLqpV4",
+    "videoUrl": "https://www.youtube.com/watch?v=8tTaGTLqpV4",
+    "streamer": "holo EN",
+    "date": "2025-09-30T11:00:00.000Z"
   },
   {
     "videoId": "VvowvamUe6g",
@@ -418,5 +436,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=OA1KZaAMFBY",
     "streamer": "Ollie",
     "date": "2025-09-29T22:21:00.000Z"
+  },
+  {
+    "videoId": "qsy73GFvGiM",
+    "videoUrl": "https://www.youtube.com/watch?v=qsy73GFvGiM",
+    "streamer": "Kaela",
+    "date": "2025-09-30T12:30:00.000Z"
   }
 ]

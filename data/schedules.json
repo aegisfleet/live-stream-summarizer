@@ -162,28 +162,40 @@
     "date": "2025-10-01T18:50:00.000Z"
   },
   {
-    "videoId": "kJgs622sztA",
-    "videoUrl": "https://www.youtube.com/watch?v=kJgs622sztA",
-    "streamer": "風真いろは",
-    "date": "2025-10-01T19:00:00.000Z"
-  },
-  {
     "videoId": "MaaXS4jfBiE",
     "videoUrl": "https://www.youtube.com/watch?v=MaaXS4jfBiE",
     "streamer": "姫森ルーナ 🍬",
     "date": "2025-10-01T19:00:00.000Z"
   },
   {
+    "videoId": "kJgs622sztA",
+    "videoUrl": "https://www.youtube.com/watch?v=kJgs622sztA",
+    "streamer": "風真いろは",
+    "date": "2025-10-01T19:00:00.000Z"
+  },
+  {
+    "videoId": "z19_de3HKco",
+    "videoUrl": "https://www.youtube.com/watch?v=z19_de3HKco",
+    "streamer": "戌神ころね 🥐",
+    "date": "2025-10-01T20:00:00.000Z"
+  },
+  {
     "videoId": "89njDwMap8A",
     "videoUrl": "https://www.youtube.com/watch?v=89njDwMap8A",
     "streamer": "獅白ぼたん",
-    "date": "2025-10-01T20:00:00.000Z"
+    "date": "2025-10-01T21:00:00.000Z"
   },
   {
     "videoId": "9O2b2VROFoA",
     "videoUrl": "https://www.youtube.com/watch?v=9O2b2VROFoA",
     "streamer": "大空スバル 🚑",
     "date": "2025-10-01T21:00:00.000Z"
+  },
+  {
+    "videoId": "_bEFfPc1feA",
+    "videoUrl": "https://www.youtube.com/watch?v=_bEFfPc1feA",
+    "streamer": "戌神ころね 🥐",
+    "date": "2025-10-01T21:15:00.000Z"
   },
   {
     "videoId": "k3IJPw3lDQU",
@@ -216,15 +228,15 @@
     "date": "2025-09-30T18:01:00.000Z"
   },
   {
-    "videoId": "kf1QolmwiMA",
-    "videoUrl": "https://www.youtube.com/watch?v=kf1QolmwiMA",
-    "streamer": "FLOW GLOW",
-    "date": "2025-09-30T18:01:00.000Z"
-  },
-  {
     "videoId": "hfoXEYzrhcI",
     "videoUrl": "https://www.youtube.com/watch?v=hfoXEYzrhcI",
     "streamer": "ReGLOSS",
+    "date": "2025-09-30T18:01:00.000Z"
+  },
+  {
+    "videoId": "kf1QolmwiMA",
+    "videoUrl": "https://www.youtube.com/watch?v=kf1QolmwiMA",
+    "streamer": "FLOW GLOW",
     "date": "2025-09-30T18:01:00.000Z"
   },
   {
@@ -369,7 +381,7 @@
     "videoId": "v8md6BIswu4",
     "videoUrl": "https://www.youtube.com/watch?v=v8md6BIswu4",
     "streamer": "Elizabeth",
-    "date": "2025-10-01T04:00:00.000Z"
+    "date": "2025-10-01T04:12:00.000Z"
   },
   {
     "videoId": "d2GmOWwer0s",
@@ -418,5 +430,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=8reFqF_RTxk",
     "streamer": "Reine",
     "date": "2025-09-30T23:02:00.000Z"
+  },
+  {
+    "videoId": "oE0p0lYJfQs",
+    "videoUrl": "https://www.youtube.com/watch?v=oE0p0lYJfQs",
+    "streamer": "Anya",
+    "date": "2025-10-01T13:00:00.000Z"
   }
 ]

@@ -156,27 +156,33 @@
     "date": "2025-10-02T19:00:00.000Z"
   },
   {
-    "videoId": "sTpBRaYHAGk",
-    "videoUrl": "https://www.youtube.com/watch?v=sTpBRaYHAGk",
-    "streamer": "風真いろは",
-    "date": "2025-10-02T20:00:00.000Z"
-  },
-  {
     "videoId": "xA8YnQgs-4M",
     "videoUrl": "https://www.youtube.com/watch?v=xA8YnQgs-4M",
     "streamer": "獅白ぼたん",
     "date": "2025-10-02T20:00:00.000Z"
   },
   {
-    "videoId": "JePEmaYUAPo",
-    "videoUrl": "https://www.youtube.com/watch?v=JePEmaYUAPo",
-    "streamer": "大空スバル 🚑",
+    "videoId": "sTpBRaYHAGk",
+    "videoUrl": "https://www.youtube.com/watch?v=sTpBRaYHAGk",
+    "streamer": "風真いろは",
+    "date": "2025-10-02T20:00:00.000Z"
+  },
+  {
+    "videoId": "03NZzrVR7tk",
+    "videoUrl": "https://www.youtube.com/watch?v=03NZzrVR7tk",
+    "streamer": "AZKi ⚒",
     "date": "2025-10-02T22:00:00.000Z"
   },
   {
     "videoId": "Jz2SeJDfml8",
     "videoUrl": "https://www.youtube.com/watch?v=Jz2SeJDfml8",
     "streamer": "さくらみこ 🌸",
+    "date": "2025-10-02T22:00:00.000Z"
+  },
+  {
+    "videoId": "JePEmaYUAPo",
+    "videoUrl": "https://www.youtube.com/watch?v=JePEmaYUAPo",
+    "streamer": "大空スバル 🚑",
     "date": "2025-10-02T22:00:00.000Z"
   },
   {
@@ -234,10 +240,22 @@
     "date": "2025-10-01T23:01:00.000Z"
   },
   {
+    "videoId": "Fjo4PMnad6g",
+    "videoUrl": "https://www.youtube.com/watch?v=Fjo4PMnad6g",
+    "streamer": "響咲リオナ",
+    "date": "2025-10-02T12:00:00.000Z"
+  },
+  {
     "videoId": "BjO-0GiDXLk",
     "videoUrl": "https://www.youtube.com/watch?v=BjO-0GiDXLk",
     "streamer": "虎金妃笑虎",
     "date": "2025-10-02T18:00:00.000Z"
+  },
+  {
+    "videoId": "yTH_rgOJxqE",
+    "videoUrl": "https://www.youtube.com/watch?v=yTH_rgOJxqE",
+    "streamer": "水宮枢",
+    "date": "2025-10-02T22:00:00.000Z"
   },
   {
     "videoId": "v8md6BIswu4",
@@ -315,7 +333,7 @@
     "videoId": "gnuHKxe3Ces",
     "videoUrl": "https://www.youtube.com/watch?v=gnuHKxe3Ces",
     "streamer": "Kiara",
-    "date": "2025-10-02T03:00:00.000Z"
+    "date": "2025-10-02T02:51:00.000Z"
   },
   {
     "videoId": "0L5X0TZYyKw",
@@ -328,6 +346,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=4QcSiRUhUyo",
     "streamer": "Gigi",
     "date": "2025-10-02T06:00:00.000Z"
+  },
+  {
+    "videoId": "Dm8ze1g8-AA",
+    "videoUrl": "https://www.youtube.com/watch?v=Dm8ze1g8-AA",
+    "streamer": "Bijou",
+    "date": "2025-10-02T08:00:00.000Z"
   },
   {
     "videoId": "EZV5mIuQkiY",

@@ -186,15 +186,15 @@
     "date": "2025-10-01T20:00:00.000Z"
   },
   {
-    "videoId": "89njDwMap8A",
-    "videoUrl": "https://www.youtube.com/watch?v=89njDwMap8A",
-    "streamer": "獅白ぼたん",
-    "date": "2025-10-01T21:00:00.000Z"
-  },
-  {
     "videoId": "9O2b2VROFoA",
     "videoUrl": "https://www.youtube.com/watch?v=9O2b2VROFoA",
     "streamer": "大空スバル 🚑",
+    "date": "2025-10-01T21:00:00.000Z"
+  },
+  {
+    "videoId": "89njDwMap8A",
+    "videoUrl": "https://www.youtube.com/watch?v=89njDwMap8A",
+    "streamer": "獅白ぼたん",
     "date": "2025-10-01T21:00:00.000Z"
   },
   {
@@ -306,6 +306,12 @@
     "date": "2025-10-01T07:00:00.000Z"
   },
   {
+    "videoId": "GerGz5vSDZ8",
+    "videoUrl": "https://www.youtube.com/watch?v=GerGz5vSDZ8",
+    "streamer": "水宮枢",
+    "date": "2025-10-01T22:00:00.000Z"
+  },
+  {
     "videoId": "_U3SDnBCu_4",
     "videoUrl": "https://www.youtube.com/watch?v=_U3SDnBCu_4",
     "streamer": "Baelz",
@@ -408,16 +414,46 @@
     "date": "2025-10-01T06:02:00.000Z"
   },
   {
-    "videoId": "D9ff2vAAMO8",
-    "videoUrl": "https://www.youtube.com/watch?v=D9ff2vAAMO8",
+    "videoId": "8RjOCCH2sac",
+    "videoUrl": "https://www.youtube.com/watch?v=8RjOCCH2sac",
+    "streamer": "FUWAMOCO",
+    "date": "2025-10-01T08:00:00.000Z"
+  },
+  {
+    "videoId": "KlLh1dOXi6Y",
+    "videoUrl": "https://www.youtube.com/watch?v=KlLh1dOXi6Y",
     "streamer": "Kronii",
-    "date": "2025-10-01T11:00:00.000Z"
+    "date": "2025-10-01T08:00:00.000Z"
+  },
+  {
+    "videoId": "caNCYNCCnqg",
+    "videoUrl": "https://www.youtube.com/watch?v=caNCYNCCnqg",
+    "streamer": "holo EN",
+    "date": "2025-10-01T08:00:00.000Z"
+  },
+  {
+    "videoId": "Kjybrs0P7ek",
+    "videoUrl": "https://www.youtube.com/watch?v=Kjybrs0P7ek",
+    "streamer": "Kronii",
+    "date": "2025-10-01T10:00:00.000Z"
+  },
+  {
+    "videoId": "CldZvSmOpeY",
+    "videoUrl": "https://www.youtube.com/watch?v=CldZvSmOpeY",
+    "streamer": "Shiori",
+    "date": "2025-10-01T10:54:00.000Z"
   },
   {
     "videoId": "XMzCYZoTY3E",
     "videoUrl": "https://www.youtube.com/watch?v=XMzCYZoTY3E",
     "streamer": "Calli",
-    "date": "2025-10-01T11:00:00.000Z"
+    "date": "2025-10-01T11:01:00.000Z"
+  },
+  {
+    "videoId": "D9ff2vAAMO8",
+    "videoUrl": "https://www.youtube.com/watch?v=D9ff2vAAMO8",
+    "streamer": "Kronii",
+    "date": "2025-10-01T11:02:00.000Z"
   },
   {
     "videoId": "qsy73GFvGiM",

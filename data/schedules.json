@@ -168,6 +168,12 @@
     "date": "2025-10-02T23:32:00.000Z"
   },
   {
+    "videoId": "1RNQWl1Jrcs",
+    "videoUrl": "https://www.youtube.com/watch?v=1RNQWl1Jrcs",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-10-03T06:00:00.000Z"
+  },
+  {
     "videoId": "f5YRB_2Du5I",
     "videoUrl": "https://www.youtube.com/watch?v=f5YRB_2Du5I",
     "streamer": "夏色まつり 🏮",
@@ -303,7 +309,7 @@
     "videoId": "hyCH4pi0O0A",
     "videoUrl": "https://www.youtube.com/watch?v=hyCH4pi0O0A",
     "streamer": "虎金妃笑虎",
-    "date": "2025-10-03T06:00:00.000Z"
+    "date": "2025-10-03T06:03:00.000Z"
   },
   {
     "videoId": "kpnF-BwMTxA",
@@ -466,5 +472,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=EKAUF0cY910",
     "streamer": "Reine",
     "date": "2025-10-02T23:01:00.000Z"
+  },
+  {
+    "videoId": "NcJWoCM-lk4",
+    "videoUrl": "https://www.youtube.com/watch?v=NcJWoCM-lk4",
+    "streamer": "Anya",
+    "date": "2025-10-03T12:30:00.000Z"
   }
 ]

@@ -174,15 +174,15 @@
     "date": "2025-10-02T19:00:00.000Z"
   },
   {
-    "videoId": "xA8YnQgs-4M",
-    "videoUrl": "https://www.youtube.com/watch?v=xA8YnQgs-4M",
-    "streamer": "獅白ぼたん",
-    "date": "2025-10-02T20:00:00.000Z"
-  },
-  {
     "videoId": "sTpBRaYHAGk",
     "videoUrl": "https://www.youtube.com/watch?v=sTpBRaYHAGk",
     "streamer": "風真いろは",
+    "date": "2025-10-02T20:00:00.000Z"
+  },
+  {
+    "videoId": "xA8YnQgs-4M",
+    "videoUrl": "https://www.youtube.com/watch?v=xA8YnQgs-4M",
+    "streamer": "獅白ぼたん",
     "date": "2025-10-02T20:00:00.000Z"
   },
   {
@@ -192,9 +192,15 @@
     "date": "2025-10-02T22:00:00.000Z"
   },
   {
-    "videoId": "03NZzrVR7tk",
-    "videoUrl": "https://www.youtube.com/watch?v=03NZzrVR7tk",
-    "streamer": "AZKi ⚒",
+    "videoId": "a4GW_BAr_pE",
+    "videoUrl": "https://www.youtube.com/watch?v=a4GW_BAr_pE",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-10-02T22:00:00.000Z"
+  },
+  {
+    "videoId": "Jz2SeJDfml8",
+    "videoUrl": "https://www.youtube.com/watch?v=Jz2SeJDfml8",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-10-02T22:00:00.000Z"
   },
   {
@@ -204,10 +210,16 @@
     "date": "2025-10-02T22:00:00.000Z"
   },
   {
-    "videoId": "Jz2SeJDfml8",
-    "videoUrl": "https://www.youtube.com/watch?v=Jz2SeJDfml8",
-    "streamer": "さくらみこ 🌸",
+    "videoId": "03NZzrVR7tk",
+    "videoUrl": "https://www.youtube.com/watch?v=03NZzrVR7tk",
+    "streamer": "AZKi ⚒",
     "date": "2025-10-02T22:00:00.000Z"
+  },
+  {
+    "videoId": "TOoQJYPJoqw",
+    "videoUrl": "https://www.youtube.com/watch?v=TOoQJYPJoqw",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-10-02T23:30:00.000Z"
   },
   {
     "videoId": "360Y9ba70hg",
@@ -279,7 +291,7 @@
     "videoId": "Fjo4PMnad6g",
     "videoUrl": "https://www.youtube.com/watch?v=Fjo4PMnad6g",
     "streamer": "響咲リオナ",
-    "date": "2025-10-02T12:00:00.000Z"
+    "date": "2025-10-02T12:01:00.000Z"
   },
   {
     "videoId": "BjO-0GiDXLk",
@@ -490,5 +502,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=JYfbsuuVHRk",
     "streamer": "Risu 🐿",
     "date": "2025-10-02T12:00:00.000Z"
+  },
+  {
+    "videoId": "9vtA-qYYPO4",
+    "videoUrl": "https://www.youtube.com/watch?v=9vtA-qYYPO4",
+    "streamer": "Reine",
+    "date": "2025-10-02T13:00:00.000Z"
   }
 ]

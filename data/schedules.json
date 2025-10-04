@@ -216,12 +216,6 @@
     "date": "2025-10-04T13:02:00.000Z"
   },
   {
-    "videoId": "FjrSl8hoUXk",
-    "videoUrl": "https://www.youtube.com/watch?v=FjrSl8hoUXk",
-    "streamer": "夏色まつり 🏮",
-    "date": "2025-10-04T15:00:00.000Z"
-  },
-  {
     "videoId": "NmTx-AgLQfg",
     "videoUrl": "https://www.youtube.com/watch?v=NmTx-AgLQfg",
     "streamer": "風真いろは",
@@ -243,6 +237,12 @@
     "videoId": "lWM4Hy9pRgY",
     "videoUrl": "https://www.youtube.com/watch?v=lWM4Hy9pRgY",
     "streamer": "獅白ぼたん",
+    "date": "2025-10-04T20:00:00.000Z"
+  },
+  {
+    "videoId": "ulj1OiAU78c",
+    "videoUrl": "https://www.youtube.com/watch?v=ulj1OiAU78c",
+    "streamer": "癒月ちょこ 💋",
     "date": "2025-10-04T20:00:00.000Z"
   },
   {
@@ -312,10 +312,16 @@
     "date": "2025-10-04T12:02:00.000Z"
   },
   {
+    "videoId": "KDxInSh5ep0",
+    "videoUrl": "https://www.youtube.com/watch?v=KDxInSh5ep0",
+    "streamer": "水宮枢",
+    "date": "2025-10-04T15:59:00.000Z"
+  },
+  {
     "videoId": "UOrINdIpCUU",
     "videoUrl": "https://www.youtube.com/watch?v=UOrINdIpCUU",
     "streamer": "音乃瀬奏",
-    "date": "2025-10-04T17:00:00.000Z"
+    "date": "2025-10-04T17:01:00.000Z"
   },
   {
     "videoId": "gEvluCmUyVE",
@@ -546,9 +552,21 @@
     "date": "2025-10-04T13:01:00.000Z"
   },
   {
+    "videoId": "pMniqn2PtyQ",
+    "videoUrl": "https://www.youtube.com/watch?v=pMniqn2PtyQ",
+    "streamer": "Iofi 🎨",
+    "date": "2025-10-04T17:00:00.000Z"
+  },
+  {
     "videoId": "8ZMd24aUOzw",
     "videoUrl": "https://www.youtube.com/watch?v=8ZMd24aUOzw",
     "streamer": "Risu 🐿",
     "date": "2025-10-04T20:00:00.000Z"
+  },
+  {
+    "videoId": "XacfL6eZ6s8",
+    "videoUrl": "https://www.youtube.com/watch?v=XacfL6eZ6s8",
+    "streamer": "Iofi 🎨",
+    "date": "2025-10-04T23:00:00.000Z"
   }
 ]

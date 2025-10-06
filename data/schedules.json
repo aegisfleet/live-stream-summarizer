@@ -78,15 +78,15 @@
     "date": "2025-10-05T17:59:00.000Z"
   },
   {
-    "videoId": "V0Zrf3Ua4M8",
-    "videoUrl": "https://www.youtube.com/watch?v=V0Zrf3Ua4M8",
-    "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-10-05T18:00:00.000Z"
-  },
-  {
     "videoId": "St6072yrFbM",
     "videoUrl": "https://www.youtube.com/watch?v=St6072yrFbM",
     "streamer": "白上フブキ 🌽",
+    "date": "2025-10-05T18:00:00.000Z"
+  },
+  {
+    "videoId": "V0Zrf3Ua4M8",
+    "videoUrl": "https://www.youtube.com/watch?v=V0Zrf3Ua4M8",
+    "streamer": "宝鐘マリン 🏴☠",
     "date": "2025-10-05T18:00:00.000Z"
   },
   {
@@ -240,22 +240,40 @@
     "date": "2025-10-06T15:59:00.000Z"
   },
   {
-    "videoId": "Enn0f_1yGWw",
-    "videoUrl": "https://www.youtube.com/watch?v=Enn0f_1yGWw",
-    "streamer": "兎田ぺこら 👯",
-    "date": "2025-10-06T19:00:00.000Z"
+    "videoId": "bJmJi8QjOMk",
+    "videoUrl": "https://www.youtube.com/watch?v=bJmJi8QjOMk",
+    "streamer": "博衣こより",
+    "date": "2025-10-06T18:00:00.000Z"
+  },
+  {
+    "videoId": "skHUEgVScqU",
+    "videoUrl": "https://www.youtube.com/watch?v=skHUEgVScqU",
+    "streamer": "鷹嶺ルイ",
+    "date": "2025-10-06T18:24:00.000Z"
   },
   {
     "videoId": "YlE9zPPAomY",
     "videoUrl": "https://www.youtube.com/watch?v=YlE9zPPAomY",
     "streamer": "博衣こより",
+    "date": "2025-10-06T18:59:00.000Z"
+  },
+  {
+    "videoId": "D3HXMmhG7ZQ",
+    "videoUrl": "https://www.youtube.com/watch?v=D3HXMmhG7ZQ",
+    "streamer": "ホロライブ",
     "date": "2025-10-06T19:00:00.000Z"
   },
   {
-    "videoId": "4s80sJPlUFg",
-    "videoUrl": "https://www.youtube.com/watch?v=4s80sJPlUFg",
-    "streamer": "宝鐘マリン 🏴☠",
-    "date": "2025-10-06T20:00:00.000Z"
+    "videoId": "Enn0f_1yGWw",
+    "videoUrl": "https://www.youtube.com/watch?v=Enn0f_1yGWw",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-10-06T19:01:00.000Z"
+  },
+  {
+    "videoId": "gFkLy8LbfCk",
+    "videoUrl": "https://www.youtube.com/watch?v=gFkLy8LbfCk",
+    "streamer": "ときのそら 🐻",
+    "date": "2025-10-06T19:01:00.000Z"
   },
   {
     "videoId": "aWxwKyNRwg0",
@@ -264,9 +282,33 @@
     "date": "2025-10-06T20:00:00.000Z"
   },
   {
+    "videoId": "l6AdHIH2IbM",
+    "videoUrl": "https://www.youtube.com/watch?v=l6AdHIH2IbM",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-10-06T20:00:00.000Z"
+  },
+  {
+    "videoId": "YEVh8vnCxpc",
+    "videoUrl": "https://www.youtube.com/watch?v=YEVh8vnCxpc",
+    "streamer": "戌神ころね 🥐",
+    "date": "2025-10-06T20:00:00.000Z"
+  },
+  {
+    "videoId": "4s80sJPlUFg",
+    "videoUrl": "https://www.youtube.com/watch?v=4s80sJPlUFg",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-10-06T20:00:00.000Z"
+  },
+  {
     "videoId": "WVuY5Kb2lko",
     "videoUrl": "https://www.youtube.com/watch?v=WVuY5Kb2lko",
     "streamer": "AZKi ⚒",
+    "date": "2025-10-06T21:00:00.000Z"
+  },
+  {
+    "videoId": "bmF9bmIZax8",
+    "videoUrl": "https://www.youtube.com/watch?v=bmF9bmIZax8",
+    "streamer": "さくらみこ 🌸",
     "date": "2025-10-06T21:00:00.000Z"
   },
   {
@@ -280,6 +322,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=NR59vmSL9Qw",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-10-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "Ovxp8DgLIG4",
+    "videoUrl": "https://www.youtube.com/watch?v=Ovxp8DgLIG4",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-10-06T23:00:00.000Z"
   },
   {
     "videoId": "qWn4pb2wv2k",
@@ -360,15 +408,75 @@
     "date": "2025-10-06T15:00:00.000Z"
   },
   {
+    "videoId": "WKadtmXuGOI",
+    "videoUrl": "https://www.youtube.com/watch?v=WKadtmXuGOI",
+    "streamer": "ReGLOSS",
+    "date": "2025-10-06T18:00:00.000Z"
+  },
+  {
+    "videoId": "ZVqnplFxJWo",
+    "videoUrl": "https://www.youtube.com/watch?v=ZVqnplFxJWo",
+    "streamer": "水宮枢",
+    "date": "2025-10-06T18:00:00.000Z"
+  },
+  {
+    "videoId": "Eia9toluYII",
+    "videoUrl": "https://www.youtube.com/watch?v=Eia9toluYII",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-10-06T18:01:00.000Z"
+  },
+  {
     "videoId": "kUdOCmA6Tgg",
     "videoUrl": "https://www.youtube.com/watch?v=kUdOCmA6Tgg",
     "streamer": "綺々羅々ヴィヴィ",
-    "date": "2025-10-06T18:00:00.000Z"
+    "date": "2025-10-06T18:11:00.000Z"
+  },
+  {
+    "videoId": "XKzJNi8AYn8",
+    "videoUrl": "https://www.youtube.com/watch?v=XKzJNi8AYn8",
+    "streamer": "儒烏風亭らでん",
+    "date": "2025-10-06T18:52:00.000Z"
+  },
+  {
+    "videoId": "2friTO_UYR0",
+    "videoUrl": "https://www.youtube.com/watch?v=2friTO_UYR0",
+    "streamer": "ReGLOSS",
+    "date": "2025-10-06T19:00:00.000Z"
+  },
+  {
+    "videoId": "HEs5QHteviY",
+    "videoUrl": "https://www.youtube.com/watch?v=HEs5QHteviY",
+    "streamer": "虎金妃笑虎",
+    "date": "2025-10-06T19:30:00.000Z"
+  },
+  {
+    "videoId": "bIB_2Hw7HHA",
+    "videoUrl": "https://www.youtube.com/watch?v=bIB_2Hw7HHA",
+    "streamer": "輪堂千速",
+    "date": "2025-10-06T20:00:00.000Z"
+  },
+  {
+    "videoId": "CCjz0q-Rbwk",
+    "videoUrl": "https://www.youtube.com/watch?v=CCjz0q-Rbwk",
+    "streamer": "音乃瀬奏",
+    "date": "2025-10-06T21:00:00.000Z"
+  },
+  {
+    "videoId": "WfizKdldIRw",
+    "videoUrl": "https://www.youtube.com/watch?v=WfizKdldIRw",
+    "streamer": "響咲リオナ",
+    "date": "2025-10-06T21:00:00.000Z"
   },
   {
     "videoId": "V2UUJOofJSs",
     "videoUrl": "https://www.youtube.com/watch?v=V2UUJOofJSs",
     "streamer": "虎金妃笑虎",
+    "date": "2025-10-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "ZgVVBouwukY",
+    "videoUrl": "https://www.youtube.com/watch?v=ZgVVBouwukY",
+    "streamer": "轟はじめ",
     "date": "2025-10-06T22:00:00.000Z"
   },
   {
@@ -534,6 +642,12 @@
     "date": "2025-10-07T06:00:00.000Z"
   },
   {
+    "videoId": "06Fwm7VyTuY",
+    "videoUrl": "https://www.youtube.com/watch?v=06Fwm7VyTuY",
+    "streamer": "Raora",
+    "date": "2025-10-07T11:00:00.000Z"
+  },
+  {
     "videoId": "Z8jd5kghYLc",
     "videoUrl": "https://www.youtube.com/watch?v=Z8jd5kghYLc",
     "streamer": "Risu 🐿",
@@ -562,5 +676,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=69UpzCr8T0I",
     "streamer": "Ollie",
     "date": "2025-10-06T21:00:00.000Z"
+  },
+  {
+    "videoId": "LB-lxnmpBnM",
+    "videoUrl": "https://www.youtube.com/watch?v=LB-lxnmpBnM",
+    "streamer": "Kobo",
+    "date": "2025-10-06T22:45:00.000Z"
   }
 ]

@@ -190,6 +190,16 @@
     "duration": 4061
   },
   {
+    "videoId": "5nBtjCeUpuo",
+    "videoUrl": "https://www.youtube.com/watch?v=5nBtjCeUpuo",
+    "streamer": "大神ミオ 🌲",
+    "date": "2025-10-06T07:30:00.000Z",
+    "title": "【 #朝ミオ 】１０月になりました！おはみぉーん！",
+    "thumbnailUrl": "https://i.ytimg.com/vi/5nBtjCeUpuo/mqdefault.jpg",
+    "endTime": "2025-10-05T23:40:26Z",
+    "duration": 4155
+  },
+  {
     "videoId": "S4q_mRG_R0M",
     "videoUrl": "https://www.youtube.com/watch?v=S4q_mRG_R0M",
     "streamer": "響咲リオナ",
@@ -228,5 +238,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/O7Gg2_1AsPU/mqdefault.jpg",
     "endTime": "2025-10-05T20:18:09Z",
     "duration": 8354
+  },
+  {
+    "videoId": "srcZjISq-k8",
+    "videoUrl": "https://www.youtube.com/watch?v=srcZjISq-k8",
+    "streamer": "Gigi",
+    "date": "2025-10-06T08:00:00.000Z",
+    "title": "【MV】Confessions of a Rotten Girl - Gigi Murin (Cover)",
+    "thumbnailUrl": "https://i.ytimg.com/vi/srcZjISq-k8/mqdefault.jpg",
+    "endTime": "2025-10-05T23:05:38Z",
+    "duration": 209
   }
 ]

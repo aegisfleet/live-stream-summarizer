@@ -240,6 +240,12 @@
     "date": "2025-10-06T16:00:00.000Z"
   },
   {
+    "videoId": "aWxwKyNRwg0",
+    "videoUrl": "https://www.youtube.com/watch?v=aWxwKyNRwg0",
+    "streamer": "獅白ぼたん",
+    "date": "2025-10-06T20:00:00.000Z"
+  },
+  {
     "videoId": "1sqdgufYQzg",
     "videoUrl": "https://www.youtube.com/watch?v=1sqdgufYQzg",
     "streamer": "角巻わため 🐏",
@@ -447,7 +453,19 @@
     "videoId": "dlqem_E6tq4",
     "videoUrl": "https://www.youtube.com/watch?v=dlqem_E6tq4",
     "streamer": "Raora",
-    "date": "2025-10-06T12:00:00.000Z"
+    "date": "2025-10-06T12:02:00.000Z"
+  },
+  {
+    "videoId": "9Iai5DB2Mvs",
+    "videoUrl": "https://www.youtube.com/watch?v=9Iai5DB2Mvs",
+    "streamer": "Kronii",
+    "date": "2025-10-06T12:03:00.000Z"
+  },
+  {
+    "videoId": "qlP7MyoG5CM",
+    "videoUrl": "https://www.youtube.com/watch?v=qlP7MyoG5CM",
+    "streamer": "Elizabeth Sub",
+    "date": "2025-10-06T12:58:00.000Z"
   },
   {
     "videoId": "Sh2XOJVqXek",
@@ -489,6 +507,6 @@
     "videoId": "z8rFVRLUi40",
     "videoUrl": "https://www.youtube.com/watch?v=z8rFVRLUi40",
     "streamer": "Kaela",
-    "date": "2025-10-06T12:45:00.000Z"
+    "date": "2025-10-06T12:44:00.000Z"
   }
 ]

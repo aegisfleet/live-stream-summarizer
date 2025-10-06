@@ -78,15 +78,15 @@
     "date": "2025-10-05T17:59:00.000Z"
   },
   {
-    "videoId": "St6072yrFbM",
-    "videoUrl": "https://www.youtube.com/watch?v=St6072yrFbM",
-    "streamer": "白上フブキ 🌽",
-    "date": "2025-10-05T18:00:00.000Z"
-  },
-  {
     "videoId": "V0Zrf3Ua4M8",
     "videoUrl": "https://www.youtube.com/watch?v=V0Zrf3Ua4M8",
     "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-10-05T18:00:00.000Z"
+  },
+  {
+    "videoId": "St6072yrFbM",
+    "videoUrl": "https://www.youtube.com/watch?v=St6072yrFbM",
+    "streamer": "白上フブキ 🌽",
     "date": "2025-10-05T18:00:00.000Z"
   },
   {
@@ -237,7 +237,25 @@
     "videoId": "f5YRB_2Du5I",
     "videoUrl": "https://www.youtube.com/watch?v=f5YRB_2Du5I",
     "streamer": "夏色まつり 🏮",
-    "date": "2025-10-06T16:00:00.000Z"
+    "date": "2025-10-06T15:59:00.000Z"
+  },
+  {
+    "videoId": "Enn0f_1yGWw",
+    "videoUrl": "https://www.youtube.com/watch?v=Enn0f_1yGWw",
+    "streamer": "兎田ぺこら 👯",
+    "date": "2025-10-06T19:00:00.000Z"
+  },
+  {
+    "videoId": "YlE9zPPAomY",
+    "videoUrl": "https://www.youtube.com/watch?v=YlE9zPPAomY",
+    "streamer": "博衣こより",
+    "date": "2025-10-06T19:00:00.000Z"
+  },
+  {
+    "videoId": "4s80sJPlUFg",
+    "videoUrl": "https://www.youtube.com/watch?v=4s80sJPlUFg",
+    "streamer": "宝鐘マリン 🏴☠",
+    "date": "2025-10-06T20:00:00.000Z"
   },
   {
     "videoId": "aWxwKyNRwg0",
@@ -246,9 +264,21 @@
     "date": "2025-10-06T20:00:00.000Z"
   },
   {
+    "videoId": "WVuY5Kb2lko",
+    "videoUrl": "https://www.youtube.com/watch?v=WVuY5Kb2lko",
+    "streamer": "AZKi ⚒",
+    "date": "2025-10-06T21:00:00.000Z"
+  },
+  {
     "videoId": "1sqdgufYQzg",
     "videoUrl": "https://www.youtube.com/watch?v=1sqdgufYQzg",
     "streamer": "角巻わため 🐏",
+    "date": "2025-10-06T22:00:00.000Z"
+  },
+  {
+    "videoId": "NR59vmSL9Qw",
+    "videoUrl": "https://www.youtube.com/watch?v=NR59vmSL9Qw",
+    "streamer": "ロボ子さん 🤖",
     "date": "2025-10-06T22:00:00.000Z"
   },
   {
@@ -258,10 +288,16 @@
     "date": "2025-10-06T23:40:00.000Z"
   },
   {
+    "videoId": "LIJ2YkIB4YQ",
+    "videoUrl": "https://www.youtube.com/watch?v=LIJ2YkIB4YQ",
+    "streamer": "博衣こより",
+    "date": "2025-10-07T07:00:00.000Z"
+  },
+  {
     "videoId": "Yf06ZceO3Js",
     "videoUrl": "https://www.youtube.com/watch?v=Yf06ZceO3Js",
     "streamer": "夏色まつり 🏮",
-    "date": "2025-10-07T16:00:00.000Z"
+    "date": "2025-10-07T13:00:00.000Z"
   },
   {
     "videoId": "PE0ywwAqeVk",
@@ -322,6 +358,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=fUKMS3lgnTE",
     "streamer": "水宮枢",
     "date": "2025-10-06T15:00:00.000Z"
+  },
+  {
+    "videoId": "kUdOCmA6Tgg",
+    "videoUrl": "https://www.youtube.com/watch?v=kUdOCmA6Tgg",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-10-06T18:00:00.000Z"
   },
   {
     "videoId": "V2UUJOofJSs",
@@ -486,6 +528,12 @@
     "date": "2025-10-07T04:00:00.000Z"
   },
   {
+    "videoId": "tQdHAAu4xNc",
+    "videoUrl": "https://www.youtube.com/watch?v=tQdHAAu4xNc",
+    "streamer": "Gigi",
+    "date": "2025-10-07T06:00:00.000Z"
+  },
+  {
     "videoId": "Z8jd5kghYLc",
     "videoUrl": "https://www.youtube.com/watch?v=Z8jd5kghYLc",
     "streamer": "Risu 🐿",
@@ -508,5 +556,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=z8rFVRLUi40",
     "streamer": "Kaela",
     "date": "2025-10-06T12:44:00.000Z"
+  },
+  {
+    "videoId": "69UpzCr8T0I",
+    "videoUrl": "https://www.youtube.com/watch?v=69UpzCr8T0I",
+    "streamer": "Ollie",
+    "date": "2025-10-06T21:00:00.000Z"
   }
 ]

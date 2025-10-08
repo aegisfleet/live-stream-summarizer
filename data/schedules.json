@@ -288,12 +288,6 @@
     "date": "2025-10-07T23:03:00.000Z"
   },
   {
-    "videoId": "ZBCGpOOPQRM",
-    "videoUrl": "https://www.youtube.com/watch?v=ZBCGpOOPQRM",
-    "streamer": "響咲リオナ",
-    "date": "2025-10-08T12:00:00.000Z"
-  },
-  {
     "videoId": "oFi8ljt6bgU",
     "videoUrl": "https://www.youtube.com/watch?v=oFi8ljt6bgU",
     "streamer": "水宮枢",
@@ -312,10 +306,22 @@
     "date": "2025-10-08T18:00:00.000Z"
   },
   {
+    "videoId": "90Z57ma6YaY",
+    "videoUrl": "https://www.youtube.com/watch?v=90Z57ma6YaY",
+    "streamer": "轟はじめ",
+    "date": "2025-10-08T20:00:00.000Z"
+  },
+  {
     "videoId": "rJ3S0uR5lwI",
     "videoUrl": "https://www.youtube.com/watch?v=rJ3S0uR5lwI",
     "streamer": "響咲リオナ",
     "date": "2025-10-08T23:00:00.000Z"
+  },
+  {
+    "videoId": "ZBCGpOOPQRM",
+    "videoUrl": "https://www.youtube.com/watch?v=ZBCGpOOPQRM",
+    "streamer": "響咲リオナ",
+    "date": "2025-10-09T12:00:00.000Z"
   },
   {
     "videoId": "QH7TLDbuA2Q",
@@ -420,10 +426,10 @@
     "date": "2025-10-08T10:11:00.000Z"
   },
   {
-    "videoId": "8FEAewSufsA",
-    "videoUrl": "https://www.youtube.com/watch?v=8FEAewSufsA",
-    "streamer": "Bijou",
-    "date": "2025-10-08T11:01:00.000Z"
+    "videoId": "g47oAFHxFUc",
+    "videoUrl": "https://www.youtube.com/watch?v=g47oAFHxFUc",
+    "streamer": "holo EN",
+    "date": "2025-10-08T13:00:00.000Z"
   },
   {
     "videoId": "9Dn1vWDl57k",
@@ -526,6 +532,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=9UKYoTqF0p4",
     "streamer": "Kaela",
     "date": "2025-10-08T11:01:00.000Z"
+  },
+  {
+    "videoId": "TOzNCQIDokQ",
+    "videoUrl": "https://www.youtube.com/watch?v=TOzNCQIDokQ",
+    "streamer": "Risu 🐿",
+    "date": "2025-10-08T12:08:00.000Z"
   },
   {
     "videoId": "d6ywyXYHhRk",

@@ -162,6 +162,18 @@
     "date": "2025-10-10T00:57:00.000Z"
   },
   {
+    "videoId": "vuVp9M0v5w4",
+    "videoUrl": "https://www.youtube.com/watch?v=vuVp9M0v5w4",
+    "streamer": "博衣こより",
+    "date": "2025-10-10T19:00:00.000Z"
+  },
+  {
+    "videoId": "urdlxUGC4iw",
+    "videoUrl": "https://www.youtube.com/watch?v=urdlxUGC4iw",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-10-10T19:00:00.000Z"
+  },
+  {
     "videoId": "jtQy1xURcuQ",
     "videoUrl": "https://www.youtube.com/watch?v=jtQy1xURcuQ",
     "streamer": "姫森ルーナ 🍬",
@@ -357,12 +369,24 @@
     "videoId": "R-Qk7wtr7Jo",
     "videoUrl": "https://www.youtube.com/watch?v=R-Qk7wtr7Jo",
     "streamer": "Kiara",
-    "date": "2025-10-10T03:00:00.000Z"
+    "date": "2025-10-10T03:01:00.000Z"
+  },
+  {
+    "videoId": "qmS9HylYezA",
+    "videoUrl": "https://www.youtube.com/watch?v=qmS9HylYezA",
+    "streamer": "Bijou",
+    "date": "2025-10-10T09:00:00.000Z"
   },
   {
     "videoId": "q4nv8E7iutQ",
     "videoUrl": "https://www.youtube.com/watch?v=q4nv8E7iutQ",
     "streamer": "Kiara",
+    "date": "2025-10-10T09:00:00.000Z"
+  },
+  {
+    "videoId": "jaF5B5_D_Ek",
+    "videoUrl": "https://www.youtube.com/watch?v=jaF5B5_D_Ek",
+    "streamer": "Kronii",
     "date": "2025-10-10T09:00:00.000Z"
   },
   {
@@ -442,5 +466,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=ZgiC4xLEKIc",
     "streamer": "Iofi 🎨",
     "date": "2025-10-09T23:00:00.000Z"
+  },
+  {
+    "videoId": "c-ManPxok7I",
+    "videoUrl": "https://www.youtube.com/watch?v=c-ManPxok7I",
+    "streamer": "Iofi 🎨",
+    "date": "2025-10-10T15:00:00.000Z"
   }
 ]

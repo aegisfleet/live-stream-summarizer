@@ -156,10 +156,28 @@
     "date": "2025-10-09T10:58:00.000Z"
   },
   {
+    "videoId": "oQLp3nH4tNc",
+    "videoUrl": "https://www.youtube.com/watch?v=oQLp3nH4tNc",
+    "streamer": "ホロライブ",
+    "date": "2025-10-09T18:00:00.000Z"
+  },
+  {
+    "videoId": "HjiQDXJL7DI",
+    "videoUrl": "https://www.youtube.com/watch?v=HjiQDXJL7DI",
+    "streamer": "博衣こより",
+    "date": "2025-10-09T19:00:00.000Z"
+  },
+  {
     "videoId": "K95WvKPaFZk",
     "videoUrl": "https://www.youtube.com/watch?v=K95WvKPaFZk",
     "streamer": "ロボ子さん 🤖",
     "date": "2025-10-09T19:00:00.000Z"
+  },
+  {
+    "videoId": "8RnQ0R_xa7E",
+    "videoUrl": "https://www.youtube.com/watch?v=8RnQ0R_xa7E",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-10-09T20:00:00.000Z"
   },
   {
     "videoId": "78YidEt8LOM",
@@ -426,6 +444,12 @@
     "date": "2025-10-10T09:00:00.000Z"
   },
   {
+    "videoId": "63LAc9AAlPs",
+    "videoUrl": "https://www.youtube.com/watch?v=63LAc9AAlPs",
+    "streamer": "Calli",
+    "date": "2025-10-10T10:00:00.000Z"
+  },
+  {
     "videoId": "Z9JQHikhOTg",
     "videoUrl": "https://www.youtube.com/watch?v=Z9JQHikhOTg",
     "streamer": "Ollie",
@@ -471,6 +495,12 @@
     "videoId": "7QsyEgzvs3c",
     "videoUrl": "https://www.youtube.com/watch?v=7QsyEgzvs3c",
     "streamer": "Ollie",
+    "date": "2025-10-09T22:00:00.000Z"
+  },
+  {
+    "videoId": "4HdbY4hwcOI",
+    "videoUrl": "https://www.youtube.com/watch?v=4HdbY4hwcOI",
+    "streamer": "Risu 🐿",
     "date": "2025-10-09T22:00:00.000Z"
   }
 ]

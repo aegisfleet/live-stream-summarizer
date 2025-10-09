@@ -188,5 +188,35 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/LqT3YmVbUfI/mqdefault.jpg",
     "endTime": "2025-10-08T20:26:33Z",
     "duration": 5123
+  },
+  {
+    "videoId": "yQYOiT9yZPk",
+    "videoUrl": "https://www.youtube.com/watch?v=yQYOiT9yZPk",
+    "streamer": "Bijou",
+    "date": "2025-10-09T07:58:00.000Z",
+    "title": "【3D VRC】i get a job at a cafe to pay my taxes",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yQYOiT9yZPk/mqdefault.jpg",
+    "endTime": "2025-10-09T01:09:00Z",
+    "duration": 7814
+  },
+  {
+    "videoId": "NrpjvBn8-84",
+    "videoUrl": "https://www.youtube.com/watch?v=NrpjvBn8-84",
+    "streamer": "FUWAMOCO",
+    "date": "2025-10-09T09:55:00.000Z",
+    "title": "【FAST FOOD SIMULATOR with OLLIE & RAORA】2 dogs + a cat + a zombie = culinary success 🐾 【FUWAMOCO】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/NrpjvBn8-84/mqdefault.jpg",
+    "endTime": "2025-10-09T02:01:30Z",
+    "duration": 3952
+  },
+  {
+    "videoId": "d6ywyXYHhRk",
+    "videoUrl": "https://www.youtube.com/watch?v=d6ywyXYHhRk",
+    "streamer": "Ollie",
+    "date": "2025-10-09T10:05:00.000Z",
+    "title": "【FAST FOOD SIMULATOR】 SERVING YOU ALL THE PICKLES YOU COULD EVER WANT~!! 【Kureiji Ollie】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/d6ywyXYHhRk/mqdefault.jpg",
+    "endTime": "2025-10-09T02:01:35Z",
+    "duration": 3347
   }
 ]

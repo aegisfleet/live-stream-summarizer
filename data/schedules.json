@@ -168,6 +168,12 @@
     "date": "2025-10-10T06:00:00.000Z"
   },
   {
+    "videoId": "jCj3EyKZnUY",
+    "videoUrl": "https://www.youtube.com/watch?v=jCj3EyKZnUY",
+    "streamer": "常闇トワ 👾",
+    "date": "2025-10-10T12:00:00.000Z"
+  },
+  {
     "videoId": "urdlxUGC4iw",
     "videoUrl": "https://www.youtube.com/watch?v=urdlxUGC4iw",
     "streamer": "角巻わため 🐏",
@@ -178,6 +184,12 @@
     "videoUrl": "https://www.youtube.com/watch?v=vuVp9M0v5w4",
     "streamer": "博衣こより",
     "date": "2025-10-10T19:00:00.000Z"
+  },
+  {
+    "videoId": "wsXGoFXS-Vs",
+    "videoUrl": "https://www.youtube.com/watch?v=wsXGoFXS-Vs",
+    "streamer": "大空スバル 🚑",
+    "date": "2025-10-10T21:00:00.000Z"
   },
   {
     "videoId": "jtQy1xURcuQ",
@@ -324,6 +336,12 @@
     "date": "2025-10-10T18:00:00.000Z"
   },
   {
+    "videoId": "BgFl3l25rqs",
+    "videoUrl": "https://www.youtube.com/watch?v=BgFl3l25rqs",
+    "streamer": "輪堂千速",
+    "date": "2025-10-10T19:00:00.000Z"
+  },
+  {
     "videoId": "vTYAuDmVVnc",
     "videoUrl": "https://www.youtube.com/watch?v=vTYAuDmVVnc",
     "streamer": "ReGLOSS",
@@ -441,7 +459,19 @@
     "videoId": "I-Y4qlXzkg0",
     "videoUrl": "https://www.youtube.com/watch?v=I-Y4qlXzkg0",
     "streamer": "IRyS",
-    "date": "2025-10-10T12:15:00.000Z"
+    "date": "2025-10-10T12:16:00.000Z"
+  },
+  {
+    "videoId": "2HDsLdTunB4",
+    "videoUrl": "https://www.youtube.com/watch?v=2HDsLdTunB4",
+    "streamer": "Ina",
+    "date": "2025-10-10T13:31:00.000Z"
+  },
+  {
+    "videoId": "6EK_rv-i5fY",
+    "videoUrl": "https://www.youtube.com/watch?v=6EK_rv-i5fY",
+    "streamer": "IRyS",
+    "date": "2025-10-10T14:20:00.000Z"
   },
   {
     "videoId": "wBRenzXpD-4",
@@ -502,5 +532,11 @@
     "videoUrl": "https://www.youtube.com/watch?v=c-ManPxok7I",
     "streamer": "Iofi 🎨",
     "date": "2025-10-10T15:00:00.000Z"
+  },
+  {
+    "videoId": "ciUz4TAlh4U",
+    "videoUrl": "https://www.youtube.com/watch?v=ciUz4TAlh4U",
+    "streamer": "Risu 🐿",
+    "date": "2025-10-10T15:15:00.000Z"
   }
 ]

@@ -318,6 +318,12 @@
     "date": "2025-10-10T16:30:00.000Z"
   },
   {
+    "videoId": "HTuE50u6dKY",
+    "videoUrl": "https://www.youtube.com/watch?v=HTuE50u6dKY",
+    "streamer": "綺々羅々ヴィヴィ",
+    "date": "2025-10-10T18:00:00.000Z"
+  },
+  {
     "videoId": "vTYAuDmVVnc",
     "videoUrl": "https://www.youtube.com/watch?v=vTYAuDmVVnc",
     "streamer": "ReGLOSS",
@@ -384,10 +390,10 @@
     "date": "2025-10-10T03:01:00.000Z"
   },
   {
-    "videoId": "X9eatHq84nI",
-    "videoUrl": "https://www.youtube.com/watch?v=X9eatHq84nI",
-    "streamer": "Ina",
-    "date": "2025-10-10T09:00:00.000Z"
+    "videoId": "q4nv8E7iutQ",
+    "videoUrl": "https://www.youtube.com/watch?v=q4nv8E7iutQ",
+    "streamer": "Kiara",
+    "date": "2025-10-10T08:57:00.000Z"
   },
   {
     "videoId": "jaF5B5_D_Ek",
@@ -396,16 +402,16 @@
     "date": "2025-10-10T09:00:00.000Z"
   },
   {
-    "videoId": "q4nv8E7iutQ",
-    "videoUrl": "https://www.youtube.com/watch?v=q4nv8E7iutQ",
-    "streamer": "Kiara",
+    "videoId": "X9eatHq84nI",
+    "videoUrl": "https://www.youtube.com/watch?v=X9eatHq84nI",
+    "streamer": "Ina",
     "date": "2025-10-10T09:00:00.000Z"
   },
   {
     "videoId": "qmS9HylYezA",
     "videoUrl": "https://www.youtube.com/watch?v=qmS9HylYezA",
     "streamer": "Bijou",
-    "date": "2025-10-10T09:00:00.000Z"
+    "date": "2025-10-10T09:01:00.000Z"
   },
   {
     "videoId": "63LAc9AAlPs",
@@ -417,19 +423,25 @@
     "videoId": "bMH4hyKwtQM",
     "videoUrl": "https://www.youtube.com/watch?v=bMH4hyKwtQM",
     "streamer": "Baelz",
-    "date": "2025-10-10T10:00:00.000Z"
+    "date": "2025-10-10T10:03:00.000Z"
   },
   {
     "videoId": "2PDMpsW-uak",
     "videoUrl": "https://www.youtube.com/watch?v=2PDMpsW-uak",
     "streamer": "Gigi",
-    "date": "2025-10-10T11:00:00.000Z"
+    "date": "2025-10-10T10:58:00.000Z"
   },
   {
     "videoId": "ZlkxwA9SYxY",
     "videoUrl": "https://www.youtube.com/watch?v=ZlkxwA9SYxY",
     "streamer": "Cecilia",
     "date": "2025-10-10T11:00:00.000Z"
+  },
+  {
+    "videoId": "I-Y4qlXzkg0",
+    "videoUrl": "https://www.youtube.com/watch?v=I-Y4qlXzkg0",
+    "streamer": "IRyS",
+    "date": "2025-10-10T12:15:00.000Z"
   },
   {
     "videoId": "wBRenzXpD-4",

@@ -110,6 +110,46 @@
     "duration": 2973
   },
   {
+    "videoId": "MvvK3RzNkXM",
+    "videoUrl": "https://www.youtube.com/watch?v=MvvK3RzNkXM",
+    "streamer": "風真いろは",
+    "date": "2025-10-11T19:02:00.000Z",
+    "title": "【ごはん】炊飯器到着‼クソデカナス到着‼母襲来‼【風真いろは/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/MvvK3RzNkXM/mqdefault.jpg",
+    "endTime": "2025-10-11T11:17:00Z",
+    "duration": 4406
+  },
+  {
+    "videoId": "Qe-rSP0mx1E",
+    "videoUrl": "https://www.youtube.com/watch?v=Qe-rSP0mx1E",
+    "streamer": "獅白ぼたん",
+    "date": "2025-10-11T20:00:00.000Z",
+    "title": "【スト6】「獅白杯 ～東西対抗戦～」開催🎉【獅白ぼたん・ラプラス・ダークネス / ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Qe-rSP0mx1E/mqdefault.jpg",
+    "endTime": "2025-10-11T12:13:47Z",
+    "duration": 4383
+  },
+  {
+    "videoId": "qHM1PRWQeLg",
+    "videoUrl": "https://www.youtube.com/watch?v=qHM1PRWQeLg",
+    "streamer": "白上フブキ 🌽",
+    "date": "2025-10-11T20:01:00.000Z",
+    "title": "【Minecraft脱出マップ】海底探索員 #フブミオ 深海からの脱出します【白上フブキ/大神ミオ/ホロライブ】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/qHM1PRWQeLg/mqdefault.jpg",
+    "endTime": "2025-10-11T12:55:45Z",
+    "duration": 6824
+  },
+  {
+    "videoId": "z28HHel9wm4",
+    "videoUrl": "https://www.youtube.com/watch?v=z28HHel9wm4",
+    "streamer": "角巻わため 🐏",
+    "date": "2025-10-11T20:03:00.000Z",
+    "title": "【 手描き切り抜き鑑賞会 】みんなで見よー！！！告知もあります✨✨【角巻わため/ホロライブ４期生】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/z28HHel9wm4/mqdefault.jpg",
+    "endTime": "2025-10-11T12:28:14Z",
+    "duration": 5097
+  },
+  {
     "videoId": "PaY7bpME6QE",
     "videoUrl": "https://www.youtube.com/watch?v=PaY7bpME6QE",
     "streamer": "虎金妃笑虎",
@@ -195,9 +235,9 @@
     "streamer": "儒烏風亭らでん",
     "date": "2025-10-11T17:00:00.000Z",
     "title": "【#らでんのラジオ 】知新の秋特別編第一弾！宝石研磨編　ゲスト：ごもも【儒烏風亭らでん #ReGLOSS 】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/wR_4skKddxo/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wR_4skKddxo/mqdefault.jpg",
     "endTime": "2025-10-11T09:16:37Z",
-    "duration": 4573
+    "duration": 4543
   },
   {
     "videoId": "q4nv8E7iutQ",
@@ -288,5 +328,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/q3Pqsa8tg_8/mqdefault.jpg",
     "endTime": "2025-10-11T04:15:43Z",
     "duration": 7829
+  },
+  {
+    "videoId": "Yxw2Nb0ZXCw",
+    "videoUrl": "https://www.youtube.com/watch?v=Yxw2Nb0ZXCw",
+    "streamer": "Risu 🐿",
+    "date": "2025-10-11T20:00:00.000Z",
+    "title": "Chill before collab",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Yxw2Nb0ZXCw/mqdefault.jpg",
+    "endTime": "2025-10-11T12:52:06Z",
+    "duration": 6735
   }
 ]

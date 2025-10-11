@@ -95,7 +95,7 @@
     "streamer": "大空スバル 🚑",
     "date": "2025-10-11T10:01:00.000Z",
     "title": "【#生スバル】おはすば！：FREE TALK【ホロライブ/大空スバル】",
-    "thumbnailUrl": "https://i.ytimg.com/vi/YucQM0kiE5s/mqdefault_live.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/YucQM0kiE5s/mqdefault.jpg",
     "endTime": "2025-10-11T02:37:37Z",
     "duration": 5771
   },
@@ -240,6 +240,16 @@
     "duration": 5973
   },
   {
+    "videoId": "3nq0CkvL0CI",
+    "videoUrl": "https://www.youtube.com/watch?v=3nq0CkvL0CI",
+    "streamer": "holo EN",
+    "date": "2025-10-11T12:00:00.000Z",
+    "title": "Lane Swap Detected #holoEN3DRepeat",
+    "thumbnailUrl": "https://i.ytimg.com/vi/3nq0CkvL0CI/mqdefault.jpg",
+    "endTime": "2025-10-11T03:02:27Z",
+    "duration": 73
+  },
+  {
     "videoId": "abRBThUWeqE",
     "videoUrl": "https://www.youtube.com/watch?v=abRBThUWeqE",
     "streamer": "Zeta",
@@ -248,5 +258,15 @@
     "thumbnailUrl": "https://i.ytimg.com/vi/abRBThUWeqE/mqdefault.jpg",
     "endTime": "2025-10-10T15:49:47Z",
     "duration": 8322
+  },
+  {
+    "videoId": "q3Pqsa8tg_8",
+    "videoUrl": "https://www.youtube.com/watch?v=q3Pqsa8tg_8",
+    "streamer": "Ollie",
+    "date": "2025-10-11T11:05:00.000Z",
+    "title": "【WHISPER OF THE HOUSE】 SO... WHAT DID THE HOUSE SAY?? LET'S CHILL!! 【Kureiji Ollie】",
+    "thumbnailUrl": "https://i.ytimg.com/vi/q3Pqsa8tg_8/mqdefault.jpg",
+    "endTime": "2025-10-11T04:15:43Z",
+    "duration": 7829
   }
 ]

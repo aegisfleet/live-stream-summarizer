@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hololive-summary-cache-v1-1760278067445';
+const CACHE_NAME = 'hololive-summary-cache-v1-1760288817167';
 const SITE_URL = 'https://aegisfleet.github.io/live-stream-summarizer/';
 const ASSETS_TO_CACHE = [
   './',

@@ -18,6 +18,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
             if ((error.message && (
                 error.message.includes('429 Too Many Requests') ||
                 error.message.includes('500 Internal Server Error') ||
+                error.message.includes('503 Service Unavailable') ||
                 error.message.includes('レスポンスが有効なJSON形式ではありません') ||
                 error.message.includes('概要情報が不足しています')
             )) && i < retries - 1) {

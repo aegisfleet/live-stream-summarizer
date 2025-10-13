@@ -124,9 +124,9 @@ ${JSON.stringify(existingSummary, null, 2)}
     };
 
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-    const chunkSizeSeconds = 2400; // 40 minutes per chunk
+    const chunkSizeSeconds = 1800; // 30 minutes per chunk
     const adjustedVideoDurationSeconds = Math.max(0, videoDurationSeconds - 10); // Reduce duration by 10 seconds
-    const maxChunks = 1; // Limit to 1 chunk (40 minutes max)
+    const maxChunks = 1; // Limit to 1 chunk (30 minutes max)
     let currentOffsetSeconds = 0;
     let chunkCount = 0;
 

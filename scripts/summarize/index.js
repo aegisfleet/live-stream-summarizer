@@ -6,7 +6,7 @@ const axios = require('axios');
 
 // Gemini APIの初期化
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 // Retry function with exponential backoff
 async function retry(fn, retries = 5, delay = 30000) { // Increased default delay to 30 seconds
@@ -19,8 +19,7 @@ async function retry(fn, retries = 5, delay = 30000) { // Increased default dela
                 error.message.includes('429 Too Many Requests') ||
                 error.message.includes('500 Internal Server Error') ||
                 error.message.includes('レスポンスが有効なJSON形式ではありません') ||
-                error.message.includes('概要情報が不足しています') ||
-                error.message.includes('タイムスタンプが2時間30分を超えるものが含まれています')
+                error.message.includes('概要情報が不足しています')
             )) && i < retries - 1) {
                 console.warn(`Rate limit hit or invalid JSON response. Retrying in ${delay / 1000} seconds... (Attempt ${i + 1}/${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
@@ -126,7 +125,7 @@ ${JSON.stringify(existingSummary, null, 2)}
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
     const chunkSizeSeconds = 2400; // 40 minutes per chunk
     const adjustedVideoDurationSeconds = Math.max(0, videoDurationSeconds - 10); // Reduce duration by 10 seconds
-    const maxChunks = Math.ceil(adjustedVideoDurationSeconds / chunkSizeSeconds); // Calculate max chunks based on adjusted duration
+    const maxChunks = 1; // Limit to 1 chunk (40 minutes max)
     let currentOffsetSeconds = 0;
     let chunkCount = 0;
 
@@ -193,14 +192,6 @@ ${JSON.stringify(existingSummary, null, 2)}
                     throw new Error('概要情報が不足しています');
                 }
 
-                // タイムスタンプが2時間30分を超えるものが含まれている場合は再実行
-                if (parsedSummary.highlights && parsedSummary.highlights.some(highlight => {
-                    const [hours, minutes, seconds] = highlight.timestamp.split(':').map(Number);
-                    const totalSeconds = hours * 3600 + minutes * 60 + seconds;
-                    return totalSeconds > 9000; // 2.5 hours in seconds
-                })) {
-                    throw new Error('タイムスタンプが2時間30分を超えるものが含まれています');
-                }
                 return parsedSummary;
             });
             if (!Array.isArray(chunkSummary.highlights)) { // Highlights can be empty

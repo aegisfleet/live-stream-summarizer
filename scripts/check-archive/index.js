@@ -50,12 +50,6 @@ async function checkArchives() {
 
                 const durationInSeconds = parseISO8601Duration(videoInfo.contentDetails.duration);
 
-                // 再生時間が2時間30分を超えるものは除外
-                if (durationInSeconds > 2.5 * 60 * 60) {
-                    console.log(`2時間を超えるため除外: ${stream.videoId}`);
-                    continue;
-                }
-
                 archives.push({
                     ...stream,
                     title: videoInfo.snippet.title,
